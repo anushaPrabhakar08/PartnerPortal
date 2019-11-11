@@ -4,6 +4,7 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
+import { ReactiveFormsModule, FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 
 /**
  * Service import Example :
@@ -23,16 +24,27 @@ import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 
 export class partner_adddevelopersComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
+    developerForm = new FormGroup({
+        firstName: new FormControl(''),
+        lastName: new FormControl(''),
+        position: new FormControl('')
+    });
 
     constructor(private bdms: NDataModelService) {
         super();
         this.mm = new ModelMethods(bdms);
     }
-
     ngOnInit() {
 
     }
-
+    submit(data) {
+        if (data.firstName == "" && data.lastName == "" && data.position == "") {
+            console.log('data not present');
+        } else {
+            console.log(data);
+        }
+        this.developerForm.reset();
+    }
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, filter, keys, sort, pagenumber, pagesize,
             result => {
@@ -85,7 +97,7 @@ export class partner_adddevelopersComponent extends NBaseComponent implements On
             })
     }
 
-    delete (dataModelName, filter) {
+    delete(dataModelName, filter) {
         this.mm.delete(dataModelName, filter,
             result => {
                 // On Success code here

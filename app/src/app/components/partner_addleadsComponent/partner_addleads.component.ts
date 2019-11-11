@@ -4,6 +4,9 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
+import { ReactiveFormsModule, FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+
+
 
 /**
  * Service import Example :
@@ -23,8 +26,15 @@ import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 
 export class partner_addleadsComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
-
-    constructor(private bdms: NDataModelService) {
+    profileForm = new FormGroup({
+        organisationName: new FormControl(''),
+        location: new FormControl(''),
+        opportunityType: new FormControl(''),
+        leadGeneratedDate: new FormControl(''),
+        contactDetails: new FormControl(''),
+        comment: new FormControl('')
+    });
+    constructor(private bdms: NDataModelService, private fb: FormBuilder) {
         super();
         this.mm = new ModelMethods(bdms);
     }
@@ -33,6 +43,14 @@ export class partner_addleadsComponent extends NBaseComponent implements OnInit 
 
     }
 
+    submit(data) {
+        if (data.organisationName == "" && data.location == "" && data.opportunityType == "" && data.leadGeneratedDate == "" && data.contactDetails == "" && data.comment == "") {
+            console.log('data not present');
+        } else {
+            console.log(data);
+        }
+        this.profileForm.reset();
+    }
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, filter, keys, sort, pagenumber, pagesize,
             result => {
@@ -85,7 +103,7 @@ export class partner_addleadsComponent extends NBaseComponent implements OnInit 
             })
     }
 
-    delete (dataModelName, filter) {
+    delete(dataModelName, filter) {
         this.mm.delete(dataModelName, filter,
             result => {
                 // On Success code here
