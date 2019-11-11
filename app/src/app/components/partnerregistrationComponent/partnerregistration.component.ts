@@ -29,6 +29,7 @@ export class partnerregistrationComponent extends NBaseComponent implements OnIn
         super();
         this.mm = new ModelMethods(bdms);
     }
+<<<<<<< HEAD
    
     firstFormGroup=new FormGroup({
         companyName:new FormControl(''),
@@ -44,6 +45,11 @@ export class partnerregistrationComponent extends NBaseComponent implements OnIn
         address:new FormControl('')
           });
     
+=======
+    firstFormGroup: FormGroup;
+    secondFormGroup: FormGroup;
+    registertionForm: FormGroup;
+>>>>>>> e1506e7231e5c69d93652531fe80e32721141fbe
 
     ngOnInit() {
          
