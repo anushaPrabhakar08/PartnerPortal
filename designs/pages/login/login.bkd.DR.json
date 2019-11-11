@@ -2283,7 +2283,7 @@
                                     },
                                     {
                                         "_key": "routerLink",
-                                        "_value": "/home",
+                                        "_value": "/partnerregistration",
                                         "_type": "kv",
                                         "_attrDef": "c"
                                     }

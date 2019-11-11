@@ -239,8 +239,8 @@
                                 "_attrDef": "p"
                             },
                             {
-                                "_key": "formGroup",
-                                "_value": "registertionForm",
+                                "_key": "[formGroup]",
+                                "_value": "firstFormGroup",
                                 "_type": "kv",
                                 "_attrDef": "c"
                             }
@@ -393,12 +393,6 @@
                                         "_value": "",
                                         "_type": "kv",
                                         "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "formGroupName",
-                                        "_value": "companyDetails",
-                                        "_type": "kv",
-                                        "_attrDef": "c"
                                     }
                                 ],
                                 "70630e7c-9d2f-50b0-fd12-a2b533529d9a": {
@@ -1084,7 +1078,7 @@
                                             },
                                             {
                                                 "_key": "formControlName",
-                                                "_value": "",
+                                                "_value": "companyType",
                                                 "_type": "kv",
                                                 "_attrDef": "p"
                                             },
@@ -1542,7 +1536,7 @@
                                                     },
                                                     {
                                                         "_key": "(click)",
-                                                        "_value": "submit(firstFormGroup.value)",
+                                                        "_value": "",
                                                         "_type": "kv",
                                                         "_attrDef": "p"
                                                     },
@@ -1652,12 +1646,6 @@
                                         "_value": "",
                                         "_type": "kv",
                                         "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "formControlName",
-                                        "_value": "partnerDetails",
-                                        "_type": "kv",
-                                        "_attrDef": "c"
                                     }
                                 ],
                                 "f4093c2f-14fc-8df0-5971-e7f64ecb7d31": {
@@ -1982,7 +1970,7 @@
                                             },
                                             {
                                                 "_key": "[(ngModel)]",
-                                                "_value": "dm.partnerregistration.firstName",
+                                                "_value": "",
                                                 "_type": "kv",
                                                 "_attrDef": "p"
                                             },
@@ -2343,7 +2331,7 @@
                                             },
                                             {
                                                 "_key": "formControlName",
-                                                "_value": "",
+                                                "_value": "country",
                                                 "_type": "kv",
                                                 "_attrDef": "p"
                                             },
@@ -2410,7 +2398,24 @@
                                             },
                                             {
                                                 "_key": "selectCustomOption",
-                                                "_value": [],
+                                                "_value": [
+                                                    {
+                                                        "input1": "U.S",
+                                                        "input2": "U.S",
+                                                        "toggle": {
+                                                            "toggleData": [],
+                                                            "selected": "false"
+                                                        }
+                                                    },
+                                                    {
+                                                        "input1": "bangalore",
+                                                        "input2": "bangalore",
+                                                        "toggle": {
+                                                            "toggleData": [],
+                                                            "selected": "false"
+                                                        }
+                                                    }
+                                                ],
                                                 "_type": "a",
                                                 "_attrDef": "p"
                                             },
@@ -2788,8 +2793,8 @@
                                             }
                                         ]
                                     },
-                                    "4f50c525-d1fd-a56a-ea88-d220c79ae2dd": {
-                                        "paletteKey": "NG-Input",
+                                    "bbde20fa-cdf4-b382-ad9d-5c15f57c8dbf": {
+                                        "paletteKey": "NG-Select",
                                         "parentEditorKey": "f4093c2f-14fc-8df0-5971-e7f64ecb7d31",
                                         "isAdvancedComponent": true,
                                         "designerReference": [
@@ -2813,21 +2818,54 @@
                                                 "_useAsLabel": true
                                             },
                                             {
-                                                "_key": "value",
+                                                "_key": "datasource",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[groupOptions]",
+                                                "_value": "noGroup",
+                                                "_type": "dav",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[groupLabels]",
                                                 "_value": "",
                                                 "_type": "kv",
-                                                "_attrDef": "p"
+                                                "_attrDef": "p",
+                                                "_visibility": false
                                             },
                                             {
-                                                "_key": "[appearance]",
-                                                "_value": "'legacy'",
+                                                "_key": "[disableGroup]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "[optionDatasource]",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "optionValue",
+                                                "_value": "",
                                                 "_type": "a",
                                                 "_attrDef": "p"
                                             },
                                             {
-                                                "_key": "required",
-                                                "_value": "required",
+                                                "_key": "optionView",
+                                                "_value": "",
                                                 "_type": "a",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "formControlName",
+                                                "_value": "designation",
+                                                "_type": "kv",
                                                 "_attrDef": "p"
                                             },
                                             {
@@ -2837,31 +2875,107 @@
                                                 "_attrDef": "p"
                                             },
                                             {
-                                                "_key": "color",
+                                                "_key": "[(value)]",
                                                 "_value": "",
                                                 "_type": "kv",
                                                 "_attrDef": "p"
                                             },
                                             {
-                                                "_key": "name",
+                                                "_key": "required",
+                                                "_value": "required",
+                                                "_type": "a",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[appearance]",
+                                                "_value": "'legacy'",
+                                                "_type": "a",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[floatLabel]",
+                                                "_value": "'auto'",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[disableRipple]",
                                                 "_value": "",
                                                 "_type": "kv",
                                                 "_attrDef": "p"
                                             },
                                             {
-                                                "_key": "type",
+                                                "_key": "multiple",
+                                                "_value": "",
+                                                "_type": "dav",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "CustomTriggerValue",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "(openedChange)",
                                                 "_value": "",
                                                 "_type": "kv",
                                                 "_attrDef": "p"
                                             },
                                             {
-                                                "_key": "[formControl]",
+                                                "_key": "(selectionChange)",
                                                 "_value": "",
                                                 "_type": "kv",
                                                 "_attrDef": "p"
                                             },
                                             {
-                                                "_key": "readonly",
+                                                "_key": "selectCustomOption",
+                                                "_value": [
+                                                    {
+                                                        "input1": "Senior Engineer",
+                                                        "input2": "Senior Engineer",
+                                                        "toggle": {
+                                                            "toggleData": [],
+                                                            "selected": "false"
+                                                        }
+                                                    },
+                                                    {
+                                                        "input1": "Senior Developer",
+                                                        "input2": "Senior Developer",
+                                                        "toggle": {
+                                                            "toggleData": [],
+                                                            "selected": "false"
+                                                        }
+                                                    },
+                                                    {
+                                                        "input1": "Senior Tester",
+                                                        "input2": "Senior Tester",
+                                                        "toggle": {
+                                                            "toggleData": [],
+                                                            "selected": "false"
+                                                        }
+                                                    },
+                                                    {
+                                                        "input1": "Team Manager",
+                                                        "input2": "Team Manager",
+                                                        "toggle": {
+                                                            "toggleData": [],
+                                                            "selected": "false"
+                                                        }
+                                                    }
+                                                ],
+                                                "_type": "a",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "selectStyle",
+                                                "_value": "Basic",
+                                                "_type": "a",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "panelClass",
                                                 "_value": "",
                                                 "_type": "kv",
                                                 "_attrDef": "p"
@@ -2873,16 +2987,17 @@
                                                 "_attrDef": "p"
                                             },
                                             {
-                                                "_key": "id",
+                                                "_key": "[errorStateMatcher]",
                                                 "_value": "",
                                                 "_type": "kv",
                                                 "_attrDef": "p"
                                             },
                                             {
-                                                "_key": "[floatLabel]",
-                                                "_value": "'auto'",
-                                                "_type": "kv",
-                                                "_attrDef": "p"
+                                                "_key": "option",
+                                                "_value": "option",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": false
                                             },
                                             {
                                                 "_key": "matError",
@@ -2890,68 +3005,6 @@
                                                 "_type": "a",
                                                 "_attrDef": "p",
                                                 "_visibility": true
-                                            },
-                                            {
-                                                "_key": "inputHint",
-                                                "_value": [],
-                                                "_type": "a",
-                                                "_attrDef": "p",
-                                                "_visibility": true
-                                            },
-                                            {
-                                                "_key": "Label",
-                                                "_value": "",
-                                                "_type": "a",
-                                                "_attrDef": "p",
-                                                "_visibility": true
-                                            },
-                                            {
-                                                "_key": "Suffix Icon",
-                                                "_value": "",
-                                                "_type": "a",
-                                                "_attrDef": "p",
-                                                "_visibility": true
-                                            },
-                                            {
-                                                "_key": "(suffixIconClick)",
-                                                "_value": "",
-                                                "_type": "a",
-                                                "_attrDef": "p",
-                                                "_visibility": true
-                                            },
-                                            {
-                                                "_key": "Prefix Icon",
-                                                "_value": "",
-                                                "_type": "a",
-                                                "_attrDef": "p",
-                                                "_visibility": true
-                                            },
-                                            {
-                                                "_key": "(prefixIconClick)",
-                                                "_value": "",
-                                                "_type": "a",
-                                                "_attrDef": "p",
-                                                "_visibility": true
-                                            },
-                                            {
-                                                "_key": "Prefix",
-                                                "_value": "",
-                                                "_type": "a",
-                                                "_attrDef": "p",
-                                                "_visibility": true
-                                            },
-                                            {
-                                                "_key": "Suffix",
-                                                "_value": "",
-                                                "_type": "a",
-                                                "_attrDef": "p",
-                                                "_visibility": true
-                                            },
-                                            {
-                                                "_key": "formControlName",
-                                                "_value": "designation",
-                                                "_type": "kv",
-                                                "_attrDef": "c"
                                             }
                                         ]
                                     },
@@ -3419,7 +3472,7 @@
                                                     },
                                                     {
                                                         "_key": "(click)",
-                                                        "_value": "",
+                                                        "_value": "submit(firstFormGroup.value)",
                                                         "_type": "kv",
                                                         "_attrDef": "p"
                                                     },

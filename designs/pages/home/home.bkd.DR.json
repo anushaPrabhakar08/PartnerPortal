@@ -449,7 +449,7 @@
                                 "designerReference": [
                                     {
                                         "_key": "style",
-                                        "_value": "color:white;",
+                                        "_value": "",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -468,7 +468,7 @@
                                     },
                                     {
                                         "_key": "color",
-                                        "_value": "",
+                                        "_value": "primary",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -510,7 +510,7 @@
                                 "designerReference": [
                                     {
                                         "_key": "style",
-                                        "_value": "color:white;",
+                                        "_value": "",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -529,7 +529,7 @@
                                     },
                                     {
                                         "_key": "color",
-                                        "_value": "",
+                                        "_value": "accent",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -571,7 +571,7 @@
                                 "designerReference": [
                                     {
                                         "_key": "style",
-                                        "_value": "color:white;",
+                                        "_value": "",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -590,7 +590,7 @@
                                     },
                                     {
                                         "_key": "color",
-                                        "_value": "",
+                                        "_value": "accent",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
