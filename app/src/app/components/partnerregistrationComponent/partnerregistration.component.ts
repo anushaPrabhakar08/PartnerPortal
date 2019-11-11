@@ -25,41 +25,32 @@ export class partnerregistrationComponent extends NBaseComponent implements OnIn
     mm: ModelMethods;
 
     constructor(private bdms: NDataModelService,
-                private formBuilder: FormBuilder) {
+        private formBuilder: FormBuilder) {
         super();
         this.mm = new ModelMethods(bdms);
     }
-<<<<<<< HEAD
-   
-    firstFormGroup=new FormGroup({
-        companyName:new FormControl(''),
-        companyWebsite:new FormControl(''),
+    firstFormGroup = new FormGroup({
+        companyName: new FormControl(''),
+        companyWebsite: new FormControl(''),
         companyType: new FormControl(''),
         numberofEmployees: new FormControl(''),
-         firstName:new FormControl(''),
-        lastName:new FormControl(''),
-        country:new FormControl(''),
+        firstName: new FormControl(''),
+        lastName: new FormControl(''),
+        country: new FormControl(''),
         mobileNumber: new FormControl(''),
-        emailId:new FormControl(''),
-        designation:new FormControl(''),
-        address:new FormControl('')
-          });
-    
-=======
-    firstFormGroup: FormGroup;
-    secondFormGroup: FormGroup;
-    registertionForm: FormGroup;
->>>>>>> e1506e7231e5c69d93652531fe80e32721141fbe
+        emailId: new FormControl(''),
+        designation: new FormControl(''),
+        address: new FormControl('')
+    });
 
     ngOnInit() {
-         
+
     }
 
-submit(data)
-{
-console.log(data);
+    submit(data) {
+        console.log(data);
 
-}
+    }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, filter, keys, sort, pagenumber, pagesize,
@@ -113,7 +104,7 @@ console.log(data);
             })
     }
 
-    delete (dataModelName, filter) {
+    delete(dataModelName, filter) {
         this.mm.delete(dataModelName, filter,
             result => {
                 // On Success code here
