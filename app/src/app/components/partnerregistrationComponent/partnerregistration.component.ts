@@ -31,6 +31,7 @@ export class partnerregistrationComponent extends NBaseComponent implements OnIn
     }
     firstFormGroup: FormGroup;
     secondFormGroup: FormGroup;
+    registertionForm: FormGroup;
 
     ngOnInit() {
         this.firstFormGroup = this.formBuilder.group({
