@@ -5,7 +5,7 @@ import { ModelMethods } from '../../lib/model.methods';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 import { MatSort, MatTableDataSource, MatPaginator } from '@angular/material';
-
+import { partnerservice } from '../../sd-services/partnerservice';
 export interface PeriodicElement {
     //id: string;
     no: number;
@@ -56,6 +56,7 @@ const LEADS_DATA: LeadsElement[] = [
 
 export class partner_detailsComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
+    data;
 
    // @ViewChild(MatSort, { static: true }) sort: MatSort;
     @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
@@ -64,7 +65,9 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
 
     leadsDataSource = new MatTableDataSource(LEADS_DATA);
 
-    constructor(private bdms: NDataModelService) {
+    constructor(private bdms: NDataModelService,
+    private partnerservice:partnerservice
+    ) {
         super();
         this.mm = new ModelMethods(bdms);
     }
@@ -80,7 +83,14 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
     ngOnInit() {
          this.dataSource.paginator = this.paginator;
          this.leadsDataSource.paginator = this.paginator;
+         this.getleads();
     }
+
+    async getleads(){
+        this.data = (await this.partnerservice.getleadsdata()).local.result;
+        console.log(this.data);
+    }
+
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, filter, keys, sort, pagenumber, pagesize,

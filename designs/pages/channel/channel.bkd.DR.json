@@ -786,7 +786,7 @@
                             },
                             {
                                 "_key": "fixedInViewport",
-                                "_value": "true",
+                                "_value": "false",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },

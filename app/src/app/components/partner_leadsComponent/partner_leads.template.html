@@ -15,17 +15,17 @@
           </div>
         </div>
         <table mat-table [dataSource]="dataSource" matSort class="table-width-fix">
-          <tr mat-header-row *matHeaderRowDef="[&apos;no&apos;,&apos;orgName&apos;,&apos;oppType&apos;,&apos;location&apos;,&apos;website&apos;,&apos;leadCreationDate&apos;,&apos;action&apos;]"></tr>
-          <tr mat-row *matRowDef="let row; columns: [&apos;no&apos;,&apos;orgName&apos;,&apos;oppType&apos;,&apos;location&apos;,&apos;website&apos;,&apos;leadCreationDate&apos;,&apos;action&apos;];"></tr>
+          <tr mat-header-row *matHeaderRowDef="[&apos;_id&apos;,&apos;OrgName&apos;,&apos;oppType&apos;,&apos;location&apos;,&apos;website&apos;,&apos;leadCreationDate&apos;,&apos;action&apos;]"></tr>
+          <tr mat-row *matRowDef="let row; columns: [&apos;_id&apos;,&apos;OrgName&apos;,&apos;oppType&apos;,&apos;location&apos;,&apos;website&apos;,&apos;leadCreationDate&apos;,&apos;action&apos;];"></tr>
 
-          <ng-container matColumnDef="no">
+          <ng-container matColumnDef="_id">
             <th mat-header-cell *matHeaderCellDef mat-sort-header class="tab-leadheader">No</th>
-            <td mat-cell *matCellDef="let table; let i = index;" class="tab-leaddata">{{table.no}}</td>
+            <td mat-cell *matCellDef="let table; let i = index;" class="tab-leaddata">{{table._id}}</td>
           </ng-container>
 
-          <ng-container matColumnDef="orgName">
+          <ng-container matColumnDef="OrgName">
             <th mat-header-cell *matHeaderCellDef mat-sort-header class="tab-leadheader">Organization Name</th>
-            <td mat-cell *matCellDef="let table; let i = index;" class="tab-leaddata">{{table.orgName}}</td>
+            <td mat-cell *matCellDef="let table; let i = index;" class="tab-leaddata">{{table.OrgName}}</td>
           </ng-container>
 
           <ng-container matColumnDef="oppType">

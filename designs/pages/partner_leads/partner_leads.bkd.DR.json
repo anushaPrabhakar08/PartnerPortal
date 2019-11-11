@@ -550,7 +550,7 @@
                             },
                             {
                                 "_key": "Mapping",
-                                "_value": "{{table.no}}",
+                                "_value": "{{table._id}}",
                                 "_type": "ma",
                                 "_attrDef": "p",
                                 "_useAsLabel": true
@@ -607,7 +607,7 @@
                             },
                             {
                                 "_key": "Mapping",
-                                "_value": "{{table.orgName}}",
+                                "_value": "{{table.OrgName}}",
                                 "_type": "ma",
                                 "_attrDef": "p",
                                 "_useAsLabel": true

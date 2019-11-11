@@ -8,7 +8,7 @@ import { MatSort, MatTableDataSource, MatPaginator } from '@angular/material';
 import { MatDialog } from '@angular/material';
 import { user } from '../../models/user.model';
 import { loginComponent } from '../loginComponent/login.component';
-
+import { partnerservice } from '../../sd-services/partnerservice';
 export interface PeriodicElement {
     no: number;
     oppType: string;
@@ -38,13 +38,16 @@ const ELEMENT_DATA: PeriodicElement[] = [
 
 export class partner_leadsComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
-
+    data;
     @ViewChild(MatSort, { static: true }) sort: MatSort;
     @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
-    dataSource = new MatTableDataSource(ELEMENT_DATA);
+            dataSource = new MatTableDataSource(this.data);
 
-    constructor(private bdms: NDataModelService, private dialog:MatDialog) {
+    constructor(private bdms: NDataModelService, 
+    private dialog:MatDialog, 
+    private partnerservice:partnerservice
+    ) {
         super();
         this.mm = new ModelMethods(bdms);
     }
@@ -52,6 +55,9 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
     ngOnInit() {
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
+        this.getleads();
+        console.log(this.dataSource);
+
     }
 
     
@@ -66,6 +72,13 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
         filterValue = filterValue.trim();
         filterValue = filterValue.toLowerCase();
         this.dataSource.filter = filterValue;
+    }
+
+
+
+    async getleads( ){
+        this.data = (await this.partnerservice.getleadsdata()).local.result;
+        // console.log(this.data);
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {

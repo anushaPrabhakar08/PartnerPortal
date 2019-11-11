@@ -448,9 +448,142 @@
     }
    }
   },
+<<<<<<< Updated upstream
   "node-red-node-twitter": {
    "name": "node-red-node-twitter",
    "version": "1.1.5",
+=======
+  "node-red-mongodb": {
+   "name": "node-red-mongodb",
+   "version": "0.0.18",
+   "local": false,
+   "nodes": {
+    "mongo": {
+     "name": "mongo",
+     "types": [
+      "mongodb",
+      "mongodb out",
+      "mongodb in"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-mongodb",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-mongodb\\66-mongodb.js"
+    }
+   }
+  },
+  "node-red-node-mongodb": {
+   "name": "node-red-node-mongodb",
+   "version": "0.0.14",
+   "local": false,
+   "nodes": {
+    "mongo": {
+     "name": "mongo",
+     "types": [
+      "mongodb",
+      "mongodb out",
+      "mongodb in"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-node-mongodb",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-node-mongodb\\66-mongodb.js"
+    }
+   }
+  },
+  "node-red-contrib-mongo-client": {
+   "name": "node-red-contrib-mongo-client",
+   "version": "0.2.2",
+   "local": false,
+   "nodes": {
+    "mongo-client": {
+     "name": "mongo-client",
+     "types": [
+      "mongo-client",
+      "mongo-client in"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-mongo-client",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-mongo-client\\mongo-client.js"
+    }
+   }
+  },
+  "node-red-contrib-mongodb": {
+   "name": "node-red-contrib-mongodb",
+   "version": "0.3.4",
+   "local": false,
+   "nodes": {
+    "mongo": {
+     "name": "mongo",
+     "types": [
+      "mongodb-config",
+      "mongodb-node"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-mongodb",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-mongodb\\mongodb.js"
+    }
+   }
+  },
+  "node-red-contrib-mongodb2": {
+   "name": "node-red-contrib-mongodb2",
+   "version": "0.5.6",
+   "local": false,
+   "nodes": {
+    "mongodb2": {
+     "name": "mongodb2",
+     "types": [
+      "mongodb2",
+      "mongodb2 in"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-mongodb2",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-mongodb2\\mongodb2\\mongodb2.js"
+    }
+   }
+  },
+  "node-red-contrib-mongodb3": {
+   "name": "node-red-contrib-mongodb3",
+   "version": "2.0.1",
+   "local": false,
+   "nodes": {
+    "mongodb": {
+     "name": "mongodb",
+     "types": [
+      "mongodb3",
+      "mongodb3 in"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-mongodb3",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-mongodb3\\mongodb\\mongodb.js"
+    }
+   }
+  },
+  "node-red-contrib-bson": {
+   "name": "node-red-contrib-bson",
+   "version": "1.0.0",
+   "local": false,
+   "nodes": {
+    "objectid": {
+     "name": "objectid",
+     "types": [
+      "objectid"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-bson",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-bson\\objectid.js"
+    }
+   }
+  },
+  "node-red-contrib-objectid": {
+   "name": "node-red-contrib-objectid",
+   "version": "0.7.2",
+>>>>>>> Stashed changes
    "local": false,
    "nodes": {
     "twitter": {
@@ -461,12 +594,38 @@
       "twitter out"
      ],
      "enabled": true,
+<<<<<<< Updated upstream
      "local": false,
      "module": "node-red-node-twitter",
      "file": "C:\\Program Files\\Neutrinos Studio\\resources\\app.asar.unpacked\\node_modules\\@jatahworx\\bhive-core\\node_modules\\node-red-node-twitter\\27-twitter.js"
+=======
+     "local": true,
+     "module": "node-red-contrib-objectid",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-objectid\\objectid.js"
+>>>>>>> Stashed changes
     }
    }
   }
  },
+<<<<<<< Updated upstream
  "_credentialSecret": "aaa1635d7f42e56d048671dbae155d0b07855a5d9b8ca05433b924cbb30a0815"
+=======
+ "_credentialSecret": "00528b9ee1a9edfeb194e15b0b3bae120bd34dacd0712cb59c5d016382603a21",
+ "users": {
+  "_": {
+   "editor": {
+    "view": {
+     "view-grid-size": "20",
+     "view-node-status": true,
+     "view-show-tips": true,
+     "view-snap-grid": true,
+     "view-show-grid": true,
+     "view-node-show-label": true
+    }
+   },
+   "menu-menu-item-palette": false,
+   "menu-menu-item-sidebar": false
+  }
+ }
+>>>>>>> Stashed changes
 }

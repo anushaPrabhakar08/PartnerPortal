@@ -54,7 +54,7 @@ export class loginservice {
     private snackbarService: NSnackbarService,
     private alertService: NAlertService,
     private fileIOService: NFileIOService
-  ) { }
+  ) {}
 
   //   service flows_loginservice
 
