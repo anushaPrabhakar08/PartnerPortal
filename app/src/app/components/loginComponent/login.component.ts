@@ -84,7 +84,7 @@ data;
     if(Object.keys(this.data).length===0){
         this.alertService.openSnackBar('username or password incorrect');
     }else{
-        this.rout.navigate(['/home']);
+        this.rout.navigate(['/partner']);
     console.log(this.data);
     }
   }

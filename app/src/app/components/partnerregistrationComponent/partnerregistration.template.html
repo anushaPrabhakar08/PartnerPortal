@@ -2,9 +2,9 @@
   <div fxLayout="column wrap" style="width:35%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
     <mat-card style="width:100%;margin-top:5%;height:92%;">
       <mat-card-content>
-        <form formGroup="registertionForm">
+        <form [formGroup]="firstFormGroup">
           <mat-horizontal-stepper [linear]="true" #stepper>
-            <mat-step formGroupName="companyDetails">
+            <mat-step>
               <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                 <div>
                   Company Information</div>
@@ -17,7 +17,7 @@
 
                 </mat-form-field>
                 <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-                  <mat-select placeholder="companyType" required>
+                  <mat-select formControlName="companyType" placeholder="companyType" required>
                     <mat-option [value]="&apos;service&apos;" disabled="false">service</mat-option>
                     <mat-option [value]="&apos;product&apos;" disabled="false">product</mat-option>
                   </mat-select>
@@ -28,15 +28,15 @@
 
                 </mat-form-field>
                 <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-                  <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-raised-button style="background:blue;color:white;" matStepperNext (click)="submit(firstFormGroup.value)">Next</button></div>
+                  <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-raised-button style="background:blue;color:white;" matStepperNext>Next</button></div>
                 </div>
               </div>
             </mat-step>
-            <mat-step formControlName="partnerDetails">
+            <mat-step>
               <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><label>
                   Partner Registeration</label>
                 <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-                  <input matInput [(ngModel)]="dm.partnerregistration.firstName" name="firstName" placeholder="firstName" required formControlName="firstName">
+                  <input matInput name="firstName" placeholder="firstName" required formControlName="firstName">
 
                 </mat-form-field>
                 <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
@@ -44,10 +44,9 @@
 
                 </mat-form-field>
                 <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-                  <mat-select placeholder="country" required>
-                    <ng-template ngFor let-option [ngForOf] let-i="index">
-                      <mat-option [value]></mat-option>
-                    </ng-template>
+                  <mat-select formControlName="country" placeholder="country" required>
+                    <mat-option [value]="&apos;U.S&apos;" disabled="false">U.S</mat-option>
+                    <mat-option [value]="&apos;bangalore&apos;" disabled="false">bangalore</mat-option>
                   </mat-select>
 
                 </mat-form-field>
@@ -60,7 +59,12 @@
 
                 </mat-form-field>
                 <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-                  <input matInput placeholder="designation" required formControlName="designation">
+                  <mat-select formControlName="designation" placeholder="designation" required>
+                    <mat-option [value]="&apos;Senior Engineer&apos;" disabled="false">Senior Engineer</mat-option>
+                    <mat-option [value]="&apos;Senior Developer&apos;" disabled="false">Senior Developer</mat-option>
+                    <mat-option [value]="&apos;Senior Tester&apos;" disabled="false">Senior Tester</mat-option>
+                    <mat-option [value]="&apos;Team Manager&apos;" disabled="false">Team Manager</mat-option>
+                  </mat-select>
 
                 </mat-form-field>
                 <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
@@ -69,7 +73,7 @@
                 </mat-form-field>
                 <div fxLayout="row wrap" fxLayoutAlign="space-between center" [fxShow]="true" [fxHide]="false">
                   <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-raised-button style="background:blue;color:white;" matStepperPrevious>previous</button></div>
-                  <div fxLayout="column wrap" fxLayoutGap="1.5em;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button style="background:blue;color:white;" matstepperRegister>register</button></div>
+                  <div fxLayout="column wrap" fxLayoutGap="1.5em;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button style="background:blue;color:white;" matstepperRegister (click)="submit(firstFormGroup.value)">register</button></div>
                 </div>
               </div>
             </mat-step>

@@ -4,7 +4,7 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
-import { FormGroup, FormBuilder,Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 /**
  * Service import Example :
  * import { HeroService } from '../../services/hero/hero.service';
@@ -29,29 +29,31 @@ export class partnerregistrationComponent extends NBaseComponent implements OnIn
         super();
         this.mm = new ModelMethods(bdms);
     }
-    firstFormGroup: FormGroup;
-    secondFormGroup: FormGroup;
+   
+    firstFormGroup=new FormGroup({
+        companyName:new FormControl(''),
+        companyWebsite:new FormControl(''),
+        companyType: new FormControl(''),
+        numberofEmployees: new FormControl(''),
+         firstName:new FormControl(''),
+        lastName:new FormControl(''),
+        country:new FormControl(''),
+        mobileNumber: new FormControl(''),
+        emailId:new FormControl(''),
+        designation:new FormControl(''),
+        address:new FormControl('')
+          });
+    
 
     ngOnInit() {
-        this.firstFormGroup = this.formBuilder.group({
-        companyName:['',Validators.required],
-        companyWebsite: ['',Validators.required],
-        companyType: [''],
-        numberofEmployees: ['',Validators.required]
-    });
-
-    this.secondFormGroup = this.formBuilder.group({
-        firstName:['',Validators.required],
-        lastName:['',Validators.required],
-        country:[''],
-        mobileNumber: ['',Validators.required],
-        emailId: ['',Validators.required],
-        designation: ['',Validators.required],
-        address: ['',Validators.required],
-        
-    });
-    
+         
     }
+
+submit(data)
+{
+console.log(data);
+
+}
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, filter, keys, sort, pagenumber, pagesize,

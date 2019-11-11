@@ -2078,7 +2078,7 @@
                                     },
                                     {
                                         "_key": "routerLink",
-                                        "_value": "/home",
+                                        "_value": "/memberregisteration",
                                         "_type": "kv",
                                         "_attrDef": "c"
                                     }
