@@ -8,14 +8,11 @@ import { MatSort, MatTableDataSource, MatPaginator } from '@angular/material';
 import { MatDialog } from '@angular/material';
 import { user } from '../../models/user.model';
 import { loginComponent } from '../loginComponent/login.component';
-<<<<<<< Updated upstream
 import { partnerservice } from '../../sd-services/partnerservice';
-=======
 import { partner_addleadComponent } from '../partner_addleadComponent/partner_addlead.component';
 import { deletepopupComponent } from '../deletepopupComponent/deletepopup.component';
 
 
->>>>>>> Stashed changes
 export interface PeriodicElement {
     no: number;
     oppType: string;
@@ -49,16 +46,12 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
     @ViewChild(MatSort, { static: true }) sort: MatSort;
     @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
-            dataSource = new MatTableDataSource(this.data);
+    dataSource = new MatTableDataSource(this.data);
 
-<<<<<<< Updated upstream
-    constructor(private bdms: NDataModelService, 
-    private dialog:MatDialog, 
-    private partnerservice:partnerservice
+    constructor(private bdms: NDataModelService,
+        private dialog: MatDialog,
+        private partnerservice: partnerservice
     ) {
-=======
-    constructor(private bdms: NDataModelService, private dialog: MatDialog) {
->>>>>>> Stashed changes
         super();
         this.mm = new ModelMethods(bdms);
     }
@@ -98,7 +91,7 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
 
 
 
-    async getleads( ){
+    async getleads() {
         this.data = (await this.partnerservice.getleadsdata()).local.result;
         // console.log(this.data);
     }
