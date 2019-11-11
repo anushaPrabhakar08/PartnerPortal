@@ -44,16 +44,6 @@
         "componentName": "channel_announcementsComponent",
         "isEntry": false
     },
-    "3b2ca99c-122a-15ba-28a4-32862f8e2a41": {
-        "appPageName": "partner_addLeads",
-        "componentName": "partner_addleadsComponent",
-        "isEntry": false
-    },
-    "c5f8f18e-d916-2c6d-7fad-9ce2d9657741": {
-        "appPageName": "partner_addDevelopers",
-        "componentName": "partner_adddevelopersComponent",
-        "isEntry": false
-    },
     "1994fc15-30ef-1fbc-d89c-cd82d11e25b6": {
         "appPageName": "partner_agreement",
         "componentName": "partner_agreementComponent",
@@ -117,6 +107,16 @@
     "f9daf689-814a-ee52-d9a4-4a8c729fb713": {
         "appPageName": "partner_addLead",
         "componentName": "partner_addleadComponent",
+        "isEntry": false
+    },
+    "c8e0e84f-ffe0-035b-f155-9eae3c974cf5": {
+        "appPageName": "channel_addMarketing",
+        "componentName": "channel_addmarketingComponent",
+        "isEntry": false
+    },
+    "ee5a3b45-6522-a7ba-99f7-75d0d6add4f2": {
+        "appPageName": "deletePopup",
+        "componentName": "deletepopupComponent",
         "isEntry": false
     }
 }

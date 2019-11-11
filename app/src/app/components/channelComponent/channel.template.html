@@ -10,6 +10,7 @@
     <div fxLayout="column " fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
       <mat-sidenav-container style="height:100%;margin-top: 80px;" class="sidenav-container" autosize="true" hasBackdrop="false" (backdropClick)="true">
         <mat-sidenav #sidenav style="background:#000;height:100%;" class="sidenav-content" fxLayout="column wrap" [mode]="&apos;side&apos;" [position]="&apos;start&apos;" [opened]="true" autoFocus="false" fixedInViewport="false">
+<<<<<<< Updated upstream
           <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="false" [fxHide]="true"><button mat-button class="nav-button">Registered partners</button><button mat-button class="nav-button">Marketing</button><button mat-button class="nav-button">Announcements</button></div>
           <div fxLayout="column wrap" style="margin:20px;" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
             <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
@@ -25,6 +26,9 @@
                 <a href routerLink="/channel/dashboardChannelAnnouncements">Announcements</a></div>
             </div>
           </div>
+=======
+          <div fxLayout="column wrap" style="margin-top:20px;" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-button class="nav-button" routerLink="/channel/dashboard">Registered partners</button><button mat-button class="nav-button" routerLink="/channel/dashboardChannelMarketing">Marketing</button><button mat-button class="nav-button" routerLink="/channel/dashboardChannelAnnouncements">Announcements</button></div>
+>>>>>>> Stashed changes
         </mat-sidenav>
         <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFill>
           <router-outlet></router-outlet>

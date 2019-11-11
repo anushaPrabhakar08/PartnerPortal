@@ -8,6 +8,9 @@ import { MatSort, MatTableDataSource, MatPaginator } from '@angular/material';
 import { NDataModelService, NLoginService, NSnackbarService, NSystemService , NHTTPLoaderService } from 'neutrinos-seed-services';
 import { user } from '../../models/user.model';
 import { loginComponent } from '../loginComponent/login.component';
+import { deletepopupComponent } from '../deletepopupComponent/deletepopup.component';
+import { partner_adddeveloperComponent } from '../partner_adddeveloperComponent/partner_adddeveloper.component';
+
 export interface PeriodicElement {
     no: number;
     firstName: string;
@@ -51,11 +54,21 @@ export class partner_developersComponent extends NBaseComponent implements OnIni
         this.dataSource.sort = this.sort;
     }
 
+    openDeleteDialog() {
+        const dialogRef = this.dialog.open(deletepopupComponent, {
+            width: '450px',
+            //disableClose: true,
+            data: 'hello'
+        });
+    }
+
+
     addDeveloper() {
-    const dialogRef = this.dialog.open(loginComponent, {
-      width: '450px',
-      data: 'hello'
-    });
+        const dialogRef = this.dialog.open(partner_adddeveloperComponent, {
+            width: '450px',
+            //disableClose: true,
+            data: 'hello'
+        });
     }
 
     applyFilter(filterValue: string) {

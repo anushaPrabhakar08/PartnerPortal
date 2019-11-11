@@ -4,17 +4,9 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
-
-/**
- * Service import Example :
- * import { HeroService } from '../../services/hero/hero.service';
- */
-
-/**
- *
- * Service Designer import Example - Service Name - HeroService
- * import { HeroService } from 'app/sd-services/HeroService';
- */
+import { MatDialog } from '@angular/material';
+import { channel_addmarketingComponent } from '../channel_addmarketingComponent/channel_addmarketing.component';
+import { loginComponent } from '../loginComponent/login.component';
 
 @Component({
     selector: 'bh-channel_marketing',
@@ -24,13 +16,20 @@ import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 export class channel_marketingComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    constructor(private bdms: NDataModelService) {
+    constructor(private bdms: NDataModelService, private dialog:MatDialog) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
     ngOnInit() {
 
+    }
+
+    addContent() {
+        const dialogRef = this.dialog.open(channel_addmarketingComponent, {
+            width: '450px',
+            data: 'hello'
+        });
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
@@ -85,7 +84,7 @@ export class channel_marketingComponent extends NBaseComponent implements OnInit
             })
     }
 
-    delete (dataModelName, filter) {
+    delete(dataModelName, filter) {
         this.mm.delete(dataModelName, filter,
             result => {
                 // On Success code here

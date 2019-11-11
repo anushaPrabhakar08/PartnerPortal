@@ -1,9 +1,9 @@
 <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
   <div fxLayout="column " style="width:100%;" fxLayoutGap="3em" fxLayoutAlign="center none" [fxShow]="true" [fxHide]="false">
     <div fxLayout="column " class="home_col2" fxLayoutAlign="  none" [fxShow]="true" [fxHide]="false">
-      <mat-toolbar style="background:#5f737d !important;">
-        <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="space-between center" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/logo.png" width="140">
-          <div fxLayout="row wrap" style="width:50%;" fxLayoutAlign="space-evenly stretch" [fxShow]="true" [fxHide]="false"><button mat-button color="primary" routerLink="/home">Home</button><button mat-button class="login_btn" color="accent" routerLink="/login">Login as Partner</button><button mat-button class="login_btn" color="accent" routerLink="/memberlogin">Login as Member</button><button mat-button style="color:white;" routerLink="/contact">Contact Us</button></div>
+      <mat-toolbar style="width:100%;" class="toolbar-fixed">
+        <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="space-between center" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/logo-white.png" style="width:200px;" width="140">
+          <div fxLayout="row wrap" style="width:50%;" fxLayoutAlign="space-evenly stretch" [fxShow]="true" [fxHide]="false"><button mat-button style="color:white;" routerLink="/home">Home</button><button mat-button style="color:white;" class="login_btn" routerLink="/login">Login as Partner</button><button mat-button style="color:white;" class="login_btn" routerLink="/memberlogin">Login as Member</button><button mat-button style="color:white;" routerLink="/contact">Contact Us</button></div>
         </div>
       </mat-toolbar>
       <router-outlet></router-outlet>
@@ -31,9 +31,9 @@
         </mat-card-content>
       </mat-card>
     </div>
-    <footer class="footer">
-      <p>
-        &#xA9;2019 Neutrinos</p>
+    <footer>
+      <h3 class="footer-class">
+        @2019 Neutrinos</h3>
     </footer>
   </div>
 </div>

@@ -1,0 +1,13 @@
+{
+    "appPageId": "c8e0e84f-ffe0-035b-f155-9eae3c974cf5",
+    "appPageName": "channel_addMarketing",
+    "componentName": "channel_addmarketingComponent",
+    "selectorName": "bh-channel_addmarketing",
+    "htmlFileName": "channel_addmarketing.template.html",
+    "tsFileName": "channel_addmarketing.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

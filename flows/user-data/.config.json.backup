@@ -449,6 +449,7 @@
    }
   },
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   "node-red-node-twitter": {
    "name": "node-red-node-twitter",
    "version": "1.1.5",
@@ -549,6 +550,11 @@
    "name": "node-red-contrib-mongodb3",
    "version": "2.0.1",
 >>>>>>> Stashed changes
+=======
+  "node-red-node-twitter": {
+   "name": "node-red-node-twitter",
+   "version": "1.1.5",
+>>>>>>> Stashed changes
    "local": false,
    "nodes": {
     "twitter": {
@@ -559,6 +565,7 @@
       "twitter out"
      ],
      "enabled": true,
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
      "local": false,
      "module": "node-red-node-twitter",
@@ -623,6 +630,14 @@
    },
    "menu-menu-item-palette": false,
    "menu-menu-item-sidebar": true
+  }
+>>>>>>> Stashed changes
+=======
+     "local": false,
+     "module": "node-red-node-twitter",
+     "file": "C:\\Program Files\\Neutrinos Studio\\resources\\app.asar.unpacked\\node_modules\\@jatahworx\\bhive-core\\node_modules\\node-red-node-twitter\\27-twitter.js"
+    }
+   }
   }
 >>>>>>> Stashed changes
  }

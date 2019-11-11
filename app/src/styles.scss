@@ -1,7 +1,7 @@
 /*Importing default angular material css theme. */
-
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 @import "nDefaults.scss";
+<<<<<<< Updated upstream
 
 .login-card .mat-card-image:first-child {
     margin-top:0 !important
@@ -35,6 +35,34 @@
 
 }
 
+=======
+.login-card .mat-card-image:first-child {
+    margin-top:0 !important
+}
+.logout-btn .mat-button{
+    font-size:18px !important;
+}
+.background {
+    background: #b0b0b01f;
+}
+.primary-red-btn {
+    background-color: #ee1c22;
+    color: white;
+}
+.margin-tb{
+    margin: 10px 40px;
+}
+.mat-toolbar{
+    //background-color:  #5f737d !important;
+    background-color:  #000 !important;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+>>>>>>> Stashed changes
 // .toolbar-fixed{
 //     position: fixed;
 //     top: 0;
@@ -46,11 +74,13 @@
     width:unset !important;
     height: 80px !important;
 }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 .mat-paginator{
      background: unset !important; 
 }
-
 .footer-class {
     background-color: #000;
     color: #fff;
@@ -60,11 +90,13 @@
     align-items: center;
     place-content: center;
 }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 .table-class{
     width: 100%;
 }
-
 .sidenav-content {
 //   flex-basis:10%;
 //   height:100px;
@@ -78,11 +110,19 @@
   //width: 100%;
   //height:800px;
 }
+<<<<<<< Updated upstream
+=======
+
+// mat-sidenav .mat-drawer{
+//     top:80px !important;
+// }
+>>>>>>> Stashed changes
 .mat-sort-header-arrow{
     color:#000 !important;
 }
 
 //side nav-bar styles
+<<<<<<< Updated upstream
 .nav-menu-item{
     text-decoration: none;
     margin: 6px;
@@ -102,12 +142,15 @@
     padding-left: 6px;
     border-radius: 6px;
 }
+=======
+>>>>>>> Stashed changes
 .nav-button{
     font-weight: 700;
     font-size: 16px;
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
     text-align: left !important;
+<<<<<<< Updated upstream
 }
 // .nav-button .mat-button{
 //     text-align: left !important;
@@ -188,12 +231,88 @@ table{
     background: #f44336f0 !important;
 }
 
+=======
+}
+
+.nav-button:hover{
+    background-color: gray;
+}
+
+.nav-button:active{
+    background-color: #eee;
+}
+
+.nav-button:focus{
+    background-color:rgba(241, 8, 8, 0.82);
+}
+
+
+//heading styles
+.header{
+    color: rgba(73, 61, 61, 0.87);
+    font-size: xx-large;
+}
+
+//table styles
+// .partner-dev-table .mat-table{
+//     background: #e0e0e03b !important;
+// }
+
+.partner-table{
+    background-color: unset !important;
+}
+.table-width-fix{
+    background-color: unset !important;
+}
+table{
+    width:100%;
+}
+.mat-header-cell{
+    font-size: 16px;
+    font-weight: bold;
+}
+.tab-header, 
+.tab-leadheader,
+.tab-developerheader{
+    font-size: 16px;
+    font-weight: bold;
+    color:#fff !important;
+    background: rgba(0,0,0,.6);
+}
+.tab-data,
+.tab-leaddata,
+.tab-developerdata{
+    cursor: pointer;
+    color:#000 !important;
+    background-color: #fafafa;   
+}
+// .tab-leadheader,
+// .tab-developerheader{
+//     color: #fff !important;
+//     background: #f44336f0;
+// }
+// .tab-leaddata,
+// .tab-developerdata{
+//     color: #fff !important;
+//     background-color: rgba(0, 0, 0, 0.8);;
+// }
+
+.tab-partner-data{
+    color: #000 !important;
+    background-color: #eee;
+}
+.tab-partner-header{
+    color: #000 !important;
+    background: rgba(0, 0, 0, 0.4);
+}
+.developer-paginator{
+    background: #f44336f0 !important;
+}
+>>>>>>> Stashed changes
 .card-title, .expansion-title{
     font-size: 20px;
     font-weight: 700;
 }
-
-
 bh-channel_announcements,
 bh-channel_marketing,
 bh-channel_dashboard,
@@ -203,7 +322,6 @@ bh-partner_developers,
 bh-partner_marketing{
     width : 100%
 }
-
 //background images
 // .dashboard-bgimg {
 //     background-repeat: no-repeat;
@@ -228,23 +346,33 @@ bh-partner_marketing{
 // .developer-img{
 //     background-image: url(assets/Web/developerimg3.jpg);
 // }
+<<<<<<< Updated upstream
 
 .card-content{
     // margin-bottom: 20px;
 }
 
+=======
+.card-content{
+    // margin-bottom: 20px;
+}
+>>>>>>> Stashed changes
 .agreement-card{
     align-items: center !important;
 }
 .mat-expansion-panel-header{
     height: 50px;
 }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 //partner-details
 .edit-btn-class{
     display: flex;
     align-items: center !important;
     margin-right: 10px;
+<<<<<<< Updated upstream
 }
 .edit-btn, .delete-btn{
     text-decoration: underline !important;
@@ -256,11 +384,23 @@ bh-partner_marketing{
     min-width: 0px;
 }
 
+=======
+}
+.edit-btn, .delete-btn{
+    text-decoration: underline !important;
+    color: blue;
+    width: 24px !important;
+}
+.edit-btn mat-button{
+    min-width: 0px;
+}
+>>>>>>> Stashed changes
 
 //Announcements
 .mat-form-field-infix{
     width: 350px !important;
 }
+<<<<<<< Updated upstream
 
 .announce-btn{
     background-color: #ffd740; 
@@ -270,8 +410,18 @@ bh-partner_marketing{
 
 .announce-btn:hover{
     background-color: #f44336;
+=======
+.announce-btn{
+    background-color: #ee1c22;
+    width: 350px;
+    height: 40px;
+    font-size: 20px;
+    color: #fafafa;
 }
-
+.announce-btn:hover{
+    background-color: rgba(0,0,0,.6);
+>>>>>>> Stashed changes
+}
 .announcement-card {
     width:80% !important;
     height:400px !important;
@@ -283,7 +433,6 @@ bh-partner_marketing{
     background-size: cover;
     box-shadow: none !important;
 }
-
 //marketing Collaterals
 .gallery-card-content{
     width: max-content;
@@ -325,13 +474,17 @@ bh-partner_marketing{
     font-variant: small-caps;
     font-size: large;
 }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 .header-sm{
     color:#554949;
     font-size: 24px;
     font-weight: 700;
     font-variant: petite-caps;
 }
+<<<<<<< Updated upstream
 
 .text-center{
     text-align: center;
@@ -358,15 +511,41 @@ video{
     font-weight: bold;
 }
 
+=======
+.text-center{
+    text-align: center;
+}
+video{
+    margin-bottom: 0em !important;
+}
+.add-lead{ 
+     color: #fff;
+     font-weight: bold !important;
+}
+.add-icon, .gallery-icon{
+    background-color: #242492;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #fff;
+    height: 40px;
+    width: 40px;
+    display: flex !important;
+    place-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+>>>>>>> Stashed changes
 .gallery-icon{
      background-color:#f43692 !important;
      height: 30px !important;
      width: 30px !important;
      font-weight: normal;
 }
-
 //partner-lead
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 // .table-search{
 //     color: #fafafa;
 //     background: #ff000085;
@@ -380,6 +559,7 @@ video{
     color:#000;
      // background-color: red;
 }
+<<<<<<< Updated upstream
 
 .search-class .mat-form-field{
     color: #eee;
@@ -389,6 +569,15 @@ video{
     border-radius: 6px;
 }
 
+=======
+.search-class .mat-form-field{
+    color: #000;
+    margin-bottom: 10px;
+    //background-color: rgba(0,0,0,.42);
+    padding: 10px 10px 0 10px;
+    border-radius: 6px;
+}
+>>>>>>> Stashed changes
 .search-class .mat-paginator,
 .search-class .mat-paginator-page-size 
 .mat-select-trigger
@@ -396,9 +585,14 @@ video{
     color:#fafafa;
    // background-color: red;
  } 
+<<<<<<< Updated upstream
 
 .search-class .mat-paginator{
      background-color: #f44336f0 !important;
+=======
+.search-class .mat-paginator{
+     background-color: rgba(0,0,0,.6) !important;
+>>>>>>> Stashed changes
  }  
  .search-class .mat-paginator-page-size-select{
      padding: 0 !important;
@@ -410,20 +604,38 @@ video{
      font-weight: bold;
      font-size: 14px;
  }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
  //home-page
  .card_video{
     width:540px;
 }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 .h_card{
    height: auto;
    width:540px;
    margin:10px;
 }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 .home_col2{
    height:500px;
    background-image: url('assets/Web/become_partner.jpg');
   background-size:cover;
+<<<<<<< Updated upstream
 }
+=======
+}
+
+
+
+
+
+>>>>>>> Stashed changes

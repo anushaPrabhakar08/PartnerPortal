@@ -209,13 +209,13 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "background:#5f737d !important;",
+                            "_value": "width:100%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
                         {
                             "_key": "class",
-                            "_value": "",
+                            "_value": "toolbar-fixed",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -311,7 +311,7 @@
                                 },
                                 {
                                     "_key": "style",
-                                    "_value": "",
+                                    "_value": "width:200px;",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -323,7 +323,7 @@
                                 },
                                 {
                                     "_key": "imgSrc",
-                                    "_value": "Web/logo.png",
+                                    "_value": "Web/logo-white.png",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -449,7 +449,7 @@
                                 "designerReference": [
                                     {
                                         "_key": "style",
-                                        "_value": "",
+                                        "_value": "color:white;",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -468,7 +468,7 @@
                                     },
                                     {
                                         "_key": "color",
-                                        "_value": "primary",
+                                        "_value": "",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -510,7 +510,7 @@
                                 "designerReference": [
                                     {
                                         "_key": "style",
-                                        "_value": "",
+                                        "_value": "color:white;",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -529,7 +529,7 @@
                                     },
                                     {
                                         "_key": "color",
-                                        "_value": "accent",
+                                        "_value": "",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -571,7 +571,7 @@
                                 "designerReference": [
                                     {
                                         "_key": "style",
-                                        "_value": "",
+                                        "_value": "color:white;",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -590,7 +590,7 @@
                                     },
                                     {
                                         "_key": "color",
-                                        "_value": "accent",
+                                        "_value": "",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -1849,7 +1849,7 @@
                     }
                 }
             },
-            "1bc9fc49-1c95-bf9f-6d2f-888330024020": {
+            "19608e53-3655-ee46-c923-886aa30ee091": {
                 "paletteKey": "NG-Footer",
                 "parentEditorKey": "414259b2-ecb7-3626-bd5c-c48d36bff20e",
                 "designerReference": [
@@ -1868,14 +1868,14 @@
                     },
                     {
                         "_key": "class",
-                        "_value": "footer",
+                        "_value": "",
                         "_type": "kv",
                         "_attrDef": "p"
                     }
                 ],
-                "6c3067f1-e4b9-9d0e-cd6c-3ff876a20e8d": {
+                "e5a63ceb-afae-ca19-3ca1-1adfd05153d7": {
                     "paletteKey": "Html5",
-                    "parentEditorKey": "1bc9fc49-1c95-bf9f-6d2f-888330024020",
+                    "parentEditorKey": "19608e53-3655-ee46-c923-886aa30ee091",
                     "isAdvancedComponent": true,
                     "designerReference": [
                         {
@@ -1886,20 +1886,20 @@
                         },
                         {
                             "_key": "class",
-                            "_value": "",
+                            "_value": "footer-class",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
                         {
                             "_key": "htmlElement",
-                            "_value": "p",
+                            "_value": "h3",
                             "_type": "dav",
                             "_attrDef": "p",
                             "_useAsLabel": true
                         },
                         {
                             "_key": "tagType",
-                            "_value": "p",
+                            "_value": "h3",
                             "_type": "a",
                             "_attrDef": "p",
                             "_visibility": false
@@ -2059,9 +2059,9 @@
                             "_visibility": false
                         }
                     ],
-                    "2cb9a1c4-e27f-c8e8-ef2e-73a48431b3e7": {
+                    "9a06df79-c7f8-16a0-313c-72905aeb3f43": {
                         "paletteKey": "html-editor",
-                        "parentEditorKey": "6c3067f1-e4b9-9d0e-cd6c-3ff876a20e8d",
+                        "parentEditorKey": "e5a63ceb-afae-ca19-3ca1-1adfd05153d7",
                         "isAdvancedChildComponent": true,
                         "designerReference": [
                             {
@@ -2078,7 +2078,7 @@
                             },
                             {
                                 "_key": "html",
-                                "_value": "&copy;2019 Neutrinos",
+                                "_value": "@2019 Neutrinos",
                                 "_type": "a",
                                 "_attrDef": "p"
                             }

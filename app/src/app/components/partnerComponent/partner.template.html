@@ -19,24 +19,7 @@
     <div fxLayout="column " fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
       <mat-sidenav-container style="height:100%;margin-top: 80px;" class="sidenav-container" autosize="true" hasBackdrop="false">
         <mat-sidenav #sidenav style="background:#000;height:100%;" class="sidenav-content" fxLayout="column wrap" [mode]="&apos;side&apos;" (toggle)="eventOccured()" [position]="&apos;start&apos;" [opened]="true" autoFocus="false" fixedInViewport="false">
-          <div fxLayout="column wrap" style="margin:20px;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-            <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-              <div class="nav-menu-item">
-                <a href routerLink="/partner/dashboardPartnerAgreement">View Agreement</a></div>
-            </div>
-            <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-              <div class="nav-menu-item">
-                <a href routerLink="/partner/dashboardPartnerLeads">Leads</a></div>
-            </div>
-            <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-              <div class="nav-menu-item">
-                <a href routerLink="/partner/dashboardPartnerDevelopers">Developer Details</a></div>
-            </div>
-            <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-              <div class="nav-menu-item">
-                <a href routerLink="/partner/dashboardPartnerMarketing">Marketing</a></div>
-            </div>
-          </div>
+          <div fxLayout="column wrap" style="margin-top:20px;" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-button class="nav-button" routerLink="/partner/dashboardPartnerAgreement">View Agreement</button><button mat-button class="nav-button" routerLink="/partner/dashboardPartnerLeads">Leads</button><button mat-button class="nav-button" routerLink="/partner/dashboardPartnerDevelopers">Developer Details</button><button mat-button class="nav-button" routerLink="/partner/dashboardPartnerMarketing">Marketing</button></div>
         </mat-sidenav>
         <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFill>
           <router-outlet></router-outlet>

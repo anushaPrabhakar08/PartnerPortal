@@ -12,6 +12,10 @@ window['neutrinos'] = {
 }
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-deletepopupComponent
+import { deletepopupComponent } from '../components/deletepopupComponent/deletepopup.component';
+//CORE_REFERENCE_IMPORT-channel_addmarketingComponent
+import { channel_addmarketingComponent } from '../components/channel_addmarketingComponent/channel_addmarketing.component';
 //CORE_REFERENCE_IMPORT-partner_addleadComponent
 import { partner_addleadComponent } from '../components/partner_addleadComponent/partner_addlead.component';
 //CORE_REFERENCE_IMPORT-partner_adddeveloperComponent
@@ -38,10 +42,6 @@ import { partner_leadsComponent } from '../components/partner_leadsComponent/par
 import { partner_marketingComponent } from '../components/partner_marketingComponent/partner_marketing.component';
 //CORE_REFERENCE_IMPORT-partner_agreementComponent
 import { partner_agreementComponent } from '../components/partner_agreementComponent/partner_agreement.component';
-//CORE_REFERENCE_IMPORT-partner_adddevelopersComponent
-import { partner_adddevelopersComponent } from '../components/partner_adddevelopersComponent/partner_adddevelopers.component';
-//CORE_REFERENCE_IMPORT-partner_addleadsComponent
-import { partner_addleadsComponent } from '../components/partner_addleadsComponent/partner_addleads.component';
 //CORE_REFERENCE_IMPORT-channel_announcementsComponent
 import { channel_announcementsComponent } from '../components/channel_announcementsComponent/channel_announcements.component';
 //CORE_REFERENCE_IMPORT-channel_marketingComponent
@@ -98,6 +98,10 @@ export const appDeclarations = [
   PageNotFoundComponent,
   NMapComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-deletepopupComponent
+deletepopupComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-channel_addmarketingComponent
+channel_addmarketingComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-partner_addleadComponent
   partner_addleadComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-partner_adddeveloperComponent
@@ -125,9 +129,9 @@ export const appDeclarations = [
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-partner_agreementComponent
   partner_agreementComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-partner_adddevelopersComponent
-  partner_adddevelopersComponent,
+  //partner_adddevelopersComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-partner_addleadsComponent
-  partner_addleadsComponent,
+ // partner_addleadsComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-channel_announcementsComponent
   channel_announcementsComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-channel_marketingComponent

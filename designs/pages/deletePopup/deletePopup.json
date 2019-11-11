@@ -1,0 +1,13 @@
+{
+    "appPageId": "ee5a3b45-6522-a7ba-99f7-75d0d6add4f2",
+    "appPageName": "deletePopup",
+    "componentName": "deletepopupComponent",
+    "selectorName": "bh-deletepopup",
+    "htmlFileName": "deletepopup.template.html",
+    "tsFileName": "deletepopup.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

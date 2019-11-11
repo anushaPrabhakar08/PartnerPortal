@@ -449,6 +449,7 @@
    }
   },
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   "node-red-node-twitter": {
    "name": "node-red-node-twitter",
    "version": "1.1.5",
@@ -566,14 +567,22 @@
   "node-red-contrib-bson": {
    "name": "node-red-contrib-bson",
    "version": "1.0.0",
+=======
+  "node-red-node-twitter": {
+   "name": "node-red-node-twitter",
+   "version": "1.1.5",
+>>>>>>> Stashed changes
    "local": false,
    "nodes": {
-    "objectid": {
-     "name": "objectid",
+    "twitter": {
+     "name": "twitter",
      "types": [
-      "objectid"
+      "twitter-credentials",
+      "twitter in",
+      "twitter out"
      ],
      "enabled": true,
+<<<<<<< Updated upstream
      "local": true,
      "module": "node-red-contrib-bson",
      "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-bson\\objectid.js"
@@ -603,10 +612,16 @@
      "module": "node-red-contrib-objectid",
      "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-objectid\\objectid.js"
 >>>>>>> Stashed changes
+=======
+     "local": false,
+     "module": "node-red-node-twitter",
+     "file": "C:\\Program Files\\Neutrinos Studio\\resources\\app.asar.unpacked\\node_modules\\@jatahworx\\bhive-core\\node_modules\\node-red-node-twitter\\27-twitter.js"
+>>>>>>> Stashed changes
     }
    }
   }
  },
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
  "_credentialSecret": "aaa1635d7f42e56d048671dbae155d0b07855a5d9b8ca05433b924cbb30a0815"
 =======
@@ -627,5 +642,8 @@
    "menu-menu-item-sidebar": false
   }
  }
+>>>>>>> Stashed changes
+=======
+ "_credentialSecret": "5e07d2760d012306db61116bcf19bf1e2205ec48c637b150946376fa0f7a3a6f"
 >>>>>>> Stashed changes
 }

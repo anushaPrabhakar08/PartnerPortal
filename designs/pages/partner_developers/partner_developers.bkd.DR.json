@@ -475,21 +475,21 @@
                         "_attrDef": "p"
                     }
                 ],
-                "c3c9dcf9-a922-9d50-6de2-8c840ab3b7a5": {
-                    "paletteKey": "ng-table",
+                "f3ff6c9c-8e9d-c76a-3251-ee5a32f1afe9": {
+                    "paletteKey": "ad-card",
                     "parentEditorKey": "8504c14f-3142-08a3-3c3b-0d1d2730af14",
                     "isAdvancedComponent": true,
                     "designerReference": [
                         {
                             "_key": "componentLabel",
-                            "_value": "Table",
+                            "_value": "Card",
                             "_type": "kv",
                             "_attrDef": "p",
                             "_useAsLabel": true
                         },
                         {
                             "_key": "style",
-                            "_value": "width:85%",
+                            "_value": "width:80%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -500,28 +500,15 @@
                             "_attrDef": "p"
                         },
                         {
-                            "_key": "[dataSource]",
-                            "_value": "dataSource",
+                            "_key": "tabindex",
+                            "_value": "",
                             "_type": "kv",
                             "_attrDef": "p"
-                        },
-                        {
-                            "_key": "rowclick",
-                            "_value": "",
-                            "_type": "a",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "header",
-                            "_value": true,
-                            "_type": "a",
-                            "_attrDef": "p",
-                            "_visibility": true
                         }
                     ],
-                    "d7193cb0-f130-c8e6-e6db-d02196d097fa": {
-                        "paletteKey": "ng-table-column",
-                        "parentEditorKey": "c3c9dcf9-a922-9d50-6de2-8c840ab3b7a5",
+                    "2cdc8f03-8cab-a0f2-d3be-743581a0e300": {
+                        "paletteKey": "ng-card-content",
+                        "parentEditorKey": "f3ff6c9c-8e9d-c76a-3251-ee5a32f1afe9",
                         "isAdvancedChildComponent": true,
                         "designerReference": [
                             {
@@ -537,474 +524,611 @@
                                 "_attrDef": "p"
                             },
                             {
-                                "_key": "Header Label",
-                                "_value": "No",
-                                "_type": "a",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "matSortHeaderColumn",
-                                "_value": "mat-sort-header",
-                                "_type": "a",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "Mapping",
-                                "_value": "{{table.no}}",
-                                "_type": "ma",
-                                "_attrDef": "p",
-                                "_useAsLabel": true
-                            },
-                            {
-                                "_key": "columnName",
-                                "_value": "",
-                                "_type": "dav",
-                                "_attrDef": "p",
-                                "_visibility": false
-                            },
-                            {
-                                "_key": "headerclass",
-                                "_value": "tab-developerheader",
-                                "_type": "dav",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "columnclass",
-                                "_value": "tab-developerdata",
-                                "_type": "dav",
-                                "_attrDef": "p"
-                            }
-                        ]
-                    },
-                    "0e38c393-47d1-f4de-ae27-3fbb3f232300": {
-                        "paletteKey": "ng-table-column",
-                        "parentEditorKey": "c3c9dcf9-a922-9d50-6de2-8c840ab3b7a5",
-                        "isAdvancedChildComponent": true,
-                        "designerReference": [
-                            {
-                                "_key": "style",
-                                "_value": "font-size:20px;",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "class",
-                                "_value": "table-header",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "Header Label",
-                                "_value": "First Name",
-                                "_type": "a",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "matSortHeaderColumn",
-                                "_value": "mat-sort-header",
-                                "_type": "a",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "Mapping",
-                                "_value": "{{table.firstName}}",
-                                "_type": "ma",
-                                "_attrDef": "p",
-                                "_useAsLabel": true
-                            },
-                            {
-                                "_key": "columnName",
-                                "_value": "",
-                                "_type": "dav",
-                                "_attrDef": "p",
-                                "_visibility": false
-                            },
-                            {
-                                "_key": "headerclass",
-                                "_value": "tab-developerheader",
-                                "_type": "dav",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "columnclass",
-                                "_value": "tab-developerdata",
-                                "_type": "dav",
-                                "_attrDef": "p"
-                            }
-                        ]
-                    },
-                    "a724dfbd-275c-0d59-736d-67723a0d324b": {
-                        "paletteKey": "ng-table-column",
-                        "parentEditorKey": "c3c9dcf9-a922-9d50-6de2-8c840ab3b7a5",
-                        "isAdvancedChildComponent": true,
-                        "designerReference": [
-                            {
-                                "_key": "style",
-                                "_value": "",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "class",
-                                "_value": "",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "Header Label",
-                                "_value": "Last Name",
-                                "_type": "a",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "matSortHeaderColumn",
-                                "_value": "mat-sort-header",
-                                "_type": "a",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "Mapping",
-                                "_value": "{{table.lastName}}",
-                                "_type": "ma",
-                                "_attrDef": "p",
-                                "_useAsLabel": true
-                            },
-                            {
-                                "_key": "columnName",
-                                "_value": "",
-                                "_type": "dav",
-                                "_attrDef": "p",
-                                "_visibility": false
-                            },
-                            {
-                                "_key": "headerclass",
-                                "_value": "tab-developerheader",
-                                "_type": "dav",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "columnclass",
-                                "_value": "tab-developerdata",
-                                "_type": "dav",
-                                "_attrDef": "p"
-                            }
-                        ]
-                    },
-                    "202d9880-1e1f-2129-6481-0463cc49c65d": {
-                        "paletteKey": "ng-table-filter",
-                        "parentEditorKey": "c3c9dcf9-a922-9d50-6de2-8c840ab3b7a5",
-                        "isAdvancedComponent": true,
-                        "advancedSiblingType": "before",
-                        "designerReference": [
-                            {
-                                "_key": "style",
-                                "_value": "",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "class",
-                                "_value": "",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "(tableFilterFunction)",
-                                "_value": "applyFilter($event.target.value)",
-                                "_type": "dav",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "placeholder",
-                                "_value": "Search",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "layoutAlign",
-                                "_value": "end",
-                                "_type": "a",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "fxFlex",
-                                "_value": "24",
-                                "_type": "a",
-                                "_attrDef": "p"
-                            }
-                        ]
-                    },
-                    "4045ebc4-e853-9298-1fca-0e55dfb22fe7": {
-                        "paletteKey": "ng-table-column",
-                        "parentEditorKey": "c3c9dcf9-a922-9d50-6de2-8c840ab3b7a5",
-                        "isAdvancedChildComponent": true,
-                        "designerReference": [
-                            {
-                                "_key": "style",
-                                "_value": "",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "class",
-                                "_value": "",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "Header Label",
-                                "_value": "Email",
-                                "_type": "a",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "matSortHeaderColumn",
-                                "_value": "",
-                                "_type": "a",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "Mapping",
-                                "_value": "{{table.email}}",
-                                "_type": "ma",
-                                "_attrDef": "p",
-                                "_useAsLabel": true
-                            },
-                            {
-                                "_key": "columnName",
-                                "_value": "",
-                                "_type": "dav",
-                                "_attrDef": "p",
-                                "_visibility": false
-                            },
-                            {
-                                "_key": "headerclass",
-                                "_value": "tab-developerheader",
-                                "_type": "dav",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "columnclass",
-                                "_value": "tab-developerdata",
-                                "_type": "dav",
-                                "_attrDef": "p"
-                            }
-                        ]
-                    },
-                    "9c5b837d-c97c-9420-092a-96d4c0144c6f": {
-                        "paletteKey": "ng-table-column",
-                        "parentEditorKey": "c3c9dcf9-a922-9d50-6de2-8c840ab3b7a5",
-                        "isAdvancedChildComponent": true,
-                        "designerReference": [
-                            {
-                                "_key": "style",
-                                "_value": "",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "class",
-                                "_value": "",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "Header Label",
-                                "_value": "Position",
-                                "_type": "a",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "matSortHeaderColumn",
-                                "_value": "mat-sort-header",
-                                "_type": "a",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "Mapping",
-                                "_value": "{{table.position}}",
-                                "_type": "ma",
-                                "_attrDef": "p",
-                                "_useAsLabel": true
-                            },
-                            {
-                                "_key": "columnName",
-                                "_value": "",
-                                "_type": "dav",
-                                "_attrDef": "p",
-                                "_visibility": false
-                            },
-                            {
-                                "_key": "headerclass",
-                                "_value": "tab-developerheader",
-                                "_type": "dav",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "columnclass",
-                                "_value": "tab-developerdata",
-                                "_type": "dav",
-                                "_attrDef": "p"
-                            }
-                        ]
-                    },
-                    "5523ef75-4f69-7e37-088b-bd311a38118b": {
-                        "paletteKey": "ng-table-column",
-                        "parentEditorKey": "c3c9dcf9-a922-9d50-6de2-8c840ab3b7a5",
-                        "isAdvancedChildComponent": true,
-                        "designerReference": [
-                            {
-                                "_key": "style",
-                                "_value": "",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "class",
-                                "_value": "",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "Header Label",
-                                "_value": "Status",
-                                "_type": "a",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "matSortHeaderColumn",
-                                "_value": "mat-sort-header",
-                                "_type": "a",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "Mapping",
-                                "_value": "{{table.status}}",
-                                "_type": "ma",
-                                "_attrDef": "p",
-                                "_useAsLabel": true
-                            },
-                            {
-                                "_key": "columnName",
-                                "_value": "",
-                                "_type": "dav",
-                                "_attrDef": "p",
-                                "_visibility": false
-                            },
-                            {
-                                "_key": "headerclass",
-                                "_value": "tab-developerheader",
-                                "_type": "dav",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "columnclass",
-                                "_value": "tab-developerdata",
-                                "_type": "dav",
-                                "_attrDef": "p"
-                            }
-                        ]
-                    },
-                    "2405ed74-3ac9-f46a-aaeb-a0624f2ec37d": {
-                        "paletteKey": "ng-table-paginator",
-                        "parentEditorKey": "c3c9dcf9-a922-9d50-6de2-8c840ab3b7a5",
-                        "isAdvancedComponent": true,
-                        "advancedSiblingType": "after",
-                        "designerReference": [
-                            {
-                                "_key": "style",
-                                "_value": "background: #f44336f0;",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "class",
-                                "_value": "",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "[length]",
-                                "_value": "10",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "[pageSize]",
-                                "_value": "5",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "[pageSizeOptions]",
-                                "_value": "[5, 10, 25, 100]",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "(page)",
+                                "_key": "align",
                                 "_value": "",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             }
-                        ]
-                    },
-                    "24ce8b20-7d85-e5f7-a952-29da8929606b": {
-                        "paletteKey": "ng-table-column",
-                        "parentEditorKey": "c3c9dcf9-a922-9d50-6de2-8c840ab3b7a5",
-                        "isAdvancedChildComponent": true,
-                        "designerReference": [
-                            {
-                                "_key": "style",
-                                "_value": "",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "class",
-                                "_value": "",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "Header Label",
-                                "_value": "Action",
-                                "_type": "a",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "matSortHeaderColumn",
-                                "_value": "",
-                                "_type": "a",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "Mapping",
-                                "_value": "{{table.action}}<button mat-button (click)=\"openAlertDialog(element,true)\">Edit</button><button mat-button (click)=\"openAlertDialog(element,false,i)\">Delete</button>",
-                                "_type": "ma",
-                                "_attrDef": "p",
-                                "_useAsLabel": true
-                            },
-                            {
-                                "_key": "columnName",
-                                "_value": "",
-                                "_type": "dav",
-                                "_attrDef": "p",
-                                "_visibility": false
-                            },
-                            {
-                                "_key": "headerclass",
-                                "_value": "tab-developerheader",
-                                "_type": "dav",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "columnclass",
-                                "_value": "tab-developerdata",
-                                "_type": "dav",
-                                "_attrDef": "p"
+                        ],
+                        "ac9a52d2-92e1-0938-fa66-7ef328f06499": {
+                            "paletteKey": "FlexLayoutRow",
+                            "parentEditorKey": "2cdc8f03-8cab-a0f2-d3be-743581a0e300",
+                            "designerReference": [
+                                {
+                                    "_key": "componentLabel",
+                                    "_value": "Row",
+                                    "_type": "kv",
+                                    "_attrDef": "p",
+                                    "_useAsLabel": true
+                                },
+                                {
+                                    "_key": "style",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "class",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "fxFlex",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "fxLayoutGap",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "wrap",
+                                    "_value": "wrap",
+                                    "_type": "a",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "layoutAlign",
+                                    "_value": "start",
+                                    "_type": "a",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "pLayoutAlign",
+                                    "_value": "stretch",
+                                    "_type": "a",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "[fxShow]",
+                                    "_value": "true",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "[fxHide]",
+                                    "_value": "false",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                }
+                            ],
+                            "c3c9dcf9-a922-9d50-6de2-8c840ab3b7a5": {
+                                "paletteKey": "ng-table",
+                                "parentEditorKey": "ac9a52d2-92e1-0938-fa66-7ef328f06499",
+                                "isAdvancedComponent": true,
+                                "designerReference": [
+                                    {
+                                        "_key": "componentLabel",
+                                        "_value": "Table",
+                                        "_type": "kv",
+                                        "_attrDef": "p",
+                                        "_useAsLabel": true
+                                    },
+                                    {
+                                        "_key": "style",
+                                        "_value": "width:100%",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "class",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "[dataSource]",
+                                        "_value": "dataSource",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "rowclick",
+                                        "_value": "",
+                                        "_type": "a",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "header",
+                                        "_value": true,
+                                        "_type": "a",
+                                        "_attrDef": "p",
+                                        "_visibility": true
+                                    }
+                                ],
+                                "d7193cb0-f130-c8e6-e6db-d02196d097fa": {
+                                    "paletteKey": "ng-table-column",
+                                    "parentEditorKey": "c3c9dcf9-a922-9d50-6de2-8c840ab3b7a5",
+                                    "isAdvancedChildComponent": true,
+                                    "designerReference": [
+                                        {
+                                            "_key": "style",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "class",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "Header Label",
+                                            "_value": "No",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "matSortHeaderColumn",
+                                            "_value": "mat-sort-header",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "Mapping",
+                                            "_value": "{{table.no}}",
+                                            "_type": "ma",
+                                            "_attrDef": "p",
+                                            "_useAsLabel": true
+                                        },
+                                        {
+                                            "_key": "columnName",
+                                            "_value": "",
+                                            "_type": "dav",
+                                            "_attrDef": "p",
+                                            "_visibility": false
+                                        },
+                                        {
+                                            "_key": "headerclass",
+                                            "_value": "tab-developerheader",
+                                            "_type": "dav",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "columnclass",
+                                            "_value": "tab-developerdata",
+                                            "_type": "dav",
+                                            "_attrDef": "p"
+                                        }
+                                    ]
+                                },
+                                "0e38c393-47d1-f4de-ae27-3fbb3f232300": {
+                                    "paletteKey": "ng-table-column",
+                                    "parentEditorKey": "c3c9dcf9-a922-9d50-6de2-8c840ab3b7a5",
+                                    "isAdvancedChildComponent": true,
+                                    "designerReference": [
+                                        {
+                                            "_key": "style",
+                                            "_value": "font-size:20px;",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "class",
+                                            "_value": "table-header",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "Header Label",
+                                            "_value": "First Name",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "matSortHeaderColumn",
+                                            "_value": "mat-sort-header",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "Mapping",
+                                            "_value": "{{table.firstName}}",
+                                            "_type": "ma",
+                                            "_attrDef": "p",
+                                            "_useAsLabel": true
+                                        },
+                                        {
+                                            "_key": "columnName",
+                                            "_value": "",
+                                            "_type": "dav",
+                                            "_attrDef": "p",
+                                            "_visibility": false
+                                        },
+                                        {
+                                            "_key": "headerclass",
+                                            "_value": "tab-developerheader",
+                                            "_type": "dav",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "columnclass",
+                                            "_value": "tab-developerdata",
+                                            "_type": "dav",
+                                            "_attrDef": "p"
+                                        }
+                                    ]
+                                },
+                                "a724dfbd-275c-0d59-736d-67723a0d324b": {
+                                    "paletteKey": "ng-table-column",
+                                    "parentEditorKey": "c3c9dcf9-a922-9d50-6de2-8c840ab3b7a5",
+                                    "isAdvancedChildComponent": true,
+                                    "designerReference": [
+                                        {
+                                            "_key": "style",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "class",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "Header Label",
+                                            "_value": "Last Name",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "matSortHeaderColumn",
+                                            "_value": "mat-sort-header",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "Mapping",
+                                            "_value": "{{table.lastName}}",
+                                            "_type": "ma",
+                                            "_attrDef": "p",
+                                            "_useAsLabel": true
+                                        },
+                                        {
+                                            "_key": "columnName",
+                                            "_value": "",
+                                            "_type": "dav",
+                                            "_attrDef": "p",
+                                            "_visibility": false
+                                        },
+                                        {
+                                            "_key": "headerclass",
+                                            "_value": "tab-developerheader",
+                                            "_type": "dav",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "columnclass",
+                                            "_value": "tab-developerdata",
+                                            "_type": "dav",
+                                            "_attrDef": "p"
+                                        }
+                                    ]
+                                },
+                                "202d9880-1e1f-2129-6481-0463cc49c65d": {
+                                    "paletteKey": "ng-table-filter",
+                                    "parentEditorKey": "c3c9dcf9-a922-9d50-6de2-8c840ab3b7a5",
+                                    "isAdvancedComponent": true,
+                                    "advancedSiblingType": "before",
+                                    "designerReference": [
+                                        {
+                                            "_key": "style",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "class",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "(tableFilterFunction)",
+                                            "_value": "applyFilter($event.target.value)",
+                                            "_type": "dav",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "placeholder",
+                                            "_value": "Search",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "layoutAlign",
+                                            "_value": "end",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "fxFlex",
+                                            "_value": "24",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        }
+                                    ]
+                                },
+                                "4045ebc4-e853-9298-1fca-0e55dfb22fe7": {
+                                    "paletteKey": "ng-table-column",
+                                    "parentEditorKey": "c3c9dcf9-a922-9d50-6de2-8c840ab3b7a5",
+                                    "isAdvancedChildComponent": true,
+                                    "designerReference": [
+                                        {
+                                            "_key": "style",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "class",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "Header Label",
+                                            "_value": "Email",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "matSortHeaderColumn",
+                                            "_value": "",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "Mapping",
+                                            "_value": "{{table.email}}",
+                                            "_type": "ma",
+                                            "_attrDef": "p",
+                                            "_useAsLabel": true
+                                        },
+                                        {
+                                            "_key": "columnName",
+                                            "_value": "",
+                                            "_type": "dav",
+                                            "_attrDef": "p",
+                                            "_visibility": false
+                                        },
+                                        {
+                                            "_key": "headerclass",
+                                            "_value": "tab-developerheader",
+                                            "_type": "dav",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "columnclass",
+                                            "_value": "tab-developerdata",
+                                            "_type": "dav",
+                                            "_attrDef": "p"
+                                        }
+                                    ]
+                                },
+                                "9c5b837d-c97c-9420-092a-96d4c0144c6f": {
+                                    "paletteKey": "ng-table-column",
+                                    "parentEditorKey": "c3c9dcf9-a922-9d50-6de2-8c840ab3b7a5",
+                                    "isAdvancedChildComponent": true,
+                                    "designerReference": [
+                                        {
+                                            "_key": "style",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "class",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "Header Label",
+                                            "_value": "Position",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "matSortHeaderColumn",
+                                            "_value": "mat-sort-header",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "Mapping",
+                                            "_value": "{{table.position}}",
+                                            "_type": "ma",
+                                            "_attrDef": "p",
+                                            "_useAsLabel": true
+                                        },
+                                        {
+                                            "_key": "columnName",
+                                            "_value": "",
+                                            "_type": "dav",
+                                            "_attrDef": "p",
+                                            "_visibility": false
+                                        },
+                                        {
+                                            "_key": "headerclass",
+                                            "_value": "tab-developerheader",
+                                            "_type": "dav",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "columnclass",
+                                            "_value": "tab-developerdata",
+                                            "_type": "dav",
+                                            "_attrDef": "p"
+                                        }
+                                    ]
+                                },
+                                "5523ef75-4f69-7e37-088b-bd311a38118b": {
+                                    "paletteKey": "ng-table-column",
+                                    "parentEditorKey": "c3c9dcf9-a922-9d50-6de2-8c840ab3b7a5",
+                                    "isAdvancedChildComponent": true,
+                                    "designerReference": [
+                                        {
+                                            "_key": "style",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "class",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "Header Label",
+                                            "_value": "Status",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "matSortHeaderColumn",
+                                            "_value": "mat-sort-header",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "Mapping",
+                                            "_value": "{{table.status}}",
+                                            "_type": "ma",
+                                            "_attrDef": "p",
+                                            "_useAsLabel": true
+                                        },
+                                        {
+                                            "_key": "columnName",
+                                            "_value": "",
+                                            "_type": "dav",
+                                            "_attrDef": "p",
+                                            "_visibility": false
+                                        },
+                                        {
+                                            "_key": "headerclass",
+                                            "_value": "tab-developerheader",
+                                            "_type": "dav",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "columnclass",
+                                            "_value": "tab-developerdata",
+                                            "_type": "dav",
+                                            "_attrDef": "p"
+                                        }
+                                    ]
+                                },
+                                "2405ed74-3ac9-f46a-aaeb-a0624f2ec37d": {
+                                    "paletteKey": "ng-table-paginator",
+                                    "parentEditorKey": "c3c9dcf9-a922-9d50-6de2-8c840ab3b7a5",
+                                    "isAdvancedComponent": true,
+                                    "advancedSiblingType": "after",
+                                    "designerReference": [
+                                        {
+                                            "_key": "style",
+                                            "_value": "background: #f44336f0;",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "class",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "[length]",
+                                            "_value": "10",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "[pageSize]",
+                                            "_value": "5",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "[pageSizeOptions]",
+                                            "_value": "[5, 10, 25, 100]",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "(page)",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        }
+                                    ]
+                                },
+                                "24ce8b20-7d85-e5f7-a952-29da8929606b": {
+                                    "paletteKey": "ng-table-column",
+                                    "parentEditorKey": "c3c9dcf9-a922-9d50-6de2-8c840ab3b7a5",
+                                    "isAdvancedChildComponent": true,
+                                    "designerReference": [
+                                        {
+                                            "_key": "style",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "class",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "Header Label",
+                                            "_value": "Action",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "matSortHeaderColumn",
+                                            "_value": "",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "Mapping",
+                                            "_value": "{{table.action}}<button mat-button color=\"primary\" (click)=\"addDeveloper()\">Edit</button><button mat-button color=\"warn\" (click)=\"openDeleteDialog()\">Delete</button>",
+                                            "_type": "ma",
+                                            "_attrDef": "p",
+                                            "_useAsLabel": true
+                                        },
+                                        {
+                                            "_key": "columnName",
+                                            "_value": "",
+                                            "_type": "dav",
+                                            "_attrDef": "p",
+                                            "_visibility": false
+                                        },
+                                        {
+                                            "_key": "headerclass",
+                                            "_value": "tab-developerheader",
+                                            "_type": "dav",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "columnclass",
+                                            "_value": "tab-developerdata",
+                                            "_type": "dav",
+                                            "_attrDef": "p"
+                                        }
+                                    ]
+                                }
                             }
-                        ]
+                        }
                     }
                 }
             },
