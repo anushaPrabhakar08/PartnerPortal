@@ -1,0 +1,121 @@
+[
+    {
+        "id": "sd_AqHtpOYqfvjc0UWp",
+        "type": "tab",
+        "createdDate": "2019-11-10T12:57:13.359Z",
+        "label": "loginservice",
+        "disabled": false,
+        "info": "",
+        "generateNext": true,
+        "generated": false,
+        "serviceName": "loginservice"
+    },
+    {
+        "id": "sd_dGDUwrRJAwB9YkV4",
+        "type": "Start",
+        "z": "sd_AqHtpOYqfvjc0UWp",
+        "name": "login",
+        "outputs": 1,
+        "noerr": 0,
+        "inputVariables": [
+            {
+                "key": "username",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            },
+            {
+                "key": "password",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "result",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": true
+            },
+            {
+                "key": "modlreUrl",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "functionName": "login",
+        "x": 179.20001220703125,
+        "y": 127.93749237060547,
+        "wires": [
+            [
+                "sd_hT5MmaR2qH2HaZbC"
+            ]
+        ],
+        "generateNext": true,
+        "generated": false,
+        "serviceName": "loginservice"
+    },
+    {
+        "id": "sd_hT5MmaR2qH2HaZbC",
+        "type": "Script",
+        "z": "sd_AqHtpOYqfvjc0UWp",
+        "name": "",
+        "script": "bh.local.modlreUrl=`http://localhost:24483/api/Loginpartner?username=${bh.input.username}&&password=${bh.input.password}`;",
+        "x": 317.04998779296875,
+        "y": 201.93750762939453,
+        "wires": [
+            [
+                "sd_QEwiG1uwqRCVw0xw"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_QEwiG1uwqRCVw0xw",
+        "type": "HttpRequest",
+        "z": "sd_AqHtpOYqfvjc0UWp",
+        "name": "",
+        "method": "get",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.modlreUrl",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "modlreUrl"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "reqBodyObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": ""
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "x": 475.0500068664551,
+        "y": 197.9375171661377,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
+    }
+]

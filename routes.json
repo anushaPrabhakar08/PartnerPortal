@@ -1,0 +1,126 @@
+{
+    "routes": [
+        {
+            "path": "home",
+            "component": "homeComponent",
+            "pathMatch": "",
+            "redirectTo": "",
+            "resolve": "",
+            "data": "",
+            "canActivate": "",
+            "children": [
+                {
+                    "component": "contactpageComponent",
+                    "path": "cantact"
+                }
+            ]
+        },
+        {
+            "path": "login",
+            "component": "loginComponent",
+            "pathMatch": "",
+            "redirectTo": "",
+            "resolve": "",
+            "data": "",
+            "canActivate": ""
+        },
+        {
+            "path": "unauthorized",
+            "redirectTo": "/login",
+            "pathMatch": "full"
+        },
+        {
+            "path": "memberlogin",
+            "component": "memberloginComponent"
+        },
+        {
+            "path": "product",
+            "component": "productComponent"
+        },
+        {
+            "path": "contact",
+            "component": "contactpageComponent"
+        },
+        {
+            "path": "channel",
+            "component": "channelComponent",
+            "children": [
+                {
+                    "path": "dashboard",
+                    "component": "channel_dashboardComponent"
+                },
+                {
+                    "path": "dashboardPartnerDetails",
+                    "component": "partner_detailsComponent"
+                },
+                {
+                    "path": "dashboardChannelMarketing",
+                    "component": "channel_marketingComponent"
+                },
+                {
+                    "path": "dashboardChannelAnnouncements",
+                    "component": "channel_announcementsComponent"
+                }
+            ],
+            "pathMatch": "",
+            "redirectTo": ""
+        },
+        {
+            "path": "partner",
+            "component": "partnerComponent",
+            "children": [
+                {
+                    "component": "partner_marketingComponent",
+                    "path": "dashboardPartnerMarketing"
+                },
+                {
+                    "component": "partner_leadsComponent",
+                    "path": "dashboardPartnerLeads"
+                },
+                {
+                    "component": "partner_developersComponent",
+                    "path": "dashboardPartnerDevelopers"
+                },
+                {
+                    "component": "partner_agreementComponent",
+                    "path": "dashboardPartnerAgreement"
+                }
+            ]
+        },
+        {
+            "path": "memberregisteration",
+            "component": "memberregisterationComponent"
+        },
+        {
+            "path": "partnerregistration",
+            "component": "partnerregistrationComponent"
+        },
+        {
+            "path": "partner_addDeveloper",
+            "component": "partner_adddeveloperComponent"
+        },
+        {
+            "path": "partner_addLead",
+            "component": "partner_addleadComponent"
+        },
+        {
+            "path": "''",
+            "component": "",
+            "pathMatch": "full",
+            "redirectTo": "/home",
+            "resolve": "",
+            "data": "",
+            "canActivate": "",
+            "default": true
+        },
+        {
+            "path": "**",
+            "component": "PageNotFoundComponent",
+            "pathMatch": "",
+            "redirectTo": "",
+            "resolve": "",
+            "data": "",
+            "canActivate": ""
+        }
+    ]
+}

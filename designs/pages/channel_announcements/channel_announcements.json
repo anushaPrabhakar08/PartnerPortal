@@ -1,0 +1,13 @@
+{
+    "appPageId": "9c4bfcea-2bd8-6a8a-a273-d1e4c62157a0",
+    "appPageName": "channel_announcements",
+    "componentName": "channel_announcementsComponent",
+    "selectorName": "bh-channel_announcements",
+    "htmlFileName": "channel_announcements.template.html",
+    "tsFileName": "channel_announcements.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

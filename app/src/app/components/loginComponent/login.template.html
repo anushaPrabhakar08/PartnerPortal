@@ -1,0 +1,49 @@
+<div fxLayout="row wrap" fxLayoutAlign="  none" [fxShow]="true" [fxHide]="false" fxFill>
+  <div fxLayout="column wrap" style="width:100%;" fxLayoutAlign="  none" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/logo.png" width="340">
+    <div fxLayout="column wrap" style="width:100%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+      <div fxLayout="column wrap" style="background-color:#e6e6e6;width:40%;margin-top:40px;" class=" " fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+        <mat-card style="margin:30px 0px;width:60%;" class="login-card">
+          <div fxLayout="column wrap" fxLayoutGap="2em" fxLayoutAlign="  none" [fxShow]="true" [fxHide]="false">
+            <div fxLayout="row wrap" style="height:60px;" fxLayoutAlign="center none" [fxShow]="true" [fxHide]="false">
+              <h2>
+                Partner Login</h2>
+            </div>
+            <div fxLayout="column " fxLayoutAlign=" " [fxShow]="true" [fxHide]="false">
+              <form>
+                <div fxLayout="column " fxLayoutGap="20px" fxLayoutAlign=" " [fxShow]="true" [fxHide]="false">
+                  <div fxLayout="row " fxLayoutGap="5px" fxLayoutAlign="start center" [fxShow]="true" [fxHide]="false">
+                    <div fxLayout="column " fxFlex="10" fxLayoutAlign=" " [fxShow]="true" [fxHide]="false">
+                      <mat-icon>person</mat-icon>
+                    </div>
+                    <div fxLayout="column " fxFlex="90" fxLayoutAlign=" " [fxShow]="true" [fxHide]="false">
+                      <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                        <input matInput [(ngModel)]="user.username" name="username" placeholder="username">
+
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div fxLayout="row " fxLayoutGap="5px" fxLayoutAlign="start center">
+                    <div fxLayout="column " fxFlex="10" fxLayoutAlign=" " [fxShow]="true" [fxHide]="false">
+                      <mat-icon>lock</mat-icon>
+                    </div>
+                    <div fxLayout="column " fxFlex="90" fxLayoutAlign=" " [fxShow]="true" [fxHide]="false">
+                      <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                        <input matInput [(ngModel)]="user.password" name="password" type="password" placeholder="Password">
+
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div fxLayout="row " fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false" *ngIf="!isMobile">
+                    <mat-checkbox [(ngModel)]="user.remember" name="user.remember">Remember me?</mat-checkbox>
+                  </div>
+                  <div fxLayout="row " fxFlex="100" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button class="primary-red-btn" (click)="authenticate()">Login</button></div>
+                </div>
+              </form>
+            </div><span routerLink="/home" style="color:orange;cursor:pointer;">
+                create partner account</span>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

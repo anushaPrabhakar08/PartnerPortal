@@ -1,0 +1,81 @@
+<div fxLayout="row wrap" style="width:100%;" class="partnerReg" fxLayoutAlign="center none" [fxShow]="true" [fxHide]="false">
+  <div fxLayout="column wrap" style="width:35%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+    <mat-card style="width:100%;margin-top:5%;height:92%;">
+      <mat-card-content>
+        <form formGroup="registertionForm">
+          <mat-horizontal-stepper [linear]="true" #stepper>
+            <mat-step formGroupName="companyDetails">
+              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <div>
+                  Company Information</div>
+                <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                  <input matInput placeholder="companyName" required formControlName="companyName">
+
+                </mat-form-field>
+                <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                  <input matInput placeholder="companyWebsite" required formControlName="companyWebsite">
+
+                </mat-form-field>
+                <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                  <mat-select placeholder="companyType" required>
+                    <mat-option [value]="&apos;service&apos;" disabled="false">service</mat-option>
+                    <mat-option [value]="&apos;product&apos;" disabled="false">product</mat-option>
+                  </mat-select>
+
+                </mat-form-field>
+                <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                  <input matInput placeholder="numberofEmployees" required formControlName="numberofEmployees">
+
+                </mat-form-field>
+                <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+                  <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-raised-button style="background:blue;color:white;" matStepperNext (click)="submit(firstFormGroup.value)">Next</button></div>
+                </div>
+              </div>
+            </mat-step>
+            <mat-step formControlName="partnerDetails">
+              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><label>
+                  Partner Registeration</label>
+                <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                  <input matInput [(ngModel)]="dm.partnerregistration.firstName" name="firstName" placeholder="firstName" required formControlName="firstName">
+
+                </mat-form-field>
+                <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                  <input matInput [(ngModel)]="dm.partnerregistration.lastName" name="lastName" placeholder="lastName" required formControlName="lastName">
+
+                </mat-form-field>
+                <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                  <mat-select placeholder="country" required>
+                    <ng-template ngFor let-option [ngForOf] let-i="index">
+                      <mat-option [value]></mat-option>
+                    </ng-template>
+                  </mat-select>
+
+                </mat-form-field>
+                <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                  <input matInput placeholder="mobileNumber" required formControlName="mobileNumber">
+
+                </mat-form-field>
+                <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                  <input matInput placeholder="emailId" required formControlName="emailId">
+
+                </mat-form-field>
+                <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                  <input matInput placeholder="designation" required formControlName="designation">
+
+                </mat-form-field>
+                <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                  <input matInput placeholder="address" required formControlName="address">
+
+                </mat-form-field>
+                <div fxLayout="row wrap" fxLayoutAlign="space-between center" [fxShow]="true" [fxHide]="false">
+                  <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-raised-button style="background:blue;color:white;" matStepperPrevious>previous</button></div>
+                  <div fxLayout="column wrap" fxLayoutGap="1.5em;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button style="background:blue;color:white;" matstepperRegister>register</button></div>
+                </div>
+              </div>
+            </mat-step>
+          </mat-horizontal-stepper>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

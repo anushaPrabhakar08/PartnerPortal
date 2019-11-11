@@ -1,0 +1,13 @@
+{
+    "appPageId": "035aa806-67c9-651f-8580-12d9ffd7c000",
+    "appPageName": "spinner",
+    "componentName": "spinnerComponent",
+    "selectorName": "bh-spinner",
+    "htmlFileName": "spinner.template.html",
+    "tsFileName": "spinner.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "appPageId": "1994fc15-30ef-1fbc-d89c-cd82d11e25b6",
+    "appPageName": "partner_agreement",
+    "componentName": "partner_agreementComponent",
+    "selectorName": "bh-partner_agreement",
+    "htmlFileName": "partner_agreement.template.html",
+    "tsFileName": "partner_agreement.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

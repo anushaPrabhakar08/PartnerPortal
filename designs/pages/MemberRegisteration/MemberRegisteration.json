@@ -1,0 +1,13 @@
+{
+    "appPageId": "482cb583-0cfc-d40a-b889-2989f4214157",
+    "appPageName": "MemberRegisteration",
+    "componentName": "memberregisterationComponent",
+    "selectorName": "bh-memberregisteration",
+    "htmlFileName": "memberregisteration.template.html",
+    "tsFileName": "memberregisteration.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

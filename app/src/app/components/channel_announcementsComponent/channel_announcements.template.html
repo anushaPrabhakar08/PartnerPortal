@@ -1,0 +1,20 @@
+<div fxLayout="row wrap" class="background" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+  <div fxLayout="column wrap" class="margin-tb" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <h2 style="color:rgba(0,0,0,.7);" class="header">
+        Make an Announcement</h2>
+    </div>
+    <div fxLayout="row wrap" style="width:100%;margin-top: 20px;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+      <mat-card class="announcement-card">
+        <mat-card-content style="margin-left: 30px;;margin-bottom: 90px;">
+          <div fxLayout="row wrap" style="width:100%;margin-bottom:30px;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+            <mat-form-field style="font-size:20px;">
+              <textarea matInput placeholder="Announcement" required></textarea>
+            </mat-form-field>
+          </div>
+          <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button class="announce-btn">Announce</button></div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

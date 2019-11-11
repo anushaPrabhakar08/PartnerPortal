@@ -1,0 +1,13 @@
+{
+    "appPageId": "58e5678c-d515-fc8a-57df-7411d1f047ca",
+    "appPageName": "contactpage",
+    "componentName": "contactpageComponent",
+    "selectorName": "bh-contactpage",
+    "htmlFileName": "contactpage.template.html",
+    "tsFileName": "contactpage.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

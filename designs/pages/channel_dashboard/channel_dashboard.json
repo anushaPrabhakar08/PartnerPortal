@@ -1,0 +1,13 @@
+{
+    "appPageId": "de8d23c8-2b31-3a17-c656-869d893986b5",
+    "appPageName": "channel_dashboard",
+    "componentName": "channel_dashboardComponent",
+    "selectorName": "bh-channel_dashboard",
+    "htmlFileName": "channel_dashboard.template.html",
+    "tsFileName": "channel_dashboard.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

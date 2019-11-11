@@ -1,0 +1,398 @@
+[
+    {
+        "id": "sd_ilDSHUtXqB5Z3v1A",
+        "type": "tab",
+        "createdDate": "2019-11-11T04:50:37.132Z",
+        "label": "partnerservice",
+        "disabled": false,
+        "info": "",
+        "generateNext": true,
+        "generated": false,
+        "serviceName": "partnerservice"
+    },
+    {
+        "id": "sd_zw7DETw9QU4kK81X",
+        "type": "Start",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "savedaveloper",
+        "outputs": 1,
+        "noerr": 0,
+        "inputVariables": [
+            {
+                "key": "data",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "result",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": true
+            },
+            {
+                "key": "modlerUrlApi",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "functionName": "savedaveloper",
+        "x": 120,
+        "y": 62.8125,
+        "wires": [
+            [
+                "sd_xIgXKrl1iV0XgH8H"
+            ]
+        ],
+        "generateNext": true,
+        "generated": false,
+        "serviceName": "partnerservice"
+    },
+    {
+        "id": "sd_xIgXKrl1iV0XgH8H",
+        "type": "Script",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "developers data",
+        "script": "bh.local.modlerUrlApi=`http://localhost:24483/api/savedevelopers?data=${bh.input.data}`;",
+        "x": 304.84375,
+        "y": 59.8125,
+        "wires": [
+            [
+                "sd_IJG4oyLVYQYyL2yf"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true,
+        "serviceName": "partnerservice"
+    },
+    {
+        "id": "sd_IJG4oyLVYQYyL2yf",
+        "type": "HttpRequest",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "modler flow",
+        "method": "post",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.modlerUrlApi",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "modlerUrlApi"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "reqBody": "bh.input.data",
+        "reqBodyObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "data"
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "x": 495.84375,
+        "y": 68.796875,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true,
+        "serviceName": "partnerservice"
+    },
+    {
+        "id": "sd_hdpX7x5jhHFrDmOl",
+        "type": "Start",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "saveleadata",
+        "outputs": 1,
+        "noerr": 0,
+        "inputVariables": [
+            {
+                "key": "data",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "result",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": true
+            },
+            {
+                "key": "modlerUrlApi",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "functionName": "saveleadata",
+        "x": 132,
+        "y": 202.8125,
+        "wires": [
+            [
+                "sd_eDmQDZuVa9keEApB"
+            ]
+        ],
+        "generateNext": true,
+        "generated": false,
+        "serviceName": "partnerservice"
+    },
+    {
+        "id": "sd_eDmQDZuVa9keEApB",
+        "type": "Script",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "save leads",
+        "script": "bh.local.modlerUrlApi=`http://localhost:24483/api/saveleadsdata?data=${bh.input.data}`;",
+        "x": 334.84375,
+        "y": 204.8125,
+        "wires": [
+            [
+                "sd_Qvl8jCVdHuywn5E0"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_Qvl8jCVdHuywn5E0",
+        "type": "HttpRequest",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "modler flow",
+        "method": "post",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.modlerUrlApi",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "modlerUrlApi"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "reqBodyObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": ""
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "x": 522.84375,
+        "y": 204.796875,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_w3LbH1Q9zdv2IVWW",
+        "type": "Start",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "getleadsdata",
+        "outputs": 1,
+        "noerr": 0,
+        "inputVariables": [],
+        "localVariables": [
+            {
+                "key": "result",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": true
+            },
+            {
+                "key": "modlerUrlApi",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "functionName": "getleadsdata",
+        "x": 136,
+        "y": 316.8125,
+        "wires": [
+            [
+                "sd_qQMYR4XbjuXTqvkx"
+            ]
+        ],
+        "generateNext": true,
+        "generated": false,
+        "serviceName": "partnerservice"
+    },
+    {
+        "id": "sd_qQMYR4XbjuXTqvkx",
+        "type": "Script",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "Leads data",
+        "script": "bh.local.modlerUrlApi=`http://localhost:24483/api/getleadsdata`;",
+        "x": 345.84375,
+        "y": 318.8125,
+        "wires": [
+            [
+                "sd_zfHojHu2pemhgFbG"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_zfHojHu2pemhgFbG",
+        "type": "HttpRequest",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "modler flow",
+        "method": "get",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.modlerUrlApi",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "modlerUrlApi"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "reqBodyObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": ""
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "x": 534.84375,
+        "y": 313.796875,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_D2xZRilDsznkAaCj",
+        "type": "Start",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "getdeveloper",
+        "outputs": 1,
+        "noerr": 0,
+        "inputVariables": [],
+        "localVariables": [
+            {
+                "key": "result",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": true
+            },
+            {
+                "key": "modlerUrlApi",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "functionName": "getdeveloper",
+        "x": 138.1875,
+        "y": 443.921875,
+        "wires": [
+            [
+                "sd_I2EB3GOPeTTSh4Jq"
+            ]
+        ],
+        "generateNext": true,
+        "generated": false,
+        "serviceName": "partnerservice"
+    },
+    {
+        "id": "sd_I2EB3GOPeTTSh4Jq",
+        "type": "Script",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "get leads",
+        "script": "bh.local.modlerUrlApi=`http://localhost:24483/api/getdevelopers`;",
+        "x": 347.03125,
+        "y": 450.921875,
+        "wires": [
+            [
+                "sd_3Ns00MGI4f6dZsAS"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_3Ns00MGI4f6dZsAS",
+        "type": "HttpRequest",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "modler flow",
+        "method": "get",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.modlerUrlApi",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "modlerUrlApi"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "reqBodyObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": ""
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "x": 540.03125,
+        "y": 445.90625,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
+    }
+]

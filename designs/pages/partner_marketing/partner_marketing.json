@@ -1,0 +1,13 @@
+{
+    "appPageId": "215b1549-492e-9e83-5ca8-0ed7ca4b9fcd",
+    "appPageName": "partner_marketing",
+    "componentName": "partner_marketingComponent",
+    "selectorName": "bh-partner_marketing",
+    "htmlFileName": "partner_marketing.template.html",
+    "tsFileName": "partner_marketing.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

@@ -1,0 +1,427 @@
+{
+    "612ee53c-d6b7-0ef7-4743-4102b97d9d63": {
+        "dataModelId": "612ee53c-d6b7-0ef7-4743-4102b97d9d63",
+        "name": "user",
+        "description": "DM for mapping user values from form",
+        "dataSource": "neutrinos-training-rt",
+        "fields": [
+            {
+                "name": "username",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "password",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "remember",
+                "fieldType": 4,
+                "isArray": false
+            }
+        ]
+    },
+    "5aeec3e6-8807-e987-726a-b45596b889aa": {
+        "dataModelId": "5aeec3e6-8807-e987-726a-b45596b889aa",
+        "name": "memberlogin",
+        "description": "memberlogin",
+        "dataSource": "neutrinos-training-rt",
+        "fields": [
+            {
+                "name": "password",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "musername",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            }
+        ]
+    },
+    "064dde16-c0b0-b935-28f0-dab336880a96": {
+        "dataModelId": "064dde16-c0b0-b935-28f0-dab336880a96",
+        "name": "partnerregistration",
+        "description": "partner registeration",
+        "dataSource": "neutrinos-training-rt",
+        "fields": [
+            {
+                "name": "firstName",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "lastName",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "country",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "companyName",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "companyWebsite",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "companyType",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "numberofEmployees",
+                "fieldType": 1,
+                "isArray": false,
+                "type": "number"
+            },
+            {
+                "name": "designation",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "mobileNumber",
+                "fieldType": 1,
+                "isArray": false,
+                "type": "number"
+            },
+            {
+                "name": "emailId",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "address",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            }
+        ]
+    },
+    "7ccab2ba-44fe-04dd-7983-ad185a71ff13": {
+        "dataModelId": "7ccab2ba-44fe-04dd-7983-ad185a71ff13",
+        "name": "memberregisteration",
+        "description": "memberregisteration",
+        "dataSource": "neutrinos-training-rt",
+        "fields": [
+            {
+                "name": "firstName",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "lastName",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "emailId",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "username",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "password",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            }
+        ]
+    },
+    "331a2ff7-fd62-9ecb-d510-246e257648dc": {
+        "dataModelId": "331a2ff7-fd62-9ecb-d510-246e257648dc",
+        "name": "partner_addDeveloper",
+        "description": "addDeveloper",
+        "dataSource": "neutrinos-training-rt",
+        "fields": [
+            {
+                "name": "firstName",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "lastName",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "position",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "experience",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "fresher",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            }
+        ]
+    },
+    "87e5a7ae-3a74-7a36-8ffb-bb6bd77c2601": {
+        "dataModelId": "87e5a7ae-3a74-7a36-8ffb-bb6bd77c2601",
+        "name": "partner_addLead",
+        "description": "addLead",
+        "dataSource": "neutrinos-training-rt",
+        "fields": [
+            {
+                "name": "organinsationName",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "location",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "opporunityType",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "leadGeneratedDate",
+                "fieldType": 3,
+                "isArray": false,
+                "type": "Date"
+            },
+            {
+                "name": "contactDetails",
+                "fieldType": 1,
+                "isArray": false,
+                "type": "number"
+            },
+            {
+                "name": "comment",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            }
+        ]
+    },
+    "f01e41e3-0aa4-ba0f-ee4d-39de241bdaf5": {
+        "dataModelId": "f01e41e3-0aa4-ba0f-ee4d-39de241bdaf5",
+        "name": "partnerPortal",
+        "description": "partner details",
+        "dataSource": "neutrinos-training-rt",
+        "fields": [
+            {
+                "name": "companyname",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "companyUrl",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "companytype",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "NumberEmployess",
+                "fieldType": 1,
+                "isArray": false,
+                "type": "number"
+            },
+            {
+                "name": "firstname",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "lastname",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "country",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "contactnumber",
+                "fieldType": 1,
+                "isArray": false,
+                "type": "number"
+            },
+            {
+                "name": "Email",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "designation",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "address",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            }
+        ]
+    },
+    "fc98a4e4-9e63-6482-45fc-45754b389555": {
+        "dataModelId": "fc98a4e4-9e63-6482-45fc-45754b389555",
+        "name": "channelMember",
+        "description": "channel member details",
+        "dataSource": "neutrinos-training-rt",
+        "fields": [
+            {
+                "name": "firstname",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "lastname",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "email",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "username",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "password",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            }
+        ]
+    },
+    "ec1976e0-d0fb-25e1-89e2-a3966e4740b8": {
+        "dataModelId": "ec1976e0-d0fb-25e1-89e2-a3966e4740b8",
+        "name": "Developers",
+        "description": "Developres details",
+        "dataSource": "neutrinos-training-rt",
+        "fields": [
+            {
+                "name": "firstname",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "lastname",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "position",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "Expireance",
+                "fieldType": 1,
+                "isArray": false,
+                "type": "number"
+            }
+        ]
+    },
+    "1a818edf-5340-a45f-619a-0da6f734db30": {
+        "dataModelId": "1a818edf-5340-a45f-619a-0da6f734db30",
+        "name": "leads",
+        "description": "leads details",
+        "dataSource": "neutrinos-training-rt",
+        "fields": [
+            {
+                "name": "OrgName",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "location",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "OpportunityType",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "date",
+                "fieldType": 3,
+                "isArray": false,
+                "type": "Date"
+            },
+            {
+                "name": "contactNumber",
+                "fieldType": 1,
+                "isArray": false,
+                "type": "number"
+            },
+            {
+                "name": "comments",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            }
+        ]
+    }
+}

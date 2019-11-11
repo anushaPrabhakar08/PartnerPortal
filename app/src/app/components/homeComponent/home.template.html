@@ -1,0 +1,39 @@
+<div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+  <div fxLayout="column " style="width:100%;" fxLayoutGap="3em" fxLayoutAlign="center none" [fxShow]="true" [fxHide]="false">
+    <div fxLayout="column " class="home_col2" fxLayoutAlign="  none" [fxShow]="true" [fxHide]="false">
+      <mat-toolbar style="background:#5f737d !important;">
+        <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="space-between center" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/logo.png" width="140">
+          <div fxLayout="row wrap" style="width:50%;" fxLayoutAlign="space-evenly stretch" [fxShow]="true" [fxHide]="false"><button mat-button style="color:white;" routerLink="/home">Home</button><button mat-button style="color:white;" class="login_btn" routerLink="/login">Login as Partner</button><button mat-button style="color:white;" class="login_btn" routerLink="/memberlogin">Login as Member</button><button mat-button style="color:white;" routerLink="/contact">Contact Us</button></div>
+        </div>
+      </mat-toolbar>
+      <router-outlet></router-outlet>
+      <div fxLayout="row wrap" style="height:540px;" fxLayoutAlign="center none" [fxShow]="true" [fxHide]="false"><span style="color:white;font-size:25px; margin-top:30px;">
+                BUILD INNOVATIVE APPLICATIONS AT THE SPEED OF THOUGHT</span></div>
+    </div>
+    <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="space-evenly stretch" [fxShow]="true" [fxHide]="false">
+      <mat-card class="card_video">
+        <img mat-card-image imgSrc="Web/Neutrinos-Gif-2.gif">
+      </mat-card>
+      <mat-card style="background-color:#f2f2f2;" class="h_card">
+        <mat-card-content>
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <h2>
+                See how Neutrinos can help Developers unleash their potential</h2>
+            </div>
+            <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+              <p>
+                Ever dreamt of the day when developing an application would be a sprint in the park? Neutrinos provides professional developers with all the tools, resources and integration frameworks to envision and develop the most complex web and mobile applications in record time.
+
+                With Neutrinos, Developers can build their own domain-specific solutions, upload these to the Neutrinos Store Marketplace and other Developers can purchase these templates or micro services.</p>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <footer class="footer">
+      <p>
+        &#xA9;2019 Neutrinos</p>
+    </footer>
+  </div>
+</div>

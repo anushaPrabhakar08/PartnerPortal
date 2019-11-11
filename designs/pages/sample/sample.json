@@ -1,0 +1,13 @@
+{
+    "appPageId": "d126c707-808d-0f0b-cc99-5c2090c38c20",
+    "appPageName": "sample",
+    "componentName": "sampleComponent",
+    "selectorName": "bh-sample",
+    "htmlFileName": "sample.template.html",
+    "tsFileName": "sample.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

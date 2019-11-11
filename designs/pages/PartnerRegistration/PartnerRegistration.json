@@ -1,0 +1,13 @@
+{
+    "appPageId": "9d27116a-c449-5d15-9d3b-2513145f5419",
+    "appPageName": "PartnerRegistration",
+    "componentName": "partnerregistrationComponent",
+    "selectorName": "bh-partnerregistration",
+    "htmlFileName": "partnerregistration.template.html",
+    "tsFileName": "partnerregistration.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

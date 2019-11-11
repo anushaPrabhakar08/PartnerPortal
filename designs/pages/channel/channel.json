@@ -1,0 +1,13 @@
+{
+    "appPageId": "9fd4ddaa-92c2-270b-437e-f7882ae72bfa",
+    "appPageName": "channel",
+    "componentName": "channelComponent",
+    "selectorName": "bh-channel",
+    "htmlFileName": "channel.template.html",
+    "tsFileName": "channel.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "appPageId": "f9daf689-814a-ee52-d9a4-4a8c729fb713",
+    "appPageName": "partner_addLead",
+    "componentName": "partner_addleadComponent",
+    "selectorName": "bh-partner_addlead",
+    "htmlFileName": "partner_addlead.template.html",
+    "tsFileName": "partner_addlead.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

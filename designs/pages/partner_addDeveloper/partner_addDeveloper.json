@@ -1,0 +1,13 @@
+{
+    "appPageId": "ca365398-d187-b32a-6f4e-133ea81f1178",
+    "appPageName": "partner_addDeveloper",
+    "componentName": "partner_adddeveloperComponent",
+    "selectorName": "bh-partner_adddeveloper",
+    "htmlFileName": "partner_adddeveloper.template.html",
+    "tsFileName": "partner_adddeveloper.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

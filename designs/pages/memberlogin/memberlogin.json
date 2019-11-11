@@ -1,0 +1,13 @@
+{
+    "appPageId": "790b4de7-bb6b-950e-dd3b-ea0792cc7c77",
+    "appPageName": "memberlogin",
+    "componentName": "memberloginComponent",
+    "selectorName": "bh-memberlogin",
+    "htmlFileName": "memberlogin.template.html",
+    "tsFileName": "memberlogin.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

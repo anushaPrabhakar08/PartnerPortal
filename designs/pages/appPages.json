@@ -1,0 +1,122 @@
+{
+    "b1c5f4af-15fe-c86a-e713-ed634c0ef25c": {
+        "appPageName": "login",
+        "componentName": "loginComponent",
+        "isEntry": false
+    },
+    "c4581771-ca63-f41c-3097-bf95322621ac": {
+        "appPageName": "home",
+        "componentName": "homeComponent",
+        "isEntry": false
+    },
+    "dd3691d2-d623-8efe-ea01-b9543d360deb": {
+        "appPageName": "loader",
+        "componentName": "loaderComponent",
+        "isEntry": false
+    },
+    "de8d23c8-2b31-3a17-c656-869d893986b5": {
+        "appPageName": "channel_dashboard",
+        "componentName": "channel_dashboardComponent",
+        "isEntry": false
+    },
+    "9fd4ddaa-92c2-270b-437e-f7882ae72bfa": {
+        "appPageName": "channel",
+        "componentName": "channelComponent",
+        "isEntry": false
+    },
+    "4880a658-2caf-4d74-47fe-1e96420e949e": {
+        "appPageName": "partner",
+        "componentName": "partnerComponent",
+        "isEntry": false
+    },
+    "12da6661-6550-c350-0df5-dc618323f800": {
+        "appPageName": "partner_details",
+        "componentName": "partner_detailsComponent",
+        "isEntry": false
+    },
+    "8baf5f74-c6fb-cd59-a6e6-ed7b87b0768b": {
+        "appPageName": "channel_marketing",
+        "componentName": "channel_marketingComponent",
+        "isEntry": false
+    },
+    "9c4bfcea-2bd8-6a8a-a273-d1e4c62157a0": {
+        "appPageName": "channel_announcements",
+        "componentName": "channel_announcementsComponent",
+        "isEntry": false
+    },
+    "3b2ca99c-122a-15ba-28a4-32862f8e2a41": {
+        "appPageName": "partner_addLeads",
+        "componentName": "partner_addleadsComponent",
+        "isEntry": false
+    },
+    "c5f8f18e-d916-2c6d-7fad-9ce2d9657741": {
+        "appPageName": "partner_addDevelopers",
+        "componentName": "partner_adddevelopersComponent",
+        "isEntry": false
+    },
+    "1994fc15-30ef-1fbc-d89c-cd82d11e25b6": {
+        "appPageName": "partner_agreement",
+        "componentName": "partner_agreementComponent",
+        "isEntry": false
+    },
+    "215b1549-492e-9e83-5ca8-0ed7ca4b9fcd": {
+        "appPageName": "partner_marketing",
+        "componentName": "partner_marketingComponent",
+        "isEntry": false
+    },
+    "c0d62b9f-1494-68bd-9b8c-f3b0c6b54780": {
+        "appPageName": "partner_leads",
+        "componentName": "partner_leadsComponent",
+        "isEntry": false
+    },
+    "e98aa8ed-05fb-0c96-51c3-0d6381631e0c": {
+        "appPageName": "partner_developers",
+        "componentName": "partner_developersComponent",
+        "isEntry": false
+    },
+    "d126c707-808d-0f0b-cc99-5c2090c38c20": {
+        "appPageName": "sample",
+        "componentName": "sampleComponent",
+        "isEntry": false
+    },
+    "790b4de7-bb6b-950e-dd3b-ea0792cc7c77": {
+        "appPageName": "memberlogin",
+        "componentName": "memberloginComponent",
+        "isEntry": false
+    },
+    "847ab536-e07d-0d2d-5e9d-fdcef6f75db8": {
+        "appPageName": "product",
+        "componentName": "productComponent",
+        "isEntry": false
+    },
+    "58e5678c-d515-fc8a-57df-7411d1f047ca": {
+        "appPageName": "contactpage",
+        "componentName": "contactpageComponent",
+        "isEntry": false
+    },
+    "035aa806-67c9-651f-8580-12d9ffd7c000": {
+        "appPageName": "spinner",
+        "componentName": "spinnerComponent",
+        "isEntry": false
+    },
+    "482cb583-0cfc-d40a-b889-2989f4214157": {
+        "appPageName": "MemberRegisteration",
+        "componentName": "memberregisterationComponent",
+        "isEntry": false
+    },
+    "9d27116a-c449-5d15-9d3b-2513145f5419": {
+        "appPageName": "PartnerRegistration",
+        "componentName": "partnerregistrationComponent",
+        "isEntry": false
+    },
+    "ca365398-d187-b32a-6f4e-133ea81f1178": {
+        "appPageName": "partner_addDeveloper",
+        "componentName": "partner_adddeveloperComponent",
+        "isEntry": false
+    },
+    "f9daf689-814a-ee52-d9a4-4a8c729fb713": {
+        "appPageName": "partner_addLead",
+        "componentName": "partner_addleadComponent",
+        "isEntry": false
+    }
+}
