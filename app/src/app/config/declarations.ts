@@ -87,7 +87,8 @@ export const appBootstrap: any = [
 export const appEntryComponents: any = [
   loaderComponent,
 
-  channel_addmarketingComponent
+  channel_addmarketingComponent,
+  deletepopupComponent
   //CORE_REFERENCE_PUSH_TO_ENTRY_ARRAY
 ];
 

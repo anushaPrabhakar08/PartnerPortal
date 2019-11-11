@@ -513,7 +513,7 @@
                         "designerReference": [
                             {
                                 "_key": "style",
-                                "_value": "margin-left: 30px;;margin-bottom: 90px;",
+                                "_value": "",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },

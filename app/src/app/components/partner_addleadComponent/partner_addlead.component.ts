@@ -6,16 +6,6 @@ import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 import { ReactiveFormsModule,FormGroup, FormControl, FormBuilder,Validators } from '@angular/forms';
 
-/**
- * Service import Example :
- * import { HeroService } from '../../services/hero/hero.service';
- */
-
-/**
- *
- * Service Designer import Example - Service Name - HeroService
- * import { HeroService } from 'app/sd-services/HeroService';
- */
 
 @Component({
     selector: 'bh-partner_addlead',
