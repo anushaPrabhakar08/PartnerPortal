@@ -1,0 +1,72 @@
+<div fxLayout="row wrap" style="width:100%;" class="partnerReg" fxLayoutAlign="center none" [fxShow]="true" [fxHide]="false">
+  <div fxLayout="column wrap" style="width:35%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+    <mat-card style="width:100%;margin-top:10%;height:80%;">
+      <mat-card-content>
+        <form [formGroup]="developerForm">
+          <p style="font-size: 30px; font-family: Arial, Helvetica, sans-serif;">
+            Add Developer</p>
+          <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+            <div fxLayout="column wrap" style="width:70%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                <input matInput placeholder="firstName" required formControlName="firstName">
+
+              </mat-form-field>
+            </div>
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <mat-icon>person</mat-icon>
+            </div>
+          </div>
+          <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+            <div fxLayout="column wrap" style="width:70%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                <input matInput placeholder="lastname" required formControlName="lastName">
+
+              </mat-form-field>
+            </div>
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <mat-icon>person</mat-icon>
+            </div>
+          </div>
+          <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+            <div fxLayout="column wrap" style="width:75%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                <mat-select formControlName="position" class="select" placeholder="position" required>
+                  <mat-option [value]="&apos;Developer&apos;" disabled="false">Developer</mat-option>
+                  <mat-option [value]="&apos;Tester&apos;" disabled="false">Tester</mat-option>
+                  <mat-option [value]="&apos;Softwer Engineer&apos;" disabled="false">Softwer Engineer</mat-option>
+                  <mat-option [value]="&apos;php Developer&apos;" disabled="false">php Developer</mat-option>
+                  <mat-option [value]="&apos;Software Analyst&apos;" disabled="false">Software Analyst</mat-option>
+                </mat-select>
+
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <p>
+                Experience</p>
+            </div>
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <mat-radio-button required #experience (click)="experience()" name="experience"></mat-radio-button>
+            </div>
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <p>
+                Fresher</p>
+            </div>
+            <div fxLayout="column wrap" fxLayoutAlign="start end" [fxShow]="true" [fxHide]="false">
+              <mat-radio-button required></mat-radio-button>
+            </div>
+          </div>
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" *ngIf="active">
+            <mat-form-field>
+              <textarea matInput placeholder="Text Area" required></textarea>
+            </mat-form-field>
+          </div>
+          <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-button style="background:blue;color:white;" (click)="submit(developerForm.value)">Add Developer</button></div>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

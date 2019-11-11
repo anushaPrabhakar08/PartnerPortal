@@ -1,0 +1,39 @@
+<div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFill>
+  <div fxLayout="column " fxFlex="100" fxLayoutAlign="  none" [fxShow]="true" [fxHide]="false" fxFill>
+    <mat-toolbar style="width:100%;" class="toolbar-fixed">
+      <div fxLayout="row wrap" style="margin:0 16px 0 10px;;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-mini-fab style="background:rgba(241, 8, 8, 0.82); color: #fff;" (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button></div>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/logo-white.png" style="width:200px;"></div>
+      <div fxLayout="row wrap" style="width: 100%;" class="logout-btn" fxLayoutAlign="end stretch" [fxShow]="true" [fxHide]="false"><button mat-button style="font-size:20px;">Logout</button></div>
+    </mat-toolbar>
+    <div fxLayout="column " fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <mat-sidenav-container style="height:100%;margin-top: 80px;" class="sidenav-container" autosize="true" hasBackdrop="false" (backdropClick)="true">
+        <mat-sidenav #sidenav style="background:#000;height:100%;" class="sidenav-content" fxLayout="column wrap" [mode]="&apos;side&apos;" [position]="&apos;start&apos;" [opened]="true" autoFocus="false" fixedInViewport="true">
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="false" [fxHide]="true"><button mat-button class="nav-button">Registered partners</button><button mat-button class="nav-button">Marketing</button><button mat-button class="nav-button">Announcements</button></div>
+          <div fxLayout="column wrap" style="margin:20px;" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+            <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <div class="nav-menu-item">
+                <a href routerLink="/channel/dashboard">Registered partners</a></div>
+            </div>
+            <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <div class="nav-menu-item">
+                <a href routerLink="/channel/dashboardChannelMarketing">Marketing</a></div>
+            </div>
+            <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <div class="nav-menu-item">
+                <a href routerLink="/channel/dashboardChannelAnnouncements">Announcements</a></div>
+            </div>
+          </div>
+        </mat-sidenav>
+        <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFill>
+          <router-outlet></router-outlet>
+        </div>
+      </mat-sidenav-container>
+    </div>
+    <footer>
+      <h3 class="footer-class">
+        @2019 Neutrinos</h3>
+    </footer>
+  </div>
+</div>
