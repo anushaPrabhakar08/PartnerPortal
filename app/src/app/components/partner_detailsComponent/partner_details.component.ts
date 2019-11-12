@@ -6,6 +6,9 @@ import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 import { MatSort, MatTableDataSource, MatPaginator } from '@angular/material';
 import { partnerservice } from '../../sd-services/partnerservice';
+import { uploadcertificateComponent } from '../uploadcertificateComponent/uploadcertificate.component';
+import { MatDialog } from '@angular/material';
+
 export interface PeriodicElement {
     //id: string;
     no: number;
@@ -65,7 +68,7 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
 
     leadsDataSource = new MatTableDataSource(LEADS_DATA);
 
-    constructor(private bdms: NDataModelService,
+    constructor(private bdms: NDataModelService,private dialog: MatDialog,
     private partnerservice:partnerservice
     ) {
         super();
@@ -78,6 +81,14 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
         filterValue = filterValue.trim(); 
         filterValue = filterValue.toLowerCase();
         this.dataSource.filter = filterValue;
+    }
+
+    addCertificateDialog() {
+        const dialogRef = this.dialog.open(uploadcertificateComponent, {
+            width: '450px',
+            //disableClose: true,
+            data: 'hello'
+        });
     }
 
     ngOnInit() {

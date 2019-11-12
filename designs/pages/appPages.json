@@ -118,5 +118,10 @@
         "appPageName": "deletePopup",
         "componentName": "deletepopupComponent",
         "isEntry": false
+    },
+    "e2c4c2a0-3161-6d93-6ace-d242c52fcd95": {
+        "appPageName": "uploadCertificate",
+        "componentName": "uploadcertificateComponent",
+        "isEntry": false
     }
 }

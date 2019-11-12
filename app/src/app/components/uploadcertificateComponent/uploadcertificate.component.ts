@@ -2,12 +2,9 @@
 import { Component, OnInit } from '@angular/core'
 import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
-import { NDataModelService,NSnackbarService } from 'neutrinos-seed-services';
+import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
-import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
-import { partnerservice } from '../../sd-services/partnerservice';
-import { partnerregistration } from '../../models/partnerregistration.model';
-import { Router } from '@angular/router';
+
 /**
  * Service import Example :
  * import { HeroService } from '../../services/hero/hero.service';
@@ -20,59 +17,20 @@ import { Router } from '@angular/router';
  */
 
 @Component({
-    selector: 'bh-partnerregistration',
-    templateUrl: './partnerregistration.template.html'
+    selector: 'bh-uploadcertificate',
+    templateUrl: './uploadcertificate.template.html'
 })
 
-export class partnerregistrationComponent extends NBaseComponent implements OnInit {
+export class uploadcertificateComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    constructor(private bdms: NDataModelService,
-        private formBuilder: FormBuilder,
-        private partnerservice:partnerservice,
-         private alertService: NSnackbarService,
-             private rout:Router,
-    
-        ) {
+    constructor(private bdms: NDataModelService) {
         super();
-      
         this.mm = new ModelMethods(bdms);
-
     }
-    firstFormGroup = new FormGroup({
-        companyName: new FormControl(''),
-        companyWebsite: new FormControl(''),
-        companyType: new FormControl(''),
-        numberofEmployees: new FormControl(''),
-        firstName: new FormControl(''),
-        lastName: new FormControl(''),
-        userName: new FormControl(''),
-        password: new FormControl(''),
-        country: new FormControl(''),
-        mobileNumber: new FormControl(''),
-        emailId: new FormControl(''),
-        designation: new FormControl(''),
-        address: new FormControl('')
-    });
 
     ngOnInit() {
-        
-    }
 
- submit(data) {
-        
-this.dm.partnerregistration= data;
-if(typeof this.dm.partnerregistration === 'object'){
-this.partnerservice.savepartnerdata(this.dm.partnerregistration);
- this.rout.navigate(['/login']);
-}
-else{
-     this.alertService.openSnackBar('fill all the details');
-    
-}
-        
-
-this.firstFormGroup.reset();
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
@@ -127,7 +85,7 @@ this.firstFormGroup.reset();
             })
     }
 
-    delete(dataModelName, filter) {
+    delete (dataModelName, filter) {
         this.mm.delete(dataModelName, filter,
             result => {
                 // On Success code here

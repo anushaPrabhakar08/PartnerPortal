@@ -130,6 +130,24 @@ export class partnerservice {
       throw e;
     }
   }
+  public async savepartnerdata(obj = undefined, ...others) {
+    try {
+      let bh = {
+        input: { obj: obj },
+        local: { result: undefined, modlerUrlApi: undefined }
+      };
+      bh = this.__constructDefault(bh);
+
+      bh = await this.sd_ukVlnZhxTeDLRamF(bh);
+      //appendnew_next_savepartnerdata
+      //Start formatting output variables
+      let outputVariables = { input: {}, local: { result: bh.local.result } };
+      //End formatting output variables
+      return outputVariables;
+    } catch (e) {
+      throw e;
+    }
+  }
   //appendnew_flow_partnerservice_Start
 
   async sd_xIgXKrl1iV0XgH8H(bh) {
@@ -243,6 +261,35 @@ export class partnerservice {
       };
       bh.local.result = await this.sdService.nHttpRequest(requestOptions);
       //appendnew_next_sd_3Ns00MGI4f6dZsAS
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_ukVlnZhxTeDLRamF(bh) {
+    try {
+      bh.local.modlerUrlApi = `http://localhost:24483/api/addpartnerdata?obj=${bh.input.obj}`;
+
+      bh = await this.sd_db9vxZREbhyd2XC5(bh);
+      //appendnew_next_sd_ukVlnZhxTeDLRamF
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_db9vxZREbhyd2XC5(bh) {
+    try {
+      let requestOptions = {
+        url: bh.local.modlerUrlApi,
+        method: 'post',
+        responseType: 'json',
+        reportProgress: undefined,
+        headers: {},
+        params: {},
+        body: bh.input.obj
+      };
+      bh.local.result = await this.sdService.nHttpRequest(requestOptions);
+      //appendnew_next_sd_db9vxZREbhyd2XC5
       return bh;
     } catch (e) {
       throw e;

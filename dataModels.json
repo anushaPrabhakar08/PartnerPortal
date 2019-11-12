@@ -113,6 +113,18 @@
                 "fieldType": 2,
                 "isArray": false,
                 "type": "string"
+            },
+            {
+                "name": "userName",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "password",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
             }
         ]
     },

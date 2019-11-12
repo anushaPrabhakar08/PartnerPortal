@@ -8,7 +8,7 @@ import { MatSort, MatTableDataSource, MatPaginator } from '@angular/material';
 import { MatDialog } from '@angular/material';
 import { partner_addleadComponent } from '../partner_addleadComponent/partner_addlead.component';
 import { deletepopupComponent } from '../deletepopupComponent/deletepopup.component';
-
+import { partnerservice } from '../../sd-services/partnerservice';
 
 export interface PeriodicElement {
     no: number;
@@ -39,20 +39,31 @@ const ELEMENT_DATA: PeriodicElement[] = [
 
 export class partner_leadsComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
-
+data;
     @ViewChild(MatSort, { static: true }) sort: MatSort;
     @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
-    dataSource = new MatTableDataSource(ELEMENT_DATA);
+    dataSource = new MatTableDataSource(this.data);
 
-    constructor(private bdms: NDataModelService, private dialog: MatDialog) {
+    constructor(private bdms: NDataModelService, private dialog: MatDialog,
+    private partnerservice:partnerservice
+    ) {
         super();
         this.mm = new ModelMethods(bdms);
+    }
+
+    async getdata(){
+        this.data = this.leadObjtoArr((await this.partnerservice.getleadsdata()).local.result);
+        console.log(this.data);
+    }
+    leadObjtoArr(obj){
+        return Array.from(Object.keys(obj), k=> obj[k]);
     }
 
     ngOnInit() {
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
+        this.getdata();
     }
 
     openDeleteDialog() {

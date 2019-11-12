@@ -362,7 +362,6 @@
     }
    }
   },
-<<<<<<< HEAD
   "node-red-node-mongodb": {
    "name": "node-red-node-mongodb",
    "version": "0.0.14",
@@ -2477,8 +2476,6 @@
     }
    }
   },
-=======
->>>>>>> 0f398f47eb06976eafcf694aaba76f767b265866
   "node-red-node-email": {
    "name": "node-red-node-email",
    "version": "1.7.0",
@@ -2583,23 +2580,76 @@
      "file": "C:\\Program Files\\Neutrinos Studio\\resources\\app.asar.unpacked\\node_modules\\@jatahworx\\bhive-core\\node_modules\\node-red-node-twitter\\27-twitter.js"
     }
    }
+  },
+  "node-red-mongodb": {
+   "name": "node-red-mongodb",
+   "version": "0.0.18",
+   "local": true,
+   "nodes": {
+    "mongo": {
+     "name": "mongo",
+     "types": [
+      "mongodb",
+      "mongodb out",
+      "mongodb in"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-mongodb",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-mongodb\\66-mongodb.js"
+    }
+   }
+  },
+  "node-red-contrib-mongo-client": {
+   "name": "node-red-contrib-mongo-client",
+   "version": "0.2.2",
+   "local": true,
+   "nodes": {
+    "mongo-client": {
+     "name": "mongo-client",
+     "types": [
+      "mongo-client",
+      "mongo-client in"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-mongo-client",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-mongo-client\\mongo-client.js"
+    }
+   }
+  },
+  "node-red-contrib-objectid": {
+   "name": "node-red-contrib-objectid",
+   "version": "0.7.2",
+   "local": true,
+   "nodes": {
+    "objectid": {
+     "name": "objectid",
+     "types": [
+      "objectid"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-objectid",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-objectid\\objectid.js"
+    }
+   }
   }
  },
-<<<<<<< HEAD
- "_credentialSecret": "2df4872a954f6858340a7482941aa42bccd7f2f6e9dc9075b9ca36cb650ec576"
-=======
- "_credentialSecret": "fd0127ce78c8d0646ac7902e608591be649baaed3087ee8c1591bcb64e2fa9f0",
+ "_credentialSecret": "5e07d2760d012306db61116bcf19bf1e2205ec48c637b150946376fa0f7a3a6f",
  "users": {
   "_": {
    "editor": {
     "view": {
-     "view-grid-size": 20,
+     "view-grid-size": "20",
      "view-node-status": true,
      "view-node-show-label": true,
-     "view-show-tips": true
+     "view-show-tips": true,
+     "view-snap-grid": false,
+     "view-show-grid": false
     }
-   }
+   },
+   "menu-menu-item-palette": false
   }
  }
->>>>>>> 0f398f47eb06976eafcf694aaba76f767b265866
 }

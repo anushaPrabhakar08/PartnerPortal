@@ -35,4 +35,10 @@ export class partnerregistration {
   @JsonProperty('address', String, true)
   public address: string = undefined;
 
+  @JsonProperty('userName', String, true)
+  public userName: string = undefined;
+
+  @JsonProperty('password', String, true)
+  public password: string = undefined;
+
 }

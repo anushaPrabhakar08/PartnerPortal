@@ -17,7 +17,7 @@
                   </mat-form-field>
                 </div>
               </div>
-              <table mat-table [dataSource]="dataSource" matSort class="table-width-fix">
+              <table mat-table [dataSource]="data" matSort class="table-width-fix">
                 <tr mat-header-row *matHeaderRowDef="[&apos;no&apos;,&apos;orgName&apos;,&apos;oppType&apos;,&apos;location&apos;,&apos;website&apos;,&apos;leadCreationDate&apos;,&apos;action&apos;]"></tr>
                 <tr mat-row *matRowDef="let row; columns: [&apos;no&apos;,&apos;orgName&apos;,&apos;oppType&apos;,&apos;location&apos;,&apos;website&apos;,&apos;leadCreationDate&apos;,&apos;action&apos;];"></tr>
 

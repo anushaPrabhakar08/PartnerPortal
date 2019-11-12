@@ -622,7 +622,7 @@
                                     },
                                     {
                                         "_key": "[dataSource]",
-                                        "_value": "dataSource",
+                                        "_value": "data",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },

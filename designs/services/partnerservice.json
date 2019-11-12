@@ -394,5 +394,106 @@
         ],
         "generateNext": false,
         "generated": true
+    },
+    {
+        "id": "sd_f9HXnKQVvCyokm0B",
+        "type": "Start",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "savepartnerdata",
+        "outputs": 1,
+        "noerr": 0,
+        "inputVariables": [
+            {
+                "key": "obj",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "result",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": true
+            },
+            {
+                "key": "modlerUrlApi",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "functionName": "savepartnerdata",
+        "x": 136.20001220703125,
+        "y": 557.9374961853027,
+        "wires": [
+            [
+                "sd_ukVlnZhxTeDLRamF"
+            ]
+        ],
+        "generateNext": true,
+        "generated": false,
+        "serviceName": "partnerservice"
+    },
+    {
+        "id": "sd_ukVlnZhxTeDLRamF",
+        "type": "Script",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "",
+        "script": "bh.local.modlerUrlApi=`http://localhost:24483/api/addpartnerdata?obj=${bh.input.obj}`;\n",
+        "x": 357.0500297546387,
+        "y": 565.9374961853027,
+        "wires": [
+            [
+                "sd_db9vxZREbhyd2XC5"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_db9vxZREbhyd2XC5",
+        "type": "HttpRequest",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "modler flow",
+        "method": "post",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.modlerUrlApi",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "modlerUrlApi"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "reqBody": "bh.input.obj",
+        "reqBodyObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "obj"
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "x": 539.050048828125,
+        "y": 569.9375076293945,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
     }
 ]

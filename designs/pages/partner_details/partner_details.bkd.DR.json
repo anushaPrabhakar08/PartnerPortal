@@ -5010,7 +5010,7 @@
                                             },
                                             {
                                                 "_key": "Mapping",
-                                                "_value": "{{table.action}}<button mat-button color=\"primary\" (click)=\"openAlertDialog(element,true)\">Upload Certificate</button><br/><button mat-button color=\"warn\" (click)=\"openAlertDialog(element,false,i)\">Cancel Certificate</button>",
+                                                "_value": "{{table.action}}<button mat-button color=\"primary\" (click)=\"addCertificateDialog()\">Upload Certificate</button><br/><button mat-button color=\"warn\" (click)=\"cancelCertificateDialog()\">Cancel Certificate</button>",
                                                 "_type": "ma",
                                                 "_attrDef": "p",
                                                 "_useAsLabel": true
