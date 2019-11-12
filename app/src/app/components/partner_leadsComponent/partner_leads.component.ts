@@ -6,9 +6,10 @@ import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 import { MatSort, MatTableDataSource, MatPaginator } from '@angular/material';
 import { MatDialog } from '@angular/material';
-import { user } from '../../models/user.model';
-import { loginComponent } from '../loginComponent/login.component';
-import { partnerservice } from '../../sd-services/partnerservice';
+import { partner_addleadComponent } from '../partner_addleadComponent/partner_addlead.component';
+import { deletepopupComponent } from '../deletepopupComponent/deletepopup.component';
+
+
 export interface PeriodicElement {
     no: number;
     oppType: string;
@@ -18,16 +19,16 @@ export interface PeriodicElement {
     leadCreationDate: string;
 }
 const ELEMENT_DATA: PeriodicElement[] = [
-    { no: 1, orgName: 'JoyIT', oppType: 'Hydrogen', website: 'www.joyitconsulting.com', location: 'Bangalore', leadCreationDate:'02-05-2019' },
-    { no: 2, orgName: 'Mentric', oppType: 'Helium', website: 'www.mentric.com', location: 'chennai', leadCreationDate:'02-05-2019'  },
-    { no: 3, orgName: 'Indigo', oppType: 'Lithium', website: 'www.indigo.com', location: 'Bangalore', leadCreationDate:'02-05-2019'  },
-    { no: 4, orgName: 'Dell', oppType: 'Beryllium', website: 'www.dell.com', location: 'Bangalore', leadCreationDate:'02-05-2019'  },
-    { no: 5, orgName: 'Philips', oppType: 'Boron', website: 'www.philips.com', location: 'Hyderabad', leadCreationDate:'02-05-2019'  },
-    { no: 6, orgName: 'Squirrelseva', oppType: 'Carbon', website: 'www.squirrelseva.com', location: 'pune', leadCreationDate:'02-05-2019'  },
-    { no: 7, orgName: 'Worksheets', oppType: 'Nitrogen', website: 'www.worksheets.com', location: 'pune', leadCreationDate:'02-05-2019'  },
-    { no: 8, orgName: 'Wipro', oppType: 'Oxygen', website: 'www.wipro.com', location: 'Mumbai', leadCreationDate:'02-05-2019'  },
-    { no: 9, orgName: 'Matrix', oppType: 'Fluorine', website: 'www.matrix.com', location: 'Hyderabad', leadCreationDate:'02-05-2019'  },
-    { no: 10, orgName: 'Moodys', oppType: 'Neon', website: 'www.moodys.com', location: 'Hyderabad', leadCreationDate:'02-05-2019'  },
+    { no: 1, orgName: 'JoyIT', oppType: 'Hydrogen', website: 'www.joyitconsulting.com', location: 'Bangalore', leadCreationDate: '02-05-2019' },
+    { no: 2, orgName: 'Mentric', oppType: 'Helium', website: 'www.mentric.com', location: 'chennai', leadCreationDate: '02-05-2019' },
+    { no: 3, orgName: 'Indigo', oppType: 'Lithium', website: 'www.indigo.com', location: 'Bangalore', leadCreationDate: '02-05-2019' },
+    { no: 4, orgName: 'Dell', oppType: 'Beryllium', website: 'www.dell.com', location: 'Bangalore', leadCreationDate: '02-05-2019' },
+    { no: 5, orgName: 'Philips', oppType: 'Boron', website: 'www.philips.com', location: 'Hyderabad', leadCreationDate: '02-05-2019' },
+    { no: 6, orgName: 'Squirrelseva', oppType: 'Carbon', website: 'www.squirrelseva.com', location: 'pune', leadCreationDate: '02-05-2019' },
+    { no: 7, orgName: 'Worksheets', oppType: 'Nitrogen', website: 'www.worksheets.com', location: 'pune', leadCreationDate: '02-05-2019' },
+    { no: 8, orgName: 'Wipro', oppType: 'Oxygen', website: 'www.wipro.com', location: 'Mumbai', leadCreationDate: '02-05-2019' },
+    { no: 9, orgName: 'Matrix', oppType: 'Fluorine', website: 'www.matrix.com', location: 'Hyderabad', leadCreationDate: '02-05-2019' },
+    { no: 10, orgName: 'Moodys', oppType: 'Neon', website: 'www.moodys.com', location: 'Hyderabad', leadCreationDate: '02-05-2019' },
 ];
 
 
@@ -38,16 +39,13 @@ const ELEMENT_DATA: PeriodicElement[] = [
 
 export class partner_leadsComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
-    data;
+
     @ViewChild(MatSort, { static: true }) sort: MatSort;
     @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
-            dataSource = new MatTableDataSource(this.data);
+    dataSource = new MatTableDataSource(ELEMENT_DATA);
 
-    constructor(private bdms: NDataModelService, 
-    private dialog:MatDialog, 
-    private partnerservice:partnerservice
-    ) {
+    constructor(private bdms: NDataModelService, private dialog: MatDialog) {
         super();
         this.mm = new ModelMethods(bdms);
     }
@@ -55,17 +53,23 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
     ngOnInit() {
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
-        this.getleads();
-        console.log(this.dataSource);
-
     }
 
-    
+    openDeleteDialog() {
+        const dialogRef = this.dialog.open(deletepopupComponent, {
+            width: '450px',
+            //disableClose: true,
+            data: 'hello'
+        });
+    }
+
+
     addLead() {
-    const dialogRef = this.dialog.open(loginComponent, {
-      width: '450px',
-      data: 'hello'
-    });
+        const dialogRef = this.dialog.open(partner_addleadComponent, {
+            width: '450px',
+            //disableClose: true,
+            data: 'hello'
+        });
     }
 
     applyFilter(filterValue: string) {
@@ -74,16 +78,6 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
         this.dataSource.filter = filterValue;
     }
 
-
-
-    async getleads( ){
-        this.data = this.leadsObjtoArr((await this.partnerservice.getleadsdata()).local.result);
-        console.log(this.data);
-    }
-
-    leadsObjtoArr(obj) {
-      return Array.from(Object.keys(obj), k => obj[k]);
-  }
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, filter, keys, sort, pagenumber, pagesize,
             result => {

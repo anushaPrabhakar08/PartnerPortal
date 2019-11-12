@@ -17,7 +17,7 @@
             },
             {
                 "_key": "class",
-                "_value": "partnerReg",
+                "_value": "",
                 "_type": "kv",
                 "_attrDef": "p"
             },
@@ -201,7 +201,7 @@
                     "designerReference": [
                         {
                             "_key": "style",
-                            "_value": "font-size: 30px; font-family: Arial, Helvetica, sans-serif;",
+                            "_value": "font-size: 24px; font-family: Arial, Helvetica, sans-serif;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -213,14 +213,14 @@
                         },
                         {
                             "_key": "htmlElement",
-                            "_value": "p",
+                            "_value": "h1",
                             "_type": "dav",
                             "_attrDef": "p",
                             "_useAsLabel": true
                         },
                         {
                             "_key": "tagType",
-                            "_value": "p",
+                            "_value": "h1",
                             "_type": "a",
                             "_attrDef": "p",
                             "_visibility": false
@@ -545,7 +545,7 @@
                             "designerReference": [
                                 {
                                     "_key": "style",
-                                    "_value": "",
+                                    "_value": "width: 320px;",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -570,7 +570,7 @@
                                 },
                                 {
                                     "_key": "[appearance]",
-                                    "_value": "'legacy'",
+                                    "_value": "'standard'",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
@@ -950,7 +950,7 @@
                             "designerReference": [
                                 {
                                     "_key": "style",
-                                    "_value": "",
+                                    "_value": "width: 320px;",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -975,7 +975,7 @@
                                 },
                                 {
                                     "_key": "[appearance]",
-                                    "_value": "'legacy'",
+                                    "_value": "'standard'",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
@@ -1703,7 +1703,7 @@
                             "designerReference": [
                                 {
                                     "_key": "style",
-                                    "_value": "",
+                                    "_value": "width: 320px;",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -1791,7 +1791,7 @@
                                 },
                                 {
                                     "_key": "[appearance]",
-                                    "_value": "'legacy'",
+                                    "_value": "'standard'",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
@@ -2044,7 +2044,7 @@
                             "designerReference": [
                                 {
                                     "_key": "style",
-                                    "_value": "",
+                                    "_value": "width: 320px;",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -2063,7 +2063,7 @@
                                 },
                                 {
                                     "_key": "[appearance]",
-                                    "_value": "'legacy'",
+                                    "_value": "'standard'",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -2653,7 +2653,7 @@
                             "designerReference": [
                                 {
                                     "_key": "style",
-                                    "_value": "",
+                                    "_value": "width: 320px;",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -2678,7 +2678,7 @@
                                 },
                                 {
                                     "_key": "[appearance]",
-                                    "_value": "'legacy'",
+                                    "_value": "'standard'",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
@@ -3335,7 +3335,7 @@
                             "designerReference": [
                                 {
                                     "_key": "style",
-                                    "_value": "",
+                                    "_value": "width: 320px;",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -3360,7 +3360,7 @@
                                 },
                                 {
                                     "_key": "[appearance]",
-                                    "_value": "'legacy'",
+                                    "_value": "'standard'",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },

@@ -174,6 +174,10 @@ table {
     background-color: #fafafa;
 }
 
+.tab-data:hover {
+    background-color:rgba(0,0,0,.12);
+}
+
 .tab-partner-data {
     color: #000 !important;
     background-color: #eee;
@@ -240,8 +244,8 @@ bh-channel_announcements, bh-channel_marketing, bh-channel_dashboard, bh-partner
 }
 
 .announcement-card {
-    width: 80% !important;
-    height: 400px;
+    width: 40% !important;
+    height: 300px;
     display: flex !important;
     place-content: center;
     align-items: center;
@@ -391,6 +395,7 @@ video {
     height: 500px;
     background-image: url('assets/Web/become_partner.jpg');
     background-size: cover;}
+
 .footer-class {
   background-color: #5f737d;
   color: #fff;
@@ -399,10 +404,22 @@ video {
 .partnerReg{
     width:100%;
     font-size:20px;
-    background-color: #5f737d;
+   // background-color: #5f737d;
     height:100%;
     justify-content: center;
     text-align: center;
     font-weight: 700;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+// .partnerReg{
+//    width:100%;
+//    font-size:20px;
+//    background-color: #5f737d;
+//    height:100%;
+//    justify-content: center;
+//    text-align: center;
+//    font-weight: 700;
+//  font-family: Arial, Helvetica, sans-serif;
+// }
