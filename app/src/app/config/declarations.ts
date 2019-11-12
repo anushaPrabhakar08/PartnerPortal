@@ -180,14 +180,8 @@ export const appProviders = [
 */
 
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
-export const appRoutes = [{
-  path: 'home', component: homeComponent,
-  children: [{ path: 'cantact', component: contactpageComponent }]
-}, { path: 'login', component: loginComponent }, { path: 'unauthorized', redirectTo: '/login', pathMatch: 'full' }, {
-  path: 'channel', component: channelComponent,
-  children: [{ path: 'dashboard', component: channel_dashboardComponent }, { path: 'dashboardPartnerDetails', component: partner_detailsComponent }, { path: 'dashboardChannelMarketing', component: channel_marketingComponent }, { path: 'dashboardChannelAnnouncements', component: channel_announcementsComponent }]
-}, {
-  path: 'partner', component: partnerComponent,
-  children: [{ path: 'dashboardPartnerMarketing', component: partner_marketingComponent }, { path: 'dashboardPartnerLeads', component: partner_leadsComponent }, { path: 'dashboardPartnerDevelopers', component: partner_developersComponent }, { path: 'dashboardPartnerAgreement', component: partner_agreementComponent }]
-}, { path: 'memberregisteration', component: memberregisterationComponent }, { path: 'partnerregistration', component: partnerregistrationComponent }, { path: 'partner_addDeveloper', component: partner_adddeveloperComponent }, { path: 'partner_addLead', component: partner_addleadComponent }, { path: 'memberlogin', component: memberloginComponent }, { path: 'product', component: productComponent }, { path: 'contact', component: contactpageComponent }, { path: '', redirectTo: '/home', pathMatch: 'full' }, { path: '**', component: PageNotFoundComponent }]
+export const appRoutes = [{path: 'home', component: homeComponent,
+children: [{path: 'cantact', component: contactpageComponent}]},{path: 'login', component: loginComponent},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'memberlogin', component: memberloginComponent},{path: 'product', component: productComponent},{path: 'contact', component: contactpageComponent},{path: 'channel', component: channelComponent,
+children: [{path: 'dashboard', component: channel_dashboardComponent},{path: 'dashboardPartnerDetails', component: partner_detailsComponent},{path: 'dashboardChannelMarketing', component: channel_marketingComponent},{path: 'dashboardChannelAnnouncements', component: channel_announcementsComponent}]},{path: 'partner', component: partnerComponent,
+children: [{path: 'dashboardPartnerMarketing', component: partner_marketingComponent},{path: 'dashboardPartnerLeads', component: partner_leadsComponent},{path: 'dashboardPartnerDevelopers', component: partner_developersComponent},{path: 'dashboardPartnerAgreement', component: partner_agreementComponent}]},{path: 'memberregisteration', component: memberregisterationComponent},{path: 'partnerregistration', component: partnerregistrationComponent},{path: 'partner_addDeveloper', component: partner_adddeveloperComponent},{path: 'partner_addLead', component: partner_addleadComponent},{path: '', redirectTo: '/home', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END

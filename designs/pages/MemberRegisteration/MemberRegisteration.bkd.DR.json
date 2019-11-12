@@ -17,7 +17,7 @@
             },
             {
                 "_key": "class",
-                "_value": "Membackgd",
+                "_value": "partnerReg",
                 "_type": "kv",
                 "_attrDef": "p"
             },
@@ -144,7 +144,7 @@
                     },
                     {
                         "_key": "style",
-                        "_value": "width:100%;margin-top:5%;height:70%;",
+                        "_value": "width:100%;margin-top:5%;height:70%;box-shadow:4px 4px 4px 4px;",
                         "_type": "kv",
                         "_attrDef": "p"
                     },
@@ -687,7 +687,7 @@
                                             },
                                             {
                                                 "_key": "[appearance]",
-                                                "_value": "'standard'",
+                                                "_value": "'outline'",
                                                 "_type": "a",
                                                 "_attrDef": "p"
                                             },
@@ -1092,7 +1092,7 @@
                                             },
                                             {
                                                 "_key": "[appearance]",
-                                                "_value": "'standard'",
+                                                "_value": "'outline'",
                                                 "_type": "a",
                                                 "_attrDef": "p"
                                             },
@@ -1497,7 +1497,7 @@
                                             },
                                             {
                                                 "_key": "[appearance]",
-                                                "_value": "'standard'",
+                                                "_value": "'outline'",
                                                 "_type": "a",
                                                 "_attrDef": "p"
                                             },
@@ -1902,7 +1902,7 @@
                                             },
                                             {
                                                 "_key": "[appearance]",
-                                                "_value": "'standard'",
+                                                "_value": "'outline'",
                                                 "_type": "a",
                                                 "_attrDef": "p"
                                             },
@@ -2307,7 +2307,7 @@
                                             },
                                             {
                                                 "_key": "[appearance]",
-                                                "_value": "'standard'",
+                                                "_value": "'outline'",
                                                 "_type": "a",
                                                 "_attrDef": "p"
                                             },
@@ -2554,7 +2554,7 @@
                                 "designerReference": [
                                     {
                                         "_key": "style",
-                                        "_value": "background:blue;color:white;",
+                                        "_value": "background:orangered;color:white;",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },

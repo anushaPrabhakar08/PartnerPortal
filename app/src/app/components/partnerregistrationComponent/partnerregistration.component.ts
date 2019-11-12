@@ -49,7 +49,7 @@ export class partnerregistrationComponent extends NBaseComponent implements OnIn
 
     submit(data) {
         console.log(data);
-
+this.firstFormGroup.reset();
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
