@@ -2654,5 +2654,24 @@
    }
   }
  },
+<<<<<<< Updated upstream
  "_credentialSecret": "b5ccf1f36a5d5d8f83c36e04cfcf924c735d83d764c562268bf3860469ff664d"
+=======
+ "_credentialSecret": "0e32cba8fe80e4303ec7ab3e4954cf56fa7bc46dde90d6ffb878d0e2a484e5d3",
+ "users": {
+  "_": {
+   "editor": {
+    "view": {
+     "view-grid-size": "20",
+     "view-node-status": true,
+     "view-node-show-label": true,
+     "view-show-tips": true,
+     "view-snap-grid": false,
+     "view-show-grid": false
+    }
+   },
+   "menu-menu-item-palette": false
+  }
+ }
+>>>>>>> Stashed changes
 }

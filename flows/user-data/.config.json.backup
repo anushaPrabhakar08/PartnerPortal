@@ -2617,6 +2617,30 @@
     }
    }
   },
+<<<<<<< Updated upstream
+  "node-red-contrib-bson": {
+   "name": "node-red-contrib-bson",
+   "version": "1.0.0",
+=======
+  "node-red-node-twitter": {
+   "name": "node-red-node-twitter",
+   "version": "1.1.5",
+>>>>>>> Stashed changes
+   "local": false,
+   "nodes": {
+    "twitter": {
+     "name": "twitter",
+     "types": [
+      "twitter-credentials",
+      "twitter in",
+      "twitter out"
+     ],
+     "enabled": true,
+<<<<<<< Updated upstream
+     "local": true,
+     "module": "node-red-contrib-bson",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-bson\\objectid.js"
+=======
   "node-red-node-tail": {
    "name": "node-red-node-tail",
    "version": "0.0.2",
@@ -2631,6 +2655,7 @@
      "local": false,
      "module": "node-red-node-tail",
      "file": "C:\\Program Files\\Neutrinos Studio\\resources\\app.asar.unpacked\\node_modules\\@jatahworx\\bhive-core\\node_modules\\node-red-node-tail\\28-tail.js"
+>>>>>>> Stashed changes
     }
    }
   },
@@ -2650,8 +2675,55 @@
      "local": false,
      "module": "node-red-node-twitter",
      "file": "C:\\Program Files\\Neutrinos Studio\\resources\\app.asar.unpacked\\node_modules\\@jatahworx\\bhive-core\\node_modules\\node-red-node-twitter\\27-twitter.js"
+<<<<<<< Updated upstream
+=======
+     "local": true,
+     "module": "node-red-contrib-objectid",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-objectid\\objectid.js"
+>>>>>>> Stashed changes
+=======
+     "local": false,
+     "module": "node-red-node-twitter",
+     "file": "C:\\Program Files\\Neutrinos Studio\\resources\\app.asar.unpacked\\node_modules\\@jatahworx\\bhive-core\\node_modules\\node-red-node-twitter\\27-twitter.js"
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+    }
+   }
+  }
+<<<<<<< Updated upstream
+ }
+=======
+ },
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+ "_credentialSecret": "aaa1635d7f42e56d048671dbae155d0b07855a5d9b8ca05433b924cbb30a0815"
+=======
+ "_credentialSecret": "00528b9ee1a9edfeb194e15b0b3bae120bd34dacd0712cb59c5d016382603a21",
+=======
+ "_credentialSecret": "0e32cba8fe80e4303ec7ab3e4954cf56fa7bc46dde90d6ffb878d0e2a484e5d3",
+>>>>>>> Stashed changes
+ "users": {
+  "_": {
+   "editor": {
+    "view": {
+     "view-grid-size": "20",
+     "view-node-status": true,
+     "view-node-show-label": true,
+     "view-show-tips": true,
+     "view-snap-grid": false,
+     "view-show-grid": false
     }
    }
   }
  }
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+ "_credentialSecret": "5e07d2760d012306db61116bcf19bf1e2205ec48c637b150946376fa0f7a3a6f"
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 }
