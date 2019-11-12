@@ -1,7 +1,19 @@
 <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false" fxFill>
   <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-    <h3>
-      Event Name</h3>
-    <n-file-upload></n-file-upload>
+    <h3 style="font-size: x-large;     color: rgba(0,0,0,.7);">
+      Trade shows</h3>
+    <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <mat-grid-list cols="4">
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/developerimg1.jpg" style="margin:10px;" class="img-size"><img imgSrc="Web/tradeEvent.png" style="margin:10px;" class="img-size"><img imgSrc="Web/marketingimg5.jpg" style="margin:10px;" class="img-size"></div>
+        </div>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/tradeEvent.png" style="margin:10px;" class="img-size"><img imgSrc="Web/marketingimg3.jpg" style="margin:10px;" class="img-size"><img imgSrc="Web/marketingimg2.jpg" style="margin:10px;" class="img-size"></div>
+        </div>
+      </mat-grid-list>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+      <n-file-upload></n-file-upload>
+    </div>
   </div>
 </div>

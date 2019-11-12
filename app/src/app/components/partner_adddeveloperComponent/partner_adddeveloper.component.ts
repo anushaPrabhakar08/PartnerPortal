@@ -27,7 +27,8 @@ export class partner_adddeveloperComponent extends NBaseComponent implements OnI
     developerForm = new FormGroup({
         firstName: new FormControl(''),
         lastName: new FormControl(''),
-        position: new FormControl('')
+        position: new FormControl(''),
+        experience: new FormControl('')
     });
 
     constructor(private bdms: NDataModelService) {
@@ -119,7 +120,7 @@ export class partner_adddeveloperComponent extends NBaseComponent implements OnI
     }
 
 submit(data) {
-    if(data.firstName=="" && data.lastName=="" && data.position=="" ){
+    if(data.firstName=="" && data.lastName=="" && data.position=="" && data.experience=="" ){
         console.log('data not present');
     }else{
   console.log(data);

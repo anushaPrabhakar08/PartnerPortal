@@ -30,7 +30,7 @@ Phone: (+27)- 1188-61707</span>
       </div>
     </div>
     <div fxLayout="row wrap" style="width:50%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-      <mat-card>
+      <mat-card style="width:70%;">
         <mat-card-content>
           <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
             <p style="font-variant:petite-caps;font-weight:700;font-size:35px;;">
@@ -38,50 +38,54 @@ Phone: (+27)- 1188-61707</span>
           </div>
           <form>
             <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false">
-              <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+              <mat-form-field class="form-fields" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
                 <input matInput placeholder="First Name" required>
 
               </mat-form-field>
-              <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+              <mat-form-field class="form-fields" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
                 <input matInput placeholder="Last Name" required>
 
               </mat-form-field>
             </div>
             <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false">
-              <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+              <mat-form-field class="form-fields" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
                 <input matInput placeholder="Company Email" required>
 
               </mat-form-field>
-              <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+              <mat-form-field class="form-fields" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
                 <input matInput placeholder="Company Name" required>
 
               </mat-form-field>
             </div>
             <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false">
-              <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                <mat-select style="width:100%;" placeholder="Job Role" required>
-                  <ng-template ngFor let-option [ngForOf] let-i="index">
-                    <mat-option [value]></mat-option>
-                  </ng-template>
-                </mat-select>
+              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+                  <mat-select placeholder="Job Role" required>
+                    <ng-template ngFor let-option [ngForOf] let-i="index">
+                      <mat-option [value]></mat-option>
+                    </ng-template>
+                  </mat-select>
 
-              </mat-form-field>
-              <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                <mat-select style="width:100%;" placeholder="Industry" required>
-                  <ng-template ngFor let-option [ngForOf] let-i="index">
-                    <mat-option [value]></mat-option>
-                  </ng-template>
-                </mat-select>
+                </mat-form-field>
+              </div>
+              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+                  <mat-select class="field_selector" placeholder="Industry" required>
+                    <ng-template ngFor let-option [ngForOf] let-i="index">
+                      <mat-option [value]></mat-option>
+                    </ng-template>
+                  </mat-select>
 
-              </mat-form-field>
+                </mat-form-field>
+              </div>
             </div>
             <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="space-between none" [fxShow]="true" [fxHide]="false">
-              <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+              <mat-form-field class="form-fields" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
                 <input matInput type="tel" placeholder="Mobile Number" required>
 
               </mat-form-field>
               <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                <mat-select style="width:46%;" placeholder="Company Size" required>
+                <mat-select class="form-fields" placeholder="Company Size" required>
                   <ng-template ngFor let-option [ngForOf] let-i="index">
                     <mat-option [value]></mat-option>
                   </ng-template>
@@ -91,7 +95,7 @@ Phone: (+27)- 1188-61707</span>
             </div>
             <div fxLayout="row wrap" style="width:100%" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
               <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                <mat-select style="width:100%;" placeholder="Country">
+                <mat-select class="form-fields" placeholder="Country">
                   <ng-template ngFor let-option [ngForOf] let-i="index">
                     <mat-option [value]></mat-option>
                   </ng-template>

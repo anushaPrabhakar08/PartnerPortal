@@ -6,9 +6,6 @@ import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 import { MatSort, MatTableDataSource, MatPaginator } from '@angular/material';
 import { MatDialog } from '@angular/material';
-import { user } from '../../models/user.model';
-import { loginComponent } from '../loginComponent/login.component';
-import { partnerservice } from '../../sd-services/partnerservice';
 import { partner_addleadComponent } from '../partner_addleadComponent/partner_addlead.component';
 import { deletepopupComponent } from '../deletepopupComponent/deletepopup.component';
 
@@ -42,16 +39,13 @@ const ELEMENT_DATA: PeriodicElement[] = [
 
 export class partner_leadsComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
-    data;
+
     @ViewChild(MatSort, { static: true }) sort: MatSort;
     @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
-    dataSource = new MatTableDataSource(this.data);
+    dataSource = new MatTableDataSource(ELEMENT_DATA);
 
-    constructor(private bdms: NDataModelService,
-        private dialog: MatDialog,
-        private partnerservice: partnerservice
-    ) {
+    constructor(private bdms: NDataModelService, private dialog: MatDialog) {
         super();
         this.mm = new ModelMethods(bdms);
     }
@@ -59,9 +53,6 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
     ngOnInit() {
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
-        this.getleads();
-        console.log(this.dataSource);
-
     }
 
     openDeleteDialog() {
@@ -81,19 +72,10 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
         });
     }
 
-
-
     applyFilter(filterValue: string) {
         filterValue = filterValue.trim();
         filterValue = filterValue.toLowerCase();
         this.dataSource.filter = filterValue;
-    }
-
-
-
-    async getleads() {
-        this.data = (await this.partnerservice.getleadsdata()).local.result;
-        console.log(this.data);
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {

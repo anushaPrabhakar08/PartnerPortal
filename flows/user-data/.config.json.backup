@@ -362,6 +362,7 @@
     }
    }
   },
+<<<<<<< HEAD
   "node-red-node-mongodb": {
    "name": "node-red-node-mongodb",
    "version": "0.0.14",
@@ -2476,6 +2477,8 @@
     }
    }
   },
+=======
+>>>>>>> 0f398f47eb06976eafcf694aaba76f767b265866
   "node-red-node-email": {
    "name": "node-red-node-email",
    "version": "1.7.0",
@@ -2581,5 +2584,22 @@
     }
    }
   }
+ },
+<<<<<<< HEAD
+ "_credentialSecret": "2df4872a954f6858340a7482941aa42bccd7f2f6e9dc9075b9ca36cb650ec576"
+=======
+ "_credentialSecret": "fd0127ce78c8d0646ac7902e608591be649baaed3087ee8c1591bcb64e2fa9f0",
+ "users": {
+  "_": {
+   "editor": {
+    "view": {
+     "view-grid-size": 20,
+     "view-node-status": true,
+     "view-node-show-label": true,
+     "view-show-tips": true
+    }
+   }
+  }
  }
+>>>>>>> 0f398f47eb06976eafcf694aaba76f767b265866
 }

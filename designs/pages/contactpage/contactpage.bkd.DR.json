@@ -2319,7 +2319,7 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "",
+                            "_value": "width:70%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -2772,7 +2772,7 @@
                                         },
                                         {
                                             "_key": "class",
-                                            "_value": "",
+                                            "_value": "form-fields",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
@@ -2933,7 +2933,7 @@
                                         },
                                         {
                                             "_key": "class",
-                                            "_value": "",
+                                            "_value": "form-fields",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
@@ -3161,7 +3161,7 @@
                                         },
                                         {
                                             "_key": "class",
-                                            "_value": "",
+                                            "_value": "form-fields",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
@@ -3322,7 +3322,7 @@
                                         },
                                         {
                                             "_key": "class",
-                                            "_value": "",
+                                            "_value": "form-fields",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
@@ -3537,14 +3537,20 @@
                                         "_attrDef": "p"
                                     }
                                 ],
-                                "004de4db-ba00-782e-7dfd-91d25867ef0e": {
-                                    "paletteKey": "NG-Select",
+                                "c045cf4b-71ce-59bc-1dda-0200e4c38ce2": {
+                                    "paletteKey": "FlexLayoutCol",
                                     "parentEditorKey": "ac692ba9-c144-0a86-bdc7-dc542f32e629",
-                                    "isAdvancedComponent": true,
                                     "designerReference": [
                                         {
+                                            "_key": "componentLabel",
+                                            "_value": "Column",
+                                            "_type": "kv",
+                                            "_attrDef": "p",
+                                            "_useAsLabel": true
+                                        },
+                                        {
                                             "_key": "style",
-                                            "_value": "width:100%;",
+                                            "_value": "",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
@@ -3555,178 +3561,245 @@
                                             "_attrDef": "p"
                                         },
                                         {
-                                            "_key": "placeholder",
-                                            "_value": "Job Role",
+                                            "_key": "fxFlex",
+                                            "_value": "",
                                             "_type": "kv",
-                                            "_attrDef": "p",
-                                            "_useAsLabel": true
+                                            "_attrDef": "p"
                                         },
                                         {
-                                            "_key": "datasource",
+                                            "_key": "fxLayoutGap",
                                             "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "wrap",
+                                            "_value": "wrap",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         },
                                         {
-                                            "_key": "[groupOptions]",
-                                            "_value": "noGroup",
-                                            "_type": "dav",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "[groupLabels]",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p",
-                                            "_visibility": false
-                                        },
-                                        {
-                                            "_key": "[disableGroup]",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p",
-                                            "_visibility": false
-                                        },
-                                        {
-                                            "_key": "[optionDatasource]",
-                                            "_value": "",
-                                            "_type": "a",
-                                            "_attrDef": "p",
-                                            "_visibility": false
-                                        },
-                                        {
-                                            "_key": "optionValue",
-                                            "_value": "",
+                                            "_key": "layoutAlign",
+                                            "_value": "start",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         },
                                         {
-                                            "_key": "optionView",
-                                            "_value": "",
+                                            "_key": "pLayoutAlign",
+                                            "_value": "stretch",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         },
                                         {
-                                            "_key": "formControlName",
-                                            "_value": "",
+                                            "_key": "[fxShow]",
+                                            "_value": "true",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
                                         {
-                                            "_key": "[(ngModel)]",
-                                            "_value": "",
+                                            "_key": "[fxHide]",
+                                            "_value": "false",
                                             "_type": "kv",
                                             "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "[(value)]",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "required",
-                                            "_value": "required",
-                                            "_type": "a",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "[appearance]",
-                                            "_value": "'outline'",
-                                            "_type": "a",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "[floatLabel]",
-                                            "_value": "'auto'",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "[disableRipple]",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "multiple",
-                                            "_value": "",
-                                            "_type": "dav",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "CustomTriggerValue",
-                                            "_value": "",
-                                            "_type": "a",
-                                            "_attrDef": "p",
-                                            "_visibility": false
-                                        },
-                                        {
-                                            "_key": "(openedChange)",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "(selectionChange)",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "selectCustomOption",
-                                            "_value": [],
-                                            "_type": "a",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "selectStyle",
-                                            "_value": "Basic",
-                                            "_type": "a",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "panelClass",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "[disabled]",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "[errorStateMatcher]",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "option",
-                                            "_value": "option",
-                                            "_type": "a",
-                                            "_attrDef": "p",
-                                            "_visibility": false
-                                        },
-                                        {
-                                            "_key": "matError",
-                                            "_value": [],
-                                            "_type": "a",
-                                            "_attrDef": "p",
-                                            "_visibility": true
                                         }
-                                    ]
+                                    ],
+                                    "004de4db-ba00-782e-7dfd-91d25867ef0e": {
+                                        "paletteKey": "NG-Select",
+                                        "parentEditorKey": "c045cf4b-71ce-59bc-1dda-0200e4c38ce2",
+                                        "isAdvancedComponent": true,
+                                        "designerReference": [
+                                            {
+                                                "_key": "style",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "class",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "placeholder",
+                                                "_value": "Job Role",
+                                                "_type": "kv",
+                                                "_attrDef": "p",
+                                                "_useAsLabel": true
+                                            },
+                                            {
+                                                "_key": "datasource",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[groupOptions]",
+                                                "_value": "noGroup",
+                                                "_type": "dav",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[groupLabels]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "[disableGroup]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "[optionDatasource]",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "optionValue",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "optionView",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "formControlName",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[(ngModel)]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[(value)]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "required",
+                                                "_value": "required",
+                                                "_type": "a",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[appearance]",
+                                                "_value": "'outline'",
+                                                "_type": "a",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[floatLabel]",
+                                                "_value": "'auto'",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[disableRipple]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "multiple",
+                                                "_value": "",
+                                                "_type": "dav",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "CustomTriggerValue",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "(openedChange)",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "(selectionChange)",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "selectCustomOption",
+                                                "_value": [],
+                                                "_type": "a",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "selectStyle",
+                                                "_value": "Basic",
+                                                "_type": "a",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "panelClass",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[disabled]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[errorStateMatcher]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "option",
+                                                "_value": "option",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "matError",
+                                                "_value": [],
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": true
+                                            }
+                                        ]
+                                    }
                                 },
-                                "4ab70628-d860-283b-1625-e82dcf8e4736": {
-                                    "paletteKey": "NG-Select",
+                                "83da641f-4496-ffa5-2570-b51bd6ede2e8": {
+                                    "paletteKey": "FlexLayoutCol",
                                     "parentEditorKey": "ac692ba9-c144-0a86-bdc7-dc542f32e629",
-                                    "isAdvancedComponent": true,
                                     "designerReference": [
                                         {
+                                            "_key": "componentLabel",
+                                            "_value": "Column",
+                                            "_type": "kv",
+                                            "_attrDef": "p",
+                                            "_useAsLabel": true
+                                        },
+                                        {
                                             "_key": "style",
-                                            "_value": "width:100%;",
+                                            "_value": "",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
@@ -3737,169 +3810,230 @@
                                             "_attrDef": "p"
                                         },
                                         {
-                                            "_key": "placeholder",
-                                            "_value": "Industry",
+                                            "_key": "fxFlex",
+                                            "_value": "",
                                             "_type": "kv",
-                                            "_attrDef": "p",
-                                            "_useAsLabel": true
+                                            "_attrDef": "p"
                                         },
                                         {
-                                            "_key": "datasource",
+                                            "_key": "fxLayoutGap",
                                             "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "wrap",
+                                            "_value": "wrap",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         },
                                         {
-                                            "_key": "[groupOptions]",
-                                            "_value": "noGroup",
-                                            "_type": "dav",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "[groupLabels]",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p",
-                                            "_visibility": false
-                                        },
-                                        {
-                                            "_key": "[disableGroup]",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p",
-                                            "_visibility": false
-                                        },
-                                        {
-                                            "_key": "[optionDatasource]",
-                                            "_value": "",
-                                            "_type": "a",
-                                            "_attrDef": "p",
-                                            "_visibility": false
-                                        },
-                                        {
-                                            "_key": "optionValue",
-                                            "_value": "",
+                                            "_key": "layoutAlign",
+                                            "_value": "start",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         },
                                         {
-                                            "_key": "optionView",
-                                            "_value": "",
+                                            "_key": "pLayoutAlign",
+                                            "_value": "stretch",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         },
                                         {
-                                            "_key": "formControlName",
-                                            "_value": "",
+                                            "_key": "[fxShow]",
+                                            "_value": "true",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
                                         {
-                                            "_key": "[(ngModel)]",
-                                            "_value": "",
+                                            "_key": "[fxHide]",
+                                            "_value": "false",
                                             "_type": "kv",
                                             "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "[(value)]",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "required",
-                                            "_value": "required",
-                                            "_type": "a",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "[appearance]",
-                                            "_value": "'outline'",
-                                            "_type": "a",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "[floatLabel]",
-                                            "_value": "'auto'",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "[disableRipple]",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "multiple",
-                                            "_value": "",
-                                            "_type": "dav",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "CustomTriggerValue",
-                                            "_value": "",
-                                            "_type": "a",
-                                            "_attrDef": "p",
-                                            "_visibility": false
-                                        },
-                                        {
-                                            "_key": "(openedChange)",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "(selectionChange)",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "selectCustomOption",
-                                            "_value": [],
-                                            "_type": "a",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "selectStyle",
-                                            "_value": "Basic",
-                                            "_type": "a",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "panelClass",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "[disabled]",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "[errorStateMatcher]",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "option",
-                                            "_value": "option",
-                                            "_type": "a",
-                                            "_attrDef": "p",
-                                            "_visibility": false
-                                        },
-                                        {
-                                            "_key": "matError",
-                                            "_value": [],
-                                            "_type": "a",
-                                            "_attrDef": "p",
-                                            "_visibility": true
                                         }
-                                    ]
+                                    ],
+                                    "4ab70628-d860-283b-1625-e82dcf8e4736": {
+                                        "paletteKey": "NG-Select",
+                                        "parentEditorKey": "83da641f-4496-ffa5-2570-b51bd6ede2e8",
+                                        "isAdvancedComponent": true,
+                                        "designerReference": [
+                                            {
+                                                "_key": "style",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "class",
+                                                "_value": "field_selector",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "placeholder",
+                                                "_value": "Industry",
+                                                "_type": "kv",
+                                                "_attrDef": "p",
+                                                "_useAsLabel": true
+                                            },
+                                            {
+                                                "_key": "datasource",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[groupOptions]",
+                                                "_value": "noGroup",
+                                                "_type": "dav",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[groupLabels]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "[disableGroup]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "[optionDatasource]",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "optionValue",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "optionView",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "formControlName",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[(ngModel)]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[(value)]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "required",
+                                                "_value": "required",
+                                                "_type": "a",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[appearance]",
+                                                "_value": "'outline'",
+                                                "_type": "a",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[floatLabel]",
+                                                "_value": "'auto'",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[disableRipple]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "multiple",
+                                                "_value": "",
+                                                "_type": "dav",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "CustomTriggerValue",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "(openedChange)",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "(selectionChange)",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "selectCustomOption",
+                                                "_value": [],
+                                                "_type": "a",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "selectStyle",
+                                                "_value": "Basic",
+                                                "_type": "a",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "panelClass",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[disabled]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[errorStateMatcher]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "option",
+                                                "_value": "option",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "matError",
+                                                "_value": [],
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": true
+                                            }
+                                        ]
+                                    }
                                 }
                             },
                             "b6db5fa6-8568-ae1c-f131-1ef3970e17da": {
@@ -3981,7 +4115,7 @@
                                         },
                                         {
                                             "_key": "class",
-                                            "_value": "",
+                                            "_value": "form-fields",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
@@ -4136,13 +4270,13 @@
                                     "designerReference": [
                                         {
                                             "_key": "style",
-                                            "_value": "width:46%;",
+                                            "_value": "",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
                                         {
                                             "_key": "class",
-                                            "_value": "",
+                                            "_value": "form-fields",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
@@ -4385,13 +4519,13 @@
                                     "designerReference": [
                                         {
                                             "_key": "style",
-                                            "_value": "width:100%;",
+                                            "_value": "",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
                                         {
                                             "_key": "class",
-                                            "_value": "",
+                                            "_value": "form-fields",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },

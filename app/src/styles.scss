@@ -4,6 +4,11 @@
 @import "nDefaults.scss";
 
 //home
+.home_col2 {
+    height: 500px;
+    background-image: url('assets/Web/become_partner.jpg');
+    background-size: cover;}
+
 .home_btn{
 color:white;
 font-weight:500;
@@ -19,18 +24,25 @@ font-size: 20px;
 }
  .card_video{
     width:30%;
+    height: 250px;
 }
-
+.whypartner{
+    font-size:30px;
+    font-variant:petite-caps;
+    
+}
 .h_card{
    height: auto;
-   width:740px;
+   width:840px;
    margin:10px;
+   background-color:#f2f2f2;
 }
-
-.home_col2{
-   height:500px;
-   background-image: url('assets/Web/become_partner.jpg');
-  background-size:cover;
+//contact 
+.form-fields{
+    width:190px;
+}
+.field_selector{
+    width:20px;
 }
 
 .login-card .mat-card-image:first-child {
@@ -303,16 +315,12 @@ bh-partner_marketing{
 }
 
 .announcement-card {
-    width:80% !important;
-    height:400px !important;
-    display: flex !important;     
-    place-content: start; 
-    //align-items: center;
-    background-color: unset !important;
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow: none !important;
-}
+    width: 40% !important;
+    height: 300px;
+    display: flex !important;
+    place-content: center;
+    align-items: center;
+} 
 
 //marketing Collaterals
 .gallery-card-content{
@@ -434,11 +442,35 @@ video{
      padding: 0 !important;
      background-color: unset !important;
     margin-bottom: 0px !important;
- }
- .search-class .mat-paginator-page-size-label, 
- .search-class .mat-paginator-range-label{
-     font-weight: bold;
-     font-size: 14px;
- }
+}
 
- 
+.search-class .mat-paginator-page-size-label, .search-class .mat-paginator-range-label {
+    font-weight: bold;
+    font-size: 14px;
+} 
+
+
+
+
+.partnerReg{
+    width:100%;
+    font-size:20px;
+   // background-color: #5f737d;
+    height:100%;
+    justify-content: center;
+    text-align: center;
+    font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+// .partnerReg{
+//    width:100%;
+//    font-size:20px;
+//    background-color: #5f737d;
+//    height:100%;
+//    justify-content: center;
+//    text-align: center;
+//    font-weight: 700;
+//  font-family: Arial, Helvetica, sans-serif;
+// }

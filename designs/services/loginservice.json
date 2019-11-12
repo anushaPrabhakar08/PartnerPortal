@@ -71,8 +71,8 @@
         "z": "sd_AqHtpOYqfvjc0UWp",
         "name": "",
         "script": "bh.local.modlreUrl=`http://localhost:24483/api/Loginpartner?username=${bh.input.username}&&password=${bh.input.password}`;",
-        "x": 317.04998779296875,
-        "y": 201.93750762939453,
+        "x": 330.04998779296875,
+        "y": 130.93751525878906,
         "wires": [
             [
                 "sd_QEwiG1uwqRCVw0xw"
@@ -110,8 +110,8 @@
         "params": {},
         "paramsObj": [],
         "paramMappingObj": {},
-        "x": 475.0500068664551,
-        "y": 197.9375171661377,
+        "x": 479.0500183105469,
+        "y": 132.93751525878906,
         "wires": [
             []
         ],
