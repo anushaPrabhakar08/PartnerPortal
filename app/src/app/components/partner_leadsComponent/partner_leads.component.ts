@@ -93,7 +93,7 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
 
     async getleads() {
         this.data = (await this.partnerservice.getleadsdata()).local.result;
-        // console.log(this.data);
+        console.log(this.data);
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
