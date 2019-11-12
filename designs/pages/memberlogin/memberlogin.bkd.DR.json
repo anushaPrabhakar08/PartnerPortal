@@ -410,13 +410,13 @@
                                 },
                                 {
                                     "_key": "layoutAlign",
-                                    "_value": " ",
+                                    "_value": "center",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
                                 {
                                     "_key": "pLayoutAlign",
-                                    "_value": "none",
+                                    "_value": "center",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
@@ -2102,7 +2102,7 @@
                                         },
                                         {
                                             "_key": "html",
-                                            "_value": "create member account",
+                                            "_value": "Create Member Account",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         }

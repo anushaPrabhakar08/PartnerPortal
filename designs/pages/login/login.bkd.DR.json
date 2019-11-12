@@ -368,7 +368,7 @@
                             {
                                 "0": false,
                                 "_key": "style",
-                                "_value": "margin:30px 0px;width:60%;",
+                                "_value": "margin:30px 0px;width:80%;",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -423,13 +423,13 @@
                                 },
                                 {
                                     "_key": "layoutAlign",
-                                    "_value": " ",
+                                    "_value": "center",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
                                 {
                                     "_key": "pLayoutAlign",
-                                    "_value": "none",
+                                    "_value": "center",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
@@ -459,7 +459,7 @@
                                     },
                                     {
                                         "_key": "style",
-                                        "_value": "height:60px;",
+                                        "_value": "height:60px;width:100%;",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -759,7 +759,7 @@
                                     },
                                     {
                                         "_key": "wrap",
-                                        "_value": "",
+                                        "_value": "wrap",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     },
@@ -885,7 +885,7 @@
                                             },
                                             {
                                                 "_key": "wrap",
-                                                "_value": "",
+                                                "_value": "wrap",
                                                 "_type": "a",
                                                 "_attrDef": "p"
                                             },
@@ -936,7 +936,7 @@
                                                 {
                                                     "0": false,
                                                     "_key": "style",
-                                                    "_value": "",
+                                                    "_value": "width:100%;",
                                                     "_type": "kv",
                                                     "_attrDef": "p"
                                                 },
@@ -957,7 +957,7 @@
                                                 {
                                                     "3": false,
                                                     "_key": "wrap",
-                                                    "_value": "",
+                                                    "_value": "wrap",
                                                     "_type": "a",
                                                     "_attrDef": "p"
                                                 },
@@ -1138,7 +1138,7 @@
                                                     },
                                                     {
                                                         "_key": "wrap",
-                                                        "_value": "",
+                                                        "_value": "wrap",
                                                         "_type": "a",
                                                         "_attrDef": "p"
                                                     },
@@ -1372,7 +1372,7 @@
                                                 {
                                                     "3": false,
                                                     "_key": "wrap",
-                                                    "_value": "",
+                                                    "_value": "wrap",
                                                     "_type": "a",
                                                     "_attrDef": "p"
                                                 },
@@ -1534,7 +1534,7 @@
                                                     },
                                                     {
                                                         "_key": "style",
-                                                        "_value": "",
+                                                        "_value": "width:100%;",
                                                         "_type": "kv",
                                                         "_attrDef": "p"
                                                     },
@@ -1553,7 +1553,7 @@
                                                     },
                                                     {
                                                         "_key": "wrap",
-                                                        "_value": "",
+                                                        "_value": "wrap",
                                                         "_type": "a",
                                                         "_attrDef": "p"
                                                     },
@@ -2307,7 +2307,7 @@
                                         },
                                         {
                                             "_key": "html",
-                                            "_value": "create partner account",
+                                            "_value": "Create Partner Account",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         }

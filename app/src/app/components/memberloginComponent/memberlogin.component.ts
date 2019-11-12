@@ -1,15 +1,14 @@
 /*DEFAULT GENERATED TEMPLATE. DO NOT CHANGE SELECTOR TEMPLATE_URL AND CLASS NAME*/
 import { Component, OnInit, OnDestroy } from '@angular/core'
 import { ModelMethods } from '../../lib/model.methods';
-import { Router } from '@angular/router';
 // import { BDataModelService } from '../service/bDataModel.service';
 // import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 import { loaderComponent } from '../loaderComponent/loader.component';
 import { NDataModelService, NLoginService, NSnackbarService, NSystemService , NHTTPLoaderService } from 'neutrinos-seed-services';
 import { memberlogin } from '../../models/memberlogin.model';
-import { memberloginservice }from '../../sd-services/memberloginservice';
-
+import { memberloginservice } from '../../sd-services/memberloginservice';
+import { Router } from '@angular/router';
 /**
  * Service import Example :
  * import { HeroService } from '../../services/hero/hero.service';
@@ -31,7 +30,7 @@ export class memberloginComponent extends NBaseComponent implements OnInit  {
     mm: ModelMethods;
     member: memberlogin;
 
-    constructor(private bdms: NDataModelService) {
+    constructor(private bdms: NDataModelService,private mlogin:memberloginservice,private alertService: NSnackbarService,private rout:Router) {
         super();
         this.mm = new ModelMethods(bdms);
         this.member=new memberlogin();
@@ -43,8 +42,13 @@ export class memberloginComponent extends NBaseComponent implements OnInit  {
 data;
   async authenticate() {
     console.log(this.member.musername);
-    // this.data=(await this.mlogin.memberfun(this.member.musername,this.member.password)).local.result;
+    this.data=(await this.mlogin.memberfun(this.member.musername,this.member.password)).local.result;
+     if(Object.keys(this.data).length===0){
+        this.alertService.openSnackBar('username or password incorrect');
+    }else{
+        this.rout.navigate(['/channel']);
     console.log(this.data);
+    }
   }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {

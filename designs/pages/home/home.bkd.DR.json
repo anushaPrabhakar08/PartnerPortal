@@ -209,13 +209,13 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "width:100%;",
+                            "_value": "background:#5f737d !important;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
                         {
                             "_key": "class",
-                            "_value": "toolbar-fixed",
+                            "_value": "",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -311,7 +311,7 @@
                                 },
                                 {
                                     "_key": "style",
-                                    "_value": "width:200px;",
+                                    "_value": "",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -323,7 +323,7 @@
                                 },
                                 {
                                     "_key": "imgSrc",
-                                    "_value": "Web/logo-white.png",
+                                    "_value": "Web/logo.png",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -449,7 +449,7 @@
                                 "designerReference": [
                                     {
                                         "_key": "style",
-                                        "_value": "color:white;",
+                                        "_value": "",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -468,7 +468,7 @@
                                     },
                                     {
                                         "_key": "color",
-                                        "_value": "",
+                                        "_value": "primary",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -510,7 +510,7 @@
                                 "designerReference": [
                                     {
                                         "_key": "style",
-                                        "_value": "color:white;",
+                                        "_value": "",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -529,7 +529,7 @@
                                     },
                                     {
                                         "_key": "color",
-                                        "_value": "",
+                                        "_value": "accent",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -571,7 +571,7 @@
                                 "designerReference": [
                                     {
                                         "_key": "style",
-                                        "_value": "color:white;",
+                                        "_value": "",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -590,7 +590,7 @@
                                     },
                                     {
                                         "_key": "color",
-                                        "_value": "",
+                                        "_value": "accent",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -1558,7 +1558,7 @@
                                             },
                                             {
                                                 "_key": "html",
-                                                "_value": "See how Neutrinos can help Developers unleash their potential",
+                                                "_value": "See what Neutrinos can do with Partners",
                                                 "_type": "a",
                                                 "_attrDef": "p"
                                             }
@@ -1849,7 +1849,7 @@
                     }
                 }
             },
-            "19608e53-3655-ee46-c923-886aa30ee091": {
+            "1bc9fc49-1c95-bf9f-6d2f-888330024020": {
                 "paletteKey": "NG-Footer",
                 "parentEditorKey": "414259b2-ecb7-3626-bd5c-c48d36bff20e",
                 "designerReference": [
@@ -1868,14 +1868,14 @@
                     },
                     {
                         "_key": "class",
-                        "_value": "",
+                        "_value": "footer",
                         "_type": "kv",
                         "_attrDef": "p"
                     }
                 ],
-                "e5a63ceb-afae-ca19-3ca1-1adfd05153d7": {
+                "6c3067f1-e4b9-9d0e-cd6c-3ff876a20e8d": {
                     "paletteKey": "Html5",
-                    "parentEditorKey": "19608e53-3655-ee46-c923-886aa30ee091",
+                    "parentEditorKey": "1bc9fc49-1c95-bf9f-6d2f-888330024020",
                     "isAdvancedComponent": true,
                     "designerReference": [
                         {
@@ -1886,20 +1886,20 @@
                         },
                         {
                             "_key": "class",
-                            "_value": "footer-class",
+                            "_value": "",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
                         {
                             "_key": "htmlElement",
-                            "_value": "h3",
+                            "_value": "p",
                             "_type": "dav",
                             "_attrDef": "p",
                             "_useAsLabel": true
                         },
                         {
                             "_key": "tagType",
-                            "_value": "h3",
+                            "_value": "p",
                             "_type": "a",
                             "_attrDef": "p",
                             "_visibility": false
@@ -2059,9 +2059,9 @@
                             "_visibility": false
                         }
                     ],
-                    "9a06df79-c7f8-16a0-313c-72905aeb3f43": {
+                    "2cb9a1c4-e27f-c8e8-ef2e-73a48431b3e7": {
                         "paletteKey": "html-editor",
-                        "parentEditorKey": "e5a63ceb-afae-ca19-3ca1-1adfd05153d7",
+                        "parentEditorKey": "6c3067f1-e4b9-9d0e-cd6c-3ff876a20e8d",
                         "isAdvancedChildComponent": true,
                         "designerReference": [
                             {
@@ -2078,7 +2078,7 @@
                             },
                             {
                                 "_key": "html",
-                                "_value": "@2019 Neutrinos",
+                                "_value": "&copy;2019 Neutrinos",
                                 "_type": "a",
                                 "_attrDef": "p"
                             }

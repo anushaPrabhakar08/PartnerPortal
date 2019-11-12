@@ -362,6 +362,25 @@
     }
    }
   },
+  "node-red-node-mongodb": {
+   "name": "node-red-node-mongodb",
+   "version": "0.0.14",
+   "local": true,
+   "nodes": {
+    "mongo": {
+     "name": "mongo",
+     "types": [
+      "mongodb",
+      "mongodb out",
+      "mongodb in"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-node-mongodb",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-node-mongodb\\66-mongodb.js"
+    }
+   }
+  },
   "node-red-contrib-bigobject": {
    "name": "node-red-contrib-bigobject",
    "version": "1.0.17",
@@ -426,23 +445,6 @@
      "local": true,
      "module": "node-red-contrib-bigobject",
      "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-bigobject\\bigobject\\boserver.js"
-    }
-   }
-  },
-  "node-red-contrib-bson": {
-   "name": "node-red-contrib-bson",
-   "version": "1.0.0",
-   "local": true,
-   "nodes": {
-    "objectid": {
-     "name": "objectid",
-     "types": [
-      "objectid"
-     ],
-     "enabled": true,
-     "local": true,
-     "module": "node-red-contrib-bson",
-     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-bson\\objectid.js"
     }
    }
   },
@@ -2403,24 +2405,6 @@
     }
    }
   },
-  "node-red-contrib-mongo-client": {
-   "name": "node-red-contrib-mongo-client",
-   "version": "0.2.2",
-   "local": true,
-   "nodes": {
-    "mongo-client": {
-     "name": "mongo-client",
-     "types": [
-      "mongo-client",
-      "mongo-client in"
-     ],
-     "enabled": true,
-     "local": true,
-     "module": "node-red-contrib-mongo-client",
-     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-mongo-client\\mongo-client.js"
-    }
-   }
-  },
   "node-red-contrib-mongodb": {
    "name": "node-red-contrib-mongodb",
    "version": "0.3.4",
@@ -2436,24 +2420,6 @@
      "local": true,
      "module": "node-red-contrib-mongodb",
      "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-mongodb\\mongodb.js"
-    }
-   }
-  },
-  "node-red-contrib-mongodb-variable": {
-   "name": "node-red-contrib-mongodb-variable",
-   "version": "0.0.5",
-   "local": true,
-   "nodes": {
-    "mongodb": {
-     "name": "mongodb",
-     "types": [
-      "mongodb-var",
-      "mongodb-var in"
-     ],
-     "enabled": true,
-     "local": true,
-     "module": "node-red-contrib-mongodb-variable",
-     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-mongodb-variable\\mongodb.js"
     }
    }
   },
@@ -2493,9 +2459,9 @@
     }
    }
   },
-  "node-red-contrib-objectid": {
-   "name": "node-red-contrib-objectid",
-   "version": "0.7.2",
+  "node-red-contrib-bson": {
+   "name": "node-red-contrib-bson",
+   "version": "1.0.0",
    "local": true,
    "nodes": {
     "objectid": {
@@ -2505,55 +2471,8 @@
      ],
      "enabled": true,
      "local": true,
-     "module": "node-red-contrib-objectid",
-     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-objectid\\objectid.js"
-    }
-   }
-  },
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-  "node-red-node-twitter": {
-   "name": "node-red-node-twitter",
-   "version": "1.1.5",
-=======
-=======
->>>>>>> Stashed changes
-  "node-red-mongodb": {
-   "name": "node-red-mongodb",
-   "version": "0.0.18",
-   "local": true,
-   "nodes": {
-    "mongo": {
-     "name": "mongo",
-     "types": [
-      "mongodb",
-      "mongodb out",
-      "mongodb in"
-     ],
-     "enabled": true,
-     "local": true,
-     "module": "node-red-mongodb",
-     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-mongodb\\66-mongodb.js"
-    }
-   }
-  },
-  "node-red-node-mongodb": {
-   "name": "node-red-node-mongodb",
-   "version": "0.0.14",
-   "local": true,
-   "nodes": {
-    "mongo": {
-     "name": "mongo",
-     "types": [
-      "mongodb",
-      "mongodb out",
-      "mongodb in"
-     ],
-     "enabled": true,
-     "local": true,
-     "module": "node-red-node-mongodb",
-     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-node-mongodb\\66-mongodb.js"
+     "module": "node-red-contrib-bson",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-bson\\objectid.js"
     }
    }
   },
@@ -2609,21 +2528,9 @@
     }
    }
   },
-<<<<<<< Updated upstream
-  "node-red-contrib-mongodb3": {
-   "name": "node-red-contrib-mongodb3",
-   "version": "2.0.1",
->>>>>>> Stashed changes
-=======
-  "node-red-node-twitter": {
-   "name": "node-red-node-twitter",
-   "version": "1.1.5",
->>>>>>> Stashed changes
-=======
   "node-red-node-sentiment": {
    "name": "node-red-node-sentiment",
    "version": "0.1.4",
->>>>>>> Stashed changes
    "local": false,
    "nodes": {
     "sentiment": {
@@ -2632,11 +2539,6 @@
       "sentiment"
      ],
      "enabled": true,
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
->>>>>>> Stashed changes
      "local": false,
      "module": "node-red-node-sentiment",
      "file": "C:\\Program Files\\Neutrinos Studio\\resources\\app.asar.unpacked\\node_modules\\@jatahworx\\bhive-core\\node_modules\\node-red-node-sentiment\\72-sentiment.js"
@@ -2679,30 +2581,5 @@
     }
    }
   }
- },
- "_credentialSecret": "0e32cba8fe80e4303ec7ab3e4954cf56fa7bc46dde90d6ffb878d0e2a484e5d3",
- "users": {
-  "_": {
-   "editor": {
-    "view": {
-     "view-grid-size": 20,
-     "view-node-status": true,
-     "view-node-show-label": true,
-     "view-show-tips": true
-    }
-   }
-  }
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
-     "local": false,
-     "module": "node-red-node-twitter",
-     "file": "C:\\Program Files\\Neutrinos Studio\\resources\\app.asar.unpacked\\node_modules\\@jatahworx\\bhive-core\\node_modules\\node-red-node-twitter\\27-twitter.js"
-    }
-   }
-  }
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
  }
 }
