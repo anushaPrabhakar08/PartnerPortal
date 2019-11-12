@@ -10,6 +10,7 @@
 /app/node_modules
 /app/platforms
 /app/plugins
+/flows/user-data/node_modules
 
 # IDEs and editors
 /.idea
