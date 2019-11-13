@@ -728,7 +728,7 @@
                                         },
                                         {
                                             "_key": "Mapping",
-                                            "_value": "{{table.orgName}}",
+                                            "_value": "{{table.organisationName}}",
                                             "_type": "ma",
                                             "_attrDef": "p",
                                             "_useAsLabel": true
@@ -829,7 +829,7 @@
                                         },
                                         {
                                             "_key": "Mapping",
-                                            "_value": "{{table.oppType}}",
+                                            "_value": "{{table.location}}",
                                             "_type": "ma",
                                             "_attrDef": "p",
                                             "_useAsLabel": true
@@ -886,7 +886,7 @@
                                         },
                                         {
                                             "_key": "Mapping",
-                                            "_value": "{{table.location}}",
+                                            "_value": "{{table.opportunityType}}",
                                             "_type": "ma",
                                             "_attrDef": "p",
                                             "_useAsLabel": true
@@ -1044,7 +1044,7 @@
                                         },
                                         {
                                             "_key": "Mapping",
-                                            "_value": "{{table.leadCreationDate}}",
+                                            "_value": "{{table.leadGeneratedDate}}",
                                             "_type": "ma",
                                             "_attrDef": "p",
                                             "_useAsLabel": true
@@ -1101,7 +1101,7 @@
                                         },
                                         {
                                             "_key": "Mapping",
-                                            "_value": "{{table.action}}<button mat-button color=\"primary\" (click)=\"addLead()\">Edit</button><button mat-button color=\"warn\" (click)=\"openDeleteDialog()\">Delete</button>",
+                                            "_value": "{{table.action}}<button mat-button color=\"primary\" (click)=\"addLead()\">Edit</button><button mat-button color=\"warn\" (click)=\"openDeleteDialog(table)\">Delete</button>",
                                             "_type": "ma",
                                             "_attrDef": "p",
                                             "_useAsLabel": true

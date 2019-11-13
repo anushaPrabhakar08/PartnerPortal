@@ -10,6 +10,7 @@ import { user } from '../../models/user.model';
 import { loginComponent } from '../loginComponent/login.component';
 import { deletepopupComponent } from '../deletepopupComponent/deletepopup.component';
 import { partner_adddeveloperComponent } from '../partner_adddeveloperComponent/partner_adddeveloper.component';
+import { partnerservice } from '../../sd-services/partnerservice';
 
 export interface PeriodicElement {
     no: number;
@@ -41,17 +42,21 @@ export class partner_developersComponent extends NBaseComponent implements OnIni
     mm: ModelMethods;
     @ViewChild(MatSort, { static: true }) sort: MatSort;
     @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+data;
+    dataSource = new MatTableDataSource(this.data);
 
-    dataSource = new MatTableDataSource(ELEMENT_DATA);
-
-    constructor(private bdms: NDataModelService, private dialog:MatDialog) {
+    constructor(private bdms: NDataModelService, private dialog:MatDialog, private partnerservice:partnerservice) {
         super();
         this.mm = new ModelMethods(bdms);
     }
+    
 
     ngOnInit() {
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
+      console.log(this.dataSource);
+   this.getdata();
+
     }
 
     openDeleteDialog() {
@@ -60,6 +65,13 @@ export class partner_developersComponent extends NBaseComponent implements OnIni
             //disableClose: true,
             data: 'hello'
         });
+    }
+
+    async getdata(){
+        this.data = this.leadObjtoArr((await this.partnerservice.getdeveloper()).local.result);
+    }
+    leadObjtoArr(obj){
+        return Array.from(Object.keys(obj), k=> obj[k]);
     }
 
 

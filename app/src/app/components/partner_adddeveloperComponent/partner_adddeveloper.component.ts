@@ -4,8 +4,8 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
-import { ReactiveFormsModule,FormGroup, FormControl, FormBuilder,Validators } from '@angular/forms';
-
+import { ReactiveFormsModule, FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import { partnerservice } from '../../sd-services/partnerservice';
 /**
  * Service import Example :
  * import { HeroService } from '../../services/hero/hero.service';
@@ -31,7 +31,9 @@ export class partner_adddeveloperComponent extends NBaseComponent implements OnI
         experience: new FormControl('')
     });
 
-    constructor(private bdms: NDataModelService) {
+    constructor(private bdms: NDataModelService,
+    private partnerservice:partnerservice
+    ) {
         super();
         this.mm = new ModelMethods(bdms);
     }
@@ -92,7 +94,7 @@ export class partner_adddeveloperComponent extends NBaseComponent implements OnI
             })
     }
 
-    delete (dataModelName, filter) {
+    delete(dataModelName, filter) {
         this.mm.delete(dataModelName, filter,
             result => {
                 // On Success code here
@@ -119,12 +121,9 @@ export class partner_adddeveloperComponent extends NBaseComponent implements OnI
             })
     }
 
-submit(data) {
-    if(data.firstName=="" && data.lastName=="" && data.position=="" && data.experience=="" ){
-        console.log('data not present');
-    }else{
-  console.log(data);
+    submit(data) {
+        // this.partnerservice.savedaveloper().local.result;
+        this.developerForm.reset();
+        console.log(data);
     }
-this.developerForm.reset();
-}
 }

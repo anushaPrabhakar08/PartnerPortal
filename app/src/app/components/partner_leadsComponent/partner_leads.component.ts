@@ -10,26 +10,7 @@ import { partner_addleadComponent } from '../partner_addleadComponent/partner_ad
 import { deletepopupComponent } from '../deletepopupComponent/deletepopup.component';
 import { partnerservice } from '../../sd-services/partnerservice';
 
-export interface PeriodicElement {
-    no: number;
-    oppType: string;
-    location: string;
-    website: string;
-    orgName: string;
-    leadCreationDate: string;
-}
-const ELEMENT_DATA: PeriodicElement[] = [
-    { no: 1, orgName: 'JoyIT', oppType: 'Hydrogen', website: 'www.joyitconsulting.com', location: 'Bangalore', leadCreationDate: '02-05-2019' },
-    { no: 2, orgName: 'Mentric', oppType: 'Helium', website: 'www.mentric.com', location: 'chennai', leadCreationDate: '02-05-2019' },
-    { no: 3, orgName: 'Indigo', oppType: 'Lithium', website: 'www.indigo.com', location: 'Bangalore', leadCreationDate: '02-05-2019' },
-    { no: 4, orgName: 'Dell', oppType: 'Beryllium', website: 'www.dell.com', location: 'Bangalore', leadCreationDate: '02-05-2019' },
-    { no: 5, orgName: 'Philips', oppType: 'Boron', website: 'www.philips.com', location: 'Hyderabad', leadCreationDate: '02-05-2019' },
-    { no: 6, orgName: 'Squirrelseva', oppType: 'Carbon', website: 'www.squirrelseva.com', location: 'pune', leadCreationDate: '02-05-2019' },
-    { no: 7, orgName: 'Worksheets', oppType: 'Nitrogen', website: 'www.worksheets.com', location: 'pune', leadCreationDate: '02-05-2019' },
-    { no: 8, orgName: 'Wipro', oppType: 'Oxygen', website: 'www.wipro.com', location: 'Mumbai', leadCreationDate: '02-05-2019' },
-    { no: 9, orgName: 'Matrix', oppType: 'Fluorine', website: 'www.matrix.com', location: 'Hyderabad', leadCreationDate: '02-05-2019' },
-    { no: 10, orgName: 'Moodys', oppType: 'Neon', website: 'www.moodys.com', location: 'Hyderabad', leadCreationDate: '02-05-2019' },
-];
+
 
 
 @Component({
@@ -39,7 +20,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 
 export class partner_leadsComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
-data;
+    data;
     @ViewChild(MatSort, { static: true }) sort: MatSort;
     @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
@@ -66,11 +47,11 @@ data;
         this.getdata();
     }
 
-    openDeleteDialog() {
+    openDeleteDialog(table) {
         const dialogRef = this.dialog.open(deletepopupComponent, {
             width: '450px',
             //disableClose: true,
-            data: 'hello'
+            data: table
         });
     }
 

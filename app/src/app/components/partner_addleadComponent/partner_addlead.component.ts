@@ -5,7 +5,7 @@ import { ModelMethods } from '../../lib/model.methods';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 import { ReactiveFormsModule,FormGroup, FormControl, FormBuilder,Validators } from '@angular/forms';
-
+import { partnerservice } from '../../sd-services/partnerservice';
 
 @Component({
     selector: 'bh-partner_addlead',
@@ -22,7 +22,7 @@ export class partner_addleadComponent extends NBaseComponent implements OnInit {
           contactDetails : new FormControl(''),
           comment : new FormControl('')
       });
-    constructor(private bdms: NDataModelService, private fb: FormBuilder) {
+    constructor(private bdms: NDataModelService, private fb: FormBuilder, private partnerservice:partnerservice) {
         super();
         this.mm = new ModelMethods(bdms);
     }
@@ -30,6 +30,8 @@ export class partner_addleadComponent extends NBaseComponent implements OnInit {
     ngOnInit() {
 
     }
+
+
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, filter, keys, sort, pagenumber, pagesize,
@@ -117,6 +119,8 @@ submit(data) {
   console.log(data);
     }
 this.profileForm.reset();
+this.partnerservice.saveleadata(data);
 }
+
 
 }

@@ -148,6 +148,24 @@ export class partnerservice {
       throw e;
     }
   }
+  public async deleteleads(id = undefined, ...others) {
+    try {
+      let bh = {
+        input: { id: id },
+        local: { result: undefined, modlerUpiApi: undefined }
+      };
+      bh = this.__constructDefault(bh);
+
+      bh = await this.sd_zQ4Y3gu7p8iKjyqJ(bh);
+      //appendnew_next_deleteleads
+      //Start formatting output variables
+      let outputVariables = { input: {}, local: { result: bh.local.result } };
+      //End formatting output variables
+      return outputVariables;
+    } catch (e) {
+      throw e;
+    }
+  }
   //appendnew_flow_partnerservice_Start
 
   async sd_xIgXKrl1iV0XgH8H(bh) {
@@ -199,7 +217,7 @@ export class partnerservice {
         reportProgress: undefined,
         headers: {},
         params: {},
-        body: undefined
+        body: bh.input.data
       };
       bh.local.result = await this.sdService.nHttpRequest(requestOptions);
       //appendnew_next_sd_Qvl8jCVdHuywn5E0
@@ -290,6 +308,35 @@ export class partnerservice {
       };
       bh.local.result = await this.sdService.nHttpRequest(requestOptions);
       //appendnew_next_sd_db9vxZREbhyd2XC5
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_zQ4Y3gu7p8iKjyqJ(bh) {
+    try {
+      bh.local.modlerUpiApi = `http://localhost:24483/api/deleteleads?id=${bh.input.id}`;
+
+      bh = await this.sd_UFKIezRqhLAYDuHv(bh);
+      //appendnew_next_sd_zQ4Y3gu7p8iKjyqJ
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_UFKIezRqhLAYDuHv(bh) {
+    try {
+      let requestOptions = {
+        url: bh.local.modlerUpiApi,
+        method: 'delete',
+        responseType: 'json',
+        reportProgress: undefined,
+        headers: {},
+        params: {},
+        body: bh.input.id
+      };
+      bh.local.result = await this.sdService.nHttpRequest(requestOptions);
+      //appendnew_next_sd_UFKIezRqhLAYDuHv
       return bh;
     } catch (e) {
       throw e;

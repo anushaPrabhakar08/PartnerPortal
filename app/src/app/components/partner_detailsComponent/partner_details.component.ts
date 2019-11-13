@@ -40,16 +40,16 @@ const ELEMENT_DATA: PeriodicElement[] = [
 ];
 
 const LEADS_DATA: LeadsElement[] = [
-    { no: 1, orgName: 'JoyIT', oppType: 'Resalers',  orgWebsite: 'www.joyitconsulting.com', location: 'Bangalore', leadCreationDate:'02-06-2019' },
-    { no: 2, orgName: 'Mentric', oppType: 'Distributors',  orgWebsite: 'www.mentric.com', location: 'chennai', leadCreationDate:'06-05-2019'  },
-    { no: 3, orgName: 'Indigo', oppType: 'Sales',  orgWebsite: 'www.indigo.com', location: 'Bangalore', leadCreationDate:'25-06-2019'  },
-    { no: 4, orgName: 'Dell', oppType: 'Distributors',  orgWebsite: 'www.dell.com', location: 'Bangalore', leadCreationDate:'02-05-2019'  },
-    { no: 5, orgName: 'Philips', oppType: 'Distributors',  orgWebsite: 'www.philips.com', location: 'Hyderabad', leadCreationDate:'21-05-2018'  },
-    { no: 6, orgName: 'Squirrelseva', oppType: 'Sales',  orgWebsite: 'www.squirrelseva.com', location: 'pune', leadCreationDate:'02-05-2019'  },
-    { no: 7, orgName: 'Worksheets', oppType: 'Sales',  orgWebsite: 'www.worksheets.com', location: 'pune', leadCreationDate:'10-05-2018'  },
-    { no: 8, orgName: 'Wipro', oppType: 'Distributors',  orgWebsite: 'www.wipro.com', location: 'Mumbai', leadCreationDate:'02-05-2018'  },
-    { no: 9, orgName: 'Matrix', oppType: 'Fluorine',  orgWebsite: 'www.matrix.com', location: 'Hyderabad', leadCreationDate:'02-06-2018'  },
-    { no: 10, orgName: 'Moodys', oppType: 'Sales',  orgWebsite: 'www.moodys.com', location: 'Hyderabad', leadCreationDate:'02-07-2017'  },
+   { no: 1, orgName: 'JoyIT', oppType: 'Resalers',  orgWebsite: 'www.joyitconsulting.com', location: 'Bangalore', leadCreationDate:'02-06-2019' },
+   { no: 2, orgName: 'Mentric', oppType: 'Distributors',  orgWebsite: 'www.mentric.com', location: 'chennai', leadCreationDate:'06-05-2019'  },
+   { no: 3, orgName: 'Indigo', oppType: 'Sales',  orgWebsite: 'www.indigo.com', location: 'Bangalore', leadCreationDate:'25-06-2019'  },
+   { no: 4, orgName: 'Dell', oppType: 'Distributors',  orgWebsite: 'www.dell.com', location: 'Bangalore', leadCreationDate:'02-05-2019'  },
+   { no: 5, orgName: 'Philips', oppType: 'Distributors',  orgWebsite: 'www.philips.com', location: 'Hyderabad', leadCreationDate:'21-05-2018'  },
+   { no: 6, orgName: 'Squirrelseva', oppType: 'Sales',  orgWebsite: 'www.squirrelseva.com', location: 'pune', leadCreationDate:'02-05-2019'  },
+   { no: 7, orgName: 'Worksheets', oppType: 'Sales',  orgWebsite: 'www.worksheets.com', location: 'pune', leadCreationDate:'10-05-2018'  },
+   { no: 8, orgName: 'Wipro', oppType: 'Distributors',  orgWebsite: 'www.wipro.com', location: 'Mumbai', leadCreationDate:'02-05-2018'  },
+   { no: 9, orgName: 'Matrix', oppType: 'Fluorine',  orgWebsite: 'www.matrix.com', location: 'Hyderabad', leadCreationDate:'02-06-2018'  },
+   { no: 10, orgName: 'Moodys', oppType: 'Sales',  orgWebsite: 'www.moodys.com', location: 'Hyderabad', leadCreationDate:'02-07-2017'  },
 ];
 
 @Component({

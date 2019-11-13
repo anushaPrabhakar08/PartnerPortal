@@ -439,7 +439,7 @@
                         },
                         {
                             "_key": "(click)",
-                            "_value": "",
+                            "_value": "deletedata(_id)",
                             "_type": "kv",
                             "_attrDef": "p"
                         },

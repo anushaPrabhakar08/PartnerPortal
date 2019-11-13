@@ -2,6 +2,6 @@
   <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
     <h3>
       Sure to delete..?</h3>
-    <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button mat-dialog-close color="warn">Delete</button><button mat-raised-button mat-dialog-close>cancel</button></div>
+    <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button color="warn" (click)="deletedata(_id)">Delete</button><button mat-raised-button>cancel</button></div>
   </div>
 </div>

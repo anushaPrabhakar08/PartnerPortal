@@ -17,9 +17,9 @@
                   </mat-form-field>
                 </div>
               </div>
-              <table mat-table [dataSource]="dataSource" matSort class="table-width-fix">
-                <tr mat-header-row *matHeaderRowDef="[&apos;no&apos;,&apos;firstName&apos;,&apos;lastName&apos;,&apos;email&apos;,&apos;position&apos;,&apos;status&apos;,&apos;action&apos;]"></tr>
-                <tr mat-row *matRowDef="let row; columns: [&apos;no&apos;,&apos;firstName&apos;,&apos;lastName&apos;,&apos;email&apos;,&apos;position&apos;,&apos;status&apos;,&apos;action&apos;];"></tr>
+              <table mat-table [dataSource]="data" matSort class="table-width-fix">
+                <tr mat-header-row *matHeaderRowDef="[&apos;no&apos;,&apos;firstName&apos;,&apos;lastName&apos;,&apos;email&apos;,&apos;position&apos;,&apos;experience&apos;,&apos;action&apos;]"></tr>
+                <tr mat-row *matRowDef="let row; columns: [&apos;no&apos;,&apos;firstName&apos;,&apos;lastName&apos;,&apos;email&apos;,&apos;position&apos;,&apos;experience&apos;,&apos;action&apos;];"></tr>
 
                 <ng-container matColumnDef="no">
                   <th mat-header-cell *matHeaderCellDef mat-sort-header class="tab-developerheader">No</th>
@@ -46,9 +46,9 @@
                   <td mat-cell *matCellDef="let table; let i = index;" class="tab-developerdata">{{table.position}}</td>
                 </ng-container>
 
-                <ng-container matColumnDef="status">
+                <ng-container matColumnDef="experience">
                   <th mat-header-cell *matHeaderCellDef mat-sort-header class="tab-developerheader">Status</th>
-                  <td mat-cell *matCellDef="let table; let i = index;" class="tab-developerdata">{{table.status}}</td>
+                  <td mat-cell *matCellDef="let table; let i = index;" class="tab-developerdata">{{table.experience}}</td>
                 </ng-container>
 
                 <ng-container matColumnDef="action">

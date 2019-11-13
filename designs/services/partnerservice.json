@@ -174,7 +174,8 @@
             ]
         ],
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "partnerservice"
     },
     {
         "id": "sd_Qvl8jCVdHuywn5E0",
@@ -190,9 +191,10 @@
         },
         "ret": "json",
         "retMappingObj": {},
+        "reqBody": "bh.input.data",
         "reqBodyObj": {
             "mapVarType": "bh.input",
-            "mapVarValue": ""
+            "mapVarValue": "data"
         },
         "resultMapping": "bh.local.result",
         "resultMappingObj": {
@@ -490,6 +492,107 @@
         "paramMappingObj": {},
         "x": 539.050048828125,
         "y": 569.9375076293945,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_m3kiss2WXuCEPhZl",
+        "type": "Start",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "deleteleads",
+        "outputs": 1,
+        "noerr": 0,
+        "inputVariables": [
+            {
+                "key": "id",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "result",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": true
+            },
+            {
+                "key": "modlerUpiApi",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "functionName": "deleteleads",
+        "x": 130.1875,
+        "y": 677.921875,
+        "wires": [
+            [
+                "sd_zQ4Y3gu7p8iKjyqJ"
+            ]
+        ],
+        "generateNext": true,
+        "generated": false,
+        "serviceName": "partnerservice"
+    },
+    {
+        "id": "sd_zQ4Y3gu7p8iKjyqJ",
+        "type": "Script",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "deleteleads",
+        "script": "bh.local.modlerUpiApi=`http://localhost:24483/api/deleteleads?id=${bh.input.id}`;",
+        "x": 346.03125,
+        "y": 690.921875,
+        "wires": [
+            [
+                "sd_UFKIezRqhLAYDuHv"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_UFKIezRqhLAYDuHv",
+        "type": "HttpRequest",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "modler flow ",
+        "method": "delete",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.modlerUpiApi",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "modlerUpiApi"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "reqBody": "bh.input.id",
+        "reqBodyObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "id"
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "x": 541.03125,
+        "y": 686.90625,
         "wires": [
             []
         ],
