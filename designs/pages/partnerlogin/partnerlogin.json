@@ -1,0 +1,13 @@
+{
+    "appPageId": "b56e0c0d-d45b-233a-93ea-6834b1b9266a",
+    "appPageName": "partnerlogin",
+    "componentName": "partnerloginComponent",
+    "selectorName": "bh-partnerlogin",
+    "htmlFileName": "partnerlogin.template.html",
+    "tsFileName": "partnerlogin.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

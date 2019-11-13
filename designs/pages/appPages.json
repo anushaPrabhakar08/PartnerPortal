@@ -124,14 +124,9 @@
         "componentName": "uploadcertificateComponent",
         "isEntry": false
     },
-    "939fbdec-5cbd-1139-bd4b-80788965a2e9": {
-        "appPageName": "viewAgreement",
-        "componentName": "viewagreementComponent",
-        "isEntry": false
-    },
-    "cfc51e2c-4c8f-685c-2aa2-58f40dc6246f": {
-        "appPageName": "deletedeveloper",
-        "componentName": "deletedeveloperComponent",
+    "b56e0c0d-d45b-233a-93ea-6834b1b9266a": {
+        "appPageName": "partnerlogin",
+        "componentName": "partnerloginComponent",
         "isEntry": false
     }
 }

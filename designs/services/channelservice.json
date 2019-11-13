@@ -7,6 +7,108 @@
         "disabled": false,
         "info": "",
         "generateNext": true,
-        "generated": false
+        "generated": false,
+        "serviceName": "channelservice"
+    },
+    {
+        "id": "sd_NFePLXhyJJSYQVB0",
+        "type": "Start",
+        "z": "sd_BIsXw8uCu26k89sV",
+        "name": "channelmemberregistration",
+        "outputs": 1,
+        "noerr": 0,
+        "inputVariables": [
+            {
+                "key": "data",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "modlreApiUrl",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            },
+            {
+                "key": "result",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "functionName": "channelmemberregistration",
+        "x": 253.2000026702881,
+        "y": 124.93749809265137,
+        "wires": [
+            [
+                "sd_2tky7jqHupi9JB9C"
+            ]
+        ],
+        "generateNext": true,
+        "generated": false,
+        "serviceName": "channelservice"
+    },
+    {
+        "id": "sd_2tky7jqHupi9JB9C",
+        "type": "Script",
+        "z": "sd_BIsXw8uCu26k89sV",
+        "name": "",
+        "script": "bh.local.modlreApiUrl=`http://localhost:24483/api/channeldata?obj=${bh.input.data}`;",
+        "x": 409.0500297546387,
+        "y": 123.93751525878906,
+        "wires": [
+            [
+                "sd_X2HaIwoS0PpnP1i3"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_X2HaIwoS0PpnP1i3",
+        "type": "HttpRequest",
+        "z": "sd_BIsXw8uCu26k89sV",
+        "name": "",
+        "method": "post",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.modlreApiUrl",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "modlreApiUrl"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "reqBody": "bh.input.data",
+        "reqBodyObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "data"
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "x": 559.0500564575195,
+        "y": 125.9375114440918,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
     }
 ]

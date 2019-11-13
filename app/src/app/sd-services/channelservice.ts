@@ -58,8 +58,55 @@ export class channelservice {
 
   //   service flows_channelservice
 
+  public async channelmemberregistration(data = undefined, ...others) {
+    try {
+      let bh = {
+        input: { data: data },
+        local: { modlreApiUrl: undefined, result: undefined }
+      };
+      bh = this.__constructDefault(bh);
+
+      bh = await this.sd_2tky7jqHupi9JB9C(bh);
+      //appendnew_next_channelmemberregistration
+      //Start formatting output variables
+      let outputVariables = { input: {}, local: {} };
+      //End formatting output variables
+      return outputVariables;
+    } catch (e) {
+      throw e;
+    }
+  }
   //appendnew_flow_channelservice_Start
 
+  async sd_2tky7jqHupi9JB9C(bh) {
+    try {
+      bh.local.modlreApiUrl = `http://localhost:24483/api/channeldata?obj=${bh.input.data}`;
+
+      bh = await this.sd_X2HaIwoS0PpnP1i3(bh);
+      //appendnew_next_sd_2tky7jqHupi9JB9C
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_X2HaIwoS0PpnP1i3(bh) {
+    try {
+      let requestOptions = {
+        url: bh.local.modlreApiUrl,
+        method: 'post',
+        responseType: 'json',
+        reportProgress: undefined,
+        headers: {},
+        params: {},
+        body: bh.input.data
+      };
+      bh.local.result = await this.sdService.nHttpRequest(requestOptions);
+      //appendnew_next_sd_X2HaIwoS0PpnP1i3
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
   //appendnew_node
 
   __constructDefault(bh) {

@@ -2,10 +2,11 @@
 import { Component, OnInit } from '@angular/core'
 import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
-import { NDataModelService } from 'neutrinos-seed-services';
+import { NDataModelService,NSnackbarService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 import { ReactiveFormsModule,FormGroup, FormControl, FormBuilder,Validators } from '@angular/forms';
-
+import { Router } from '@angular/router';
+import { channelservice } from '../../sd-services/channelservice';
 /**
  * Service import Example :
  * import { HeroService } from '../../services/hero/hero.service';
@@ -31,7 +32,7 @@ profileForm = new FormGroup({
     emailId: new FormControl(''),
     password: new FormControl('')
   });
-    constructor(private bdms: NDataModelService, private fb: FormBuilder) {
+    constructor(private bdms: NDataModelService, private fb: FormBuilder,private alertService: NSnackbarService,private rout:Router,private memberreg:channelservice) {
         super();
         this.mm = new ModelMethods(bdms);
     }
@@ -40,6 +41,16 @@ profileForm = new FormGroup({
 
     }
 
+    submit(data) {
+    if(data.firstName=="" || data.lastName=="" || data.userName=="" ||data.emailId=="" || data.password==""){
+         this.alertService.openSnackBar('fill all the details');
+    }else{
+  this.dm.memberregisteration=data;
+  console.log(this.dm.memberregisteration);
+  this.memberreg.channelmemberregistration(this.dm.memberregisteration);
+  this.rout.navigate(['/memberlogin']);
+    }
+}
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, filter, keys, sort, pagenumber, pagesize,
             result => {
@@ -118,13 +129,4 @@ profileForm = new FormGroup({
                 // Handle errors here
             })
     }
-
-submit(data) {
-    if(data.firstName=="" || data.lastName=="" || data.userName=="" ||data.emailId=="" || data.password==""){
-        console.log('data not present');
-    }else{
-  console.log(data);
-    }
-
-}
 }

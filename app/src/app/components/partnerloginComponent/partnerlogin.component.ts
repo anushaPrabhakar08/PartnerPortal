@@ -1,10 +1,19 @@
 /*DEFAULT GENERATED TEMPLATE. DO NOT CHANGE SELECTOR TEMPLATE_URL AND CLASS NAME*/
-import { Component, OnInit } from '@angular/core'
-import { ModelMethods } from '../../lib/model.methods';
+
+
 // import { BDataModelService } from '../service/bDataModel.service';
-import { NDataModelService } from 'neutrinos-seed-services';
+
+
+import { Component, OnInit, OnDestroy } from '@angular/core'
+import { Router } from '@angular/router';
+import { user } from '../../models/user.model';
+import { loaderComponent } from '../loaderComponent/loader.component';
+import { ModelMethods } from '../../lib/model.methods';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
+import { NDataModelService, NLoginService, NSnackbarService, NSystemService , NHTTPLoaderService } from 'neutrinos-seed-services';
+import { MatDialog } from '@angular/material';
 import { FormGroup, FormControl,Validators } from '@angular/forms';
+import { loginservice } from '../../sd-services/loginservice';
 
 /**
  * Service import Example :
@@ -18,41 +27,61 @@ import { FormGroup, FormControl,Validators } from '@angular/forms';
  */
 
 @Component({
-    selector: 'bh-contactpage',
-    templateUrl: './contactpage.template.html'
+    selector: 'bh-partnerlogin',
+    templateUrl: './partnerlogin.template.html'
 })
 
-export class contactpageComponent extends NBaseComponent implements OnInit {
+export class partnerloginComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
-jobrole=['Salse & Marketing','Technology','Human Resource & Admin','Directors of Applications/IT'];
-industry=['Manufacturing','insurance','Education'];
-companysize=['1-49','50-99','100-249','250-499'];
-country=['Afghanistan','Ailand Island','Albania','Algeria','Australia','india'];
-
-contactdetails=new FormGroup({
-    firstname:new FormControl(''),
-    lastname:new FormControl(''),
-    companyemail:new FormControl(''),
-    companyname:new FormControl(''),
-    jobroles:new FormControl(''),
-    industryname:new FormControl(''),
-    mobilenumber:new FormControl(''),
-    compsize:new FormControl(''),
-    countryname:new FormControl(''),
-    message:new FormControl('')
-})
-    constructor(private bdms: NDataModelService) {
-        super();
-        this.mm = new ModelMethods(bdms);
-    }
-
+  user: user;
+   constructor(private bdms: NDataModelService,
+    private rout:Router,
+    private alertService: NSnackbarService,
+    private router: Router,
+    private dialog: MatDialog,
+    private httpLoaderService: NHTTPLoaderService,
+    private loginservice:loginservice
+  ) {
+    super();
+    this.mm = new ModelMethods(bdms);
+    this.user = new user();
+  }
     ngOnInit() {
 
     }
+      openDialog() {
+    const dialogRef = this.dialog.open(loaderComponent, {
+      data: { message: 'Authenticating' },
+      width: '250px',
+      disableClose: true
+    });
+  }
 
-submit(data){
-    console.log(data);
-}
+
+    data;
+
+  async authenticate() {
+    // this.loginserv.login(this.user.username, this.user.password, this.user.remember).subscribe((response) => {
+    //   if (this.loginserv.isLoggedIn()) {
+    //     this.alertService.openSnackBar('User authenticated');
+    //     this.router.navigate(['home']);
+    //   }
+    // }, (error) => {
+    //   this.httpLoaderService.alertError(error);
+    // });
+    console.log(this.user.username);    
+    this.data=(await this.loginservice.login( this.user.username,this.user.password)).local.result;
+    //showspinner
+    // this.data.subscribe(()=>this.Showspinner=false);
+    console.log(typeof this.data);
+    if(Object.keys(this.data).length===0){
+        this.alertService.openSnackBar('username or password incorrect');
+    }else{
+        this.rout.navigate(['/partner/dashboardPartnerAgreement']);
+    console.log(this.data);
+    }
+  }
+
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, filter, keys, sort, pagenumber, pagesize,
             result => {

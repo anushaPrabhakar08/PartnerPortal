@@ -22,16 +22,22 @@
             "redirectTo": "",
             "resolve": "",
             "data": "",
-            "canActivate": ""
+            "canActivate": "",
+            "children": [
+                {
+                    "path": "partnerlogin",
+                    "component": "partnerloginComponent"
+                },
+                {
+                    "path": "memberlogin",
+                    "component": "memberloginComponent"
+                }
+            ]
         },
         {
             "path": "unauthorized",
             "redirectTo": "/login",
             "pathMatch": "full"
-        },
-        {
-            "path": "memberlogin",
-            "component": "memberloginComponent"
         },
         {
             "path": "product",

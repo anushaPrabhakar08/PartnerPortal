@@ -80,7 +80,7 @@ export class loginservice {
 
   async sd_hT5MmaR2qH2HaZbC(bh) {
     try {
-      bh.local.modlreUrl = `http://localhost:24483/api/Loginpartner?userName=${bh.input.username}&&password=${bh.input.password}`;
+      bh.local.modlreUrl = `http://localhost:24483/api/Loginpartner?username=${bh.input.username}&&password=${bh.input.password}`;
 
       bh = await this.sd_QEwiG1uwqRCVw0xw(bh);
       //appendnew_next_sd_hT5MmaR2qH2HaZbC

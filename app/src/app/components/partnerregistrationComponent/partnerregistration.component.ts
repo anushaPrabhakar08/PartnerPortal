@@ -60,7 +60,6 @@ export class partnerregistrationComponent extends NBaseComponent implements OnIn
     }
 
  submit(data) {
-        
 this.dm.partnerregistration= data;
 if(typeof this.dm.partnerregistration === 'object'){
 this.partnerservice.savepartnerdata(this.dm.partnerregistration);

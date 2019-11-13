@@ -65,29 +65,29 @@ export class loginComponent extends NBaseComponent implements OnInit, OnDestroy 
       }
     });
   }
-data;
+// data;
 
-  async authenticate() {
-    // this.loginserv.login(this.user.username, this.user.password, this.user.remember).subscribe((response) => {
-    //   if (this.loginserv.isLoggedIn()) {
-    //     this.alertService.openSnackBar('User authenticated');
-    //     this.router.navigate(['home']);
-    //   }
-    // }, (error) => {
-    //   this.httpLoaderService.alertError(error);
-    // });
-    console.log(this.user.username);    
-    this.data=(await this.loginservice.login( this.user.username,this.user.password)).local.result;
-    //showspinner
-    // this.data.subscribe(()=>this.Showspinner=false);
-    console.log(typeof this.data);
-    if(Object.keys(this.data).length===0){
-        this.alertService.openSnackBar('username or password incorrect');
-    }else{
-        this.rout.navigate(['/partner/dashboardPartnerAgreement']);
-    console.log(this.data);
-    }
-  }
+//   async authenticate() {
+//     // this.loginserv.login(this.user.username, this.user.password, this.user.remember).subscribe((response) => {
+//     //   if (this.loginserv.isLoggedIn()) {
+//     //     this.alertService.openSnackBar('User authenticated');
+//     //     this.router.navigate(['home']);
+//     //   }
+//     // }, (error) => {
+//     //   this.httpLoaderService.alertError(error);
+//     // });
+//     console.log(this.user.username);    
+//     this.data=(await this.loginservice.login( this.user.username,this.user.password)).local.result;
+//     //showspinner
+//     // this.data.subscribe(()=>this.Showspinner=false);
+//     console.log(typeof this.data);
+//     if(Object.keys(this.data).length===0){
+//         this.alertService.openSnackBar('username or password incorrect');
+//     }else{
+//         this.rout.navigate(['/partner/dashboardPartnerAgreement']);
+//     console.log(this.data);
+//     }
+//   }
 
   checkPlatform() {
 

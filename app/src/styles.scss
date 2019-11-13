@@ -3,6 +3,9 @@
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 @import "nDefaults.scss";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+*{
+    font-family: Open Sans;
+}
 
 .login-card .mat-card-image:first-child {
     margin-top: 0 !important
@@ -15,6 +18,9 @@
 .background {
     background: #b0b0b01f;
 }
+.btn_hover:hover{
+    background: rgb(151, 96, 96);
+}
 
 .primary-red-btn {
     background-color: #ee1c22;
@@ -23,6 +29,12 @@
 
 .margin-tb {
     margin: 10px 40px;
+}
+.h_card{
+   height: 400px;
+   width:700px;
+   
+   background-color:#e2dede;
 }
 
 .mat-toolbar {
@@ -395,12 +407,6 @@ video {
     width: 540px;
 }
 
-.h_card {
-    height: auto;
-    width: 540px;
-    margin: 10px;
-}
-
 .partnerReg{
     width:100%;
     font-size:20px;
@@ -445,32 +451,26 @@ color:white;
 font-weight:500;
 font-size: 20px
 }
-.home_btn_other{
-color:red;
-font-weight:500;
-font-size: 20px;
+.home_btn:hover{
+    color:red;
 }
+
 .card_subtitle{
     font-weight:600;font-size:40px;color:red;font-variant:petite-caps;
 }
  .card_video{
-    width:30%;
-    height: 250px;
+    width:35%;
+    height: auto;
 }
 .whypartner{
-    font-size:30px;
+    font-size:20px;
     font-variant:petite-caps;
     
 }
-.h_card{
-   height: auto;
-   width:840px;
-   margin:10px;
-   background-color:#f2f2f2;
-}
+
 //contact 
 .form-fields{
-    width:190px;
+    width:240px;
 }
 .field_selector{
     width:20px;
@@ -558,4 +558,43 @@ table{
 .link:hover{
     color:blue;
     //text-decoration: underline;
+}
+
+.selectbox mat-form-field{
+    width:100% !important;
+}
+img{
+   max-width: 100%;
+}
+
+
+// scrollbar
+::-webkit-scrollbar {
+   background-color:#fff;
+   width:10px;
+   height:10px;
+}
+::-webkit-scrollbar-track {
+   background-color:#fff
+}
+::-webkit-scrollbar-track:hover {
+   background-color:#f4f4f4
+}
+::-webkit-scrollbar-thumb {
+   background-color:#babac0;
+   border-radius:16px;
+   border:2px solid #fff
+}
+// Custom class
+.text-center{
+   text-align: center !important;
+}
+.bg-dark{
+   background-color: #000 !important;
+}
+.text-white{
+   color: #f1f1f1;
+}
+.w-100{
+   width:100%;
 }

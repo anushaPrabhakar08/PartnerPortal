@@ -3,36 +3,32 @@
     <div fxLayout="column " fxLayoutAlign="  none" [fxShow]="true" [fxHide]="false">
       <mat-toolbar class="mat-toolbar">
         <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="space-between center" [fxShow]="true" [fxHide]="false">
-          <div fxLayout="row wrap" style="width:30%;" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/logo-white.png" width="140">
-            <h3 style="font-variant:petite-caps;font-weight: bold;font-family: initial;">
+          <div fxLayout="row wrap" style="width:55%;" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/logo-white.png" width="140">
+            <h3>
               PARTNER PORTAL</h3>
           </div>
-          <div fxLayout="row wrap" style="width:50%;" fxLayoutAlign="space-evenly stretch" [fxShow]="true" [fxHide]="false"><button mat-button class="home_btn" routerLink="/home">Home</button><button mat-button class="home_btn_other" routerLink="/login">Login as Partner</button><button mat-button class="home_btn_other" routerLink="/memberlogin">Login as Member</button><button mat-button class="home_btn_other" routerLink="/contact">Contact Us</button></div>
+          <div fxLayout="row wrap" style="width:30%;" fxLayoutAlign="space-evenly stretch" [fxShow]="true" [fxHide]="false"><button mat-button class="home_btn" routerLink="/home">Home</button><button mat-button class="home_btn" routerLink="/contact">Contact Us</button><button mat-button class="home_btn" routerLink="/login/partnerlogin">Login</button></div>
         </div>
       </mat-toolbar>
       <router-outlet></router-outlet>
       <div fxLayout="row wrap" class="home_col2" fxLayoutAlign="center none" [fxShow]="true" [fxHide]="false">
-        <div style="color:white;font-size:25px;margin-top:100px;">
+        <div style="color:white;margin-top:100px;">
           BUILD INNOVATIVE APPLICATIONS AT THE SPEED OF THOUGHT</div>
       </div>
     </div>
     <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="space-evenly stretch" [fxShow]="true" [fxHide]="false">
       <mat-card class="card_video">
-        <img mat-card-image imgSrc="Web/Neutrinos-Gif-2.gif">
+        <img mat-card-image style="height:100%;width:100%;" imgSrc="Web/Neutrinos-Gif-2.gif">
       </mat-card>
       <mat-card class="h_card">
         <mat-card-content>
-          <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-            <div class="card_subtitle">
-              Partners</div>
+          <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
             <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-              <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-                <div class="whypartner">
-                  Why partner with us?</div>
-              </div>
+              <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><span style="font-weight:bold;" class="whypartner">
+                Why partner with us?</span></div>
               <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-                <h2>
-                  See what Neutrinos can do with Partners</h2>
+                <div>
+                  See what Neutrinos can do with Partners</div>
               </div>
               <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
                 <p>
@@ -41,38 +37,7 @@
                   Our efforts are aligned towards creating a network where partners across different spheres, including System Integrators, Resellers and Implementors use Neutrinos Platform as the conduit to benefit from each other&#x2019;s work.</p>
               </div>
             </div>
-            <div fxLayout="column wrap" style="width:100%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-              <mat-grid-list cols="3">
-                <div fxLayout="row wrap" style="width:100%;margin-bottom:20px;" fxLayoutAlign="space-around center" [fxShow]="true" [fxHide]="false">
-                  <div fxLayout="column wrap" style="width: 200px;border: 1px solid gray;padding:10px;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/bgimg6.jpg" width="60px">
-                    <p style="text-align: center;color:gray;">
-                      Build solutions and promote your products</p>
-                  </div>
-                  <div fxLayout="column wrap" style="width: 200px;border: 1px solid gray;padding:10px;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/bgimg6.jpg" width="60px">
-                    <p style="text-align: center;color:gray;">
-                      Explore and expand across new geographies</p>
-                  </div>
-                  <div fxLayout="column wrap" style="width: 200px;border: 1px solid gray;padding:10px;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/bgimg6.jpg" width="60px">
-                    <p style="text-align: center;color:gray;">
-                      Stay ahead of your competition</p>
-                  </div>
-                </div>
-                <div fxLayout="row wrap" fxLayoutAlign="space-around stretch" [fxShow]="true" [fxHide]="false">
-                  <div fxLayout="column wrap" style="width: 200px;border: 1px solid gray;padding:10px;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/bgimg6.jpg" width="60px">
-                    <p style="text-align: center;color:gray;">
-                      Offer cutting-edge technology to your customers</p>
-                  </div>
-                  <div fxLayout="column wrap" style="width: 200px;border: 1px solid gray;padding:10px;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/bgimg6.jpg" width="60px">
-                    <p style="text-align: center;color:gray;">
-                      Deliver at a speed 15X faster </p>
-                  </div>
-                  <div fxLayout="column wrap" style="width: 200px;border: 1px solid gray;padding:10px;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/bgimg6.jpg" width="60px">
-                    <p style="text-align: center;color:gray;">
-                      Access detailed analytics and understand your journey better.</p>
-                  </div>
-                </div>
-              </mat-grid-list>
-            </div>
+            <div fxLayout="column wrap" style="width:100%;padding:0px 60px;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/partner_img1-3.jpg" style="height:200px;"></div>
           </div>
         </mat-card-content>
       </mat-card>

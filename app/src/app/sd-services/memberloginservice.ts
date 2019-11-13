@@ -84,7 +84,7 @@ export class memberloginservice {
 
   async sd_oSzkA6Fc33hp8oOi(bh) {
     try {
-      bh.local.modlreApiUrl = `http://localhost:24483/api/LoginMember?username=${bh.input.musername}&&password=${bh.input.password}`;
+      bh.local.modlreApiUrl = `http://localhost:24483/api/LoginMember?userName=${bh.input.musername}&&password=${bh.input.password}`;
 
       bh = await this.sd_bq4jo9ClhaQKwAgx(bh);
       //appendnew_next_sd_oSzkA6Fc33hp8oOi

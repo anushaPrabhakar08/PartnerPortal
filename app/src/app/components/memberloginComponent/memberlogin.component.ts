@@ -42,7 +42,9 @@ export class memberloginComponent extends NBaseComponent implements OnInit  {
 data;
   async authenticate() {
     console.log(this.member.musername);
+
     this.data=(await this.mlogin.memberfun(this.member.musername,this.member.password)).local.result;
+    console.log(this.data);
      if(Object.keys(this.data).length===0){
         this.alertService.openSnackBar('username or password incorrect');
     }else{

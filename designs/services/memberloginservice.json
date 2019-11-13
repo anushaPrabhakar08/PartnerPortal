@@ -70,7 +70,7 @@
         "type": "Script",
         "z": "sd_u1npDykcjfkdzf1U",
         "name": "",
-        "script": "bh.local.modlreApiUrl=`http://localhost:24483/api/LoginMember?username=${bh.input.musername}&&password=${bh.input.password}`;",
+        "script": "bh.local.modlreApiUrl=`http://localhost:24483/api/LoginMember?userName=${bh.input.musername}&&password=${bh.input.password}`;",
         "x": 345.0500297546387,
         "y": 151.93749237060547,
         "wires": [
