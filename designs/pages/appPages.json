@@ -128,5 +128,10 @@
         "appPageName": "viewAgreement",
         "componentName": "viewagreementComponent",
         "isEntry": false
+    },
+    "cfc51e2c-4c8f-685c-2aa2-58f40dc6246f": {
+        "appPageName": "deletedeveloper",
+        "componentName": "deletedeveloperComponent",
+        "isEntry": false
     }
 }

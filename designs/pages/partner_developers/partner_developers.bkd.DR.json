@@ -855,63 +855,6 @@
                                         }
                                     ]
                                 },
-                                "4045ebc4-e853-9298-1fca-0e55dfb22fe7": {
-                                    "paletteKey": "ng-table-column",
-                                    "parentEditorKey": "c3c9dcf9-a922-9d50-6de2-8c840ab3b7a5",
-                                    "isAdvancedChildComponent": true,
-                                    "designerReference": [
-                                        {
-                                            "_key": "style",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "class",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "Header Label",
-                                            "_value": "Email",
-                                            "_type": "a",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "matSortHeaderColumn",
-                                            "_value": "",
-                                            "_type": "a",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "Mapping",
-                                            "_value": "{{table.email}}",
-                                            "_type": "ma",
-                                            "_attrDef": "p",
-                                            "_useAsLabel": true
-                                        },
-                                        {
-                                            "_key": "columnName",
-                                            "_value": "",
-                                            "_type": "dav",
-                                            "_attrDef": "p",
-                                            "_visibility": false
-                                        },
-                                        {
-                                            "_key": "headerclass",
-                                            "_value": "tab-developerheader",
-                                            "_type": "dav",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "columnclass",
-                                            "_value": "tab-developerdata",
-                                            "_type": "dav",
-                                            "_attrDef": "p"
-                                        }
-                                    ]
-                                },
                                 "9c5b837d-c97c-9420-092a-96d4c0144c6f": {
                                     "paletteKey": "ng-table-column",
                                     "parentEditorKey": "c3c9dcf9-a922-9d50-6de2-8c840ab3b7a5",
@@ -1101,7 +1044,7 @@
                                         },
                                         {
                                             "_key": "Mapping",
-                                            "_value": "{{table.action}}<button mat-button color=\"primary\" (click)=\"addDeveloper()\">Edit</button><button mat-button color=\"warn\" (click)=\"openDeleteDialog()\">Delete</button>",
+                                            "_value": "{{table.action}}<button mat-button color=\"primary\" (click)=\"addDeveloper()\">Edit</button><button mat-button color=\"warn\" (click)=\"openDeleteDialog(table)\">Delete</button>",
                                             "_type": "ma",
                                             "_attrDef": "p",
                                             "_useAsLabel": true

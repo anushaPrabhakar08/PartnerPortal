@@ -166,6 +166,24 @@ export class partnerservice {
       throw e;
     }
   }
+  public async deletedeveloper(id = undefined, ...others) {
+    try {
+      let bh = {
+        input: { id: id },
+        local: { result: undefined, modlerUrlApi: undefined }
+      };
+      bh = this.__constructDefault(bh);
+
+      bh = await this.sd_NDkjLBUd1VTt56bD(bh);
+      //appendnew_next_deletedeveloper
+      //Start formatting output variables
+      let outputVariables = { input: {}, local: { result: bh.local.result } };
+      //End formatting output variables
+      return outputVariables;
+    } catch (e) {
+      throw e;
+    }
+  }
   //appendnew_flow_partnerservice_Start
 
   async sd_xIgXKrl1iV0XgH8H(bh) {
@@ -337,6 +355,35 @@ export class partnerservice {
       };
       bh.local.result = await this.sdService.nHttpRequest(requestOptions);
       //appendnew_next_sd_UFKIezRqhLAYDuHv
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_NDkjLBUd1VTt56bD(bh) {
+    try {
+      bh.local.modlerUrlApi = `http://localhost:24483/api/deletedeveloper?id=${bh.input.id}`;
+
+      bh = await this.sd_UA6lLqBfvpRf46vs(bh);
+      //appendnew_next_sd_NDkjLBUd1VTt56bD
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_UA6lLqBfvpRf46vs(bh) {
+    try {
+      let requestOptions = {
+        url: bh.local.modlerUrlApi,
+        method: 'delete',
+        responseType: 'json',
+        reportProgress: undefined,
+        headers: {},
+        params: {},
+        body: bh.input.id
+      };
+      bh.local.result = await this.sdService.nHttpRequest(requestOptions);
+      //appendnew_next_sd_UA6lLqBfvpRf46vs
       return bh;
     } catch (e) {
       throw e;

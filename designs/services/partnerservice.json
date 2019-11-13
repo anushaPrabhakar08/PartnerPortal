@@ -213,7 +213,8 @@
             []
         ],
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "partnerservice"
     },
     {
         "id": "sd_w3LbH1Q9zdv2IVWW",
@@ -593,6 +594,107 @@
         "paramMappingObj": {},
         "x": 541.03125,
         "y": 686.90625,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_1bjjraRFhcgBxKQc",
+        "type": "Start",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "deletedeveloper",
+        "outputs": 1,
+        "noerr": 0,
+        "inputVariables": [
+            {
+                "key": "id",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "result",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": true
+            },
+            {
+                "key": "modlerUrlApi",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "functionName": "deletedeveloper",
+        "x": 118.1875,
+        "y": 817.921875,
+        "wires": [
+            [
+                "sd_NDkjLBUd1VTt56bD"
+            ]
+        ],
+        "generateNext": true,
+        "generated": false,
+        "serviceName": "partnerservice"
+    },
+    {
+        "id": "sd_NDkjLBUd1VTt56bD",
+        "type": "Script",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "deletedeveloper",
+        "script": "bh.local.modlerUrlApi=`http://localhost:24483/api/deletedeveloper?id=${bh.input.id}`;",
+        "x": 360.03125,
+        "y": 816.921875,
+        "wires": [
+            [
+                "sd_UA6lLqBfvpRf46vs"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_UA6lLqBfvpRf46vs",
+        "type": "HttpRequest",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "modlerflow",
+        "method": "delete",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.modlerUrlApi",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "modlerUrlApi"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "reqBody": "bh.input.id",
+        "reqBodyObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "id"
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "x": 555.03125,
+        "y": 811.90625,
         "wires": [
             []
         ],

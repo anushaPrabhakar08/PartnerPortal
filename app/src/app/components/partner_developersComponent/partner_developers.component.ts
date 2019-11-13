@@ -8,30 +8,11 @@ import { MatSort, MatTableDataSource, MatPaginator } from '@angular/material';
 import { NDataModelService, NLoginService, NSnackbarService, NSystemService , NHTTPLoaderService } from 'neutrinos-seed-services';
 import { user } from '../../models/user.model';
 import { loginComponent } from '../loginComponent/login.component';
-import { deletepopupComponent } from '../deletepopupComponent/deletepopup.component';
 import { partner_adddeveloperComponent } from '../partner_adddeveloperComponent/partner_adddeveloper.component';
 import { partnerservice } from '../../sd-services/partnerservice';
+import { deletedeveloperComponent } from '../deletedeveloperComponent/deletedeveloper.component';
 
-export interface PeriodicElement {
-    no: number;
-    firstName: string;
-    lastName: string;
-    email: string;
-    status: string;
-    position: string;
-}
-const ELEMENT_DATA: PeriodicElement[] = [
-    { no: 1, status: 'fresher', firstName: 'Anusha', email: 'www.joyitconsulting.com', lastName: 'p', position: 'Junior developer'},
-    { no: 2, status: 'experienced', firstName: 'Anup', email: 'www.mentric.com', lastName: 'Kumar', position: 'senior developer' },
-    { no: 3, status: 'fresher', firstName: 'Pavan', email: 'www.indigo.com', lastName: 'Kumar', position: 'Junior developer' },
-    { no: 4, status: 'experienced', firstName: 'Namitha', email: 'www.dell.com', lastName: 'Be', position: 'senior developer' },
-    { no: 5, status: 'fresher', firstName: 'Nitesh', email: 'www.philips.com', lastName: 'Desai', position: 'Junior developer' },
-    { no: 6, status: 'fresher', firstName: 'Nikhil', email: 'www.squirrelseva.com', lastName: 'Desai', position: 'Junior developer' },
-    { no: 7, status: 'fresher', firstName: 'Gokul', email: 'www.worksheets.com', lastName: 'kanan', position: 'Junior developer' },
-    { no: 8, status: 'experienced', firstName: 'Jagadeshwari', email: 'www.wipro.com', lastName: 'Murugan', position: 'senior developer' },
-    { no: 9, status: 'experienced', firstName: 'Akshara', email: 'www.matrix.com', lastName: 'singhania', position: 'senior developer' },
-    { no: 10, status: 'experienced', firstName: 'Viren', email: 'www.moodys.com', lastName: 'vadeyar', position: 'senior developer' },
-];
+
 
 @Component({
     selector: 'bh-partner_developers',
@@ -59,11 +40,11 @@ data;
 
     }
 
-    openDeleteDialog() {
-        const dialogRef = this.dialog.open(deletepopupComponent, {
+    openDeleteDialog(data) {
+        const dialogRef = this.dialog.open(deletedeveloperComponent, {
             width: '450px',
             //disableClose: true,
-            data: 'hello'
+            data: data
         });
     }
 

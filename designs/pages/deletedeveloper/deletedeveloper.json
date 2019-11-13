@@ -1,0 +1,13 @@
+{
+    "appPageId": "cfc51e2c-4c8f-685c-2aa2-58f40dc6246f",
+    "appPageName": "deletedeveloper",
+    "componentName": "deletedeveloperComponent",
+    "selectorName": "bh-deletedeveloper",
+    "htmlFileName": "deletedeveloper.template.html",
+    "tsFileName": "deletedeveloper.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

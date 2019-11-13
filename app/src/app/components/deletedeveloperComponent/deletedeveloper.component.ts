@@ -4,31 +4,42 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
-import { partnerservice } from '../../sd-services/partnerservice';
 import { VERSION, MatDialogRef, MatDialog, MatSnackBar, MAT_DIALOG_DATA } from '@angular/material';
+import { partnerservice } from '../../sd-services/partnerservice';
+/**
+ * Service import Example :
+ * import { HeroService } from '../../services/hero/hero.service';
+ */
+
+/**
+ *
+ * Service Designer import Example - Service Name - HeroService
+ * import { HeroService } from 'app/sd-services/HeroService';
+ */
+
 @Component({
-    selector: 'bh-deletepopup',
-    templateUrl: './deletepopup.template.html'
+    selector: 'bh-deletedeveloper',
+    templateUrl: './deletedeveloper.template.html'
 })
 
-export class deletepopupComponent extends NBaseComponent implements OnInit {
+export class deletedeveloperComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    constructor(private bdms: NDataModelService, private partnerservice:partnerservice,
-    @Inject(MAT_DIALOG_DATA) private data: any,
-   private dialogRef: MatDialogRef<deletepopupComponent>
+    constructor(private bdms: NDataModelService,
+        @Inject(MAT_DIALOG_DATA) private data,
+        private partnerservice: partnerservice
     ) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
     ngOnInit() {
-
+        console.log(this.data);
     }
 
-    deletedata(){
-        this.partnerservice.deleteleads(this.data);
-       
+    deletedeveloper(){
+        this.partnerservice.deletedeveloper(this.data);
+        console.log(this.data);
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
@@ -83,7 +94,7 @@ export class deletepopupComponent extends NBaseComponent implements OnInit {
             })
     }
 
-    delete (dataModelName, filter) {
+    delete(dataModelName, filter) {
         this.mm.delete(dataModelName, filter,
             result => {
                 // On Success code here
