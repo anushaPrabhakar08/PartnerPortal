@@ -385,7 +385,7 @@
                             },
                             {
                                 "_key": "style",
-                                "_value": "width:150px;",
+                                "_value": "",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -1184,7 +1184,7 @@
                             },
                             {
                                 "_key": "[opened]",
-                                "_value": "true",
+                                "_value": "false",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },

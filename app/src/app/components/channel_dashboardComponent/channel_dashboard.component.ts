@@ -17,16 +17,16 @@ export interface PeriodicElement {
     companyName: string;
 }
 const ELEMENT_DATA: PeriodicElement[] = [
-    { no: 1, companyName: 'JoyIT', companyType: 'Hydrogen', companyWebsite: 'www.joyitconsulting.com', location: 'H' },
-    { no: 2, companyName: 'Mentric', companyType: 'Helium', companyWebsite: 'www.mentric.com', location: 'He' },
-    { no: 3, companyName: 'Indigo', companyType: 'Lithium', companyWebsite: 'www.indigo.com', location: 'Li' },
-    { no: 4, companyName: 'Dell', companyType: 'Beryllium', companyWebsite: 'www.dell.com', location: 'Be' },
-    { no: 5, companyName: 'Philips', companyType: 'Boron', companyWebsite: 'www.philips.com', location: 'B' },
-    { no: 6, companyName: 'Squirrelseva', companyType: 'Carbon', companyWebsite: 'www.squirrelseva.com', location: 'C' },
-    { no: 7, companyName: 'Worksheets', companyType: 'Nitrogen', companyWebsite: 'www.worksheets.com', location: 'N' },
-    { no: 8, companyName: 'Wipro', companyType: 'Oxygen', companyWebsite: 'www.wipro.com', location: 'O' },
-    { no: 9, companyName: 'Matrix', companyType: 'Fluorine', companyWebsite: 'www.matrix.com', location: 'F' },
-    { no: 10, companyName: 'Moodys', companyType: 'Neon', companyWebsite: 'www.moodys.com', location: 'Ne' },
+    { no: 1, companyName: 'JoyIT', companyType: 'Product based', companyWebsite: 'www.joyitconsulting.com', location: 'Bangalore' },
+    { no: 2, companyName: 'Mentric', companyType: 'Service based', companyWebsite: 'www.mentric.com', location: 'Chennai' },
+    { no: 3, companyName: 'Indigo', companyType: 'Product based', companyWebsite: 'www.indigo.com', location: 'Pune' },
+    { no: 4, companyName: 'Dell', companyType: 'Product based', companyWebsite: 'www.dell.com', location: 'Chennai' },
+    { no: 5, companyName: 'Philips', companyType: 'Service based', companyWebsite: 'www.philips.com', location: 'Pune' },
+    { no: 6, companyName: 'Squirrelseva', companyType: 'Service based based', companyWebsite: 'www.squirrelseva.com', location: 'Bangalore' },
+    { no: 7, companyName: 'Worksheets', companyType: 'Product based', companyWebsite: 'www.worksheets.com', location: 'Pune' },
+    { no: 8, companyName: 'Wipro', companyType: 'Product based', companyWebsite: 'www.wipro.com', location: 'Pune' },
+    { no: 9, companyName: 'Matrix', companyType: 'Product based', companyWebsite: 'www.matrix.com', location: 'Bangalore' },
+    { no: 10, companyName: 'Moodys', companyType: 'Service based', companyWebsite: 'www.moodys.com', location: 'Bangalore' },
 ];
 
 @Component({

@@ -123,5 +123,10 @@
         "appPageName": "uploadCertificate",
         "componentName": "uploadcertificateComponent",
         "isEntry": false
+    },
+    "939fbdec-5cbd-1139-bd4b-80788965a2e9": {
+        "appPageName": "viewAgreement",
+        "componentName": "viewagreementComponent",
+        "isEntry": false
     }
 }

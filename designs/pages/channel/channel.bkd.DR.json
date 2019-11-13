@@ -720,7 +720,7 @@
                             },
                             {
                                 "_key": "[opened]",
-                                "_value": "true",
+                                "_value": "false",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },

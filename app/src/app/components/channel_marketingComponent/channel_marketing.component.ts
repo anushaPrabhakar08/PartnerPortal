@@ -32,6 +32,10 @@ export class channel_marketingComponent extends NBaseComponent implements OnInit
         });
     }
 
+    showImage(){
+        console.log("image");
+    }
+
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, filter, keys, sort, pagenumber, pagesize,
             result => {

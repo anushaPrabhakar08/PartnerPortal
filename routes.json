@@ -59,7 +59,8 @@
                 },
                 {
                     "path": "dashboardChannelAnnouncements",
-                    "component": "channel_announcementsComponent"
+                    "component": "channel_announcementsComponent",
+                    "children": []
                 }
             ],
             "pathMatch": "",
@@ -101,7 +102,12 @@
         },
         {
             "path": "partner_addLead",
-            "component": "partner_addleadComponent"
+            "component": "partner_addleadComponent",
+            "children": []
+        },
+        {
+            "path": "sample",
+            "component": "sampleComponent"
         },
         {
             "path": "''",

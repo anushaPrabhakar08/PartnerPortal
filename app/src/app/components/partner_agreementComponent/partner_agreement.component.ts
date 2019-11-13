@@ -4,17 +4,9 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
+import { MatDialog } from '@angular/material';
+import { viewagreementComponent } from '../viewagreementComponent/viewagreement.component';
 
-/**
- * Service import Example :
- * import { HeroService } from '../../services/hero/hero.service';
- */
-
-/**
- *
- * Service Designer import Example - Service Name - HeroService
- * import { HeroService } from 'app/sd-services/HeroService';
- */
 
 @Component({
     selector: 'bh-partner_agreement',
@@ -24,13 +16,20 @@ import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 export class partner_agreementComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    constructor(private bdms: NDataModelService) {
+    constructor(private bdms: NDataModelService,private dialog:MatDialog) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
     ngOnInit() {
 
+    }
+
+    openAgreement() {
+        console.log("pdf Open");
+        const dialogRef = this.dialog.open(viewagreementComponent, {
+            data: 'hello'
+        });
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
@@ -85,7 +84,7 @@ export class partner_agreementComponent extends NBaseComponent implements OnInit
             })
     }
 
-    delete (dataModelName, filter) {
+    delete(dataModelName, filter) {
         this.mm.delete(dataModelName, filter,
             result => {
                 // On Success code here

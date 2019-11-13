@@ -3849,13 +3849,13 @@
                                             },
                                             {
                                                 "_key": "[fxShow]",
-                                                "_value": "true",
+                                                "_value": "false",
                                                 "_type": "kv",
                                                 "_attrDef": "p"
                                             },
                                             {
                                                 "_key": "[fxHide]",
-                                                "_value": "false",
+                                                "_value": "true",
                                                 "_type": "kv",
                                                 "_attrDef": "p"
                                             }
@@ -4069,13 +4069,13 @@
                                             },
                                             {
                                                 "_key": "layoutAlign",
-                                                "_value": "center",
+                                                "_value": "start",
                                                 "_type": "a",
                                                 "_attrDef": "p"
                                             },
                                             {
                                                 "_key": "pLayoutAlign",
-                                                "_value": "center",
+                                                "_value": "start",
                                                 "_type": "a",
                                                 "_attrDef": "p"
                                             },

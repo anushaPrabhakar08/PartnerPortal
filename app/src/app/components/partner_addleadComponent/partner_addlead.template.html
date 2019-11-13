@@ -70,7 +70,8 @@
         </div>
       </div>
       <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-button style="background:blue;color:white;" (click)="submit(profileForm.value)">Add Lead</button></div>
+        <div mat-dialog-close fxLayout="column wrap" fxLayoutAlign="start stretch"  [fxShow]="true" [fxHide]="false">
+          <button mat-button mat-dialog-close style="background:blue;color:white;" (click)="submit(profileForm.value)">Add Lead</button></div>
       </div>
     </form>
   </div>

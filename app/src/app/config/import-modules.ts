@@ -44,6 +44,7 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatNativeDateModule} from '@angular/material';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 /**
  * adding the environments into the window object
@@ -102,4 +103,5 @@ export const appImportModules: any = [
   }),
   NeutrinosModule,
   DependenciesModule,
+  PdfViewerModule
 ];

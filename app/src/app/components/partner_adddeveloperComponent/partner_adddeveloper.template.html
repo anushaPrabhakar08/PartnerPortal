@@ -48,7 +48,8 @@
         </div>
       </div>
       <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-raised-button color="primary" (click)="submit(developerForm.value)">Add Developer</button></div>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+          <button mat-dialog-close mat-raised-button color="primary" (click)="submit(developerForm.value)">Add Developer</button></div>
       </div>
     </form>
   </div>

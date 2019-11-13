@@ -466,6 +466,12 @@
                             "_value": "",
                             "_type": "kv",
                             "_attrDef": "p"
+                        },
+                        {
+                            "_key": "mat-dialog-close",
+                            "_value": "mat-dialog-close",
+                            "_type": "a",
+                            "_attrDef": "c"
                         }
                     ]
                 },
@@ -527,6 +533,12 @@
                             "_value": "",
                             "_type": "kv",
                             "_attrDef": "p"
+                        },
+                        {
+                            "_key": "mat-dialog-close",
+                            "_value": "mat-dialog-close",
+                            "_type": "a",
+                            "_attrDef": "c"
                         }
                     ]
                 }

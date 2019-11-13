@@ -5,26 +5,24 @@ import { ModelMethods } from '../../lib/model.methods';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 
+/**
+ * Service import Example :
+ * import { HeroService } from '../../services/hero/hero.service';
+ */
+
+/**
+ *
+ * Service Designer import Example - Service Name - HeroService
+ * import { HeroService } from 'app/sd-services/HeroService';
+ */
 
 @Component({
-    selector: 'bh-sample',
-    template: `
-        <pdf-viewer [src]="pdfSrc"
-                    [render-text]="true"
-                    [show-all]="false"
-                    [autoresize]="true"
-                    [original-size]='true'
-                    [fit-to-page]='false'
-                    [render-text]='false'
-                    style="display: block;height: 400px;"
-        ></pdf-viewer>
-        `
+    selector: 'bh-viewagreement',
+    templateUrl: './viewagreement.template.html'
 })
 
-export class sampleComponent extends NBaseComponent implements OnInit {
+export class viewagreementComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
-
-    pdfSrc = "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf";
 
     constructor(private bdms: NDataModelService) {
         super();
@@ -87,7 +85,7 @@ export class sampleComponent extends NBaseComponent implements OnInit {
             })
     }
 
-    delete(dataModelName, filter) {
+    delete (dataModelName, filter) {
         this.mm.delete(dataModelName, filter,
             result => {
                 // On Success code here
