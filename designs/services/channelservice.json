@@ -62,7 +62,7 @@
         "type": "Script",
         "z": "sd_BIsXw8uCu26k89sV",
         "name": "",
-        "script": "bh.local.modlreApiUrl=`http://localhost:24483/api/channeldata?obj=${bh.input.data}`;",
+        "script": "bh.local.modlreApiUrl=`http://localhost:24483/api/channelmemberregistration?obj=${bh.input.data}`;",
         "x": 409.0500297546387,
         "y": 123.93751525878906,
         "wires": [

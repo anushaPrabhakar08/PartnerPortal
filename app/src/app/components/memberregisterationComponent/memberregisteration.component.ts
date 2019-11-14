@@ -32,7 +32,11 @@ profileForm = new FormGroup({
     emailId: new FormControl(''),
     password: new FormControl('')
   });
-    constructor(private bdms: NDataModelService, private fb: FormBuilder,private alertService: NSnackbarService,private rout:Router,private memberreg:channelservice) {
+    constructor(private bdms: NDataModelService,
+    private fb: FormBuilder,
+    private alertService: NSnackbarService,
+    private rout:Router,
+    private memberreg:channelservice) {
         super();
         this.mm = new ModelMethods(bdms);
     }
@@ -48,7 +52,7 @@ profileForm = new FormGroup({
   this.dm.memberregisteration=data;
   console.log(this.dm.memberregisteration);
   this.memberreg.channelmemberregistration(this.dm.memberregisteration);
-  this.rout.navigate(['/memberlogin']);
+  this.rout.navigate(['/login/memberlogin']);
     }
 }
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {

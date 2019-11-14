@@ -2337,7 +2337,7 @@
                                             },
                                             {
                                                 "_key": "type",
-                                                "_value": "",
+                                                "_value": "password",
                                                 "_type": "kv",
                                                 "_attrDef": "p"
                                             },

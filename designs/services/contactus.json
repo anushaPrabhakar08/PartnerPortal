@@ -1,20 +1,20 @@
 [
     {
-        "id": "sd_WgunUji9U3zfTa3X",
+        "id": "sd_hIdopUDBZ6ZqXW4Y",
         "type": "tab",
-        "createdDate": "2019-11-14T11:38:47.638Z",
-        "label": "contactusservice",
+        "createdDate": "2019-11-14T05:50:46.438Z",
+        "label": "contactus",
         "disabled": false,
         "info": "",
         "generateNext": true,
         "generated": false,
-        "serviceName": "contactusservice"
+        "serviceName": "contactus"
     },
     {
-        "id": "sd_2O8tqT7ktA5Ul4XM",
+        "id": "sd_vePA1nig2ke1tx9n",
         "type": "Start",
-        "z": "sd_WgunUji9U3zfTa3X",
-        "name": "contactserv",
+        "z": "sd_hIdopUDBZ6ZqXW4Y",
+        "name": "contactusp",
         "outputs": 1,
         "noerr": 0,
         "inputVariables": [
@@ -37,7 +37,7 @@
                 "output": true
             },
             {
-                "key": "modelurl",
+                "key": "modlreApi",
                 "defaultValue": {
                     "type": "str",
                     "value": ""
@@ -45,45 +45,45 @@
                 "output": false
             }
         ],
-        "functionName": "contactserv",
-        "x": 180.18751907348633,
-        "y": 174.93749237060547,
+        "functionName": "contactusp",
+        "x": 181.20001220703125,
+        "y": 148.93749237060547,
         "wires": [
             [
-                "sd_PlkuD8anxxGyj0YL"
+                "sd_gNeO6yGEaam5jl8K"
             ]
         ],
         "generateNext": true,
         "generated": false,
-        "serviceName": "contactusservice"
+        "serviceName": "contactus"
     },
     {
-        "id": "sd_PlkuD8anxxGyj0YL",
+        "id": "sd_gNeO6yGEaam5jl8K",
         "type": "Script",
-        "z": "sd_WgunUji9U3zfTa3X",
+        "z": "sd_hIdopUDBZ6ZqXW4Y",
         "name": "",
-        "script": "bh.local.modelurl=`http://localhost:24483/api/email?obj=${bh.input.obj}`;",
-        "x": 365.0374984741211,
-        "y": 171.93749237060547,
+        "script": "bh.local.modlreApi=`http://localhost:24483/api/email?obj=${bh.input.obj}`;",
+        "x": 386.04998779296875,
+        "y": 149.93749237060547,
         "wires": [
             [
-                "sd_w2LcTk14LCrFyNZp"
+                "sd_5dNrGPGzbYJLrDWz"
             ]
         ],
         "generateNext": false,
         "generated": true
     },
     {
-        "id": "sd_w2LcTk14LCrFyNZp",
+        "id": "sd_5dNrGPGzbYJLrDWz",
         "type": "HttpRequest",
-        "z": "sd_WgunUji9U3zfTa3X",
+        "z": "sd_hIdopUDBZ6ZqXW4Y",
         "name": "",
         "method": "post",
         "methodMappingObj": {},
-        "urlMapping": "bh.local.modelurl",
+        "urlMapping": "bh.local.modlreApi",
         "urlMappingObj": {
             "mapVarType": "bh.local",
-            "mapVarValue": "modelurl"
+            "mapVarValue": "modlreApi"
         },
         "ret": "json",
         "retMappingObj": {},
@@ -103,8 +103,8 @@
         "params": {},
         "paramsObj": [],
         "paramMappingObj": {},
-        "x": 566.0375061035156,
-        "y": 167.93750762939453,
+        "x": 570.050048828125,
+        "y": 149.93749237060547,
         "wires": [
             []
         ],

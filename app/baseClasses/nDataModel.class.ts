@@ -8,7 +8,8 @@ import { partnerPortal } from '../src/app/models/partnerPortal.model';
 import { channelMember } from '../src/app/models/channelmember.model';
 import { Developers } from '../src/app/models/Developers.model';
 import { leads } from '../src/app/models/Leads.model';
-import { contactus } from '../src/app/models/contactus.model';
+
+import { contactmodel } from '../src/app/models/contactmodel.model';
 //IMPORT NEW DATAMODEL
 
 export class NDataModel {
@@ -22,7 +23,7 @@ partnerPortal: partnerPortal;
 channelmember: channelMember;
 developers: Developers;
 leads: leads;
-contactus: contactus;
+contactmodel: contactmodel;
 //DECLARE NEW VARIABLE
 
 constructor() {
@@ -36,7 +37,8 @@ this.partnerPortal = new partnerPortal();
 this.channelmember = new channelMember();
 this.developers = new Developers();
 this.leads = new leads();
-this.contactus = new contactus();
+
+this.contactmodel = new contactmodel();
 //CREATE NEW DM INSTANCE
     }
 }

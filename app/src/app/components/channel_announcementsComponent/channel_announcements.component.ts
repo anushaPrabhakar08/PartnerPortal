@@ -4,7 +4,7 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
-
+import { ReactiveFormsModule,FormGroup, FormControl, FormBuilder,Validators } from '@angular/forms';
 /**
  * Service import Example :
  * import { HeroService } from '../../services/hero/hero.service';
@@ -23,6 +23,12 @@ import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 
 export class channel_announcementsComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
+announce=['Premium','standard','All'];
+
+announcdetail=new FormGroup({
+    announcement:new FormControl(''),
+    announcetype:new FormControl('')
+})
 
     constructor(private bdms: NDataModelService) {
         super();
@@ -36,6 +42,10 @@ export class channel_announcementsComponent extends NBaseComponent implements On
 
     ngOnInit() {
 
+    }
+
+    submit(data){
+        
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {

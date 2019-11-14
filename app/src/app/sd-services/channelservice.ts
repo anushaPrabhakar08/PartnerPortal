@@ -80,7 +80,7 @@ export class channelservice {
 
   async sd_2tky7jqHupi9JB9C(bh) {
     try {
-      bh.local.modlreApiUrl = `http://localhost:24483/api/channeldata?obj=${bh.input.data}`;
+      bh.local.modlreApiUrl = `http://localhost:24483/api/channelmemberregistration?obj=${bh.input.data}`;
 
       bh = await this.sd_X2HaIwoS0PpnP1i3(bh);
       //appendnew_next_sd_2tky7jqHupi9JB9C

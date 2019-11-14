@@ -23,7 +23,7 @@
 
               </mat-form-field>
             </div>
-            <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button class="announce-btn">Announce</button></div>
+            <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button class="announce-btn" (click)="submit(announcdetail.value)">Announce</button></div>
           </form>
         </mat-card-content>
       </mat-card>

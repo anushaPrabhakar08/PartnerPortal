@@ -436,10 +436,10 @@
             }
         ]
     },
-    "5b9f54b3-72a6-521a-2c88-8ac0a14d557f": {
-        "dataModelId": "5b9f54b3-72a6-521a-2c88-8ac0a14d557f",
-        "name": "contactus",
-        "description": "contactus",
+    "ee0f03dd-c24c-e407-9478-655574e94536": {
+        "dataModelId": "ee0f03dd-c24c-e407-9478-655574e94536",
+        "name": "contactmodel",
+        "description": "contactmodel",
         "dataSource": "neutrinos-training-rt",
         "fields": [
             {

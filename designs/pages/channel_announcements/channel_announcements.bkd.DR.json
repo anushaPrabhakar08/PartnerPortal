@@ -578,26 +578,26 @@
                                     "_attrDef": "p"
                                 },
                                 {
-                                    "_key": "(reset)",
-                                    "_value": "",
+                                    "_key": "[formGroup]",
+                                    "_value": "announcdetail",
                                     "_type": "kv",
-                                    "_attrDef": "p"
+                                    "_attrDef": "c"
                                 }
                             ],
-                            "5002645f-9c08-c01c-f94b-024492f4a9f6": {
-                                "paletteKey": "FlexLayoutRow",
-                                "parentEditorKey": "83b1c666-0500-7ceb-7ac1-0f8187b05258",
+                            "a715298f-b211-51b6-d33d-42af69589e27": {
+                                "paletteKey": "FlexLayoutCol",
+                                "parentEditorKey": "d45fb4c8-9a52-a9f8-a9a9-bdc602fcdc53",
                                 "designerReference": [
                                     {
                                         "_key": "componentLabel",
-                                        "_value": "Row",
+                                        "_value": "Column",
                                         "_type": "kv",
                                         "_attrDef": "p",
                                         "_useAsLabel": true
                                     },
                                     {
                                         "_key": "style",
-                                        "_value": "width:100%;margin-bottom:30px;",
+                                        "_value": "",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -627,26 +627,8 @@
                                     },
                                     {
                                         "_key": "layoutAlign",
-                                        "_value": "center",
+                                        "_value": "start",
                                         "_type": "a",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "pLayoutAlign",
-                                        "_value": "center",
-                                        "_type": "a",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "[fxShow]",
-                                        "_value": "true",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "[fxHide]",
-                                        "_value": "false",
-                                        "_type": "kv",
                                         "_attrDef": "p"
                                     }
                                 ],
@@ -730,42 +712,6 @@
                                         "_useAsLabel": true
                                     },
                                     {
-                                        "_key": "style",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "class",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "fxFlex",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "fxLayoutGap",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "wrap",
-                                        "_value": "wrap",
-                                        "_type": "a",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "layoutAlign",
-                                        "_value": "start",
-                                        "_type": "a",
-                                        "_attrDef": "p"
-                                    },
-                                    {
                                         "_key": "pLayoutAlign",
                                         "_value": "stretch",
                                         "_type": "a",
@@ -784,9 +730,82 @@
                                         "_attrDef": "p"
                                     }
                                 ],
-                                "c6b63f36-fcc5-1790-298d-d82b48ab2de7": {
+                                "05eca0a5-cd42-611c-be65-3444ce0a0601": {
+                                    "paletteKey": "NG-TextArea",
+                                    "parentEditorKey": "a715298f-b211-51b6-d33d-42af69589e27",
+                                    "designerReference": [
+                                        {
+                                            "_key": "style",
+                                            "_value": "font-size:20px;",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "class",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "placeholder",
+                                            "_value": "Announcement",
+                                            "_type": "kv",
+                                            "_attrDef": "p",
+                                            "_useAsLabel": true
+                                        },
+                                        {
+                                            "_key": "value",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "required",
+                                            "_value": "required",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "[(ngModel)]",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "color",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "name",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "[readonly]",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "[disabled]",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "formControlName",
+                                            "_value": "announcement",
+                                            "_type": "kv",
+                                            "_attrDef": "c"
+                                        }
+                                    ]
+                                },
+                                "929c3a15-7b30-65e2-43b5-38291756f146": {
                                     "paletteKey": "NG-Select",
-                                    "parentEditorKey": "3b3b1872-d07f-c41a-224f-05f94a06eb11",
+                                    "parentEditorKey": "a715298f-b211-51b6-d33d-42af69589e27",
                                     "isAdvancedComponent": true,
                                     "designerReference": [
                                         {
@@ -797,20 +816,20 @@
                                         },
                                         {
                                             "_key": "class",
-                                            "_value": "state",
+                                            "_value": "",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
                                         {
                                             "_key": "placeholder",
-                                            "_value": "Partner Type",
+                                            "_value": "Select",
                                             "_type": "kv",
                                             "_attrDef": "p",
                                             "_useAsLabel": true
                                         },
                                         {
                                             "_key": "datasource",
-                                            "_value": "partnerType",
+                                            "_value": "announce",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         },
@@ -843,19 +862,19 @@
                                         },
                                         {
                                             "_key": "optionValue",
-                                            "_value": "option.value",
+                                            "_value": "option",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         },
                                         {
                                             "_key": "optionView",
-                                            "_value": "{{option.viewValue}}",
+                                            "_value": "{{option}}",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         },
                                         {
                                             "_key": "formControlName",
-                                            "_value": "",
+                                            "_value": "announcetype",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
@@ -969,7 +988,7 @@
                             },
                             "1cdd41f3-44be-7ebd-7015-8d4f850a053a": {
                                 "paletteKey": "FlexLayoutRow",
-                                "parentEditorKey": "83b1c666-0500-7ceb-7ac1-0f8187b05258",
+                                "parentEditorKey": "d45fb4c8-9a52-a9f8-a9a9-bdc602fcdc53",
                                 "designerReference": [
                                     {
                                         "_key": "componentLabel",
@@ -1064,7 +1083,7 @@
                                         },
                                         {
                                             "_key": "(click)",
-                                            "_value": "",
+                                            "_value": "submit(announcdetail.value)",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },

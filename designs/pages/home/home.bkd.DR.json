@@ -389,7 +389,7 @@
                                     },
                                     {
                                         "_key": "imgSrc",
-                                        "_value": "Web/logo-white.png",
+                                        "_value": "Web/logo1.png",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -425,7 +425,7 @@
                                     },
                                     {
                                         "_key": "width",
-                                        "_value": "140",
+                                        "_value": "250px",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -442,218 +442,6 @@
                                         "_attrDef": "p"
                                     }
                                 ]
-                            },
-                            "da157c72-563a-e36d-c6b4-ad15323c9232": {
-                                "paletteKey": "Html5",
-                                "parentEditorKey": "b88d2f2d-b3ff-22e0-962b-6dcfe22e1a52",
-                                "isAdvancedComponent": true,
-                                "designerReference": [
-                                    {
-                                        "_key": "style",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "class",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "htmlElement",
-                                        "_value": "h3",
-                                        "_type": "dav",
-                                        "_attrDef": "p",
-                                        "_useAsLabel": true
-                                    },
-                                    {
-                                        "_key": "tagType",
-                                        "_value": "h3",
-                                        "_type": "a",
-                                        "_attrDef": "p",
-                                        "_visibility": false
-                                    },
-                                    {
-                                        "_key": "name",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p",
-                                        "_visibility": false
-                                    },
-                                    {
-                                        "_key": "sandbox",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p",
-                                        "_visibility": false
-                                    },
-                                    {
-                                        "_key": "src",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p",
-                                        "_visibility": false
-                                    },
-                                    {
-                                        "_key": "srcdoc",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p",
-                                        "_visibility": false
-                                    },
-                                    {
-                                        "_key": "width",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p",
-                                        "_visibility": false
-                                    },
-                                    {
-                                        "_key": "[autoplay]",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p",
-                                        "_visibility": false
-                                    },
-                                    {
-                                        "_key": "[loop]",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p",
-                                        "_visibility": false
-                                    },
-                                    {
-                                        "_key": "data",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p",
-                                        "_visibility": false
-                                    },
-                                    {
-                                        "_key": "audioSource",
-                                        "_value": [],
-                                        "_type": "a",
-                                        "_attrDef": "p",
-                                        "_visibility": false
-                                    },
-                                    {
-                                        "_key": "videoSource",
-                                        "_value": [],
-                                        "_type": "a",
-                                        "_attrDef": "p",
-                                        "_visibility": false
-                                    },
-                                    {
-                                        "_key": "audioDatasource",
-                                        "_value": "",
-                                        "_type": "a",
-                                        "_attrDef": "p",
-                                        "_visibility": false
-                                    },
-                                    {
-                                        "_key": "audioSrc",
-                                        "_value": "",
-                                        "_type": "a",
-                                        "_attrDef": "p",
-                                        "_visibility": false
-                                    },
-                                    {
-                                        "_key": "audioType",
-                                        "_value": "",
-                                        "_type": "a",
-                                        "_attrDef": "p",
-                                        "_visibility": false
-                                    },
-                                    {
-                                        "_key": "videoDatasource",
-                                        "_value": "",
-                                        "_type": "a",
-                                        "_attrDef": "p",
-                                        "_visibility": false
-                                    },
-                                    {
-                                        "_key": "videoSrc",
-                                        "_value": "",
-                                        "_type": "a",
-                                        "_attrDef": "p",
-                                        "_visibility": false
-                                    },
-                                    {
-                                        "_key": "videoType",
-                                        "_value": "",
-                                        "_type": "a",
-                                        "_attrDef": "p",
-                                        "_visibility": false
-                                    },
-                                    {
-                                        "_key": "(audioplay)",
-                                        "_value": "",
-                                        "_type": "a",
-                                        "_attrDef": "p",
-                                        "_visibility": false
-                                    },
-                                    {
-                                        "_key": "(videoplay)",
-                                        "_value": "",
-                                        "_type": "a",
-                                        "_attrDef": "p",
-                                        "_visibility": false
-                                    },
-                                    {
-                                        "_key": "(audiopause)",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p",
-                                        "_visibility": false
-                                    },
-                                    {
-                                        "_key": "(videopause)",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p",
-                                        "_visibility": false
-                                    },
-                                    {
-                                        "_key": "(audioended)",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p",
-                                        "_visibility": false
-                                    },
-                                    {
-                                        "_key": "(videoended)",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p",
-                                        "_visibility": false
-                                    }
-                                ],
-                                "541b12d5-be90-73d5-4d35-1ddba6459749": {
-                                    "paletteKey": "html-editor",
-                                    "parentEditorKey": "da157c72-563a-e36d-c6b4-ad15323c9232",
-                                    "isAdvancedChildComponent": true,
-                                    "designerReference": [
-                                        {
-                                            "_key": "style",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "class",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "html",
-                                            "_value": "PARTNER PORTAL",
-                                            "_type": "a",
-                                            "_attrDef": "p"
-                                        }
-                                    ]
-                                }
                             }
                         },
                         "7f464c69-c3db-0069-3558-23d6358fecf2": {
@@ -1935,14 +1723,14 @@
                                             },
                                             {
                                                 "_key": "htmlElement",
-                                                "_value": "div",
+                                                "_value": "h4",
                                                 "_type": "dav",
                                                 "_attrDef": "p",
                                                 "_useAsLabel": true
                                             },
                                             {
                                                 "_key": "tagType",
-                                                "_value": "div",
+                                                "_value": "h4",
                                                 "_type": "a",
                                                 "_attrDef": "p",
                                                 "_visibility": false
@@ -2400,7 +2188,7 @@
                                                 },
                                                 {
                                                     "_key": "html",
-                                                    "_value": "At Neutrinos, our vision is to nurture an ecosystem in the application development space where partners from diverse backgrounds and expertise could collaborate with and complement each other.<br><br>\r\n\r\nOur efforts are aligned towards creating a network where partners across different spheres, including System Integrators, Resellers and Implementors use Neutrinos Platform as the conduit to benefit from each other’s work.",
+                                                    "_value": "At Neutrinos, our vision is to nurture an ecosystem in the application development space where partners from diverse backgrounds and expertise could collaborate with and complement each other.\r\n\r\nOur efforts are aligned towards creating a network where partners across different spheres, including System Integrators, Resellers and Implementors use Neutrinos Platform as the conduit to benefit from each other’s work.",
                                                     "_type": "a",
                                                     "_attrDef": "p"
                                                 }

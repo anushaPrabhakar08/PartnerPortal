@@ -1,7 +1,7 @@
 import {JsonProperty, JsonObject} from '../lib/tj.deserializer'
 
 @JsonObject
-export class contactus {
+export class contactpage {
   @JsonProperty('firstname', String, true)
   public firstname: string = undefined;
 

@@ -32,7 +32,7 @@ declare const window: any;
 declare const cordova: any;
 
 @Injectable()
-export class contactusservice {
+export class contactus {
   systemService = NSystemService.getInstance();
   appProperties;
 
@@ -56,18 +56,18 @@ export class contactusservice {
     private fileIOService: NFileIOService
   ) {}
 
-  //   service flows_contactusservice
+  //   service flows_contactus
 
-  public async contactserv(obj = undefined, ...others) {
+  public async contactusp(obj = undefined, ...others) {
     try {
       let bh = {
         input: { obj: obj },
-        local: { result: undefined, modelurl: undefined }
+        local: { result: undefined, modlreApi: undefined }
       };
       bh = this.__constructDefault(bh);
 
-      bh = await this.sd_PlkuD8anxxGyj0YL(bh);
-      //appendnew_next_contactserv
+      bh = await this.sd_gNeO6yGEaam5jl8K(bh);
+      //appendnew_next_contactusp
       //Start formatting output variables
       let outputVariables = { input: {}, local: { result: bh.local.result } };
       //End formatting output variables
@@ -76,23 +76,23 @@ export class contactusservice {
       throw e;
     }
   }
-  //appendnew_flow_contactusservice_Start
+  //appendnew_flow_contactus_Start
 
-  async sd_PlkuD8anxxGyj0YL(bh) {
+  async sd_gNeO6yGEaam5jl8K(bh) {
     try {
-      bh.local.modelurl = `http://localhost:24483/api/email?obj=${bh.input.obj}`;
+      bh.local.modlreApi = `http://localhost:24483/api/email?obj=${bh.input.obj}`;
 
-      bh = await this.sd_w2LcTk14LCrFyNZp(bh);
-      //appendnew_next_sd_PlkuD8anxxGyj0YL
+      bh = await this.sd_5dNrGPGzbYJLrDWz(bh);
+      //appendnew_next_sd_gNeO6yGEaam5jl8K
       return bh;
     } catch (e) {
       throw e;
     }
   }
-  async sd_w2LcTk14LCrFyNZp(bh) {
+  async sd_5dNrGPGzbYJLrDWz(bh) {
     try {
       let requestOptions = {
-        url: bh.local.modelurl,
+        url: bh.local.modlreApi,
         method: 'post',
         responseType: 'json',
         reportProgress: undefined,
@@ -101,7 +101,7 @@ export class contactusservice {
         body: bh.input.obj
       };
       bh.local.result = await this.sdService.nHttpRequest(requestOptions);
-      //appendnew_next_sd_w2LcTk14LCrFyNZp
+      //appendnew_next_sd_5dNrGPGzbYJLrDWz
       return bh;
     } catch (e) {
       throw e;

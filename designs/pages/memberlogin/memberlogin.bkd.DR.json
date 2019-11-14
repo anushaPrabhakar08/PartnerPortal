@@ -1766,7 +1766,7 @@
                         "designerReference": [
                             {
                                 "_key": "style",
-                                "_value": "color:orange;cursor:pointer;",
+                                "_value": "color:red;cursor:pointer;",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },

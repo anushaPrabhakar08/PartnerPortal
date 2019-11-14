@@ -1766,7 +1766,7 @@
                         "designerReference": [
                             {
                                 "_key": "style",
-                                "_value": "color:orange;cursor:pointer;",
+                                "_value": "color:red;cursor:pointer;",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -1946,7 +1946,7 @@
                             },
                             {
                                 "_key": "routerLink",
-                                "_value": "/memberregisteration",
+                                "_value": "/partnerregistration",
                                 "_type": "kv",
                                 "_attrDef": "c"
                             }
@@ -1970,7 +1970,7 @@
                                 },
                                 {
                                     "_key": "html",
-                                    "_value": "Create Member Account",
+                                    "_value": "Create Partner Account",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 }

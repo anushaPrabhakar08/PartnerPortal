@@ -155,7 +155,7 @@
                     },
                     {
                         "_key": "imgSrc",
-                        "_value": "Web/logo.png",
+                        "_value": "Web/logo2.png",
                         "_type": "kv",
                         "_attrDef": "p"
                     },
@@ -191,7 +191,7 @@
                     },
                     {
                         "_key": "width",
-                        "_value": "340",
+                        "_value": "250px",
                         "_type": "kv",
                         "_attrDef": "p"
                     },
