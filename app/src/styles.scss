@@ -26,7 +26,10 @@
     background-color: #ee1c22;
     color: white;
 }
-
+.iconcontent .mat-icon{
+    display: flex !important;
+    font-weight: bolder;
+}
 .margin-tb {
     margin: 10px 40px;
 }
@@ -36,7 +39,10 @@
    
    background-color:#e2dede;
 }
-
+.opptype .mat-form-field{
+    width:320px !important;
+    margin-left: 30px !important;
+}
 .mat-toolbar {
     //background-color:  #5f737d !important;
     background-color: #000 !important;

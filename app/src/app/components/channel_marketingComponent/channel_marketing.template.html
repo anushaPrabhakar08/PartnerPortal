@@ -1,39 +1,33 @@
 <div fxLayout="row wrap" class="background" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-  <div fxLayout="column wrap" class="margin-tb" fxFlex="100" fxLayoutGap="2em" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+  <div fxLayout="column wrap" class="margin-tb" fxFlex="100" fxLayoutGap="2em" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false">
+    <div fxLayout="row wrap" fxLayoutAlign="space-between center" [fxShow]="true" [fxHide]="false">
       <h2 style="color:rgba(0,0,0,.7);" class="header">
         Marketing Collaterals</h2>
+      <div fxLayout="row wrap" style="margin-top:10px;" class="iconcontent" fxLayoutAlign="end end" [fxShow]="true" [fxHide]="false"><button mat-mini-fab style="background:rgba(241, 8, 8, 0.82); color: #fff;" class="add-icon" (click)="addContent()">
+          <mat-icon>add</mat-icon>
+        </button></div>
     </div>
     <div fxLayout="row wrap" style="width:100%;" fxLayoutGap="1em" fxLayoutAlign="space-between none" [fxShow]="true" [fxHide]="false">
       <mat-grid-list cols="3">
         <div fxLayout="row wrap" class="card-bg" fxFlex="100" fxLayoutGap="1em" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false">
-          <mat-card style="width:300px;" class="gallery-card-content">
+          <mat-card style="width:300px;height:200px;" class="gallery-card-content">
             <mat-card-content style="width:100%;">
-              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/pdfimg.png" style="cursor:pointer;height: 160px; width: 130px;" (click)="openmarketingPdf()" width="200">
+              <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/pdfimg.png" style="cursor:pointer;height: 160px; width: 130px;" (click)="openmarketingPdf()" width="200">
                 <div style="text-align:left;" class="thumbnail-title link">
                   IntroductoryBrochure.pdf</div>
               </div>
-              <div fxLayout="row wrap" style="margin-top:10px;" fxLayoutAlign="end end" [fxShow]="true" [fxHide]="false"><button mat-mini-fab style="background:rgba(0,0,0,.7); color: #fff;" class="add-icon" (click)="addContent()">
-                  <mat-icon>add</mat-icon>
-                </button></div>
             </mat-card-content>
           </mat-card>
-          <mat-card style="width:300px;" class="gallery-card-content">
+          <mat-card style="width:300px;height:200px;" class="gallery-card-content">
             <mat-card-content style="width:100%;">
-              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><video controls [autoplay]="false" [loop]="false" style="width:300px;">
+              <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><video controls [autoplay]="false" [loop]="false" style="width:300px;">
                   <source src="/assets/Web/marketingCollaterals/asset.mp4" type="video/mp4">
                 </video></div>
-              <div fxLayout="row wrap" style="margin-top:20px;" fxLayoutAlign="end end" [fxShow]="true" [fxHide]="false"><button mat-mini-fab style="background:rgba(0,0,0,.7); color: #fff;" class="add-icon" (click)="addContent()">
-                  <mat-icon>add</mat-icon>
-                </button></div>
             </mat-card-content>
           </mat-card>
-          <mat-card style="width:300px;" class="gallery-card-content">
+          <mat-card style="width:300px;height:200px;" class="gallery-card-content">
             <mat-card-content style="width:100%;">
-              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/Icons/favicon.ico.png" (click)="showImage()" width="180"></div>
-              <div fxLayout="row wrap" style="margin-top:10px;" fxLayoutAlign="end end" [fxShow]="true" [fxHide]="false"><button mat-mini-fab style="background:rgba(0,0,0,.7); color: #fff;" class="add-icon" (click)="addContent()">
-                  <mat-icon>add</mat-icon>
-                </button></div>
+              <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/Icons/favicon.ico.png" (click)="showImage()" width="180"></div>
             </mat-card-content>
           </mat-card>
         </div>

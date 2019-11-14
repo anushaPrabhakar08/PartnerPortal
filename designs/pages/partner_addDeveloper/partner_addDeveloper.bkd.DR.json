@@ -715,7 +715,7 @@
                             },
                             {
                                 "_key": "style",
-                                "_value": "",
+                                "_value": "margin-left:30px;",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -1120,7 +1120,7 @@
                             },
                             {
                                 "_key": "style",
-                                "_value": "",
+                                "_value": "margin-left:30px;",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -1255,7 +1255,7 @@
                         },
                         {
                             "_key": "layoutAlign",
-                            "_value": "center",
+                            "_value": " ",
                             "_type": "a",
                             "_attrDef": "p"
                         },
@@ -1291,7 +1291,7 @@
                             },
                             {
                                 "_key": "style",
-                                "_value": "width:70%;",
+                                "_value": "width:70%;margin-left: 35px;",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -1612,7 +1612,7 @@
                         },
                         {
                             "_key": "layoutAlign",
-                            "_value": "center",
+                            "_value": " ",
                             "_type": "a",
                             "_attrDef": "p"
                         },
@@ -1648,7 +1648,7 @@
                             },
                             {
                                 "_key": "style",
-                                "_value": "width:70%;",
+                                "_value": "width:70%;margin-left: 35px;",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -2763,7 +2763,7 @@
                             "designerReference": [
                                 {
                                     "_key": "style",
-                                    "_value": "background:blue;color:white;",
+                                    "_value": "    background: #09096f;     color: white;     font-weight: 800;     width: 125px;",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
