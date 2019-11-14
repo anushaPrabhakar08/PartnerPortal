@@ -12,6 +12,8 @@ window['neutrinos'] = {
 }
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-viewmarketingpdfComponent
+import { viewmarketingpdfComponent } from '../components/viewmarketingpdfComponent/viewmarketingpdf.component';
 //CORE_REFERENCE_IMPORT-partnerloginComponent
 import { partnerloginComponent } from '../components/partnerloginComponent/partnerlogin.component';
 //CORE_REFERENCE_IMPORT-uploadcertificateComponent
@@ -98,7 +100,8 @@ export const appEntryComponents: any = [
   partner_addleadComponent,
   uploadcertificateComponent,
   viewagreementComponent,
-  deletedeveloperComponent
+  deletedeveloperComponent,
+  viewmarketingpdfComponent
   //CORE_REFERENCE_PUSH_TO_ENTRY_ARRAY
 ];
 
@@ -111,6 +114,8 @@ export const appDeclarations = [
   PageNotFoundComponent,
   NMapComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-viewmarketingpdfComponent
+viewmarketingpdfComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-partnerloginComponent
 partnerloginComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-uploadcertificateComponent

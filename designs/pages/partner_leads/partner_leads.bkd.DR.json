@@ -622,7 +622,7 @@
                                     },
                                     {
                                         "_key": "[dataSource]",
-                                        "_value": "data",
+                                        "_value": "dataSource",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -671,7 +671,7 @@
                                         },
                                         {
                                             "_key": "Mapping",
-                                            "_value": "{{table.no}}",
+                                            "_value": "{{i + 1}}",
                                             "_type": "ma",
                                             "_attrDef": "p",
                                             "_useAsLabel": true
@@ -995,13 +995,13 @@
                                         },
                                         {
                                             "_key": "[pageSize]",
-                                            "_value": "5",
+                                            "_value": "3",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
                                         {
                                             "_key": "[pageSizeOptions]",
-                                            "_value": "[5, 10, 25, 100]",
+                                            "_value": "[3, 8, 20, 100]",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },

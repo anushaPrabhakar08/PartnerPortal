@@ -2,10 +2,11 @@
 import { Component, OnInit } from '@angular/core'
 import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
-import { NDataModelService } from 'neutrinos-seed-services';
+import { NDataModelService, NSnackbarService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 import { FormGroup, FormControl,Validators } from '@angular/forms';
-
+import { contactus } from '../../models/contactus.model';
+import { contactusservice } from '../../sd-services/contactusservice';
 /**
  * Service import Example :
  * import { HeroService } from '../../services/hero/hero.service';
@@ -28,7 +29,7 @@ jobrole=['Salse & Marketing','Technology','Human Resource & Admin','Directors of
 industry=['Manufacturing','insurance','Education'];
 companysize=['1-49','50-99','100-249','250-499'];
 country=['Afghanistan','Ailand Island','Albania','Algeria','Australia','india'];
-
+contactus:contactus;
 contactdetails=new FormGroup({
     firstname:new FormControl(''),
     lastname:new FormControl(''),
@@ -39,9 +40,10 @@ contactdetails=new FormGroup({
     mobilenumber:new FormControl(''),
     compsize:new FormControl(''),
     countryname:new FormControl(''),
-    message:new FormControl('')
+    message:new FormControl(''),
+
 })
-    constructor(private bdms: NDataModelService) {
+    constructor(private bdms: NDataModelService,private contactservice:contactusservice,private alertService: NSnackbarService,) {
         super();
         this.mm = new ModelMethods(bdms);
     }
@@ -49,9 +51,12 @@ contactdetails=new FormGroup({
     ngOnInit() {
 
     }
-
-submit(data){
-    console.log(data);
+result;
+async submit(data){
+    this.dm.contactus=data;
+    console.log(this.dm.contactus);
+    this.result=(await this.contactservice.contactserv(this.dm.contactus)).local.result;
+   this.alertService.openSnackBar('submited');
 }
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, filter, keys, sort, pagenumber, pagesize,

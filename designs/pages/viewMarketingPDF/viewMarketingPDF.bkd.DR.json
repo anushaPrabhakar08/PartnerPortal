@@ -1,0 +1,104 @@
+{
+    "1ccf60f2-5ad8-71d2-f9d2-668f081431bd": {
+        "paletteKey": "FlexLayoutRow",
+        "designerReference": [
+            {
+                "_key": "componentLabel",
+                "_value": "Row",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_useAsLabel": true
+            },
+            {
+                "_key": "style",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "class",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "fxFlex",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "fxLayoutGap",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "wrap",
+                "_value": "wrap",
+                "_type": "a",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "layoutAlign",
+                "_value": "start",
+                "_type": "a",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "pLayoutAlign",
+                "_value": "stretch",
+                "_type": "a",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "[fxShow]",
+                "_value": "true",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "[fxHide]",
+                "_value": "false",
+                "_type": "kv",
+                "_attrDef": "p"
+            }
+        ],
+        "6ac46745-10e1-73a3-2f24-227d9a5fdf4e": {
+            "paletteKey": "NEUTRINOS_VIEW_sample",
+            "parentEditorKey": "1ccf60f2-5ad8-71d2-f9d2-668f081431bd",
+            "designerReference": [
+                {
+                    "_key": "componentLabel",
+                    "_value": "sample",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_useAsLabel": true
+                },
+                {
+                    "_key": "style",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "class",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "[pdfSrc]",
+                    "_value": "'/assets/Web/marketingCollaterals/collateral.pdf'",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_complexity": "advanced",
+                    "displayAs": "pdfSrc",
+                    "attrType": "INPUT",
+                    "inValid": false,
+                    "message": ""
+                }
+            ]
+        }
+    }
+}

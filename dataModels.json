@@ -435,5 +435,73 @@
                 "type": "string"
             }
         ]
+    },
+    "5b9f54b3-72a6-521a-2c88-8ac0a14d557f": {
+        "dataModelId": "5b9f54b3-72a6-521a-2c88-8ac0a14d557f",
+        "name": "contactus",
+        "description": "contactus",
+        "dataSource": "neutrinos-training-rt",
+        "fields": [
+            {
+                "name": "firstname",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "lastname",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "companyemail",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "companyname",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "jobroles",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "industryname",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "mobilenumber",
+                "fieldType": 1,
+                "isArray": false,
+                "type": "number"
+            },
+            {
+                "name": "compsize",
+                "fieldType": 1,
+                "isArray": false,
+                "type": "number"
+            },
+            {
+                "name": "countryname",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "message",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            }
+        ]
     }
 }

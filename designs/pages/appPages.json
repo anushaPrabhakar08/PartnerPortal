@@ -128,5 +128,10 @@
         "appPageName": "partnerlogin",
         "componentName": "partnerloginComponent",
         "isEntry": false
+    },
+    "6b1e6343-72d6-00ad-071a-00eec89faa0b": {
+        "appPageName": "viewMarketingPDF",
+        "componentName": "viewmarketingpdfComponent",
+        "isEntry": false
     }
 }

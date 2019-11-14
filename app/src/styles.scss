@@ -168,12 +168,12 @@
 
 
 .mat-header-cell {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
 }
 
 .tab-header, .tab-leadheader, .tab-developerheader {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     color: #fff !important;
     background: rgba(0, 0, 0, .6);
@@ -226,7 +226,9 @@ bh-partner_agreement {
 .mat-expansion-panel-header {
     height: 50px;
 }
-
+.edit{
+   color:#0e33ea; 
+}
 //partner-details
 .edit-btn-class {
     display: flex;
@@ -272,8 +274,14 @@ bh-partner_agreement {
 //marketing Collaterals
 .gallery-card-content, .pdf-card-content{
     width: max-content;
-    height: max-content; // width:17%;
+    height: max-content;
+    overflow: hidden; 
+    // width:17%;
     // height:80%;
+}
+
+.card-bg .mat-card{
+    background: #e7e7e7 !important;
 }
 .pdf-card-content{
     margin:20px;

@@ -160,7 +160,7 @@
 
                   <ng-container matColumnDef="action">
                     <th mat-header-cell *matHeaderCellDef class="tab-partner-header">Action</th>
-                    <td mat-cell *matCellDef="let table; let i = index;" class="tab-partner-data">{{table.action}}<button mat-button color="primary" (click)="addCertificateDialog()">Upload Certificate</button><br><button mat-button color="warn" (click)="cancelCertificateDialog()">Cancel Certificate</button></td>
+                    <td mat-cell *matCellDef="let table; let i = index;" class="tab-partner-data">{{table.action}}<button mat-button style="color:#0e33ea" (click)="addCertificateDialog()">Upload Certificate</button><br><button mat-button color="warn" (click)="cancelCertificateDialog()" style="color:#fb0a11">Cancel Certificate</button></td>
                   </ng-container>
                 </table>
                 <mat-paginator [length]="10" [pageSize]="5" [pageSizeOptions]="[5, 10, 25, 100]">

@@ -10,9 +10,6 @@ import { partner_addleadComponent } from '../partner_addleadComponent/partner_ad
 import { deletepopupComponent } from '../deletepopupComponent/deletepopup.component';
 import { partnerservice } from '../../sd-services/partnerservice';
 
-
-
-
 @Component({
     selector: 'bh-partner_leads',
     templateUrl: './partner_leads.template.html'
@@ -20,37 +17,43 @@ import { partnerservice } from '../../sd-services/partnerservice';
 
 export class partner_leadsComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
-    data;
+    data = [];
+
     @ViewChild(MatSort, { static: true }) sort: MatSort;
     @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+
 
     dataSource = new MatTableDataSource(this.data);
 
     constructor(private bdms: NDataModelService, private dialog: MatDialog,
-    private partnerservice:partnerservice
+        private partnerservice: partnerservice
     ) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
-    async getdata(){
-        this.data = this.leadObjtoArr((await this.partnerservice.getleadsdata()).local.result);
-        console.log(this.data);
+    async getdata() {
+        try {
+            this.data = this.leadObjtoArr((await this.partnerservice.getleadsdata()).local.result);
+            this.dataSource = new MatTableDataSource(this.data);
+            this.dataSource.paginator = this.paginator;
+            this.dataSource.sort = this.sort;
+        }
+        catch (e) {
+            console.log(e);
+        }
     }
-    leadObjtoArr(obj){
-        return Array.from(Object.keys(obj), k=> obj[k]);
+    leadObjtoArr(obj) {
+        return Array.from(Object.keys(obj), k => obj[k]);
     }
 
     ngOnInit() {
-        this.dataSource.paginator = this.paginator;
-        this.dataSource.sort = this.sort;
         this.getdata();
     }
 
     openDeleteDialog(table) {
         const dialogRef = this.dialog.open(deletepopupComponent, {
             width: '450px',
-            //disableClose: true,
             data: table
         });
     }
@@ -59,7 +62,6 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
     addLead() {
         const dialogRef = this.dialog.open(partner_addleadComponent, {
             width: '450px',
-            //disableClose: true,
             data: 'hello'
         });
     }

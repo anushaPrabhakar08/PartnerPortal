@@ -539,6 +539,79 @@
     }
    }
   },
+  "node-red-node-mongodb": {
+   "name": "node-red-node-mongodb",
+   "version": "0.0.14",
+   "local": true,
+   "nodes": {
+    "mongo": {
+     "name": "mongo",
+     "types": [
+      "mongodb",
+      "mongodb out",
+      "mongodb in"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-node-mongodb",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-node-mongodb\\66-mongodb.js"
+    }
+   }
+  },
+  "node-red-contrib-mongodb": {
+   "name": "node-red-contrib-mongodb",
+   "version": "0.3.4",
+   "local": true,
+   "nodes": {
+    "mongo": {
+     "name": "mongo",
+     "types": [
+      "mongodb-config",
+      "mongodb-node"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-mongodb",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-mongodb\\mongodb.js"
+    }
+   }
+  },
+  "node-red-contrib-mongodb2": {
+   "name": "node-red-contrib-mongodb2",
+   "version": "0.5.6",
+   "local": true,
+   "nodes": {
+    "mongodb2": {
+     "name": "mongodb2",
+     "types": [
+      "mongodb2",
+      "mongodb2 in"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-mongodb2",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-mongodb2\\mongodb2\\mongodb2.js"
+    }
+   }
+  },
+  "node-red-contrib-mongodb3": {
+   "name": "node-red-contrib-mongodb3",
+   "version": "2.0.1",
+   "local": true,
+   "nodes": {
+    "mongodb": {
+     "name": "mongodb",
+     "types": [
+      "mongodb3",
+      "mongodb3 in"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-mongodb3",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-mongodb3\\mongodb\\mongodb.js"
+    }
+   }
+  },
   "node-red-contrib-mongo-client": {
    "name": "node-red-contrib-mongo-client",
    "version": "0.2.2",
@@ -593,23 +666,6 @@
      "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-mongodb\\mongodb.js"
     }
    }
-  },
-  "node-red-contrib-viseo-mongodb": {
-   "name": "node-red-contrib-viseo-mongodb",
-   "version": "0.5.0",
-   "local": true,
-   "nodes": {
-    "node-mongodb": {
-     "name": "node-mongodb",
-     "types": [
-      "mongodb"
-     ],
-     "enabled": true,
-     "local": true,
-     "module": "node-red-contrib-viseo-mongodb",
-     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-viseo-mongodb\\node-mongodb.js"
-    }
-   }
   }
  },
  "_credentialSecret": "5e07d2760d012306db61116bcf19bf1e2205ec48c637b150946376fa0f7a3a6f",
@@ -626,7 +682,7 @@
     }
    },
    "menu-menu-item-palette": false,
-   "menu-menu-item-sidebar": true
+   "menu-menu-item-sidebar": false
   }
  }
 }

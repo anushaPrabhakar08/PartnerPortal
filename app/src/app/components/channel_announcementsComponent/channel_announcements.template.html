@@ -7,12 +7,24 @@
     <div fxLayout="row wrap" style="width:100%;margin-top: 20px;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
       <mat-card class="announcement-card">
         <mat-card-content>
-          <div fxLayout="row wrap" style="width:100%;margin-bottom:30px;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-            <mat-form-field style="font-size:20px;">
-              <textarea matInput placeholder="Announcement" required></textarea>
-            </mat-form-field>
-          </div>
-          <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button class="announce-btn">Announce</button></div>
+          <form>
+            <div fxLayout="row wrap" style="width:100%;margin-bottom:30px;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+              <mat-form-field style="font-size:20px;">
+                <textarea matInput [(ngModel)]="announcement" name="announcement" placeholder="Announcement" required></textarea>
+              </mat-form-field>
+            </div>
+            <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                <mat-select class="state" placeholder="Partner Type" required>
+                  <ng-template ngFor let-option [ngForOf]="partnerType" let-i="index">
+                    <mat-option [value]="option.value">{{option.viewValue}}</mat-option>
+                  </ng-template>
+                </mat-select>
+
+              </mat-form-field>
+            </div>
+            <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button class="announce-btn">Announce</button></div>
+          </form>
         </mat-card-content>
       </mat-card>
     </div>

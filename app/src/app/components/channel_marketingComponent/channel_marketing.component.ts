@@ -7,6 +7,7 @@ import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 import { MatDialog } from '@angular/material';
 import { channel_addmarketingComponent } from '../channel_addmarketingComponent/channel_addmarketing.component';
 import { loginComponent } from '../loginComponent/login.component';
+import { viewmarketingpdfComponent } from '../viewmarketingpdfComponent/viewmarketingpdf.component';
 
 @Component({
     selector: 'bh-channel_marketing',
@@ -28,6 +29,14 @@ export class channel_marketingComponent extends NBaseComponent implements OnInit
     addContent() {
         const dialogRef = this.dialog.open(channel_addmarketingComponent, {
             width: '450px',
+            data: 'hello'
+        });
+    }
+
+    
+    openmarketingPdf() {
+        console.log("pdf Open");
+        const dialogRef = this.dialog.open(viewmarketingpdfComponent, {
             data: 'hello'
         });
     }

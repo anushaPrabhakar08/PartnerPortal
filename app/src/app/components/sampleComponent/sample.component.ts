@@ -1,5 +1,5 @@
 /*DEFAULT GENERATED TEMPLATE. DO NOT CHANGE SELECTOR TEMPLATE_URL AND CLASS NAME*/
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, Input } from '@angular/core'
 import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
@@ -11,7 +11,7 @@ import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
     template: `
         <pdf-viewer [src]="pdfSrc"
                     [render-text]="true"
-                    [show-all]="false"
+                    [show-all]="true"
                     [autoresize]="true"
                     [original-size]='true'
                     [fit-to-page]='false'
@@ -24,15 +24,18 @@ import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 export class sampleComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    pdfSrc = "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf";
+    //pdfSrc = "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf";
+    
 
     constructor(private bdms: NDataModelService) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
-    ngOnInit() {
+    @Input() pdfSrc: string;
 
+    ngOnInit() {
+        console.log(this.pdfSrc);
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {

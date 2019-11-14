@@ -29,6 +29,11 @@ export class channel_announcementsComponent extends NBaseComponent implements On
         this.mm = new ModelMethods(bdms);
     }
 
+    partnerType = [
+        { value: 'primePartner', viewValue: 'Prime Partner' },
+        { value: 'normalPartner', viewValue: 'Normal Partner' },
+    ];
+
     ngOnInit() {
 
     }
@@ -85,7 +90,7 @@ export class channel_announcementsComponent extends NBaseComponent implements On
             })
     }
 
-    delete (dataModelName, filter) {
+    delete(dataModelName, filter) {
         this.mm.delete(dataModelName, filter,
             result => {
                 // On Success code here

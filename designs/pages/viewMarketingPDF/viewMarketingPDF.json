@@ -1,0 +1,13 @@
+{
+    "appPageId": "6b1e6343-72d6-00ad-071a-00eec89faa0b",
+    "appPageName": "viewMarketingPDF",
+    "componentName": "viewmarketingpdfComponent",
+    "selectorName": "bh-viewmarketingpdf",
+    "htmlFileName": "viewmarketingpdf.template.html",
+    "tsFileName": "viewmarketingpdf.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

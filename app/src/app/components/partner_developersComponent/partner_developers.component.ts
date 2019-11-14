@@ -5,7 +5,7 @@ import { ModelMethods } from '../../lib/model.methods';
 import { MatDialog } from '@angular/material';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 import { MatSort, MatTableDataSource, MatPaginator } from '@angular/material';
-import { NDataModelService, NLoginService, NSnackbarService, NSystemService , NHTTPLoaderService } from 'neutrinos-seed-services';
+import { NDataModelService, NLoginService, NSnackbarService, NSystemService, NHTTPLoaderService } from 'neutrinos-seed-services';
 import { user } from '../../models/user.model';
 import { loginComponent } from '../loginComponent/login.component';
 import { partner_adddeveloperComponent } from '../partner_adddeveloperComponent/partner_adddeveloper.component';
@@ -23,43 +23,47 @@ export class partner_developersComponent extends NBaseComponent implements OnIni
     mm: ModelMethods;
     @ViewChild(MatSort, { static: true }) sort: MatSort;
     @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
-data;
-    dataSource = new MatTableDataSource(this.data);
 
-    constructor(private bdms: NDataModelService, private dialog:MatDialog, private partnerservice:partnerservice) {
+    data = [];
+
+    constructor(private bdms: NDataModelService, private dialog: MatDialog, private partnerservice: partnerservice) {
         super();
         this.mm = new ModelMethods(bdms);
     }
-    
+
+    dataSource = new MatTableDataSource(this.data);
 
     ngOnInit() {
-        this.dataSource.paginator = this.paginator;
-        this.dataSource.sort = this.sort;
-      console.log(this.dataSource);
-   this.getdata();
-
+        this.getdata();
     }
 
     openDeleteDialog(data) {
         const dialogRef = this.dialog.open(deletedeveloperComponent, {
             width: '450px',
-            //disableClose: true,
             data: data
         });
     }
 
-    async getdata(){
-        this.data = this.leadObjtoArr((await this.partnerservice.getdeveloper()).local.result);
+    async getdata() {
+        try {
+            this.data = this.leadObjtoArr((await this.partnerservice.getdeveloper()).local.result);
+            this.dataSource = new MatTableDataSource(this.data);
+            this.dataSource.paginator = this.paginator;
+            this.dataSource.sort = this.sort;
+        }
+        catch (e) {
+            console.log(e);
+        }
+
     }
-    leadObjtoArr(obj){
-        return Array.from(Object.keys(obj), k=> obj[k]);
+    leadObjtoArr(obj) {
+        return Array.from(Object.keys(obj), k => obj[k]);
     }
 
 
     addDeveloper() {
         const dialogRef = this.dialog.open(partner_adddeveloperComponent, {
             width: '450px',
-            //disableClose: true,
             data: 'hello'
         });
     }
