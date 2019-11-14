@@ -628,13 +628,13 @@
                                     },
                                     {
                                         "_key": "[dataSource]",
-                                        "_value": "dataSource",
+                                        "_value": "data",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
                                     {
                                         "_key": "rowclick",
-                                        "_value": "showPartnerDetails()",
+                                        "_value": "showPartnerDetails(row)",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     },
@@ -677,7 +677,7 @@
                                         },
                                         {
                                             "_key": "Mapping",
-                                            "_value": "{{table.no}}",
+                                            "_value": "{{i+1}}",
                                             "_type": "ma",
                                             "_attrDef": "p",
                                             "_useAsLabel": true
@@ -892,7 +892,7 @@
                                         },
                                         {
                                             "_key": "Mapping",
-                                            "_value": "{{table.location}}",
+                                            "_value": "{{table.country}}",
                                             "_type": "ma",
                                             "_attrDef": "p",
                                             "_useAsLabel": true

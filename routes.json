@@ -56,7 +56,7 @@
                     "component": "channel_dashboardComponent"
                 },
                 {
-                    "path": "dashboardPartnerDetails",
+                    "path": "dashboardPartnerDetails/:_id",
                     "component": "partner_detailsComponent"
                 },
                 {

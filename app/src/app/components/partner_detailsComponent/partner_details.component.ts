@@ -1,5 +1,5 @@
 /*DEFAULT GENERATED TEMPLATE. DO NOT CHANGE SELECTOR TEMPLATE_URL AND CLASS NAME*/
-import { Component, ViewChild, OnInit } from '@angular/core'
+import { Component, ViewChild, OnInit, AfterViewInit } from '@angular/core'
 import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
@@ -8,49 +8,10 @@ import { MatSort, MatTableDataSource, MatPaginator } from '@angular/material';
 import { partnerservice } from '../../sd-services/partnerservice';
 import { uploadcertificateComponent } from '../uploadcertificateComponent/uploadcertificate.component';
 import { MatDialog } from '@angular/material';
+import { channelservice } from '../../sd-services/channelservice';
+import { Router, ActivatedRoute  } from '@angular/router';
+import { FormGroup, FormControl } from '@angular/forms';
 
-export interface PeriodicElement {
-    //id: string;
-    no: number;
-    position: string;
-    name: string;
-    status:string;
-    email:string;
-}
-
-export interface LeadsElement {
-    no: number;
-    orgName: string;
-    orgWebsite: string;
-    leadCreationDate: string;
-    oppType:string;
-    location;
-}
-const ELEMENT_DATA: PeriodicElement[] = [
-    { no: 1, status: 'fresher', name: 'Anusha', email: 'www.joyitconsulting.com',  position: 'Junior developer'},
-    { no: 2, status: 'experienced', name: 'Anup', email: 'www.mentric.com',  position: 'senior developer' },
-    { no: 3, status: 'fresher', name: 'Pavan', email: 'www.indigo.com', position: 'Junior developer' },
-    { no: 4, status: 'experienced', name: 'Namitha', email: 'www.dell.com', position: 'senior developer' },
-    { no: 5, status: 'fresher', name: 'Nitesh', email: 'www.philips.com', position: 'Junior developer' },
-    { no: 6, status: 'fresher', name: 'Nikhil', email: 'www.squirrelseva.com', position: 'Junior developer' },
-    { no: 7, status: 'fresher', name: 'Gokul', email: 'www.worksheets.com',  position: 'Junior developer' },
-    { no: 8, status: 'experienced', name: 'Jagadeshwari', email: 'www.wipro.com', position: 'senior developer' },
-    { no: 9, status: 'experienced', name: 'Akshara', email: 'www.matrix.com',  position: 'senior developer' },
-    { no: 10, status: 'experienced', name: 'Viren', email: 'www.moodys.com', position: 'senior developer' },
-];
-
-const LEADS_DATA: LeadsElement[] = [
-   { no: 1, orgName: 'JoyIT', oppType: 'Resalers',  orgWebsite: 'www.joyitconsulting.com', location: 'Bangalore', leadCreationDate:'02-06-2019' },
-   { no: 2, orgName: 'Mentric', oppType: 'Distributors',  orgWebsite: 'www.mentric.com', location: 'chennai', leadCreationDate:'06-05-2019'  },
-   { no: 3, orgName: 'Indigo', oppType: 'Sales',  orgWebsite: 'www.indigo.com', location: 'Bangalore', leadCreationDate:'25-06-2019'  },
-   { no: 4, orgName: 'Dell', oppType: 'Distributors',  orgWebsite: 'www.dell.com', location: 'Bangalore', leadCreationDate:'02-05-2019'  },
-   { no: 5, orgName: 'Philips', oppType: 'Distributors',  orgWebsite: 'www.philips.com', location: 'Hyderabad', leadCreationDate:'21-05-2018'  },
-   { no: 6, orgName: 'Squirrelseva', oppType: 'Sales',  orgWebsite: 'www.squirrelseva.com', location: 'pune', leadCreationDate:'02-05-2019'  },
-   { no: 7, orgName: 'Worksheets', oppType: 'Sales',  orgWebsite: 'www.worksheets.com', location: 'pune', leadCreationDate:'10-05-2018'  },
-   { no: 8, orgName: 'Wipro', oppType: 'Distributors',  orgWebsite: 'www.wipro.com', location: 'Mumbai', leadCreationDate:'02-05-2018'  },
-   { no: 9, orgName: 'Matrix', oppType: 'Fluorine',  orgWebsite: 'www.matrix.com', location: 'Hyderabad', leadCreationDate:'02-06-2018'  },
-   { no: 10, orgName: 'Moodys', oppType: 'Sales',  orgWebsite: 'www.moodys.com', location: 'Hyderabad', leadCreationDate:'02-07-2017'  },
-];
 
 @Component({
     selector: 'bh-partner_details',
@@ -60,16 +21,32 @@ const LEADS_DATA: LeadsElement[] = [
 export class partner_detailsComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
     data;
-
-   // @ViewChild(MatSort, { static: true }) sort: MatSort;
+    // @ViewChild(MatSort, { static: true }) sort: MatSort;
     @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
-
-    dataSource = new MatTableDataSource(ELEMENT_DATA);
-
-    leadsDataSource = new MatTableDataSource(LEADS_DATA);
-
-    constructor(private bdms: NDataModelService,private dialog: MatDialog,
-    private partnerservice:partnerservice
+id;
+P_data;
+    dataSource = new MatTableDataSource(this.data);
+    leadsDataSource = new MatTableDataSource();
+    profileForm = new FormGroup({
+    companyName: new FormControl(''),
+    companyWebsite: new FormControl(''),
+    companyType: new FormControl(''),
+    numberofEmployees: new FormControl(''),
+  });
+    personalForm = new FormGroup({
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+    // country: new FormControl(''),
+    mobileNumber: new FormControl(''),
+    emailId: new FormControl(''),
+    address: new FormControl(' '),
+    designation: new FormControl('')
+      });
+    constructor(private bdms: NDataModelService, private dialog: MatDialog,
+        private partnerservice: partnerservice,
+        private router: Router,
+        private route: ActivatedRoute,
+        private channelservice:channelservice
     ) {
         super();
         this.mm = new ModelMethods(bdms);
@@ -78,7 +55,7 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
     //titles = [{ name: "Experiment 1" }, { name: "Experiment 2" }];
 
     applyFilter(filterValue: string) {
-        filterValue = filterValue.trim(); 
+        filterValue = filterValue.trim();
         filterValue = filterValue.toLowerCase();
         this.dataSource.filter = filterValue;
     }
@@ -91,15 +68,47 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
         });
     }
 
-    ngOnInit() {
-         this.dataSource.paginator = this.paginator;
-         this.leadsDataSource.paginator = this.paginator;
-         this.getleads();
-    }
+   async ngOnInit() {
+        this.dataSource.paginator = this.paginator;
+        this.leadsDataSource.paginator = this.paginator;
+        this.getleads();
+    
+    this.id = this.route.snapshot.paramMap.get('_id');
+   console.log(this.id);
+   this.P_data= (await this.channelservice.getPerticularPartner(this.id)).local.result;
+   console.log(this.P_data);
 
-    async getleads(){
+
+   this.profileForm.patchValue({
+      companyName: this.P_data.companyName,
+      companyWebsite: this.P_data.companyWebsite,
+      companyType: this.P_data.companyType,
+      numberofEmployees:this.P_data.numberofEmployees,
+   });
+
+    this.personalForm.patchValue({
+      firstName: this.P_data.firstName,
+      lastName: this.P_data.lastName,
+    //   country: this.P_data.country,
+      mobileNumber: this.P_data.mobileNumber,
+      emailId: this.P_data.emailId,
+      designation: this.P_data.designation,
+      address: this.P_data.address
+    });
+
+   
+  }
+
+
+    
+
+   
+
+
+    async getleads() {
         this.data = (await this.partnerservice.getleadsdata()).local.result;
-        console.log(this.data);
+
+        // console.log(this.data);
     }
 
 

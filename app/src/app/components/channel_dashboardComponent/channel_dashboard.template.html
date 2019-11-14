@@ -17,13 +17,13 @@
                   </mat-form-field>
                 </div>
               </div>
-              <table mat-table [dataSource]="dataSource" matSort class="table-width-fix">
-                <tr mat-header-row *matHeaderRowDef="[&apos;no&apos;,&apos;companyName&apos;,&apos;companyType&apos;,&apos;location&apos;,&apos;companyWebsite&apos;]"></tr>
-                <tr mat-row (click)="showPartnerDetails()" *matRowDef="let row; columns: [&apos;no&apos;,&apos;companyName&apos;,&apos;companyType&apos;,&apos;location&apos;,&apos;companyWebsite&apos;];"></tr>
+              <table mat-table [dataSource]="data" matSort class="table-width-fix">
+                <tr mat-header-row *matHeaderRowDef="[&apos;index&apos;,&apos;companyName&apos;,&apos;companyType&apos;,&apos;country&apos;,&apos;companyWebsite&apos;]"></tr>
+                <tr mat-row (click)="showPartnerDetails(row)" *matRowDef="let row; columns: [&apos;index&apos;,&apos;companyName&apos;,&apos;companyType&apos;,&apos;country&apos;,&apos;companyWebsite&apos;];"></tr>
 
-                <ng-container matColumnDef="no">
+                <ng-container matColumnDef="index">
                   <th mat-header-cell *matHeaderCellDef mat-sort-header class="tab-header">No</th>
-                  <td mat-cell *matCellDef="let table; let i = index;" class="tab-data">{{table.no}}</td>
+                  <td mat-cell *matCellDef="let table; let i = index;" class="tab-data">{{i+1}}</td>
                 </ng-container>
 
                 <ng-container matColumnDef="companyName">
@@ -36,9 +36,9 @@
                   <td mat-cell *matCellDef="let table; let i = index;" class="tab-data">{{table.companyType}}</td>
                 </ng-container>
 
-                <ng-container matColumnDef="location">
+                <ng-container matColumnDef="country">
                   <th mat-header-cell *matHeaderCellDef mat-sort-header class="tab-header">Location</th>
-                  <td mat-cell *matCellDef="let table; let i = index;" class="tab-data">{{table.location}}</td>
+                  <td mat-cell *matCellDef="let table; let i = index;" class="tab-data">{{table.country}}</td>
                 </ng-container>
 
                 <ng-container matColumnDef="companyWebsite">

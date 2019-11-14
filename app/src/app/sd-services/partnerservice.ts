@@ -58,24 +58,6 @@ export class partnerservice {
 
   //   service flows_partnerservice
 
-  public async savedaveloper(data = undefined, ...others) {
-    try {
-      let bh = {
-        input: { data: data },
-        local: { result: undefined, modlerUrlApi: undefined }
-      };
-      bh = this.__constructDefault(bh);
-
-      bh = await this.sd_xIgXKrl1iV0XgH8H(bh);
-      //appendnew_next_savedaveloper
-      //Start formatting output variables
-      let outputVariables = { input: {}, local: { result: bh.local.result } };
-      //End formatting output variables
-      return outputVariables;
-    } catch (e) {
-      throw e;
-    }
-  }
   public async saveleadata(data = undefined, ...others) {
     try {
       let bh = {
@@ -184,37 +166,26 @@ export class partnerservice {
       throw e;
     }
   }
+  public async savedev(obj = undefined, ...others) {
+    try {
+      let bh = {
+        input: { obj: obj },
+        local: { result: undefined, apiurl: undefined }
+      };
+      bh = this.__constructDefault(bh);
+
+      bh = await this.sd_h6ToBlE8mb2KESCa(bh);
+      //appendnew_next_savedev
+      //Start formatting output variables
+      let outputVariables = { input: {}, local: { result: bh.local.result } };
+      //End formatting output variables
+      return outputVariables;
+    } catch (e) {
+      throw e;
+    }
+  }
   //appendnew_flow_partnerservice_Start
 
-  async sd_xIgXKrl1iV0XgH8H(bh) {
-    try {
-      bh.local.modlerUrlApi = `http://localhost:24483/api/savedevelopers?data=${bh.input.data}`;
-
-      bh = await this.sd_IJG4oyLVYQYyL2yf(bh);
-      //appendnew_next_sd_xIgXKrl1iV0XgH8H
-      return bh;
-    } catch (e) {
-      throw e;
-    }
-  }
-  async sd_IJG4oyLVYQYyL2yf(bh) {
-    try {
-      let requestOptions = {
-        url: bh.local.modlerUrlApi,
-        method: 'post',
-        responseType: 'json',
-        reportProgress: undefined,
-        headers: {},
-        params: {},
-        body: bh.input.data
-      };
-      bh.local.result = await this.sdService.nHttpRequest(requestOptions);
-      //appendnew_next_sd_IJG4oyLVYQYyL2yf
-      return bh;
-    } catch (e) {
-      throw e;
-    }
-  }
   async sd_eDmQDZuVa9keEApB(bh) {
     try {
       bh.local.modlerUrlApi = `http://localhost:24483/api/saveleadsdata?data=${bh.input.data}`;
@@ -384,6 +355,35 @@ export class partnerservice {
       };
       bh.local.result = await this.sdService.nHttpRequest(requestOptions);
       //appendnew_next_sd_UA6lLqBfvpRf46vs
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_h6ToBlE8mb2KESCa(bh) {
+    try {
+      bh.local.apiurl = `http://localhost:24483/api/savedeveloperdata?data=${bh.input.obj}`;
+
+      bh = await this.sd_KCbHbh7E2xgUaluc(bh);
+      //appendnew_next_sd_h6ToBlE8mb2KESCa
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_KCbHbh7E2xgUaluc(bh) {
+    try {
+      let requestOptions = {
+        url: bh.local.apiurl,
+        method: 'post',
+        responseType: 'json',
+        reportProgress: undefined,
+        headers: {},
+        params: {},
+        body: bh.input.obj
+      };
+      bh.local.result = await this.sdService.nHttpRequest(requestOptions);
+      //appendnew_next_sd_KCbHbh7E2xgUaluc
       return bh;
     } catch (e) {
       throw e;
