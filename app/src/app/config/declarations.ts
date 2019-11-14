@@ -12,6 +12,8 @@ window['neutrinos'] = {
 }
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-deletedeveloperComponent
+import { deletedeveloperComponent } from '../components/deletedeveloperComponent/deletedeveloper.component';
 //CORE_REFERENCE_IMPORT-viewmarketingpdfComponent
 import { viewmarketingpdfComponent } from '../components/viewmarketingpdfComponent/viewmarketingpdf.component';
 //CORE_REFERENCE_IMPORT-partnerloginComponent
@@ -69,7 +71,7 @@ import { homeComponent } from '../components/homeComponent/home.component';
 //CORE_REFERENCE_IMPORT-loginComponent
 import { loginComponent } from '../components/loginComponent/login.component';
 import { viewagreementComponent } from 'app/components/viewagreementComponent/viewagreement.component';
-import { deletedeveloperComponent } from 'app/components/deletedeveloperComponent/deletedeveloper.component';
+
 
 /**
  * Reads datasource object and injects the datasource object into window object
@@ -114,6 +116,8 @@ export const appDeclarations = [
   PageNotFoundComponent,
   NMapComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-deletedeveloperComponent
+deletedeveloperComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-viewmarketingpdfComponent
 viewmarketingpdfComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-partnerloginComponent

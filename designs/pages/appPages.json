@@ -133,5 +133,10 @@
         "appPageName": "viewMarketingPDF",
         "componentName": "viewmarketingpdfComponent",
         "isEntry": false
+    },
+    "6122fc0f-85ca-aed0-9e41-53cbb627660e": {
+        "appPageName": "deletedeveloper",
+        "componentName": "deletedeveloperComponent",
+        "isEntry": false
     }
 }

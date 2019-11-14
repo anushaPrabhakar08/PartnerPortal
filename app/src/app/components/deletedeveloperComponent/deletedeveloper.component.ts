@@ -4,8 +4,8 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
-import { VERSION, MatDialogRef, MatDialog, MatSnackBar, MAT_DIALOG_DATA } from '@angular/material';
 import { partnerservice } from '../../sd-services/partnerservice';
+import { VERSION, MatDialogRef, MatDialog, MatSnackBar, MAT_DIALOG_DATA } from '@angular/material';
 /**
  * Service import Example :
  * import { HeroService } from '../../services/hero/hero.service';
@@ -26,8 +26,9 @@ export class deletedeveloperComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
     constructor(private bdms: NDataModelService,
-        @Inject(MAT_DIALOG_DATA) private data,
-        private partnerservice: partnerservice
+    private partnerservice: partnerservice,
+     @Inject(MAT_DIALOG_DATA) private data: any,
+   private dialogRef: MatDialogRef<deletedeveloperComponent>
     ) {
         super();
         this.mm = new ModelMethods(bdms);
@@ -35,11 +36,10 @@ export class deletedeveloperComponent extends NBaseComponent implements OnInit {
 
     ngOnInit() {
         console.log(this.data);
-    }
 
-    deletedeveloper(){
-        this.partnerservice.deletedeveloper(this.data);
-        console.log(this.data);
+    }
+    async deletedeveloper(){
+         this.partnerservice.deletedeveloper(this.data);
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
@@ -94,7 +94,7 @@ export class deletedeveloperComponent extends NBaseComponent implements OnInit {
             })
     }
 
-    delete(dataModelName, filter) {
+    delete (dataModelName, filter) {
         this.mm.delete(dataModelName, filter,
             result => {
                 // On Success code here
