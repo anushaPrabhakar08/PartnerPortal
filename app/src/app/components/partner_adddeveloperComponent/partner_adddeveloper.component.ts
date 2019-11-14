@@ -121,9 +121,10 @@ export class partner_adddeveloperComponent extends NBaseComponent implements OnI
             })
     }
 
-    submit(data) {
-        this.partnerservice.savedaveloper(data);
-        this.developerForm.reset();
+    async submit(data) {
+       await this.partnerservice.savedev(data);
+      
         console.log(data);
+        
     }
 }

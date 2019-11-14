@@ -11,7 +11,7 @@
             },
             {
                 "_key": "style",
-                "_value": "width:100%;height:105%;",
+                "_value": "width:100%;",
                 "_type": "kv",
                 "_attrDef": "p"
             },
@@ -2925,6 +2925,12 @@
                                     "_value": "",
                                     "_type": "kv",
                                     "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "[mat-dialog-close]",
+                                    "_value": "[mat-dialog-close]",
+                                    "_type": "a",
+                                    "_attrDef": "c"
                                 }
                             ]
                         }

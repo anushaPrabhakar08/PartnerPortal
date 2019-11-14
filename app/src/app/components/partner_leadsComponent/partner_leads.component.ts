@@ -9,7 +9,7 @@ import { MatDialog } from '@angular/material';
 import { partner_addleadComponent } from '../partner_addleadComponent/partner_addlead.component';
 import { deletepopupComponent } from '../deletepopupComponent/deletepopup.component';
 import { partnerservice } from '../../sd-services/partnerservice';
-
+import {Observable } from 'rxjs';
 @Component({
     selector: 'bh-partner_leads',
     templateUrl: './partner_leads.template.html'
@@ -46,7 +46,6 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
     leadObjtoArr(obj) {
         return Array.from(Object.keys(obj), k => obj[k]);
     }
-
     ngOnInit() {
         this.getdata();
     }
@@ -56,6 +55,9 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
             width: '450px',
             data: table
         });
+            dialogRef.afterClosed().subscribe(result => {
+        this.ngOnInit();
+    });
     }
 
 
@@ -64,6 +66,9 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
             width: '450px',
             data: 'hello'
         });
+        dialogRef.afterClosed().subscribe(result => {
+        this.ngOnInit();
+    });
     }
 
     applyFilter(filterValue: string) {

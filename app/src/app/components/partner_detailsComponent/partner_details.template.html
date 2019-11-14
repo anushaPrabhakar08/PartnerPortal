@@ -10,26 +10,30 @@
 
         <mat-card-content>
           <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="space-evenly none" [fxShow]="true" [fxHide]="false">
-            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-              <mat-form-field style="width:200px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-                <input matInput placeholder="Company Name" required readonly="readonly">
+            <form [formGroup]="profileForm">
+              <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                  <mat-form-field style="width:200px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                    <input matInput placeholder="Company Name" required formControlName="companyName" readonly="readonly">
 
-              </mat-form-field>
-              <mat-form-field style="width:200px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-                <input matInput placeholder="Company Type" required readonly="readonly">
+                  </mat-form-field>
+                  <mat-form-field style="width:200px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                    <input matInput placeholder="Company Type" required formControlName="companyType" readonly="readonly">
 
-              </mat-form-field>
-            </div>
-            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-              <mat-form-field style="width:200px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-                <input matInput placeholder="Company Website" required readonly="readonly">
+                  </mat-form-field>
+                </div>
+                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                  <mat-form-field style="width:200px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                    <input matInput placeholder="Company Website" required formControlName="companyWebsite" readonly="readonly">
 
-              </mat-form-field>
-              <mat-form-field style="width:200px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-                <input matInput placeholder="Number of Employees" required readonly="readonly">
+                  </mat-form-field>
+                  <mat-form-field style="width:200px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                    <input matInput placeholder="Number of Employees" required formControlName="numberofEmployees" readonly="readonly">
 
-              </mat-form-field>
-            </div>
+                  </mat-form-field>
+                </div>
+              </div>
+            </form>
           </div>
         </mat-card-content>
       </mat-card>
@@ -40,34 +44,38 @@
 
         <mat-card-content align="center">
           <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="space-evenly none" [fxShow]="true" [fxHide]="false">
-            <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="start none" [fxShow]="true" [fxHide]="false">
-              <mat-form-field style="width:200px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-                <input matInput placeholder="First Name" required readonly="readonly">
+            <form [formGroup]="personalForm">
+              <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="start none" [fxShow]="true" [fxHide]="false">
+                  <mat-form-field style="width:200px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                    <input matInput placeholder="First Name" required formControlName="firstName" readonly="readonly">
 
-              </mat-form-field>
-              <mat-form-field style="width:200px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-                <input matInput placeholder="Contact Number" required readonly="readonly">
+                  </mat-form-field>
+                  <mat-form-field style="width:200px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                    <input matInput placeholder="Contact Number" required formControlName="mobileNumber" readonly="readonly">
 
-              </mat-form-field>
-              <mat-form-field style="width:200px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-                <input matInput placeholder="Email" required readonly="readonly">
+                  </mat-form-field>
+                  <mat-form-field style="width:200px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                    <input matInput placeholder="Email" required formControlName="emailId" readonly="readonly">
 
-              </mat-form-field>
-            </div>
-            <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="end none" [fxShow]="true" [fxHide]="false">
-              <mat-form-field style="width:200px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-                <input matInput placeholder="Last Name" required readonly="readonly">
+                  </mat-form-field>
+                </div>
+                <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="end none" [fxShow]="true" [fxHide]="false">
+                  <mat-form-field style="width:200px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                    <input matInput placeholder="Last Name" required formControlName="lastName" readonly="readonly">
 
-              </mat-form-field>
-              <mat-form-field style="width:200px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-                <input matInput placeholder="Office Number" required readonly="readonly">
+                  </mat-form-field>
+                  <mat-form-field style="width:200px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                    <input matInput placeholder="addresss" required formControlName="address" readonly="readonly">
 
-              </mat-form-field>
-              <mat-form-field style="width:200px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-                <input matInput placeholder="Position" required readonly="readonly">
+                  </mat-form-field>
+                  <mat-form-field style="width:200px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                    <input matInput placeholder="Position" required formControlName="designation" readonly="readonly">
 
-              </mat-form-field>
-            </div>
+                  </mat-form-field>
+                </div>
+              </div>
+            </form>
           </div>
         </mat-card-content>
       </mat-card>
@@ -130,12 +138,12 @@
                   </div>
                 </div>
                 <table mat-table [dataSource]="dataSource" class="table-width-fix">
-                  <tr mat-header-row *matHeaderRowDef="[&apos;no&apos;,&apos;name&apos;,&apos;email&apos;,&apos;position&apos;,&apos;status&apos;,&apos;action&apos;]"></tr>
-                  <tr mat-row *matRowDef="let row; columns: [&apos;no&apos;,&apos;name&apos;,&apos;email&apos;,&apos;position&apos;,&apos;status&apos;,&apos;action&apos;];"></tr>
+                  <tr mat-header-row *matHeaderRowDef="[&apos;index&apos;,&apos;name&apos;,&apos;email&apos;,&apos;position&apos;,&apos;status&apos;,&apos;action&apos;]"></tr>
+                  <tr mat-row *matRowDef="let row; columns: [&apos;index&apos;,&apos;name&apos;,&apos;email&apos;,&apos;position&apos;,&apos;status&apos;,&apos;action&apos;];"></tr>
 
-                  <ng-container matColumnDef="no">
+                  <ng-container matColumnDef="index">
                     <th mat-header-cell *matHeaderCellDef class="tab-partner-header">No</th>
-                    <td mat-cell *matCellDef="let table; let i = index;" class="tab-partner-data">{{table.no}}</td>
+                    <td mat-cell *matCellDef="let table; let i = index;" class="tab-partner-data">{{i+1}}</td>
                   </ng-container>
 
                   <ng-container matColumnDef="name">

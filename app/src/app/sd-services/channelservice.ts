@@ -76,6 +76,42 @@ export class channelservice {
       throw e;
     }
   }
+  public async getpartnerlist(...others) {
+    try {
+      let bh = {
+        input: {},
+        local: { result: undefined, modlerUrlApi: undefined }
+      };
+      bh = this.__constructDefault(bh);
+
+      bh = await this.sd_qC0rhOq7GaFqQ2WM(bh);
+      //appendnew_next_getpartnerlist
+      //Start formatting output variables
+      let outputVariables = { input: {}, local: { result: bh.local.result } };
+      //End formatting output variables
+      return outputVariables;
+    } catch (e) {
+      throw e;
+    }
+  }
+  public async getPerticularPartner(id = undefined, ...others) {
+    try {
+      let bh = {
+        input: { id: id },
+        local: { result: undefined, modlerUrlApi: undefined }
+      };
+      bh = this.__constructDefault(bh);
+
+      bh = await this.sd_8jUiKC2c0l5ZLdQA(bh);
+      //appendnew_next_getPerticularPartner
+      //Start formatting output variables
+      let outputVariables = { input: {}, local: { result: bh.local.result } };
+      //End formatting output variables
+      return outputVariables;
+    } catch (e) {
+      throw e;
+    }
+  }
   //appendnew_flow_channelservice_Start
 
   async sd_2tky7jqHupi9JB9C(bh) {
@@ -102,6 +138,64 @@ export class channelservice {
       };
       bh.local.result = await this.sdService.nHttpRequest(requestOptions);
       //appendnew_next_sd_X2HaIwoS0PpnP1i3
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_qC0rhOq7GaFqQ2WM(bh) {
+    try {
+      bh.local.modlerUrlApi = `http://localhost:24483/api/getpartnerdata`;
+
+      bh = await this.sd_e4HTIIEhpDWx2cjq(bh);
+      //appendnew_next_sd_qC0rhOq7GaFqQ2WM
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_e4HTIIEhpDWx2cjq(bh) {
+    try {
+      let requestOptions = {
+        url: bh.local.modlerUrlApi,
+        method: 'get',
+        responseType: 'json',
+        reportProgress: undefined,
+        headers: {},
+        params: {},
+        body: undefined
+      };
+      bh.local.result = await this.sdService.nHttpRequest(requestOptions);
+      //appendnew_next_sd_e4HTIIEhpDWx2cjq
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_8jUiKC2c0l5ZLdQA(bh) {
+    try {
+      bh.local.modlerUrlApi = `http://localhost:24483/api/getPerticularPartner?_id=${bh.input.id}`;
+
+      bh = await this.sd_GpnwOR5HHkYnszkb(bh);
+      //appendnew_next_sd_8jUiKC2c0l5ZLdQA
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_GpnwOR5HHkYnszkb(bh) {
+    try {
+      let requestOptions = {
+        url: bh.local.modlerUrlApi,
+        method: 'get',
+        responseType: 'json',
+        reportProgress: undefined,
+        headers: {},
+        params: {},
+        body: bh.input.id
+      };
+      bh.local.result = await this.sdService.nHttpRequest(requestOptions);
+      //appendnew_next_sd_GpnwOR5HHkYnszkb
       return bh;
     } catch (e) {
       throw e;

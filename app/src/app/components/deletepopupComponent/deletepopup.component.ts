@@ -28,7 +28,6 @@ export class deletepopupComponent extends NBaseComponent implements OnInit {
 
     deletedata(){
         this.partnerservice.deleteleads(this.data);
-       
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {

@@ -113,13 +113,9 @@ export class partner_addleadComponent extends NBaseComponent implements OnInit {
     }
 
 submit(data) {
-    if(data.organisationName=="" && data.location=="" && data.opportunityType=="" && data.leadGeneratedDate=="" && data.contactDetails=="" && data.comment==""){
-        console.log('data not present');
-    }else{
-  console.log(data);
-    }
 this.profileForm.reset();
 this.partnerservice.saveleadata(data);
+
 }
 
 

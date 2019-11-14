@@ -11,109 +11,6 @@
         "serviceName": "partnerservice"
     },
     {
-        "id": "sd_zw7DETw9QU4kK81X",
-        "type": "Start",
-        "z": "sd_ilDSHUtXqB5Z3v1A",
-        "name": "savedaveloper",
-        "outputs": 1,
-        "noerr": 0,
-        "inputVariables": [
-            {
-                "key": "data",
-                "defaultValue": {
-                    "type": "str",
-                    "value": ""
-                },
-                "output": false
-            }
-        ],
-        "localVariables": [
-            {
-                "key": "result",
-                "defaultValue": {
-                    "type": "str",
-                    "value": ""
-                },
-                "output": true
-            },
-            {
-                "key": "modlerUrlApi",
-                "defaultValue": {
-                    "type": "str",
-                    "value": ""
-                },
-                "output": false
-            }
-        ],
-        "functionName": "savedaveloper",
-        "x": 120,
-        "y": 62.8125,
-        "wires": [
-            [
-                "sd_xIgXKrl1iV0XgH8H"
-            ]
-        ],
-        "generateNext": true,
-        "generated": false,
-        "serviceName": "partnerservice"
-    },
-    {
-        "id": "sd_xIgXKrl1iV0XgH8H",
-        "type": "Script",
-        "z": "sd_ilDSHUtXqB5Z3v1A",
-        "name": "developers data",
-        "script": "bh.local.modlerUrlApi=`http://localhost:24483/api/savedevelopers?data=${bh.input.data}`;",
-        "x": 304.84375,
-        "y": 59.8125,
-        "wires": [
-            [
-                "sd_IJG4oyLVYQYyL2yf"
-            ]
-        ],
-        "generateNext": false,
-        "generated": true,
-        "serviceName": "partnerservice"
-    },
-    {
-        "id": "sd_IJG4oyLVYQYyL2yf",
-        "type": "HttpRequest",
-        "z": "sd_ilDSHUtXqB5Z3v1A",
-        "name": "modler flow",
-        "method": "post",
-        "methodMappingObj": {},
-        "urlMapping": "bh.local.modlerUrlApi",
-        "urlMappingObj": {
-            "mapVarType": "bh.local",
-            "mapVarValue": "modlerUrlApi"
-        },
-        "ret": "json",
-        "retMappingObj": {},
-        "reqBody": "bh.input.data",
-        "reqBodyObj": {
-            "mapVarType": "bh.input",
-            "mapVarValue": "data"
-        },
-        "resultMapping": "bh.local.result",
-        "resultMappingObj": {
-            "mapVarType": "bh.local",
-            "mapVarValue": "result"
-        },
-        "headers": {},
-        "headersObj": [],
-        "headerMappingObj": {},
-        "params": {},
-        "paramsObj": [],
-        "paramMappingObj": {},
-        "x": 495.84375,
-        "y": 68.796875,
-        "wires": [
-            []
-        ],
-        "generateNext": false,
-        "generated": true,
-        "serviceName": "partnerservice"
-    },
-    {
         "id": "sd_hdpX7x5jhHFrDmOl",
         "type": "Start",
         "z": "sd_ilDSHUtXqB5Z3v1A",
@@ -268,7 +165,8 @@
             ]
         ],
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "partnerservice"
     },
     {
         "id": "sd_zfHojHu2pemhgFbG",
@@ -305,7 +203,8 @@
             []
         ],
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "partnerservice"
     },
     {
         "id": "sd_D2xZRilDsznkAaCj",
@@ -349,7 +248,7 @@
         "id": "sd_I2EB3GOPeTTSh4Jq",
         "type": "Script",
         "z": "sd_ilDSHUtXqB5Z3v1A",
-        "name": "get leads",
+        "name": "",
         "script": "bh.local.modlerUrlApi=`http://localhost:24483/api/getdevelopers`;",
         "x": 347.03125,
         "y": 450.921875,
@@ -695,6 +594,107 @@
         "paramMappingObj": {},
         "x": 555.03125,
         "y": 811.90625,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_VRBMlOjgWqivLgt1",
+        "type": "Start",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "savedev",
+        "outputs": 1,
+        "noerr": 0,
+        "inputVariables": [
+            {
+                "key": "obj",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "result",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": true
+            },
+            {
+                "key": "apiurl",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "functionName": "savedev",
+        "x": 124.1875,
+        "y": 59.921875,
+        "wires": [
+            [
+                "sd_h6ToBlE8mb2KESCa"
+            ]
+        ],
+        "generateNext": true,
+        "generated": false,
+        "serviceName": "partnerservice"
+    },
+    {
+        "id": "sd_h6ToBlE8mb2KESCa",
+        "type": "Script",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "",
+        "script": "bh.local.apiurl=`http://localhost:24483/api/savedevelopers?data=${bh.input.obj}`;",
+        "x": 303.03125,
+        "y": 61.921875,
+        "wires": [
+            [
+                "sd_KCbHbh7E2xgUaluc"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_KCbHbh7E2xgUaluc",
+        "type": "HttpRequest",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "",
+        "method": "post",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.apiurl",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "apiurl"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "reqBody": "bh.input.obj",
+        "reqBodyObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "obj"
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "x": 489.03125,
+        "y": 59.90625,
         "wires": [
             []
         ],
