@@ -11,7 +11,7 @@ import { loginComponent } from '../loginComponent/login.component';
 import { partner_adddeveloperComponent } from '../partner_adddeveloperComponent/partner_adddeveloper.component';
 import { partnerservice } from '../../sd-services/partnerservice';
 import { deletedeveloperComponent } from '../deletedeveloperComponent/deletedeveloper.component';
-
+import {Observable } from 'rxjs';
 
 
 @Component({
@@ -42,6 +42,9 @@ export class partner_developersComponent extends NBaseComponent implements OnIni
             width: '450px',
             data: data
         });
+         dialogRef.afterClosed().subscribe(result => {
+        this.ngOnInit();
+    });
     }
 
     async getdata() {
@@ -66,6 +69,9 @@ export class partner_developersComponent extends NBaseComponent implements OnIni
             width: '450px',
             data: 'hello'
         });
+        dialogRef.afterClosed().subscribe(result => {
+        this.ngOnInit();
+    });
     }
 
     applyFilter(filterValue: string) {

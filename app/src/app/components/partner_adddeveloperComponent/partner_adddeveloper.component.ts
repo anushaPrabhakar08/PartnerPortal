@@ -125,5 +125,6 @@ export class partner_adddeveloperComponent extends NBaseComponent implements OnI
         this.partnerservice.savedaveloper(data);
         this.developerForm.reset();
         console.log(data);
+        
     }
 }
