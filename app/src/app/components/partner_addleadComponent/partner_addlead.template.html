@@ -18,6 +18,17 @@
       </div>
       <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
         <div fxLayout="column wrap" style="width:70%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+          <mat-form-field style="width:320px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+            <input matInput placeholder="Organisation Website" required formControlName="orgWebsite">
+
+          </mat-form-field>
+        </div>
+        <div fxLayout="column wrap" style="margin-left:20px;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+          <mat-icon>web</mat-icon>
+        </div>
+      </div>
+      <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+        <div fxLayout="column wrap" style="width:70%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
           <mat-form-field style="width: 320px;" [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;">
             <input matInput name="location" placeholder="Location" required formControlName="location">
 

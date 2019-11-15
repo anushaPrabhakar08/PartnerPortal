@@ -9,10 +9,27 @@ import { partnerservice } from '../../sd-services/partnerservice';
 import { uploadcertificateComponent } from '../uploadcertificateComponent/uploadcertificate.component';
 import { MatDialog } from '@angular/material';
 import { channelservice } from '../../sd-services/channelservice';
-import { Router, ActivatedRoute  } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { FormGroup, FormControl } from '@angular/forms';
 
-
+export interface PeriodicElement {
+    //id: string;
+    no: number;
+    position: string;
+    name: string;
+    status: string;
+    email: string;
+}
+const ELEMENT_DATA: PeriodicElement[] = [];
+export interface LeadsElement {
+    no: number;
+    orgName: string;
+    orgWebsite: string;
+    leadCreationDate: string;
+    oppType: string;
+    location;
+}
+const LEADS_DATA: LeadsElement[] = [];
 @Component({
     selector: 'bh-partner_details',
     templateUrl: './partner_details.template.html'
@@ -21,32 +38,36 @@ import { FormGroup, FormControl } from '@angular/forms';
 export class partner_detailsComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
     data;
+    leaddata;
+    devdata;
     // @ViewChild(MatSort, { static: true }) sort: MatSort;
     @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
-id;
-P_data;
-    dataSource = new MatTableDataSource(this.data);
-    leadsDataSource = new MatTableDataSource();
+    id;
+    P_data;
+    dataSource = new MatTableDataSource(this.leaddata);
+    leadsDataSource = new MatTableDataSource(this.devdata);
+
+    
     profileForm = new FormGroup({
-    companyName: new FormControl(''),
-    companyWebsite: new FormControl(''),
-    companyType: new FormControl(''),
-    numberofEmployees: new FormControl(''),
-  });
+        companyName: new FormControl(''),
+        companyWebsite: new FormControl(''),
+        companyType: new FormControl(''),
+        numberofEmployees: new FormControl(''),
+    });
     personalForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-    // country: new FormControl(''),
-    mobileNumber: new FormControl(''),
-    emailId: new FormControl(''),
-    address: new FormControl(' '),
-    designation: new FormControl('')
-      });
+        firstName: new FormControl(''),
+        lastName: new FormControl(''),
+        // country: new FormControl(''),
+        mobileNumber: new FormControl(''),
+        emailId: new FormControl(''),
+        address: new FormControl(' '),
+        designation: new FormControl('')
+    });
     constructor(private bdms: NDataModelService, private dialog: MatDialog,
         private partnerservice: partnerservice,
         private router: Router,
         private route: ActivatedRoute,
-        private channelservice:channelservice
+        private channelservice: channelservice
     ) {
         super();
         this.mm = new ModelMethods(bdms);
@@ -68,48 +89,61 @@ P_data;
         });
     }
 
-   async ngOnInit() {
+    async ngOnInit() {
         this.dataSource.paginator = this.paginator;
+        this.getdevs();
         this.leadsDataSource.paginator = this.paginator;
         this.getleads();
-    
-    this.id = this.route.snapshot.paramMap.get('_id');
-   console.log(this.id);
-   this.P_data= (await this.channelservice.getPerticularPartner(this.id)).local.result;
-   console.log(this.P_data);
 
 
-   this.profileForm.patchValue({
-      companyName: this.P_data.companyName,
-      companyWebsite: this.P_data.companyWebsite,
-      companyType: this.P_data.companyType,
-      numberofEmployees:this.P_data.numberofEmployees,
-   });
-
-    this.personalForm.patchValue({
-      firstName: this.P_data.firstName,
-      lastName: this.P_data.lastName,
-    //   country: this.P_data.country,
-      mobileNumber: this.P_data.mobileNumber,
-      emailId: this.P_data.emailId,
-      designation: this.P_data.designation,
-      address: this.P_data.address
-    });
-
-   
-  }
+        this.id = this.route.snapshot.paramMap.get('_id');
+        console.log(this.id);
+        this.P_data = (await this.channelservice.getPerticularPartner(this.id)).local.result;
+        console.log(this.P_data);
 
 
-    
+        this.profileForm.patchValue({
+            companyName: this.P_data.companyName,
+            companyWebsite: this.P_data.companyWebsite,
+            companyType: this.P_data.companyType,
+            numberofEmployees: this.P_data.numberofEmployees,
+        });
 
-   
+        this.personalForm.patchValue({
+            firstName: this.P_data.firstName,
+            lastName: this.P_data.lastName,
+            //   country: this.P_data.country,
+            mobileNumber: this.P_data.mobileNumber,
+            emailId: this.P_data.emailId,
+            designation: this.P_data.designation,
+            address: this.P_data.address
+        });
 
 
-    async getleads() {
-        this.data = (await this.partnerservice.getleadsdata()).local.result;
-
-        // console.log(this.data);
     }
+async getleads(){
+       this.leaddata = this.leadObjtoArr((await this.partnerservice.getleadsdata()).local.result);
+        this.leadsDataSource.data = this.leaddata;
+       console.log(this.leaddata);
+   }
+   leadObjtoArr(obj) {
+       return Array.from(Object.keys(obj), k => obj[k]);
+   }
+   async getdevs(){
+       this.devdata = this.developerObjtoArr((await this.partnerservice.getdeveloper()).local.result);
+       this.dataSource.data =this.devdata;
+       console.log(this.devdata);
+   }
+   developerObjtoArr(obj) {
+       return Array.from(Object.keys(obj), k => obj[k]);
+   }
+
+
+    // async getleads() {
+    //     this.data = (await this.partnerservice.getleadsdata()).local.result;
+
+    //     console.log(this.data);
+    // }
 
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {

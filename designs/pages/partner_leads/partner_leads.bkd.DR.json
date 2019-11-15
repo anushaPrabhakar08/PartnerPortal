@@ -943,7 +943,7 @@
                                         },
                                         {
                                             "_key": "Mapping",
-                                            "_value": "{{table.website}}",
+                                            "_value": "{{table.orgWebsite}}",
                                             "_type": "ma",
                                             "_attrDef": "p",
                                             "_useAsLabel": true

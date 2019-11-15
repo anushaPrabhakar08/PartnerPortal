@@ -10,9 +10,6 @@ import { partnerservice } from '../../sd-services/partnerservice';
 import { channelservice } from '../../sd-services/channelservice';
 
 
-
-
-
 @Component({
     selector: 'bh-channel_dashboard',
     templateUrl: './channel_dashboard.template.html'
@@ -33,12 +30,6 @@ export class channel_dashboardComponent extends NBaseComponent implements OnInit
 
     }
 
-
-    // onPaginateChange(event) {
-    //     console.log("rytvubjnkft")
-    //    // alert(JSON.stringify("Current page index: " + event.pageIndex));
-    // }
-
     ngOnInit() {
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
@@ -55,17 +46,11 @@ export class channel_dashboardComponent extends NBaseComponent implements OnInit
         return Array.from(Object.keys(obj), k => obj[k]);
     }
 
-
-
     applyFilter(filterValue: string) {
         filterValue = filterValue.trim();
         filterValue = filterValue.toLowerCase();
         this.dataSource.filter = filterValue;
     }
-
-    // applyFilter(filterValue: string) {
-    //     this.dataSource.filter = filterValue.trim().toLowerCase();
-    // }
 
     showPartnerDetails(table) {
         // console.log(table);

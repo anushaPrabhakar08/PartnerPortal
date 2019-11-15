@@ -503,5 +503,25 @@
                 "type": "string"
             }
         ]
+    },
+    "5e12ef6b-6c3b-91fd-3190-72f807cf1265": {
+        "dataModelId": "5e12ef6b-6c3b-91fd-3190-72f807cf1265",
+        "name": "announcement",
+        "description": "Channel announcement",
+        "dataSource": "neutrinos-training-rt",
+        "fields": [
+            {
+                "name": "announcement",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "partnerType",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            }
+        ]
     }
 }

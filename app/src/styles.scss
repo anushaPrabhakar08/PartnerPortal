@@ -25,10 +25,21 @@
 .primary-red-btn {
     background-color: #ee1c22;
     color: white;
+
 }
 .iconcontent .mat-icon{
     display: flex !important;
     font-weight: bolder;
+}
+.add-icon-collateral .mat-mini-fab{
+    background:rgba(241, 8, 8, 0.82) !important; 
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    height: 50px !important;
+    width: 50px !important;
 }
 .margin-tb {
     margin: 10px 40px;
@@ -69,6 +80,7 @@
 .primary-red-btn {
     background-color: #ee1c22;
     color: white;
+    
 }
 
 .margin-tb {
@@ -109,7 +121,9 @@
     width: 100%;
 }
 
-
+.line-height .mat-form-field{
+    line-height: 1.5 !important;
+}
 // mat-sidenav .mat-drawer{
 //     top:80px !important;
 // }
@@ -281,9 +295,8 @@ bh-partner_agreement {
 .gallery-card-content, .pdf-card-content{
     width: max-content;
     height: max-content;
-    overflow: hidden; 
-    // width:17%;
-    // height:80%;
+    overflow: hidden;
+    margin: 1em; 
 }
 
 .card-bg .mat-card{
@@ -367,13 +380,6 @@ video {
     font-weight: bold;
 }
 
-
-.gallery-icon {
-    background-color: #f43692 !important;
-    height: 30px !important;
-    width: 30px !important;
-    font-weight: normal;
-} 
 
 //partner-lead
 

@@ -10,6 +10,7 @@ import { Developers } from '../src/app/models/Developers.model';
 import { leads } from '../src/app/models/Leads.model';
 
 import { contactmodel } from '../src/app/models/contactmodel.model';
+import { announcement } from '../src/app/models/announcement.model';
 //IMPORT NEW DATAMODEL
 
 export class NDataModel {
@@ -24,6 +25,7 @@ channelmember: channelMember;
 developers: Developers;
 leads: leads;
 contactmodel: contactmodel;
+announcement: announcement;
 //DECLARE NEW VARIABLE
 
 constructor() {
@@ -39,6 +41,7 @@ this.developers = new Developers();
 this.leads = new leads();
 
 this.contactmodel = new contactmodel();
+this.announcement = new announcement();
 //CREATE NEW DM INSTANCE
     }
 }

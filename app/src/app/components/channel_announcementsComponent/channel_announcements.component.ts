@@ -5,16 +5,7 @@ import { ModelMethods } from '../../lib/model.methods';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 import { ReactiveFormsModule,FormGroup, FormControl, FormBuilder,Validators } from '@angular/forms';
-/**
- * Service import Example :
- * import { HeroService } from '../../services/hero/hero.service';
- */
-
-/**
- *
- * Service Designer import Example - Service Name - HeroService
- * import { HeroService } from 'app/sd-services/HeroService';
- */
+import { channelservice } from '../../sd-services/channelservice';
 
 @Component({
     selector: 'bh-channel_announcements',
@@ -23,14 +14,14 @@ import { ReactiveFormsModule,FormGroup, FormControl, FormBuilder,Validators } fr
 
 export class channel_announcementsComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
-announce=['Premium','standard','All'];
+    announce=['Premium','standard','All'];
 
-announcdetail=new FormGroup({
-    announcement:new FormControl(''),
-    announcetype:new FormControl('')
-})
+    announcdetail=new FormGroup({
+        announcement:new FormControl(''),
+        partnerType:new FormControl('')
+    })
 
-    constructor(private bdms: NDataModelService) {
+    constructor(private bdms: NDataModelService, private channelservice: channelservice) {
         super();
         this.mm = new ModelMethods(bdms);
     }
@@ -45,7 +36,12 @@ announcdetail=new FormGroup({
     }
 
     submit(data){
-        
+       // this.data = this.leadObjtoArr((await this.channelservice.postAnnouncement()).local.result);
+    }
+
+    async getdata() {
+      // this.data = this.leadObjtoArr((await this.channelservice.postAnnouncement()).local.result);
+       // console.log(this.data);
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {

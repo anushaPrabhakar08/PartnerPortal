@@ -107,7 +107,7 @@
                 },
                 {
                     "_key": "layoutAlign",
-                    "_value": "space-between",
+                    "_value": "start",
                     "_type": "a",
                     "_attrDef": "p"
                 },
@@ -427,7 +427,7 @@
                         },
                         {
                             "_key": "class",
-                            "_value": "iconcontent",
+                            "_value": "add-icon-collateral",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -480,13 +480,13 @@
                         "designerReference": [
                             {
                                 "_key": "style",
-                                "_value": "background:rgba(241, 8, 8, 0.82); color: #fff;",
+                                "_value": "",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
                             {
                                 "_key": "class",
-                                "_value": "add-icon",
+                                "_value": "",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -580,7 +580,7 @@
                     },
                     {
                         "_key": "layoutAlign",
-                        "_value": "space-between",
+                        "_value": "start",
                         "_type": "a",
                         "_attrDef": "p"
                     },
@@ -688,13 +688,13 @@
                             },
                             {
                                 "_key": "layoutAlign",
-                                "_value": "space-between",
+                                "_value": "start",
                                 "_type": "a",
                                 "_attrDef": "p"
                             },
                             {
                                 "_key": "pLayoutAlign",
-                                "_value": "stretch",
+                                "_value": "start",
                                 "_type": "a",
                                 "_attrDef": "p"
                             },
@@ -1687,140 +1687,6 @@
                         }
                     }
                 }
-            },
-            "8539ca6b-010e-d497-9500-6d0e340b1c28": {
-                "paletteKey": "FlexLayoutRow",
-                "parentEditorKey": "eff8c2e0-7bb7-15c8-1e6d-9d5baaa6a0a6",
-                "designerReference": [
-                    {
-                        "_key": "componentLabel",
-                        "_value": "Row",
-                        "_type": "kv",
-                        "_attrDef": "p",
-                        "_useAsLabel": true
-                    },
-                    {
-                        "_key": "style",
-                        "_value": "width:100%;",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "class",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "fxFlex",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "fxLayoutGap",
-                        "_value": "1em",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "wrap",
-                        "_value": "wrap",
-                        "_type": "a",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "layoutAlign",
-                        "_value": "start",
-                        "_type": "a",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "pLayoutAlign",
-                        "_value": "none",
-                        "_type": "a",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "[fxShow]",
-                        "_value": "true",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "[fxHide]",
-                        "_value": "false",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    }
-                ]
-            },
-            "63a9f362-98c7-4e17-0b0f-5c1af31ce3ff": {
-                "paletteKey": "FlexLayoutRow",
-                "parentEditorKey": "eff8c2e0-7bb7-15c8-1e6d-9d5baaa6a0a6",
-                "designerReference": [
-                    {
-                        "_key": "componentLabel",
-                        "_value": "Row",
-                        "_type": "kv",
-                        "_attrDef": "p",
-                        "_useAsLabel": true
-                    },
-                    {
-                        "_key": "style",
-                        "_value": "width:100%;margin-bottom:30px;",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "class",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "fxFlex",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "fxLayoutGap",
-                        "_value": "1em",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "wrap",
-                        "_value": "wrap",
-                        "_type": "a",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "layoutAlign",
-                        "_value": "start",
-                        "_type": "a",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "pLayoutAlign",
-                        "_value": "stretch",
-                        "_type": "a",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "[fxShow]",
-                        "_value": "true",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "[fxHide]",
-                        "_value": "false",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    }
-                ]
             }
         }
     }

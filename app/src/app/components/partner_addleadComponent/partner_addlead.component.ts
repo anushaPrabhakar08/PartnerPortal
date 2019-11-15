@@ -16,6 +16,7 @@ export class partner_addleadComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
       profileForm = new FormGroup({
           organisationName : new FormControl(''),
+          orgWebsite: new FormControl(''),
           location : new FormControl(''),
           opportunityType : new FormControl(''),
           leadGeneratedDate : new FormControl(''),
@@ -26,6 +27,7 @@ export class partner_addleadComponent extends NBaseComponent implements OnInit {
         super();
         this.mm = new ModelMethods(bdms);
     }
+
 
     ngOnInit() {
 

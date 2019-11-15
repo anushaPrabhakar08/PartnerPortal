@@ -582,11 +582,17 @@
                                     "_value": "announcdetail",
                                     "_type": "kv",
                                     "_attrDef": "c"
+                                },
+                                {
+                                    "_key": "(reset)",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
                                 }
                             ],
                             "a715298f-b211-51b6-d33d-42af69589e27": {
                                 "paletteKey": "FlexLayoutCol",
-                                "parentEditorKey": "d45fb4c8-9a52-a9f8-a9a9-bdc602fcdc53",
+                                "parentEditorKey": "83b1c666-0500-7ceb-7ac1-0f8187b05258",
                                 "designerReference": [
                                     {
                                         "_key": "componentLabel",
@@ -630,86 +636,6 @@
                                         "_value": "start",
                                         "_type": "a",
                                         "_attrDef": "p"
-                                    }
-                                ],
-                                "05eca0a5-cd42-611c-be65-3444ce0a0601": {
-                                    "paletteKey": "NG-TextArea",
-                                    "parentEditorKey": "5002645f-9c08-c01c-f94b-024492f4a9f6",
-                                    "designerReference": [
-                                        {
-                                            "_key": "style",
-                                            "_value": "font-size:20px;",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "class",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "placeholder",
-                                            "_value": "Announcement",
-                                            "_type": "kv",
-                                            "_attrDef": "p",
-                                            "_useAsLabel": true
-                                        },
-                                        {
-                                            "_key": "value",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "required",
-                                            "_value": "required",
-                                            "_type": "a",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "[(ngModel)]",
-                                            "_value": "announcement",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "color",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "name",
-                                            "_value": "announcement",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "[readonly]",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "[disabled]",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        }
-                                    ]
-                                }
-                            },
-                            "3b3b1872-d07f-c41a-224f-05f94a06eb11": {
-                                "paletteKey": "FlexLayoutRow",
-                                "parentEditorKey": "83b1c666-0500-7ceb-7ac1-0f8187b05258",
-                                "designerReference": [
-                                    {
-                                        "_key": "componentLabel",
-                                        "_value": "Row",
-                                        "_type": "kv",
-                                        "_attrDef": "p",
-                                        "_useAsLabel": true
                                     },
                                     {
                                         "_key": "pLayoutAlign",
@@ -767,7 +693,147 @@
                                         },
                                         {
                                             "_key": "[(ngModel)]",
+                                            "_value": "dm.announcement.announcement",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "color",
                                             "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "name",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "[readonly]",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "[disabled]",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "formControlName",
+                                            "_value": "announcement",
+                                            "_type": "kv",
+                                            "_attrDef": "c"
+                                        }
+                                    ]
+                                }
+                            },
+                            "3b3b1872-d07f-c41a-224f-05f94a06eb11": {
+                                "paletteKey": "FlexLayoutRow",
+                                "parentEditorKey": "83b1c666-0500-7ceb-7ac1-0f8187b05258",
+                                "designerReference": [
+                                    {
+                                        "_key": "componentLabel",
+                                        "_value": "Row",
+                                        "_type": "kv",
+                                        "_attrDef": "p",
+                                        "_useAsLabel": true
+                                    },
+                                    {
+                                        "_key": "pLayoutAlign",
+                                        "_value": "stretch",
+                                        "_type": "a",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "[fxShow]",
+                                        "_value": "true",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "[fxHide]",
+                                        "_value": "false",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "style",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "class",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "fxFlex",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "fxLayoutGap",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "wrap",
+                                        "_value": "wrap",
+                                        "_type": "a",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "layoutAlign",
+                                        "_value": "start",
+                                        "_type": "a",
+                                        "_attrDef": "p"
+                                    }
+                                ],
+                                "05eca0a5-cd42-611c-be65-3444ce0a0601": {
+                                    "paletteKey": "NG-TextArea",
+                                    "parentEditorKey": "3b3b1872-d07f-c41a-224f-05f94a06eb11",
+                                    "designerReference": [
+                                        {
+                                            "_key": "style",
+                                            "_value": "font-size:20px;",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "class",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "placeholder",
+                                            "_value": "Announcement",
+                                            "_type": "kv",
+                                            "_attrDef": "p",
+                                            "_useAsLabel": true
+                                        },
+                                        {
+                                            "_key": "value",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "required",
+                                            "_value": "required",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "[(ngModel)]",
+                                            "_value": "dm.announcement.announcement",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
@@ -805,7 +871,7 @@
                                 },
                                 "929c3a15-7b30-65e2-43b5-38291756f146": {
                                     "paletteKey": "NG-Select",
-                                    "parentEditorKey": "a715298f-b211-51b6-d33d-42af69589e27",
+                                    "parentEditorKey": "3b3b1872-d07f-c41a-224f-05f94a06eb11",
                                     "isAdvancedComponent": true,
                                     "designerReference": [
                                         {
@@ -874,13 +940,13 @@
                                         },
                                         {
                                             "_key": "formControlName",
-                                            "_value": "announcetype",
+                                            "_value": "partnerType",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
                                         {
                                             "_key": "[(ngModel)]",
-                                            "_value": "",
+                                            "_value": "dm.announcement.partnerType",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
@@ -988,7 +1054,7 @@
                             },
                             "1cdd41f3-44be-7ebd-7015-8d4f850a053a": {
                                 "paletteKey": "FlexLayoutRow",
-                                "parentEditorKey": "d45fb4c8-9a52-a9f8-a9a9-bdc602fcdc53",
+                                "parentEditorKey": "83b1c666-0500-7ceb-7ac1-0f8187b05258",
                                 "designerReference": [
                                     {
                                         "_key": "componentLabel",

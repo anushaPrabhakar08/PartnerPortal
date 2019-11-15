@@ -409,6 +409,134 @@
                     }
                 }
             },
+            "8e5481c3-78c0-6796-5ca2-2ac864321af2": {
+                "paletteKey": "FlexLayoutRow",
+                "parentEditorKey": "6f355fa7-3870-1e91-8773-976efc8a3596",
+                "designerReference": [
+                    {
+                        "_key": "componentLabel",
+                        "_value": "Row",
+                        "_type": "kv",
+                        "_attrDef": "p",
+                        "_useAsLabel": true
+                    },
+                    {
+                        "_key": "style",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "class",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "fxFlex",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "fxLayoutGap",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "wrap",
+                        "_value": "wrap",
+                        "_type": "a",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "layoutAlign",
+                        "_value": "start",
+                        "_type": "a",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "pLayoutAlign",
+                        "_value": "stretch",
+                        "_type": "a",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "[fxShow]",
+                        "_value": "true",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "[fxHide]",
+                        "_value": "false",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    }
+                ],
+                "e1ae037b-aa41-1194-f7f8-5cd6abf666f1": {
+                    "paletteKey": "NG-MiniFabButton",
+                    "parentEditorKey": "8e5481c3-78c0-6796-5ca2-2ac864321af2",
+                    "designerReference": [
+                        {
+                            "_key": "style",
+                            "_value": "background:rgba(241, 8, 8, 0.82); color: #fff;",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "class",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "fabicon",
+                            "_value": "keyboard_backspace",
+                            "_type": "a",
+                            "_attrDef": "p",
+                            "_useAsLabel": true
+                        },
+                        {
+                            "_key": "color",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "(click)",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "[disabled]",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "[disableRipple]",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "type",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "routerLink",
+                            "_value": "/channel/dashboard",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        }
+                    ]
+                }
+            },
             "c2360024-4751-6d78-35b8-c409b7ad5805": {
                 "paletteKey": "FlexLayoutRow",
                 "parentEditorKey": "6f355fa7-3870-1e91-8773-976efc8a3596",
@@ -489,7 +617,7 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "width:50%;",
+                            "_value": "width:40%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -606,7 +734,7 @@
                                 },
                                 {
                                     "_key": "layoutAlign",
-                                    "_value": "space-evenly",
+                                    "_value": "start",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
@@ -642,7 +770,7 @@
                                     },
                                     {
                                         "_key": "style",
-                                        "_value": "",
+                                        "_value": "width: 100%;margin: 0px 16px;",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -732,7 +860,7 @@
                                         },
                                         {
                                             "_key": "layoutAlign",
-                                            "_value": "start",
+                                            "_value": "space-between",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         },
@@ -828,7 +956,7 @@
                                             "designerReference": [
                                                 {
                                                     "_key": "style",
-                                                    "_value": "width:200px;",
+                                                    "_value": "width:200px;margin: 10px;",
                                                     "_type": "kv",
                                                     "_attrDef": "p"
                                                 },
@@ -995,7 +1123,7 @@
                                             "designerReference": [
                                                 {
                                                     "_key": "style",
-                                                    "_value": "width:200px;",
+                                                    "_value": "width:200px;margin: 10px;",
                                                     "_type": "kv",
                                                     "_attrDef": "p"
                                                 },
@@ -1199,7 +1327,7 @@
                                             },
                                             {
                                                 "_key": "layoutAlign",
-                                                "_value": "start",
+                                                "_value": "end",
                                                 "_type": "a",
                                                 "_attrDef": "p"
                                             },
@@ -1229,7 +1357,7 @@
                                             "designerReference": [
                                                 {
                                                     "_key": "style",
-                                                    "_value": "width:200px;",
+                                                    "_value": "width:200px;margin: 10px;",
                                                     "_type": "kv",
                                                     "_attrDef": "p"
                                                 },
@@ -1396,7 +1524,7 @@
                                             "designerReference": [
                                                 {
                                                     "_key": "style",
-                                                    "_value": "width:200px;",
+                                                    "_value": "width:200px;margin: 10px;",
                                                     "_type": "kv",
                                                     "_attrDef": "p"
                                                 },
@@ -1643,7 +1771,7 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "width:50%;",
+                            "_value": "width:40%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -1796,7 +1924,7 @@
                                     },
                                     {
                                         "_key": "style",
-                                        "_value": "",
+                                        "_value": "width: 100%;margin: 0px 16px;",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -1886,7 +2014,7 @@
                                         },
                                         {
                                             "_key": "layoutAlign",
-                                            "_value": "start",
+                                            "_value": "space-between",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         },
@@ -1928,7 +2056,7 @@
                                             },
                                             {
                                                 "_key": "class",
-                                                "_value": "",
+                                                "_value": "line-height",
                                                 "_type": "kv",
                                                 "_attrDef": "p"
                                             },
@@ -1982,7 +2110,7 @@
                                             "designerReference": [
                                                 {
                                                     "_key": "style",
-                                                    "_value": "width:200px;",
+                                                    "_value": "width:200px;margin: 10px;",
                                                     "_type": "kv",
                                                     "_attrDef": "p"
                                                 },
@@ -2149,7 +2277,7 @@
                                             "designerReference": [
                                                 {
                                                     "_key": "style",
-                                                    "_value": "width:200px;",
+                                                    "_value": "width:200px;margin: 10px;",
                                                     "_type": "kv",
                                                     "_attrDef": "p"
                                                 },
@@ -2316,7 +2444,7 @@
                                             "designerReference": [
                                                 {
                                                     "_key": "style",
-                                                    "_value": "width:200px;",
+                                                    "_value": "width:200px;margin: 10px;",
                                                     "_type": "kv",
                                                     "_attrDef": "p"
                                                 },
@@ -2550,7 +2678,7 @@
                                             "designerReference": [
                                                 {
                                                     "_key": "style",
-                                                    "_value": "width:200px;",
+                                                    "_value": "width:200px;margin: 10px;",
                                                     "_type": "kv",
                                                     "_attrDef": "p"
                                                 },
@@ -2717,7 +2845,7 @@
                                             "designerReference": [
                                                 {
                                                     "_key": "style",
-                                                    "_value": "width:200px;",
+                                                    "_value": "width:200px;margin: 10px;",
                                                     "_type": "kv",
                                                     "_attrDef": "p"
                                                 },
@@ -2884,7 +3012,7 @@
                                             "designerReference": [
                                                 {
                                                     "_key": "style",
-                                                    "_value": "width:200px;",
+                                                    "_value": "width:200px;margin: 10px;",
                                                     "_type": "kv",
                                                     "_attrDef": "p"
                                                 },
@@ -3130,7 +3258,7 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "width:90%;",
+                            "_value": "width:70%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -4659,7 +4787,7 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "width:90%;",
+                            "_value": "width:70%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -4893,7 +5021,7 @@
                                         },
                                         {
                                             "_key": "title",
-                                            "_value": "Developr Details",
+                                            "_value": "Developer Details",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         }
@@ -4992,7 +5120,7 @@
                                         },
                                         {
                                             "_key": "[dataSource]",
-                                            "_value": "dataSource",
+                                            "_value": "leaddata",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
@@ -5098,7 +5226,7 @@
                                             },
                                             {
                                                 "_key": "Mapping",
-                                                "_value": "{{table.name}}",
+                                                "_value": "{{table.firstName+ table.lastName}}",
                                                 "_type": "ma",
                                                 "_attrDef": "p",
                                                 "_useAsLabel": true
@@ -5269,64 +5397,7 @@
                                             },
                                             {
                                                 "_key": "Mapping",
-                                                "_value": "{{table.status}}",
-                                                "_type": "ma",
-                                                "_attrDef": "p",
-                                                "_useAsLabel": true
-                                            },
-                                            {
-                                                "_key": "columnName",
-                                                "_value": "",
-                                                "_type": "dav",
-                                                "_attrDef": "p",
-                                                "_visibility": false
-                                            },
-                                            {
-                                                "_key": "headerclass",
-                                                "_value": "tab-partner-header",
-                                                "_type": "dav",
-                                                "_attrDef": "p"
-                                            },
-                                            {
-                                                "_key": "columnclass",
-                                                "_value": "tab-partner-data",
-                                                "_type": "dav",
-                                                "_attrDef": "p"
-                                            }
-                                        ]
-                                    },
-                                    "1b789a93-d3dc-db87-aba2-ce04c1ef30e4": {
-                                        "paletteKey": "ng-table-column",
-                                        "parentEditorKey": "aad34ec4-a3e9-a0d3-d185-10139caf0daa",
-                                        "isAdvancedChildComponent": true,
-                                        "designerReference": [
-                                            {
-                                                "_key": "style",
-                                                "_value": "",
-                                                "_type": "kv",
-                                                "_attrDef": "p"
-                                            },
-                                            {
-                                                "_key": "class",
-                                                "_value": "",
-                                                "_type": "kv",
-                                                "_attrDef": "p"
-                                            },
-                                            {
-                                                "_key": "Header Label",
-                                                "_value": "Action",
-                                                "_type": "a",
-                                                "_attrDef": "p"
-                                            },
-                                            {
-                                                "_key": "matSortHeaderColumn",
-                                                "_value": "",
-                                                "_type": "a",
-                                                "_attrDef": "p"
-                                            },
-                                            {
-                                                "_key": "Mapping",
-                                                "_value": "{{table.action}}<button mat-button style=\"color:#0e33ea\"  (click)=\"addCertificateDialog()\">Upload Certificate</button><br/><button mat-button color=\"warn\" (click)=\"cancelCertificateDialog()\" style=\"color:#fb0a11\">Cancel Certificate</button>",
+                                                "_value": "{{table.experience}}",
                                                 "_type": "ma",
                                                 "_attrDef": "p",
                                                 "_useAsLabel": true
@@ -5439,6 +5510,171 @@
                                                 "_attrDef": "p"
                                             }
                                         ]
+                                    },
+                                    "5a39969c-0586-969a-8a7a-1df339783e8e": {
+                                        "paletteKey": "ng-droppable-table-column",
+                                        "parentEditorKey": "aad34ec4-a3e9-a0d3-d185-10139caf0daa",
+                                        "isAdvancedChildComponent": true,
+                                        "designerReference": [
+                                            {
+                                                "_key": "style",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "class",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "Sort Key",
+                                                "_value": "",
+                                                "_type": "dav",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "matSortHeaderColumn",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "columnId",
+                                                "_value": "2d5fbe64-bbfe-ab63-3eb9-c55796dd79e3",
+                                                "_type": "dav",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "Header Label",
+                                                "_value": "Certificate",
+                                                "_type": "a",
+                                                "_attrDef": "p"
+                                            }
+                                        ],
+                                        "2ffb6b9f-42a1-29ca-7cc6-bd5a5bad2b3e": {
+                                            "paletteKey": "NG-button",
+                                            "parentEditorKey": "5a39969c-0586-969a-8a7a-1df339783e8e",
+                                            "designerReference": [
+                                                {
+                                                    "_key": "style",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "class",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "buttonname",
+                                                    "_value": "Upload",
+                                                    "_type": "a",
+                                                    "_attrDef": "p",
+                                                    "_useAsLabel": true
+                                                },
+                                                {
+                                                    "_key": "color",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "(click)",
+                                                    "_value": "addCertificateDialog()",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "[disabled]",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "[disableRipple]",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "type",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "routerLink",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                }
+                                            ]
+                                        },
+                                        "adbe5f99-14cd-0a8b-4751-f6084ee1ae54": {
+                                            "paletteKey": "NG-button",
+                                            "parentEditorKey": "5a39969c-0586-969a-8a7a-1df339783e8e",
+                                            "designerReference": [
+                                                {
+                                                    "_key": "style",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "class",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "buttonname",
+                                                    "_value": "Cancel",
+                                                    "_type": "a",
+                                                    "_attrDef": "p",
+                                                    "_useAsLabel": true
+                                                },
+                                                {
+                                                    "_key": "color",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "(click)",
+                                                    "_value": "cancelCertificateDialog()",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "[disabled]",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "[disableRipple]",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "type",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "routerLink",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                }
+                                            ]
+                                        }
                                     }
                                 }
                             }
@@ -5525,7 +5761,7 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "width:90%;",
+                            "_value": "width:70%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -5907,7 +6143,7 @@
                                             },
                                             {
                                                 "_key": "Mapping",
-                                                "_value": "{{table.no}}",
+                                                "_value": "{{i+1}}",
                                                 "_type": "ma",
                                                 "_attrDef": "p",
                                                 "_useAsLabel": true
@@ -5964,64 +6200,7 @@
                                             },
                                             {
                                                 "_key": "Mapping",
-                                                "_value": "{{table.orgName}}",
-                                                "_type": "ma",
-                                                "_attrDef": "p",
-                                                "_useAsLabel": true
-                                            },
-                                            {
-                                                "_key": "columnName",
-                                                "_value": "",
-                                                "_type": "dav",
-                                                "_attrDef": "p",
-                                                "_visibility": false
-                                            },
-                                            {
-                                                "_key": "headerclass",
-                                                "_value": "tab-partner-header",
-                                                "_type": "dav",
-                                                "_attrDef": "p"
-                                            },
-                                            {
-                                                "_key": "columnclass",
-                                                "_value": "tab-partner-data",
-                                                "_type": "dav",
-                                                "_attrDef": "p"
-                                            }
-                                        ]
-                                    },
-                                    "b045bc79-3ccb-a445-2565-bf77052292b6": {
-                                        "paletteKey": "ng-table-column",
-                                        "parentEditorKey": "40e61c61-757c-f185-7674-5d0e17a2561f",
-                                        "isAdvancedChildComponent": true,
-                                        "designerReference": [
-                                            {
-                                                "_key": "style",
-                                                "_value": "",
-                                                "_type": "kv",
-                                                "_attrDef": "p"
-                                            },
-                                            {
-                                                "_key": "class",
-                                                "_value": "",
-                                                "_type": "kv",
-                                                "_attrDef": "p"
-                                            },
-                                            {
-                                                "_key": "Header Label",
-                                                "_value": "Website",
-                                                "_type": "a",
-                                                "_attrDef": "p"
-                                            },
-                                            {
-                                                "_key": "matSortHeaderColumn",
-                                                "_value": "",
-                                                "_type": "a",
-                                                "_attrDef": "p"
-                                            },
-                                            {
-                                                "_key": "Mapping",
-                                                "_value": "{{table.orgWebsite}}",
+                                                "_value": "{{table.organisationName}}",
                                                 "_type": "ma",
                                                 "_attrDef": "p",
                                                 "_useAsLabel": true
@@ -6078,7 +6257,7 @@
                                             },
                                             {
                                                 "_key": "Mapping",
-                                                "_value": "{{table.oppType}}",
+                                                "_value": "{{table.opportunityType}}",
                                                 "_type": "ma",
                                                 "_attrDef": "p",
                                                 "_useAsLabel": true
@@ -6192,7 +6371,7 @@
                                             },
                                             {
                                                 "_key": "Mapping",
-                                                "_value": "{{table.leadCreationDate}}",
+                                                "_value": "{{table.leadGeneratedDate}}",
                                                 "_type": "ma",
                                                 "_attrDef": "p",
                                                 "_useAsLabel": true
@@ -6302,6 +6481,63 @@
                                                 "_key": "fxFlex",
                                                 "_value": "30",
                                                 "_type": "a",
+                                                "_attrDef": "p"
+                                            }
+                                        ]
+                                    },
+                                    "b045bc79-3ccb-a445-2565-bf77052292b6": {
+                                        "paletteKey": "ng-table-column",
+                                        "parentEditorKey": "40e61c61-757c-f185-7674-5d0e17a2561f",
+                                        "isAdvancedChildComponent": true,
+                                        "designerReference": [
+                                            {
+                                                "_key": "style",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "class",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "Header Label",
+                                                "_value": "Website",
+                                                "_type": "a",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "matSortHeaderColumn",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "Mapping",
+                                                "_value": "{{table.orgWebsite}}",
+                                                "_type": "ma",
+                                                "_attrDef": "p",
+                                                "_useAsLabel": true
+                                            },
+                                            {
+                                                "_key": "columnName",
+                                                "_value": "",
+                                                "_type": "dav",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "headerclass",
+                                                "_value": "tab-partner-header",
+                                                "_type": "dav",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "columnclass",
+                                                "_value": "tab-partner-data",
+                                                "_type": "dav",
                                                 "_attrDef": "p"
                                             }
                                         ]
