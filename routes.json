@@ -16,7 +16,7 @@
             ]
         },
         {
-            "path": "login",
+            "path": "login/:type",
             "component": "loginComponent",
             "pathMatch": "",
             "redirectTo": "",
@@ -114,6 +114,10 @@
         {
             "path": "sample",
             "component": "sampleComponent"
+        },
+        {
+            "path": "testPage",
+            "component": "testpageComponent"
         },
         {
             "path": "''",

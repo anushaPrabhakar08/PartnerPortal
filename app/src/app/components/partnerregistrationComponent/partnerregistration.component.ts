@@ -79,7 +79,8 @@ export class partnerregistrationComponent extends NBaseComponent implements OnIn
             this.alertService.openSnackBar('fill all the details');
         }
     }
-
+    get companyName() { return this.companyGroup.get('companyName'); }
+    get companyWebsite() { return this.companyGroup.get('companyWebsite'); }
     // submit(data) {
 
     //     this.dm.partnerregistration = data;

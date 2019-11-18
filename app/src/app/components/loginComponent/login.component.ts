@@ -30,6 +30,7 @@ export class loginComponent extends NBaseComponent implements OnInit, OnDestroy 
   httpSubscribe: any;
   mm: ModelMethods;
   user: user;
+  isTextFieldType = false;
   isMobile: Boolean;
   systemService = NSystemService.getInstance();
     Showspinner:boolean=true;

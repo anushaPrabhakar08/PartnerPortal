@@ -143,5 +143,10 @@
         "appPageName": "viewAgreement",
         "componentName": "viewagreementComponent",
         "isEntry": false
+    },
+    "dc884934-981b-4f09-dce3-d60625b97b71": {
+        "appPageName": "testPage",
+        "componentName": "testpageComponent",
+        "isEntry": false
     }
 }

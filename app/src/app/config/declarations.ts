@@ -12,6 +12,8 @@ window['neutrinos'] = {
 }
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-testpageComponent
+import { testpageComponent } from '../components/testpageComponent/testpage.component';
 //CORE_REFERENCE_IMPORT-deletedeveloperComponent
 import { deletedeveloperComponent } from '../components/deletedeveloperComponent/deletedeveloper.component';
 //CORE_REFERENCE_IMPORT-viewmarketingpdfComponent
@@ -116,6 +118,8 @@ export const appDeclarations = [
   PageNotFoundComponent,
   NMapComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-testpageComponent
+testpageComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-deletedeveloperComponent
 deletedeveloperComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-viewmarketingpdfComponent
@@ -205,10 +209,10 @@ export const appProviders = [
 
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
 export const appRoutes = [{path: 'home', component: homeComponent,
-children: [{path: 'cantact', component: contactpageComponent}]},{path: 'login', component: loginComponent,
+children: [{path: 'cantact', component: contactpageComponent}]},{path: 'login/:type', component: loginComponent,
 children: [{path: 'partnerlogin', component: partnerloginComponent},{path: 'memberlogin', component: memberloginComponent}]},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'product', component: productComponent},{path: 'contact', component: contactpageComponent},{path: 'channel', component: channelComponent,
 children: [{path: 'dashboard', component: channel_dashboardComponent},{path: 'dashboardPartnerDetails/:_id', component: partner_detailsComponent},{path: 'dashboardChannelMarketing', component: channel_marketingComponent},{path: 'dashboardChannelAnnouncements', component: channel_announcementsComponent,
 children: []}]},{path: 'partner', component: partnerComponent,
 children: [{path: 'dashboardPartnerMarketing', component: partner_marketingComponent},{path: 'dashboardPartnerLeads', component: partner_leadsComponent},{path: 'dashboardPartnerDevelopers', component: partner_developersComponent},{path: 'dashboardPartnerAgreement', component: partner_agreementComponent}]},{path: 'memberregisteration', component: memberregisterationComponent},{path: 'partnerregistration', component: partnerregistrationComponent},{path: 'partner_addDeveloper', component: partner_adddeveloperComponent},{path: 'partner_addLead', component: partner_addleadComponent,
-children: []},{path: 'sample', component: sampleComponent},{path: '', redirectTo: '/home', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
+children: []},{path: 'sample', component: sampleComponent},{path: 'testPage', component: testpageComponent},{path: '', redirectTo: '/home', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END
