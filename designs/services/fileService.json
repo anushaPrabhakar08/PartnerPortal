@@ -1,0 +1,215 @@
+[
+    {
+        "id": "sd_PqEB2aq9qyRLeMTj",
+        "type": "tab",
+        "createdDate": "2019-11-14T10:38:30.699Z",
+        "label": "fileService",
+        "disabled": false,
+        "info": "",
+        "generateNext": true,
+        "generated": false,
+        "serviceName": "fileService"
+    },
+    {
+        "id": "sd_3YBSJG1Th1PIf1CH",
+        "type": "Start",
+        "z": "sd_PqEB2aq9qyRLeMTj",
+        "name": "sendFile",
+        "outputs": 1,
+        "noerr": 0,
+        "inputVariables": [
+            {
+                "key": "file",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "response",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": true
+            },
+            {
+                "key": "apiUrl",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "functionName": "sendFile",
+        "x": 227,
+        "y": 136.8125,
+        "wires": [
+            [
+                "sd_FAwuzurJk6dmiBqC"
+            ]
+        ],
+        "generateNext": true,
+        "generated": false,
+        "serviceName": "fileService"
+    },
+    {
+        "id": "sd_BM9dZ2RQxDMmKYHe",
+        "type": "HttpRequest",
+        "z": "sd_PqEB2aq9qyRLeMTj",
+        "name": "",
+        "method": "post",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.apiUrl",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "apiUrl"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "reqBody": "bh.input.file",
+        "reqBodyObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "file"
+        },
+        "resultMapping": "bh.local.response",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "response"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "x": 502.84375,
+        "y": 138.796875,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_FAwuzurJk6dmiBqC",
+        "type": "Script",
+        "z": "sd_PqEB2aq9qyRLeMTj",
+        "name": "",
+        "script": "bh.local.apiUrl='http://localhost:3000/uploadFile';",
+        "x": 350.84375,
+        "y": 133.8125,
+        "wires": [
+            [
+                "sd_BM9dZ2RQxDMmKYHe"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_Sg7bSGrlt59hG2xx",
+        "type": "Start",
+        "z": "sd_PqEB2aq9qyRLeMTj",
+        "name": "getFile",
+        "outputs": 1,
+        "noerr": 0,
+        "inputVariables": [
+            {
+                "key": "data",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "response",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": true
+            },
+            {
+                "key": "apiUrl",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "functionName": "getFile",
+        "x": 238,
+        "y": 296.8125,
+        "wires": [
+            [
+                "sd_dZGlvO7dGaXWpy6T"
+            ]
+        ],
+        "generateNext": true,
+        "generated": false,
+        "serviceName": "fileService"
+    },
+    {
+        "id": "sd_zJhxuBebP2iYFdhK",
+        "type": "HttpRequest",
+        "z": "sd_PqEB2aq9qyRLeMTj",
+        "name": "",
+        "method": "post",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.apiUrl",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "apiUrl"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "reqBody": "bh.input.data",
+        "reqBodyObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "data"
+        },
+        "resultMapping": "bh.local.response",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "response"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "x": 513.84375,
+        "y": 298.796875,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_dZGlvO7dGaXWpy6T",
+        "type": "Script",
+        "z": "sd_PqEB2aq9qyRLeMTj",
+        "name": "",
+        "script": "bh.local.apiUrl='http://localhost:3000/getFile';",
+        "x": 361.84375,
+        "y": 293.8125,
+        "wires": [
+            [
+                "sd_zJhxuBebP2iYFdhK"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    }
+]

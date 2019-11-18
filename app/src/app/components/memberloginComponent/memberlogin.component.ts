@@ -48,8 +48,8 @@ data;
      if(Object.keys(this.data).length===0){
         this.alertService.openSnackBar('username or password incorrect');
     }else{
+        sessionStorage.setItem('uid',this.data._id);
         this.rout.navigate(['/channel/dashboard']);
-    console.log(this.data);
     }
   }
 

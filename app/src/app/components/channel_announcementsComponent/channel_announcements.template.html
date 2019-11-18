@@ -9,14 +9,11 @@
         <mat-card-content>
           <form [formGroup]="announcdetail">
             <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-              <mat-form-field style="font-size:20px;">
+              <mat-form-field>
                 <textarea matInput [(ngModel)]="dm.announcement.announcement" formControlName="announcement" placeholder="Announcement" required></textarea>
               </mat-form-field>
             </div>
             <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-              <mat-form-field style="font-size:20px;">
-                <textarea matInput [(ngModel)]="dm.announcement.announcement" formControlName="announcement" placeholder="Announcement" required></textarea>
-              </mat-form-field>
               <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
                 <mat-select formControlName="partnerType" placeholder="Select" [(ngModel)]="dm.announcement.partnerType" required>
                   <ng-template ngFor let-option [ngForOf]="announce" let-i="index">

@@ -1,8 +1,8 @@
 <div fxLayout="row wrap" style="width:100%;" class="partnerReg" fxLayoutAlign="center none" [fxShow]="true" [fxHide]="false">
   <div fxLayout="column wrap" style="width:100%;" fxLayoutAlign="start start" [fxShow]="true" [fxHide]="false">
     <form [formGroup]="developerForm">
-      <p style="font-size: 30px; font-family: Arial, Helvetica, sans-serif;">
-        Add Developer</p>
+      <h2 style="font-size: 24px; font-family: Arial, Helvetica, sans-serif;">
+        Add Developer</h2>
       <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
         <div fxLayout="column wrap" style="width:70%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
           <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
@@ -48,7 +48,12 @@
         </div>
       </div>
       <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-button style="    background: #09096f;     color: white;     font-weight: 800;     width: 125px;" [mat-dialog-close] (click)="submit(developerForm.value)">Add Developer</button></div>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-button style="background:blue;color:white;" [mat-dialog-close] color="primary" (click)="submit(developerForm.value)">Add Developer</button></div>
+      </div>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" *ngIf="active">
+        <mat-form-field>
+          <textarea matInput placeholder="Text Area" required></textarea>
+        </mat-form-field>
       </div>
     </form>
   </div>

@@ -2,12 +2,13 @@
     "artId": "",
     "appName": "PartnerPortal",
     "description": "Neutrinos Channel Partner Portal",
-    "lastModified": "2019-11-06T05:11:18.575Z",
+    "lastModified": "2019-11-15T05:21:33.212Z",
     "artURL": "http://localhost:3000/bhive-art/",
-    "imgSourcePath": "appIcon-1573017077452.png",
+    "imgSourcePath": "appIcon-1573795293197.png",
     "version": "1.0.0",
     "dataSource": "neutrinos-training-rt",
     "createDate": "2019-11-06T05:11:17.445Z",
     "tenantName": "partnerPortal",
-    "oldAppName": "neutrinos-login-template"
+    "oldAppName": "neutrinos-login-template",
+    "studioVersion": "6.2.0"
 }

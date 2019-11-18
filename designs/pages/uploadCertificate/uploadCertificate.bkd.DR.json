@@ -325,7 +325,7 @@
                     },
                     {
                         "_key": "(change)",
-                        "_value": "preview($event)",
+                        "_value": "preview($event.target.files)",
                         "_type": "kv",
                         "_attrDef": "c"
                     },
@@ -334,71 +334,10 @@
                         "_value": "#file",
                         "_type": "a",
                         "_attrDef": "c"
-                    }
-                ]
-            },
-            "e9881cf0-2bdb-52f7-8ba5-eae9b6555bc5": {
-                "paletteKey": "NG-RaisedButton",
-                "parentEditorKey": "7742c416-fff6-fd60-9e35-594a10c4357b",
-                "designerReference": [
-                    {
-                        "_key": "style",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "class",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "buttonname",
-                        "_value": "cancel",
-                        "_type": "a",
-                        "_attrDef": "p",
-                        "_useAsLabel": true
-                    },
-                    {
-                        "_key": "color",
-                        "_value": "warn",
-                        "_type": "kv",
-                        "_attrDef": "p"
                     },
                     {
                         "_key": "(click)",
-                        "_value": "cancelUpload(file)",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "[disabled]",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "[disableRipple]",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "type",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "routerLink",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "mat-dialog-close",
-                        "_value": "mat-dialog-close",
+                        "_value": "uploadFile(file)",
                         "_type": "kv",
                         "_attrDef": "c"
                     }

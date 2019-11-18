@@ -2,7 +2,7 @@
 import { Component, ViewChild, OnInit, AfterViewInit } from '@angular/core'
 import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
-import { NDataModelService } from 'neutrinos-seed-services';
+import { NDataModelService, NSnackbarService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 import { MatSort, MatTableDataSource, MatPaginator } from '@angular/material';
 import { partnerservice } from '../../sd-services/partnerservice';
@@ -11,6 +11,7 @@ import { MatDialog } from '@angular/material';
 import { channelservice } from '../../sd-services/channelservice';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormGroup, FormControl } from '@angular/forms';
+import { fileService } from '../../sd-services/fileService';
 
 export interface PeriodicElement {
     //id: string;
@@ -42,12 +43,17 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
     devdata;
     // @ViewChild(MatSort, { static: true }) sort: MatSort;
     @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+    @ViewChild(MatPaginator, { static: true }) leadPaginator: MatPaginator;
     id;
     P_data;
     dataSource = new MatTableDataSource(this.leaddata);
     leadsDataSource = new MatTableDataSource(this.devdata);
+    getdevdata;
+    userId = sessionStorage.getItem('uid');
+    uploadData = false;
+    formData = new FormData();
+    previewImage;
 
-    
     profileForm = new FormGroup({
         companyName: new FormControl(''),
         companyWebsite: new FormControl(''),
@@ -64,14 +70,50 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
         designation: new FormControl('')
     });
     constructor(private bdms: NDataModelService, private dialog: MatDialog,
+        private fileService: fileService,
         private partnerservice: partnerservice,
         private router: Router,
         private route: ActivatedRoute,
+        private alertService: NSnackbarService,
         private channelservice: channelservice
     ) {
         super();
         this.mm = new ModelMethods(bdms);
     }
+
+
+    preview(event) {
+        if (event && event[0]) {
+            this.uploadData = true;
+            var reader = new FileReader();
+            this.formData.append('file', event[0]);
+            this.formData.append('id', this.id);
+            this.formData.append('type', 'aggreement');
+            reader.readAsDataURL(event[0]);
+            reader.onload = (data: any) => {
+                this.previewImage = data.target.result;
+            }
+        }
+    }
+    uploadFile(event) {
+        if (this.uploadData) {
+            this.upload(event);
+            this.resetUpload(event);
+        }
+    }
+    async upload(event) {
+        let result = (await this.fileService.sendFile(this.formData)).local.response;
+        this.alertService.openSnackBar(result.message);
+    }
+    resetUpload(event) {
+        this.uploadData = false;
+        event.file = null;
+        event.fileName = null;
+        this.formData.delete('file');
+        this.formData.delete('id');
+        this.formData.delete('type');
+    }
+
 
     //titles = [{ name: "Experiment 1" }, { name: "Experiment 2" }];
 
@@ -80,26 +122,30 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
         filterValue = filterValue.toLowerCase();
         this.dataSource.filter = filterValue;
     }
-
+    applyFilterLeads(filterValue: string) {
+        filterValue = filterValue.trim();
+        filterValue = filterValue.toLowerCase();
+        this.leadsDataSource.filter = filterValue;
+    }
     addCertificateDialog() {
         const dialogRef = this.dialog.open(uploadcertificateComponent, {
             width: '450px',
             //disableClose: true,
-            data: 'hello'
+            data: this.id
         });
     }
 
     async ngOnInit() {
+        this.id = this.route.snapshot.paramMap.get('_id');
         this.dataSource.paginator = this.paginator;
         this.getdevs();
-        this.leadsDataSource.paginator = this.paginator;
+
         this.getleads();
 
 
-        this.id = this.route.snapshot.paramMap.get('_id');
-        console.log(this.id);
+
         this.P_data = (await this.channelservice.getPerticularPartner(this.id)).local.result;
-        console.log(this.P_data);
+
 
 
         this.profileForm.patchValue({
@@ -121,22 +167,22 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
 
 
     }
-async getleads(){
-       this.leaddata = this.leadObjtoArr((await this.partnerservice.getleadsdata()).local.result);
+    async getleads() {
+        this.leaddata = this.leadObjtoArr((await this.partnerservice.getleadslist(this.id)).local.resultleads);
         this.leadsDataSource.data = this.leaddata;
-       console.log(this.leaddata);
-   }
-   leadObjtoArr(obj) {
-       return Array.from(Object.keys(obj), k => obj[k]);
-   }
-   async getdevs(){
-       this.devdata = this.developerObjtoArr((await this.partnerservice.getdeveloper()).local.result);
-       this.dataSource.data =this.devdata;
-       console.log(this.devdata);
-   }
-   developerObjtoArr(obj) {
-       return Array.from(Object.keys(obj), k => obj[k]);
-   }
+        this.leadsDataSource.paginator = this.leadPaginator;
+
+    }
+    leadObjtoArr(obj) {
+        return Array.from(Object.keys(obj), k => obj[k]);
+    }
+    async getdevs() {
+        this.devdata = this.developerObjtoArr((await this.partnerservice.getdeveloper(this.id)).local.result);
+        this.dataSource.data = this.devdata;
+    }
+    developerObjtoArr(obj) {
+        return Array.from(Object.keys(obj), k => obj[k]);
+    }
 
 
     // async getleads() {

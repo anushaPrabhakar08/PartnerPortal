@@ -590,7 +590,7 @@
                                     "_attrDef": "p"
                                 }
                             ],
-                            "a715298f-b211-51b6-d33d-42af69589e27": {
+                            "c95d3274-b180-1557-7fc3-96f7c4e62001": {
                                 "paletteKey": "FlexLayoutCol",
                                 "parentEditorKey": "83b1c666-0500-7ceb-7ac1-0f8187b05258",
                                 "designerReference": [
@@ -656,13 +656,13 @@
                                         "_attrDef": "p"
                                     }
                                 ],
-                                "05eca0a5-cd42-611c-be65-3444ce0a0601": {
+                                "6c3e900d-48c2-e0ab-8cfe-913825f1afc7": {
                                     "paletteKey": "NG-TextArea",
-                                    "parentEditorKey": "a715298f-b211-51b6-d33d-42af69589e27",
+                                    "parentEditorKey": "c95d3274-b180-1557-7fc3-96f7c4e62001",
                                     "designerReference": [
                                         {
                                             "_key": "style",
-                                            "_value": "font-size:20px;",
+                                            "_value": "",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
@@ -796,79 +796,6 @@
                                         "_attrDef": "p"
                                     }
                                 ],
-                                "05eca0a5-cd42-611c-be65-3444ce0a0601": {
-                                    "paletteKey": "NG-TextArea",
-                                    "parentEditorKey": "3b3b1872-d07f-c41a-224f-05f94a06eb11",
-                                    "designerReference": [
-                                        {
-                                            "_key": "style",
-                                            "_value": "font-size:20px;",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "class",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "placeholder",
-                                            "_value": "Announcement",
-                                            "_type": "kv",
-                                            "_attrDef": "p",
-                                            "_useAsLabel": true
-                                        },
-                                        {
-                                            "_key": "value",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "required",
-                                            "_value": "required",
-                                            "_type": "a",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "[(ngModel)]",
-                                            "_value": "dm.announcement.announcement",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "color",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "name",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "[readonly]",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "[disabled]",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "formControlName",
-                                            "_value": "announcement",
-                                            "_type": "kv",
-                                            "_attrDef": "c"
-                                        }
-                                    ]
-                                },
                                 "929c3a15-7b30-65e2-43b5-38291756f146": {
                                     "paletteKey": "NG-Select",
                                     "parentEditorKey": "3b3b1872-d07f-c41a-224f-05f94a06eb11",

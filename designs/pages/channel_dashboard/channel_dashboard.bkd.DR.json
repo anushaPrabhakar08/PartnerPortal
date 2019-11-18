@@ -628,7 +628,7 @@
                                     },
                                     {
                                         "_key": "[dataSource]",
-                                        "_value": "data",
+                                        "_value": "dataSource",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -1018,110 +1018,6 @@
                                             "_attrDef": "p"
                                         }
                                     ]
-                                },
-                                "3c25055a-ed3c-5707-9011-4351fc1252c8": {
-                                    "paletteKey": "ng-droppable-table-column",
-                                    "parentEditorKey": "dbb2991c-1fd7-7ff7-184f-69eb5cc0fa8f",
-                                    "isAdvancedChildComponent": true,
-                                    "designerReference": [
-                                        {
-                                            "_key": "style",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "class",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "Sort Key",
-                                            "_value": "",
-                                            "_type": "dav",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "matSortHeaderColumn",
-                                            "_value": "",
-                                            "_type": "a",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "columnId",
-                                            "_value": "9f9d6b7c-85f8-aad2-701d-ead490ccaaaf",
-                                            "_type": "dav",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "Header Label",
-                                            "_value": "",
-                                            "_type": "a",
-                                            "_attrDef": "p"
-                                        }
-                                    ],
-                                    "8cc782e7-2cef-73fe-81e7-bbb0856808cd": {
-                                        "paletteKey": "NG-RaisedButton",
-                                        "parentEditorKey": "3c25055a-ed3c-5707-9011-4351fc1252c8",
-                                        "designerReference": [
-                                            {
-                                                "_key": "style",
-                                                "_value": "",
-                                                "_type": "kv",
-                                                "_attrDef": "p"
-                                            },
-                                            {
-                                                "_key": "class",
-                                                "_value": "",
-                                                "_type": "kv",
-                                                "_attrDef": "p"
-                                            },
-                                            {
-                                                "_key": "buttonname",
-                                                "_value": "View",
-                                                "_type": "a",
-                                                "_attrDef": "p",
-                                                "_useAsLabel": true
-                                            },
-                                            {
-                                                "_key": "color",
-                                                "_value": "warn",
-                                                "_type": "kv",
-                                                "_attrDef": "p"
-                                            },
-                                            {
-                                                "_key": "(click)",
-                                                "_value": "",
-                                                "_type": "kv",
-                                                "_attrDef": "p"
-                                            },
-                                            {
-                                                "_key": "[disabled]",
-                                                "_value": "",
-                                                "_type": "kv",
-                                                "_attrDef": "p"
-                                            },
-                                            {
-                                                "_key": "[disableRipple]",
-                                                "_value": "",
-                                                "_type": "kv",
-                                                "_attrDef": "p"
-                                            },
-                                            {
-                                                "_key": "type",
-                                                "_value": "",
-                                                "_type": "kv",
-                                                "_attrDef": "p"
-                                            },
-                                            {
-                                                "_key": "routerLink",
-                                                "_value": "",
-                                                "_type": "kv",
-                                                "_attrDef": "p"
-                                            }
-                                        ]
-                                    }
                                 }
                             }
                         }

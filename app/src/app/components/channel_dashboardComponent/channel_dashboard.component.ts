@@ -15,11 +15,11 @@ import { channelservice } from '../../sd-services/channelservice';
     templateUrl: './channel_dashboard.template.html'
 })
 
-export class channel_dashboardComponent extends NBaseComponent implements OnInit{
+export class channel_dashboardComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
     @ViewChild(MatSort, { static: true }) sort: MatSort;
     @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
- 
+
     data;
 
     dataSource = new MatTableDataSource(this.data);
@@ -31,14 +31,16 @@ export class channel_dashboardComponent extends NBaseComponent implements OnInit
     }
 
     ngOnInit() {
-        this.dataSource.paginator = this.paginator;
-        this.dataSource.sort = this.sort;
+
         this.getdata();
     }
 
 
     async getdata() {
         this.data = this.leadObjtoArr((await this.channelservice.getpartnerlist()).local.result);
+        this.dataSource = new MatTableDataSource(this.data);
+        this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
         console.log(this.data);
     }
 
@@ -53,11 +55,10 @@ export class channel_dashboardComponent extends NBaseComponent implements OnInit
     }
 
     showPartnerDetails(table) {
-        // console.log(table);
-        // const test = `channel/dashboardPartnerDetails/table=${table}`;
-        this.router.navigate(['channel/dashboardPartnerDetails',table._id]);
+      
+        this.router.navigate(['channel/dashboardPartnerDetails', table._id]);
 
-        //this.router.navigateByUrl('/dashboardPartnerDetails');
+      
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {

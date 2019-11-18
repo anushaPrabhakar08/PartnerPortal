@@ -112,6 +112,24 @@ export class channelservice {
       throw e;
     }
   }
+  public async getparticularpartner(obj = undefined, ...others) {
+    try {
+      let bh = {
+        input: { obj: obj },
+        local: { modlrapi: undefined, result: undefined }
+      };
+      bh = this.__constructDefault(bh);
+
+      bh = await this.sd_xnqZ2i8f6Ndw2fDs(bh);
+      //appendnew_next_getparticularpartner
+      //Start formatting output variables
+      let outputVariables = { input: {}, local: { result: bh.local.result } };
+      //End formatting output variables
+      return outputVariables;
+    } catch (e) {
+      throw e;
+    }
+  }
   //appendnew_flow_channelservice_Start
 
   async sd_2tky7jqHupi9JB9C(bh) {
@@ -196,6 +214,35 @@ export class channelservice {
       };
       bh.local.result = await this.sdService.nHttpRequest(requestOptions);
       //appendnew_next_sd_GpnwOR5HHkYnszkb
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_xnqZ2i8f6Ndw2fDs(bh) {
+    try {
+      bh.local.modlrapi = `http://localhost:24483/api/getPerticularPartner?_id=${bh.input.obj}`;
+
+      bh = await this.sd_fDrdNXDkf9EZVSts(bh);
+      //appendnew_next_sd_xnqZ2i8f6Ndw2fDs
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_fDrdNXDkf9EZVSts(bh) {
+    try {
+      let requestOptions = {
+        url: bh.local.modlrapi,
+        method: 'get',
+        responseType: 'json',
+        reportProgress: undefined,
+        headers: {},
+        params: {},
+        body: undefined
+      };
+      bh.local.result = await this.sdService.nHttpRequest(requestOptions);
+      //appendnew_next_sd_fDrdNXDkf9EZVSts
       return bh;
     } catch (e) {
       throw e;

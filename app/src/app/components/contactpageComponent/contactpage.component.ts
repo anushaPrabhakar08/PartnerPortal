@@ -47,23 +47,22 @@ contactdetails=new FormGroup({
     message:new FormControl(''),
 
 })
-    constructor(private bdms: NDataModelService,private alertService: NSnackbarService,private cont:contactus) {
+    constructor(private bdms: NDataModelService,private alertService: NSnackbarService,private cont:contactus,private rout:Router) {
         super();
         this.mm = new ModelMethods(bdms);
           this.contactmodel = new contactmodel();
     }
 
     ngOnInit() {
-
+this.rout.navigate(['/contact']);
     }
 
 async submit(data){
 this.dm.contactmodel=data;
    this.alertService.openSnackBar('submited');
 this.result=(await this.cont.contactusp(this.dm.contactmodel));
-
-console.log(this.result);
 this.ngOnInit();
+
 }
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, filter, keys, sort, pagenumber, pagesize,

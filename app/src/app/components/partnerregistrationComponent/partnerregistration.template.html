@@ -1,100 +1,121 @@
-<div fxLayout="row wrap" style="background-color: #5f737d;width:100%;height:130%;" class="partnerReg" fxLayoutAlign="center none" [fxShow]="true" [fxHide]="false">
-  <div fxLayout="column wrap" style="width:35%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-    <mat-card style="width:100%;margin-top:5%;height:85%;box-shadow:4px 4px 4px 4px;">
-      <mat-card-content>
-        <form [formGroup]="firstFormGroup">
-          <mat-horizontal-stepper [linear]="true" #stepper>
-            <mat-step>
-              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-                <div>
-                  Company Information</div>
-                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                  <input matInput placeholder="companyName" required formControlName="companyName">
+<div fxLayout="column wrap" style="overflow-y:auto;" class="bg-light-grey" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false" fxFill>
+  <div fxLayout="row wrap" fxLayoutAlign="start start" [fxShow]="true" [fxHide]="false">
+    <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+      <h1 class="text-warn">
+        Partner Registration</h1>
+      <div fxLayout="row wrap" fxFlex="40" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+        <mat-card>
+          <mat-card-content>
+            <mat-horizontal-stepper [linear]="true" #partnerRegistrationForm>
+              <mat-step label="Company Information" [stepControl]="companyGroup">
+                <form [formGroup]="companyGroup">
+                  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                    <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+                      <input matInput placeholder="Company Name" required formControlName="companyName">
 
-                </mat-form-field>
-                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                  <input matInput placeholder="companyWebsite" required formControlName="companyWebsite">
+                    </mat-form-field>
+                  </div>
+                  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                    <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+                      <input matInput placeholder="Company Website" required formControlName="companyWebsite">
 
-                </mat-form-field>
-                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                  <mat-select formControlName="companyType" placeholder="companyType" required>
-                    <mat-option [value]="&apos;service&apos;" disabled="false">service</mat-option>
-                    <mat-option [value]="&apos;product&apos;" disabled="false">product</mat-option>
-                  </mat-select>
+                    </mat-form-field>
+                  </div>
+                  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                    <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+                      <mat-select formControlName="companyType" placeholder="Company Type" required>
+                        <ng-template ngFor let-option [ngForOf]="companyTypeSource" let-i="index">
+                          <mat-option [value]="option">{{option}}</mat-option>
+                        </ng-template>
+                      </mat-select>
 
-                </mat-form-field>
-                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                  <input matInput placeholder="numberofEmployees" required formControlName="numberofEmployees">
+                    </mat-form-field>
+                  </div>
+                  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                    <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+                      <input matInput type="number" placeholder="Number of Employees" required formControlName="numberofEmployees">
 
-                </mat-form-field>
-                <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-                  <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-raised-button style="background:orangered;color:white;" matStepperNext>Next</button></div>
-                </div>
-              </div>
-            </mat-step>
-            <mat-step>
-              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><label>
-                  Partner Registeration</label>
-                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                  <input matInput name="firstName" placeholder="firstName" required formControlName="firstName">
+                    </mat-form-field>
+                  </div>
+                  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                    <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+                      <input matInput placeholder="Address" required formControlName="address">
 
-                </mat-form-field>
-                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                  <input matInput [(ngModel)]="dm.partnerregistration.lastName" name="lastName" placeholder="lastName" required formControlName="lastName">
+                    </mat-form-field>
+                  </div>
+                  <div fxLayout="row wrap" fxLayoutAlign="end stretch" [fxShow]="true" [fxHide]="false"><button mat-raised-button matStepperNext color="primary">Next</button></div>
+                </form>
+              </mat-step>
+              <mat-step label="Partner Profile" [stepControl]="profileGroup">
+                <form [formGroup]="profileGroup">
+                  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                    <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+                      <input matInput placeholder="First Name" required formControlName="firstName">
 
-                </mat-form-field>
-                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                  <mat-select formControlName="country" placeholder="country" required>
-                    <mat-option [value]="&apos;U.S&apos;" disabled="false">U.S</mat-option>
-                    <mat-option [value]="&apos;India&apos;" disabled="false">India</mat-option>
-                    <mat-option [value]="&apos;Afghanistan&apos;" disabled="false">Afghanistan</mat-option>
-                    <mat-option [value]="&apos;Singapore&apos;" disabled="false">Singapore</mat-option>
-                    <mat-option [value]="&apos;Pakistan&apos;" disabled="false">Pakistan</mat-option>
-                    <mat-option [value]="&apos;London&apos;" disabled="false">London</mat-option>
-                    <mat-option [value]="&apos;Dubai&apos;" disabled="false">Dubai</mat-option>
-                    <mat-option [value]="&apos;Egypt&apos;" disabled="false">Egypt</mat-option>
-                    <mat-option [value]="&apos;South Africa&apos;" disabled="false">South Africa</mat-option>
-                  </mat-select>
+                    </mat-form-field>
+                  </div>
+                  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                    <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+                      <input matInput placeholder="Last Name" required formControlName="lastName">
 
-                </mat-form-field>
-                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                  <input matInput placeholder="mobileNumber" required formControlName="mobileNumber">
+                    </mat-form-field>
+                  </div>
+                  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                    <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+                      <input matInput placeholder="Mobie Number" required formControlName="mobileNumber">
 
-                </mat-form-field>
-                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                  <input matInput placeholder="userName" required formControlName="userName">
+                    </mat-form-field>
+                  </div>
+                  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                    <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+                      <mat-select formControlName="designation" placeholder="Designation" required>
+                        <ng-template ngFor let-option [ngForOf]="designationSource" let-i="index">
+                          <mat-option [value]="option">{{option}}</mat-option>
+                        </ng-template>
+                      </mat-select>
 
-                </mat-form-field>
-                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                  <input matInput type="password" placeholder="password" required formControlName="password">
+                    </mat-form-field>
+                  </div>
+                  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                    <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+                      <mat-select formControlName="country" placeholder="Country" required>
+                        <ng-template ngFor let-option [ngForOf]="countrySource" let-i="index">
+                          <mat-option [value]="option">{{option}}</mat-option>
+                        </ng-template>
+                      </mat-select>
 
-                </mat-form-field>
-                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                  <input matInput placeholder="emailId" required formControlName="emailId">
+                    </mat-form-field>
+                  </div>
+                  <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false"><button mat-raised-button matStepperPrevious color="primary">Prev</button><button mat-raised-button matStepperNext color="primary">Next</button></div>
+                </form>
+              </mat-step>
+              <mat-step label="Create Account" [stepControl]="accountGroup">
+                <form [formGroup]="accountGroup">
+                  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                    <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+                      <input matInput type="email" placeholder="Email" required formControlName="emailId">
 
-                </mat-form-field>
-                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                  <mat-select formControlName="designation" placeholder="designation" required>
-                    <mat-option [value]="&apos;Senior Engineer&apos;" disabled="false">Senior Engineer</mat-option>
-                    <mat-option [value]="&apos;Senior Developer&apos;" disabled="false">Senior Developer</mat-option>
-                    <mat-option [value]="&apos;Senior Tester&apos;" disabled="false">Senior Tester</mat-option>
-                    <mat-option [value]="&apos;Team Manager&apos;" disabled="false">Team Manager</mat-option>
-                  </mat-select>
+                    </mat-form-field>
+                  </div>
+                  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                    <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+                      <input matInput placeholder="Username" required formControlName="userName">
 
-                </mat-form-field>
-                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                  <input matInput placeholder="address" required formControlName="address">
+                    </mat-form-field>
+                  </div>
+                  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                    <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+                      <input matInput type="password" placeholder="Password" required formControlName="password">
 
-                </mat-form-field>
-                <div fxLayout="row wrap" fxLayoutAlign="space-between center" [fxShow]="true" [fxHide]="false">
-                  <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-raised-button style="background:orangered;color:white;" matStepperPrevious>previous</button></div>
-                  <div fxLayout="column wrap" fxLayoutGap="1.5em;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button style="background:orangered;color:white;" matstepperRegister (click)="submit(firstFormGroup.value)">register</button></div>
-                </div>
-              </div>
-            </mat-step>
-          </mat-horizontal-stepper>
-        </form>
-      </mat-card-content>
-    </mat-card>
+                    </mat-form-field>
+                  </div>
+                  <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false"><button mat-raised-button matStepperPrevious color="primary">Prev</button><button mat-raised-button color="primary" (click)="savePartner()">Register</button></div>
+                </form>
+              </mat-step>
+            </mat-horizontal-stepper>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
   </div>
 </div>

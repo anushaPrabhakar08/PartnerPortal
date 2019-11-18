@@ -110,7 +110,8 @@
             []
         ],
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "channelservice"
     },
     {
         "id": "sd_toHB7jUDmsFKLYLJ",
@@ -298,6 +299,106 @@
         "paramMappingObj": {},
         "x": 561.03125,
         "y": 378.90625,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_tkvg5wdH7Fw5p5NR",
+        "type": "Start",
+        "z": "sd_BIsXw8uCu26k89sV",
+        "name": "getparticularpartner",
+        "outputs": 1,
+        "noerr": 0,
+        "inputVariables": [
+            {
+                "key": "obj",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "modlrapi",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            },
+            {
+                "key": "result",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "functionName": "getparticularpartner",
+        "x": 191.20001220703125,
+        "y": 482.93750762939453,
+        "wires": [
+            [
+                "sd_xnqZ2i8f6Ndw2fDs"
+            ]
+        ],
+        "generateNext": true,
+        "generated": false,
+        "serviceName": "channelservice"
+    },
+    {
+        "id": "sd_xnqZ2i8f6Ndw2fDs",
+        "type": "Script",
+        "z": "sd_BIsXw8uCu26k89sV",
+        "name": "",
+        "script": "bh.local.modlrapi=`http://localhost:24483/api/getPerticularPartner?_id=${bh.input.obj}`;",
+        "x": 383.04998779296875,
+        "y": 482.93750762939453,
+        "wires": [
+            [
+                "sd_fDrdNXDkf9EZVSts"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_fDrdNXDkf9EZVSts",
+        "type": "HttpRequest",
+        "z": "sd_BIsXw8uCu26k89sV",
+        "name": "",
+        "method": "get",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.modlrapi",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "modlrapi"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "reqBodyObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": ""
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "x": 578.050048828125,
+        "y": 492.93750762939453,
         "wires": [
             []
         ],

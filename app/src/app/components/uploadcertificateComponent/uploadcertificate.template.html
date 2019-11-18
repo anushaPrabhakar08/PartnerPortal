@@ -1,6 +1,6 @@
 <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
   <div fxLayout="row wrap" fxFlex="30" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><img [src]="previewImage" width="200px"></div>
   <div fxLayout="row wrap" style="margin-top:16px;" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-    <n-file-upload (change)="preview($event)" #file></n-file-upload><button mat-raised-button mat-dialog-close="mat-dialog-close" color="warn" (click)="cancelUpload(file)">cancel</button>
+    <n-file-upload (change)="preview($event.target.files)" #file (click)="uploadFile(file)"></n-file-upload>
   </div>
 </div>

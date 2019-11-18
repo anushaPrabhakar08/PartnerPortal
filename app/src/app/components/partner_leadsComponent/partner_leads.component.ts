@@ -34,7 +34,12 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
 
     async getdata() {
         try {
-            this.data = this.leadObjtoArr((await this.partnerservice.getleadsdata()).local.result);
+            let partid=sessionStorage.getItem('id');
+            
+            let partobj={partner_id:partid};
+            console.log(partobj);
+            this.data = this.leadObjtoArr((await this.partnerservice.getleadsdata(partid)).local.result);
+            console.log(this.data);
             this.dataSource = new MatTableDataSource(this.data);
             this.dataSource.paginator = this.paginator;
             this.dataSource.sort = this.sort;

@@ -593,23 +593,6 @@
      "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-objectid\\objectid.js"
     }
    }
-  },
-  "node-red-contrib-viseo-mongodb": {
-   "name": "node-red-contrib-viseo-mongodb",
-   "version": "0.5.0",
-   "local": true,
-   "nodes": {
-    "node-mongodb": {
-     "name": "node-mongodb",
-     "types": [
-      "mongodb"
-     ],
-     "enabled": true,
-     "local": true,
-     "module": "node-red-contrib-viseo-mongodb",
-     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-viseo-mongodb\\node-mongodb.js"
-    }
-   }
   }
  },
  "_credentialSecret": "5e07d2760d012306db61116bcf19bf1e2205ec48c637b150946376fa0f7a3a6f",
@@ -626,7 +609,7 @@
     }
    },
    "menu-menu-item-palette": false,
-   "menu-menu-item-sidebar": false
+   "menu-menu-item-sidebar": true
   }
  }
 }

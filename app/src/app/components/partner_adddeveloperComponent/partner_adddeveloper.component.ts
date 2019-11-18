@@ -122,9 +122,10 @@ export class partner_adddeveloperComponent extends NBaseComponent implements OnI
     }
 
     async submit(data) {
-       await this.partnerservice.savedev(data);
-      
+         let partid=sessionStorage.getItem('id');
+         let obj={partner_id:partid,firstName:data.firstName,lastName:data.lastName,position:data.position,experience:data.experience};
+       await this.partnerservice.savedev(obj);
         console.log(data);
-        
+             this.developerForm.reset(); 
     }
 }

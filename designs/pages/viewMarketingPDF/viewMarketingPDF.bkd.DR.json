@@ -88,15 +88,24 @@
                     "_attrDef": "p"
                 },
                 {
-                    "_key": "[pdfSrc]",
+                    "_key": "[userId]",
+                    "_value": "''",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_complexity": "advanced",
+                    "displayAs": "userId",
+                    "attrType": "INPUT",
+                    "inValid": false,
+                    "message": ""
+                },
+                {
+                    "_key": "[src]",
                     "_value": "'/assets/Web/marketingCollaterals/collateral.pdf'",
                     "_type": "kv",
                     "_attrDef": "p",
                     "_complexity": "advanced",
-                    "displayAs": "pdfSrc",
-                    "attrType": "INPUT",
-                    "inValid": false,
-                    "message": ""
+                    "displayAs": "src",
+                    "attrType": "INPUT"
                 }
             ]
         }

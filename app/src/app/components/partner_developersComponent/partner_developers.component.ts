@@ -49,7 +49,8 @@ export class partner_developersComponent extends NBaseComponent implements OnIni
 
     async getdata() {
         try {
-            this.data = this.leadObjtoArr((await this.partnerservice.getdeveloper()).local.result);
+            let partnerid=sessionStorage.getItem('id');
+            this.data = this.leadObjtoArr((await this.partnerservice.getdeveloper(partnerid)).local.result);
             this.dataSource = new MatTableDataSource(this.data);
             this.dataSource.paginator = this.paginator;
             this.dataSource.sort = this.sort;

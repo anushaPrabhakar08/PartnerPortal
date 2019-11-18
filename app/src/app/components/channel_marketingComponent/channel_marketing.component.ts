@@ -9,6 +9,7 @@ import { channel_addmarketingComponent } from '../channel_addmarketingComponent/
 import { loginComponent } from '../loginComponent/login.component';
 import { viewmarketingpdfComponent } from '../viewmarketingpdfComponent/viewmarketingpdf.component';
 
+
 @Component({
     selector: 'bh-channel_marketing',
     templateUrl: './channel_marketing.template.html'

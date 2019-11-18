@@ -88,12 +88,12 @@
                     "_attrDef": "p"
                 },
                 {
-                    "_key": "[pdfSrc]",
-                    "_value": "'https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf'",
+                    "_key": "[userId]",
+                    "_value": "userId",
                     "_type": "kv",
                     "_attrDef": "p",
                     "_complexity": "advanced",
-                    "displayAs": "pdfSrc",
+                    "displayAs": "userId",
                     "attrType": "INPUT"
                 }
             ]

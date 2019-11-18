@@ -1,10 +1,11 @@
 /*DEFAULT GENERATED TEMPLATE. DO NOT CHANGE SELECTOR TEMPLATE_URL AND CLASS NAME*/
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit,Inject } from '@angular/core'
 import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
-import { NDataModelService } from 'neutrinos-seed-services';
+import { NDataModelService, NSnackbarService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { fileService } from '../../sd-services/fileService';
 
 @Component({
     selector: 'bh-uploadcertificate',
@@ -12,28 +13,48 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dial
 })
 export class uploadcertificateComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
+    formData = new FormData();
+    uploadData = false;
     previewImage = '/assets/Web/neutrinos-prime-certiificate.jpg';
-    constructor(private bdms: NDataModelService, public dialogRef: MatDialogRef<uploadcertificateComponent>) {
+    constructor(private bdms: NDataModelService, public dialogRef: MatDialogRef<uploadcertificateComponent>, private alertService: NSnackbarService,
+        private fileService: fileService,@Inject(MAT_DIALOG_DATA) public data) {
         super();
         this.mm = new ModelMethods(bdms);
     }
     ngOnInit() {
+        console.log(this.data);
     }
     preview(event) {
-        if (event.target.files && event.target.files[0]) {
+        if (event && event[0]) {
+            console.log(this.data);
+            this.uploadData = true;
             var reader = new FileReader();
-            reader.readAsDataURL(event.target.files[0]);
+            this.formData.append('file', event[0]);
+            this.formData.append('id', this.data);
+            this.formData.append('type', 'certificate');
+            reader.readAsDataURL(event[0]);
             reader.onload = (data: any) => {
-                console.log(data);
                 this.previewImage = data.target.result;
-                
             }
         }
     }
-    cancelUpload(event) {
+    uploadFile(event) {
+        if (this.uploadData) {
+            this.upload(event);
+            this.resetUpload(event);
+        }
+    }
+    async upload(event) {
+        let result = (await this.fileService.sendFile(this.formData)).local.response;
+        this.alertService.openSnackBar(result.message);
+    }
+    resetUpload(event) {
+        this.uploadData = false;
         event.file = null;
         event.fileName = null;
-        this.dialogRef.close();
+        this.formData.delete('file');
+        this.formData.delete('id');
+        this.formData.delete('type');
     }
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, filter, keys, sort, pagenumber, pagesize,

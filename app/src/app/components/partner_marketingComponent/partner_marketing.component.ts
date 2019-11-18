@@ -4,6 +4,8 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
+import { viewmarketingpdfComponent } from '../viewmarketingpdfComponent/viewmarketingpdf.component';
+import { MatDialog } from '@angular/material';
 
 /**
  * Service import Example :
@@ -24,7 +26,7 @@ import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 export class partner_marketingComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    constructor(private bdms: NDataModelService) {
+    constructor(private bdms: NDataModelService, private dialog:MatDialog) {
         super();
         this.mm = new ModelMethods(bdms);
     }
@@ -32,6 +34,14 @@ export class partner_marketingComponent extends NBaseComponent implements OnInit
     ngOnInit() {
 
     }
+    
+    openmarketingPdf() {
+        console.log("pdf Open");
+        const dialogRef = this.dialog.open(viewmarketingpdfComponent, {
+            data: 'hello'
+        });
+    }
+
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, filter, keys, sort, pagenumber, pagesize,

@@ -2,9 +2,9 @@
 import { Component, OnInit, Input } from '@angular/core'
 import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
-import { NDataModelService } from 'neutrinos-seed-services';
+import { NDataModelService, NSnackbarService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
-
+import { fileService } from '../../sd-services/fileService';
 
 @Component({
     selector: 'bh-sample',
@@ -24,20 +24,34 @@ import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 export class sampleComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    //pdfSrc = "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf";
-    
+    pdfSrc = "";
 
-    constructor(private bdms: NDataModelService) {
+
+    constructor(private bdms: NDataModelService, private alertService: NSnackbarService,
+        private fileService: fileService, ) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
-    @Input() pdfSrc: string;
+    @Input() userId: string;
+    @Input() src: string;
 
     ngOnInit() {
-        console.log(this.pdfSrc);
+        if (this.userId !== '') {
+            this.fetchPdf();
+        } else {
+            this.pdfSrc = this.src;
+        }
     }
-
+    async fetchPdf() {
+        let file = {
+            userId: this.userId,
+            type: 'aggreement',
+        }
+        let result = (await this.fileService.getFile(file)).local.response;
+        this.pdfSrc = result.path;
+        // this.alertService.openSnackBar('Getting File');
+    }
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, filter, keys, sort, pagenumber, pagesize,
             result => {

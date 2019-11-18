@@ -1,5 +1,7 @@
 import { SDBaseService } from 'app/n-services/SDBaseService';
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-fileService
+import { fileService } from '../sd-services/fileService';
 //CORE_REFERENCE_IMPORT-contactus
 import { contactus } from '../sd-services/contactus';
 //CORE_REFERENCE_IMPORT-channelservice
@@ -16,6 +18,8 @@ export const sdProviders = [
   //CORE_REFERENCE_PUSH_TO_SD_ARRAY
   //CORE_REFERENCE_PUSH_TO_SD_ARRAY-contactus
   contactus,
+  //CORE_REFERENCE_PUSH_TO_SD_ARRAY-fileService
+  fileService,
   //CORE_REFERENCE_PUSH_TO_SD_ARRAY-channelservice
   channelservice,
   //CORE_REFERENCE_PUSH_TO_SD_ARRAY-memberloginservice

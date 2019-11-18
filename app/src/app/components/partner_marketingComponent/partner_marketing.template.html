@@ -4,111 +4,31 @@
       <h2 style="color:rgba(0,0,0,.7);" class="header">
         Marketing Collaterals</h2>
     </div>
-    <div fxLayout="row wrap" style="width:100%;" fxLayoutGap="1em" fxLayoutAlign="space-between none" [fxShow]="true" [fxHide]="false">
-      <mat-card class="gallery-card-content">
-        <mat-card-content>
-          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-            <mat-grid-list cols="4">
-              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-                <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/marketingimg6.jpg" class="img-size"><img imgSrc="Web/marketingimg5.jpg" class="img-size"></div>
+    <div fxLayout="row wrap" style="width:100%;" fxLayoutGap="1em" fxLayoutAlign="start none" [fxShow]="true" [fxHide]="false">
+      <mat-grid-list cols="3">
+        <div fxLayout="row wrap" class="card-bg" fxFlex="100" fxLayoutGap="1em" fxLayoutAlign="start start" [fxShow]="true" [fxHide]="false">
+          <mat-card style="width:300px;height:200px;" class="gallery-card-content">
+            <mat-card-content style="width:100%;">
+              <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/pdfimg.png" style="cursor:pointer;height: 160px; width: 130px;" (click)="openmarketingPdf()" width="200">
+                <div style="text-align:left;" class="thumbnail-title link">
+                  IntroductoryBrochure.pdf</div>
               </div>
-              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-                <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/marketingimg3.jpg" class="img-size"><img imgSrc="Web/marketingimg2.jpg" class="img-size"></div>
-              </div>
-            </mat-grid-list>
-          </div>
-        </mat-card-content>
-      </mat-card>
-      <mat-card class="gallery-card-content">
-        <mat-card-content>
-          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-            <mat-grid-list cols="4">
-              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-                <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/marketingimg4.jpg" class="img-size"><img imgSrc="Web/developerimg1.jpg" class="img-size"></div>
-              </div>
-              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-                <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/partner-details1.jpg" class="img-size"><img imgSrc="Web/bgimg5.jpg" class="img-size"></div>
-              </div>
-            </mat-grid-list>
-          </div>
-        </mat-card-content>
-      </mat-card>
-      <mat-card class="gallery-card-content">
-        <mat-card-content>
-          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-            <mat-grid-list cols="4">
-              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-                <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/partner-details1.jpg" class="img-size"><img imgSrc="Web/partner-details2.jpg" class="img-size"></div>
-              </div>
-              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-                <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/partner-details3.jpg" class="img-size"><img imgSrc="Web/bgimg5.jpg" class="img-size"></div>
-              </div>
-            </mat-grid-list>
-          </div>
-        </mat-card-content>
-      </mat-card>
-      <mat-card class="gallery-card-content">
-        <mat-card-content>
-          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-            <mat-grid-list cols="4">
-              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-                <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/marketingimg6.jpg" class="img-size"><img imgSrc="Web/marketingimg5.jpg" class="img-size"></div>
-              </div>
-              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-                <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/marketingimg3.jpg" class="img-size"><img imgSrc="Web/marketingimg2.jpg" class="img-size"></div>
-              </div>
-            </mat-grid-list>
-          </div>
-        </mat-card-content>
-      </mat-card>
-    </div>
-    <div fxLayout="row wrap" style="width:100%;margin-bottom:30px;" fxLayoutGap="1em" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false">
-      <mat-card class="gallery-card-content">
-        <mat-card-content>
-          <mat-grid-list cols="4">
-            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><video controls style="width:200px;">
-
-              </video></div>
-          </mat-grid-list>
-        </mat-card-content>
-      </mat-card>
-      <mat-card class="gallery-card-content">
-        <mat-card-content>
-          <mat-grid-list cols="4">
-            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><video controls style="width:200px;">
-
-              </video></div>
-          </mat-grid-list>
-        </mat-card-content>
-      </mat-card>
-      <mat-card class="gallery-card-content">
-        <mat-card-content>
-          <mat-grid-list cols="4">
-            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><video controls style="width:200px;">
-
-              </video></div>
-          </mat-grid-list>
-        </mat-card-content>
-      </mat-card>
-      <mat-card class="gallery-card-content">
-        <mat-card-content>
-          <mat-grid-list cols="4">
-            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><video controls style="width:200px;">
-
-              </video></div>
-          </mat-grid-list>
-        </mat-card-content>
-      </mat-card>
-      <div fxLayout="column wrap" style="width:50%;" fxLayoutAlign="start stretch" [fxShow]="false" [fxHide]="true">
-        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-          <h1 class="text-center description-header">
-            Breaking New Ground with Neutrinos</h1>
+            </mat-card-content>
+          </mat-card>
+          <mat-card style="width:300px;height:200px;" class="gallery-card-content">
+            <mat-card-content style="width:100%;">
+              <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><video controls [autoplay]="false" [loop]="false" style="width:300px;">
+                  <source src="/assets/Web/marketingCollaterals/asset.mp4" type="video/mp4">
+                </video></div>
+            </mat-card-content>
+          </mat-card>
+          <mat-card style="width:300px;height:200px;" class="gallery-card-content">
+            <mat-card-content style="width:100%;">
+              <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/Icons/favicon.ico.png" (click)="showImage()" width="180"></div>
+            </mat-card-content>
+          </mat-card>
         </div>
-        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-          <p class="img-description">
-            Like to digitise but stuck with paper trails? OCR&#x2019;s text on image recognition feature now a part of the platform.</p>
-        </div>
-      </div>
+      </mat-grid-list>
     </div>
   </div>
 </div>

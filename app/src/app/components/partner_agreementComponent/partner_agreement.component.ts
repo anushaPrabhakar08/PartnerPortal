@@ -15,20 +15,20 @@ import { viewagreementComponent } from '../viewagreementComponent/viewagreement.
 
 export class partner_agreementComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
-
-    constructor(private bdms: NDataModelService,private dialog:MatDialog) {
+    id;
+    constructor(private bdms: NDataModelService, private dialog: MatDialog) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
     ngOnInit() {
-
+        this.id = sessionStorage.getItem('id');
     }
 
     openAgreement() {
         console.log("pdf Open");
         const dialogRef = this.dialog.open(viewagreementComponent, {
-            data: 'hello'
+            data: this.id
         });
     }
 

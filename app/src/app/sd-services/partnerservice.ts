@@ -76,10 +76,10 @@ export class partnerservice {
       throw e;
     }
   }
-  public async getleadsdata(...others) {
+  public async getleadsdata(partobj = undefined, ...others) {
     try {
       let bh = {
-        input: {},
+        input: { partobj: partobj },
         local: { result: undefined, modlerUrlApi: undefined }
       };
       bh = this.__constructDefault(bh);
@@ -94,10 +94,10 @@ export class partnerservice {
       throw e;
     }
   }
-  public async getdeveloper(...others) {
+  public async getdeveloper(partnerid = undefined, ...others) {
     try {
       let bh = {
-        input: {},
+        input: { partnerid: partnerid },
         local: { result: undefined, modlerUrlApi: undefined }
       };
       bh = this.__constructDefault(bh);
@@ -184,6 +184,42 @@ export class partnerservice {
       throw e;
     }
   }
+  public async getdevdetail(...others) {
+    try {
+      let bh = { input: {}, local: { result: undefined, apiurl: undefined } };
+      bh = this.__constructDefault(bh);
+
+      bh = await this.sd_KRiJWTGkUkUl7dtr(bh);
+      //appendnew_next_getdevdetail
+      //Start formatting output variables
+      let outputVariables = { input: {}, local: { result: bh.local.result } };
+      //End formatting output variables
+      return outputVariables;
+    } catch (e) {
+      throw e;
+    }
+  }
+  public async getleadslist(obj = undefined, ...others) {
+    try {
+      let bh = {
+        input: { obj: obj },
+        local: { resultleads: undefined, apiurl: undefined }
+      };
+      bh = this.__constructDefault(bh);
+
+      bh = await this.sd_zNspUBoaoVnL0K9i(bh);
+      //appendnew_next_getleadslist
+      //Start formatting output variables
+      let outputVariables = {
+        input: {},
+        local: { resultleads: bh.local.resultleads }
+      };
+      //End formatting output variables
+      return outputVariables;
+    } catch (e) {
+      throw e;
+    }
+  }
   //appendnew_flow_partnerservice_Start
 
   async sd_eDmQDZuVa9keEApB(bh) {
@@ -217,7 +253,7 @@ export class partnerservice {
   }
   async sd_qQMYR4XbjuXTqvkx(bh) {
     try {
-      bh.local.modlerUrlApi = `http://localhost:24483/api/getleadsdata`;
+      bh.local.modlerUrlApi = `http://localhost:24483/api/getleadsdata?partner_id=${bh.input.partobj}`;
 
       bh = await this.sd_zfHojHu2pemhgFbG(bh);
       //appendnew_next_sd_qQMYR4XbjuXTqvkx
@@ -246,7 +282,7 @@ export class partnerservice {
   }
   async sd_I2EB3GOPeTTSh4Jq(bh) {
     try {
-      bh.local.modlerUrlApi = `http://localhost:24483/api/getdevelopers`;
+      bh.local.modlerUrlApi = `http://localhost:24483/api/getdevelopers?partner_id=${bh.input.partnerid}`;
 
       bh = await this.sd_3Ns00MGI4f6dZsAS(bh);
       //appendnew_next_sd_I2EB3GOPeTTSh4Jq
@@ -384,6 +420,64 @@ export class partnerservice {
       };
       bh.local.result = await this.sdService.nHttpRequest(requestOptions);
       //appendnew_next_sd_KCbHbh7E2xgUaluc
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_KRiJWTGkUkUl7dtr(bh) {
+    try {
+      bh.local.apiurl = `http://localhost:24483/api/getdevelopers`;
+
+      bh = await this.sd_zophkxuhuKOHTBuJ(bh);
+      //appendnew_next_sd_KRiJWTGkUkUl7dtr
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_zophkxuhuKOHTBuJ(bh) {
+    try {
+      let requestOptions = {
+        url: bh.local.apiurl,
+        method: 'get',
+        responseType: 'json',
+        reportProgress: undefined,
+        headers: {},
+        params: {},
+        body: undefined
+      };
+      bh.local.result = await this.sdService.nHttpRequest(requestOptions);
+      //appendnew_next_sd_zophkxuhuKOHTBuJ
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_zNspUBoaoVnL0K9i(bh) {
+    try {
+      bh.local.apiurl = `http://localhost:24483/api/getleadsdata?partner_id=${bh.input.obj}`;
+
+      bh = await this.sd_oFKs7Q6VuA69YBrv(bh);
+      //appendnew_next_sd_zNspUBoaoVnL0K9i
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_oFKs7Q6VuA69YBrv(bh) {
+    try {
+      let requestOptions = {
+        url: bh.local.apiurl,
+        method: 'get',
+        responseType: 'json',
+        reportProgress: undefined,
+        headers: {},
+        params: {},
+        body: undefined
+      };
+      bh.local.resultleads = await this.sdService.nHttpRequest(requestOptions);
+      //appendnew_next_sd_oFKs7Q6VuA69YBrv
       return bh;
     } catch (e) {
       throw e;

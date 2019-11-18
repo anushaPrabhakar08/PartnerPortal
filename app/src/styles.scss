@@ -130,6 +130,21 @@
 .mat-sort-header-arrow {
     color: #000 !important;
 }
+.header-cell .mat-header-cell{
+    color: #000 !important;
+    background: rgba(0, 0, 0, 0.4);  
+    text-align: center !important;
+    justify-content: center;
+}
+.header-cell .mat-cell{
+    color: #000 !important;
+    background: #eee !important;
+    
+}
+.header-cell th.mat-header-cell,
+.header-cell td.mat-cell{
+    text-align: center !important;
+}
 
 //side nav-bar styles
 .nav-menu-item {
