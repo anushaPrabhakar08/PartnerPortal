@@ -7,16 +7,6 @@ import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 import { ReactiveFormsModule, FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { channelservice } from '../../sd-services/channelservice';
-/**
- * Service import Example :
- * import { HeroService } from '../../services/hero/hero.service';
- */
-
-/**
- *
- * Service Designer import Example - Service Name - HeroService
- * import { HeroService } from 'app/sd-services/HeroService';
- */
 
 @Component({
     selector: 'bh-memberregisteration',
@@ -25,13 +15,19 @@ import { channelservice } from '../../sd-services/channelservice';
 
 export class memberregisterationComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
-    profileForm = new FormGroup({
-        firstName: new FormControl(''),
-        lastName: new FormControl(''),
-        userName: new FormControl(''),
-        emailId: new FormControl(''),
-        password: new FormControl('')
-    });
+
+     hide = true;
+     
+    // profileForm = new FormGroup({
+    //     firstName: new FormControl(''),
+    //     lastName: new FormControl(''),
+    //     userName: new FormControl(''),
+    //     emailId: new FormControl(''),
+    //     password: new FormControl('')
+    // });
+
+      profileForm: FormGroup;
+
     constructor(private bdms: NDataModelService,
         private fb: FormBuilder,
         private alertService: NSnackbarService,
@@ -42,8 +38,20 @@ export class memberregisterationComponent extends NBaseComponent implements OnIn
     }
 
     ngOnInit() {
-
+          this.profileForm = this.fb.group({
+            firstName: ['', [Validators.required, Validators.maxLength(20), Validators.pattern(/^[a-zA-Z]+$/)]],
+            lastName: ['', [Validators.required, Validators.maxLength(20), Validators.pattern(/^[a-zA-Z]+$/)]],
+            emailId: ['', [Validators.required,  Validators.maxLength(20), Validators.pattern(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/)]],
+            userName: ['', [Validators.required, Validators.maxLength(20), Validators.pattern(/^[\w\s]+$/)]],
+            password: ['', [Validators.required, Validators.maxLength(20), Validators.minLength(6)]],
+        });
     }
+
+        get firstName() { return this.profileForm.get('firstName') }
+        get lastName() { return this.profileForm.get('lastName') }
+        get userName() { return this.profileForm.get('userName') }
+        get password() { return this.profileForm.get('password') }
+        get emailId() { return this.profileForm.get('emailId') }
 
     submit(data) {
         if (data.firstName == "" || data.lastName == "" || data.userName == "" || data.emailId == "" || data.password == "") {

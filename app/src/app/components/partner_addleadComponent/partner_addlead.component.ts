@@ -14,15 +14,18 @@ import { partnerservice } from '../../sd-services/partnerservice';
 
 export class partner_addleadComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
-      profileForm = new FormGroup({
-          organisationName : new FormControl(''),
-          orgWebsite: new FormControl(''),
-          location : new FormControl(''),
-          opportunityType : new FormControl(''),
-          leadGeneratedDate : new FormControl(''),
-          contactDetails : new FormControl(''),
-          comment : new FormControl('')
-      });
+    //   profileForm = new FormGroup({
+    //       organisationName : new FormControl(''),
+    //       orgWebsite: new FormControl(''),
+    //       location : new FormControl(''),
+    //       opportunityType : new FormControl(''),
+    //       leadGeneratedDate : new FormControl(''),
+    //       contactDetails : new FormControl(''),
+    //       comment : new FormControl('')
+    //   });
+
+    profileForm: FormGroup;
+
     constructor(private bdms: NDataModelService, private fb: FormBuilder, private partnerservice:partnerservice) {
         super();
         this.mm = new ModelMethods(bdms);
@@ -30,10 +33,22 @@ export class partner_addleadComponent extends NBaseComponent implements OnInit {
 
 
     ngOnInit() {
-
+         this.profileForm = this.fb.group({
+            organisationName: ['', [Validators.required, Validators.maxLength(30), Validators.pattern(/^[a-zA-Z]+$/)]],
+            location: ['', [Validators.maxLength(30), Validators.pattern(/^[a-zA-Z]+$/)]],
+            orgWebsite: ['', [Validators.required,  Validators.maxLength(20), Validators.pattern(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/)]],
+            comment: ['', [Validators.maxLength(100), Validators.pattern(/^[\w\s]+$/)]],
+            contactDetails: ['', [Validators.required, Validators.maxLength(10), Validators.pattern(/^[0-9]*$/)]],
+            leadGeneratedDate:[''],
+            opportunityType: ['']
+        });
     }
-
-
+  
+        get organisationName() { return this.profileForm.get('organisationName') }
+        get orgWebsite() { return this.profileForm.get('orgWebsite') }
+        get location() { return this.profileForm.get('location') }
+        get comment() { return this.profileForm.get('comment') }
+        get contactDetails() { return this.profileForm.get('contactDetails') }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, filter, keys, sort, pagenumber, pagesize,

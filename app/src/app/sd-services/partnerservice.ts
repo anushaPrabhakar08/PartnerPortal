@@ -237,7 +237,7 @@ export class partnerservice {
     try {
       let requestOptions = {
         url: bh.local.modlerUrlApi,
-        method: 'post',
+        method: 'put',
         responseType: 'json',
         reportProgress: undefined,
         headers: {},

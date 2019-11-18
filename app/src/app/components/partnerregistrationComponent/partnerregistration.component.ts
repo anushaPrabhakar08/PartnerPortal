@@ -4,21 +4,11 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService, NSnackbarService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
-import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
+import { FormControl, Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { partnerservice } from '../../sd-services/partnerservice';
 import { partnerregistration } from '../../models/partnerregistration.model';
 import { Router } from '@angular/router';
 
-/**
- * Service import Example :
- * import { HeroService } from '../../services/hero/hero.service';
- */
-
-/**
- *
- * Service Designer import Example - Service Name - HeroService
- * import { HeroService } from 'app/sd-services/HeroService';
- */
 
 @Component({
     selector: 'bh-partnerregistration',
@@ -45,26 +35,38 @@ export class partnerregistrationComponent extends NBaseComponent implements OnIn
 
     ngOnInit() {
         this.companyGroup = this.fb.group({
-            companyName: ['', Validators.required],
-            companyWebsite: ['', Validators.required],
-            companyType: ['', Validators.required],
-            numberofEmployees: ['', Validators.required],
+            companyName: ['', [Validators.required, Validators.maxLength(20), Validators.pattern(/^[a-zA-Z]+$/)]],
+            companyWebsite: ['', [Validators.required, Validators.maxLength(20), Validators.pattern(/^[a-zA-Z]+$/)]],
+            companyType: [''],
+            numberofEmployees: ['',[ Validators.required, Validators.maxLength(5), Validators.pattern(/^[0-9]*$/)]],
             address: ['']
         });
         this.profileGroup = this.fb.group({
-            firstName: ['', Validators.required],
-            lastName: ['', Validators.required],
-            mobileNumber: ['', Validators.required],
-            country: ['', Validators.required],
-            designation: ['', Validators.required],
-            
+            firstName: ['', [Validators.required, Validators.maxLength(20), Validators.pattern(/^[a-zA-Z]+$/)]],
+            lastName: ['', [Validators.required, Validators.maxLength(20), Validators.pattern(/^[a-zA-Z]+$/)]],
+            mobileNumber: ['', [Validators.required, Validators.maxLength(10), Validators.pattern(/^[0-9]*$/)]],
+            country: [''],
+            designation: [''],
+
         });
         this.accountGroup = this.fb.group({
-            userName: ['', Validators.required],
-            password: ['', Validators.required],
-            emailId: ['', Validators.required],
+            userName: ['', [Validators.required, Validators.maxLength(20), Validators.pattern(/^[\w\s]+$/)]],
+            password: ['', [Validators.required, Validators.maxLength(20), Validators.minLength(6)]],
+            emailId: ['', [Validators.required,  Validators.maxLength(20), Validators.pattern(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/)]],
         });
     }
+
+    get companyName() { return this.companyGroup.get('companyName') }
+    get companyWebsite() { return this.companyGroup.get('companyWebsite') }
+    get numberofEmployees() { return this.companyGroup.get('numberofEmployees') }
+
+    get firstName() { return this.profileGroup.get('firstName') }
+    get lastName() { return this.profileGroup.get('lastName') }
+    get mobileNumber() { return this.profileGroup.get('mobileNumber') }
+
+    get userName() { return this.accountGroup.get('userName') }
+    get password() { return this.accountGroup.get('password') }
+    get emailId() { return this.accountGroup.get('emailId') }
 
     savePartner() {
         let data = { ...this.companyGroup.value, ...this.profileGroup.value, ...this.accountGroup.value };

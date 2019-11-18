@@ -6,6 +6,9 @@
 *{
     font-family: Open Sans;
 }
+mat-form-field{
+   width:100%;
+}
 
 .login-card .mat-card-image:first-child {
     margin-top: 0 !important
@@ -50,10 +53,10 @@
    
    background-color:#e2dede;
 }
-.opptype .mat-form-field{
-    width:320px !important;
-    margin-left: 30px !important;
-}
+// .opptype .mat-form-field{
+//     width:320px !important;
+//     margin-left: 30px !important;
+// }
 .mat-toolbar {
     //background-color:  #5f737d !important;
     background-color: #000 !important;

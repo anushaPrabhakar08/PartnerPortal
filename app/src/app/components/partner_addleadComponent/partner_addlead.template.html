@@ -1,90 +1,67 @@
 <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="center none" [fxShow]="true" [fxHide]="false">
-  <div fxLayout="column wrap" style="width:100%;" fxLayoutAlign="start start" [fxShow]="true" [fxHide]="false">
+  <div fxLayout="column wrap" style="width:100%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
     <form [formGroup]="profileForm">
       <div fxLayout="row wrap" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
-        <h1 style="font-size: 24px; font-family: Arial, Helvetica, sans-serif;">
-          Add New Lead</h1>
+        <h2>
+          Add New Lead</h2>
       </div>
-      <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-        <div fxLayout="column wrap" style="width:70%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-          <mat-form-field style="width: 320px;" [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;">
-            <input matInput name="organisationName" placeholder="Organisation Name" required formControlName="organisationName">
+      <div fxLayout="row wrap" style="width:80%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+        <mat-form-field [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;">
+          <input matInput name="organisationName" placeholder="Organisation Name" required formControlName="organisationName">
+          <mat-error align="start" *ngIf="organisationName.hasError(&apos;required&apos;)">Mandatory Field</mat-error>
+          <mat-error align="start" *ngIf="organisationName.hasError(&apos;pattern&apos;)">Enter Only Characters</mat-error>
+          <mat-error align="start" *ngIf="organisationName.hasError(&apos;maxlength&apos;)">can&apos;t be more than 40 characters</mat-error>
+          <mat-label>Organization Name</mat-label>
+        </mat-form-field>
+      </div>
+      <div fxLayout="row wrap" style="width:80%;" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
+        <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+          <input matInput placeholder="Organisation Website" required formControlName="orgWebsite">
+          <mat-error align="start" *ngIf="orgWebsite.hasError(&apos;required&apos;)">Mandatory Field</mat-error>
+          <mat-error align="start" *ngIf="orgWebsite.hasError(&apos;maxlength&apos;)">can&apos;t be more than 30 characters</mat-error>
+          <mat-error align="start" *ngIf="orgWebsite.hasError(&apos;pattern&apos;)">Invalid Field</mat-error>
+        </mat-form-field>
+      </div>
+      <div fxLayout="row wrap" style="width:80%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+        <mat-form-field [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;">
+          <input matInput name="location" placeholder="Location" formControlName="location">
+          <mat-error align="start" *ngIf="location.hasError(&apos;pattern&apos;)">Only Characters</mat-error>
+        </mat-form-field>
+      </div>
+      <div fxLayout="row wrap" style="width:80%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+        <mat-form-field [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;">
+          <mat-select formControlName="opportunityType" placeholder="Opportunity Type" required>
+            <mat-option [value]="&apos;Distributor&apos;" disabled="false">Distributor</mat-option>
+            <mat-option [value]="&apos;Resaler&apos;" disabled="false">Resaler</mat-option>
+            <mat-option [value]="&apos;Sales&apos;" disabled="false">Sales</mat-option>
+          </mat-select>
 
-          </mat-form-field>
-        </div>
-        <div fxLayout="column wrap" style="margin-left:20px;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-          <mat-icon>business</mat-icon>
-        </div>
+        </mat-form-field>
       </div>
-      <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-        <div fxLayout="column wrap" style="width:70%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-          <mat-form-field style="width:320px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-            <input matInput placeholder="Organisation Website" required formControlName="orgWebsite">
+      <div fxLayout="row wrap" style="width:80%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+        <mat-form-field [appearance]="&apos;standard&apos;">
+          <input matInput placeholder="Lead Generated Date" [matDatepicker]="picker" formControlName="leadGeneratedDate" name="leadGeneratedDate" required [disabled]="false">
+          <mat-datepicker-toggle matSuffix [for]="picker" disabled="false"></mat-datepicker-toggle>
+          <mat-datepicker #picker [disabled]="false"></mat-datepicker>
 
-          </mat-form-field>
-        </div>
-        <div fxLayout="column wrap" style="margin-left:20px;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-          <mat-icon>web</mat-icon>
-        </div>
+        </mat-form-field>
       </div>
-      <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-        <div fxLayout="column wrap" style="width:70%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-          <mat-form-field style="width: 320px;" [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;">
-            <input matInput name="location" placeholder="Location" required formControlName="location">
-
-          </mat-form-field>
-        </div>
-        <div fxLayout="column wrap" style="margin-left:20px;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-          <mat-icon>business</mat-icon>
-        </div>
+      <div fxLayout="row wrap" style="width:80%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+        <mat-form-field [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;">
+          <input matInput name="contactDetails" placeholder="Contact Details" required formControlName="contactDetails">
+          <mat-error align="start" *ngIf="contactDetails.hasError(&apos;pattern&apos;)">Enter only numerical values</mat-error>
+          <mat-error align="start" *ngIf="contactDetails.hasError(&apos;maxlength&apos;)">enter maximum 10 characters</mat-error>
+          <mat-label>Contact Details</mat-label>
+        </mat-form-field>
       </div>
-      <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="start center" [fxShow]="true" [fxHide]="false">
-        <div fxLayout="column wrap" style="width:75%;margin-left:5px;" class="opptype" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-          <mat-form-field [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;">
-            <mat-select style="width: 320px;" formControlName="opportunityType" placeholder="Opportunity Type" required>
-              <mat-option [value]="&apos;Distributor&apos;" disabled="false">Distributor</mat-option>
-              <mat-option [value]="&apos;Resaler&apos;" disabled="false">Resaler</mat-option>
-              <mat-option [value]="&apos;Sales&apos;" disabled="false">Sales</mat-option>
-            </mat-select>
-
-          </mat-form-field>
-        </div>
+      <div fxLayout="row wrap" style="width:80%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+        <mat-form-field [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;">
+          <input matInput name="comment" placeholder="Comment" formControlName="comment">
+          <mat-error align="start" *ngIf="comment.hasError(&apos;maxlength&apos;)">Up to 100 characters are allowed</mat-error>
+          <mat-label>Comment</mat-label>
+        </mat-form-field>
       </div>
-      <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="start center" [fxShow]="true" [fxHide]="false">
-        <div fxLayout="column wrap" style="width:75%;margin-left:5px;" class="opptype" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-          <mat-form-field style="width: 320px;" [appearance]="&apos;standard&apos;">
-            <input matInput placeholder="Lead Generated Date" [matDatepicker]="picker" formControlName="leadGeneratedDate" name="leadGeneratedDate" required [disabled]="false">
-            <mat-datepicker-toggle matSuffix [for]="picker" disabled="false"></mat-datepicker-toggle>
-            <mat-datepicker #picker [disabled]="false"></mat-datepicker>
-
-          </mat-form-field>
-        </div>
-      </div>
-      <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-        <div fxLayout="column wrap" style="width:70%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-          <mat-form-field style="width: 320px;" [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;">
-            <input matInput name="contactDetails" placeholder="Contact Details" required formControlName="contactDetails">
-
-          </mat-form-field>
-        </div>
-        <div fxLayout="column wrap" style="margin-left:20px;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-          <mat-icon>phone</mat-icon>
-        </div>
-      </div>
-      <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-        <div fxLayout="column wrap" style="width:70%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-          <mat-form-field style="width: 320px;" [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;">
-            <input matInput name="comment" placeholder="Comment" required formControlName="comment">
-
-          </mat-form-field>
-        </div>
-        <div fxLayout="column wrap" style="margin-left:20px;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-          <mat-icon>comment</mat-icon>
-        </div>
-      </div>
-      <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-button style="    background: #09096f;     color: white;     font-weight: 800;     width: 125px;" [mat-dialog-close] (click)="submit(profileForm.value)">Add Lead</button></div>
-      </div>
+      <div fxLayout="row wrap" style="width:80%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button [mat-dialog-close]="[mat-dialog-close]" color="primary" (click)="submit(profileForm.value)">Add Lead</button></div>
     </form>
   </div>
 </div>

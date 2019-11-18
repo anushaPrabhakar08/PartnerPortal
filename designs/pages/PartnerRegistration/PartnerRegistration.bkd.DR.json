@@ -909,7 +909,32 @@
                                                     },
                                                     {
                                                         "_key": "matError",
-                                                        "_value": [],
+                                                        "_value": [
+                                                            {
+                                                                "input1": "companyName.hasError('required')",
+                                                                "input2": "mandatory field",
+                                                                "toggle": {
+                                                                    "toggleData": [],
+                                                                    "selected": "start"
+                                                                }
+                                                            },
+                                                            {
+                                                                "input1": "companyName.hasError('maxlength')",
+                                                                "input2": "can't be more than 20 characters",
+                                                                "toggle": {
+                                                                    "toggleData": [],
+                                                                    "selected": "start"
+                                                                }
+                                                            },
+                                                            {
+                                                                "input1": "companyName.hasError('pattern')",
+                                                                "input2": "Only Characters",
+                                                                "toggle": {
+                                                                    "toggleData": [],
+                                                                    "selected": "start"
+                                                                }
+                                                            }
+                                                        ],
                                                         "_type": "a",
                                                         "_attrDef": "p",
                                                         "_visibility": true
@@ -923,7 +948,7 @@
                                                     },
                                                     {
                                                         "_key": "Label",
-                                                        "_value": "",
+                                                        "_value": "Company Name",
                                                         "_type": "a",
                                                         "_attrDef": "p",
                                                         "_visibility": true
@@ -1064,7 +1089,7 @@
                                                     },
                                                     {
                                                         "_key": "placeholder",
-                                                        "_value": "Company Website",
+                                                        "_value": "Company Website ",
                                                         "_type": "kv",
                                                         "_attrDef": "p",
                                                         "_useAsLabel": true
@@ -1143,7 +1168,32 @@
                                                     },
                                                     {
                                                         "_key": "matError",
-                                                        "_value": [],
+                                                        "_value": [
+                                                            {
+                                                                "input1": "companyWebsite.hasError('required')",
+                                                                "input2": "Mandatory Field",
+                                                                "toggle": {
+                                                                    "toggleData": [],
+                                                                    "selected": "start"
+                                                                }
+                                                            },
+                                                            {
+                                                                "input1": "companyWebsite.hasError('maxlength')",
+                                                                "input2": "can't be more than 30 characters",
+                                                                "toggle": {
+                                                                    "toggleData": [],
+                                                                    "selected": "start"
+                                                                }
+                                                            },
+                                                            {
+                                                                "input1": "companyWebsite.hasError('pattern')",
+                                                                "input2": "Only Characters",
+                                                                "toggle": {
+                                                                    "toggleData": [],
+                                                                    "selected": "start"
+                                                                }
+                                                            }
+                                                        ],
                                                         "_type": "a",
                                                         "_attrDef": "p",
                                                         "_visibility": true
@@ -1157,7 +1207,7 @@
                                                     },
                                                     {
                                                         "_key": "Label",
-                                                        "_value": "",
+                                                        "_value": "Company Website",
                                                         "_type": "a",
                                                         "_attrDef": "p",
                                                         "_visibility": true
@@ -1368,7 +1418,7 @@
                                                     },
                                                     {
                                                         "_key": "required",
-                                                        "_value": "required",
+                                                        "_value": "",
                                                         "_type": "a",
                                                         "_attrDef": "p"
                                                     },
@@ -1590,7 +1640,7 @@
                                                     },
                                                     {
                                                         "_key": "type",
-                                                        "_value": "number",
+                                                        "_value": "text",
                                                         "_type": "kv",
                                                         "_attrDef": "p"
                                                     },
@@ -1626,7 +1676,32 @@
                                                     },
                                                     {
                                                         "_key": "matError",
-                                                        "_value": [],
+                                                        "_value": [
+                                                            {
+                                                                "input1": "numberofEmployees.hasError('required')",
+                                                                "input2": "Mandotory field",
+                                                                "toggle": {
+                                                                    "toggleData": [],
+                                                                    "selected": "start"
+                                                                }
+                                                            },
+                                                            {
+                                                                "input1": "numberofEmployees.hasError('maxlength')",
+                                                                "input2": "Invalid Input",
+                                                                "toggle": {
+                                                                    "toggleData": [],
+                                                                    "selected": "start"
+                                                                }
+                                                            },
+                                                            {
+                                                                "input1": "numberofEmployees.hasError('pattern')",
+                                                                "input2": "only Numerical values",
+                                                                "toggle": {
+                                                                    "toggleData": [],
+                                                                    "selected": "start"
+                                                                }
+                                                            }
+                                                        ],
                                                         "_type": "a",
                                                         "_attrDef": "p",
                                                         "_visibility": true
@@ -1640,7 +1715,7 @@
                                                     },
                                                     {
                                                         "_key": "Label",
-                                                        "_value": "",
+                                                        "_value": "Number of employees",
                                                         "_type": "a",
                                                         "_attrDef": "p",
                                                         "_visibility": true
@@ -1800,7 +1875,7 @@
                                                     },
                                                     {
                                                         "_key": "required",
-                                                        "_value": "required",
+                                                        "_value": "",
                                                         "_type": "a",
                                                         "_attrDef": "p"
                                                     },
@@ -1874,7 +1949,7 @@
                                                     },
                                                     {
                                                         "_key": "Label",
-                                                        "_value": "",
+                                                        "_value": "Address",
                                                         "_type": "a",
                                                         "_attrDef": "p",
                                                         "_visibility": true
@@ -2362,7 +2437,32 @@
                                                     },
                                                     {
                                                         "_key": "matError",
-                                                        "_value": [],
+                                                        "_value": [
+                                                            {
+                                                                "input1": "firstName.hasError('required')",
+                                                                "input2": "Mandatory Field",
+                                                                "toggle": {
+                                                                    "toggleData": [],
+                                                                    "selected": "start"
+                                                                }
+                                                            },
+                                                            {
+                                                                "input1": "firstName.hasError('maxlength')",
+                                                                "input2": "can't be more than 20 characters",
+                                                                "toggle": {
+                                                                    "toggleData": [],
+                                                                    "selected": "start"
+                                                                }
+                                                            },
+                                                            {
+                                                                "input1": "firstName.hasError('pattern')",
+                                                                "input2": "Cnly Characters",
+                                                                "toggle": {
+                                                                    "toggleData": [],
+                                                                    "selected": "start"
+                                                                }
+                                                            }
+                                                        ],
                                                         "_type": "a",
                                                         "_attrDef": "p",
                                                         "_visibility": true
@@ -2376,7 +2476,7 @@
                                                     },
                                                     {
                                                         "_key": "Label",
-                                                        "_value": "",
+                                                        "_value": "First Name",
                                                         "_type": "a",
                                                         "_attrDef": "p",
                                                         "_visibility": true
@@ -2596,7 +2696,32 @@
                                                     },
                                                     {
                                                         "_key": "matError",
-                                                        "_value": [],
+                                                        "_value": [
+                                                            {
+                                                                "input1": "lastName.hasError('required')",
+                                                                "input2": "mandotory Field",
+                                                                "toggle": {
+                                                                    "toggleData": [],
+                                                                    "selected": "start"
+                                                                }
+                                                            },
+                                                            {
+                                                                "input1": "lastName.hasError('maxlength')",
+                                                                "input2": "van't be more thann 20 characters",
+                                                                "toggle": {
+                                                                    "toggleData": [],
+                                                                    "selected": "start"
+                                                                }
+                                                            },
+                                                            {
+                                                                "input1": "lastName.hasError('pattern')",
+                                                                "input2": "Only Characters",
+                                                                "toggle": {
+                                                                    "toggleData": [],
+                                                                    "selected": "start"
+                                                                }
+                                                            }
+                                                        ],
                                                         "_type": "a",
                                                         "_attrDef": "p",
                                                         "_visibility": true
@@ -2610,7 +2735,7 @@
                                                     },
                                                     {
                                                         "_key": "Label",
-                                                        "_value": "",
+                                                        "_value": "Last Name",
                                                         "_type": "a",
                                                         "_attrDef": "p",
                                                         "_visibility": true
@@ -2830,7 +2955,32 @@
                                                     },
                                                     {
                                                         "_key": "matError",
-                                                        "_value": [],
+                                                        "_value": [
+                                                            {
+                                                                "input1": "mobileNumber.hasError('required')",
+                                                                "input2": "Mandatory Field",
+                                                                "toggle": {
+                                                                    "toggleData": [],
+                                                                    "selected": "start"
+                                                                }
+                                                            },
+                                                            {
+                                                                "input1": "mobileNumber.hasError('maxlength')",
+                                                                "input2": "can't be more than 10 characters",
+                                                                "toggle": {
+                                                                    "toggleData": [],
+                                                                    "selected": "start"
+                                                                }
+                                                            },
+                                                            {
+                                                                "input1": "mobileNumber.hasError('pattern')",
+                                                                "input2": "Numericl Values only",
+                                                                "toggle": {
+                                                                    "toggleData": [],
+                                                                    "selected": "start"
+                                                                }
+                                                            }
+                                                        ],
                                                         "_type": "a",
                                                         "_attrDef": "p",
                                                         "_visibility": true
@@ -2844,7 +2994,7 @@
                                                     },
                                                     {
                                                         "_key": "Label",
-                                                        "_value": "",
+                                                        "_value": "Mobile Number",
                                                         "_type": "a",
                                                         "_attrDef": "p",
                                                         "_visibility": true
@@ -3055,7 +3205,7 @@
                                                     },
                                                     {
                                                         "_key": "required",
-                                                        "_value": "required",
+                                                        "_value": "",
                                                         "_type": "a",
                                                         "_attrDef": "p"
                                                     },
@@ -3304,7 +3454,7 @@
                                                     },
                                                     {
                                                         "_key": "required",
-                                                        "_value": "required",
+                                                        "_value": "",
                                                         "_type": "a",
                                                         "_attrDef": "p"
                                                     },
@@ -3897,7 +4047,24 @@
                                                     },
                                                     {
                                                         "_key": "matError",
-                                                        "_value": [],
+                                                        "_value": [
+                                                            {
+                                                                "input1": "emailId.hasError('required')",
+                                                                "input2": "mandatory Field",
+                                                                "toggle": {
+                                                                    "toggleData": [],
+                                                                    "selected": "start"
+                                                                }
+                                                            },
+                                                            {
+                                                                "input1": "emailId.hasError('pattern')",
+                                                                "input2": "Invalid email id",
+                                                                "toggle": {
+                                                                    "toggleData": [],
+                                                                    "selected": "start"
+                                                                }
+                                                            }
+                                                        ],
                                                         "_type": "a",
                                                         "_attrDef": "p",
                                                         "_visibility": true
@@ -3911,7 +4078,7 @@
                                                     },
                                                     {
                                                         "_key": "Label",
-                                                        "_value": "",
+                                                        "_value": "Email",
                                                         "_type": "a",
                                                         "_attrDef": "p",
                                                         "_visibility": true
@@ -4131,7 +4298,24 @@
                                                     },
                                                     {
                                                         "_key": "matError",
-                                                        "_value": [],
+                                                        "_value": [
+                                                            {
+                                                                "input1": "userName.hasError('required')",
+                                                                "input2": "madatory field",
+                                                                "toggle": {
+                                                                    "toggleData": [],
+                                                                    "selected": "start"
+                                                                }
+                                                            },
+                                                            {
+                                                                "input1": "userName.hasError('pattern')",
+                                                                "input2": "No special characters allowed",
+                                                                "toggle": {
+                                                                    "toggleData": [],
+                                                                    "selected": "start"
+                                                                }
+                                                            }
+                                                        ],
                                                         "_type": "a",
                                                         "_attrDef": "p",
                                                         "_visibility": true
@@ -4145,7 +4329,7 @@
                                                     },
                                                     {
                                                         "_key": "Label",
-                                                        "_value": "",
+                                                        "_value": "User Name",
                                                         "_type": "a",
                                                         "_attrDef": "p",
                                                         "_visibility": true
@@ -4365,7 +4549,32 @@
                                                     },
                                                     {
                                                         "_key": "matError",
-                                                        "_value": [],
+                                                        "_value": [
+                                                            {
+                                                                "input1": "password.hasError('required')",
+                                                                "input2": "mandatory field",
+                                                                "toggle": {
+                                                                    "toggleData": [],
+                                                                    "selected": "start"
+                                                                }
+                                                            },
+                                                            {
+                                                                "input1": "password.hasError('minlength')",
+                                                                "input2": "minimum 6 characters",
+                                                                "toggle": {
+                                                                    "toggleData": [],
+                                                                    "selected": "start"
+                                                                }
+                                                            },
+                                                            {
+                                                                "input1": "password.hasError('maxlength')",
+                                                                "input2": "maximum 20 characters",
+                                                                "toggle": {
+                                                                    "toggleData": [],
+                                                                    "selected": "start"
+                                                                }
+                                                            }
+                                                        ],
                                                         "_type": "a",
                                                         "_attrDef": "p",
                                                         "_visibility": true
@@ -4379,7 +4588,7 @@
                                                     },
                                                     {
                                                         "_key": "Label",
-                                                        "_value": "",
+                                                        "_value": "Password",
                                                         "_type": "a",
                                                         "_attrDef": "p",
                                                         "_visibility": true

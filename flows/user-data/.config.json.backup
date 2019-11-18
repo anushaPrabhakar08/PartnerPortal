@@ -603,13 +603,13 @@
      "view-grid-size": "20",
      "view-node-status": true,
      "view-node-show-label": true,
-     "view-show-tips": false,
+     "view-show-tips": true,
      "view-snap-grid": false,
      "view-show-grid": false
     }
    },
    "menu-menu-item-palette": false,
-   "menu-menu-item-sidebar": true
+   "menu-menu-item-sidebar": false
   }
  }
 }

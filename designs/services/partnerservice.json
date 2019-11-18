@@ -79,7 +79,7 @@
         "type": "HttpRequest",
         "z": "sd_ilDSHUtXqB5Z3v1A",
         "name": "modler flow",
-        "method": "post",
+        "method": "put",
         "methodMappingObj": {},
         "urlMapping": "bh.local.modlerUrlApi",
         "urlMappingObj": {

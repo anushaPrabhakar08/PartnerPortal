@@ -12,18 +12,24 @@
                   <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                     <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
                       <input matInput placeholder="Company Name" required formControlName="companyName">
-
+                      <mat-error align="start" *ngIf="companyName.hasError(&apos;required&apos;)">mandatory field</mat-error>
+                      <mat-error align="start" *ngIf="companyName.hasError(&apos;maxlength&apos;)">can&apos;t be more than 20 characters</mat-error>
+                      <mat-error align="start" *ngIf="companyName.hasError(&apos;pattern&apos;)">Only Characters</mat-error>
+                      <mat-label>Company Name</mat-label>
                     </mat-form-field>
                   </div>
                   <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                     <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                      <input matInput placeholder="Company Website" required formControlName="companyWebsite">
-
+                      <input matInput placeholder="Company Website " required formControlName="companyWebsite">
+                      <mat-error align="start" *ngIf="companyWebsite.hasError(&apos;required&apos;)">Mandatory Field</mat-error>
+                      <mat-error align="start" *ngIf="companyWebsite.hasError(&apos;maxlength&apos;)">can&apos;t be more than 30 characters</mat-error>
+                      <mat-error align="start" *ngIf="companyWebsite.hasError(&apos;pattern&apos;)">Only Characters</mat-error>
+                      <mat-label>Company Website</mat-label>
                     </mat-form-field>
                   </div>
                   <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                     <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                      <mat-select formControlName="companyType" placeholder="Company Type" required>
+                      <mat-select formControlName="companyType" placeholder="Company Type">
                         <ng-template ngFor let-option [ngForOf]="companyTypeSource" let-i="index">
                           <mat-option [value]="option">{{option}}</mat-option>
                         </ng-template>
@@ -33,14 +39,17 @@
                   </div>
                   <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                     <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                      <input matInput type="number" placeholder="Number of Employees" required formControlName="numberofEmployees">
-
+                      <input matInput type="text" placeholder="Number of Employees" required formControlName="numberofEmployees">
+                      <mat-error align="start" *ngIf="numberofEmployees.hasError(&apos;required&apos;)">Mandotory field</mat-error>
+                      <mat-error align="start" *ngIf="numberofEmployees.hasError(&apos;maxlength&apos;)">Invalid Input</mat-error>
+                      <mat-error align="start" *ngIf="numberofEmployees.hasError(&apos;pattern&apos;)">only Numerical values</mat-error>
+                      <mat-label>Number of employees</mat-label>
                     </mat-form-field>
                   </div>
                   <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                     <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                      <input matInput placeholder="Address" required formControlName="address">
-
+                      <input matInput placeholder="Address" formControlName="address">
+                      <mat-label>Address</mat-label>
                     </mat-form-field>
                   </div>
                   <div fxLayout="row wrap" fxLayoutAlign="end stretch" [fxShow]="true" [fxHide]="false"><button mat-raised-button matStepperNext color="primary">Next</button></div>
@@ -51,24 +60,33 @@
                   <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                     <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
                       <input matInput placeholder="First Name" required formControlName="firstName">
-
+                      <mat-error align="start" *ngIf="firstName.hasError(&apos;required&apos;)">Mandatory Field</mat-error>
+                      <mat-error align="start" *ngIf="firstName.hasError(&apos;maxlength&apos;)">can&apos;t be more than 20 characters</mat-error>
+                      <mat-error align="start" *ngIf="firstName.hasError(&apos;pattern&apos;)">Cnly Characters</mat-error>
+                      <mat-label>First Name</mat-label>
                     </mat-form-field>
                   </div>
                   <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                     <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
                       <input matInput placeholder="Last Name" required formControlName="lastName">
-
+                      <mat-error align="start" *ngIf="lastName.hasError(&apos;required&apos;)">mandotory Field</mat-error>
+                      <mat-error align="start" *ngIf="lastName.hasError(&apos;maxlength&apos;)">van&apos;t be more thann 20 characters</mat-error>
+                      <mat-error align="start" *ngIf="lastName.hasError(&apos;pattern&apos;)">Only Characters</mat-error>
+                      <mat-label>Last Name</mat-label>
                     </mat-form-field>
                   </div>
                   <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                     <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
                       <input matInput placeholder="Mobie Number" required formControlName="mobileNumber">
-
+                      <mat-error align="start" *ngIf="mobileNumber.hasError(&apos;required&apos;)">Mandatory Field</mat-error>
+                      <mat-error align="start" *ngIf="mobileNumber.hasError(&apos;maxlength&apos;)">can&apos;t be more than 10 characters</mat-error>
+                      <mat-error align="start" *ngIf="mobileNumber.hasError(&apos;pattern&apos;)">Numericl Values only</mat-error>
+                      <mat-label>Mobile Number</mat-label>
                     </mat-form-field>
                   </div>
                   <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                     <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                      <mat-select formControlName="designation" placeholder="Designation" required>
+                      <mat-select formControlName="designation" placeholder="Designation">
                         <ng-template ngFor let-option [ngForOf]="designationSource" let-i="index">
                           <mat-option [value]="option">{{option}}</mat-option>
                         </ng-template>
@@ -78,7 +96,7 @@
                   </div>
                   <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                     <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                      <mat-select formControlName="country" placeholder="Country" required>
+                      <mat-select formControlName="country" placeholder="Country">
                         <ng-template ngFor let-option [ngForOf]="countrySource" let-i="index">
                           <mat-option [value]="option">{{option}}</mat-option>
                         </ng-template>
@@ -94,19 +112,26 @@
                   <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                     <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
                       <input matInput type="email" placeholder="Email" required formControlName="emailId">
-
+                      <mat-error align="start" *ngIf="emailId.hasError(&apos;required&apos;)">mandatory Field</mat-error>
+                      <mat-error align="start" *ngIf="emailId.hasError(&apos;pattern&apos;)">Invalid email id</mat-error>
+                      <mat-label>Email</mat-label>
                     </mat-form-field>
                   </div>
                   <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                     <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
                       <input matInput placeholder="Username" required formControlName="userName">
-
+                      <mat-error align="start" *ngIf="userName.hasError(&apos;required&apos;)">madatory field</mat-error>
+                      <mat-error align="start" *ngIf="userName.hasError(&apos;pattern&apos;)">No special characters allowed</mat-error>
+                      <mat-label>User Name</mat-label>
                     </mat-form-field>
                   </div>
                   <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                     <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
                       <input matInput type="password" placeholder="Password" required formControlName="password">
-
+                      <mat-error align="start" *ngIf="password.hasError(&apos;required&apos;)">mandatory field</mat-error>
+                      <mat-error align="start" *ngIf="password.hasError(&apos;minlength&apos;)">minimum 6 characters</mat-error>
+                      <mat-error align="start" *ngIf="password.hasError(&apos;maxlength&apos;)">maximum 20 characters</mat-error>
+                      <mat-label>Password</mat-label>
                     </mat-form-field>
                   </div>
                   <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false"><button mat-raised-button matStepperPrevious color="primary">Prev</button><button mat-raised-button color="primary" (click)="savePartner()">Register</button></div>

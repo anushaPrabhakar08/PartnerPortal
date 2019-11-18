@@ -6,16 +6,7 @@ import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 import { ReactiveFormsModule, FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { partnerservice } from '../../sd-services/partnerservice';
-/**
- * Service import Example :
- * import { HeroService } from '../../services/hero/hero.service';
- */
 
-/**
- *
- * Service Designer import Example - Service Name - HeroService
- * import { HeroService } from 'app/sd-services/HeroService';
- */
 
 @Component({
     selector: 'bh-partner_adddeveloper',
@@ -24,23 +15,35 @@ import { partnerservice } from '../../sd-services/partnerservice';
 
 export class partner_adddeveloperComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
-    developerForm = new FormGroup({
-        firstName: new FormControl(''),
-        lastName: new FormControl(''),
-        position: new FormControl(''),
-        experience: new FormControl('')
-    });
+    // developerForm = new FormGroup({
+    //     firstName: new FormControl(''),
+    //     lastName: new FormControl(''),
+    //     position: new FormControl(''),
+    //     experience: new FormControl('')
+    // });
 
-    constructor(private bdms: NDataModelService,
-    private partnerservice:partnerservice
-    ) {
+    developerForm: FormGroup;
+
+    constructor(private bdms: NDataModelService,  private fb: FormBuilder,
+    private partnerservice:partnerservice) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
     ngOnInit() {
-
+         this.developerForm = this.fb.group({
+            firstName: ['', [Validators.required, Validators.maxLength(20), Validators.pattern(/^[a-zA-Z]+$/)]],
+            lastName: ['', [Validators.required, Validators.maxLength(20), Validators.pattern(/^[a-zA-Z]+$/)]],
+            email: ['', [Validators.required,  Validators.maxLength(20), Validators.pattern(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/)]],
+            position: [''],
+            experience: ['',[Validators.maxLength(2), Validators.pattern(/^[0-9]*$/)]]
+        });
     }
+
+    get firstName() { return this.developerForm.get('firstName') }
+    get lastName() { return this.developerForm.get('lastName') }
+    get email() { return this.developerForm.get('email') }
+    get experience() { return this.developerForm.get('experience') }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, filter, keys, sort, pagenumber, pagesize,
