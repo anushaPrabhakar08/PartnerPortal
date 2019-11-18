@@ -38,8 +38,6 @@ import { memberregisterationComponent } from '../components/memberregisterationC
 import { spinnerComponent } from '../components/spinnerComponent/spinner.component';
 //CORE_REFERENCE_IMPORT-contactpageComponent
 import { contactpageComponent } from '../components/contactpageComponent/contactpage.component';
-//CORE_REFERENCE_IMPORT-productComponent
-import { productComponent } from '../components/productComponent/product.component';
 //CORE_REFERENCE_IMPORT-memberloginComponent
 import { memberloginComponent } from '../components/memberloginComponent/memberlogin.component';
 //CORE_REFERENCE_IMPORT-sampleComponent
@@ -144,8 +142,6 @@ channel_addmarketingComponent,
   spinnerComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-contactpageComponent
   contactpageComponent,
-  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-productComponent
-  productComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-memberloginComponent
   memberloginComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-sampleComponent
@@ -209,8 +205,8 @@ export const appProviders = [
 
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
 export const appRoutes = [{path: 'home', component: homeComponent,
-children: [{path: 'cantact', component: contactpageComponent}]},{path: 'login/:type', component: loginComponent,
-children: [{path: 'partnerlogin', component: partnerloginComponent},{path: 'memberlogin', component: memberloginComponent}]},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'product', component: productComponent},{path: 'contact', component: contactpageComponent},{path: 'channel', component: channelComponent,
+children: []},{path: 'login/:type', component: loginComponent,
+children: []},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'contact', component: contactpageComponent},{path: 'channel', component: channelComponent,
 children: [{path: 'dashboard', component: channel_dashboardComponent},{path: 'dashboardPartnerDetails/:_id', component: partner_detailsComponent},{path: 'dashboardChannelMarketing', component: channel_marketingComponent},{path: 'dashboardChannelAnnouncements', component: channel_announcementsComponent,
 children: []}]},{path: 'partner', component: partnerComponent,
 children: [{path: 'dashboardPartnerMarketing', component: partner_marketingComponent},{path: 'dashboardPartnerLeads', component: partner_leadsComponent},{path: 'dashboardPartnerDevelopers', component: partner_developersComponent},{path: 'dashboardPartnerAgreement', component: partner_agreementComponent}]},{path: 'memberregisteration', component: memberregisterationComponent},{path: 'partnerregistration', component: partnerregistrationComponent},{path: 'partner_addDeveloper', component: partner_adddeveloperComponent},{path: 'partner_addLead', component: partner_addleadComponent,

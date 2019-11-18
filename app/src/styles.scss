@@ -2,9 +2,9 @@
 
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 @import "nDefaults.scss";
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
 *{
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Work Sans', sans-serif;
 
       box-sizing: border-box;
 }
@@ -59,8 +59,71 @@ table,header,footer{
 mat-form-field{
    width:100%;
 }
-mat-form-field{
-   width:100%;
+
+// Home Page
+.hero-banner {
+    height: 500px;
+    background-image: url('/assets/Web/portal-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    position:  relative;
+    z-index: 0;
+}
+.hero-banner .overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.5);
+    z-index: -1;
+}
+.hero-banner  p{
+    font-size: 48px;
+    font-weight:900;
+    margin: 10px;
+}
+.hero-banner .banner-heading{
+    position: relative;
+}
+.hero-banner .banner-heading:after {
+    position: absolute;
+    content: ' ';
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: red;
+    left: 0;
+}
+.hero-banner span{
+    font-size: 26px;
+    font-weight:600;
+}
+// login Page
+
+bh-login{
+    width:100%;
+    height:auto;
+}
+.login-logo{
+    margin:30px 0;
+}
+.login-bg:after{
+    position: absolute;
+    content: " ";
+    bottom:0;
+    width:100%;
+    background: url(/assets/Web/footer-wave.svg) 50% 18px/4850px 91px no-repeat;
+    height: 100px;
+}
+.login-form{
+    background: #f9f9f9;
+    padding: 25px;   
+    border-radius: 15px;
+}
+.login-form .mat-form-field-appearance-outline .mat-form-field-outline{
+    background: #fbfbfb;
+    overflow: hidden;
 }
 
 .login-card .mat-card-image:first-child {
@@ -97,9 +160,7 @@ mat-form-field{
     height: 50px !important;
     width: 50px !important;
 }
-.margin-tb {
-    margin: 10px 40px;
-}
+
 .h_card{
    height: 400px;
    width:700px;
@@ -110,16 +171,6 @@ mat-form-field{
 //     width:320px !important;
 //     margin-left: 30px !important;
 // }
-.mat-toolbar {
-    //background-color:  #5f737d !important;
-    background-color: #000 !important;
-    color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
-}
 
 .login-card .mat-card-image:first-child {
     margin-top: 0 !important
@@ -143,21 +194,6 @@ mat-form-field{
     margin: 10px 40px;
 }
 
-.mat-toolbar {
-    //background-color:  #5f737d !important;
-    background-color: #000 !important;
-    color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
-}
-
-.mat-toolbar-single-row {
-    width: unset !important;
-    height: 80px !important;
-}
 
 .mat-paginator {
     background: unset !important;
@@ -493,71 +529,6 @@ video {
     font-size: 14px;
 } 
 
-//home-page
-.card_video {
-    width: 540px;
-}
-
-.partnerReg{
-    width:100%;
-    font-size:20px;
-   // background-color: #5f737d;
-    height:100%;
-    justify-content: center;
-    text-align: center;
-    font-weight: 700;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.fullscreen{
-  display:none;
-  width:100%;
-  height:100%;
-  background-color: black;
-  opacity: 0.8;
-  position: absolute;
-  left:0;
-  top:0
-  }
-
-// .partnerReg{
-//    width:100%;
-//    font-size:20px;
-//    background-color: #5f737d;
-//    height:100%;
-//    justify-content: center;
-//    text-align: center;
-//    font-weight: 700;
-//  font-family: Arial, Helvetica, sans-serif;
-// }
-
-//home
-.home_col2 {
-    height: 500px;
-    background-image: url('assets/Web/become_partner.jpg');
-    background-size: cover;}
-
-.home_btn{
-color:white;
-font-weight:500;
-font-size: 20px
-}
-.home_btn:hover{
-    color:red;
-}
-
-.card_subtitle{
-    font-weight:600;font-size:40px;color:red;font-variant:petite-caps;
-}
- .card_video{
-    width:35%;
-    height: auto;
-}
-.whypartner{
-    font-size:20px;
-    font-variant:petite-caps;
-    
-}
 
 //contact 
 .form-fields{
@@ -583,13 +554,8 @@ font-size: 20px
     background-color: #ee1c22;
     color: white;
 }
-.margin-tb{
-    margin: 10px 40px;
-}
 
 .mat-toolbar{
-    //background-color:  #5f737d !important;
-    background-color:  #000 !important;
     color: #fff;
     position: fixed;
     top: 0;
@@ -614,25 +580,4 @@ pdf-viewer{
 
 .selectbox mat-form-field{
     width:100% !important;
-}
-img{
-   max-width: 100%;
-}
-
-bh-login{
-    width:100%;
-    height:100%;
-}
-
-// Login
-.login-logo{
-    margin-bottom:20px
-}
-.login-bg:after{
-    position: absolute;
-    content: " ";
-    bottom:0;
-    width:100%;
-    background: url(/assets/Web/footer-wave.svg) 50% 18px/4850px 91px no-repeat;
-    height: 100px;
 }

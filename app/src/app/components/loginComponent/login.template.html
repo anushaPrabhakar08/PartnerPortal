@@ -1,7 +1,7 @@
-<div fxLayout="column wrap" class="login-bg" fxFlex="100" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false" fxFill>
+<div fxLayout="column wrap" class="login-bg" fxFlex="100" fxLayoutAlign="start center" [fxShow]="true" [fxHide]="false" fxFill>
   <div fxLayout="row wrap" class="login-logo" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/logo-dark.png" width="250px"></div>
   <div fxLayout="row wrap" class="w-100" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-    <form fxFlex="50" fxFlex.xs="90" style="    padding: 25px;     border-radius: 15px;" class="bg-white">
+    <form fxFlex="50" fxFlex.xs="90" fxFlex.md="30" fxFlex.lg="30" class="login-form">
       <h3 class="text-center">
         Welcome back to Neutrinos!</h3>
       <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
@@ -18,11 +18,26 @@
           <mat-icon matSuffix (click)="isTextFieldType = !isTextFieldType">{{isTextFieldType ? &apos;visibility&apos; : &apos;visibility_off&apos;}}</mat-icon>
         </mat-form-field>
       </div>
+      <div fxLayout="row wrap" fxLayoutAlign="space-between center" [fxShow]="true" [fxHide]="false">
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+          <mat-checkbox required>Remember me?</mat-checkbox>
+        </div>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+          <p class="text-warn text-center">
+            Forgot Password?</p>
+        </div>
+      </div>
       <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-raised-button class="w-100" color="warn" type="submit">Sign In</button></div>
     </form>
   </div>
-  <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-    <p class="text-warn text-center">
-      Forgot Password?</p>
+  <div fxLayout="row wrap" fxLayoutAlign="space-around center" [fxShow]="true" [fxHide]="false">
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <p class="text-center">
+        Don&apos;t have an account?</p>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <p class="text-warn">
+        Get Started</p>
+    </div>
   </div>
 </div>

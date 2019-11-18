@@ -8,12 +8,7 @@
             "resolve": "",
             "data": "",
             "canActivate": "",
-            "children": [
-                {
-                    "component": "contactpageComponent",
-                    "path": "cantact"
-                }
-            ]
+            "children": []
         },
         {
             "path": "login/:type",
@@ -23,25 +18,12 @@
             "resolve": "",
             "data": "",
             "canActivate": "",
-            "children": [
-                {
-                    "path": "partnerlogin",
-                    "component": "partnerloginComponent"
-                },
-                {
-                    "path": "memberlogin",
-                    "component": "memberloginComponent"
-                }
-            ]
+            "children": []
         },
         {
             "path": "unauthorized",
             "redirectTo": "/login",
             "pathMatch": "full"
-        },
-        {
-            "path": "product",
-            "component": "productComponent"
         },
         {
             "path": "contact",

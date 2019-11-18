@@ -79,22 +79,7 @@ export class partnerregistrationComponent extends NBaseComponent implements OnIn
             this.alertService.openSnackBar('fill all the details');
         }
     }
-    get companyName() { return this.companyGroup.get('companyName'); }
-    get companyWebsite() { return this.companyGroup.get('companyWebsite'); }
-    // submit(data) {
 
-    //     this.dm.partnerregistration = data;
-    //     if (typeof this.dm.partnerregistration === 'object') {
-    //         this.partnerservice.savepartnerdata(this.dm.partnerregistration);
-    //         this.rout.navigate(['/login']);
-    //     }
-    //     else {
-    //         this.alertService.openSnackBar('fill all the details');
-    //     }
-
-
-    //     this.firstFormGroup.reset();
-    // }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, filter, keys, sort, pagenumber, pagesize,
