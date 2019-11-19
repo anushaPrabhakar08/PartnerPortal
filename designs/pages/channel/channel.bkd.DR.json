@@ -161,7 +161,7 @@
                     },
                     {
                         "_key": "class",
-                        "_value": "toolbar-fixed",
+                        "_value": "bg-dark",
                         "_type": "kv",
                         "_attrDef": "p"
                     },
@@ -397,7 +397,7 @@
                             },
                             {
                                 "_key": "imgSrc",
-                                "_value": "Web/logo1.png",
+                                "_value": "Web/logo.png",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -881,7 +881,7 @@
                                     },
                                     {
                                         "_key": "buttonname",
-                                        "_value": "Registered partners",
+                                        "_value": "Partners",
                                         "_type": "a",
                                         "_attrDef": "p",
                                         "_useAsLabel": true
@@ -918,7 +918,7 @@
                                     },
                                     {
                                         "_key": "routerLink",
-                                        "_value": "/channel/dashboard",
+                                        "_value": "/admin/patrners_list",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     }
@@ -942,7 +942,7 @@
                                     },
                                     {
                                         "_key": "buttonname",
-                                        "_value": "Marketing",
+                                        "_value": "Marketing Collaterals",
                                         "_type": "a",
                                         "_attrDef": "p",
                                         "_useAsLabel": true
@@ -979,7 +979,7 @@
                                     },
                                     {
                                         "_key": "routerLink",
-                                        "_value": "/channel/dashboardChannelMarketing",
+                                        "_value": "/admin/marketing_collaterals",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     }
@@ -1040,7 +1040,7 @@
                                     },
                                     {
                                         "_key": "routerLink",
-                                        "_value": "/channel/dashboardChannelAnnouncements",
+                                        "_value": "/admin/announcements",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     }

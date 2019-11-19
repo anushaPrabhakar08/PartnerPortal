@@ -5,7 +5,7 @@
         <h2>
           Add Developer</h2>
       </div>
-      <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+      <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="center start" [fxShow]="true" [fxHide]="false">
         <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
           <input matInput placeholder="firstName" required formControlName="firstName">
           <mat-error align="start" *ngIf="firstName.hasError(&apos;required&apos;)">Mandatory Field</mat-error>

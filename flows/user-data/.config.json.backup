@@ -470,7 +470,7 @@
   "node-red-contrib-mongodb2": {
    "name": "node-red-contrib-mongodb2",
    "version": "0.5.6",
-   "local": false,
+   "local": true,
    "nodes": {
     "mongodb2": {
      "name": "mongodb2",
@@ -488,7 +488,7 @@
   "node-red-contrib-mongodb3": {
    "name": "node-red-contrib-mongodb3",
    "version": "2.0.1",
-   "local": false,
+   "local": true,
    "nodes": {
     "mongodb": {
      "name": "mongodb",
@@ -506,7 +506,7 @@
   "node-red-contrib-objectid": {
    "name": "node-red-contrib-objectid",
    "version": "0.7.2",
-   "local": false,
+   "local": true,
    "nodes": {
     "objectid": {
      "name": "objectid",
@@ -517,6 +517,80 @@
      "local": true,
      "module": "node-red-contrib-objectid",
      "file": "C:\\Users\\ENTERPRISETOUCH\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-objectid\\objectid.js"
+    }
+   }
+  },
+  "node-red-contrib-mongo-client": {
+   "name": "node-red-contrib-mongo-client",
+   "version": "0.2.2",
+   "local": true,
+   "nodes": {
+    "mongo-client": {
+     "name": "mongo-client",
+     "types": [
+      "mongo-client",
+      "mongo-client in"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-mongo-client",
+     "file": "C:\\Users\\ENTERPRISETOUCH\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-mongo-client\\mongo-client.js"
+    }
+   }
+  },
+  "node-red-contrib-mongodb": {
+   "name": "node-red-contrib-mongodb",
+   "version": "0.3.4",
+   "local": true,
+   "nodes": {
+    "mongo": {
+     "name": "mongo",
+     "types": [
+      "mongodb-config",
+      "mongodb-node"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-mongodb",
+     "file": "C:\\Users\\ENTERPRISETOUCH\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-mongodb\\mongodb.js"
+    }
+   }
+  },
+  "node-red-mongodb": {
+   "name": "node-red-mongodb",
+   "version": "0.0.18",
+   "local": true,
+   "nodes": {
+    "mongo": {
+     "name": "mongo",
+     "types": [
+      "mongodb",
+      "mongodb out",
+      "mongodb in"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-mongodb",
+     "file": "C:\\Users\\ENTERPRISETOUCH\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-mongodb\\66-mongodb.js"
+    }
+   }
+  },
+  "node-red-node-mongodb": {
+   "name": "node-red-node-mongodb",
+   "version": "0.0.14",
+   "local": true,
+   "nodes": {
+    "mongo": {
+     "name": "mongo",
+     "types": [
+      "mongodb",
+      "mongodb out",
+      "mongodb in"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-node-mongodb",
+     "file": "C:\\Users\\ENTERPRISETOUCH\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-node-mongodb\\66-mongodb.js"
     }
    }
   }
@@ -534,7 +608,7 @@
      "view-show-grid": false
     }
    },
-   "menu-menu-item-palette": false,
+   "menu-menu-item-palette": true,
    "menu-menu-item-sidebar": false
   }
  }

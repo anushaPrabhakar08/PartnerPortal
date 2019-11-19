@@ -1,11 +1,15 @@
 <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-  <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-    <mat-toolbar class="mat-toolbar">
-      <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="space-between center" [fxShow]="true" [fxHide]="false">
-        <div fxLayout="row wrap" style="width:55%;" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/logo1.png" width="250px"></div>
-        <div fxLayout="row wrap" style="width:30%;" fxLayoutAlign="space-evenly stretch" [fxShow]="true" [fxHide]="false"><button mat-button class="home_btn" routerLink="/home">Home</button><button mat-button class="home_btn" routerLink="/contact">Contact Us</button><button mat-button class="home_btn" routerLink="/login/partnerlogin">Login</button></div>
+  <header>
+    <mat-toolbar class="bg-dark">
+      <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+        <div fxLayout="column wrap" fxFlex="20" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/logo.png" width="200px"></div>
+        <div fxLayout="column wrap" fxFlex="80" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+          <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="end center" [fxShow]="true" [fxHide]="false"><button mat-button routerLink="/home">Home</button><button mat-button class="text-white" routerLink="/contact_us">Contact Us</button><button mat-raised-button routerLink="/login" color="warn">Login</button></div>
+        </div>
       </div>
     </mat-toolbar>
+  </header>
+  <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
     <div fxLayout="row wrap" style="width:100%;padding:120px 0px;" fxLayoutAlign="space-evenly none" [fxShow]="true" [fxHide]="false">
       <div fxLayout="column wrap" style="width:50%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
         <div fxLayout="column wrap" style="width:40%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><span style="font-variant:petite-caps;font-weight:700;font-size:35px;;">

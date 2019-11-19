@@ -206,9 +206,9 @@ export const appProviders = [
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
 export const appRoutes = [{path: 'home', component: homeComponent,
 children: []},{path: 'login/:type', component: loginComponent,
-children: []},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'contact', component: contactpageComponent},{path: 'channel', component: channelComponent,
-children: [{path: 'dashboard', component: channel_dashboardComponent},{path: 'dashboardPartnerDetails/:_id', component: partner_detailsComponent},{path: 'dashboardChannelMarketing', component: channel_marketingComponent},{path: 'dashboardChannelAnnouncements', component: channel_announcementsComponent,
-children: []}]},{path: 'partner', component: partnerComponent,
-children: [{path: 'dashboardPartnerMarketing', component: partner_marketingComponent},{path: 'dashboardPartnerLeads', component: partner_leadsComponent},{path: 'dashboardPartnerDevelopers', component: partner_developersComponent},{path: 'dashboardPartnerAgreement', component: partner_agreementComponent}]},{path: 'memberregisteration', component: memberregisterationComponent},{path: 'partnerregistration', component: partnerregistrationComponent},{path: 'partner_addDeveloper', component: partner_adddeveloperComponent},{path: 'partner_addLead', component: partner_addleadComponent,
+children: []},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'contact_us', component: contactpageComponent},{path: 'admin', component: channelComponent,
+children: [{path: 'patrners_list', component: channel_dashboardComponent},{path: 'partner/:_id', component: partner_detailsComponent},{path: 'marketing_collaterals', component: channel_marketingComponent},{path: 'announcements', component: channel_announcementsComponent,
+children: []},{path: '', component: loginComponent}]},{path: 'partner', component: partnerComponent,
+children: [{path: 'marketing_collaterals', component: partner_marketingComponent},{path: 'leads', component: partner_leadsComponent},{path: 'developer_details', component: partner_developersComponent},{path: 'agreement', component: partner_agreementComponent},{path: '', component: partner_marketingComponent}]},{path: 'memberregisteration', component: memberregisterationComponent},{path: 'partnerregistration', component: partnerregistrationComponent},{path: 'partner_addDeveloper', component: partner_adddeveloperComponent},{path: 'partner_addLead', component: partner_addleadComponent,
 children: []},{path: 'sample', component: sampleComponent},{path: 'testPage', component: testpageComponent},{path: '', redirectTo: '/home', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END

@@ -26,29 +26,34 @@
             "pathMatch": "full"
         },
         {
-            "path": "contact",
+            "path": "contact_us",
             "component": "contactpageComponent"
         },
         {
-            "path": "channel",
+            "path": "admin",
             "component": "channelComponent",
             "children": [
                 {
-                    "path": "dashboard",
+                    "path": "patrners_list",
                     "component": "channel_dashboardComponent"
                 },
                 {
-                    "path": "dashboardPartnerDetails/:_id",
+                    "path": "partner/:_id",
                     "component": "partner_detailsComponent"
                 },
                 {
-                    "path": "dashboardChannelMarketing",
+                    "path": "marketing_collaterals",
                     "component": "channel_marketingComponent"
                 },
                 {
-                    "path": "dashboardChannelAnnouncements",
+                    "path": "announcements",
                     "component": "channel_announcementsComponent",
                     "children": []
+                },
+                {
+                    "path": "''",
+                    "component": "loginComponent",
+                    "pathMatch": ""
                 }
             ],
             "pathMatch": "",
@@ -60,19 +65,24 @@
             "children": [
                 {
                     "component": "partner_marketingComponent",
-                    "path": "dashboardPartnerMarketing"
+                    "path": "marketing_collaterals"
                 },
                 {
                     "component": "partner_leadsComponent",
-                    "path": "dashboardPartnerLeads"
+                    "path": "leads"
                 },
                 {
                     "component": "partner_developersComponent",
-                    "path": "dashboardPartnerDevelopers"
+                    "path": "developer_details"
                 },
                 {
                     "component": "partner_agreementComponent",
-                    "path": "dashboardPartnerAgreement"
+                    "path": "agreement"
+                },
+                {
+                    "path": "''",
+                    "component": "partner_marketingComponent",
+                    "pathMatch": ""
                 }
             ]
         },

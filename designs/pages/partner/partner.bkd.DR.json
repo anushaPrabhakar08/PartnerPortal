@@ -161,7 +161,7 @@
                     },
                     {
                         "_key": "class",
-                        "_value": "",
+                        "_value": "bg-dark",
                         "_type": "kv",
                         "_attrDef": "p"
                     },
@@ -463,7 +463,7 @@
                                 },
                                 {
                                     "_key": "imgSrc",
-                                    "_value": "Web/logo1.png",
+                                    "_value": "Web/logo.png",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -1667,7 +1667,7 @@
                                     "_attrDef": "p"
                                 }
                             ],
-                            "7e12eb20-7201-98b2-bb77-32027ae5df6c": {
+                            "d70d9bef-7ad2-4896-ad26-be20e1533857": {
                                 "paletteKey": "NG-button",
                                 "parentEditorKey": "f79587fb-227e-68e4-00f2-e484f24aa409",
                                 "designerReference": [
@@ -1685,7 +1685,7 @@
                                     },
                                     {
                                         "_key": "buttonname",
-                                        "_value": "View Agreement",
+                                        "_value": "Marketing Collaterals",
                                         "_type": "a",
                                         "_attrDef": "p",
                                         "_useAsLabel": true
@@ -1722,7 +1722,7 @@
                                     },
                                     {
                                         "_key": "routerLink",
-                                        "_value": "/partner/dashboardPartnerAgreement",
+                                        "_value": "/partner/marketing_collaterals",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     }
@@ -1783,7 +1783,7 @@
                                     },
                                     {
                                         "_key": "routerLink",
-                                        "_value": "/partner/dashboardPartnerLeads",
+                                        "_value": "/partner/leads",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     }
@@ -1844,13 +1844,13 @@
                                     },
                                     {
                                         "_key": "routerLink",
-                                        "_value": "/partner/dashboardPartnerDevelopers",
+                                        "_value": "/partner/developer_details",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     }
                                 ]
                             },
-                            "d70d9bef-7ad2-4896-ad26-be20e1533857": {
+                            "7e12eb20-7201-98b2-bb77-32027ae5df6c": {
                                 "paletteKey": "NG-button",
                                 "parentEditorKey": "f79587fb-227e-68e4-00f2-e484f24aa409",
                                 "designerReference": [
@@ -1868,7 +1868,7 @@
                                     },
                                     {
                                         "_key": "buttonname",
-                                        "_value": "Marketing",
+                                        "_value": "View Agreement",
                                         "_type": "a",
                                         "_attrDef": "p",
                                         "_useAsLabel": true
@@ -1905,7 +1905,7 @@
                                     },
                                     {
                                         "_key": "routerLink",
-                                        "_value": "/partner/dashboardPartnerMarketing",
+                                        "_value": "/partner/agreement",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     }

@@ -481,7 +481,7 @@
      "enabled": true,
      "local": true,
      "module": "node-red-contrib-mongodb2",
-     "file": "C:\\Users\\ENTERPRISETOUCH\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-mongodb2\\mongodb2\\mongodb2.js"
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-mongodb2\\mongodb2\\mongodb2.js"
     }
    }
   },
@@ -499,7 +499,7 @@
      "enabled": true,
      "local": true,
      "module": "node-red-contrib-mongodb3",
-     "file": "C:\\Users\\ENTERPRISETOUCH\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-mongodb3\\mongodb\\mongodb.js"
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-mongodb3\\mongodb\\mongodb.js"
     }
    }
   },
@@ -516,7 +516,7 @@
      "enabled": true,
      "local": true,
      "module": "node-red-contrib-objectid",
-     "file": "C:\\Users\\ENTERPRISETOUCH\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-objectid\\objectid.js"
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-objectid\\objectid.js"
     }
    }
   },
@@ -534,7 +534,7 @@
      "enabled": true,
      "local": true,
      "module": "node-red-contrib-mongo-client",
-     "file": "C:\\Users\\ENTERPRISETOUCH\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-mongo-client\\mongo-client.js"
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-mongo-client\\mongo-client.js"
     }
    }
   },
@@ -552,7 +552,7 @@
      "enabled": true,
      "local": true,
      "module": "node-red-contrib-mongodb",
-     "file": "C:\\Users\\ENTERPRISETOUCH\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-mongodb\\mongodb.js"
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-mongodb\\mongodb.js"
     }
    }
   },
@@ -571,7 +571,7 @@
      "enabled": true,
      "local": true,
      "module": "node-red-mongodb",
-     "file": "C:\\Users\\ENTERPRISETOUCH\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-mongodb\\66-mongodb.js"
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-mongodb\\66-mongodb.js"
     }
    }
   },
@@ -590,7 +590,7 @@
      "enabled": true,
      "local": true,
      "module": "node-red-node-mongodb",
-     "file": "C:\\Users\\ENTERPRISETOUCH\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-node-mongodb\\66-mongodb.js"
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-node-mongodb\\66-mongodb.js"
     }
    }
   }

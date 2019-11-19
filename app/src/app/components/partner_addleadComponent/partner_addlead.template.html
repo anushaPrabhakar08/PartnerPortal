@@ -5,7 +5,7 @@
         <h2>
           Add New Lead</h2>
       </div>
-      <div fxLayout="row wrap" style="width:80%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+      <div fxLayout="row wrap" style="width:80%;" fxLayoutAlign="center start" [fxShow]="true" [fxHide]="false">
         <mat-form-field [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;">
           <input matInput name="organisationName" placeholder="Organisation Name" required formControlName="organisationName">
           <mat-error align="start" *ngIf="organisationName.hasError(&apos;required&apos;)">Mandatory Field</mat-error>
