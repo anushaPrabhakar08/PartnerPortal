@@ -11,10 +11,10 @@
         "serviceName": "partnerservice"
     },
     {
-        "id": "sd_hdpX7x5jhHFrDmOl",
+        "id": "sd_YjyeEEgnsLSOUf4i",
         "type": "Start",
         "z": "sd_ilDSHUtXqB5Z3v1A",
-        "name": "saveleadata",
+        "name": "requestAccess",
         "outputs": 1,
         "noerr": 0,
         "inputVariables": [
@@ -29,28 +29,28 @@
         ],
         "localVariables": [
             {
+                "key": "apiUrl",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            },
+            {
                 "key": "result",
                 "defaultValue": {
                     "type": "str",
                     "value": ""
                 },
                 "output": true
-            },
-            {
-                "key": "modlerUrlApi",
-                "defaultValue": {
-                    "type": "str",
-                    "value": ""
-                },
-                "output": false
             }
         ],
-        "functionName": "saveleadata",
-        "x": 132,
-        "y": 202.8125,
+        "functionName": "requestAccess",
+        "x": 183.1875,
+        "y": 117.921875,
         "wires": [
             [
-                "sd_eDmQDZuVa9keEApB"
+                "sd_yDrVNWFnxrLMuhPE"
             ]
         ],
         "generateNext": true,
@@ -58,33 +58,32 @@
         "serviceName": "partnerservice"
     },
     {
-        "id": "sd_eDmQDZuVa9keEApB",
+        "id": "sd_yDrVNWFnxrLMuhPE",
         "type": "Script",
         "z": "sd_ilDSHUtXqB5Z3v1A",
-        "name": "save leads",
-        "script": "bh.local.modlerUrlApi=`http://localhost:24483/api/saveleadsdata?data=${bh.input.data}`;",
-        "x": 334.84375,
-        "y": 204.8125,
+        "name": "Api  Url",
+        "script": "bh.local.apiUrl = \"http://localhost:24483/api/RequsetAccess\"",
+        "x": 288.03125,
+        "y": 121.921875,
         "wires": [
             [
-                "sd_Qvl8jCVdHuywn5E0"
+                "sd_P8ynSLERMD5fuNIx"
             ]
         ],
         "generateNext": false,
-        "generated": true,
-        "serviceName": "partnerservice"
+        "generated": true
     },
     {
-        "id": "sd_Qvl8jCVdHuywn5E0",
+        "id": "sd_P8ynSLERMD5fuNIx",
         "type": "HttpRequest",
         "z": "sd_ilDSHUtXqB5Z3v1A",
-        "name": "modler flow",
-        "method": "put",
+        "name": "Send Request",
+        "method": "post",
         "methodMappingObj": {},
-        "urlMapping": "bh.local.modlerUrlApi",
+        "urlMapping": "bh.local.apiUrl",
         "urlMappingObj": {
             "mapVarType": "bh.local",
-            "mapVarValue": "modlerUrlApi"
+            "mapVarValue": "apiUrl"
         },
         "ret": "json",
         "retMappingObj": {},
@@ -104,25 +103,24 @@
         "params": {},
         "paramsObj": [],
         "paramMappingObj": {},
-        "x": 522.84375,
-        "y": 204.796875,
+        "x": 423.03125,
+        "y": 120.90625,
         "wires": [
             []
         ],
         "generateNext": false,
-        "generated": true,
-        "serviceName": "partnerservice"
+        "generated": true
     },
     {
-        "id": "sd_w3LbH1Q9zdv2IVWW",
+        "id": "sd_0rAo9QEWJMCaLFwA",
         "type": "Start",
         "z": "sd_ilDSHUtXqB5Z3v1A",
-        "name": "getleadsdata",
+        "name": "authenticated",
         "outputs": 1,
         "noerr": 0,
         "inputVariables": [
             {
-                "key": "partobj",
+                "key": "data",
                 "defaultValue": {
                     "type": "str",
                     "value": ""
@@ -130,30 +128,15 @@
                 "output": false
             }
         ],
-        "localVariables": [
-            {
-                "key": "result",
-                "defaultValue": {
-                    "type": "str",
-                    "value": ""
-                },
-                "output": true
-            },
-            {
-                "key": "modlerUrlApi",
-                "defaultValue": {
-                    "type": "str",
-                    "value": ""
-                },
-                "output": false
-            }
-        ],
-        "functionName": "getleadsdata",
-        "x": 136,
-        "y": 316.8125,
+        "localVariables": [],
+        "functionName": "authenticated",
+        "x": 175.20001220703125,
+        "y": 276.93750762939453,
         "wires": [
             [
-                "sd_qQMYR4XbjuXTqvkx"
+                "sd_U8zVTahK318B9zYl",
+                "sd_kYVlavNUJGb78F0H",
+                "sd_5c4a95oDd64AR1Jh"
             ]
         ],
         "generateNext": true,
@@ -161,155 +144,27 @@
         "serviceName": "partnerservice"
     },
     {
-        "id": "sd_qQMYR4XbjuXTqvkx",
-        "type": "Script",
+        "id": "sd_U8zVTahK318B9zYl",
+        "type": "Storage",
         "z": "sd_ilDSHUtXqB5Z3v1A",
-        "name": "Leads data",
-        "script": "bh.local.modlerUrlApi=`http://localhost:24483/api/getleadsdata?partner_id=${bh.input.partobj}`;",
-        "x": 345.84375,
-        "y": 318.8125,
-        "wires": [
-            [
-                "sd_zfHojHu2pemhgFbG"
-            ]
-        ],
-        "generateNext": false,
-        "generated": true,
-        "serviceName": "partnerservice"
-    },
-    {
-        "id": "sd_zfHojHu2pemhgFbG",
-        "type": "HttpRequest",
-        "z": "sd_ilDSHUtXqB5Z3v1A",
-        "name": "modler flow",
-        "method": "get",
-        "methodMappingObj": {},
-        "urlMapping": "bh.local.modlerUrlApi",
-        "urlMappingObj": {
-            "mapVarType": "bh.local",
-            "mapVarValue": "modlerUrlApi"
-        },
-        "ret": "json",
-        "retMappingObj": {},
-        "reqBodyObj": {
-            "mapVarType": "bh.input",
-            "mapVarValue": ""
-        },
-        "resultMapping": "bh.local.result",
-        "resultMappingObj": {
-            "mapVarType": "bh.local",
-            "mapVarValue": "result"
-        },
-        "headers": {},
-        "headersObj": [],
-        "headerMappingObj": {},
-        "params": {},
-        "paramsObj": [],
-        "paramMappingObj": {},
-        "x": 534.84375,
-        "y": 313.796875,
-        "wires": [
-            []
-        ],
-        "generateNext": false,
-        "generated": true,
-        "serviceName": "partnerservice"
-    },
-    {
-        "id": "sd_D2xZRilDsznkAaCj",
-        "type": "Start",
-        "z": "sd_ilDSHUtXqB5Z3v1A",
-        "name": "getdeveloper",
+        "name": "currentUser",
+        "operationType": "setItem",
+        "storageType": "localStorage",
         "outputs": 1,
-        "noerr": 0,
-        "inputVariables": [
-            {
-                "key": "partnerid",
-                "defaultValue": {
-                    "type": "str",
-                    "value": ""
-                },
-                "output": false
-            }
-        ],
-        "localVariables": [
-            {
-                "key": "result",
-                "defaultValue": {
-                    "type": "str",
-                    "value": ""
-                },
-                "output": true
-            },
-            {
-                "key": "modlerUrlApi",
-                "defaultValue": {
-                    "type": "str",
-                    "value": ""
-                },
-                "output": false
-            }
-        ],
-        "functionName": "getdeveloper",
-        "x": 138.1875,
-        "y": 443.921875,
-        "wires": [
-            [
-                "sd_I2EB3GOPeTTSh4Jq"
-            ]
-        ],
-        "generateNext": true,
-        "generated": false,
-        "serviceName": "partnerservice"
-    },
-    {
-        "id": "sd_I2EB3GOPeTTSh4Jq",
-        "type": "Script",
-        "z": "sd_ilDSHUtXqB5Z3v1A",
-        "name": "",
-        "script": "bh.local.modlerUrlApi=`http://localhost:24483/api/getdevelopers?partner_id=${bh.input.partnerid}`;",
-        "x": 347.03125,
-        "y": 450.921875,
-        "wires": [
-            [
-                "sd_3Ns00MGI4f6dZsAS"
-            ]
-        ],
-        "generateNext": false,
-        "generated": true,
-        "serviceName": "partnerservice"
-    },
-    {
-        "id": "sd_3Ns00MGI4f6dZsAS",
-        "type": "HttpRequest",
-        "z": "sd_ilDSHUtXqB5Z3v1A",
-        "name": "modler flow",
-        "method": "get",
-        "methodMappingObj": {},
-        "urlMapping": "bh.local.modlerUrlApi",
-        "urlMappingObj": {
-            "mapVarType": "bh.local",
-            "mapVarValue": "modlerUrlApi"
+        "key": {
+            "type": "str",
+            "value": "currentUser"
         },
-        "ret": "json",
-        "retMappingObj": {},
-        "reqBodyObj": {
-            "mapVarType": "bh.input",
-            "mapVarValue": ""
+        "value": {
+            "type": "bh.input",
+            "value": "data.data"
         },
-        "resultMapping": "bh.local.result",
-        "resultMappingObj": {
-            "mapVarType": "bh.local",
-            "mapVarValue": "result"
+        "resultMapping": {
+            "type": "",
+            "value": ""
         },
-        "headers": {},
-        "headersObj": [],
-        "headerMappingObj": {},
-        "params": {},
-        "paramsObj": [],
-        "paramMappingObj": {},
-        "x": 540.03125,
-        "y": 445.90625,
+        "x": 383.2000045776367,
+        "y": 267.93749237060547,
         "wires": [
             []
         ],
@@ -317,100 +172,27 @@
         "generated": true
     },
     {
-        "id": "sd_f9HXnKQVvCyokm0B",
-        "type": "Start",
+        "id": "sd_kYVlavNUJGb78F0H",
+        "type": "Storage",
         "z": "sd_ilDSHUtXqB5Z3v1A",
-        "name": "savepartnerdata",
+        "name": "loggedIn",
+        "operationType": "setItem",
+        "storageType": "localStorage",
         "outputs": 1,
-        "noerr": 0,
-        "inputVariables": [
-            {
-                "key": "obj",
-                "defaultValue": {
-                    "type": "str",
-                    "value": ""
-                },
-                "output": false
-            }
-        ],
-        "localVariables": [
-            {
-                "key": "result",
-                "defaultValue": {
-                    "type": "str",
-                    "value": ""
-                },
-                "output": true
-            },
-            {
-                "key": "modlerUrlApi",
-                "defaultValue": {
-                    "type": "str",
-                    "value": ""
-                },
-                "output": false
-            }
-        ],
-        "functionName": "savepartnerdata",
-        "x": 136.20001220703125,
-        "y": 557.9374961853027,
-        "wires": [
-            [
-                "sd_ukVlnZhxTeDLRamF"
-            ]
-        ],
-        "generateNext": true,
-        "generated": false,
-        "serviceName": "partnerservice"
-    },
-    {
-        "id": "sd_ukVlnZhxTeDLRamF",
-        "type": "Script",
-        "z": "sd_ilDSHUtXqB5Z3v1A",
-        "name": "",
-        "script": "bh.local.modlerUrlApi=`http://localhost:24483/api/addpartnerdata?obj=${bh.input.obj}`;\n",
-        "x": 357.0500297546387,
-        "y": 565.9374961853027,
-        "wires": [
-            [
-                "sd_db9vxZREbhyd2XC5"
-            ]
-        ],
-        "generateNext": false,
-        "generated": true
-    },
-    {
-        "id": "sd_db9vxZREbhyd2XC5",
-        "type": "HttpRequest",
-        "z": "sd_ilDSHUtXqB5Z3v1A",
-        "name": "modler flow",
-        "method": "post",
-        "methodMappingObj": {},
-        "urlMapping": "bh.local.modlerUrlApi",
-        "urlMappingObj": {
-            "mapVarType": "bh.local",
-            "mapVarValue": "modlerUrlApi"
+        "key": {
+            "type": "str",
+            "value": "loggedIn"
         },
-        "ret": "json",
-        "retMappingObj": {},
-        "reqBody": "bh.input.obj",
-        "reqBodyObj": {
-            "mapVarType": "bh.input",
-            "mapVarValue": "obj"
+        "value": {
+            "type": "str",
+            "value": "true"
         },
-        "resultMapping": "bh.local.result",
-        "resultMappingObj": {
-            "mapVarType": "bh.local",
-            "mapVarValue": "result"
+        "resultMapping": {
+            "type": "",
+            "value": ""
         },
-        "headers": {},
-        "headersObj": [],
-        "headerMappingObj": {},
-        "params": {},
-        "paramsObj": [],
-        "paramMappingObj": {},
-        "x": 539.050048828125,
-        "y": 569.9375076293945,
+        "x": 386.2000045776367,
+        "y": 349.93749237060547,
         "wires": [
             []
         ],
@@ -418,493 +200,27 @@
         "generated": true
     },
     {
-        "id": "sd_m3kiss2WXuCEPhZl",
-        "type": "Start",
+        "id": "sd_5c4a95oDd64AR1Jh",
+        "type": "Storage",
         "z": "sd_ilDSHUtXqB5Z3v1A",
-        "name": "deleteleads",
+        "name": "token",
+        "operationType": "setItem",
+        "storageType": "localStorage",
         "outputs": 1,
-        "noerr": 0,
-        "inputVariables": [
-            {
-                "key": "id",
-                "defaultValue": {
-                    "type": "str",
-                    "value": ""
-                },
-                "output": false
-            }
-        ],
-        "localVariables": [
-            {
-                "key": "result",
-                "defaultValue": {
-                    "type": "str",
-                    "value": ""
-                },
-                "output": true
-            },
-            {
-                "key": "modlerUpiApi",
-                "defaultValue": {
-                    "type": "str",
-                    "value": ""
-                },
-                "output": false
-            }
-        ],
-        "functionName": "deleteleads",
-        "x": 130.1875,
-        "y": 677.921875,
-        "wires": [
-            [
-                "sd_zQ4Y3gu7p8iKjyqJ"
-            ]
-        ],
-        "generateNext": true,
-        "generated": false,
-        "serviceName": "partnerservice"
-    },
-    {
-        "id": "sd_zQ4Y3gu7p8iKjyqJ",
-        "type": "Script",
-        "z": "sd_ilDSHUtXqB5Z3v1A",
-        "name": "deleteleads",
-        "script": "bh.local.modlerUpiApi=`http://localhost:24483/api/deleteleads?id=${bh.input.id}`;",
-        "x": 346.03125,
-        "y": 690.921875,
-        "wires": [
-            [
-                "sd_UFKIezRqhLAYDuHv"
-            ]
-        ],
-        "generateNext": false,
-        "generated": true
-    },
-    {
-        "id": "sd_UFKIezRqhLAYDuHv",
-        "type": "HttpRequest",
-        "z": "sd_ilDSHUtXqB5Z3v1A",
-        "name": "modler flow ",
-        "method": "delete",
-        "methodMappingObj": {},
-        "urlMapping": "bh.local.modlerUpiApi",
-        "urlMappingObj": {
-            "mapVarType": "bh.local",
-            "mapVarValue": "modlerUpiApi"
+        "key": {
+            "type": "str",
+            "value": "token"
         },
-        "ret": "json",
-        "retMappingObj": {},
-        "reqBody": "bh.input.id",
-        "reqBodyObj": {
-            "mapVarType": "bh.input",
-            "mapVarValue": "id"
+        "value": {
+            "type": "bh.input",
+            "value": "data.token"
         },
-        "resultMapping": "bh.local.result",
-        "resultMappingObj": {
-            "mapVarType": "bh.local",
-            "mapVarValue": "result"
+        "resultMapping": {
+            "type": "",
+            "value": ""
         },
-        "headers": {},
-        "headersObj": [],
-        "headerMappingObj": {},
-        "params": {},
-        "paramsObj": [],
-        "paramMappingObj": {},
-        "x": 541.03125,
-        "y": 686.90625,
-        "wires": [
-            []
-        ],
-        "generateNext": false,
-        "generated": true
-    },
-    {
-        "id": "sd_1bjjraRFhcgBxKQc",
-        "type": "Start",
-        "z": "sd_ilDSHUtXqB5Z3v1A",
-        "name": "deletedeveloper",
-        "outputs": 1,
-        "noerr": 0,
-        "inputVariables": [
-            {
-                "key": "id",
-                "defaultValue": {
-                    "type": "str",
-                    "value": ""
-                },
-                "output": false
-            }
-        ],
-        "localVariables": [
-            {
-                "key": "result",
-                "defaultValue": {
-                    "type": "str",
-                    "value": ""
-                },
-                "output": true
-            },
-            {
-                "key": "modlerUrlApi",
-                "defaultValue": {
-                    "type": "str",
-                    "value": ""
-                },
-                "output": false
-            }
-        ],
-        "functionName": "deletedeveloper",
-        "x": 118.1875,
-        "y": 817.921875,
-        "wires": [
-            [
-                "sd_NDkjLBUd1VTt56bD"
-            ]
-        ],
-        "generateNext": true,
-        "generated": false,
-        "serviceName": "partnerservice"
-    },
-    {
-        "id": "sd_NDkjLBUd1VTt56bD",
-        "type": "Script",
-        "z": "sd_ilDSHUtXqB5Z3v1A",
-        "name": "deletedeveloper",
-        "script": "bh.local.modlerUrlApi=`http://localhost:24483/api/deletedeveloper?id=${bh.input.id}`;",
-        "x": 360.03125,
-        "y": 816.921875,
-        "wires": [
-            [
-                "sd_UA6lLqBfvpRf46vs"
-            ]
-        ],
-        "generateNext": false,
-        "generated": true
-    },
-    {
-        "id": "sd_UA6lLqBfvpRf46vs",
-        "type": "HttpRequest",
-        "z": "sd_ilDSHUtXqB5Z3v1A",
-        "name": "modlerflow",
-        "method": "delete",
-        "methodMappingObj": {},
-        "urlMapping": "bh.local.modlerUrlApi",
-        "urlMappingObj": {
-            "mapVarType": "bh.local",
-            "mapVarValue": "modlerUrlApi"
-        },
-        "ret": "json",
-        "retMappingObj": {},
-        "reqBody": "bh.input.id",
-        "reqBodyObj": {
-            "mapVarType": "bh.input",
-            "mapVarValue": "id"
-        },
-        "resultMapping": "bh.local.result",
-        "resultMappingObj": {
-            "mapVarType": "bh.local",
-            "mapVarValue": "result"
-        },
-        "headers": {},
-        "headersObj": [],
-        "headerMappingObj": {},
-        "params": {},
-        "paramsObj": [],
-        "paramMappingObj": {},
-        "x": 555.03125,
-        "y": 811.90625,
-        "wires": [
-            []
-        ],
-        "generateNext": false,
-        "generated": true
-    },
-    {
-        "id": "sd_VRBMlOjgWqivLgt1",
-        "type": "Start",
-        "z": "sd_ilDSHUtXqB5Z3v1A",
-        "name": "savedev",
-        "outputs": 1,
-        "noerr": 0,
-        "inputVariables": [
-            {
-                "key": "obj",
-                "defaultValue": {
-                    "type": "str",
-                    "value": ""
-                },
-                "output": false
-            }
-        ],
-        "localVariables": [
-            {
-                "key": "result",
-                "defaultValue": {
-                    "type": "str",
-                    "value": ""
-                },
-                "output": true
-            },
-            {
-                "key": "apiurl",
-                "defaultValue": {
-                    "type": "str",
-                    "value": ""
-                },
-                "output": false
-            }
-        ],
-        "functionName": "savedev",
-        "x": 124.1875,
-        "y": 59.921875,
-        "wires": [
-            [
-                "sd_h6ToBlE8mb2KESCa"
-            ]
-        ],
-        "generateNext": true,
-        "generated": false,
-        "serviceName": "partnerservice"
-    },
-    {
-        "id": "sd_h6ToBlE8mb2KESCa",
-        "type": "Script",
-        "z": "sd_ilDSHUtXqB5Z3v1A",
-        "name": "",
-        "script": "bh.local.apiurl=`http://localhost:24483/api/savedevelopers?data=${bh.input.obj}`;",
-        "x": 303.03125,
-        "y": 61.921875,
-        "wires": [
-            [
-                "sd_KCbHbh7E2xgUaluc"
-            ]
-        ],
-        "generateNext": false,
-        "generated": true
-    },
-    {
-        "id": "sd_KCbHbh7E2xgUaluc",
-        "type": "HttpRequest",
-        "z": "sd_ilDSHUtXqB5Z3v1A",
-        "name": "",
-        "method": "post",
-        "methodMappingObj": {},
-        "urlMapping": "bh.local.apiurl",
-        "urlMappingObj": {
-            "mapVarType": "bh.local",
-            "mapVarValue": "apiurl"
-        },
-        "ret": "json",
-        "retMappingObj": {},
-        "reqBody": "bh.input.obj",
-        "reqBodyObj": {
-            "mapVarType": "bh.input",
-            "mapVarValue": "obj"
-        },
-        "resultMapping": "bh.local.result",
-        "resultMappingObj": {
-            "mapVarType": "bh.local",
-            "mapVarValue": "result"
-        },
-        "headers": {},
-        "headersObj": [],
-        "headerMappingObj": {},
-        "params": {},
-        "paramsObj": [],
-        "paramMappingObj": {},
-        "x": 489.03125,
-        "y": 59.90625,
-        "wires": [
-            []
-        ],
-        "generateNext": false,
-        "generated": true
-    },
-    {
-        "id": "sd_P8RUvEmOU5UYT5m0",
-        "type": "Start",
-        "z": "sd_ilDSHUtXqB5Z3v1A",
-        "name": "getdevdetail",
-        "outputs": 1,
-        "noerr": 0,
-        "inputVariables": [],
-        "localVariables": [
-            {
-                "key": "result",
-                "defaultValue": {
-                    "type": "str",
-                    "value": ""
-                },
-                "output": true
-            },
-            {
-                "key": "apiurl",
-                "defaultValue": {
-                    "type": "str",
-                    "value": ""
-                },
-                "output": false
-            }
-        ],
-        "functionName": "getdevdetail",
-        "x": 128.20001220703125,
-        "y": 979.537483215332,
-        "wires": [
-            [
-                "sd_KRiJWTGkUkUl7dtr"
-            ]
-        ],
-        "generateNext": true,
-        "generated": false,
-        "serviceName": "partnerservice"
-    },
-    {
-        "id": "sd_KRiJWTGkUkUl7dtr",
-        "type": "Script",
-        "z": "sd_ilDSHUtXqB5Z3v1A",
-        "name": "",
-        "script": "bh.local.apiurl=`http://localhost:24483/api/getdevelopers`;",
-        "x": 358.04998779296875,
-        "y": 983.537483215332,
-        "wires": [
-            [
-                "sd_zophkxuhuKOHTBuJ"
-            ]
-        ],
-        "generateNext": false,
-        "generated": true
-    },
-    {
-        "id": "sd_zophkxuhuKOHTBuJ",
-        "type": "HttpRequest",
-        "z": "sd_ilDSHUtXqB5Z3v1A",
-        "name": "",
-        "method": "get",
-        "methodMappingObj": {},
-        "urlMapping": "bh.local.apiurl",
-        "urlMappingObj": {
-            "mapVarType": "bh.local",
-            "mapVarValue": "apiurl"
-        },
-        "ret": "json",
-        "retMappingObj": {},
-        "reqBodyObj": {
-            "mapVarType": "bh.input",
-            "mapVarValue": ""
-        },
-        "resultMapping": "bh.local.result",
-        "resultMappingObj": {
-            "mapVarType": "bh.local",
-            "mapVarValue": "result"
-        },
-        "headers": {},
-        "headersObj": [],
-        "headerMappingObj": {},
-        "params": {},
-        "paramsObj": [],
-        "paramMappingObj": {},
-        "x": 566.050048828125,
-        "y": 990.537483215332,
-        "wires": [
-            []
-        ],
-        "generateNext": false,
-        "generated": true
-    },
-    {
-        "id": "sd_BvCWJ0I7e7GzYSrf",
-        "type": "Start",
-        "z": "sd_ilDSHUtXqB5Z3v1A",
-        "name": "getleadslist",
-        "outputs": 1,
-        "noerr": 0,
-        "inputVariables": [
-            {
-                "key": "obj",
-                "defaultValue": {
-                    "type": "str",
-                    "value": ""
-                },
-                "output": false
-            }
-        ],
-        "localVariables": [
-            {
-                "key": "resultleads",
-                "defaultValue": {
-                    "type": "str",
-                    "value": ""
-                },
-                "output": true
-            },
-            {
-                "key": "apiurl",
-                "defaultValue": {
-                    "type": "str",
-                    "value": ""
-                },
-                "output": false
-            }
-        ],
-        "functionName": "getleadslist",
-        "x": 151.20001220703125,
-        "y": 1118.7374954223633,
-        "wires": [
-            [
-                "sd_zNspUBoaoVnL0K9i"
-            ]
-        ],
-        "generateNext": true,
-        "generated": false,
-        "serviceName": "partnerservice"
-    },
-    {
-        "id": "sd_zNspUBoaoVnL0K9i",
-        "type": "Script",
-        "z": "sd_ilDSHUtXqB5Z3v1A",
-        "name": "",
-        "script": "bh.local.apiurl=`http://localhost:24483/api/getleadsdata?partner_id=${bh.input.obj}`;",
-        "x": 357.04998779296875,
-        "y": 1130.7374954223633,
-        "wires": [
-            [
-                "sd_oFKs7Q6VuA69YBrv"
-            ]
-        ],
-        "generateNext": false,
-        "generated": true
-    },
-    {
-        "id": "sd_oFKs7Q6VuA69YBrv",
-        "type": "HttpRequest",
-        "z": "sd_ilDSHUtXqB5Z3v1A",
-        "name": "",
-        "method": "get",
-        "methodMappingObj": {},
-        "urlMapping": "bh.local.apiurl",
-        "urlMappingObj": {
-            "mapVarType": "bh.local",
-            "mapVarValue": "apiurl"
-        },
-        "ret": "json",
-        "retMappingObj": {},
-        "reqBodyObj": {
-            "mapVarType": "bh.input",
-            "mapVarValue": ""
-        },
-        "resultMapping": "bh.local.resultleads",
-        "resultMappingObj": {
-            "mapVarType": "bh.local",
-            "mapVarValue": "resultleads"
-        },
-        "headers": {},
-        "headersObj": [],
-        "headerMappingObj": {},
-        "params": {},
-        "paramsObj": [],
-        "paramMappingObj": {},
-        "x": 581.050048828125,
-        "y": 1132.7374954223633,
+        "x": 389.2000045776367,
+        "y": 437.93749237060547,
         "wires": [
             []
         ],

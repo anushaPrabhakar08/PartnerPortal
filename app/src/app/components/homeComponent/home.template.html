@@ -1,22 +1,23 @@
 <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+  <header>
+    <mat-toolbar fxFlex.xs="100" class="bg-dark">
+      <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="100">
+        <div fxLayout="column wrap" fxFlex="20" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/logo.png" width="200px"></div>
+        <div fxLayout="column wrap" fxFlex="80" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+          <div fxLayout="row " fxFlex="100" fxLayoutAlign="end center" [fxShow]="true" [fxHide]="false" fxHide.xs="true"><button mat-button routerLink="/home">Home</button><button mat-button routerLink="/contact_us">Contact Us</button><button mat-raised-button routerLink="/login" color="warn">Login</button></div>
+        </div>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="false" [fxHide]="true" fxFlex.xs="10" fxHide.lg="true"><button mat-mini-fab [matMenuTriggerFor]="menu">
+            <mat-icon>view_headline</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-button class="home_btn" routerLink="/home">Home</button><button mat-button class="home_btn" routerLink="/contact_us">Contact Us</button><button mat-button class="home_btn" routerLink="/login/partnerlogin">Login</button></div>
+          </mat-menu>
+        </div>
+      </div>
+    </mat-toolbar>
+  </header>
   <div fxLayout="column wrap" style="width:100%;" fxLayoutAlign="center none" [fxShow]="true" [fxHide]="false">
     <div fxLayout="column wrap" fxLayoutAlign="  none" [fxShow]="true" [fxHide]="false" fxFlex.xs="100">
-      <header>
-        <mat-toolbar fxFlex.xs="100" class="mat-toolbar">
-          <div fxLayout="row wrap" style="width:100%;height:auto;" fxLayoutAlign="space-between center" [fxShow]="true" [fxHide]="false" fxFlex.xs="100">
-            <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="40"><img imgSrc="Web/logo.png" width="250px"></div>
-            <div fxLayout="row " style="width:40%;" fxLayoutAlign="space-evenly stretch" [fxShow]="true" [fxHide]="false" fxHide.xs="true"><button mat-button class="home_btn" routerLink="/home">Home</button><button mat-button class="home_btn" routerLink="/contact_us">Contact Us</button><button mat-button class="home_btn" routerLink="/login/partnerlogin">Login</button></div>
-            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="10" fxHide.lg="true"><button mat-mini-fab [matMenuTriggerFor]="menu">
-                <mat-icon>view_headline</mat-icon>
-              </button>
-              <mat-menu #menu="matMenu">
-                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-button class="home_btn" routerLink="/home">Home</button><button mat-button class="home_btn" routerLink="/contact_us">Contact Us</button><button mat-button class="home_btn" routerLink="/login/partnerlogin">Login</button></div>
-              </mat-menu>
-            </div>
-          </div>
-        </mat-toolbar>
-      </header>
-      <router-outlet></router-outlet>
       <div fxLayout="row wrap" class="home_col2" fxLayoutAlign="center none" [fxShow]="true" [fxHide]="false" fxFlex.xs="100" ngStyle.lg=" height: 500px;">
         <div ngStyle.xs="height:200px;text-align:center;" style="color:white;margin-top:100px;">
           BUILD INNOVATIVE APPLICATIONS AT THE SPEED OF THOUGHT</div>

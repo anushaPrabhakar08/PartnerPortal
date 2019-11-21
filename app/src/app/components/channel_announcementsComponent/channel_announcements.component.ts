@@ -32,7 +32,7 @@ export class channel_announcementsComponent extends NBaseComponent implements On
 opendilogue(){
      const dialogRef = this.dialog.open(announcepartnerlistComponent, {
       width: '250px',
-      data: this.dm.announcement.announcement
+      data: ''
     });
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');

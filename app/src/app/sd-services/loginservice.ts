@@ -58,11 +58,11 @@ export class loginservice {
 
   //   service flows_loginservice
 
-  public async login(username = undefined, password = undefined, ...others) {
+  public async login(userData = undefined, ...others) {
     try {
       let bh = {
-        input: { username: username, password: password },
-        local: { result: undefined, modlreUrl: undefined }
+        input: { userData: userData },
+        local: { result: undefined, apiUrl: undefined }
       };
       bh = this.__constructDefault(bh);
 
@@ -80,7 +80,7 @@ export class loginservice {
 
   async sd_hT5MmaR2qH2HaZbC(bh) {
     try {
-      bh.local.modlreUrl = `http://localhost:24483/api/Loginpartner?userName=${bh.input.username}&&password=${bh.input.password}`;
+      bh.local.apiUrl = 'http://localhost:24483/api/authenticate';
 
       bh = await this.sd_QEwiG1uwqRCVw0xw(bh);
       //appendnew_next_sd_hT5MmaR2qH2HaZbC
@@ -92,13 +92,13 @@ export class loginservice {
   async sd_QEwiG1uwqRCVw0xw(bh) {
     try {
       let requestOptions = {
-        url: bh.local.modlreUrl,
-        method: 'get',
+        url: bh.local.apiUrl,
+        method: 'post',
         responseType: 'json',
         reportProgress: undefined,
         headers: {},
         params: {},
-        body: undefined
+        body: bh.input.userData
       };
       bh.local.result = await this.sdService.nHttpRequest(requestOptions);
       //appendnew_next_sd_QEwiG1uwqRCVw0xw

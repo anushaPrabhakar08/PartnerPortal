@@ -1,19 +1,19 @@
 <div fxLayout="column wrap" class="login-bg" fxFlex="100" fxLayoutAlign="start center" [fxShow]="true" [fxHide]="false" fxFill>
   <div fxLayout="row wrap" class="login-logo" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/logo-dark.png" width="250px"></div>
   <div fxLayout="row wrap" class="w-100" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-    <form fxFlex="50" fxFlex.xs="90" fxFlex.md="30" fxFlex.lg="30" class="login-form">
+    <form fxFlex="50" fxFlex.xs="90" fxFlex.md="30" fxFlex.lg="30" class="login-form" (ngSubmit)="authenticate()">
       <h3 class="text-center">
-        Welcome back to Neutrinos!</h3>
+        {{ userType ? &apos;Channel Login&apos;: &apos;Welcome back to Neutrinos!&apos;}}</h3>
       <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
         <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-          <input matInput placeholder="Email addresss" required>
+          <input matInput [(ngModel)]="dm.user.email" name="email" placeholder="Email addresss" required>
           <mat-label>Email address</mat-label>
           <mat-icon matSuffix>email</mat-icon>
         </mat-form-field>
       </div>
       <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-        <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-          <input matInput type="{{isTextFieldType ? &apos;text&apos; : &apos;password&apos;}}" placeholder="Password" required>
+        <mat-form-field style="cursor:pointer;" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+          <input matInput [(ngModel)]="dm.user.password" name="password" type="{{isTextFieldType ? &apos;text&apos; : &apos;password&apos;}}" placeholder="Password" required>
           <mat-label>Password</mat-label>
           <mat-icon matSuffix (click)="isTextFieldType = !isTextFieldType">{{isTextFieldType ? &apos;visibility&apos; : &apos;visibility_off&apos;}}</mat-icon>
         </mat-form-field>
@@ -24,19 +24,19 @@
         </div>
         <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
           <p class="text-warn text-center">
-            Forgot Password?</p>
+            {{ userType ? &apos;Change Password&apos;: &apos;Forgot Password?&apos;}} </p>
         </div>
       </div>
       <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-raised-button class="w-100" color="warn" type="submit">Sign In</button></div>
     </form>
   </div>
-  <div fxLayout="row wrap" fxLayoutAlign="space-around center" [fxShow]="true" [fxHide]="false">
+  <div fxLayout="row wrap" fxLayoutAlign="space-around center" [fxShow]="!userType" [fxHide]="userType">
     <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
       <p class="text-center">
         Don&apos;t have an account?</p>
     </div>
     <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-      <p class="text-warn">
+      <p routerLink="/contact_us" style="cursor:pointer" class="text-warn">
         Get Started</p>
     </div>
   </div>

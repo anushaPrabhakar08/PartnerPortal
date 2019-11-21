@@ -1,4 +1,4 @@
-<div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFill>
+<div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="loggedIn" [fxHide]="!loggedIn" fxFill>
   <div fxLayout="column " fxFlex="100" fxLayoutAlign="  none" [fxShow]="true" [fxHide]="false" fxFill>
     <mat-toolbar style="width:100%;" class="bg-dark">
       <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false">
@@ -29,4 +29,7 @@
         @2019 Neutrinos</h3>
     </footer>
   </div>
+</div>
+<div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="!loggedIn" [fxHide]="loggedIn" fxFill>
+  <bh-login [userType]="true"></bh-login>
 </div>

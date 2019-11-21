@@ -11,7 +11,7 @@
             "children": []
         },
         {
-            "path": "login/:type",
+            "path": "login",
             "component": "loginComponent",
             "pathMatch": "",
             "redirectTo": "",
@@ -52,8 +52,8 @@
                 },
                 {
                     "path": "''",
-                    "component": "loginComponent",
-                    "pathMatch": ""
+                    "component": "channel_dashboardComponent",
+                    "pathMatch": "full"
                 }
             ],
             "pathMatch": "",

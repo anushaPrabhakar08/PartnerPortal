@@ -8,6 +8,7 @@ import { FormGroup, FormControl,Validators } from '@angular/forms';
 import { contactmodel } from '../../models/contactmodel.model';
 import { contactus } from '../../sd-services/contactus';
 import { Router } from '@angular/router';
+import { partnerservice } from '../../sd-services/partnerservice';
 /**
  * Service import Example :
  * import { HeroService } from '../../services/hero/hero.service';
@@ -30,38 +31,51 @@ industry=['Banking & Finance','Retail','Public Sector','insurance','Education'];
 companysize=['1-49','50-99','100-249','250-499'];
 country=['Afghanistan','Ailand Island','Albania','Algeria','Australia','india'];
 
-contactmodel:contactmodel;
-result;
+requestForm: Formgroup;
 
-contactdetails=new FormGroup({
-    firstname:new FormControl(''),
-    lastname:new FormControl(''),
-    companyemail:new FormControl(''),
-    companyname:new FormControl(''),
-    jobroles:new FormControl(''),
-    industryname:new FormControl(''),
-    mobilenumber:new FormControl(''),
-    compsize:new FormControl(''),
-    countryname:new FormControl(''),
-    message:new FormControl(''),
-
-})
-    constructor(private bdms: NDataModelService,private alertService: NSnackbarService,private cont:contactus,private rout:Router) {
+    constructor(private bdms: NDataModelService,private alertService: NSnackbarService,private cont:contactus,private rout:Router,
+    private partnerservice: partnerservice) {
         super();
         this.mm = new ModelMethods(bdms);
           this.contactmodel = new contactmodel();
     }
 
     ngOnInit() {
+        this.requestForm = new FormGroup({
+            user: new FormGroup({
+                firstname: new FormControl('', Validators.required),
+                lastname: new FormControl('', Validators.required),
+                email: new FormControl('', Validators.required),
+                mobile: new FormControl('', Validators.required),
+            }),
+            company: new FormGroup({
+                name: new FormControl('', Validators.required),
+                industry: new FormControl('', Validators.required),
+                size: new FormControl('', Validators.required),
+                message: new FormControl('', Validators.required),
+                country: new FormControl('', Validators.required),
+            }),
+
+        });
     }
 
-async submit(data){
-this.dm.contactmodel=data;
-   this.alertService.openSnackBar('submited');
-this.result=(await this.cont.contactusp(this.dm.contactmodel));
-this.ngOnInit();
+    submit() {
+        console.log(this.requestForm.value)
+        if (this.requestForm.valid) {
+            let result = this.partnerservice.requestAccess(this.requestForm.value);
+            this.alertService.openSnackBar('Please wait');
+            result.then(data=>{
+                this.alertService.openSnackBar(data.local.result.message);
+                this.requestForm.reset();
+                if(data.local.result.status == 'success'){
+                    this.rout.navigateByUrl('/home');
+                }
+            });
+        } else {
+            this.alertService.openSnackBar('Please fill all mandatory fields');
+        }
 
-}
+    }
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, filter, keys, sort, pagenumber, pagesize,
             result => {

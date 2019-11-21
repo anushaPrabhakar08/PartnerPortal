@@ -325,7 +325,7 @@
                     },
                     {
                         "_key": "(ngSubmit)",
-                        "_value": "",
+                        "_value": "authenticate()",
                         "_type": "kv",
                         "_attrDef": "p"
                     },
@@ -565,7 +565,7 @@
                             },
                             {
                                 "_key": "html",
-                                "_value": "Welcome back to Neutrinos!",
+                                "_value": "{{ userType ? 'Channel Login': 'Welcome back to Neutrinos!'}}",
                                 "_type": "a",
                                 "_attrDef": "p"
                             }
@@ -682,7 +682,7 @@
                             },
                             {
                                 "_key": "[(ngModel)]",
-                                "_value": "",
+                                "_value": "dm.user.email",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -694,7 +694,7 @@
                             },
                             {
                                 "_key": "name",
-                                "_value": "",
+                                "_value": "email",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -873,7 +873,7 @@
                         "designerReference": [
                             {
                                 "_key": "style",
-                                "_value": "",
+                                "_value": "cursor:pointer;",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -910,7 +910,7 @@
                             },
                             {
                                 "_key": "[(ngModel)]",
-                                "_value": "",
+                                "_value": "dm.user.password",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -922,7 +922,7 @@
                             },
                             {
                                 "_key": "name",
-                                "_value": "",
+                                "_value": "password",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -1535,7 +1535,7 @@
                                     },
                                     {
                                         "_key": "html",
-                                        "_value": "Forgot Password?",
+                                        "_value": "{{ userType ? 'Change Password': 'Forgot Password?'}} ",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     }
@@ -1729,15 +1729,17 @@
                 },
                 {
                     "_key": "[fxShow]",
-                    "_value": "true",
+                    "_value": "!userType",
                     "_type": "kv",
-                    "_attrDef": "p"
+                    "_attrDef": "p",
+                    "_customAttributeFlag": true
                 },
                 {
                     "_key": "[fxHide]",
-                    "_value": "false",
+                    "_value": "userType",
                     "_type": "kv",
-                    "_attrDef": "p"
+                    "_attrDef": "p",
+                    "_customAttributeFlag": true
                 }
             ],
             "3ad904e1-ac96-5696-a233-d63967ffdaf8": {
@@ -2092,7 +2094,7 @@
                     "designerReference": [
                         {
                             "_key": "style",
-                            "_value": "",
+                            "_value": "cursor:pointer",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -2269,6 +2271,12 @@
                             "_type": "kv",
                             "_attrDef": "p",
                             "_visibility": false
+                        },
+                        {
+                            "_key": "routerLink",
+                            "_value": "/contact_us",
+                            "_type": "kv",
+                            "_attrDef": "c"
                         }
                     ],
                     "276cc4f9-a444-5a9e-c0c4-ebea8f64fc2b": {

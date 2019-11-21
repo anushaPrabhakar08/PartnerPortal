@@ -1,5 +1,5 @@
 {
-    "e6f2436f-5b5a-53a9-fb17-23703555c603": {
+    "56960bdf-d4a9-9569-e798-64a9749c3c6d": {
         "paletteKey": "FlexLayoutRow",
         "designerReference": [
             {
@@ -53,15 +53,17 @@
             },
             {
                 "_key": "[fxShow]",
-                "_value": "true",
+                "_value": "loggedIn",
                 "_type": "kv",
-                "_attrDef": "p"
+                "_attrDef": "p",
+                "_customAttributeFlag": true
             },
             {
                 "_key": "[fxHide]",
-                "_value": "false",
+                "_value": "!loggedIn",
                 "_type": "kv",
-                "_attrDef": "p"
+                "_attrDef": "p",
+                "_customAttributeFlag": true
             },
             {
                 "_key": "fxFill",
@@ -72,7 +74,7 @@
         ],
         "de993720-6d50-6a67-c0e6-45e043257f89": {
             "paletteKey": "FlexLayoutCol",
-            "parentEditorKey": "e6f2436f-5b5a-53a9-fb17-23703555c603",
+            "parentEditorKey": "56960bdf-d4a9-9569-e798-64a9749c3c6d",
             "designerReference": [
                 {
                     "_key": "componentLabel",
@@ -1056,11 +1058,7 @@
                         },
                         {
                             "_key": "style",
-<<<<<<< Updated upstream
-                            "_value": "height:100%;margin-top: 62px;",
-=======
                             "_value": "height:100%;margin-top: 55px;",
->>>>>>> Stashed changes
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -1902,6 +1900,114 @@
                     }
                 }
             }
+        }
+    },
+    "a3fd5d28-1c7c-e5f2-9923-0d42244673f2": {
+        "paletteKey": "FlexLayoutRow",
+        "designerReference": [
+            {
+                "_key": "componentLabel",
+                "_value": "Row",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_useAsLabel": true
+            },
+            {
+                "_key": "style",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "class",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "fxFlex",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "fxLayoutGap",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "wrap",
+                "_value": "wrap",
+                "_type": "a",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "layoutAlign",
+                "_value": "start",
+                "_type": "a",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "pLayoutAlign",
+                "_value": "stretch",
+                "_type": "a",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "[fxShow]",
+                "_value": "!loggedIn",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_customAttributeFlag": true
+            },
+            {
+                "_key": "[fxHide]",
+                "_value": "loggedIn",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_customAttributeFlag": true
+            },
+            {
+                "_key": "fxFill",
+                "_value": "fxFill",
+                "_type": "a",
+                "_attrDef": "c"
+            }
+        ],
+        "10a663b1-2417-2f5d-3892-497d11eeba3c": {
+            "paletteKey": "NEUTRINOS_VIEW_login",
+            "parentEditorKey": "a3fd5d28-1c7c-e5f2-9923-0d42244673f2",
+            "designerReference": [
+                {
+                    "_key": "componentLabel",
+                    "_value": "login",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_useAsLabel": true
+                },
+                {
+                    "_key": "style",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "class",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "[userType]",
+                    "_value": "true",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_complexity": "advanced",
+                    "displayAs": "userType",
+                    "attrType": "INPUT"
+                }
+            ]
         }
     }
 }

@@ -529,7 +529,7 @@
                                     },
                                     {
                                         "_key": "style",
-                                        "_value": "width:50%;",
+                                        "_value": "",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -577,7 +577,7 @@
                                     },
                                     {
                                         "_key": "width",
-                                        "_value": "250%",
+                                        "_value": "200px",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
