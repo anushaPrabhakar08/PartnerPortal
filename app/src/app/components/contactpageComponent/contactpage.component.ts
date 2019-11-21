@@ -31,7 +31,7 @@ industry=['Banking & Finance','Retail','Public Sector','insurance','Education'];
 companysize=['1-49','50-99','100-249','250-499'];
 country=['Afghanistan','Ailand Island','Albania','Algeria','Australia','india'];
 
-requestForm: Formgroup;
+requestForm: FormGroup;
 
     constructor(private bdms: NDataModelService,private alertService: NSnackbarService,private cont:contactus,private rout:Router,
     private partnerservice: partnerservice) {

@@ -16,26 +16,10 @@
       </div>
     </mat-toolbar>
   </header>
-  <div fxLayout="row wrap" style="padding:100px 0px 20px 0px;" fxLayoutAlign="space-evenly none" [fxShow]="true" [fxHide]="false" fxFlex.md="100">
-    <div fxLayout="column wrap" style="width:40%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false" fxFlex.md="30">
-      <div fxLayout="column wrap" style="margin:0px 10px;" fxLayoutAlign="start start" [fxShow]="true" [fxHide]="false"><span class="fontsize">
-                Our offices</span>
-        <div fxLayout="column wrap" style="fontsize" fxLayoutAlign="start start" [fxShow]="true" [fxHide]="false">
-          <p style="color:#ff6347;" class="fontsize">
-            India</p><span>
-                No.156, 3rd Cross End, Ashoka Pillar Rd,
-1st Block, Jaya Nagar East,
-Bengaluru &#x2013; 560011, Karnataka
-Phone: +91 80 4171 8111</span>
-          <p class="fontsize">
-            Witre to Us</p><span style="color:#ff6347;">
-                channels@neutrinos.co</span>
-        </div>
-      </div>
-    </div>
-    <div fxLayout="row wrap" style="width:60%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false" fxFlex.md="70">
-      <mat-card style="padding:20px;width:60%;">
-        <mat-card-content>
+  <div fxLayout="row wrap" style="padding:80px 0px;" fxLayoutAlign="space-around center" [fxShow]="true" [fxHide]="false" fxFlex.md="100">
+    <div fxLayout="column wrap" fxFlex="40" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <mat-card>
+        <mat-card-content fxLayout="column">
           <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
             <p style="font-variant:petite-caps;font-weight:700;font-size:35px;;">
               send us message</p>
@@ -43,13 +27,13 @@ Phone: +91 80 4171 8111</span>
           <form [formGroup]="requestForm" fxFlex="100" class="requestForm" (ngSubmit)="submit()">
             <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" formGroupName="user">
               <div fxLayout="row wrap" fxLayoutAlign="space-evenly stretch" [fxShow]="true" [fxHide]="false">
-                <div fxLayout="column wrap" class="column" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <div fxLayout="column wrap" class="column" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                   <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
                     <input matInput placeholder="First Name" required formControlName="firstname">
                     <mat-label>First Name</mat-label>
                   </mat-form-field>
                 </div>
-                <div fxLayout="column wrap" class="column" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <div fxLayout="column wrap" class="column" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                   <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
                     <input matInput placeholder="Last Name" required formControlName="lastname">
                     <mat-label>Last Name</mat-label>
@@ -57,13 +41,13 @@ Phone: +91 80 4171 8111</span>
                 </div>
               </div>
               <div fxLayout="row wrap" fxLayoutAlign="space-evenly stretch" [fxShow]="true" [fxHide]="false">
-                <div fxLayout="column wrap" class="column" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <div fxLayout="column wrap" class="column" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                   <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
                     <input matInput placeholder="Company Email" required formControlName="email">
                     <mat-label>Company Email</mat-label>
                   </mat-form-field>
                 </div>
-                <div fxLayout="column wrap" class="column" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <div fxLayout="column wrap" class="column" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                   <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
                     <input matInput type="tel" placeholder="Mobile Number" required formControlName="mobile">
                     <mat-label>Mobile Number</mat-label>
@@ -73,13 +57,13 @@ Phone: +91 80 4171 8111</span>
             </div>
             <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" formGroupName="company">
               <div fxLayout="row wrap" fxLayoutAlign="space-evenly stretch" [fxShow]="true" [fxHide]="false">
-                <div fxLayout="column wrap" class="column" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <div fxLayout="column wrap" class="column" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                   <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
                     <input matInput placeholder="Company Name" required formControlName="name">
                     <mat-label>Company Name</mat-label>
                   </mat-form-field>
                 </div>
-                <div fxLayout="column wrap" class="column" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <div fxLayout="column wrap" class="column" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                   <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
                     <mat-select formControlName="industry" placeholder="Industry" required>
                       <ng-template ngFor let-option [ngForOf]="industry" let-i="index">
@@ -91,7 +75,7 @@ Phone: +91 80 4171 8111</span>
                 </div>
               </div>
               <div fxLayout="row wrap" fxLayoutAlign="space-evenly none" [fxShow]="true" [fxHide]="false">
-                <div fxLayout="column wrap" class="column" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <div fxLayout="column wrap" class="column" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                   <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
                     <mat-select formControlName="size" placeholder="Company Size" required>
                       <ng-template ngFor let-option [ngForOf]="companysize" let-i="index">
@@ -101,7 +85,7 @@ Phone: +91 80 4171 8111</span>
 
                   </mat-form-field>
                 </div>
-                <div fxLayout="column wrap" class="column" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <div fxLayout="column wrap" class="column" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                   <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
                     <mat-select formControlName="country" placeholder="Country">
                       <ng-template ngFor let-option [ngForOf]="country" let-i="index">
@@ -122,6 +106,22 @@ Phone: +91 80 4171 8111</span>
           </form>
         </mat-card-content>
       </mat-card>
+    </div>
+    <div fxLayout="column wrap" fxFlex="30" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false" fxFlex.md="30">
+      <div fxLayout="column wrap" fxFlex="80" fxLayoutAlign="start start" [fxShow]="true" [fxHide]="false"><span class="fontsize">
+                Our offices</span>
+        <div fxLayout="column wrap" style="fontsize" fxLayoutAlign="start start" [fxShow]="true" [fxHide]="false">
+          <p style="color:#ff6347;" class="fontsize">
+            India</p><span>
+                No.156, 3rd Cross End, Ashoka Pillar Rd,
+1st Block, Jaya Nagar East,
+Bengaluru &#x2013; 560011, Karnataka
+Phone: +91 80 4171 8111</span>
+          <p class="fontsize">
+            Witre to Us</p><span style="color:#ff6347;">
+                channels@neutrinos.co</span>
+        </div>
+      </div>
     </div>
   </div>
   <footer class="footer-class">

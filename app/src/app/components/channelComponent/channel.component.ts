@@ -15,7 +15,7 @@ import { Title } from '@angular/platform-browser';
 
 export class channelComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
-    loggedIn = false;
+    loggedIn = true;
     userType = 'C';
     constructor(private bdms: NDataModelService, 
                 public media: MediaObserver, 
