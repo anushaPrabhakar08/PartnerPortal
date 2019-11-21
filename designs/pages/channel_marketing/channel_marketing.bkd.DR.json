@@ -202,7 +202,7 @@
                     "designerReference": [
                         {
                             "_key": "style",
-                            "_value": "",
+                            "_value": "margin-top: 2em;background:rgba(0,0,0,.7); color: #fff;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -415,7 +415,7 @@
                             },
                             {
                                 "_key": "pLayoutAlign",
-                                "_value": "start",
+                                "_value": "stretch",
                                 "_type": "a",
                                 "_attrDef": "p"
                             },
@@ -430,6 +430,12 @@
                                 "_value": "false",
                                 "_type": "kv",
                                 "_attrDef": "p"
+                            },
+                            {
+                                "_key": "ngClass.xs",
+                                "_value": "align-center",
+                                "_type": "kv",
+                                "_attrDef": "c"
                             }
                         ],
                         "23865983-45d7-588a-d675-cc24d0c9c390": {

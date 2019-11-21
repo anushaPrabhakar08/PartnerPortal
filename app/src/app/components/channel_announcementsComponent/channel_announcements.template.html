@@ -1,22 +1,23 @@
-<div fxLayout="row wrap" class="background" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-  <div fxLayout="column wrap" class="margin-tb" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-      <h2 style="color:rgba(0,0,0,.7);" class="header">
-        Make an Announcement</h2>
-    </div>
-    <div fxLayout="row wrap" style="width:100%;margin-top: 20px;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-      <mat-card class="announcement-card">
-        <mat-card-content>
-          <form>
-            <div fxLayout="column wrap" class="announcement" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-              <mat-form-field>
-                <textarea matInput [(ngModel)]="dm.announcement.announcement" name="announcement" placeholder="Announcement" required></textarea>
-              </mat-form-field>
-            </div>
-            <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button class="announce-btn" (click)="opendilogue()">Announce</button></div>
-          </form>
+<div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start center" [fxShow]="true" [fxHide]="false" fxFill>
+  <div fxLayout="row wrap" style="margin-top:100px;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+    <h2 style="color:rgba(0,0,0,.7);" class="header">
+      Make an Announcement</h2>
+  </div>
+  <div fxLayout="row wrap" class="w-100" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+    <form fxFlex="50" fxFlex.sm="50" fxFlex.xs="90" #announcementForm="ngForm">
+      <mat-card>
+        <mat-card-content style="width:100%;">
+          <div fxLayout="column wrap" class="announcement" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+              <input matInput placeholder="Write a Message" required>
+
+            </mat-form-field>
+            <mat-form-field>
+              <textarea matInput [(ngModel)]="dm.announcement.announcement" name="announcement" placeholder="Announcement" required></textarea>
+            </mat-form-field><button mat-raised-button class="announce-btn w-100" (click)="opendilogue()">Announce</button>
+          </div>
         </mat-card-content>
       </mat-card>
-    </div>
+    </form>
   </div>
 </div>

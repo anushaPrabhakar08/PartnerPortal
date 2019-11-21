@@ -435,7 +435,7 @@ bh-partner_notification {
 
 .announce-btn {
     background-color: #ee1c22;
-    width: 350px;
+    // width: 350px;
     height: 40px;
     font-size: 20px;
     color: #fafafa;
@@ -657,6 +657,9 @@ pdf-viewer{
     border: 1px solid gray !important;
     padding:20px;
     border-radius: 6px;
+}
+.align-center{
+    place-content: center !important;
 }
 
 

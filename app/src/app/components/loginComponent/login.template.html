@@ -6,7 +6,7 @@
         {{ userType ? &apos;Channel Login&apos;: &apos;Welcome back to Neutrinos!&apos;}}</h3>
       <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
         <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-          <input matInput [(ngModel)]="dm.user.email" name="email" placeholder="Email addresss" required pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/">
+          <input matInput [(ngModel)]="dm.user.email" name="email" placeholder="Email addresss" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}">
           <mat-error align="start" *ngIf="loginForm.controls[&apos;email&apos;]?.errors?.required">Email is required</mat-error>
           <mat-error align="start" *ngIf="loginForm.controls[&apos;email&apos;]?.errors?.pattern">Enter valid email id</mat-error>
           <mat-label>Email address</mat-label>

@@ -9,6 +9,7 @@ import { channel_addmarketingComponent } from '../channel_addmarketingComponent/
 import { loginComponent } from '../loginComponent/login.component';
 import { viewmarketingpdfComponent } from '../viewmarketingpdfComponent/viewmarketingpdf.component';
 import { Title } from '@angular/platform-browser';
+import { MediaObserver } from '@angular/flex-layout';
 
 
 @Component({
@@ -19,7 +20,7 @@ import { Title } from '@angular/platform-browser';
 export class channel_marketingComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    constructor(private bdms: NDataModelService, private dialog:MatDialog, private titleService: Title) {
+    constructor(private bdms: NDataModelService, private dialog:MatDialog, private titleService: Title,public media: MediaObserver) {
         super();
         this.mm = new ModelMethods(bdms);
     }
