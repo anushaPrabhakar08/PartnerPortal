@@ -5,7 +5,7 @@ import { ModelMethods } from '../../lib/model.methods';
 import { NDataModelService,NSnackbarService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-
+import { Title } from '@angular/platform-browser';
 
 /**
  * Service import Example :
@@ -27,13 +27,14 @@ export class viewagreementComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
     // pdfSrc='/assets/temp/CRUD OPERATION.pdf';
     userId;
-    constructor(private bdms: NDataModelService,@Inject(MAT_DIALOG_DATA) public data) {
+    constructor(private bdms: NDataModelService,@Inject(MAT_DIALOG_DATA) public data,  private title:Title) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
     ngOnInit() {
         this.userId = this.data;
+          this.title.setTitle('View Agreement');
     }
    
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {

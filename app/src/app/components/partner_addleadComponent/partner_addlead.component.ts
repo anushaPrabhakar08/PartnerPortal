@@ -14,16 +14,7 @@ import { partnerservice } from '../../sd-services/partnerservice';
 
 export class partner_addleadComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
-    //   profileForm = new FormGroup({
-    //       organisationName : new FormControl(''),
-    //       orgWebsite: new FormControl(''),
-    //       location : new FormControl(''),
-    //       opportunityType : new FormControl(''),
-    //       leadGeneratedDate : new FormControl(''),
-    //       contactDetails : new FormControl(''),
-    //       comment : new FormControl('')
-    //   });
-
+  
     profileForm: FormGroup;
 
     constructor(private bdms: NDataModelService, private fb: FormBuilder, private partnerservice:partnerservice) {

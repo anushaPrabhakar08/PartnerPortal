@@ -94,6 +94,17 @@
                     "_attrDef": "p",
                     "_complexity": "advanced",
                     "displayAs": "userId",
+                    "attrType": "INPUT",
+                    "inValid": false,
+                    "message": ""
+                },
+                {
+                    "_key": "[src]",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_complexity": "advanced",
+                    "displayAs": "src",
                     "attrType": "INPUT"
                 }
             ]

@@ -4,11 +4,7 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
-import { channelservice } from '../../sd-services/channelservice';
-import { Router, ActivatedRoute, ActivatedRouteSnapshot,} from '@angular/router';
-import { Subscription } from 'rxjs';
-import {MediaObserver} from '@angular/flex-layout';
-import { Title } from '@angular/platform-browser';
+
 /**
  * Service import Example :
  * import { HeroService } from '../../services/hero/hero.service';
@@ -21,46 +17,21 @@ import { Title } from '@angular/platform-browser';
  */
 
 @Component({
-    selector: 'bh-partner',
-    templateUrl: './partner.template.html'
+    selector: 'bh-partner_notification',
+    templateUrl: './partner_notification.template.html'
 })
 
-export class partnerComponent extends NBaseComponent implements OnInit {
+export class partner_notificationComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
-    // sidenavdata="";
-partnerdata;
-pageTitle;
-data="notification";
-badgeCount:Number;
-    constructor(private bdms: NDataModelService,private channelservice:channelservice, private router: Router, route: ActivatedRoute, public media:MediaObserver, public title: Title ) {
+    notifications=["A",'B',"c","D"];
+    constructor(private bdms: NDataModelService) {
         super();
         this.mm = new ModelMethods(bdms);
-      this.badgeCount=1;
-      
     }
 
- async  ngOnInit() {
-let getd=sessionStorage.getItem('id');
-console.log(getd);
-this.partnerdata=(await this.channelservice.getparticularpartner(getd)).local.result;
-console.log(this.partnerdata);
+    ngOnInit() {
 
     }
-
-    clearCount(){
-        this.badgeCount=0;
-    }
-
-    // ngAfterViewInit(){
-    //       let currentUrl = this.router.url.replace('/partner/','');
-    //     if(currentUrl=="marketing_collaterals"){
-    //      this.pageTitle="Marketing Collaterals";
-    //  }
-    //  console.log(currentUrl);
-    //  console.log(this.pageTitle);
-    // }
-
-   
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, filter, keys, sort, pagenumber, pagesize,

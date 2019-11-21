@@ -389,7 +389,8 @@ bh-partner_details,
 bh-partner_leads, 
 bh-partner_developers, 
 bh-partner_marketing,
-bh-partner_agreement {
+bh-partner_agreement,
+bh-partner_notification {
     width: 100%
 }
 
@@ -418,6 +419,10 @@ bh-partner_agreement {
 
 .edit-btn mat-button {
     min-width: 0px;
+}
+
+.mat-notification{
+    width:100%;
 }
 
 //Announcements
@@ -637,4 +642,6 @@ pdf-viewer{
 
 .selectbox mat-form-field{
     width:100% !important;
+    
 }
+

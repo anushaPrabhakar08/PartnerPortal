@@ -6,7 +6,7 @@ import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 import { viewmarketingpdfComponent } from '../viewmarketingpdfComponent/viewmarketingpdf.component';
 import { MatDialog } from '@angular/material';
-
+import { Title } from '@angular/platform-browser';
 /**
  * Service import Example :
  * import { HeroService } from '../../services/hero/hero.service';
@@ -26,12 +26,13 @@ import { MatDialog } from '@angular/material';
 export class partner_marketingComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    constructor(private bdms: NDataModelService, private dialog:MatDialog) {
+    constructor(private bdms: NDataModelService, private dialog:MatDialog, private title:Title) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
     ngOnInit() {
+        this.title.setTitle('Marketing Collaterals');
 
     }
     

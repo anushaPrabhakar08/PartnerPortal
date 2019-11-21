@@ -12,7 +12,7 @@ import { partner_adddeveloperComponent } from '../partner_adddeveloperComponent/
 import { partnerservice } from '../../sd-services/partnerservice';
 import { deletedeveloperComponent } from '../deletedeveloperComponent/deletedeveloper.component';
 import {Observable } from 'rxjs';
-
+import { Title } from '@angular/platform-browser';
 
 @Component({
     selector: 'bh-partner_developers',
@@ -26,7 +26,7 @@ export class partner_developersComponent extends NBaseComponent implements OnIni
 
     data = [];
 
-    constructor(private bdms: NDataModelService, private dialog: MatDialog, private partnerservice: partnerservice) {
+    constructor(private bdms: NDataModelService, private dialog: MatDialog, private partnerservice: partnerservice,  private title:Title) {
         super();
         this.mm = new ModelMethods(bdms);
     }
@@ -35,6 +35,7 @@ export class partner_developersComponent extends NBaseComponent implements OnIni
 
     ngOnInit() {
         this.getdata();
+          this.title.setTitle('Developer Details');
     }
 
     openDeleteDialog(data) {

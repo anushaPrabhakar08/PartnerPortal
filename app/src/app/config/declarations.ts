@@ -69,6 +69,7 @@ import { homeComponent } from '../components/homeComponent/home.component';
 //CORE_REFERENCE_IMPORT-loginComponent
 import { loginComponent } from '../components/loginComponent/login.component';
 import { viewagreementComponent } from 'app/components/viewagreementComponent/viewagreement.component';
+import { partner_notificationComponent } from 'app/components/partner_notificationComponent/partner_notification.component';
 
 
 /**
@@ -115,6 +116,7 @@ export const appDeclarations = [
   PageNotFoundComponent,
   NMapComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  partner_notificationComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-announcepartnerlistComponent
 announcepartnerlistComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-testpageComponent
@@ -206,6 +208,6 @@ children: []},{path: 'login/:type', component: loginComponent,
 children: []},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'contact_us', component: contactpageComponent},{path: 'admin', component: channelComponent,
 children: [{path: 'partners_list', component: channel_dashboardComponent},{path: 'partner/:_id', component: partner_detailsComponent},{path: 'marketing_collaterals', component: channel_marketingComponent},{path: 'announcements', component: channel_announcementsComponent,
 children: []},{path: '', component: loginComponent}]},{path: 'partner', component: partnerComponent,
-children: [{path: 'marketing_collaterals', component: partner_marketingComponent},{path: 'leads', component: partner_leadsComponent},{path: 'developer_details', component: partner_developersComponent},{path: 'agreement', component: partner_agreementComponent},{path: '', component: partner_marketingComponent}]},{path: 'memberregisteration', component: memberregisterationComponent},{path: 'partnerregistration', component: partnerregistrationComponent},{path: 'partner_addDeveloper', component: partner_adddeveloperComponent},{path: 'partner_addLead', component: partner_addleadComponent,
+children: [{path: 'marketing_collaterals', component: partner_marketingComponent},{path: 'leads', component: partner_leadsComponent},{path: 'developer_details', component: partner_developersComponent},{path: 'agreement', component: partner_agreementComponent},{path: '', component: partner_marketingComponent},{path: 'PartnerNotification', component: partner_notificationComponent}]},{path: 'memberregisteration', component: memberregisterationComponent},{path: 'partnerregistration', component: partnerregistrationComponent},{path: 'partner_addDeveloper', component: partner_adddeveloperComponent},{path: 'partner_addLead', component: partner_addleadComponent,
 children: []},{path: 'sample', component: sampleComponent},{path: 'testPage', component: testpageComponent},{path: '', redirectTo: '/home', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END

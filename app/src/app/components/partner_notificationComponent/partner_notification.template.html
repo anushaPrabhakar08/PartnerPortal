@@ -1,0 +1,20 @@
+<div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+  <mat-card style="width:80%;margin:auto;margin-top:5%;">
+    <mat-card-content>
+      <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+        <mat-accordion style="width:100%;margin-bottom:3%;" *ngFor="let notification of notifications">
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+
+              <mat-panel-description>
+
+                <div>
+                  welcome to Neutrinos</div>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -83,6 +83,10 @@
                     "path": "''",
                     "component": "partner_marketingComponent",
                     "pathMatch": ""
+                },
+                {
+                    "component": "partner_notificationComponent",
+                    "path": "PartnerNotification"
                 }
             ]
         },

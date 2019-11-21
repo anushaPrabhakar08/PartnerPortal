@@ -1,31 +1,28 @@
 <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFill>
   <div fxLayout="column " fxFlex="100" fxLayoutAlign="  none" [fxShow]="true" [fxHide]="false" fxFill>
     <mat-toolbar style="width:100%;" class="bg-dark">
-      <div fxLayout="row wrap" style="width:90%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-        <div fxLayout="row wrap" style="margin:0 16px 0 10px;;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-mini-fab style="background:rgba(241, 8, 8, 0.82); color: #fff;" (click)="sidenav.toggle()">
-            <mat-icon>menu</mat-icon>
-          </button></div>
-        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/logo.png" width="250px"></div>
-        <div fxLayout="row wrap" style="margin-left:60%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+      <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false">
+        <div fxLayout="row wrap" fxFlex="10" fxLayoutGap="14em" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+          <div fxLayout="row " fxLayoutAlign="start stretch" [fxShow]="false" [fxHide]="true" fxShow.lt-sm="true"><button mat-mini-fab style="background:rgba(241, 8, 8, 0.82); color: #fff;" (click)="sidenav.toggle()">
+              <mat-icon>menu</mat-icon>
+            </button></div>
+          <div fxLayout="row " fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false" fxShow.lt-sm="true"><img imgSrc="Web/logo.png" style="width:50%;" width="250%"></div>
+        </div>
+        <div fxLayout="row wrap" fxFlex="5em" fxLayoutAlign="space-between center" [fxShow]="true" [fxHide]="false">
           <div>
-            {{partnerdata.companyName}}</div>
+            {{title.getTitle()}}</div>
         </div>
-      </div>
-      <div fxLayout="row wrap" style="margin-right:20px;" fxLayoutAlign="end stretch" [fxShow]="true" [fxHide]="false">
-        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-mini-fab style="background:rgba(241, 8, 8, 0.82); color: #fff;">
-            <mat-icon>notification_important</mat-icon>
-          </button>
-          <mat-menu #menu="matMenu"><button mat-menu-item> Item 1 </button><button mat-menu-item> Item 2 </button><button mat-menu-item> Item 3 </button></mat-menu>
+        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxShow.It-sm="true">
+          <div fxLayout="column wrap" style="margin-top:10px;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><span [matBadge]="badgeCount" matBadgeColor="warn" [matBadgeHidden]="badgeCount===0">
+                <button mat-mini-fab style="background:rgba(241, 8, 8, 0.82); color: #fff;" [matMenuTriggerFor]="menu" (click)="clearCount()"><mat-icon>notification_important </mat-icon></button><mat-menu #menu="matMenu"><button mat-menu-item routerLink="/partner/PartnerNotification"> Neutrinos {{data}} </button></mat-menu></span></div>
+          <div fxLayout="column " style="margin-top:10px;" class="logout-btn" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-button routerLink="/home">Logout</button></div>
         </div>
-      </div>
-      <div fxLayout="row wrap" fxLayoutAlign="end stretch" [fxShow]="true" [fxHide]="false">
-        <div fxLayout="column wrap" class="logout-btn" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-button routerLink="/home">Logout</button></div>
       </div>
     </mat-toolbar>
     <div fxLayout="column " fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-      <mat-sidenav-container style="height:100%;margin-top: 80px;" class="sidenav-container" autosize="true" hasBackdrop="false">
-        <mat-sidenav #sidenav style="background:#000;height:100%;" class="sidenav-content" fxLayout="column wrap" [mode]="&apos;side&apos;" (toggle)="eventOccured()" [position]="&apos;start&apos;" [opened]="false" autoFocus="false" fixedInViewport="false">
-          <div fxLayout="column wrap" style="margin-top:20px;" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-button class="nav-button" routerLink="/partner/marketing_collaterals">Marketing Collaterals</button><button mat-button class="nav-button" routerLink="/partner/leads">Leads</button><button mat-button class="nav-button" routerLink="/partner/developer_details">Developer Details</button><button mat-button class="nav-button" routerLink="/partner/agreement">View Agreement</button></div>
+      <mat-sidenav-container style="height:100%;margin-top: 64px;" class="sidenav-container" autosize="true" hasBackdrop="false">
+        <mat-sidenav #sidenav style="background:#000;height:100%;" class="sidenav-content" fxLayout="column wrap" [mode]="media.isActive(&apos;lt-md&apos;)?&apos;slide&apos;:&apos;side&apos;" (toggle)="sidnav.toggle()" [position]="&apos;start&apos;" [opened]="media.isActive(&apos;gt-sm&apos;)" autoFocus="false" fixedInViewport="false">
+          <div fxLayout="column wrap" style="margin-top:20px;" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-button class="nav-button" routerLink="/partner/marketing_collaterals">Marketing Collaterals</button><button mat-button class="nav-button" (click)="sendLeads()" routerLink="/partner/leads">Leads</button><button mat-button class="nav-button" (click)="sendLeads()" routerLink="/partner/developer_details">Developer Details</button><button mat-button class="nav-button" routerLink="/partner/agreement">View Agreement</button></div>
         </mat-sidenav>
         <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFill>
           <router-outlet></router-outlet>

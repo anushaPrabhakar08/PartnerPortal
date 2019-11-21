@@ -1,0 +1,13 @@
+{
+    "appPageId": "d735366a-6a44-5d0d-d42d-37ad9178e507",
+    "appPageName": "partner_Notification",
+    "componentName": "partner_notificationComponent",
+    "selectorName": "bh-partner_notification",
+    "htmlFileName": "partner_notification.template.html",
+    "tsFileName": "partner_notification.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

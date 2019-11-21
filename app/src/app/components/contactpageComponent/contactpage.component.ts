@@ -53,7 +53,6 @@ contactdetails=new FormGroup({
     }
 
     ngOnInit() {
-
     }
 
 async submit(data){

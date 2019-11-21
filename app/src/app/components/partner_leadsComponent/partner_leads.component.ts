@@ -10,6 +10,7 @@ import { partner_addleadComponent } from '../partner_addleadComponent/partner_ad
 import { deletepopupComponent } from '../deletepopupComponent/deletepopup.component';
 import { partnerservice } from '../../sd-services/partnerservice';
 import {Observable } from 'rxjs';
+import { Title } from '@angular/platform-browser';
 @Component({
     selector: 'bh-partner_leads',
     templateUrl: './partner_leads.template.html'
@@ -26,7 +27,8 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
     dataSource = new MatTableDataSource(this.data);
 
     constructor(private bdms: NDataModelService, private dialog: MatDialog,
-        private partnerservice: partnerservice
+        private partnerservice: partnerservice,
+         private title:Title
     ) {
         super();
         this.mm = new ModelMethods(bdms);
@@ -53,6 +55,7 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
     }
     ngOnInit() {
         this.getdata();
+        // this.title.setTitle('Leads');
     }
 
     openDeleteDialog(table) {
@@ -69,6 +72,7 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
     addLead() {
         const dialogRef = this.dialog.open(partner_addleadComponent, {
             width: '450px',
+            height: '500px',
             data: 'hello'
         });
         dialogRef.afterClosed().subscribe(result => {

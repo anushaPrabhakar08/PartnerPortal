@@ -77,7 +77,7 @@
                 },
                 {
                     "_key": "style",
-                    "_value": "width:100%;",
+                    "_value": "width:100%;overflow:auto;",
                     "_type": "kv",
                     "_attrDef": "p"
                 },
@@ -482,7 +482,7 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "width:80%;",
+                            "_value": "width:90%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -518,7 +518,7 @@
                         },
                         {
                             "_key": "pLayoutAlign",
-                            "_value": "start",
+                            "_value": "center",
                             "_type": "a",
                             "_attrDef": "p"
                         },
@@ -741,7 +741,7 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "width:80%;",
+                            "_value": "width:90%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -1000,7 +1000,7 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "width:80%;",
+                            "_value": "width:90%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -1243,7 +1243,7 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "width:80%;",
+                            "_value": "width:90%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -1436,24 +1436,24 @@
                                 "_key": "selectCustomOption",
                                 "_value": [
                                     {
-                                        "input1": "Distributor",
-                                        "input2": "Distributor",
+                                        "input1": "Solution Cell",
+                                        "input2": "solution cell",
                                         "toggle": {
                                             "toggleData": [],
                                             "selected": "false"
                                         }
                                     },
                                     {
-                                        "input1": "Resaler",
-                                        "input2": "Resaler",
+                                        "input1": "Platform Subscription",
+                                        "input2": "Platform Subscription",
                                         "toggle": {
                                             "toggleData": [],
                                             "selected": "false"
                                         }
                                     },
                                     {
-                                        "input1": "Sales",
-                                        "input2": "Sales",
+                                        "input1": "both",
+                                        "input2": "both",
                                         "toggle": {
                                             "toggleData": [],
                                             "selected": "false"
@@ -1517,7 +1517,7 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "width:80%;",
+                            "_value": "width:90%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -1822,7 +1822,7 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "width:80%;",
+                            "_value": "width:90%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -2073,7 +2073,7 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "width:80%;",
+                            "_value": "width:90%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -2316,7 +2316,7 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "width:80%;",
+                            "_value": "width:90%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
