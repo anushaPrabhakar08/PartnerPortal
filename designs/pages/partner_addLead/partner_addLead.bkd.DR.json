@@ -2400,7 +2400,7 @@
                             },
                             {
                                 "_key": "(click)",
-                                "_value": "submit(profileForm.value)",
+                                "_value": "savelead()",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },

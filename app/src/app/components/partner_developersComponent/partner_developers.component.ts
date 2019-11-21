@@ -13,6 +13,7 @@ import { partnerservice } from '../../sd-services/partnerservice';
 import { deletedeveloperComponent } from '../deletedeveloperComponent/deletedeveloper.component';
 import {Observable } from 'rxjs';
 import { Title } from '@angular/platform-browser';
+import { loginservice } from '../../sd-services/loginservice';
 
 @Component({
     selector: 'bh-partner_developers',
@@ -21,12 +22,13 @@ import { Title } from '@angular/platform-browser';
 
 export class partner_developersComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
+    userId;
     @ViewChild(MatSort, { static: true }) sort: MatSort;
     @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
     data = [];
 
-    constructor(private bdms: NDataModelService, private dialog: MatDialog, private partnerservice: partnerservice,  private title:Title) {
+    constructor(private bdms: NDataModelService, private dialog: MatDialog, private partnerservice: partnerservice,  private title:Title , private loginservice:loginservice) {
         super();
         this.mm = new ModelMethods(bdms);
     }
@@ -38,20 +40,13 @@ export class partner_developersComponent extends NBaseComponent implements OnIni
           this.title.setTitle('Developer Details');
     }
 
-    openDeleteDialog(data) {
-        const dialogRef = this.dialog.open(deletedeveloperComponent, {
-            width: '450px',
-            data: data
-        });
-         dialogRef.afterClosed().subscribe(result => {
-        this.ngOnInit();
-    });
-    }
 
     async getdata() {
         try {
-            let partnerid=sessionStorage.getItem('id');
-            this.data = this.leadObjtoArr((await this.partnerservice.getdeveloper(partnerid)).local.result);
+            
+             let id =  (await this.loginservice.getCurrentUserId().then(result => { this.userId = result.local.result}));
+
+            this.data = this.leadObjtoArr((await this.partnerservice.getdeveloper(this.userId)).local.result);
             this.dataSource = new MatTableDataSource(this.data);
             this.dataSource.paginator = this.paginator;
             this.dataSource.sort = this.sort;

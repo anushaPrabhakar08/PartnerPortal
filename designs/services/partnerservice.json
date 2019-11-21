@@ -71,7 +71,8 @@
             ]
         ],
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "partnerservice"
     },
     {
         "id": "sd_P8ynSLERMD5fuNIx",
@@ -105,6 +106,411 @@
         "paramMappingObj": {},
         "x": 423.03125,
         "y": 120.90625,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true,
+        "serviceName": "partnerservice"
+    },
+    {
+        "id": "sd_BGIE8NbpNMAcuDT6",
+        "type": "Start",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "savelead",
+        "outputs": 1,
+        "noerr": 0,
+        "inputVariables": [
+            {
+                "key": "data",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "result",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": true
+            },
+            {
+                "key": "modlerApi",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "functionName": "savelead",
+        "x": 206.1875,
+        "y": 282.921875,
+        "wires": [
+            [
+                "sd_gNx9b2tspcdexa5v"
+            ]
+        ],
+        "generateNext": true,
+        "generated": false,
+        "serviceName": "partnerservice"
+    },
+    {
+        "id": "sd_gNx9b2tspcdexa5v",
+        "type": "Script",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "api",
+        "script": "bh.local.modlerApi=`http://localhost:24483/api/saveleads`;",
+        "x": 363.03125,
+        "y": 278.921875,
+        "wires": [
+            [
+                "sd_EGzddB7DyzeQ5GF3"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_EGzddB7DyzeQ5GF3",
+        "type": "HttpRequest",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "modler flow",
+        "method": "post",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.modlerApi",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "modlerApi"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "reqBody": "bh.input.data",
+        "reqBodyObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "data"
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "x": 486.03125,
+        "y": 283.90625,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_SF149NK791FDwRua",
+        "type": "Start",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "getleads",
+        "outputs": 1,
+        "noerr": 0,
+        "inputVariables": [
+            {
+                "key": "id",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "result",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": true
+            },
+            {
+                "key": "modlerApi",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "functionName": "getleads",
+        "x": 213.1875,
+        "y": 396.921875,
+        "wires": [
+            [
+                "sd_cQOTbPx05kjnxAbD"
+            ]
+        ],
+        "generateNext": true,
+        "generated": false,
+        "serviceName": "partnerservice"
+    },
+    {
+        "id": "sd_cQOTbPx05kjnxAbD",
+        "type": "Script",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "get leads",
+        "script": "bh.local.modlerApi=`http://localhost:24483/api/getleads?userId=${bh.input.id}`;",
+        "x": 369.03125,
+        "y": 404.921875,
+        "wires": [
+            [
+                "sd_730I0mVuhK1frBeU"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_730I0mVuhK1frBeU",
+        "type": "HttpRequest",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "modler flow",
+        "method": "get",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.modlerApi",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "modlerApi"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "reqBody": "bh.input.id",
+        "reqBodyObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "id"
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "x": 503.03125,
+        "y": 385.90625,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_Q88J98ytR1wU8UMU",
+        "type": "Start",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "deleteleads",
+        "outputs": 1,
+        "noerr": 0,
+        "inputVariables": [
+            {
+                "key": "id",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "result",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": true
+            },
+            {
+                "key": "modlerApi",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "functionName": "deleteleads",
+        "x": 220.1875,
+        "y": 541.921875,
+        "wires": [
+            [
+                "sd_GlkZGVcuIlNo2jIe"
+            ]
+        ],
+        "generateNext": true,
+        "generated": false,
+        "serviceName": "partnerservice"
+    },
+    {
+        "id": "sd_GlkZGVcuIlNo2jIe",
+        "type": "Script",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "modlerApi",
+        "script": "bh.local.modlerApi=`http://localhost:24483/api/deletelead?_id=${bh.input.id}`;",
+        "x": 381.03125,
+        "y": 533.921875,
+        "wires": [
+            [
+                "sd_jTpo33o70lgfwqE6"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_jTpo33o70lgfwqE6",
+        "type": "HttpRequest",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "modler flow",
+        "method": "delete",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.modlerApi",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "modlerApi"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "reqBody": "bh.input.id",
+        "reqBodyObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "id"
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "x": 527.03125,
+        "y": 526.90625,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_OfJIFAeQB3UYRXDG",
+        "type": "Start",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "getdeveloper",
+        "outputs": 1,
+        "noerr": 0,
+        "inputVariables": [
+            {
+                "key": "id",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "result",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": true
+            },
+            {
+                "key": "modlerApi",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "functionName": "getdeveloper",
+        "x": 224.1875,
+        "y": 633.921875,
+        "wires": [
+            [
+                "sd_Y7EaXhOEgsfgUdv5"
+            ]
+        ],
+        "generateNext": true,
+        "generated": false,
+        "serviceName": "partnerservice"
+    },
+    {
+        "id": "sd_Y7EaXhOEgsfgUdv5",
+        "type": "Script",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "",
+        "script": "bh.local.modlerApi= `http://localhost:24483/api/getdeveloper?userId=${bh.input.id}`;",
+        "x": 380.03125,
+        "y": 627.921875,
+        "wires": [
+            [
+                "sd_NkK4dGpIbdt1IBvj"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_NkK4dGpIbdt1IBvj",
+        "type": "HttpRequest",
+        "z": "sd_ilDSHUtXqB5Z3v1A",
+        "name": "modler Flow",
+        "method": "get",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.modlerApi",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "modlerApi"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "reqBody": "bh.input.id",
+        "reqBodyObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "id"
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "x": 545.03125,
+        "y": 633.90625,
         "wires": [
             []
         ],

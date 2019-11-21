@@ -9,8 +9,9 @@ import { MatDialog } from '@angular/material';
 import { partner_addleadComponent } from '../partner_addleadComponent/partner_addlead.component';
 import { deletepopupComponent } from '../deletepopupComponent/deletepopup.component';
 import { partnerservice } from '../../sd-services/partnerservice';
-import {Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Title } from '@angular/platform-browser';
+import { loginservice } from '../../sd-services/loginservice';
 @Component({
     selector: 'bh-partner_leads',
     templateUrl: './partner_leads.template.html'
@@ -19,6 +20,8 @@ import { Title } from '@angular/platform-browser';
 export class partner_leadsComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
     data = [];
+    rapdata;
+    userId;
 
     @ViewChild(MatSort, { static: true }) sort: MatSort;
     @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
@@ -28,7 +31,8 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
 
     constructor(private bdms: NDataModelService, private dialog: MatDialog,
         private partnerservice: partnerservice,
-         private title:Title
+        private title: Title,
+        private loginservice: loginservice
     ) {
         super();
         this.mm = new ModelMethods(bdms);
@@ -36,12 +40,10 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
 
     async getdata() {
         try {
-            let partid=sessionStorage.getItem('id');
+            let id =  (await this.loginservice.getCurrentUserId().then(result => { this.userId = result.local.result}));
+            console.log(this.userId);
+            this.data = this.leadObjtoArr((await this.partnerservice.getleads(this.userId)).local.result);
             
-            let partobj={partner_id:partid};
-            console.log(partobj);
-            this.data = this.leadObjtoArr((await this.partnerservice.getleadsdata(partid)).local.result);
-            console.log(this.data);
             this.dataSource = new MatTableDataSource(this.data);
             this.dataSource.paginator = this.paginator;
             this.dataSource.sort = this.sort;
@@ -50,22 +52,27 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
             console.log(e);
         }
     }
+
+
+
     leadObjtoArr(obj) {
         return Array.from(Object.keys(obj), k => obj[k]);
     }
     ngOnInit() {
         this.getdata();
-         this.title.setTitle('Leads');
+        this.title.setTitle('Leads');
     }
+
+   
 
     openDeleteDialog(table) {
         const dialogRef = this.dialog.open(deletepopupComponent, {
             width: '450px',
             data: table
         });
-            dialogRef.afterClosed().subscribe(result => {
-        this.ngOnInit();
-    });
+        dialogRef.afterClosed().subscribe(result => {
+            this.ngOnInit();
+        });
     }
 
 
@@ -76,8 +83,8 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
             data: 'hello'
         });
         dialogRef.afterClosed().subscribe(result => {
-        this.ngOnInit();
-    });
+            this.ngOnInit();
+        });
     }
 
     applyFilter(filterValue: string) {

@@ -76,6 +76,78 @@ export class partnerservice {
       throw e;
     }
   }
+  public async savelead(data = undefined, ...others) {
+    try {
+      let bh = {
+        input: { data: data },
+        local: { result: undefined, modlerApi: undefined }
+      };
+      bh = this.__constructDefault(bh);
+
+      bh = await this.sd_gNx9b2tspcdexa5v(bh);
+      //appendnew_next_savelead
+      //Start formatting output variables
+      let outputVariables = { input: {}, local: { result: bh.local.result } };
+      //End formatting output variables
+      return outputVariables;
+    } catch (e) {
+      throw e;
+    }
+  }
+  public async getleads(id = undefined, ...others) {
+    try {
+      let bh = {
+        input: { id: id },
+        local: { result: undefined, modlerApi: undefined }
+      };
+      bh = this.__constructDefault(bh);
+
+      bh = await this.sd_cQOTbPx05kjnxAbD(bh);
+      //appendnew_next_getleads
+      //Start formatting output variables
+      let outputVariables = { input: {}, local: { result: bh.local.result } };
+      //End formatting output variables
+      return outputVariables;
+    } catch (e) {
+      throw e;
+    }
+  }
+  public async deleteleads(id = undefined, ...others) {
+    try {
+      let bh = {
+        input: { id: id },
+        local: { result: undefined, modlerApi: undefined }
+      };
+      bh = this.__constructDefault(bh);
+
+      bh = await this.sd_GlkZGVcuIlNo2jIe(bh);
+      //appendnew_next_deleteleads
+      //Start formatting output variables
+      let outputVariables = { input: {}, local: { result: bh.local.result } };
+      //End formatting output variables
+      return outputVariables;
+    } catch (e) {
+      throw e;
+    }
+  }
+  public async getdeveloper(id = undefined, ...others) {
+    try {
+      let bh = {
+        input: { id: id },
+        local: { result: undefined, modlerApi: undefined }
+      };
+      bh = this.__constructDefault(bh);
+
+      bh = await this.sd_Y7EaXhOEgsfgUdv5(bh);
+      //appendnew_next_getdeveloper
+      //Start formatting output variables
+      let outputVariables = { input: {}, local: { result: bh.local.result } };
+      //End formatting output variables
+      return outputVariables;
+    } catch (e) {
+      throw e;
+    }
+  }
   //appendnew_flow_partnerservice_Start
 
   async sd_yDrVNWFnxrLMuhPE(bh) {
@@ -102,6 +174,122 @@ export class partnerservice {
       };
       bh.local.result = await this.sdService.nHttpRequest(requestOptions);
       //appendnew_next_sd_P8ynSLERMD5fuNIx
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_gNx9b2tspcdexa5v(bh) {
+    try {
+      bh.local.modlerApi = `http://localhost:24483/api/saveleads`;
+
+      bh = await this.sd_EGzddB7DyzeQ5GF3(bh);
+      //appendnew_next_sd_gNx9b2tspcdexa5v
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_EGzddB7DyzeQ5GF3(bh) {
+    try {
+      let requestOptions = {
+        url: bh.local.modlerApi,
+        method: 'post',
+        responseType: 'json',
+        reportProgress: undefined,
+        headers: {},
+        params: {},
+        body: bh.input.data
+      };
+      bh.local.result = await this.sdService.nHttpRequest(requestOptions);
+      //appendnew_next_sd_EGzddB7DyzeQ5GF3
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_cQOTbPx05kjnxAbD(bh) {
+    try {
+      bh.local.modlerApi = `http://localhost:24483/api/getleads?userId=${bh.input.id}`;
+
+      bh = await this.sd_730I0mVuhK1frBeU(bh);
+      //appendnew_next_sd_cQOTbPx05kjnxAbD
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_730I0mVuhK1frBeU(bh) {
+    try {
+      let requestOptions = {
+        url: bh.local.modlerApi,
+        method: 'get',
+        responseType: 'json',
+        reportProgress: undefined,
+        headers: {},
+        params: {},
+        body: bh.input.id
+      };
+      bh.local.result = await this.sdService.nHttpRequest(requestOptions);
+      //appendnew_next_sd_730I0mVuhK1frBeU
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_GlkZGVcuIlNo2jIe(bh) {
+    try {
+      bh.local.modlerApi = `http://localhost:24483/api/deletelead?_id=${bh.input.id}`;
+
+      bh = await this.sd_jTpo33o70lgfwqE6(bh);
+      //appendnew_next_sd_GlkZGVcuIlNo2jIe
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_jTpo33o70lgfwqE6(bh) {
+    try {
+      let requestOptions = {
+        url: bh.local.modlerApi,
+        method: 'delete',
+        responseType: 'json',
+        reportProgress: undefined,
+        headers: {},
+        params: {},
+        body: bh.input.id
+      };
+      bh.local.result = await this.sdService.nHttpRequest(requestOptions);
+      //appendnew_next_sd_jTpo33o70lgfwqE6
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_Y7EaXhOEgsfgUdv5(bh) {
+    try {
+      bh.local.modlerApi = `http://localhost:24483/api/getdeveloper?userId=${bh.input.id}`;
+
+      bh = await this.sd_NkK4dGpIbdt1IBvj(bh);
+      //appendnew_next_sd_Y7EaXhOEgsfgUdv5
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_NkK4dGpIbdt1IBvj(bh) {
+    try {
+      let requestOptions = {
+        url: bh.local.modlerApi,
+        method: 'get',
+        responseType: 'json',
+        reportProgress: undefined,
+        headers: {},
+        params: {},
+        body: bh.input.id
+      };
+      bh.local.result = await this.sdService.nHttpRequest(requestOptions);
+      //appendnew_next_sd_NkK4dGpIbdt1IBvj
       return bh;
     } catch (e) {
       throw e;
