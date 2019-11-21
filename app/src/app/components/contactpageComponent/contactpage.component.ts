@@ -4,7 +4,7 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService, NSnackbarService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
-import { FormGroup, FormControl,Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { contactmodel } from '../../models/contactmodel.model';
 import { contactus } from '../../sd-services/contactus';
 import { Router } from '@angular/router';
@@ -27,47 +27,59 @@ import { partnerservice } from '../../sd-services/partnerservice';
 
 export class contactpageComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
-industry=['Banking & Finance','Retail','Public Sector','insurance','Education'];
-companysize=['1-49','50-99','100-249','250-499'];
-country=['Afghanistan','Ailand Island','Albania','Algeria','Australia','india'];
+    industry = ['Banking & Finance', 'Retail', 'Public Sector', 'Insurance', 'Education'];
+    companysize = ['1-49', '50-99', '100-249', '250-499'];
+    country = ['Afghanistan', 'Ailand Island', 'Albania', 'Algeria', 'Australia', 'India'];
 
-requestForm: FormGroup;
+    requestForm: FormGroup;
+    contactmodel: contactmodel;
 
-    constructor(private bdms: NDataModelService,private alertService: NSnackbarService,private cont:contactus,private rout:Router,
-    private partnerservice: partnerservice) {
+    constructor(private bdms: NDataModelService, private alertService: NSnackbarService, private cont: contactus, private rout: Router,
+        private partnerservice: partnerservice) {
         super();
         this.mm = new ModelMethods(bdms);
-          this.contactmodel = new contactmodel();
+        this.contactmodel = new contactmodel();
     }
 
     ngOnInit() {
         this.requestForm = new FormGroup({
             user: new FormGroup({
-                firstname: new FormControl('', Validators.required),
-                lastname: new FormControl('', Validators.required),
-                email: new FormControl('', Validators.required),
-                mobile: new FormControl('', Validators.required),
+                firstname: new FormControl('', [Validators.required, Validators.maxLength(30), Validators.pattern(/^[a-zA-Z]+$/)]),
+                lastname: new FormControl('',[Validators.required, Validators.maxLength(30), Validators.pattern(/^[a-zA-Z]+$/)]),
+                email: new FormControl('',[Validators.required,  Validators.maxLength(20), Validators.pattern(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/)]),
+                mobile: new FormControl('', [Validators.required, Validators.maxLength(10), Validators.pattern(/^[0-9]*$/)]),
             }),
             company: new FormGroup({
-                name: new FormControl('', Validators.required),
-                industry: new FormControl('', Validators.required),
-                size: new FormControl('', Validators.required),
-                message: new FormControl('', Validators.required),
+                name: new FormControl('', [Validators.required, Validators.maxLength(30), Validators.pattern(/^[a-zA-Z]+$/)]),
+                industry: new FormControl('',Validators.required),
+                size: new FormControl('',Validators.required),
+                message: new FormControl(''),
                 country: new FormControl('', Validators.required),
             }),
 
         });
     }
+     
+      get firstname() { return this.requestForm.controls.user.get('firstname'); }
+      get lastname() { return this.requestForm.controls.user.get('lastname') }
+      get email() { return this.requestForm.controls.user.get('email') }
+      get mobile() { return this.requestForm.controls.user.get('mobile') }
+
+      get name() { return this.requestForm.controls.company.get('name') }
+    //   get industry() { return this.requestForm.controls.company.get('industry') }
+    //   get size() { return this.requestForm.controls.company.get('size') }
+    //   get message() { return this.requestForm.controls.company.get('message') }
+    //   get country() { return this.requestForm.controls.company.get('country') }
 
     submit() {
         console.log(this.requestForm.value)
         if (this.requestForm.valid) {
             let result = this.partnerservice.requestAccess(this.requestForm.value);
             this.alertService.openSnackBar('Please wait');
-            result.then(data=>{
+            result.then(data => {
                 this.alertService.openSnackBar(data.local.result.message);
                 this.requestForm.reset();
-                if(data.local.result.status == 'success'){
+                if (data.local.result.status == 'success') {
                     this.rout.navigateByUrl('/home');
                 }
             });
@@ -128,7 +140,7 @@ requestForm: FormGroup;
             })
     }
 
-    delete (dataModelName, filter) {
+    delete(dataModelName, filter) {
         this.mm.delete(dataModelName, filter,
             result => {
                 // On Success code here

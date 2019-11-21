@@ -55,7 +55,7 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
     }
     ngOnInit() {
         this.getdata();
-        // this.title.setTitle('Leads');
+         this.title.setTitle('Leads');
     }
 
     openDeleteDialog(table) {

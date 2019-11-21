@@ -64,7 +64,7 @@
                 "_attrDef": "p"
             }
         ],
-        "b1ee7d8a-60d9-dc24-9f0c-bc18a11cc240": {
+        "ec0bc56c-3be6-634d-bee3-7342baa627f5": {
             "paletteKey": "NG-Header",
             "parentEditorKey": "a777a8f0-0fba-034c-2eb8-8c2c2136c64f",
             "designerReference": [
@@ -88,9 +88,9 @@
                     "_attrDef": "p"
                 }
             ],
-            "949d6a19-5bd6-7620-6653-6d82fa0c53eb": {
+            "667bdbcc-101f-7135-60c6-043fad906c7b": {
                 "paletteKey": "NG-Toolbar",
-                "parentEditorKey": "b1ee7d8a-60d9-dc24-9f0c-bc18a11cc240",
+                "parentEditorKey": "ec0bc56c-3be6-634d-bee3-7342baa627f5",
                 "designerReference": [
                     {
                         "_key": "componentLabel",
@@ -130,9 +130,9 @@
                         "_attrDef": "c"
                     }
                 ],
-                "7adcdf6e-13bd-3f52-8283-71e72874d583": {
+                "d8a1e984-14a0-4076-cd14-0854d754b433": {
                     "paletteKey": "FlexLayoutRow",
-                    "parentEditorKey": "949d6a19-5bd6-7620-6653-6d82fa0c53eb",
+                    "parentEditorKey": "667bdbcc-101f-7135-60c6-043fad906c7b",
                     "designerReference": [
                         {
                             "_key": "componentLabel",
@@ -202,9 +202,9 @@
                             "_attrDef": "c"
                         }
                     ],
-                    "1fee8e1e-f387-7bc3-5b6d-1a754a56c5bf": {
+                    "bd554537-be93-2a5d-f647-b3c350c28998": {
                         "paletteKey": "FlexLayoutCol",
-                        "parentEditorKey": "7adcdf6e-13bd-3f52-8283-71e72874d583",
+                        "parentEditorKey": "d8a1e984-14a0-4076-cd14-0854d754b433",
                         "designerReference": [
                             {
                                 "_key": "componentLabel",
@@ -268,9 +268,9 @@
                                 "_attrDef": "p"
                             }
                         ],
-                        "89aad23e-ebdd-f716-8402-c1c67cf9621f": {
+                        "46cbed16-d580-f580-a458-f1e6c1c87d00": {
                             "paletteKey": "NG-image",
-                            "parentEditorKey": "1fee8e1e-f387-7bc3-5b6d-1a754a56c5bf",
+                            "parentEditorKey": "bd554537-be93-2a5d-f647-b3c350c28998",
                             "designerReference": [
                                 {
                                     "_key": "componentLabel",
@@ -348,9 +348,9 @@
                             ]
                         }
                     },
-                    "eba60f25-6bc2-1062-a25f-27cfc2e5b67e": {
+                    "848be63a-a26b-7485-44a9-713255a36ce0": {
                         "paletteKey": "FlexLayoutCol",
-                        "parentEditorKey": "7adcdf6e-13bd-3f52-8283-71e72874d583",
+                        "parentEditorKey": "d8a1e984-14a0-4076-cd14-0854d754b433",
                         "designerReference": [
                             {
                                 "_key": "componentLabel",
@@ -373,7 +373,286 @@
                             },
                             {
                                 "_key": "fxFlex",
-                                "_value": "80",
+                                "_value": "60",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "fxLayoutGap",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "wrap",
+                                "_value": "wrap",
+                                "_type": "a",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "layoutAlign",
+                                "_value": "center",
+                                "_type": "a",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "pLayoutAlign",
+                                "_value": "center",
+                                "_type": "a",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[fxShow]",
+                                "_value": "true",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[fxHide]",
+                                "_value": "false",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            }
+                        ],
+                        "5fb2ccd7-060f-c2b0-9dcb-d454f8797623": {
+                            "paletteKey": "Html5",
+                            "parentEditorKey": "848be63a-a26b-7485-44a9-713255a36ce0",
+                            "isAdvancedComponent": true,
+                            "designerReference": [
+                                {
+                                    "_key": "style",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "class",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "htmlElement",
+                                    "_value": "div",
+                                    "_type": "dav",
+                                    "_attrDef": "p",
+                                    "_useAsLabel": true
+                                },
+                                {
+                                    "_key": "tagType",
+                                    "_value": "",
+                                    "_type": "a",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "name",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "sandbox",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "src",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "srcdoc",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "width",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "[autoplay]",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "[loop]",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "data",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "audioSource",
+                                    "_value": [],
+                                    "_type": "a",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "videoSource",
+                                    "_value": [],
+                                    "_type": "a",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "audioDatasource",
+                                    "_value": "",
+                                    "_type": "a",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "audioSrc",
+                                    "_value": "",
+                                    "_type": "a",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "audioType",
+                                    "_value": "",
+                                    "_type": "a",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "videoDatasource",
+                                    "_value": "",
+                                    "_type": "a",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "videoSrc",
+                                    "_value": "",
+                                    "_type": "a",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "videoType",
+                                    "_value": "",
+                                    "_type": "a",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "(audioplay)",
+                                    "_value": "",
+                                    "_type": "a",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "(videoplay)",
+                                    "_value": "",
+                                    "_type": "a",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "(audiopause)",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "(videopause)",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "(audioended)",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "(videoended)",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                }
+                            ],
+                            "d3ce7866-01f1-a275-0cc0-15305ec43ebc": {
+                                "paletteKey": "html-editor",
+                                "parentEditorKey": "5fb2ccd7-060f-c2b0-9dcb-d454f8797623",
+                                "isAdvancedChildComponent": true,
+                                "designerReference": [
+                                    {
+                                        "_key": "style",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "class",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "html",
+                                        "_value": "Partner Portal",
+                                        "_type": "a",
+                                        "_attrDef": "p"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "7bc45bb9-7dbe-1186-8370-68aa702477bd": {
+                        "paletteKey": "FlexLayoutCol",
+                        "parentEditorKey": "d8a1e984-14a0-4076-cd14-0854d754b433",
+                        "designerReference": [
+                            {
+                                "_key": "componentLabel",
+                                "_value": "Column",
+                                "_type": "kv",
+                                "_attrDef": "p",
+                                "_useAsLabel": true
+                            },
+                            {
+                                "_key": "style",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "class",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "fxFlex",
+                                "_value": "20",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -414,9 +693,9 @@
                                 "_attrDef": "p"
                             }
                         ],
-                        "8f2eec5c-d265-7e34-a75d-051fb4f940d4": {
+                        "5525d98b-0c4c-ea98-1868-eebec73430f6": {
                             "paletteKey": "FlexLayoutRow",
-                            "parentEditorKey": "eba60f25-6bc2-1062-a25f-27cfc2e5b67e",
+                            "parentEditorKey": "7bc45bb9-7dbe-1186-8370-68aa702477bd",
                             "designerReference": [
                                 {
                                     "_key": "componentLabel",
@@ -486,9 +765,9 @@
                                     "_attrDef": "c"
                                 }
                             ],
-                            "b2be0b22-5ea8-6151-8dd4-7239eebdca2d": {
+                            "384e6b21-8629-abc4-3179-28ad9536918b": {
                                 "paletteKey": "NG-button",
-                                "parentEditorKey": "8f2eec5c-d265-7e34-a75d-051fb4f940d4",
+                                "parentEditorKey": "5525d98b-0c4c-ea98-1868-eebec73430f6",
                                 "designerReference": [
                                     {
                                         "_key": "style",
@@ -547,9 +826,9 @@
                                     }
                                 ]
                             },
-                            "7ec9690c-6f80-f30c-0a31-d663255add6b": {
+                            "2f817d86-0189-efc1-2444-292875648153": {
                                 "paletteKey": "NG-button",
-                                "parentEditorKey": "8f2eec5c-d265-7e34-a75d-051fb4f940d4",
+                                "parentEditorKey": "5525d98b-0c4c-ea98-1868-eebec73430f6",
                                 "designerReference": [
                                     {
                                         "_key": "style",
@@ -608,9 +887,9 @@
                                     }
                                 ]
                             },
-                            "0c395bb9-e357-cb78-0c8b-267ab47fbc0f": {
+                            "3ec7b272-d313-bbae-f542-d4813afc8f26": {
                                 "paletteKey": "NG-RaisedButton",
-                                "parentEditorKey": "8f2eec5c-d265-7e34-a75d-051fb4f940d4",
+                                "parentEditorKey": "5525d98b-0c4c-ea98-1868-eebec73430f6",
                                 "designerReference": [
                                     {
                                         "_key": "style",
@@ -671,9 +950,9 @@
                             }
                         }
                     },
-                    "9af22fce-0529-f174-609a-2168ea438205": {
+                    "8cd9c1d6-bb7b-f5de-3730-54e5b2376cb5": {
                         "paletteKey": "FlexLayoutCol",
-                        "parentEditorKey": "7adcdf6e-13bd-3f52-8283-71e72874d583",
+                        "parentEditorKey": "d8a1e984-14a0-4076-cd14-0854d754b433",
                         "designerReference": [
                             {
                                 "_key": "componentLabel",
@@ -749,9 +1028,9 @@
                                 "_attrDef": "c"
                             }
                         ],
-                        "278b4f81-1ca6-0195-f691-1fc7a4d63248": {
+                        "17be2c2c-c200-89d4-d65e-f469b5d01aa0": {
                             "paletteKey": "NG-MiniFabButton",
-                            "parentEditorKey": "9af22fce-0529-f174-609a-2168ea438205",
+                            "parentEditorKey": "8cd9c1d6-bb7b-f5de-3730-54e5b2376cb5",
                             "designerReference": [
                                 {
                                     "_key": "style",
@@ -816,9 +1095,9 @@
                                 }
                             ]
                         },
-                        "0f073ca3-cbcb-36d0-2ba0-4bb10f8c37de": {
+                        "95283fd5-699f-fda0-593f-034adbd621e9": {
                             "paletteKey": "NG-Menu",
-                            "parentEditorKey": "9af22fce-0529-f174-609a-2168ea438205",
+                            "parentEditorKey": "8cd9c1d6-bb7b-f5de-3730-54e5b2376cb5",
                             "designerReference": [
                                 {
                                     "_key": "componentLabel",
@@ -900,9 +1179,9 @@
                                     "_attrDef": "p"
                                 }
                             ],
-                            "d5c60831-ada7-1ead-ddb0-2cb5b52630ff": {
+                            "cc76c586-bea0-1e88-5f5c-93b63ba468ab": {
                                 "paletteKey": "FlexLayoutCol",
-                                "parentEditorKey": "0f073ca3-cbcb-36d0-2ba0-4bb10f8c37de",
+                                "parentEditorKey": "95283fd5-699f-fda0-593f-034adbd621e9",
                                 "designerReference": [
                                     {
                                         "_key": "componentLabel",
@@ -966,9 +1245,9 @@
                                         "_attrDef": "p"
                                     }
                                 ],
-                                "1c5c3ec5-1812-cd1e-7a1c-728b7edf5158": {
+                                "4bdf26f1-1120-6625-0f17-909da72a1d5f": {
                                     "paletteKey": "NG-button",
-                                    "parentEditorKey": "d5c60831-ada7-1ead-ddb0-2cb5b52630ff",
+                                    "parentEditorKey": "cc76c586-bea0-1e88-5f5c-93b63ba468ab",
                                     "designerReference": [
                                         {
                                             "_key": "style",
@@ -1027,9 +1306,9 @@
                                         }
                                     ]
                                 },
-                                "65c62fa8-4593-d202-9c27-fb1d777c4de2": {
+                                "4e9b99f0-0344-61aa-49c5-2454a4d74736": {
                                     "paletteKey": "NG-button",
-                                    "parentEditorKey": "d5c60831-ada7-1ead-ddb0-2cb5b52630ff",
+                                    "parentEditorKey": "cc76c586-bea0-1e88-5f5c-93b63ba468ab",
                                     "designerReference": [
                                         {
                                             "_key": "style",
@@ -1088,9 +1367,9 @@
                                         }
                                     ]
                                 },
-                                "e295fc0a-cd22-eaff-03aa-c2a2c147c5e5": {
+                                "c9fa864a-5a4d-9345-a3fa-7e89ca83a399": {
                                     "paletteKey": "NG-button",
-                                    "parentEditorKey": "d5c60831-ada7-1ead-ddb0-2cb5b52630ff",
+                                    "parentEditorKey": "cc76c586-bea0-1e88-5f5c-93b63ba468ab",
                                     "designerReference": [
                                         {
                                             "_key": "style",
@@ -2001,7 +2280,32 @@
                                                 },
                                                 {
                                                     "_key": "matError",
-                                                    "_value": [],
+                                                    "_value": [
+                                                        {
+                                                            "input1": "firstname.hasError('required')",
+                                                            "input2": "Firstname is required",
+                                                            "toggle": {
+                                                                "toggleData": [],
+                                                                "selected": "start"
+                                                            }
+                                                        },
+                                                        {
+                                                            "input1": "firstname.hasError('maxlength')",
+                                                            "input2": "Cannot enter more than 30 characters",
+                                                            "toggle": {
+                                                                "toggleData": [],
+                                                                "selected": "start"
+                                                            }
+                                                        },
+                                                        {
+                                                            "input1": "firstname.hasError('pattern')",
+                                                            "input2": "Enter only Characters",
+                                                            "toggle": {
+                                                                "toggleData": [],
+                                                                "selected": "start"
+                                                            }
+                                                        }
+                                                    ],
                                                     "_type": "a",
                                                     "_attrDef": "p",
                                                     "_visibility": true
@@ -2235,7 +2539,32 @@
                                                 },
                                                 {
                                                     "_key": "matError",
-                                                    "_value": [],
+                                                    "_value": [
+                                                        {
+                                                            "input1": "lastname.hasError('required')",
+                                                            "input2": "Lastname is required",
+                                                            "toggle": {
+                                                                "toggleData": [],
+                                                                "selected": "start"
+                                                            }
+                                                        },
+                                                        {
+                                                            "input1": "lastname.hasError('maxlength')",
+                                                            "input2": "Cannot be more than 30 characters",
+                                                            "toggle": {
+                                                                "toggleData": [],
+                                                                "selected": "start"
+                                                            }
+                                                        },
+                                                        {
+                                                            "input1": "lastname.hasError('pattern')",
+                                                            "input2": "Enter only characters",
+                                                            "toggle": {
+                                                                "toggleData": [],
+                                                                "selected": "start"
+                                                            }
+                                                        }
+                                                    ],
                                                     "_type": "a",
                                                     "_attrDef": "p",
                                                     "_visibility": true
@@ -2536,7 +2865,24 @@
                                                 },
                                                 {
                                                     "_key": "matError",
-                                                    "_value": [],
+                                                    "_value": [
+                                                        {
+                                                            "input1": "email.hasError('required')",
+                                                            "input2": "Email is required",
+                                                            "toggle": {
+                                                                "toggleData": [],
+                                                                "selected": "start"
+                                                            }
+                                                        },
+                                                        {
+                                                            "input1": "email.hasError('pattern')",
+                                                            "input2": "Enter valid email id",
+                                                            "toggle": {
+                                                                "toggleData": [],
+                                                                "selected": "start"
+                                                            }
+                                                        }
+                                                    ],
                                                     "_type": "a",
                                                     "_attrDef": "p",
                                                     "_visibility": true
@@ -2770,7 +3116,32 @@
                                                 },
                                                 {
                                                     "_key": "matError",
-                                                    "_value": [],
+                                                    "_value": [
+                                                        {
+                                                            "input1": "mobile.hasError('required')",
+                                                            "input2": "Mobile no is required",
+                                                            "toggle": {
+                                                                "toggleData": [],
+                                                                "selected": "start"
+                                                            }
+                                                        },
+                                                        {
+                                                            "input1": "mobile.hasError('maxlength')",
+                                                            "input2": "Invalid Mobile no",
+                                                            "toggle": {
+                                                                "toggleData": [],
+                                                                "selected": "start"
+                                                            }
+                                                        },
+                                                        {
+                                                            "input1": "mobile.hasError('pattern')",
+                                                            "input2": "Enter only Numerical values",
+                                                            "toggle": {
+                                                                "toggleData": [],
+                                                                "selected": "start"
+                                                            }
+                                                        }
+                                                    ],
                                                     "_type": "a",
                                                     "_attrDef": "p",
                                                     "_visibility": true
@@ -3144,7 +3515,32 @@
                                                 },
                                                 {
                                                     "_key": "matError",
-                                                    "_value": [],
+                                                    "_value": [
+                                                        {
+                                                            "input1": "name.hasError('required')",
+                                                            "input2": "Company name is required",
+                                                            "toggle": {
+                                                                "toggleData": [],
+                                                                "selected": "start"
+                                                            }
+                                                        },
+                                                        {
+                                                            "input1": "name.hasError('maxlength')",
+                                                            "input2": "Cannot be more than 30 characters",
+                                                            "toggle": {
+                                                                "toggleData": [],
+                                                                "selected": "start"
+                                                            }
+                                                        },
+                                                        {
+                                                            "input1": "name.hasError('pattern')",
+                                                            "input2": "Enter only characters",
+                                                            "toggle": {
+                                                                "toggleData": [],
+                                                                "selected": "start"
+                                                            }
+                                                        }
+                                                    ],
                                                     "_type": "a",
                                                     "_attrDef": "p",
                                                     "_visibility": true
@@ -4107,7 +4503,7 @@
                                             },
                                             {
                                                 "_key": "class",
-                                                "_value": "",
+                                                "_value": "sample",
                                                 "_type": "kv",
                                                 "_attrDef": "p"
                                             },
@@ -5347,7 +5743,7 @@
                                     },
                                     {
                                         "_key": "html",
-                                        "_value": "Witre to Us",
+                                        "_value": "Write to Us",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     }

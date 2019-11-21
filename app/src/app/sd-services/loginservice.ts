@@ -76,6 +76,23 @@ export class loginservice {
       throw e;
     }
   }
+  public async authenticated(data = undefined, ...others) {
+    try {
+      let bh = { input: { data: data }, local: {} };
+      bh = this.__constructDefault(bh);
+
+      bh = await this.sd_ckYxlETQLKEKfVGG(bh);
+      bh = await this.sd_EMzzBsookyCCkLCk(bh);
+      bh = await this.sd_9oKTUmaNwRgHPn1u(bh);
+      //appendnew_next_authenticated
+      //Start formatting output variables
+      let outputVariables = { input: {}, local: {} };
+      //End formatting output variables
+      return outputVariables;
+    } catch (e) {
+      throw e;
+    }
+  }
   //appendnew_flow_loginservice_Start
 
   async sd_hT5MmaR2qH2HaZbC(bh) {
@@ -102,6 +119,33 @@ export class loginservice {
       };
       bh.local.result = await this.sdService.nHttpRequest(requestOptions);
       //appendnew_next_sd_QEwiG1uwqRCVw0xw
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_ckYxlETQLKEKfVGG(bh) {
+    try {
+      localStorage.setItem('currentUser', JSON.stringify(bh.input.data.data));
+      //appendnew_next_sd_ckYxlETQLKEKfVGG
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_EMzzBsookyCCkLCk(bh) {
+    try {
+      localStorage.setItem('loggedIn', JSON.stringify('true'));
+      //appendnew_next_sd_EMzzBsookyCCkLCk
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_9oKTUmaNwRgHPn1u(bh) {
+    try {
+      localStorage.setItem('token', JSON.stringify(bh.input.data.token));
+      //appendnew_next_sd_9oKTUmaNwRgHPn1u
       return bh;
     } catch (e) {
       throw e;

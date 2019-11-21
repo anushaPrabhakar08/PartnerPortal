@@ -76,23 +76,6 @@ export class partnerservice {
       throw e;
     }
   }
-  public async authenticated(data = undefined, ...others) {
-    try {
-      let bh = { input: { data: data }, local: {} };
-      bh = this.__constructDefault(bh);
-
-      bh = await this.sd_U8zVTahK318B9zYl(bh);
-      bh = await this.sd_kYVlavNUJGb78F0H(bh);
-      bh = await this.sd_5c4a95oDd64AR1Jh(bh);
-      //appendnew_next_authenticated
-      //Start formatting output variables
-      let outputVariables = { input: {}, local: {} };
-      //End formatting output variables
-      return outputVariables;
-    } catch (e) {
-      throw e;
-    }
-  }
   //appendnew_flow_partnerservice_Start
 
   async sd_yDrVNWFnxrLMuhPE(bh) {
@@ -119,33 +102,6 @@ export class partnerservice {
       };
       bh.local.result = await this.sdService.nHttpRequest(requestOptions);
       //appendnew_next_sd_P8ynSLERMD5fuNIx
-      return bh;
-    } catch (e) {
-      throw e;
-    }
-  }
-  async sd_U8zVTahK318B9zYl(bh) {
-    try {
-      localStorage.setItem('currentUser', JSON.stringify(bh.input.data.data));
-      //appendnew_next_sd_U8zVTahK318B9zYl
-      return bh;
-    } catch (e) {
-      throw e;
-    }
-  }
-  async sd_kYVlavNUJGb78F0H(bh) {
-    try {
-      localStorage.setItem('loggedIn', JSON.stringify('true'));
-      //appendnew_next_sd_kYVlavNUJGb78F0H
-      return bh;
-    } catch (e) {
-      throw e;
-    }
-  }
-  async sd_5c4a95oDd64AR1Jh(bh) {
-    try {
-      localStorage.setItem('token', JSON.stringify(bh.input.data.token));
-      //appendnew_next_sd_5c4a95oDd64AR1Jh
       return bh;
     } catch (e) {
       throw e;

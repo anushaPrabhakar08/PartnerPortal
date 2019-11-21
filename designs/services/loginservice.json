@@ -110,5 +110,121 @@
         ],
         "generateNext": false,
         "generated": true
+    },
+    {
+        "id": "sd_cMr72uboxZ5JT0hD",
+        "type": "Start",
+        "z": "sd_AqHtpOYqfvjc0UWp",
+        "name": "authenticated",
+        "outputs": 1,
+        "noerr": 0,
+        "inputVariables": [
+            {
+                "key": "data",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "functionName": "authenticated",
+        "x": 172,
+        "y": 317.79998779296875,
+        "wires": [
+            [
+                "sd_ckYxlETQLKEKfVGG",
+                "sd_EMzzBsookyCCkLCk",
+                "sd_9oKTUmaNwRgHPn1u"
+            ]
+        ],
+        "generateNext": true,
+        "generated": false,
+        "serviceName": "loginservice"
+    },
+    {
+        "id": "sd_ckYxlETQLKEKfVGG",
+        "type": "Storage",
+        "z": "sd_AqHtpOYqfvjc0UWp",
+        "name": "currentUser",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "currentUser"
+        },
+        "value": {
+            "type": "bh.input",
+            "value": "data.data"
+        },
+        "resultMapping": {
+            "type": "",
+            "value": ""
+        },
+        "x": 379.99999237060547,
+        "y": 308.7999725341797,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_EMzzBsookyCCkLCk",
+        "type": "Storage",
+        "z": "sd_AqHtpOYqfvjc0UWp",
+        "name": "loggedIn",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "loggedIn"
+        },
+        "value": {
+            "type": "str",
+            "value": "true"
+        },
+        "resultMapping": {
+            "type": "",
+            "value": ""
+        },
+        "x": 382.99999237060547,
+        "y": 390.7999725341797,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_9oKTUmaNwRgHPn1u",
+        "type": "Storage",
+        "z": "sd_AqHtpOYqfvjc0UWp",
+        "name": "token",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "token"
+        },
+        "value": {
+            "type": "bh.input",
+            "value": "data.token"
+        },
+        "resultMapping": {
+            "type": "",
+            "value": ""
+        },
+        "x": 385.99999237060547,
+        "y": 478.7999725341797,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
     }
 ]

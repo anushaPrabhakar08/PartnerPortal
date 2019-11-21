@@ -121,10 +121,11 @@ export class partner_addleadComponent extends NBaseComponent implements OnInit {
     }
 
 submit(data) {
+    console.log(data);
     let partid=sessionStorage.getItem('id');
-let obj={partner_id:partid,organisationName:data.organisationName,orgWebsite:data.orgWebsite,location:data.location,opportunityType:data.opportunityType,leadGeneratedDate:data.leadGeneratedDate,contactDetails:data.contactDetails,comment:data.comment};
+let obj={organisationName:data.organisationName,orgWebsite:data.orgWebsite,location:data.location,opportunityType:data.opportunityType,leadGeneratedDate:data.leadGeneratedDate,contactDetails:data.contactDetails,comment:data.comment};
 console.log(obj);
-this.partnerservice.saveleadata(obj);
+this.partnerservice.saveleadata(data);
 this.profileForm.reset();
 }
 

@@ -3,7 +3,11 @@
     <mat-toolbar fxFlex.xs="100" class="bg-dark">
       <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="100">
         <div fxLayout="column wrap" fxFlex="20" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/logo.png" width="200px"></div>
-        <div fxLayout="column wrap" fxFlex="80" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+        <div fxLayout="column wrap" fxFlex="60" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+          <div>
+            Partner Portal</div>
+        </div>
+        <div fxLayout="column wrap" fxFlex="20" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
           <div fxLayout="row " fxFlex="100" fxLayoutAlign="end center" [fxShow]="true" [fxHide]="false" fxHide.xs="true"><button mat-button routerLink="/home">Home</button><button mat-button routerLink="/contact_us">Contact Us</button><button mat-raised-button routerLink="/login" color="warn">Login</button></div>
         </div>
         <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="false" [fxHide]="true" fxFlex.xs="10" fxHide.lg="true"><button mat-mini-fab [matMenuTriggerFor]="menu">

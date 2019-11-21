@@ -6,6 +6,7 @@ import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 import { MatDialog } from '@angular/material';
 import { viewagreementComponent } from '../viewagreementComponent/viewagreement.component';
+import { Title } from '@angular/platform-browser';
 
 
 @Component({
@@ -16,12 +17,13 @@ import { viewagreementComponent } from '../viewagreementComponent/viewagreement.
 export class partner_agreementComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
     id;
-    constructor(private bdms: NDataModelService, private dialog: MatDialog) {
+    constructor(private bdms: NDataModelService, private dialog: MatDialog, private title:Title) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
     ngOnInit() {
+        this.title.setTitle('View Agreement');
         this.id = sessionStorage.getItem('id');
     }
 

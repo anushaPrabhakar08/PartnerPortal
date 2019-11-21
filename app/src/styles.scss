@@ -648,7 +648,12 @@ pdf-viewer{
     padding-right:10px;
 }
 .requestForm .column:last-child{
-    padding-last:10px;
+    padding-left:10px;
+}
+.sample textarea.mat-input-element{
+    border: 1px solid gray !important;
+    padding:20px;
+    border-radius: 6px;
 }
 
 
