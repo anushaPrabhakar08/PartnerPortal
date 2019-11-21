@@ -1,12 +1,14 @@
 <div fxLayout="column wrap" class="login-bg" fxFlex="100" fxLayoutAlign="start center" [fxShow]="true" [fxHide]="false" fxFill>
   <div fxLayout="row wrap" class="login-logo" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/logo-dark.png" width="250px"></div>
   <div fxLayout="row wrap" class="w-100" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-    <form fxFlex="50" fxFlex.xs="90" fxFlex.md="30" fxFlex.lg="30" class="login-form" (ngSubmit)="authenticate()">
+    <form fxFlex="50" fxFlex.xs="90" fxFlex.md="30" fxFlex.lg="30" #loginForm="ngForm" class="login-form" (ngSubmit)="authenticate()">
       <h3 class="text-center">
         {{ userType ? &apos;Channel Login&apos;: &apos;Welcome back to Neutrinos!&apos;}}</h3>
       <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
         <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-          <input matInput [(ngModel)]="dm.user.email" name="email" placeholder="Email addresss" required>
+          <input matInput [(ngModel)]="dm.user.email" name="email" placeholder="Email addresss" required pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/">
+          <mat-error align="start" *ngIf="loginForm.controls[&apos;email&apos;]?.errors?.required">Email is required</mat-error>
+          <mat-error align="start" *ngIf="loginForm.controls[&apos;email&apos;]?.errors?.pattern">Enter valid email id</mat-error>
           <mat-label>Email address</mat-label>
           <mat-icon matSuffix>email</mat-icon>
         </mat-form-field>
@@ -14,6 +16,7 @@
       <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
         <mat-form-field style="cursor:pointer;" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
           <input matInput [(ngModel)]="dm.user.password" name="password" type="{{isTextFieldType ? &apos;text&apos; : &apos;password&apos;}}" placeholder="Password" required>
+          <mat-error align="start" *ngIf="loginForm.controls[&apos;password&apos;]?.errors?.required">Password is required</mat-error>
           <mat-label>Password</mat-label>
           <mat-icon matSuffix (click)="isTextFieldType = !isTextFieldType">{{isTextFieldType ? &apos;visibility&apos; : &apos;visibility_off&apos;}}</mat-icon>
         </mat-form-field>

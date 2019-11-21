@@ -336,6 +336,9 @@ bh-login{
     background-color: unset !important;
 }
 
+.table-bg-none .header-cell .mat-cell{
+    background: none !important;
+}
 
 .mat-header-cell {
     font-size: 14px;

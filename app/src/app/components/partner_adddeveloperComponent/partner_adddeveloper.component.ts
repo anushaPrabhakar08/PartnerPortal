@@ -15,12 +15,6 @@ import { partnerservice } from '../../sd-services/partnerservice';
 
 export class partner_adddeveloperComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
-    // developerForm = new FormGroup({
-    //     firstName: new FormControl(''),
-    //     lastName: new FormControl(''),
-    //     position: new FormControl(''),
-    //     experience: new FormControl('')
-    // });
 
     developerForm: FormGroup;
 
@@ -36,6 +30,7 @@ export class partner_adddeveloperComponent extends NBaseComponent implements OnI
             lastName: ['', [Validators.required, Validators.maxLength(20), Validators.pattern(/^[a-zA-Z]+$/)]],
             email: ['', [Validators.required,  Validators.maxLength(20), Validators.pattern(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/)]],
             position: [''],
+            presentWorkingCompany: ['', [Validators.maxLength(30), Validators.pattern(/^[a-zA-Z]+$/)]],
             experience: ['',[Validators.maxLength(2), Validators.pattern(/^[0-9]*$/)]],
             contactNo: ['', [Validators.required, Validators.maxLength(10), Validators.pattern(/^[0-9]*$/)]],
         });
@@ -46,6 +41,8 @@ export class partner_adddeveloperComponent extends NBaseComponent implements OnI
     get email() { return this.developerForm.get('email') }
     get experience() { return this.developerForm.get('experience') }
     get contactNo() { return this.developerForm.get('contactNo') }
+    get presentWorkingCompany() { return this.developerForm.get('presentWorkingCompany') }
+
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, filter, keys, sort, pagenumber, pagesize,
@@ -128,7 +125,14 @@ export class partner_adddeveloperComponent extends NBaseComponent implements OnI
 
     async submit(data) {
          let partid=sessionStorage.getItem('id');
-         let obj={partner_id:partid,firstName:data.firstName,lastName:data.lastName,position:data.position,experience:data.experience,contactNo:data.contactNo,email:data.email};
+         let obj={partner_id:partid,
+                  firstName:data.firstName,
+                  lastName:data.lastName,
+                  position:data.position,
+                  experience:data.experience,
+                  contactNo:data.contactNo,
+                  email:data.email,
+                  presentWorkingCompany:data.presentWorkingCompany};
        await this.partnerservice.savedev(obj);
         console.log(data);
              this.developerForm.reset(); 

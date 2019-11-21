@@ -358,6 +358,12 @@
                         "_value": "30",
                         "_type": "kv",
                         "_attrDef": "c"
+                    },
+                    {
+                        "_key": "#loginForm",
+                        "_value": "ngForm",
+                        "_type": "kv",
+                        "_attrDef": "c"
                     }
                 ],
                 "99c452c3-01bd-be0f-6c5e-6822ff9013f4": {
@@ -736,7 +742,24 @@
                             },
                             {
                                 "_key": "matError",
-                                "_value": [],
+                                "_value": [
+                                    {
+                                        "input1": "loginForm.controls['email']?.errors?.required",
+                                        "input2": "Email is required",
+                                        "toggle": {
+                                            "toggleData": [],
+                                            "selected": "start"
+                                        }
+                                    },
+                                    {
+                                        "input1": "loginForm.controls['email']?.errors?.pattern",
+                                        "input2": "Enter valid email id",
+                                        "toggle": {
+                                            "toggleData": [],
+                                            "selected": "start"
+                                        }
+                                    }
+                                ],
                                 "_type": "a",
                                 "_attrDef": "p",
                                 "_visibility": true
@@ -796,6 +819,12 @@
                                 "_type": "a",
                                 "_attrDef": "p",
                                 "_visibility": true
+                            },
+                            {
+                                "_key": "pattern",
+                                "_value": "/^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$/",
+                                "_type": "kv",
+                                "_attrDef": "c"
                             }
                         ]
                     }
@@ -964,7 +993,16 @@
                             },
                             {
                                 "_key": "matError",
-                                "_value": [],
+                                "_value": [
+                                    {
+                                        "input1": "loginForm.controls['password']?.errors?.required",
+                                        "input2": "Password is required",
+                                        "toggle": {
+                                            "toggleData": [],
+                                            "selected": "start"
+                                        }
+                                    }
+                                ],
                                 "_type": "a",
                                 "_attrDef": "p",
                                 "_visibility": true

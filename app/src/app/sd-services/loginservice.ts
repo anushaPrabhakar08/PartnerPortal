@@ -27,15 +27,15 @@ import {
   NTokenService
 } from 'neutrinos-seed-services';
 //CORE_REFERENCE_IMPORTS
-
+​
 declare const window: any;
 declare const cordova: any;
-
+​
 @Injectable()
 export class loginservice {
   systemService = NSystemService.getInstance();
   appProperties;
-
+​
   constructor(
     private http: HttpClient,
     private matSnackBar: MatSnackBar,
@@ -55,9 +55,9 @@ export class loginservice {
     private alertService: NAlertService,
     private fileIOService: NFileIOService
   ) {}
-
+​
   //   service flows_loginservice
-
+​
   public async login(userData = undefined, ...others) {
     try {
       let bh = {
@@ -65,7 +65,7 @@ export class loginservice {
         local: { result: undefined, apiUrl: undefined }
       };
       bh = this.__constructDefault(bh);
-
+​
       bh = await this.sd_hT5MmaR2qH2HaZbC(bh);
       //appendnew_next_login
       //Start formatting output variables
@@ -80,10 +80,10 @@ export class loginservice {
     try {
       let bh = { input: { data: data }, local: {} };
       bh = this.__constructDefault(bh);
-
-      bh = await this.sd_ckYxlETQLKEKfVGG(bh);
-      bh = await this.sd_EMzzBsookyCCkLCk(bh);
-      bh = await this.sd_9oKTUmaNwRgHPn1u(bh);
+​
+      bh = await this.sd_QiDjC0jFUiZ08w98(bh);
+      bh = await this.sd_0yiYcXIY4AGlUzLA(bh);
+      bh = await this.sd_c4lSJqeK5MdZCdRW(bh);
       //appendnew_next_authenticated
       //Start formatting output variables
       let outputVariables = { input: {}, local: {} };
@@ -93,12 +93,44 @@ export class loginservice {
       throw e;
     }
   }
+  public async isLoggedIn(...others) {
+    try {
+      let bh = { input: {}, local: { state: undefined } };
+      bh = this.__constructDefault(bh);
+​
+      bh = await this.sd_jKoC2KxK9OQ5qhiJ(bh);
+      //appendnew_next_isLoggedIn
+      //Start formatting output variables
+      let outputVariables = { input: {}, local: { state: bh.local.state } };
+      //End formatting output variables
+      return outputVariables;
+    } catch (e) {
+      throw e;
+    }
+  }
+  public async logout(...others) {
+    try {
+      let bh = { input: {}, local: {} };
+      bh = this.__constructDefault(bh);
+​
+      bh = await this.sd_kc5H6QVIrRDgg9Gm(bh);
+      bh = await this.sd_ZXNH3iHAal6sSipO(bh);
+      bh = await this.sd_oxtkQpDuOPNqWRto(bh);
+      //appendnew_next_logout
+      //Start formatting output variables
+      let outputVariables = { input: {}, local: {} };
+      //End formatting output variables
+      return outputVariables;
+    } catch (e) {
+      throw e;
+    }
+  }
   //appendnew_flow_loginservice_Start
-
+​
   async sd_hT5MmaR2qH2HaZbC(bh) {
     try {
       bh.local.apiUrl = 'http://localhost:24483/api/authenticate';
-
+​
       bh = await this.sd_QEwiG1uwqRCVw0xw(bh);
       //appendnew_next_sd_hT5MmaR2qH2HaZbC
       return bh;
@@ -124,38 +156,89 @@ export class loginservice {
       throw e;
     }
   }
-  async sd_ckYxlETQLKEKfVGG(bh) {
+  async sd_QiDjC0jFUiZ08w98(bh) {
     try {
       localStorage.setItem('currentUser', JSON.stringify(bh.input.data.data));
-      //appendnew_next_sd_ckYxlETQLKEKfVGG
+      //appendnew_next_sd_QiDjC0jFUiZ08w98
       return bh;
     } catch (e) {
       throw e;
     }
   }
-  async sd_EMzzBsookyCCkLCk(bh) {
+  async sd_0yiYcXIY4AGlUzLA(bh) {
     try {
       localStorage.setItem('loggedIn', JSON.stringify('true'));
-      //appendnew_next_sd_EMzzBsookyCCkLCk
+      //appendnew_next_sd_0yiYcXIY4AGlUzLA
       return bh;
     } catch (e) {
       throw e;
     }
   }
-  async sd_9oKTUmaNwRgHPn1u(bh) {
+  async sd_c4lSJqeK5MdZCdRW(bh) {
     try {
       localStorage.setItem('token', JSON.stringify(bh.input.data.token));
-      //appendnew_next_sd_9oKTUmaNwRgHPn1u
+      //appendnew_next_sd_c4lSJqeK5MdZCdRW
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_jKoC2KxK9OQ5qhiJ(bh) {
+    try {
+      bh.local.state = JSON.parse(localStorage.getItem('loggedIn'));
+      bh = await this.sd_039OVUWcyFXjiYA4(bh);
+      //appendnew_next_sd_jKoC2KxK9OQ5qhiJ
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_039OVUWcyFXjiYA4(bh) {
+    try {
+      if (bh.local.state == null) {
+        bh.local.state = false;
+      } else {
+        bh.local.state = true;
+      }
+​
+      //appendnew_next_sd_039OVUWcyFXjiYA4
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_kc5H6QVIrRDgg9Gm(bh) {
+    try {
+      localStorage.removeItem('currentUser');
+      //appendnew_next_sd_kc5H6QVIrRDgg9Gm
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_ZXNH3iHAal6sSipO(bh) {
+    try {
+      localStorage.removeItem('loggedIn');
+      //appendnew_next_sd_ZXNH3iHAal6sSipO
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_oxtkQpDuOPNqWRto(bh) {
+    try {
+      localStorage.removeItem('token');
+      //appendnew_next_sd_oxtkQpDuOPNqWRto
       return bh;
     } catch (e) {
       throw e;
     }
   }
   //appendnew_node
-
+​
   __constructDefault(bh) {
     const system: any = {};
-
+​
     try {
       system.currentUser = this.sessionStorage.getValue('userObj');
       system.environment = environment;
@@ -173,12 +256,12 @@ export class loginservice {
       system.snackbarService = this.snackbarService;
       system.alertService = this.alertService;
       system.fileIOService = this.fileIOService;
-
+​
       Object.defineProperty(bh, 'system', {
         value: system,
         writable: false
       });
-
+​
       return bh;
     } catch (e) {
       throw e;

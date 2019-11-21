@@ -5,9 +5,10 @@ import { ModelMethods } from '../../lib/model.methods';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 import { channelservice } from '../../sd-services/channelservice';
-import { Router, ActivatedRoute, ActivatedRouteSnapshot,} from '@angular/router';
+import { loginservice } from '../../sd-services/loginservice';
+import { Router, ActivatedRoute, ActivatedRouteSnapshot, } from '@angular/router';
 import { Subscription } from 'rxjs';
-import {MediaObserver} from '@angular/flex-layout';
+import { MediaObserver } from '@angular/flex-layout';
 import { Title } from '@angular/platform-browser';
 /**
  * Service import Example :
@@ -28,27 +29,42 @@ import { Title } from '@angular/platform-browser';
 export class partnerComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
     // sidenavdata="";
-partnerdata;
-pageTitle;
-data="notification";
-badgeCount:Number;
-    constructor(private bdms: NDataModelService,private channelservice:channelservice, private router: Router, route: ActivatedRoute, public media:MediaObserver, public title: Title ) {
+    partnerdata;
+    pageTitle;
+    data = "notification";
+    badgeCount: Number;
+    constructor(private bdms: NDataModelService, 
+    private channelservice: channelservice, 
+    private router: Router, route: ActivatedRoute, 
+    public media: MediaObserver, 
+    public title: Title,
+     private loginservice: loginservice,) {
         super();
         this.mm = new ModelMethods(bdms);
-      this.badgeCount=1;
-      
-    }
-
- async  ngOnInit() {
-let getd=sessionStorage.getItem('id');
-console.log(getd);
-this.partnerdata=(await this.channelservice.getparticularpartner(getd)).local.result;
-console.log(this.partnerdata);
+        this.badgeCount = 1;
 
     }
 
-    clearCount(){
-        this.badgeCount=0;
+      ngOnInit() {
+        // let getd = sessionStorage.getItem('id');
+        // console.log(getd);
+        // this.partnerdata = (await this.channelservice.getparticularpartner(getd)).local.result;
+        // console.log(this.partnerdata);
+
+        this.loginservice.isLoggedIn().then(data => {
+            if (!data.local.state) {
+                this.loginservice.logout();
+                if (!this.loggedIn) {
+                    this.loggedIn = false;
+                    this.router.navigateByUrl('/login');
+                }
+            }
+        });
+
+    }
+
+    clearCount() {
+        this.badgeCount = 0;
     }
 
     // ngAfterViewInit(){
@@ -60,7 +76,7 @@ console.log(this.partnerdata);
     //  console.log(this.pageTitle);
     // }
 
-   
+
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, filter, keys, sort, pagenumber, pagesize,
@@ -114,7 +130,7 @@ console.log(this.partnerdata);
             })
     }
 
-    delete (dataModelName, filter) {
+    delete(dataModelName, filter) {
         this.mm.delete(dataModelName, filter,
             result => {
                 // On Success code here

@@ -22,10 +22,10 @@ export interface PeriodicElement {
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {agreementUploaded: "sample", no: 1},
-  {agreementUploaded: "sample", no: 2},
-  {agreementUploaded: "sample", no: 3},
-  {agreementUploaded: "sample", no: 4}
+  {no: 1, agreementUploaded: "sample" },
+  {no: 2, agreementUploaded: "sample" },
+  {no: 3, agreementUploaded: "sample" },
+  {no: 4, agreementUploaded: "sample" }
 ];
 //const LEADS_DATA: LeadsElement[] = [];
 @Component({
@@ -35,7 +35,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 
 export class partner_detailsComponent extends NBaseComponent implements OnInit {
 
-    displayedColumns: string[] = ['agreementUploaded', 'no'];
+    displayedColumns: string[] = ['no','agreementUploaded' ];
     agreementDataSource = ELEMENT_DATA;
 
     mm: ModelMethods;

@@ -1,69 +1,68 @@
-<div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false" fxFill>
-  <form [formGroup]="developerForm" fxFlex="70" fxFlex.xs="80" fxFlex.md="90" fxFlex.lg="60">
-    <div fxLayout="row wrap" fxLayoutAlign="center start" [fxShow]="true" [fxHide]="false">
-      <h2>
-        Add Developer</h2>
-    </div>
-    <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="center start" [fxShow]="true" [fxHide]="false">
-      <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-        <input matInput placeholder="First Name" required formControlName="firstName">
-        <mat-error align="start" *ngIf="firstName.hasError(&apos;required&apos;)">Mandatory Field</mat-error>
-        <mat-error align="start" *ngIf="firstName.hasError(&apos;maxlength&apos;)">can&apos;t enter more than 20 characters</mat-error>
-        <mat-error align="start" *ngIf="firstName.hasError(&apos;pattern&apos;)">Enter only characters</mat-error>
-        <mat-label>First Name</mat-label>
-      </mat-form-field>
-    </div>
-    <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-      <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-        <input matInput placeholder="Last Name" required formControlName="lastName">
-        <mat-error align="start" *ngIf="lastName.hasError(&apos;required&apos;)">Mandatory Field</mat-error>
-        <mat-error align="start" *ngIf="lastName.hasError(&apos;maxlength&apos;)">can&apos;t enter more than 20 characters</mat-error>
-        <mat-error align="start" *ngIf="lastName.hasError(&apos;pattern&apos;)">Enter only Characters</mat-error>
-        <mat-label>Last Name</mat-label>
-      </mat-form-field>
-    </div>
-    <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-      <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-        <input matInput placeholder="Email" required formControlName="email">
-        <mat-error align="start" *ngIf="email.hasError(&apos;required&apos;)">Mandatory Field</mat-error>
-        <mat-error align="start" *ngIf="email.hasError(&apos;pattern&apos;)">Invalid Email Id</mat-error>
-        <mat-label>Email Id</mat-label>
-      </mat-form-field>
-    </div>
-    <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-      <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-        <input matInput placeholder="Contact Number" required formControlName="contactNo">
-        <mat-error align="start" *ngIf="contactNo.hasError(&apos;required&apos;)">Mandatory Field</mat-error>
-        <mat-error align="start" *ngIf="contactNo.hasError(&apos;pattern&apos;)">Enter only numerical values</mat-error>
-        <mat-error align="start" *ngIf="contactNo.hasError(&apos;maxlength&apos;)">Enter valid Mobile no</mat-error>
-        <mat-label>Contact No</mat-label>
-      </mat-form-field>
-    </div>
-    <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="  center" [fxShow]="true" [fxHide]="false">
-      <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-        <mat-select formControlName="position" class="select" placeholder="Position">
-          <mat-option [value]="&apos;Developer&apos;" disabled="false">Developer</mat-option>
-          <mat-option [value]="&apos;Tester&apos;" disabled="false">Tester</mat-option>
-          <mat-option [value]="&apos;Softwer Engineer&apos;" disabled="false">Softwer Engineer</mat-option>
-          <mat-option [value]="&apos;php Developer&apos;" disabled="false">php Developer</mat-option>
-          <mat-option [value]="&apos;Software Analyst&apos;" disabled="false">Software Analyst</mat-option>
-        </mat-select>
+<div fxLayout="column wrap" style="overflow-y:auto;" fxFlex="100" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false" fxFill>
+  <div fxLayout="row wrap" class="w-100" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+    <form [formGroup]="developerForm" fxFlex.xs="100" fxFlex.md="100" fxFlex.lg="100">
+      <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+        <h2>
+          Add Developer</h2>
+        <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+          <input matInput placeholder="First Name" required formControlName="firstName">
+          <mat-error align="start" *ngIf="firstName.hasError(&apos;required&apos;)">First name is required</mat-error>
+          <mat-error align="start" *ngIf="firstName.hasError(&apos;maxlength&apos;)">Cannot enter more than 20 characters</mat-error>
+          <mat-error align="start" *ngIf="firstName.hasError(&apos;pattern&apos;)">Enter only characters</mat-error>
+          <mat-label>First Name</mat-label>
+        </mat-form-field>
+        <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+          <input matInput placeholder="Last Name" required formControlName="lastName">
+          <mat-error align="start" *ngIf="lastName.hasError(&apos;required&apos;)">Last name is required</mat-error>
+          <mat-error align="start" *ngIf="lastName.hasError(&apos;maxlength&apos;)">Cannot enter more than 20 characters</mat-error>
+          <mat-error align="start" *ngIf="lastName.hasError(&apos;pattern&apos;)">Enter only Characters</mat-error>
+          <mat-label>Last Name</mat-label>
+        </mat-form-field>
+        <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+          <input matInput placeholder="Email" required formControlName="email">
+          <mat-error align="start" *ngIf="email.hasError(&apos;required&apos;)">Email id is required</mat-error>
+          <mat-error align="start" *ngIf="email.hasError(&apos;pattern&apos;)">Enter valid email id</mat-error>
+          <mat-label>Email Id</mat-label>
+        </mat-form-field>
+        <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+          <input matInput placeholder="Contact Number" required formControlName="contactNo">
+          <mat-error align="start" *ngIf="contactNo.hasError(&apos;required&apos;)">Contact no is required</mat-error>
+          <mat-error align="start" *ngIf="contactNo.hasError(&apos;pattern&apos;)">Enter only numerical values</mat-error>
+          <mat-error align="start" *ngIf="contactNo.hasError(&apos;maxlength&apos;)">Enter valid Mobile no</mat-error>
+          <mat-label>Contact No</mat-label>
+        </mat-form-field>
+        <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+          <input matInput placeholder="Present working Company" formControlName="presentWorkingCompany">
+          <mat-error align="start" *ngIf="presentWorkingCompany.hasError(&apos;maxlength&apos;)">Cannot be more than 30 characters</mat-error>
+          <mat-error align="start" *ngIf="presentWorkingCompany.hasError(&apos;pattern&apos;)">Enter only characters</mat-error>
+        </mat-form-field>
+        <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+          <mat-select formControlName="position" class="select" placeholder="Position">
+            <mat-option [value]="&apos;Developer&apos;" disabled="false">Developer</mat-option>
+            <mat-option [value]="&apos;Tester&apos;" disabled="false">Tester</mat-option>
+            <mat-option [value]="&apos;Softwer Engineer&apos;" disabled="false">Softwer Engineer</mat-option>
+            <mat-option [value]="&apos;php Developer&apos;" disabled="false">php Developer</mat-option>
+            <mat-option [value]="&apos;Software Analyst&apos;" disabled="false">Software Analyst</mat-option>
+          </mat-select>
 
-      </mat-form-field>
-    </div>
-    <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="  center" [fxShow]="true" [fxHide]="false">
-      <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-        <input matInput placeholder="Experience" formControlName="experience">
-        <mat-error align="start" *ngIf="experience.hasError(&apos;pattern&apos;)">Enter only in Numbers</mat-error>
-        <mat-error align="start" *ngIf="experience.hasError(&apos;maxlength&apos;)">Invalid Input</mat-error>
-        <mat-label>Experience</mat-label>
-      </mat-form-field>
-    </div>
-    <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button color="primary" (click)="submit(developerForm.value)">Add Developer</button><button mat-raised-button [mat-dialog-close] color="warn">Cancel</button></div>
-    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" *ngIf="active">
-      <mat-form-field>
-        <textarea matInput placeholder="Text Area" required></textarea>
-      </mat-form-field>
-    </div>
-  </form>
+        </mat-form-field>
+        <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+          <mat-select formControlName="experience" class="select" placeholder="Experience">
+            <mat-option [value]="&apos;1&apos;" disabled="false">0 - 1</mat-option>
+            <mat-option [value]="&apos;2&apos;" disabled="false">1 - 2</mat-option>
+            <mat-option [value]="&apos;3&apos;" disabled="false">2 - 3</mat-option>
+            <mat-option [value]="&apos;4&apos;" disabled="false">3 - 4</mat-option>
+            <mat-option [value]="&apos;5&apos;" disabled="false">4 - 5</mat-option>
+            <mat-option [value]="&apos;6&apos;" disabled="false">5 - 6</mat-option>
+            <mat-option [value]="&apos;7&apos;" disabled="false">6 - 7</mat-option>
+            <mat-option [value]="&apos;8&apos;" disabled="false">7 - 8</mat-option>
+            <mat-option [value]="&apos;9&apos;" disabled="false">8 - 9</mat-option>
+            <mat-option [value]="&apos;10&apos;" disabled="false">&gt; 10</mat-option>
+          </mat-select>
+
+        </mat-form-field>
+        <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button color="primary" (click)="submit(developerForm.value)">Add Developer</button><button mat-raised-button [mat-dialog-close] color="warn">Cancel</button></div>
+      </div>
+    </form>
+  </div>
 </div>

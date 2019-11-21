@@ -71,7 +71,8 @@
             ]
         ],
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "loginservice"
     },
     {
         "id": "sd_QEwiG1uwqRCVw0xw",
@@ -109,10 +110,11 @@
             []
         ],
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "loginservice"
     },
     {
-        "id": "sd_cMr72uboxZ5JT0hD",
+        "id": "sd_s7bZsRuSdI4ibHbE",
         "type": "Start",
         "z": "sd_AqHtpOYqfvjc0UWp",
         "name": "authenticated",
@@ -130,13 +132,13 @@
         ],
         "localVariables": [],
         "functionName": "authenticated",
-        "x": 172,
-        "y": 317.79998779296875,
+        "x": 195,
+        "y": 279.8125,
         "wires": [
             [
-                "sd_ckYxlETQLKEKfVGG",
-                "sd_EMzzBsookyCCkLCk",
-                "sd_9oKTUmaNwRgHPn1u"
+                "sd_QiDjC0jFUiZ08w98",
+                "sd_0yiYcXIY4AGlUzLA",
+                "sd_c4lSJqeK5MdZCdRW"
             ]
         ],
         "generateNext": true,
@@ -144,7 +146,7 @@
         "serviceName": "loginservice"
     },
     {
-        "id": "sd_ckYxlETQLKEKfVGG",
+        "id": "sd_QiDjC0jFUiZ08w98",
         "type": "Storage",
         "z": "sd_AqHtpOYqfvjc0UWp",
         "name": "currentUser",
@@ -163,8 +165,8 @@
             "type": "",
             "value": ""
         },
-        "x": 379.99999237060547,
-        "y": 308.7999725341797,
+        "x": 402.99999237060547,
+        "y": 270.81248474121094,
         "wires": [
             []
         ],
@@ -172,7 +174,7 @@
         "generated": true
     },
     {
-        "id": "sd_EMzzBsookyCCkLCk",
+        "id": "sd_0yiYcXIY4AGlUzLA",
         "type": "Storage",
         "z": "sd_AqHtpOYqfvjc0UWp",
         "name": "loggedIn",
@@ -191,8 +193,8 @@
             "type": "",
             "value": ""
         },
-        "x": 382.99999237060547,
-        "y": 390.7999725341797,
+        "x": 405.99999237060547,
+        "y": 352.81248474121094,
         "wires": [
             []
         ],
@@ -200,7 +202,7 @@
         "generated": true
     },
     {
-        "id": "sd_9oKTUmaNwRgHPn1u",
+        "id": "sd_c4lSJqeK5MdZCdRW",
         "type": "Storage",
         "z": "sd_AqHtpOYqfvjc0UWp",
         "name": "token",
@@ -219,8 +221,189 @@
             "type": "",
             "value": ""
         },
-        "x": 385.99999237060547,
-        "y": 478.7999725341797,
+        "x": 408.99999237060547,
+        "y": 440.81248474121094,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_8oAJMLhCBkoC8XfN",
+        "type": "Start",
+        "z": "sd_AqHtpOYqfvjc0UWp",
+        "name": "isLoggedIn",
+        "outputs": 1,
+        "noerr": 0,
+        "inputVariables": [],
+        "localVariables": [
+            {
+                "key": "state",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "functionName": "isLoggedIn",
+        "x": 169.1875,
+        "y": 706.921875,
+        "wires": [
+            [
+                "sd_jKoC2KxK9OQ5qhiJ"
+            ]
+        ],
+        "generateNext": true,
+        "generated": false,
+        "serviceName": "loginservice"
+    },
+    {
+        "id": "sd_jKoC2KxK9OQ5qhiJ",
+        "type": "Storage",
+        "z": "sd_AqHtpOYqfvjc0UWp",
+        "name": "Fetch Logged In Status",
+        "operationType": "getItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "loggedIn"
+        },
+        "value": {
+            "type": "",
+            "value": ""
+        },
+        "resultMapping": {
+            "type": "bh.local",
+            "value": "state"
+        },
+        "x": 270.1875,
+        "y": 676.875,
+        "wires": [
+            [
+                "sd_039OVUWcyFXjiYA4"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_AIHT5if6e4yrw7r3",
+        "type": "Start",
+        "z": "sd_AqHtpOYqfvjc0UWp",
+        "name": "logout",
+        "outputs": 1,
+        "noerr": 0,
+        "inputVariables": [],
+        "localVariables": [],
+        "functionName": "logout",
+        "x": 180,
+        "y": 856.8125,
+        "wires": [
+            [
+                "sd_kc5H6QVIrRDgg9Gm",
+                "sd_ZXNH3iHAal6sSipO",
+                "sd_oxtkQpDuOPNqWRto"
+            ]
+        ],
+        "generateNext": true,
+        "generated": false,
+        "serviceName": "loginservice"
+    },
+    {
+        "id": "sd_kc5H6QVIrRDgg9Gm",
+        "type": "Storage",
+        "z": "sd_AqHtpOYqfvjc0UWp",
+        "name": "currentUser",
+        "operationType": "removeItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "currentUser"
+        },
+        "value": {
+            "type": "",
+            "value": ""
+        },
+        "resultMapping": {
+            "type": "",
+            "value": ""
+        },
+        "x": 387.99999237060547,
+        "y": 847.8124847412109,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_ZXNH3iHAal6sSipO",
+        "type": "Storage",
+        "z": "sd_AqHtpOYqfvjc0UWp",
+        "name": "loggedIn",
+        "operationType": "removeItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "loggedIn"
+        },
+        "value": {
+            "type": "",
+            "value": ""
+        },
+        "resultMapping": {
+            "type": "",
+            "value": ""
+        },
+        "x": 390.99999237060547,
+        "y": 929.8124847412109,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_oxtkQpDuOPNqWRto",
+        "type": "Storage",
+        "z": "sd_AqHtpOYqfvjc0UWp",
+        "name": "token",
+        "operationType": "removeItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "token"
+        },
+        "value": {
+            "type": "",
+            "value": ""
+        },
+        "resultMapping": {
+            "type": "",
+            "value": ""
+        },
+        "x": 393.99999237060547,
+        "y": 1017.8124847412109,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_039OVUWcyFXjiYA4",
+        "type": "Script",
+        "z": "sd_AqHtpOYqfvjc0UWp",
+        "name": "",
+        "script": "if(bh.local.state == null){\n    bh.local.state = false; \n}else{\n    bh.local.state = true;\n}",
+        "x": 384.03125,
+        "y": 643.921875,
         "wires": [
             []
         ],
