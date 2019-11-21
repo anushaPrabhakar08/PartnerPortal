@@ -224,7 +224,7 @@ bh-login{
 }
 
 .margin-tb {
-    margin: 10px 40px;
+    margin: 10px 10px;
 }
 
 
@@ -255,11 +255,16 @@ bh-login{
 .mat-sort-header-arrow {
     color: #000 !important;
 }
+.header-cell{
+    overflow-x: auto;
+}
+
 .header-cell .mat-header-cell{
     color: #000 !important;
     background: rgba(0, 0, 0, 0.4);  
     text-align: center !important;
     justify-content: center;
+    width: 100px;
 }
 .header-cell .mat-cell{
     color: #000 !important;
@@ -298,6 +303,7 @@ bh-login{
     color: #fff;
     //font-family: Arial, Helvetica, sans-serif;
     text-align: left !important;
+    border-radius: 0px !important;
 }
 
 .nav-button:hover {
@@ -309,13 +315,17 @@ bh-login{
 }
 
 .nav-button:focus {
-    background-color: rgba(241, 8, 8, 0.82);
+   // background-color: rgba(241, 8, 8, 0.82);
+}
+
+.link-active{
+    background-color:  rgba(241, 8, 8, 0.82);
 }
 
 //heading styles
 .header {
     color: rgba(73, 61, 61, 0.87);
-    font-size: xx-large;
+    font-size: x-large;
 }
 
 .partner-table {
@@ -352,11 +362,15 @@ bh-login{
 .tab-partner-data {
     color: #000 !important;
     background-color: #eee;
+    overflow-wrap: break-word;
+    width: 100px;
 }
 
 .tab-partner-header {
     color: #000 !important;
     background: rgba(0, 0, 0, 0.4);
+    overflow-wrap: break-word;
+    width: 100px;
 }
 
 .developer-paginator {

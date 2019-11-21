@@ -3,12 +3,12 @@
     <mat-toolbar fxFlex.xs="100" class="mat-toolbar">
       <div fxLayout="row wrap" style="width:100%;height:auto;" fxLayoutAlign="space-between center" [fxShow]="true" [fxHide]="false" fxFlex.xs="100">
         <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="40"><img imgSrc="Web/logo.png" width="250px"></div>
-        <div fxLayout="row " style="width:40%;" fxLayoutAlign="space-evenly stretch" [fxShow]="true" [fxHide]="false" fxHide.xs="true"><button mat-button class="home_btn" routerLink="/home">Home</button><button mat-button class="home_btn" routerLink="/contact">Contact Us</button><button mat-button class="home_btn" routerLink="/login/partnerlogin">Login</button></div>
+        <div fxLayout="row " style="width:40%;" fxLayoutAlign="space-evenly stretch" [fxShow]="true" [fxHide]="false" fxHide.xs="true"><button mat-button class="home_btn" routerLink="/home">Home</button><button mat-button class="home_btn" routerLink="/contact_us">Contact Us</button><button mat-button class="home_btn" routerLink="/login/partnerlogin">Login</button></div>
         <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="10" fxHide.lg="true"><button mat-mini-fab [matMenuTriggerFor]="menu">
             <mat-icon>view_headline</mat-icon>
           </button>
           <mat-menu #menu="matMenu">
-            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-button class="home_btn" routerLink="/home">Home</button><button mat-button class="home_btn" routerLink="/contact">Contact Us</button><button mat-button class="home_btn" routerLink="/login/partnerlogin">Login</button></div>
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-button class="home_btn" routerLink="/home">Home</button><button mat-button class="home_btn" routerLink="/contact_us">Contact Us</button><button mat-button class="home_btn" routerLink="/login/partnerlogin">Login</button></div>
           </mat-menu>
         </div>
       </div>

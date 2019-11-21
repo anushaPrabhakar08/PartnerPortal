@@ -597,7 +597,7 @@
   "node-red-contrib-auth": {
    "name": "node-red-contrib-auth",
    "version": "0.1.7",
-   "local": true,
+   "local": false,
    "nodes": {
     "JsonWebToken": {
      "name": "JsonWebToken",

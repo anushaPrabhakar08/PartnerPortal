@@ -542,7 +542,7 @@
                                 },
                                 {
                                     "_key": "routerLink",
-                                    "_value": "/contact",
+                                    "_value": "/contact_us",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 }
@@ -1021,7 +1021,7 @@
                                         },
                                         {
                                             "_key": "routerLink",
-                                            "_value": "/contact",
+                                            "_value": "/contact_us",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         }

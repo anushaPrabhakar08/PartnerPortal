@@ -16,6 +16,7 @@ export class uploadcertificateComponent extends NBaseComponent implements OnInit
     formData = new FormData();
     uploadData = false;
     previewImage = '/assets/Web/neutrinos-prime-certiificate.jpg';
+    
     constructor(private bdms: NDataModelService, public dialogRef: MatDialogRef<uploadcertificateComponent>, private alertService: NSnackbarService,
         private fileService: fileService,@Inject(MAT_DIALOG_DATA) public data) {
         super();

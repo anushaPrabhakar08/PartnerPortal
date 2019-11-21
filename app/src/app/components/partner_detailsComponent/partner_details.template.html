@@ -1,90 +1,82 @@
 <div fxLayout="row wrap" style="width:100%;" class="background" fxFlex="100" fxLayoutAlign="start none" [fxShow]="true" [fxHide]="false">
-  <div fxLayout="column " class="margin-tb" fxFlex="100" fxLayoutGap="2em" fxLayoutAlign="start start" [fxShow]="true" [fxHide]="false">
-    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-      <h2 style="color:rgba(0,0,0,.7);" class="header">
-        Partner Details</h2>
-    </div>
-    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-mini-fab style="background:rgba(241, 8, 8, 0.82); color: #fff;" routerLink="/channel/dashboard">
+  <div fxLayout="column " style="margin-left:20px;" fxFlex="100" fxLayoutGap="2em" fxLayoutAlign="start start" [fxShow]="true" [fxHide]="false" fxFlex.sm="margin-left:0px;" fxFlex.md="margin-left:0px;">
+    <div fxLayout="row wrap" class="margin-tb" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-mini-fab style="background:rgba(241, 8, 8, 0.82); color: #fff;" routerLink="/admin/partners_list">
         <mat-icon>keyboard_backspace</mat-icon>
       </button></div>
-    <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-      <mat-card style="width:40%;" class="card-content">
-        <mat-card-subtitle class="card-title">Company Details</mat-card-subtitle>
+    <div fxLayout="row wrap" class="w-100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <form [formGroup]="profileForm" fxFlex="60" fxFlex.xs="100" fxFlex.md="40" fxFlex.lg="40">
+        <mat-card class="card-content">
+          <mat-card-subtitle class="card-title">Company Details</mat-card-subtitle>
 
-        <mat-card-content>
-          <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="start none" [fxShow]="true" [fxHide]="false">
-            <form [formGroup]="profileForm" style="width: 100%;margin: 0px 16px;">
-              <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false">
-                <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-                  <mat-form-field style="width:200px;margin: 10px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-                    <input matInput placeholder="Company Name" required formControlName="companyName" readonly="readonly">
+          <mat-card-content>
+            <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false" fxLayout.lt.md="column">
+              <div fxLayout="column wrap" fxFlex="40" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="100">
+                <mat-form-field style="margin: 10px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                  <input matInput placeholder="Company Name" required formControlName="companyName" readonly="readonly">
 
-                  </mat-form-field>
-                  <mat-form-field style="width:200px;margin: 10px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-                    <input matInput placeholder="Company Type" required formControlName="companyType" readonly="readonly">
+                </mat-form-field>
+                <mat-form-field style="margin: 10px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                  <input matInput placeholder="Company Type" required formControlName="companyType" readonly="readonly">
 
-                  </mat-form-field>
-                </div>
-                <div fxLayout="column wrap" fxLayoutAlign="end stretch" [fxShow]="true" [fxHide]="false">
-                  <mat-form-field style="width:200px;margin: 10px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-                    <input matInput placeholder="Company Website" required formControlName="companyWebsite" readonly="readonly">
-
-                  </mat-form-field>
-                  <mat-form-field style="width:200px;margin: 10px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-                    <input matInput placeholder="Number of Employees" required formControlName="numberofEmployees" readonly="readonly">
-
-                  </mat-form-field>
-                </div>
+                </mat-form-field>
               </div>
-            </form>
-          </div>
-        </mat-card-content>
-      </mat-card>
-    </div>
-    <div fxLayout="row wrap" style="width:100%;" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-      <mat-card style="width:40%;" class="card-content">
-        <mat-card-subtitle class="card-title">Contact Details</mat-card-subtitle>
+              <div fxLayout="column wrap" fxFlex="40" fxLayoutAlign="end stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="100">
+                <mat-form-field style="margin: 10px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                  <input matInput placeholder="Company Website" required formControlName="companyWebsite" readonly="readonly">
 
-        <mat-card-content align="center">
-          <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="space-evenly none" [fxShow]="true" [fxHide]="false">
-            <form [formGroup]="personalForm" style="width: 100%;margin: 0px 16px;">
-              <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false">
-                <div fxLayout="column wrap" class="line-height" fxLayoutGap="1em" fxLayoutAlign="start none" [fxShow]="true" [fxHide]="false">
-                  <mat-form-field style="width:200px;margin: 10px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-                    <input matInput placeholder="First Name" required formControlName="firstName" readonly="readonly">
+                </mat-form-field>
+                <mat-form-field style="margin: 10px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                  <input matInput placeholder="Number of Employees" required formControlName="numberofEmployees" readonly="readonly">
 
-                  </mat-form-field>
-                  <mat-form-field style="width:200px;margin: 10px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-                    <input matInput placeholder="Contact Number" required formControlName="mobileNumber" readonly="readonly">
-
-                  </mat-form-field>
-                  <mat-form-field style="width:200px;margin: 10px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-                    <input matInput placeholder="Email" required formControlName="emailId" readonly="readonly">
-
-                  </mat-form-field>
-                </div>
-                <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="end none" [fxShow]="true" [fxHide]="false">
-                  <mat-form-field style="width:200px;margin: 10px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-                    <input matInput placeholder="Last Name" required formControlName="lastName" readonly="readonly">
-
-                  </mat-form-field>
-                  <mat-form-field style="width:200px;margin: 10px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-                    <input matInput placeholder="addresss" required formControlName="address" readonly="readonly">
-
-                  </mat-form-field>
-                  <mat-form-field style="width:200px;margin: 10px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-                    <input matInput placeholder="Position" required formControlName="designation" readonly="readonly">
-
-                  </mat-form-field>
-                </div>
+                </mat-form-field>
               </div>
-            </form>
-          </div>
-        </mat-card-content>
-      </mat-card>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </form>
     </div>
-    <div fxLayout="row wrap" style="width:100%;" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-      <div fxLayout="column wrap" style="width:70%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+    <div fxLayout="row wrap" class="w-100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <form [formGroup]="personalForm" fxFlex="60" fxFlex.xs="100" fxFlex.md="40" fxFlex.lg="40">
+        <mat-card class="card-content">
+          <mat-card-subtitle class="card-title">Contact Details</mat-card-subtitle>
+
+          <mat-card-content align="center">
+            <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false" fxLayout.lt.md="column">
+              <div fxLayout="column wrap" fxFlex="40" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="100">
+                <mat-form-field style="margin: 10px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                  <input matInput placeholder="First Name" required formControlName="firstName" readonly="readonly">
+
+                </mat-form-field>
+                <mat-form-field style="margin: 10px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                  <input matInput placeholder="Contact Number" required formControlName="mobileNumber" readonly="readonly">
+
+                </mat-form-field>
+                <mat-form-field style="margin: 10px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                  <input matInput placeholder="Email" required formControlName="emailId" readonly="readonly">
+
+                </mat-form-field>
+              </div>
+              <div fxLayout="column wrap" fxFlex="40" fxLayoutAlign="end stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="100">
+                <mat-form-field style="margin: 10px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                  <input matInput placeholder="Last Name" required formControlName="lastName" readonly="readonly">
+
+                </mat-form-field>
+                <mat-form-field style="margin: 10px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                  <input matInput placeholder="addresss" required formControlName="address" readonly="readonly">
+
+                </mat-form-field>
+                <mat-form-field style="margin: 10px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                  <input matInput placeholder="Position" required formControlName="designation" readonly="readonly">
+
+                </mat-form-field>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </form>
+    </div>
+    <div fxLayout="row wrap" style="width:90%;" class="w-100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <div fxLayout="column wrap" style="width:100%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
         <mat-accordion>
           <mat-expansion-panel>
             <mat-expansion-panel-header>
@@ -100,28 +92,42 @@
                 <n-file-upload (change)="preview($event.target.files)" #file (click)="uploadFile(file)"></n-file-upload>
               </div>
             </div>
-            <div fxLayout="row wrap" class="agreement-card" fxLayoutAlign="space-between none" [fxShow]="false" [fxHide]="true">
-              <p style="margin-right:20px;">
-                SomeFile.pdf</p>
-              <div fxLayout="row wrap" fxLayoutAlign="end none" [fxShow]="true" [fxHide]="false">
-                <div fxLayout="column wrap" class="edit-btn-class" fxLayoutAlign="start center" [fxShow]="false" [fxHide]="true">
-                  <div fxLayout="row wrap" fxLayoutAlign="start center" [fxShow]="true" [fxHide]="false">
-                    <mat-icon class="edit-icon" color="primary">edit</mat-icon><button mat-button class="edit-btn">Edit</button>
-                  </div>
-                </div>
-                <div fxLayout="column wrap" class="edit-btn-class" fxLayoutAlign="start start" [fxShow]="true" [fxHide]="false">
-                  <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-                    <mat-icon class="delete-icon" color="warn">delete</mat-icon><button mat-button class="delete-btn">Delete</button>
-                  </div>
-                </div>
+            <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <div fxLayout="column" style="width:100%;">
+                <table mat-table [dataSource]="agreementDataSource" class="table-width-fix">
+
+                  <tr mat-row *matRowDef="let row; columns: [&apos;no&apos;,&apos;agreementUploaded&apos;,&apos;88a5b847-b409-c96d-99e3-52213f188469&apos;,&apos;dde2c6cd-5b3d-78e0-33b2-8f3e37ccc894&apos;];"></tr>
+
+                  <ng-container matColumnDef="no">
+                    <th mat-header-cell *matHeaderCellDef>No</th>
+                    <td mat-cell *matCellDef="let table; let i = index;">{{table.no}}</td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="agreementUploaded">
+                    <th mat-header-cell *matHeaderCellDef>Agreements Uploaded</th>
+                    <td mat-cell *matCellDef="let table; let i = index;">{{table.agreementUploaded}}</td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="88a5b847-b409-c96d-99e3-52213f188469">
+                    <th mat-header-cell *matHeaderCellDef></th>
+                    <td mat-cell *matCellDef="let table"><button mat-raised-button color="primary">Add Title</button></td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="dde2c6cd-5b3d-78e0-33b2-8f3e37ccc894">
+                    <th mat-header-cell *matHeaderCellDef></th>
+                    <td mat-cell *matCellDef="let table">
+                      <mat-icon color="warn">delete</mat-icon>
+                    </td>
+                  </ng-container>
+                </table>
               </div>
             </div>
           </mat-expansion-panel>
         </mat-accordion>
       </div>
     </div>
-    <div fxLayout="row wrap" style="width:100%;" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-      <div fxLayout="column wrap" style="width:70%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+    <div fxLayout="row wrap" style="width:90%;" class="w-100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <div fxLayout="column " style="width:100%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
         <mat-accordion>
           <mat-expansion-panel>
             <mat-expansion-panel-header>
@@ -130,8 +136,8 @@
                 Developer Details
               </mat-panel-title>
             </mat-expansion-panel-header>
-            <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-              <div fxLayout="column" class="header-cell" style="width:100%;">
+            <div fxLayout="column " fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <div fxLayout="column" class="header-cell">
 
                 <div fxLayout="row" fxLayoutAlign="end">
                   <div fxLayout="column" fxFlex="30">
@@ -141,8 +147,8 @@
                   </div>
                 </div>
                 <table mat-table [dataSource]="dataSource" class="table-width-fix">
-                  <tr mat-header-row *matHeaderRowDef="[&apos;index&apos;,&apos;lastName&apos;,&apos;position&apos;,&apos;experience&apos;,&apos;2d5fbe64-bbfe-ab63-3eb9-c55796dd79e3&apos;]"></tr>
-                  <tr mat-row *matRowDef="let row; columns: [&apos;index&apos;,&apos;lastName&apos;,&apos;position&apos;,&apos;experience&apos;,&apos;2d5fbe64-bbfe-ab63-3eb9-c55796dd79e3&apos;];"></tr>
+                  <tr mat-header-row *matHeaderRowDef="[&apos;index&apos;,&apos;lastName&apos;,&apos;position&apos;,&apos;email&apos;,&apos;contactNo&apos;,&apos;experience&apos;,&apos;2d5fbe64-bbfe-ab63-3eb9-c55796dd79e3&apos;,&apos;46c01124-9259-043a-8c45-994becc3ca9e&apos;]"></tr>
+                  <tr mat-row *matRowDef="let row; columns: [&apos;index&apos;,&apos;lastName&apos;,&apos;position&apos;,&apos;email&apos;,&apos;contactNo&apos;,&apos;experience&apos;,&apos;2d5fbe64-bbfe-ab63-3eb9-c55796dd79e3&apos;,&apos;46c01124-9259-043a-8c45-994becc3ca9e&apos;];"></tr>
 
                   <ng-container matColumnDef="index">
                     <th mat-header-cell *matHeaderCellDef class="tab-partner-header">No</th>
@@ -159,6 +165,16 @@
                     <td mat-cell *matCellDef="let table; let i = index;" class="tab-partner-data">{{table.position}}</td>
                   </ng-container>
 
+                  <ng-container matColumnDef="email">
+                    <th mat-header-cell *matHeaderCellDef class="tab-partner-header">Email Id</th>
+                    <td mat-cell *matCellDef="let table; let i = index;" class="tab-partner-data">{{table.email}}</td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="contactNo">
+                    <th mat-header-cell *matHeaderCellDef class="tab-partner-header">Contact No</th>
+                    <td mat-cell *matCellDef="let table; let i = index;" class="tab-partner-data">{{table.contactNo}}</td>
+                  </ng-container>
+
                   <ng-container matColumnDef="experience">
                     <th mat-header-cell *matHeaderCellDef class="tab-partner-header">Status</th>
                     <td mat-cell *matCellDef="let table; let i = index;" class="tab-partner-data">{{table.experience}}</td>
@@ -166,20 +182,35 @@
 
                   <ng-container matColumnDef="2d5fbe64-bbfe-ab63-3eb9-c55796dd79e3">
                     <th mat-header-cell *matHeaderCellDef>Certificate</th>
-                    <td mat-cell *matCellDef="let table"><button mat-button color="primary" (click)="addCertificateDialog()">Upload</button><button mat-button color="warn" (click)="cancelCertificateDialog()">Cancel</button></td>
+                    <td mat-cell *matCellDef="let table" headerclass="tab-partner-header" columnclass="tab-partner-data">
+                      <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-button color="primary" (click)="addCertificateDialog(true)">Upload</button></div>
+                      <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-button color="accent" (click)="addCertificateDialog(false)">Preview</button></div>
+                      <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-button color="warn" (click)="cancelCertificateDialog()">Cancel</button></div>
+                    </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="46c01124-9259-043a-8c45-994becc3ca9e">
+                    <th mat-header-cell *matHeaderCellDef>Action</th>
+                    <td mat-cell *matCellDef="let table" headerclass="tab-partner-header" columclass="tab-partner-data">
+                      <mat-icon color="primary">edit</mat-icon>
+                      <mat-icon style="cursor:pionter;" (click)="openDeleteDialog(table)" color="warn">delete</mat-icon>
+                    </td>
                   </ng-container>
                 </table>
-                <mat-paginator [length]="10" [pageSize]="5" [pageSizeOptions]="[5, 10, 25, 100]">
+                <mat-paginator [length]="10" [pageSize]="3" [pageSizeOptions]="[5, 10, 25, 100]">
                 </mat-paginator>
 
               </div>
             </div>
+            <div fxLayout="row wrap" style="margin-top:10px;" fxLayoutAlign="end end" [fxShow]="true" [fxHide]="false"><button mat-mini-fab style="background:rgba(0,0,0,.7); color: #fff;" (click)="addDeveloper()">
+                <mat-icon>add</mat-icon>
+              </button></div>
           </mat-expansion-panel>
         </mat-accordion>
       </div>
     </div>
-    <div fxLayout="row wrap" style="width:100%;" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-      <div fxLayout="column wrap" style="width:70%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+    <div fxLayout="row wrap" style="width:90%;" class="w-100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <div fxLayout="column " fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
         <mat-accordion>
           <mat-expansion-panel>
             <mat-expansion-panel-header>
@@ -188,8 +219,8 @@
                 Leads
               </mat-panel-title>
             </mat-expansion-panel-header>
-            <div fxLayout="row wrap" class="partner-dev-table" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-              <div fxLayout="column" class="table-width-fix header-cell" style="width:100%;">
+            <div fxLayout="column " class="partner-dev-table" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <div fxLayout="column" class="header-cell">
 
                 <div fxLayout="row" fxLayoutAlign="end">
                   <div fxLayout="column" fxFlex="30">

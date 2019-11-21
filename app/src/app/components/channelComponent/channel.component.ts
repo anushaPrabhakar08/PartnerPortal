@@ -4,17 +4,9 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
+import { MediaObserver } from '@angular/flex-layout';
+import { Title } from '@angular/platform-browser';
 
-/**
- * Service import Example :
- * import { HeroService } from '../../services/hero/hero.service';
- */
-
-/**
- *
- * Service Designer import Example - Service Name - HeroService
- * import { HeroService } from 'app/sd-services/HeroService';
- */
 
 @Component({
     selector: 'bh-channel',
@@ -24,21 +16,15 @@ import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 export class channelComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    constructor(private bdms: NDataModelService) {
+    constructor(private bdms: NDataModelService, 
+                public media: MediaObserver, 
+                public titleService: Title) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
     ngOnInit() {
 
-    }
-
-    onBackdrop() {
-       // alert("Event Occured")
-    }
-
-    eventOccured() {
-        //alert("Event Occured")
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {

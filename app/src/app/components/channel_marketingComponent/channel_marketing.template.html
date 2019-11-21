@@ -1,12 +1,8 @@
 <div fxLayout="row wrap" class="background" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
   <div fxLayout="column wrap" class="margin-tb" fxFlex="100" fxLayoutGap="2em" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-    <div fxLayout="row wrap" fxLayoutAlign="space-between center" [fxShow]="true" [fxHide]="false">
-      <h2 style="color:rgba(0,0,0,.7);" class="header">
-        Marketing Collaterals</h2>
-      <div fxLayout="row wrap" style="margin-top:10px;" class="add-icon-collateral" fxLayoutAlign="end end" [fxShow]="true" [fxHide]="false"><button mat-mini-fab (click)="addContent()">
-          <mat-icon>add</mat-icon>
-        </button></div>
-    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="end end" [fxShow]="true" [fxHide]="false"><button mat-mini-fab (click)="addContent()">
+        <mat-icon>add</mat-icon>
+      </button></div>
     <div fxLayout="row wrap" style="width:100%;" fxLayoutGap="1em" fxLayoutAlign="start none" [fxShow]="true" [fxHide]="false">
       <mat-grid-list cols="3">
         <div fxLayout="row wrap" class="card-bg" fxFlex="100" fxLayoutGap="1em" fxLayoutAlign="start start" [fxShow]="true" [fxHide]="false">

@@ -20,8 +20,6 @@ import { testpageComponent } from '../components/testpageComponent/testpage.comp
 import { deletedeveloperComponent } from '../components/deletedeveloperComponent/deletedeveloper.component';
 //CORE_REFERENCE_IMPORT-viewmarketingpdfComponent
 import { viewmarketingpdfComponent } from '../components/viewmarketingpdfComponent/viewmarketingpdf.component';
-//CORE_REFERENCE_IMPORT-partnerloginComponent
-
 //CORE_REFERENCE_IMPORT-uploadcertificateComponent
 import { uploadcertificateComponent } from '../components/uploadcertificateComponent/uploadcertificate.component';
 //CORE_REFERENCE_IMPORT-deletepopupComponent
@@ -40,8 +38,6 @@ import { memberregisterationComponent } from '../components/memberregisterationC
 import { spinnerComponent } from '../components/spinnerComponent/spinner.component';
 //CORE_REFERENCE_IMPORT-contactpageComponent
 import { contactpageComponent } from '../components/contactpageComponent/contactpage.component';
-//CORE_REFERENCE_IMPORT-memberloginComponent
-import { memberloginComponent } from '../components/memberloginComponent/memberlogin.component';
 //CORE_REFERENCE_IMPORT-sampleComponent
 import { sampleComponent } from '../components/sampleComponent/sample.component';
 //CORE_REFERENCE_IMPORT-partner_developersComponent
@@ -127,7 +123,6 @@ testpageComponent,
 deletedeveloperComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-viewmarketingpdfComponent
 viewmarketingpdfComponent,
-//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-partnerloginComponent
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-uploadcertificateComponent
 uploadcertificateComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-deletepopupComponent
@@ -146,8 +141,6 @@ channel_addmarketingComponent,
   spinnerComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-contactpageComponent
   contactpageComponent,
-  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-memberloginComponent
-  memberloginComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-sampleComponent
   sampleComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-partner_developersComponent
@@ -210,8 +203,8 @@ export const appProviders = [
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
 export const appRoutes = [{path: 'home', component: homeComponent,
 children: []},{path: 'login/:type', component: loginComponent,
-children: []},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'contact', component: contactpageComponent},{path: 'admin', component: channelComponent,
-children: [{path: 'patrners_list', component: channel_dashboardComponent},{path: 'partner/:_id', component: partner_detailsComponent},{path: 'marketing_collaterals', component: channel_marketingComponent},{path: 'announcements', component: channel_announcementsComponent,
+children: []},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'contact_us', component: contactpageComponent},{path: 'admin', component: channelComponent,
+children: [{path: 'partners_list', component: channel_dashboardComponent},{path: 'partner/:_id', component: partner_detailsComponent},{path: 'marketing_collaterals', component: channel_marketingComponent},{path: 'announcements', component: channel_announcementsComponent,
 children: []},{path: '', component: loginComponent}]},{path: 'partner', component: partnerComponent,
 children: [{path: 'marketing_collaterals', component: partner_marketingComponent},{path: 'leads', component: partner_leadsComponent},{path: 'developer_details', component: partner_developersComponent},{path: 'agreement', component: partner_agreementComponent},{path: '', component: partner_marketingComponent}]},{path: 'memberregisteration', component: memberregisterationComponent},{path: 'partnerregistration', component: partnerregistrationComponent},{path: 'partner_addDeveloper', component: partner_adddeveloperComponent},{path: 'partner_addLead', component: partner_addleadComponent,
 children: []},{path: 'sample', component: sampleComponent},{path: 'testPage', component: testpageComponent},{path: '', redirectTo: '/home', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]

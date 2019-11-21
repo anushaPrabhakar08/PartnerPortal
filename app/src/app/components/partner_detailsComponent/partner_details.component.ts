@@ -7,41 +7,42 @@ import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 import { MatSort, MatTableDataSource, MatPaginator } from '@angular/material';
 import { partnerservice } from '../../sd-services/partnerservice';
 import { uploadcertificateComponent } from '../uploadcertificateComponent/uploadcertificate.component';
+import { partner_adddeveloperComponent } from '../partner_adddeveloperComponent/partner_adddeveloper.component';
+import { deletedeveloperComponent } from '../deletedeveloperComponent/deletedeveloper.component';
 import { MatDialog } from '@angular/material';
 import { channelservice } from '../../sd-services/channelservice';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormGroup, FormControl } from '@angular/forms';
 import { fileService } from '../../sd-services/fileService';
+import { Title } from '@angular/platform-browser';
 
 export interface PeriodicElement {
-    //id: string;
-    no: number;
-    position: string;
-    name: string;
-    status: string;
-    email: string;
+  agreementUploaded: string;
+  no: number;
 }
-const ELEMENT_DATA: PeriodicElement[] = [];
-export interface LeadsElement {
-    no: number;
-    orgName: string;
-    orgWebsite: string;
-    leadCreationDate: string;
-    oppType: string;
-    location;
-}
-const LEADS_DATA: LeadsElement[] = [];
+
+const ELEMENT_DATA: PeriodicElement[] = [
+  {agreementUploaded: "sample", no: 1},
+  {agreementUploaded: "sample", no: 2},
+  {agreementUploaded: "sample", no: 3},
+  {agreementUploaded: "sample", no: 4}
+];
+//const LEADS_DATA: LeadsElement[] = [];
 @Component({
     selector: 'bh-partner_details',
     templateUrl: './partner_details.template.html'
 })
 
 export class partner_detailsComponent extends NBaseComponent implements OnInit {
+
+    displayedColumns: string[] = ['agreementUploaded', 'no'];
+    agreementDataSource = ELEMENT_DATA;
+
     mm: ModelMethods;
     data;
     leaddata;
     devdata;
-    // @ViewChild(MatSort, { static: true }) sort: MatSort;
+    @ViewChild(MatSort, { static: true }) sort: MatSort;
     @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
     @ViewChild(MatPaginator, { static: true }) leadPaginator: MatPaginator;
     id;
@@ -75,7 +76,8 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
         private router: Router,
         private route: ActivatedRoute,
         private alertService: NSnackbarService,
-        private channelservice: channelservice
+        private channelservice: channelservice,
+        private titleService: Title
     ) {
         super();
         this.mm = new ModelMethods(bdms);
@@ -114,7 +116,25 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
         this.formData.delete('type');
     }
 
+    addDeveloper() {
+        const dialogRef = this.dialog.open(partner_adddeveloperComponent, {
+            width: '450px',
+            data: 'hello'
+        });
+        dialogRef.afterClosed().subscribe(result => {
+            this.ngOnInit();
+        });
+    }
 
+    previewCertificate() {
+        const dialogRef = this.dialog.open(partner_adddeveloperComponent, {
+            width: '450px',
+            data: 'hello'
+        });
+        dialogRef.afterClosed().subscribe(result => {
+            this.ngOnInit();
+        });
+    }
     //titles = [{ name: "Experiment 1" }, { name: "Experiment 2" }];
 
     applyFilter(filterValue: string) {
@@ -127,21 +147,23 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
         filterValue = filterValue.toLowerCase();
         this.leadsDataSource.filter = filterValue;
     }
-    addCertificateDialog() {
+
+    addCertificateDialog(upload) {
         const dialogRef = this.dialog.open(uploadcertificateComponent, {
             width: '450px',
             //disableClose: true,
-            data: this.id
+            data: {id: this.id, uploadView:upload}
         });
     }
 
     async ngOnInit() {
+        this.titleService.setTitle('Partner Details');
         this.id = this.route.snapshot.paramMap.get('_id');
         this.dataSource.paginator = this.paginator;
         this.getdevs();
 
         this.getleads();
-
+        this.getdata();
 
 
         this.P_data = (await this.channelservice.getPerticularPartner(this.id)).local.result;
@@ -167,6 +189,29 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
 
 
     }
+    openDeleteDialog(data) {
+        const dialogRef = this.dialog.open(deletedeveloperComponent, {
+            width: '450px',
+            data: data
+        });
+        dialogRef.afterClosed().subscribe(result => {
+            this.ngOnInit();
+        });
+    }
+    async getdata() {
+        try {
+            let partnerid = sessionStorage.getItem('id');
+            this.data = this.leadObjtoArr((await this.partnerservice.getdeveloper(partnerid)).local.result);
+            this.dataSource = new MatTableDataSource(this.data);
+            this.dataSource.paginator = this.paginator;
+            this.dataSource.sort = this.sort;
+        }
+        catch (e) {
+            console.log(e);
+        }
+
+    }
+
     async getleads() {
         this.leaddata = this.leadObjtoArr((await this.partnerservice.getleadslist(this.id)).local.resultleads);
         this.leadsDataSource.data = this.leaddata;

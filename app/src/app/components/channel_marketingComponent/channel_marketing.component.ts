@@ -8,6 +8,7 @@ import { MatDialog } from '@angular/material';
 import { channel_addmarketingComponent } from '../channel_addmarketingComponent/channel_addmarketing.component';
 import { loginComponent } from '../loginComponent/login.component';
 import { viewmarketingpdfComponent } from '../viewmarketingpdfComponent/viewmarketingpdf.component';
+import { Title } from '@angular/platform-browser';
 
 
 @Component({
@@ -18,13 +19,13 @@ import { viewmarketingpdfComponent } from '../viewmarketingpdfComponent/viewmark
 export class channel_marketingComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
 
-    constructor(private bdms: NDataModelService, private dialog:MatDialog) {
+    constructor(private bdms: NDataModelService, private dialog:MatDialog, private titleService: Title) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
     ngOnInit() {
-
+        this.titleService.setTitle('Marketing Collaterals')
     }
 
     addContent() {

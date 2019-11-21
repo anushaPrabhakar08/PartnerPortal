@@ -36,7 +36,8 @@ export class partner_adddeveloperComponent extends NBaseComponent implements OnI
             lastName: ['', [Validators.required, Validators.maxLength(20), Validators.pattern(/^[a-zA-Z]+$/)]],
             email: ['', [Validators.required,  Validators.maxLength(20), Validators.pattern(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/)]],
             position: [''],
-            experience: ['',[Validators.maxLength(2), Validators.pattern(/^[0-9]*$/)]]
+            experience: ['',[Validators.maxLength(2), Validators.pattern(/^[0-9]*$/)]],
+            contactNo: ['', [Validators.required, Validators.maxLength(10), Validators.pattern(/^[0-9]*$/)]],
         });
     }
 
@@ -44,6 +45,7 @@ export class partner_adddeveloperComponent extends NBaseComponent implements OnI
     get lastName() { return this.developerForm.get('lastName') }
     get email() { return this.developerForm.get('email') }
     get experience() { return this.developerForm.get('experience') }
+    get contactNo() { return this.developerForm.get('contactNo') }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, filter, keys, sort, pagenumber, pagesize,
@@ -126,7 +128,7 @@ export class partner_adddeveloperComponent extends NBaseComponent implements OnI
 
     async submit(data) {
          let partid=sessionStorage.getItem('id');
-         let obj={partner_id:partid,firstName:data.firstName,lastName:data.lastName,position:data.position,experience:data.experience};
+         let obj={partner_id:partid,firstName:data.firstName,lastName:data.lastName,position:data.position,experience:data.experience,contactNo:data.contactNo,email:data.email};
        await this.partnerservice.savedev(obj);
         console.log(data);
              this.developerForm.reset(); 

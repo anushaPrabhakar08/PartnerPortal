@@ -26,7 +26,7 @@
             "pathMatch": "full"
         },
         {
-            "path": "contact",
+            "path": "contact_us",
             "component": "contactpageComponent"
         },
         {
@@ -34,7 +34,7 @@
             "component": "channelComponent",
             "children": [
                 {
-                    "path": "patrners_list",
+                    "path": "partners_list",
                     "component": "channel_dashboardComponent"
                 },
                 {

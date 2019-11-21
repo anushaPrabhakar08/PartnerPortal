@@ -53,7 +53,7 @@ contactdetails=new FormGroup({
     }
 
     ngOnInit() {
-this.rout.navigate(['/contact']);
+
     }
 
 async submit(data){

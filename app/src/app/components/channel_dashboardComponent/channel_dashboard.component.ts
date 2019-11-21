@@ -8,6 +8,7 @@ import { MatSort, MatTableDataSource, MatPaginator } from '@angular/material';
 import { Router } from '@angular/router';
 import { partnerservice } from '../../sd-services/partnerservice';
 import { channelservice } from '../../sd-services/channelservice';
+import { Title } from '@angular/platform-browser';
 
 
 @Component({
@@ -24,14 +25,18 @@ export class channel_dashboardComponent extends NBaseComponent implements OnInit
 
     dataSource = new MatTableDataSource(this.data);
 
-    constructor(private bdms: NDataModelService, private router: Router, private partnerservice: partnerservice, private channelservice: channelservice) {
+    constructor(private bdms: NDataModelService, 
+                private router: Router, 
+                private partnerservice: partnerservice, 
+                private channelservice: channelservice,
+                private titleService: Title) {
         super();
         this.mm = new ModelMethods(bdms);
 
     }
 
     ngOnInit() {
-
+        this.titleService.setTitle('Partners')
         this.getdata();
     }
 
@@ -56,7 +61,7 @@ export class channel_dashboardComponent extends NBaseComponent implements OnInit
 
     showPartnerDetails(table) {
       
-        this.router.navigate(['channel/dashboardPartnerDetails', table._id]);
+        this.router.navigate(['admin/partner', table._id]);
 
       
     }

@@ -69,11 +69,6 @@
         "componentName": "sampleComponent",
         "isEntry": false
     },
-    "790b4de7-bb6b-950e-dd3b-ea0792cc7c77": {
-        "appPageName": "memberlogin",
-        "componentName": "memberloginComponent",
-        "isEntry": false
-    },
     "58e5678c-d515-fc8a-57df-7411d1f047ca": {
         "appPageName": "contactpage",
         "componentName": "contactpageComponent",
