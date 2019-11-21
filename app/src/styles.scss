@@ -8,12 +8,44 @@
 
       box-sizing: border-box;
 }
+.fontsize{
+      font-weight:500;
+    font-size: 20px
+}
+
+.mat-menu-content{
+    background:rgb(37, 35, 35);
+    color:white;
+}
+
+
+.sample textarea.mat-input-element{
+    border: 1px solid gray !important;
+    padding:20px;
+    border-radius: 6px;
+}
+.sample textarea.mat-input-element:hover{
+ border: 2px solid !important;
+}
 img{
   max-width: 100%;
 }
 table,header,footer{
   width:100%;
 }
+.home_btn:hover{
+    color:red;
+}
+
+.home_btn{
+    font-weight:500;
+    font-size: 20px
+    }
+
+.home_col2 {
+    background-image: url('assets/Web/become_partner.jpg');
+    background-size: cover;}
+
 // scrollbar
 ::-webkit-scrollbar {
   background-color:#fff;
@@ -163,10 +195,10 @@ bh-login{
 }
 
 .h_card{
-   height: 400px;
-   width:700px;
-   
+   width:50%;  
    background-color:#e2dede;
+       margin:20px 0px;
+       height:auto;
 }
 // .opptype .mat-form-field{
 //     width:320px !important;
@@ -264,7 +296,7 @@ bh-login{
     font-weight: 700;
     font-size: 16px;
     color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
+    //font-family: Arial, Helvetica, sans-serif;
     text-align: left !important;
 }
 
@@ -398,7 +430,9 @@ bh-partner_agreement {
     place-content: center;
     align-items: center;
 } 
-
+.announcement mat-form-field{
+    width:100%;
+}
 //marketing Collaterals
 .gallery-card-content, .pdf-card-content{
     width: max-content;
@@ -436,11 +470,11 @@ bh-partner_agreement {
     color: red;
     font-size: 35px;
     font-weight: 700;
-    font-variant: petite-caps;
+    //font-variant: petite-caps;
 }
 
 .main-description {
-    font-family: fantasy;
+   // font-family: fantasy;
     letter-spacing: 5px;
     color: #e10d2b;
 }
@@ -459,7 +493,7 @@ bh-partner_agreement {
     color: #554949;
     font-size: 24px;
     font-weight: 700;
-    font-variant: petite-caps;
+    //font-variant: petite-caps;
 }
 
 .text-center {
@@ -556,7 +590,14 @@ video {
     color: white;
 }
 
-.mat-toolbar{
+.card_video{
+    width:40%;
+    height:auto;
+    margin:20px 0px;
+}
+.mat-toolbar {
+    //background-color:  #5f737d !important;
+    background-color: #000 !important;
     color: #fff;
     position: fixed;
     top: 0;

@@ -515,12 +515,6 @@
                 "fieldType": 2,
                 "isArray": false,
                 "type": "string"
-            },
-            {
-                "name": "partnerType",
-                "fieldType": 2,
-                "isArray": false,
-                "type": "string"
             }
         ]
     }

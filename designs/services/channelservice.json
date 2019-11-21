@@ -46,8 +46,8 @@
             }
         ],
         "functionName": "channelmemberregistration",
-        "x": 253.2000026702881,
-        "y": 124.93749809265137,
+        "x": 162.2000026702881,
+        "y": 125.93751525878906,
         "wires": [
             [
                 "sd_2tky7jqHupi9JB9C"
@@ -140,8 +140,8 @@
             }
         ],
         "functionName": "getpartnerlist",
-        "x": 191.1875,
-        "y": 229.921875,
+        "x": 159.18750190734863,
+        "y": 244.9218807220459,
         "wires": [
             [
                 "sd_qC0rhOq7GaFqQ2WM"
@@ -240,8 +240,8 @@
             }
         ],
         "functionName": "getPerticularPartner",
-        "x": 196.1875,
-        "y": 387.921875,
+        "x": 165.18750190734863,
+        "y": 380.92186737060547,
         "wires": [
             [
                 "sd_8jUiKC2c0l5ZLdQA"

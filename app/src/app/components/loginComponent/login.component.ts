@@ -24,6 +24,7 @@ export class loginComponent extends NBaseComponent implements OnInit {
     super();
     this.mm = new ModelMethods(bdms);
   }
+  
 
   ngOnInit() {
   }

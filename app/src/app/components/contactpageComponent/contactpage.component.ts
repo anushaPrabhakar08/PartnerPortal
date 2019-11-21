@@ -26,8 +26,7 @@ import { Router } from '@angular/router';
 
 export class contactpageComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
-jobrole=['Salse & Marketing','Technology','Human Resource & Admin','Directors of Applications/IT'];
-industry=['Manufacturing','insurance','Education'];
+industry=['Banking & Finance','Retail','Public Sector','insurance','Education'];
 companysize=['1-49','50-99','100-249','250-499'];
 country=['Afghanistan','Ailand Island','Albania','Algeria','Australia','india'];
 

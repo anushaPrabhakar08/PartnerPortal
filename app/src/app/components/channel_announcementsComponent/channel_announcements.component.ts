@@ -4,8 +4,11 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
-import { ReactiveFormsModule,FormGroup, FormControl, FormBuilder,Validators } from '@angular/forms';
+
 import { channelservice } from '../../sd-services/channelservice';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {announcepartnerlistComponent} from  '../announcepartnerlistComponent/announcepartnerlist.component'
+import { announcement } from '../../models/announcement.model';
 
 @Component({
     selector: 'bh-channel_announcements',
@@ -14,23 +17,27 @@ import { channelservice } from '../../sd-services/channelservice';
 
 export class channel_announcementsComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
-    announce=['Premium','standard','All'];
-
-    announcdetail=new FormGroup({
-        announcement:new FormControl(''),
-        partnerType:new FormControl('')
-    })
-
-    constructor(private bdms: NDataModelService, private channelservice: channelservice) {
+ 
+    constructor(private bdms: NDataModelService, private channelservice: channelservice,private dialog:MatDialog) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
-    partnerType = [
-        { value: 'primePartner', viewValue: 'Prime Partner' },
-        { value: 'normalPartner', viewValue: 'Normal Partner' },
-    ];
+    // partnerType = [
+    //     { value: 'primePartner', viewValue: 'Prime Partner' },
+    //     { value: 'normalPartner', viewValue: 'Normal Partner' },
+    // ];
 
+opendilogue(){
+     const dialogRef = this.dialog.open(announcepartnerlistComponent, {
+      width: '250px',
+      data: this.dm.announcement.announcement
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    
+    });
+}
     ngOnInit() {
 
     }

@@ -593,6 +593,24 @@
      "file": "C:\\Users\\ENTERPRISETOUCH\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-node-mongodb\\66-mongodb.js"
     }
    }
+  },
+  "node-red-contrib-auth": {
+   "name": "node-red-contrib-auth",
+   "version": "0.1.7",
+   "local": true,
+   "nodes": {
+    "JsonWebToken": {
+     "name": "JsonWebToken",
+     "types": [
+      "JsonWebToken",
+      "JsonWebToken_config"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-auth",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-auth\\jsonWebToken.js"
+    }
+   }
   }
  },
  "_credentialSecret": "5e07d2760d012306db61116bcf19bf1e2205ec48c637b150946376fa0f7a3a6f",
@@ -609,7 +627,11 @@
     }
    },
    "menu-menu-item-palette": true,
+<<<<<<< Updated upstream
    "menu-menu-item-sidebar": false
+=======
+   "menu-menu-item-sidebar": true
+>>>>>>> Stashed changes
   }
  }
 }

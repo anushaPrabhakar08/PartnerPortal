@@ -1,20 +1,12 @@
 /*DEFAULT GENERATED TEMPLATE. DO NOT CHANGE SELECTOR TEMPLATE_URL AND CLASS NAME*/
-
-
-// import { BDataModelService } from '../service/bDataModel.service';
-
-
-import { Component, OnInit, OnDestroy } from '@angular/core'
-import { Router } from '@angular/router';
-import { user } from '../../models/user.model';
-import { loaderComponent } from '../loaderComponent/loader.component';
+import { Component, OnInit,Inject } from '@angular/core'
 import { ModelMethods } from '../../lib/model.methods';
+// import { BDataModelService } from '../service/bDataModel.service';
+import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
-import { NDataModelService, NLoginService, NSnackbarService, NSystemService , NHTTPLoaderService } from 'neutrinos-seed-services';
-import { MatDialog } from '@angular/material';
-import { FormGroup, FormControl,Validators } from '@angular/forms';
-import { loginservice } from '../../sd-services/loginservice';
-
+import { channelservice } from '../../sd-services/channelservice';
+import { FormGroup, FormControl,Validators,FormBuilder } from '@angular/forms';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 /**
  * Service import Example :
  * import { HeroService } from '../../services/hero/hero.service';
@@ -27,52 +19,29 @@ import { loginservice } from '../../sd-services/loginservice';
  */
 
 @Component({
-    selector: 'bh-partnerlogin',
-    templateUrl: './partnerlogin.template.html'
+    selector: 'bh-announcepartnerlist',
+    templateUrl: './announcepartnerlist.template.html'
 })
 
-export class partnerloginComponent extends NBaseComponent implements OnInit {
+export class announcepartnerlistComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
-  user: user;
-   constructor(private bdms: NDataModelService,
-    private rout:Router,
-    private alertService: NSnackbarService,
-    private router: Router,
-    private dialog: MatDialog,
-    private httpLoaderService: NHTTPLoaderService,
-    private loginservice:loginservice
-  ) {
-    super();
-    this.mm = new ModelMethods(bdms);
-    this.user = new user();
-  }
-    ngOnInit() {
-
+partnerlist=[];
+    constructor(private bdms: NDataModelService,private partnerlists:channelservice,private formBuilder : FormBuilder,public dialogRef: MatDialogRef<announcepartnerlistComponent>, @Inject(MAT_DIALOG_DATA) public data) {
+        super();
+        this.mm = new ModelMethods(bdms);
     }
-      openDialog() {
-    const dialogRef = this.dialog.open(loaderComponent, {
-      data: { message: 'Authenticating' },
-      width: '250px',
-      disableClose: true
-    });
-  }
-
-
-    data;
-
-  async authenticate() {
+res;
+announcedata=new FormGroup({
    
-    console.log(this.user.username);    
-    this.data=(await this.loginservice.login( this.user.username,this.user.password)).local.result;
-    console.log(typeof this.data);
-    if(Object.keys(this.data).length===0){
-        this.alertService.openSnackBar('username or password incorrect');
-    }else{
-        this.rout.navigate(['/partner/dashboardPartnerAgreement']);
-      sessionStorage.setItem('id',this.data[0]._id);
-
+})
+   async ngOnInit() {
+       console.log(this.data);
+        this.res=(await this.partnerlists.getpartnerlist()).local.result;
+        for(let key in this.res)
+        {
+            this.partnerlist[key]=this.res[key].companyName;
+        }
     }
-  }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, filter, keys, sort, pagenumber, pagesize,

@@ -7,23 +7,13 @@
     <div fxLayout="row wrap" style="width:100%;margin-top: 20px;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
       <mat-card class="announcement-card">
         <mat-card-content>
-          <form [formGroup]="announcdetail">
-            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+          <form>
+            <div fxLayout="column wrap" class="announcement" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
               <mat-form-field>
-                <textarea matInput [(ngModel)]="dm.announcement.announcement" formControlName="announcement" placeholder="Announcement" required></textarea>
+                <textarea matInput [(ngModel)]="dm.announcement.announcement" name="announcement" placeholder="Announcement" required></textarea>
               </mat-form-field>
             </div>
-            <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-              <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-                <mat-select formControlName="partnerType" placeholder="Select" [(ngModel)]="dm.announcement.partnerType" required>
-                  <ng-template ngFor let-option [ngForOf]="announce" let-i="index">
-                    <mat-option [value]="option">{{option}}</mat-option>
-                  </ng-template>
-                </mat-select>
-
-              </mat-form-field>
-            </div>
-            <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button class="announce-btn" (click)="submit(announcdetail.value)">Announce</button></div>
+            <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button class="announce-btn" (click)="opendilogue()">Announce</button></div>
           </form>
         </mat-card-content>
       </mat-card>

@@ -119,11 +119,6 @@
         "componentName": "uploadcertificateComponent",
         "isEntry": false
     },
-    "b56e0c0d-d45b-233a-93ea-6834b1b9266a": {
-        "appPageName": "partnerlogin",
-        "componentName": "partnerloginComponent",
-        "isEntry": false
-    },
     "6b1e6343-72d6-00ad-071a-00eec89faa0b": {
         "appPageName": "viewMarketingPDF",
         "componentName": "viewmarketingpdfComponent",
@@ -142,6 +137,11 @@
     "dc884934-981b-4f09-dce3-d60625b97b71": {
         "appPageName": "testPage",
         "componentName": "testpageComponent",
+        "isEntry": false
+    },
+    "0300503e-54d9-55f5-85a0-98bfe2f9957a": {
+        "appPageName": "announcepartnerlist",
+        "componentName": "announcepartnerlistComponent",
         "isEntry": false
     }
 }

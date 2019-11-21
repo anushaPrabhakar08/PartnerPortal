@@ -30,7 +30,7 @@ export class channel_marketingComponent extends NBaseComponent implements OnInit
     addContent() {
         const dialogRef = this.dialog.open(channel_addmarketingComponent, {
             width: '450px',
-            data: 'hello'
+            data:'' 
         });
     }
 

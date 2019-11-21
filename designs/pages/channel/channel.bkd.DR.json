@@ -660,7 +660,7 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "height:100%;margin-top: 80px;",
+                            "_value": "height:100%;margin-top: 62px;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },

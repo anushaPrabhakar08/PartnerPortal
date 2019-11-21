@@ -12,6 +12,8 @@ window['neutrinos'] = {
 }
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-announcepartnerlistComponent
+import { announcepartnerlistComponent } from '../components/announcepartnerlistComponent/announcepartnerlist.component';
 //CORE_REFERENCE_IMPORT-testpageComponent
 import { testpageComponent } from '../components/testpageComponent/testpage.component';
 //CORE_REFERENCE_IMPORT-deletedeveloperComponent
@@ -19,7 +21,7 @@ import { deletedeveloperComponent } from '../components/deletedeveloperComponent
 //CORE_REFERENCE_IMPORT-viewmarketingpdfComponent
 import { viewmarketingpdfComponent } from '../components/viewmarketingpdfComponent/viewmarketingpdf.component';
 //CORE_REFERENCE_IMPORT-partnerloginComponent
-import { partnerloginComponent } from '../components/partnerloginComponent/partnerlogin.component';
+
 //CORE_REFERENCE_IMPORT-uploadcertificateComponent
 import { uploadcertificateComponent } from '../components/uploadcertificateComponent/uploadcertificate.component';
 //CORE_REFERENCE_IMPORT-deletepopupComponent
@@ -103,7 +105,8 @@ export const appEntryComponents: any = [
   uploadcertificateComponent,
   viewagreementComponent,
   deletedeveloperComponent,
-  viewmarketingpdfComponent
+  viewmarketingpdfComponent,
+  announcepartnerlistComponent
   //CORE_REFERENCE_PUSH_TO_ENTRY_ARRAY
 ];
 
@@ -116,6 +119,8 @@ export const appDeclarations = [
   PageNotFoundComponent,
   NMapComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-announcepartnerlistComponent
+announcepartnerlistComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-testpageComponent
 testpageComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-deletedeveloperComponent
@@ -123,7 +128,6 @@ deletedeveloperComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-viewmarketingpdfComponent
 viewmarketingpdfComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-partnerloginComponent
-partnerloginComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-uploadcertificateComponent
 uploadcertificateComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-deletepopupComponent
@@ -206,7 +210,7 @@ export const appProviders = [
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
 export const appRoutes = [{path: 'home', component: homeComponent,
 children: []},{path: 'login/:type', component: loginComponent,
-children: []},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'contact_us', component: contactpageComponent},{path: 'admin', component: channelComponent,
+children: []},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'contact', component: contactpageComponent},{path: 'admin', component: channelComponent,
 children: [{path: 'patrners_list', component: channel_dashboardComponent},{path: 'partner/:_id', component: partner_detailsComponent},{path: 'marketing_collaterals', component: channel_marketingComponent},{path: 'announcements', component: channel_announcementsComponent,
 children: []},{path: '', component: loginComponent}]},{path: 'partner', component: partnerComponent,
 children: [{path: 'marketing_collaterals', component: partner_marketingComponent},{path: 'leads', component: partner_leadsComponent},{path: 'developer_details', component: partner_developersComponent},{path: 'agreement', component: partner_agreementComponent},{path: '', component: partner_marketingComponent}]},{path: 'memberregisteration', component: memberregisterationComponent},{path: 'partnerregistration', component: partnerregistrationComponent},{path: 'partner_addDeveloper', component: partner_adddeveloperComponent},{path: 'partner_addLead', component: partner_addleadComponent,

@@ -8,7 +8,7 @@
       <div fxLayout="row wrap" style="width: 100%;" class="logout-btn" fxLayoutAlign="end stretch" [fxShow]="true" [fxHide]="false"><button mat-button style="font-size:20px;" routerLink="/home">Logout</button></div>
     </mat-toolbar>
     <div fxLayout="column " fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-      <mat-sidenav-container style="height:100%;margin-top: 80px;" class="sidenav-container" autosize="true" hasBackdrop="false" (backdropClick)="true">
+      <mat-sidenav-container style="height:100%;margin-top: 62px;" class="sidenav-container" autosize="true" hasBackdrop="false" (backdropClick)="true">
         <mat-sidenav #sidenav style="background:#000;height:100%;" class="sidenav-content" fxLayout="column wrap" [mode]="&apos;side&apos;" [position]="&apos;start&apos;" [opened]="false" autoFocus="false" fixedInViewport="false">
           <div fxLayout="column wrap" style="margin-top:20px;" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-button class="nav-button" routerLink="/admin/patrners_list">Partners</button><button mat-button class="nav-button" routerLink="/admin/marketing_collaterals">Marketing Collaterals</button><button mat-button class="nav-button" routerLink="/admin/announcements">Announcements</button></div>
         </mat-sidenav>

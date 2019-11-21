@@ -1,0 +1,13 @@
+{
+    "appPageId": "0300503e-54d9-55f5-85a0-98bfe2f9957a",
+    "appPageName": "announcepartnerlist",
+    "componentName": "announcepartnerlistComponent",
+    "selectorName": "bh-announcepartnerlist",
+    "htmlFileName": "announcepartnerlist.template.html",
+    "tsFileName": "announcepartnerlist.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

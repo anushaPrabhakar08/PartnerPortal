@@ -1,114 +1,104 @@
 <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
   <header>
-    <mat-toolbar class="bg-dark">
-      <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-        <div fxLayout="column wrap" fxFlex="20" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/logo.png" width="200px"></div>
-        <div fxLayout="column wrap" fxFlex="80" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-          <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="end center" [fxShow]="true" [fxHide]="false"><button mat-button routerLink="/home">Home</button><button mat-button class="text-white" routerLink="/contact_us">Contact Us</button><button mat-raised-button routerLink="/login" color="warn">Login</button></div>
+    <mat-toolbar fxFlex.xs="100" class="mat-toolbar">
+      <div fxLayout="row wrap" style="width:100%;height:auto;" fxLayoutAlign="space-between center" [fxShow]="true" [fxHide]="false" fxFlex.xs="100">
+        <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="40"><img imgSrc="Web/logo.png" width="250px"></div>
+        <div fxLayout="row " style="width:40%;" fxLayoutAlign="space-evenly stretch" [fxShow]="true" [fxHide]="false" fxHide.xs="true"><button mat-button class="home_btn" routerLink="/home">Home</button><button mat-button class="home_btn" routerLink="/contact">Contact Us</button><button mat-button class="home_btn" routerLink="/login/partnerlogin">Login</button></div>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="10" fxHide.lg="true"><button mat-mini-fab [matMenuTriggerFor]="menu">
+            <mat-icon>view_headline</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-button class="home_btn" routerLink="/home">Home</button><button mat-button class="home_btn" routerLink="/contact">Contact Us</button><button mat-button class="home_btn" routerLink="/login/partnerlogin">Login</button></div>
+          </mat-menu>
         </div>
       </div>
     </mat-toolbar>
   </header>
-  <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-    <div fxLayout="row wrap" style="width:100%;padding:120px 0px;" fxLayoutAlign="space-evenly none" [fxShow]="true" [fxHide]="false">
-      <div fxLayout="column wrap" style="width:50%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-        <div fxLayout="column wrap" style="width:40%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><span style="font-variant:petite-caps;font-weight:700;font-size:35px;;">
+  <div fxLayout="row wrap" style="padding:100px 0px 20px 0px;" fxLayoutAlign="space-evenly none" [fxShow]="true" [fxHide]="false" fxFlex.md="100">
+    <div fxLayout="column wrap" style="width:40%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false" fxFlex.md="30">
+      <div fxLayout="column wrap" style="margin:0px 10px;" fxLayoutAlign="start start" [fxShow]="true" [fxHide]="false"><span class="fontsize">
                 Our offices</span>
-          <div fxLayout="column wrap" style="padding:20px;" fxLayoutAlign="start start" [fxShow]="true" [fxHide]="false">
-            <p style="color:#ff6347;font-size:20px;">
-              India</p><span>
+        <div fxLayout="column wrap" style="fontsize" fxLayoutAlign="start start" [fxShow]="true" [fxHide]="false">
+          <p style="color:#ff6347;" class="fontsize">
+            India</p><span>
                 No.156, 3rd Cross End, Ashoka Pillar Rd,
 1st Block, Jaya Nagar East,
 Bengaluru &#x2013; 560011, Karnataka
 Phone: +91 80 4171 8111</span>
-            <p style="color:#ff6347;font-size:20px;">
-              Singapore</p><span>
-                10, Anson Road
-International Plaza,
-Singapore 079903
-Phone: (+65)- 3159- 0694</span>
-            <p style="color:#ff6347;font-size:20px;">
-              South Africa</p><span>
-                7 Coetsee St, President Ridge,
-Randburg, 2194,
-South Africa
-Phone: (+27)- 1188-61707</span>
-            <p>
-              Witre to Us</p>
-            <div style="color:#ff6347;font-size:20px;">
-              ideas@neutrinos.co</div>
-          </div>
+          <p class="fontsize">
+            Witre to Us</p><span style="color:#ff6347;">
+                channels@neutrinos.co</span>
         </div>
       </div>
-      <div fxLayout="row wrap" style="width:50%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-        <mat-card style="padding:20px;width:70%;">
-          <mat-card-content>
-            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-              <p style="font-variant:petite-caps;font-weight:700;font-size:35px;;">
-                send us message</p>
-            </div>
-            <form [formGroup]="contactdetails" style="width:100%;" (ngSubmit)="submit(contactdetails.value)">
-              <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false">
+    </div>
+    <div fxLayout="row wrap" style="width:60%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false" fxFlex.md="70">
+      <mat-card style="padding:20px;width:60%;">
+        <mat-card-content>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+            <p style="font-variant:petite-caps;font-weight:700;font-size:35px;;">
+              send us message</p>
+          </div>
+          <form [formGroup]="contactdetails" style="width:100%;" (ngSubmit)="submit(contactdetails.value)">
+            <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false">
+              <div fxLayout="column wrap" style="width:48%;" class="selectbox" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                 <mat-form-field class="form-fields" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
                   <input matInput placeholder="First Name" required formControlName="firstname">
 
                 </mat-form-field>
+              </div>
+              <div fxLayout="column wrap" style="width:48%;" class="selectbox" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                 <mat-form-field class="form-fields" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
                   <input matInput placeholder="Last Name" required formControlName="lastname">
 
                 </mat-form-field>
               </div>
-              <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false">
+            </div>
+            <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false">
+              <div fxLayout="column wrap" style="width:48%;" class="selectbox" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                 <mat-form-field class="form-fields" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
                   <input matInput placeholder="Company Email" required formControlName="companyemail">
 
                 </mat-form-field>
+              </div>
+              <div fxLayout="column wrap" style="width:48%;" class="selectbox" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                 <mat-form-field class="form-fields" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
                   <input matInput placeholder="Company Name" required formControlName="companyname">
 
                 </mat-form-field>
               </div>
-              <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false">
-                <div fxLayout="column wrap" style="width:45%;" class="selectbox" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-                  <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                    <mat-select formControlName="jobroles" placeholder="Job Role" required>
-                      <ng-template ngFor let-option [ngForOf]="jobrole" let-i="index">
-                        <mat-option [value]="option">{{option}}</mat-option>
-                      </ng-template>
-                    </mat-select>
+            </div>
+            <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false">
+              <div fxLayout="column wrap" style="width:48%;" class="selectbox" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+                  <mat-select formControlName="compsize" class="selectbox" placeholder="Company Size" required>
+                    <ng-template ngFor let-option [ngForOf]="companysize" let-i="index">
+                      <mat-option [value]="option">{{option}}</mat-option>
+                    </ng-template>
+                  </mat-select>
 
-                  </mat-form-field>
-                </div>
-                <div fxLayout="column wrap" style="width:45%;" class="selectbox" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-                  <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                    <mat-select formControlName="industryname" placeholder="Industry" required>
-                      <ng-template ngFor let-option [ngForOf]="industry" let-i="index">
-                        <mat-option [value]="option">{{option}}</mat-option>
-                      </ng-template>
-                    </mat-select>
-
-                  </mat-form-field>
-                </div>
+                </mat-form-field>
               </div>
-              <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="space-between none" [fxShow]="true" [fxHide]="false">
+              <div fxLayout="column wrap" style="width:48%;" class="selectbox" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+                  <mat-select formControlName="industryname" placeholder="Industry" required>
+                    <ng-template ngFor let-option [ngForOf]="industry" let-i="index">
+                      <mat-option [value]="option">{{option}}</mat-option>
+                    </ng-template>
+                  </mat-select>
+
+                </mat-form-field>
+              </div>
+            </div>
+            <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="space-between none" [fxShow]="true" [fxHide]="false">
+              <div fxLayout="column wrap" style="width:48%;" class="selectbox" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                 <mat-form-field class="form-fields" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
                   <input matInput type="tel" placeholder="Mobile Number" required formControlName="mobilenumber">
 
                 </mat-form-field>
-                <div fxLayout="column wrap" style="width:45%;" class="selectbox" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-                  <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                    <mat-select formControlName="compsize" class="selectbox" placeholder="Company Size" required>
-                      <ng-template ngFor let-option [ngForOf]="companysize" let-i="index">
-                        <mat-option [value]="option">{{option}}</mat-option>
-                      </ng-template>
-                    </mat-select>
-
-                  </mat-form-field>
-                </div>
               </div>
-              <div fxLayout="row wrap" style="width:100%" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <div fxLayout="column wrap" style="width:48%;" class="selectbox" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                 <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                  <mat-select formControlName="countryname" class="form-fields" placeholder="Country">
+                  <mat-select formControlName="countryname" placeholder="Country">
                     <ng-template ngFor let-option [ngForOf]="country" let-i="index">
                       <mat-option [value]="option">{{option}}</mat-option>
                     </ng-template>
@@ -116,20 +106,20 @@ Phone: (+27)- 1188-61707</span>
 
                 </mat-form-field>
               </div>
-              <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-                <mat-form-field style="width:100%;">
-                  <textarea matInput formControlName="message" placeholder="Message" required></textarea>
-                </mat-form-field>
-              </div>
-              <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button color="warn" type="submit">Submit</button></div>
-            </form>
-          </mat-card-content>
-        </mat-card>
-      </div>
+            </div>
+            <div fxLayout="row wrap" class="sample" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <mat-form-field style="width:100%;">
+                <textarea matInput formControlName="message" placeholder="Message" required></textarea>
+              </mat-form-field>
+            </div>
+            <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button color="warn" type="submit">Submit</button></div>
+          </form>
+        </mat-card-content>
+      </mat-card>
     </div>
-    <footer class="footer-class">
-      <p>
-        &#xA9;2019 Neutrinos</p>
-    </footer>
   </div>
+  <footer class="footer-class">
+    <p>
+      &#xA9;2019 Neutrinos</p>
+  </footer>
 </div>
