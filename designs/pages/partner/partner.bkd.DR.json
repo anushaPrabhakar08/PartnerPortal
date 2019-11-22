@@ -1537,7 +1537,7 @@
                                     },
                                     {
                                         "_key": "(click)",
-                                        "_value": "",
+                                        "_value": "loginservice.logout()",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -1561,7 +1561,7 @@
                                     },
                                     {
                                         "_key": "routerLink",
-                                        "_value": "/home",
+                                        "_value": "",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     }

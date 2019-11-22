@@ -8,13 +8,7 @@
       <mat-card>
         <mat-card-content style="width:100%;">
           <div fxLayout="column wrap" class="announcement" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-              <input matInput placeholder="Write a Message" required>
-
-            </mat-form-field>
-            <mat-form-field>
-              <textarea matInput [(ngModel)]="dm.announcement.announcement" name="announcement" placeholder="Announcement" required></textarea>
-            </mat-form-field><button mat-raised-button class="announce-btn w-100" (click)="opendilogue()">Announce</button>
+            <ckeditor [config]="{placeholder: &apos;CKEditor&apos;}" [editor]="classicEditor"></ckeditor><button mat-raised-button class="announce-btn w-100" (click)="opendilogue()">Announce</button>
           </div>
         </mat-card-content>
       </mat-card>

@@ -1357,15 +1357,17 @@
                             },
                             {
                                 "_key": "[fxShow]",
-                                "_value": "true",
+                                "_value": "userType ? false: true",
                                 "_type": "kv",
-                                "_attrDef": "p"
+                                "_attrDef": "p",
+                                "_customAttributeFlag": true
                             },
                             {
                                 "_key": "[fxHide]",
-                                "_value": "false",
+                                "_value": "userType ? true: false",
                                 "_type": "kv",
-                                "_attrDef": "p"
+                                "_attrDef": "p",
+                                "_customAttributeFlag": true
                             }
                         ],
                         "d7885c59-79a5-3965-3a32-32587be4fd06": {
@@ -1573,7 +1575,7 @@
                                     },
                                     {
                                         "_key": "html",
-                                        "_value": "{{ userType ? 'Change Password': 'Forgot Password?'}} ",
+                                        "_value": "Forgot Password?",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     }

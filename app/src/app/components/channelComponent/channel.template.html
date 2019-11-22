@@ -12,12 +12,12 @@
             {{titleService.getTitle()}}</h3>
         </div>
       </div>
-      <div fxLayout="row wrap" style="width: 60%;" class="logout-btn" fxLayoutAlign="end stretch" [fxShow]="true" [fxHide]="false" fxShow.lt-md="false"><button mat-button style="font-size:20px;" routerLink="/home">Logout</button></div>
+      <div fxLayout="row wrap" style="width: 60%;" class="logout-btn" fxLayoutAlign="end stretch" [fxShow]="true" [fxHide]="false" fxShow.lt-md="false"><button mat-button style="font-size:20px;" (click)="loginservice.logout()">Logout</button></div>
     </mat-toolbar>
     <div fxLayout="column " fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
       <mat-sidenav-container style="height:100%;margin-top: 55px;" class="sidenav-container" autosize="true" hasBackdrop="false" (backdropClick)="true">
         <mat-sidenav #sidenav style="background:#000;height:100%;" class="sidenav-content" fxLayout="column wrap" [mode]="media.isActive(&apos;lt-md&apos;)?&apos;slide&apos;:&apos;side&apos;" (toggle)="sidenav.toggle()" [position]="&apos;start&apos;" [opened]="media.isActive(&apos;gt-sm&apos;)" autoFocus="false" fixedInViewport="false">
-          <div fxLayout="column wrap" style="margin-top:20px;" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-button class="nav-button" routerLinkActive="link-active" routerLink="/admin/partners_list">Partners</button><button mat-button class="nav-button" routerLinkActive="link-active" routerLink="/admin/marketing_collaterals">Marketing Collaterals</button><button mat-button class="nav-button" routerLinkActive="link-active" routerLink="/admin/announcements">Announcements</button><button mat-button class="nav-button" fxshow="false" fxHide="true" fxHide.lt-md="false" routerLink="/home">Logout</button></div>
+          <div fxLayout="column wrap" style="margin-top:20px;" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-button class="nav-button" routerLinkActive="link-active" routerLink="/admin/partners_list">Partners</button><button mat-button class="nav-button" routerLinkActive="link-active" routerLink="/admin/marketing_collaterals">Marketing Collaterals</button><button mat-button class="nav-button" routerLinkActive="link-active" routerLink="/admin/announcements">Announcements</button><button mat-button class="nav-button" fxshow="false" fxHide="true" fxHide.lt-md="false" (click)="loginservice.logout()">Logout</button></div>
         </mat-sidenav>
         <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFill>
           <router-outlet></router-outlet>
@@ -31,5 +31,5 @@
   </div>
 </div>
 <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="!loggedIn" [fxHide]="loggedIn" fxFill>
-  <bh-login [userType]="true"></bh-login>
+  <bh-login [userType]="!loggedIn"></bh-login>
 </div>

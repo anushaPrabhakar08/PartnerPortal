@@ -41,8 +41,8 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
     async getdata() {
         try {
             let id =  (await this.loginservice.getCurrentUserId().then(result => { this.userId = result.local.result}));
-            console.log(this.userId);
-            this.data = this.leadObjtoArr((await this.partnerservice.getleads(this.userId)).local.result);
+            // console.log(this.userId);
+            this.data = this.leadObjtoArr((await this.partnerservice.getLeads({userId: this.userId})).local.result);
             
             this.dataSource = new MatTableDataSource(this.data);
             this.dataSource.paginator = this.paginator;
@@ -71,7 +71,7 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
             data: table
         });
         dialogRef.afterClosed().subscribe(result => {
-            this.ngOnInit();
+            this.getdata();
         });
     }
 
@@ -80,10 +80,10 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
         const dialogRef = this.dialog.open(partner_addleadComponent, {
             width: '450px',
             height: '500px',
-            data: 'hello'
+            data: this.userId
         });
         dialogRef.afterClosed().subscribe(result => {
-            this.ngOnInit();
+            this.getdata();
         });
     }
 
@@ -93,84 +93,6 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
         this.dataSource.filter = filterValue;
     }
 
-    get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
-        this.mm.get(dataModelName, filter, keys, sort, pagenumber, pagesize,
-            result => {
-                // On Success code here
-            },
-            error => {
-                // Handle errors here
-            });
-    }
-
-    getById(dataModelName, dataModelId) {
-        this.mm.getById(dataModelName, dataModelId,
-            result => {
-                // On Success code here
-            },
-            error => {
-                // Handle errors here
-            })
-    }
-
-    put(dataModelName, dataModelObject) {
-        this.mm.put(dataModelName, dataModelObject,
-            result => {
-                // On Success code here
-            }, error => {
-                // Handle errors here
-            })
-    }
-
-    validatePut(formObj, dataModelName, dataModelObject) {
-        this.mm.validatePut(formObj, dataModelName, dataModelObject,
-            result => {
-                // On Success code here
-            }, error => {
-                // Handle errors here
-            })
-    }
-
-    update(dataModelName, update, filter, options) {
-        const updateObject = {
-            update: update,
-            filter: filter,
-            options: options
-        };
-        this.mm.update(dataModelName, updateObject,
-            result => {
-                //  On Success code here
-            }, error => {
-                // Handle errors here
-            })
-    }
-
-    delete(dataModelName, filter) {
-        this.mm.delete(dataModelName, filter,
-            result => {
-                // On Success code here
-            }, error => {
-                // Handle errors here
-            })
-    }
-
-    deleteById(dataModelName, dataModelId) {
-        this.mm.deleteById(dataModelName, dataModelId,
-            result => {
-                // On Success code here
-            }, error => {
-                // Handle errors here
-            })
-    }
-
-    updateById(dataModelName, dataModelId, dataModelObj) {
-        this.mm.updateById(dataModelName, dataModelId, dataModelObj,
-            result => {
-                // On Success code here
-            }, error => {
-                // Handle errors here
-            })
-    }
-
+    
 
 }

@@ -14,22 +14,22 @@
                 </div>
               </div>
               <table mat-table [dataSource]="dataSource" matSort class="table-width-fix">
-                <tr mat-header-row *matHeaderRowDef="[&apos;index&apos;,&apos;firstName&apos;,&apos;lastName&apos;,&apos;position&apos;,&apos;experience&apos;,&apos;workingcompany&apos;,&apos;ContactNo&apos;]"></tr>
-                <tr mat-row *matRowDef="let row; columns: [&apos;index&apos;,&apos;firstName&apos;,&apos;lastName&apos;,&apos;position&apos;,&apos;experience&apos;,&apos;workingcompany&apos;,&apos;ContactNo&apos;];"></tr>
+                <tr mat-header-row *matHeaderRowDef="[&apos;index&apos;,&apos;firstname&apos;,&apos;lastname&apos;,&apos;position&apos;,&apos;experience&apos;,&apos;presentWorkingCompany&apos;,&apos;phone&apos;]"></tr>
+                <tr mat-row *matRowDef="let row; columns: [&apos;index&apos;,&apos;firstname&apos;,&apos;lastname&apos;,&apos;position&apos;,&apos;experience&apos;,&apos;presentWorkingCompany&apos;,&apos;phone&apos;];"></tr>
 
                 <ng-container matColumnDef="index">
                   <th mat-header-cell *matHeaderCellDef mat-sort-header class="tab-developerheader">No</th>
                   <td mat-cell *matCellDef="let table; let i = index;" class="tab-developerdata">{{i + 1}}</td>
                 </ng-container>
 
-                <ng-container matColumnDef="firstName">
+                <ng-container matColumnDef="firstname">
                   <th mat-header-cell *matHeaderCellDef mat-sort-header class="tab-developerheader">First Name</th>
-                  <td mat-cell *matCellDef="let table; let i = index;" class="tab-developerdata">{{table.firstName}}</td>
+                  <td mat-cell *matCellDef="let table; let i = index;" class="tab-developerdata">{{table.firstname}}</td>
                 </ng-container>
 
-                <ng-container matColumnDef="lastName">
+                <ng-container matColumnDef="lastname">
                   <th mat-header-cell *matHeaderCellDef mat-sort-header class="tab-developerheader">Last Name</th>
-                  <td mat-cell *matCellDef="let table; let i = index;" class="tab-developerdata">{{table.lastName}}</td>
+                  <td mat-cell *matCellDef="let table; let i = index;" class="tab-developerdata">{{table.lastname}}</td>
                 </ng-container>
 
                 <ng-container matColumnDef="position">
@@ -42,14 +42,14 @@
                   <td mat-cell *matCellDef="let table; let i = index;" class="tab-developerdata">{{table.experience}}</td>
                 </ng-container>
 
-                <ng-container matColumnDef="workingcompany">
+                <ng-container matColumnDef="presentWorkingCompany">
                   <th mat-header-cell *matHeaderCellDef mat-sort-header class="tab-developerheader">Present Working Company</th>
-                  <td mat-cell *matCellDef="let table; let i = index;" class="tab-developerdata">{{table.workingcompany}}</td>
+                  <td mat-cell *matCellDef="let table; let i = index;" class="tab-developerdata">{{table.presentWorkingCompany}}</td>
                 </ng-container>
 
-                <ng-container matColumnDef="ContactNo">
+                <ng-container matColumnDef="phone">
                   <th mat-header-cell *matHeaderCellDef mat-sort-header class="tab-developerheader">Contact No</th>
-                  <td mat-cell *matCellDef="let table; let i = index;" class="tab-developerdata">{{table.ContactNo}}</td>
+                  <td mat-cell *matCellDef="let table; let i = index;" class="tab-developerdata">{{table.phone}}</td>
                 </ng-container>
               </table>
               <mat-paginator [length]="10" [pageSize]="3" [pageSizeOptions]="[5, 10, 25, 100]">

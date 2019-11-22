@@ -1,12 +1,12 @@
 /*DEFAULT GENERATED TEMPLATE. DO NOT CHANGE SELECTOR TEMPLATE_URL AND CLASS NAME*/
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, Inject } from '@angular/core'
 import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService, NSnackbarService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 import { ReactiveFormsModule, FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { partnerservice } from '../../sd-services/partnerservice';
-import { loginservice } from '../../sd-services/loginservice';
+import { VERSION, MatDialogRef, MatDialog, MatSnackBar, MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
     selector: 'bh-partner_addlead',
@@ -16,21 +16,27 @@ import { loginservice } from '../../sd-services/loginservice';
 export class partner_addleadComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
     savedata;
-    profileForm: FormGroup;
-    userId;
+    leadForm: FormGroup;
     data;
     rapdata;
-    constructor(private bdms: NDataModelService, private fb: FormBuilder, private partnerservice: partnerservice, private alertService: NSnackbarService, private loginservice: loginservice) {
+    constructor(private bdms: NDataModelService,
+        private fb: FormBuilder,
+        private partnerservice: partnerservice,
+        private alertService: NSnackbarService,
+        @Inject(MAT_DIALOG_DATA) private userId: any,
+    ) {
         super();
         this.mm = new ModelMethods(bdms);
+
     }
 
 
     ngOnInit() {
-        this.profileForm = this.fb.group({
+        // console.log(this.userId);
+        this.leadForm = this.fb.group({
             organisationName: ['', [Validators.required, Validators.maxLength(30), Validators.pattern(/^[a-zA-Z]+$/)]],
             location: ['', [Validators.maxLength(30), Validators.pattern(/^[a-zA-Z]+$/)]],
-            orgWebsite: ['', [Validators.required, Validators.maxLength(20), Validators.pattern(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/)]],
+            orgWebsite: ['', [Validators.required, Validators.maxLength(20), Validators.pattern(/^((https?|ftp|smtp):\/\/)?(www.)?[a-z0-9]+\.[a-z]+(\/[a-zA-Z0-9#]+\/?)*$/)]],
             comment: ['', [Validators.maxLength(100), Validators.pattern(/^[\w\s]+$/)]],
             contactDetails: ['', [Validators.required, Validators.maxLength(10), Validators.pattern(/^[0-9]*$/)]],
             leadGeneratedDate: [''],
@@ -38,113 +44,25 @@ export class partner_addleadComponent extends NBaseComponent implements OnInit {
         });
     }
 
-    get organisationName() { return this.profileForm.get('organisationName') }
-    get orgWebsite() { return this.profileForm.get('orgWebsite') }
-    get location() { return this.profileForm.get('location') }
-    get comment() { return this.profileForm.get('comment') }
-    get contactDetails() { return this.profileForm.get('contactDetails') }
+    get organisationName() { return this.leadForm.get('organisationName') }
+    get orgWebsite() { return this.leadForm.get('orgWebsite') }
+    get location() { return this.leadForm.get('location') }
+    get comment() { return this.leadForm.get('comment') }
+    get contactDetails() { return this.leadForm.get('contactDetails') }
 
-   async savelead() {
-        this.dm.partner_addLead = this.profileForm.value;
-        this.data = this.dm.partner_addLead;
-       let userdata= (await this.loginservice.getCurrentUserId().then(result => {
-            this.data.userId = result.local.result;
-        }));
-        if (this.profileForm.valid) {
-            this.partnerservice.savelead(this.data);
+    async savelead() {
+        if (this.leadForm.valid) {
+            this.dm.partner_addlead = this.leadForm.value;
+            this.data = this.dm.partner_addlead;
+            this.data.userId = this.userId;
+            await this.partnerservice.savelead(this.data);
+            this.alertService.openSnackBar('Lead created');
         }
         else {
             this.alertService.openSnackBar('fill all the details');
         }
 
     }
-
-    get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
-        this.mm.get(dataModelName, filter, keys, sort, pagenumber, pagesize,
-            result => {
-                // On Success code here
-            },
-            error => {
-                // Handle errors here
-            });
-    }
-
-    getById(dataModelName, dataModelId) {
-        this.mm.getById(dataModelName, dataModelId,
-            result => {
-                // On Success code here
-            },
-            error => {
-                // Handle errors here
-            })
-    }
-
-    put(dataModelName, dataModelObject) {
-        this.mm.put(dataModelName, dataModelObject,
-            result => {
-                // On Success code here
-            }, error => {
-                // Handle errors here
-            })
-    }
-
-    validatePut(formObj, dataModelName, dataModelObject) {
-        this.mm.validatePut(formObj, dataModelName, dataModelObject,
-            result => {
-                // On Success code here
-            }, error => {
-                // Handle errors here
-            })
-    }
-
-    update(dataModelName, update, filter, options) {
-        const updateObject = {
-            update: update,
-            filter: filter,
-            options: options
-        };
-        this.mm.update(dataModelName, updateObject,
-            result => {
-                //  On Success code here
-            }, error => {
-                // Handle errors here
-            })
-    }
-
-    delete(dataModelName, filter) {
-        this.mm.delete(dataModelName, filter,
-            result => {
-                // On Success code here
-            }, error => {
-                // Handle errors here
-            })
-    }
-
-    deleteById(dataModelName, dataModelId) {
-        this.mm.deleteById(dataModelName, dataModelId,
-            result => {
-                // On Success code here
-            }, error => {
-                // Handle errors here
-            })
-    }
-
-    updateById(dataModelName, dataModelId, dataModelObj) {
-        this.mm.updateById(dataModelName, dataModelId, dataModelObj,
-            result => {
-                // On Success code here
-            }, error => {
-                // Handle errors here
-            })
-    }
-
-    // submit(data) {
-    //     let partid=sessionStorage.getItem('id');
-    // let obj={partner_id:partid,organisationName:data.organisationName,orgWebsite:data.orgWebsite,location:data.location,opportunityType:data.opportunityType,leadGeneratedDate:data.leadGeneratedDate,contactDetails:data.contactDetails,comment:data.comment};
-    // console.log(obj);
-    // this.partnerservice.saveleadata(obj);
-    // this.profileForm.reset();
-    // }
 
 
 }

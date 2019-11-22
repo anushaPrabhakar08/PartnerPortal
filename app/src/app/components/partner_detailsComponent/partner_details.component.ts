@@ -16,27 +16,13 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { fileService } from '../../sd-services/fileService';
 import { Title } from '@angular/platform-browser';
 
-export interface PeriodicElement {
-  agreementUploaded: string;
-  no: number;
-}
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  {no: 1, agreementUploaded: "sample" },
-  {no: 2, agreementUploaded: "sample" },
-  {no: 3, agreementUploaded: "sample" },
-  {no: 4, agreementUploaded: "sample" }
-];
-//const LEADS_DATA: LeadsElement[] = [];
 @Component({
     selector: 'bh-partner_details',
     templateUrl: './partner_details.template.html'
 })
 
 export class partner_detailsComponent extends NBaseComponent implements OnInit {
-
-    displayedColumns: string[] = ['no','agreementUploaded' ];
-    agreementDataSource = ELEMENT_DATA;
 
     mm: ModelMethods;
     data;
@@ -46,7 +32,8 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
     @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
     @ViewChild(MatPaginator, { static: true }) leadPaginator: MatPaginator;
     id;
-    P_data;
+    userData: any;
+    userCompanyData;
     dataSource = new MatTableDataSource(this.leaddata);
     leadsDataSource = new MatTableDataSource(this.devdata);
     getdevdata;
@@ -54,6 +41,8 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
     uploadData = false;
     formData = new FormData();
     previewImage;
+    agreementData;
+    agreementDataSource = new MatTableDataSource(this.agreementData);
 
     profileForm = new FormGroup({
         companyName: new FormControl(''),
@@ -64,7 +53,6 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
     personalForm = new FormGroup({
         firstName: new FormControl(''),
         lastName: new FormControl(''),
-        // country: new FormControl(''),
         mobileNumber: new FormControl(''),
         emailId: new FormControl(''),
         address: new FormControl(' '),
@@ -83,6 +71,30 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
         this.mm = new ModelMethods(bdms);
     }
 
+    async ngOnInit() {
+        this.titleService.setTitle('Partner Details');
+        this.id = this.route.snapshot.paramMap.get('_id');
+        this.dataSource.paginator = this.paginator;
+        this.userCompanyData = (await this.channelservice.getPartnerCompany({ userId: this.id })).local.result;
+        this.profileForm.patchValue({
+            companyName: this.userCompanyData.name,
+            companyWebsite: this.userCompanyData.website,
+            companyType: this.userCompanyData.industry,
+            numberofEmployees: this.userCompanyData.size,
+        });
+        this.userData = (await this.channelservice.getPartner({ _id: this.id })).local.result;
+        this.personalForm.patchValue({
+            firstName: this.userData.firstname,
+            lastName: this.userData.lastname,
+            mobileNumber: this.userData.phone,
+            emailId: this.userData.email,
+            designation: this.userData.position,
+            address: this.userData.address
+        });
+        this.getDevelopers();
+        this.getLeads();
+        this.getAgreements();
+    }
 
     preview(event) {
         if (event && event[0]) {
@@ -97,16 +109,20 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
             }
         }
     }
+
     uploadFile(event) {
         if (this.uploadData) {
             this.upload(event);
             this.resetUpload(event);
         }
     }
+
     async upload(event) {
         let result = (await this.fileService.sendFile(this.formData)).local.response;
         this.alertService.openSnackBar(result.message);
+        this.getAgreements();
     }
+
     resetUpload(event) {
         this.uploadData = false;
         event.file = null;
@@ -119,7 +135,7 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
     addDeveloper() {
         const dialogRef = this.dialog.open(partner_adddeveloperComponent, {
             width: '450px',
-            data: 'hello'
+            data: this.id
         });
         dialogRef.afterClosed().subscribe(result => {
             this.ngOnInit();
@@ -129,13 +145,13 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
     previewCertificate() {
         const dialogRef = this.dialog.open(partner_adddeveloperComponent, {
             width: '450px',
-            data: 'hello'
+            data: this.id
         });
         dialogRef.afterClosed().subscribe(result => {
             this.ngOnInit();
         });
     }
-    //titles = [{ name: "Experiment 1" }, { name: "Experiment 2" }];
+
 
     applyFilter(filterValue: string) {
         filterValue = filterValue.trim();
@@ -152,43 +168,11 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
         const dialogRef = this.dialog.open(uploadcertificateComponent, {
             width: '450px',
             //disableClose: true,
-            data: {id: this.id, uploadView:upload}
+            data: { id: this.id, uploadView: upload }
         });
     }
 
-    async ngOnInit() {
-        this.titleService.setTitle('Partner Details');
-        this.id = this.route.snapshot.paramMap.get('_id');
-        this.dataSource.paginator = this.paginator;
-        this.getdevs();
 
-        this.getleads();
-        this.getdata();
-
-
-        this.P_data = (await this.channelservice.getPerticularPartner(this.id)).local.result;
-
-
-
-        this.profileForm.patchValue({
-            companyName: this.P_data.companyName,
-            companyWebsite: this.P_data.companyWebsite,
-            companyType: this.P_data.companyType,
-            numberofEmployees: this.P_data.numberofEmployees,
-        });
-
-        this.personalForm.patchValue({
-            firstName: this.P_data.firstName,
-            lastName: this.P_data.lastName,
-            //   country: this.P_data.country,
-            mobileNumber: this.P_data.mobileNumber,
-            emailId: this.P_data.emailId,
-            designation: this.P_data.designation,
-            address: this.P_data.address
-        });
-
-
-    }
     openDeleteDialog(data) {
         const dialogRef = this.dialog.open(deletedeveloperComponent, {
             width: '450px',
@@ -198,123 +182,24 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
             this.ngOnInit();
         });
     }
-    async getdata() {
-        try {
-            let partnerid = sessionStorage.getItem('id');
-            this.data = this.leadObjtoArr((await this.partnerservice.getdeveloper(partnerid)).local.result);
-            this.dataSource = new MatTableDataSource(this.data);
-            this.dataSource.paginator = this.paginator;
-            this.dataSource.sort = this.sort;
-        }
-        catch (e) {
-            console.log(e);
-        }
 
+    objtoArr(obj) {
+        return Array.from(Object.keys(obj), k => obj[k]);
     }
 
-    async getleads() {
-        this.leaddata = this.leadObjtoArr((await this.partnerservice.getleadslist(this.id)).local.resultleads);
+    async getLeads() {
+        this.leaddata = this.objtoArr((await this.partnerservice.getPartnerLeads({ userId: this.id })).local.result);
         this.leadsDataSource.data = this.leaddata;
         this.leadsDataSource.paginator = this.leadPaginator;
+    }
 
-    }
-    leadObjtoArr(obj) {
-        return Array.from(Object.keys(obj), k => obj[k]);
-    }
-    async getdevs() {
-        this.devdata = this.developerObjtoArr((await this.partnerservice.getdeveloper(this.id)).local.result);
+    async getDevelopers() {
+        this.devdata = this.objtoArr((await this.partnerservice.getDevelopers({ userId: this.id })).local.result);
         this.dataSource.data = this.devdata;
     }
-    developerObjtoArr(obj) {
-        return Array.from(Object.keys(obj), k => obj[k]);
+    async getAgreements() {
+        this.agreementData = this.objtoArr((await this.channelservice.getPartnerAgreement({ userId: this.id, type: 'aggreement' })).local.result);
+        this.agreementDataSource.data = this.agreementData;
     }
-
-
-    // async getleads() {
-    //     this.data = (await this.partnerservice.getleadsdata()).local.result;
-
-    //     console.log(this.data);
-    // }
-
-
-    get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
-        this.mm.get(dataModelName, filter, keys, sort, pagenumber, pagesize,
-            result => {
-                // On Success code here
-            },
-            error => {
-                // Handle errors here
-            });
-    }
-
-    getById(dataModelName, dataModelId) {
-        this.mm.getById(dataModelName, dataModelId,
-            result => {
-                // On Success code here
-            },
-            error => {
-                // Handle errors here
-            })
-    }
-
-    put(dataModelName, dataModelObject) {
-        this.mm.put(dataModelName, dataModelObject,
-            result => {
-                // On Success code here
-            }, error => {
-                // Handle errors here
-            })
-    }
-
-    validatePut(formObj, dataModelName, dataModelObject) {
-        this.mm.validatePut(formObj, dataModelName, dataModelObject,
-            result => {
-                // On Success code here
-            }, error => {
-                // Handle errors here
-            })
-    }
-
-    update(dataModelName, update, filter, options) {
-        const updateObject = {
-            update: update,
-            filter: filter,
-            options: options
-        };
-        this.mm.update(dataModelName, updateObject,
-            result => {
-                //  On Success code here
-            }, error => {
-                // Handle errors here
-            })
-    }
-
-    delete(dataModelName, filter) {
-        this.mm.delete(dataModelName, filter,
-            result => {
-                // On Success code here
-            }, error => {
-                // Handle errors here
-            })
-    }
-
-    deleteById(dataModelName, dataModelId) {
-        this.mm.deleteById(dataModelName, dataModelId,
-            result => {
-                // On Success code here
-            }, error => {
-                // Handle errors here
-            })
-    }
-
-    updateById(dataModelName, dataModelId, dataModelObj) {
-        this.mm.updateById(dataModelName, dataModelId, dataModelObj,
-            result => {
-                // On Success code here
-            }, error => {
-                // Handle errors here
-            })
-    }
-
 
 }

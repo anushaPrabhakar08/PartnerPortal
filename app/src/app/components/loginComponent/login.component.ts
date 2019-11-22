@@ -42,7 +42,7 @@ export class loginComponent extends NBaseComponent implements OnInit {
             result.then(data => {
                 if (data.local.result.status === 'success') {
                     this.loginservice.authenticated(data.local.result)
-                    if (this.userType) {
+                    if (userdata.type == 'C') {
                         this.router.navigateByUrl('/admin');
                     } else {
                         this.router.navigateByUrl('/partner');

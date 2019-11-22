@@ -25,9 +25,9 @@
         <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
           <mat-checkbox required>Remember me?</mat-checkbox>
         </div>
-        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="userType ? false: true" [fxHide]="userType ? true: false">
           <p class="text-warn text-center">
-            {{ userType ? &apos;Change Password&apos;: &apos;Forgot Password?&apos;}} </p>
+            Forgot Password?</p>
         </div>
       </div>
       <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-raised-button class="w-100" color="warn" type="submit">Sign In</button></div>

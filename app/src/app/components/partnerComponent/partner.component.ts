@@ -10,6 +10,7 @@ import { Router, ActivatedRoute, ActivatedRouteSnapshot, } from '@angular/router
 import { Subscription } from 'rxjs';
 import { MediaObserver } from '@angular/flex-layout';
 import { Title } from '@angular/platform-browser';
+
 /**
  * Service import Example :
  * import { HeroService } from '../../services/hero/hero.service';
@@ -33,33 +34,25 @@ export class partnerComponent extends NBaseComponent implements OnInit {
     pageTitle;
     data = "notification";
     badgeCount: Number;
-    constructor(private bdms: NDataModelService, 
-    private channelservice: channelservice, 
-    private router: Router, route: ActivatedRoute, 
-    public media: MediaObserver, 
-    public title: Title,
-     private loginservice: loginservice,) {
+    constructor(private bdms: NDataModelService,
+        private channelservice: channelservice,
+        private router: Router, route: ActivatedRoute,
+        public media: MediaObserver,
+        public title: Title,
+        public loginservice: loginservice, ) {
         super();
         this.mm = new ModelMethods(bdms);
         this.badgeCount = 1;
 
     }
 
-      ngOnInit() {
+    ngOnInit() {
         // let getd = sessionStorage.getItem('id');
         // console.log(getd);
         // this.partnerdata = (await this.channelservice.getparticularpartner(getd)).local.result;
         // console.log(this.partnerdata);
 
-        this.loginservice.isLoggedIn().then(data => {
-            if (!data.local.state) {
-                this.loginservice.logout();
-                if (!this.loggedIn) {
-                    this.loggedIn = false;
-                    this.router.navigateByUrl('/login');
-                }
-            }
-        });
+        this.loginservice.isLoggedIn('P');
 
     }
 

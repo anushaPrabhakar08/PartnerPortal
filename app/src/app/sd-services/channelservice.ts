@@ -94,7 +94,7 @@ export class channelservice {
       throw e;
     }
   }
-  public async getPerticularPartner(id = undefined, ...others) {
+  public async getPartner(id = undefined, ...others) {
     try {
       let bh = {
         input: { id: id },
@@ -103,7 +103,7 @@ export class channelservice {
       bh = this.__constructDefault(bh);
 
       bh = await this.sd_8jUiKC2c0l5ZLdQA(bh);
-      //appendnew_next_getPerticularPartner
+      //appendnew_next_getPartner
       //Start formatting output variables
       let outputVariables = { input: {}, local: { result: bh.local.result } };
       //End formatting output variables
@@ -112,16 +112,34 @@ export class channelservice {
       throw e;
     }
   }
-  public async getparticularpartner(obj = undefined, ...others) {
+  public async getPartnerCompany(userId = undefined, ...others) {
     try {
       let bh = {
-        input: { obj: obj },
-        local: { modlrapi: undefined, result: undefined }
+        input: { userId: userId },
+        local: { result: undefined, modlerUrlApi: undefined }
       };
       bh = this.__constructDefault(bh);
 
-      bh = await this.sd_xnqZ2i8f6Ndw2fDs(bh);
-      //appendnew_next_getparticularpartner
+      bh = await this.sd_OJiyGHxlR90Qi3Wz(bh);
+      //appendnew_next_getPartnerCompany
+      //Start formatting output variables
+      let outputVariables = { input: {}, local: { result: bh.local.result } };
+      //End formatting output variables
+      return outputVariables;
+    } catch (e) {
+      throw e;
+    }
+  }
+  public async getPartnerAgreement(data = undefined, ...others) {
+    try {
+      let bh = {
+        input: { data: data },
+        local: { result: undefined, apiUrl: undefined }
+      };
+      bh = this.__constructDefault(bh);
+
+      bh = await this.sd_xHKMCThdxwJbxsaK(bh);
+      //appendnew_next_getPartnerAgreement
       //Start formatting output variables
       let outputVariables = { input: {}, local: { result: bh.local.result } };
       //End formatting output variables
@@ -163,7 +181,7 @@ export class channelservice {
   }
   async sd_qC0rhOq7GaFqQ2WM(bh) {
     try {
-      bh.local.modlerUrlApi = `http://localhost:24483/api/getpartnerdata`;
+      bh.local.modlerUrlApi = 'http://localhost:24483/api/getPartners?type=P';
 
       bh = await this.sd_e4HTIIEhpDWx2cjq(bh);
       //appendnew_next_sd_qC0rhOq7GaFqQ2WM
@@ -192,7 +210,7 @@ export class channelservice {
   }
   async sd_8jUiKC2c0l5ZLdQA(bh) {
     try {
-      bh.local.modlerUrlApi = `http://localhost:24483/api/getPerticularPartner?_id=${bh.input.id}`;
+      bh.local.modlerUrlApi = 'http://localhost:24483/api/getPartner';
 
       bh = await this.sd_GpnwOR5HHkYnszkb(bh);
       //appendnew_next_sd_8jUiKC2c0l5ZLdQA
@@ -205,7 +223,7 @@ export class channelservice {
     try {
       let requestOptions = {
         url: bh.local.modlerUrlApi,
-        method: 'get',
+        method: 'post',
         responseType: 'json',
         reportProgress: undefined,
         headers: {},
@@ -219,30 +237,59 @@ export class channelservice {
       throw e;
     }
   }
-  async sd_xnqZ2i8f6Ndw2fDs(bh) {
+  async sd_OJiyGHxlR90Qi3Wz(bh) {
     try {
-      bh.local.modlrapi = `http://localhost:24483/api/getPerticularPartner?_id=${bh.input.obj}`;
+      bh.local.modlerUrlApi = 'http://localhost:24483/api/getPartnerCompany';
 
-      bh = await this.sd_fDrdNXDkf9EZVSts(bh);
-      //appendnew_next_sd_xnqZ2i8f6Ndw2fDs
+      bh = await this.sd_XCHCRGN8KEJdXqFB(bh);
+      //appendnew_next_sd_OJiyGHxlR90Qi3Wz
       return bh;
     } catch (e) {
       throw e;
     }
   }
-  async sd_fDrdNXDkf9EZVSts(bh) {
+  async sd_XCHCRGN8KEJdXqFB(bh) {
     try {
       let requestOptions = {
-        url: bh.local.modlrapi,
-        method: 'get',
+        url: bh.local.modlerUrlApi,
+        method: 'post',
         responseType: 'json',
         reportProgress: undefined,
         headers: {},
         params: {},
-        body: undefined
+        body: bh.input.userId
       };
       bh.local.result = await this.sdService.nHttpRequest(requestOptions);
-      //appendnew_next_sd_fDrdNXDkf9EZVSts
+      //appendnew_next_sd_XCHCRGN8KEJdXqFB
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_xHKMCThdxwJbxsaK(bh) {
+    try {
+      bh.local.apiUrl = 'http://localhost:24483/api/getPartnerAgreement';
+
+      bh = await this.sd_NVLh3vcypRNTqz9R(bh);
+      //appendnew_next_sd_xHKMCThdxwJbxsaK
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_NVLh3vcypRNTqz9R(bh) {
+    try {
+      let requestOptions = {
+        url: bh.local.apiUrl,
+        method: 'post',
+        responseType: 'json',
+        reportProgress: undefined,
+        headers: {},
+        params: {},
+        body: bh.input.data
+      };
+      bh.local.result = await this.sdService.nHttpRequest(requestOptions);
+      //appendnew_next_sd_NVLh3vcypRNTqz9R
       return bh;
     } catch (e) {
       throw e;

@@ -11,22 +11,22 @@
           </div>
         </div>
         <table mat-table [dataSource]="dataSource" matSort class="table-width-fix">
-          <tr mat-header-row *matHeaderRowDef="[&apos;index&apos;,&apos;companyName&apos;,&apos;companyType&apos;,&apos;country&apos;,&apos;companyWebsite&apos;]"></tr>
-          <tr mat-row (click)="showPartnerDetails(row)" *matRowDef="let row; columns: [&apos;index&apos;,&apos;companyName&apos;,&apos;companyType&apos;,&apos;country&apos;,&apos;companyWebsite&apos;];"></tr>
+          <tr mat-header-row *matHeaderRowDef="[&apos;index&apos;,&apos;name&apos;,&apos;industry&apos;,&apos;country&apos;,&apos;website&apos;]"></tr>
+          <tr mat-row (click)="showPartnerDetails(row)" *matRowDef="let row; columns: [&apos;index&apos;,&apos;name&apos;,&apos;industry&apos;,&apos;country&apos;,&apos;website&apos;];"></tr>
 
           <ng-container matColumnDef="index">
             <th mat-header-cell *matHeaderCellDef mat-sort-header class="tab-header">No</th>
             <td mat-cell *matCellDef="let table; let i = index;" class="tab-data">{{i+1}}</td>
           </ng-container>
 
-          <ng-container matColumnDef="companyName">
+          <ng-container matColumnDef="name">
             <th mat-header-cell *matHeaderCellDef mat-sort-header class="tab-header">Company Name</th>
-            <td mat-cell *matCellDef="let table; let i = index;" class="tab-data">{{table.companyName}}</td>
+            <td mat-cell *matCellDef="let table; let i = index;" class="tab-data">{{table.name}}</td>
           </ng-container>
 
-          <ng-container matColumnDef="companyType">
+          <ng-container matColumnDef="industry">
             <th mat-header-cell *matHeaderCellDef mat-sort-header class="tab-header">Company Type</th>
-            <td mat-cell *matCellDef="let table; let i = index;" class="tab-data">{{table.companyType}}</td>
+            <td mat-cell *matCellDef="let table; let i = index;" class="tab-data">{{table.industry}}</td>
           </ng-container>
 
           <ng-container matColumnDef="country">
@@ -34,9 +34,9 @@
             <td mat-cell *matCellDef="let table; let i = index;" class="tab-data">{{table.country}}</td>
           </ng-container>
 
-          <ng-container matColumnDef="companyWebsite">
+          <ng-container matColumnDef="website">
             <th mat-header-cell *matHeaderCellDef mat-sort-header class="tab-header">Company website</th>
-            <td mat-cell *matCellDef="let table; let i = index;" class="tab-data">{{table.companyWebsite}}</td>
+            <td mat-cell *matCellDef="let table; let i = index;" class="tab-data">{{table.website}}</td>
           </ng-container>
         </table>
         <mat-paginator [length]="10" [pageSize]="5" [pageSizeOptions]="[5, 10, 25, 100]">

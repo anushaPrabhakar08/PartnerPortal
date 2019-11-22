@@ -449,7 +449,7 @@
                                         },
                                         {
                                             "_key": "Mapping",
-                                            "_value": "{{table.firstName}}",
+                                            "_value": "{{table.firstname}}",
                                             "_type": "ma",
                                             "_attrDef": "p",
                                             "_useAsLabel": true
@@ -506,7 +506,7 @@
                                         },
                                         {
                                             "_key": "Mapping",
-                                            "_value": "{{table.lastName}}",
+                                            "_value": "{{table.lastname}}",
                                             "_type": "ma",
                                             "_attrDef": "p",
                                             "_useAsLabel": true
@@ -765,7 +765,7 @@
                                         },
                                         {
                                             "_key": "Mapping",
-                                            "_value": "{{table.workingcompany}}",
+                                            "_value": "{{table.presentWorkingCompany}}",
                                             "_type": "ma",
                                             "_attrDef": "p",
                                             "_useAsLabel": true
@@ -822,7 +822,7 @@
                                         },
                                         {
                                             "_key": "Mapping",
-                                            "_value": "{{table.ContactNo}}",
+                                            "_value": "{{table.phone}}",
                                             "_type": "ma",
                                             "_attrDef": "p",
                                             "_useAsLabel": true

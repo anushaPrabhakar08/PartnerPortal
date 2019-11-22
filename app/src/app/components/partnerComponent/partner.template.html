@@ -15,7 +15,7 @@
         <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxShow.It-sm="true">
           <div fxLayout="column wrap" style="margin-top:10px;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><span [matBadge]="badgeCount" matBadgeColor="warn" [matBadgeHidden]="badgeCount===0">
                 <button mat-mini-fab style="background:rgba(241, 8, 8, 0.82); color: #fff;" [matMenuTriggerFor]="menu" (click)="clearCount()"><mat-icon>notification_important </mat-icon></button><mat-menu #menu="matMenu"><button mat-menu-item routerLink="/partner/PartnerNotification"> Neutrinos {{data}} </button></mat-menu></span></div>
-          <div fxLayout="column " style="margin-top:10px;" class="logout-btn" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-button routerLink="/home">Logout</button></div>
+          <div fxLayout="column " style="margin-top:10px;" class="logout-btn" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-button (click)="loginservice.logout()">Logout</button></div>
         </div>
       </div>
     </mat-toolbar>

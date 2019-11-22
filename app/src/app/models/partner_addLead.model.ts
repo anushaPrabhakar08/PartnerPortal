@@ -20,4 +20,7 @@ export class partner_addLead {
   @JsonProperty('comment', String, true)
   public comment: string = undefined;
 
+  @JsonProperty('userId', String, true)
+  public userId: string = undefined;
+
 }

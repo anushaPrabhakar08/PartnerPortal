@@ -39,7 +39,7 @@ export class deletedeveloperComponent extends NBaseComponent implements OnInit {
 
     }
     async deletedeveloper(){
-         this.partnerservice.deletedeveloper(this.data);
+        //  this.partnerservice.deletedeveloper(this.data);
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {

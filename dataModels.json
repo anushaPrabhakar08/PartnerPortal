@@ -6,19 +6,28 @@
         "dataSource": "neutrinos-training-rt",
         "fields": [
             {
-                "name": "username",
+                "name": "email",
                 "fieldType": 2,
-                "isArray": false
+                "isArray": false,
+                "type": "string"
             },
             {
                 "name": "password",
                 "fieldType": 2,
-                "isArray": false
+                "isArray": false,
+                "type": "string"
             },
             {
                 "name": "remember",
                 "fieldType": 4,
-                "isArray": false
+                "isArray": false,
+                "type": "boolean"
+            },
+            {
+                "name": "type",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
             }
         ]
     },
@@ -242,6 +251,12 @@
             },
             {
                 "name": "comment",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "userId",
                 "fieldType": 2,
                 "isArray": false,
                 "type": "string"

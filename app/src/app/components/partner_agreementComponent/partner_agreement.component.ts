@@ -7,6 +7,8 @@ import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 import { MatDialog } from '@angular/material';
 import { viewagreementComponent } from '../viewagreementComponent/viewagreement.component';
 import { Title } from '@angular/platform-browser';
+import { channelservice } from '../../sd-services/channelservice';
+import { loginservice } from '../../sd-services/loginservice';
 
 
 @Component({
@@ -16,102 +18,38 @@ import { Title } from '@angular/platform-browser';
 
 export class partner_agreementComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
-    id;
-    constructor(private bdms: NDataModelService, private dialog: MatDialog, private title:Title) {
+    userId;
+    agreementData;
+    constructor(private bdms: NDataModelService,
+        private dialog: MatDialog,
+        private title: Title,
+        private channelservice: channelservice,
+        private loginservice: loginservice) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
-    ngOnInit() {
+    async ngOnInit() {
         this.title.setTitle('View Agreement');
-        this.id = sessionStorage.getItem('id');
+        let user = (await this.loginservice.getCurrentUserId().then(result => { this.userId = result.local.result}));
+        this.getAgreements();
     }
 
     openAgreement() {
         console.log("pdf Open");
         const dialogRef = this.dialog.open(viewagreementComponent, {
-            data: this.id
+            data: this.userid
         });
     }
-
-    get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
-        this.mm.get(dataModelName, filter, keys, sort, pagenumber, pagesize,
-            result => {
-                // On Success code here
-            },
-            error => {
-                // Handle errors here
-            });
+    objtoArr(obj) {
+        return Array.from(Object.keys(obj), k => obj[k]);
     }
 
-    getById(dataModelName, dataModelId) {
-        this.mm.getById(dataModelName, dataModelId,
-            result => {
-                // On Success code here
-            },
-            error => {
-                // Handle errors here
-            })
+    async getAgreements() {
+        this.agreementData = this.objtoArr((await this.channelservice.getPartnerAgreement({ userId: this.userId, type: 'aggreement' })).local.result);
+        console.log(this.agreementData);
     }
 
-    put(dataModelName, dataModelObject) {
-        this.mm.put(dataModelName, dataModelObject,
-            result => {
-                // On Success code here
-            }, error => {
-                // Handle errors here
-            })
-    }
-
-    validatePut(formObj, dataModelName, dataModelObject) {
-        this.mm.validatePut(formObj, dataModelName, dataModelObject,
-            result => {
-                // On Success code here
-            }, error => {
-                // Handle errors here
-            })
-    }
-
-    update(dataModelName, update, filter, options) {
-        const updateObject = {
-            update: update,
-            filter: filter,
-            options: options
-        };
-        this.mm.update(dataModelName, updateObject,
-            result => {
-                //  On Success code here
-            }, error => {
-                // Handle errors here
-            })
-    }
-
-    delete(dataModelName, filter) {
-        this.mm.delete(dataModelName, filter,
-            result => {
-                // On Success code here
-            }, error => {
-                // Handle errors here
-            })
-    }
-
-    deleteById(dataModelName, dataModelId) {
-        this.mm.deleteById(dataModelName, dataModelId,
-            result => {
-                // On Success code here
-            }, error => {
-                // Handle errors here
-            })
-    }
-
-    updateById(dataModelName, dataModelId, dataModelObj) {
-        this.mm.updateById(dataModelName, dataModelId, dataModelObj,
-            result => {
-                // On Success code here
-            }, error => {
-                // Handle errors here
-            })
-    }
 
 
 }

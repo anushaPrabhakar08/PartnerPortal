@@ -156,7 +156,7 @@
         "type": "Script",
         "z": "sd_BIsXw8uCu26k89sV",
         "name": "",
-        "script": "bh.local.modlerUrlApi=`http://localhost:24483/api/getpartnerdata`;",
+        "script": "bh.local.modlerUrlApi='http://localhost:24483/api/getPartners?type=P';",
         "x": 369.03125,
         "y": 243.921875,
         "wires": [
@@ -208,7 +208,7 @@
         "id": "sd_0xqSC5ce4hW4Ystx",
         "type": "Start",
         "z": "sd_BIsXw8uCu26k89sV",
-        "name": "getPerticularPartner",
+        "name": "getPartner",
         "outputs": 1,
         "noerr": 0,
         "inputVariables": [
@@ -239,7 +239,7 @@
                 "output": false
             }
         ],
-        "functionName": "getPerticularPartner",
+        "functionName": "getPartner",
         "x": 165.18750190734863,
         "y": 380.92186737060547,
         "wires": [
@@ -256,9 +256,9 @@
         "type": "Script",
         "z": "sd_BIsXw8uCu26k89sV",
         "name": "",
-        "script": "bh.local.modlerUrlApi=`http://localhost:24483/api/getPerticularPartner?_id=${bh.input.id}`;",
-        "x": 372.03125,
-        "y": 379.921875,
+        "script": "bh.local.modlerUrlApi='http://localhost:24483/api/getPartner';",
+        "x": 374.03125,
+        "y": 377.921875,
         "wires": [
             [
                 "sd_GpnwOR5HHkYnszkb"
@@ -272,7 +272,7 @@
         "type": "HttpRequest",
         "z": "sd_BIsXw8uCu26k89sV",
         "name": "",
-        "method": "get",
+        "method": "post",
         "methodMappingObj": {},
         "urlMapping": "bh.local.modlerUrlApi",
         "urlMappingObj": {
@@ -306,15 +306,15 @@
         "generated": true
     },
     {
-        "id": "sd_tkvg5wdH7Fw5p5NR",
+        "id": "sd_KW4Rylg6L1bVB5cd",
         "type": "Start",
         "z": "sd_BIsXw8uCu26k89sV",
-        "name": "getparticularpartner",
+        "name": "getPartnerCompany",
         "outputs": 1,
         "noerr": 0,
         "inputVariables": [
             {
-                "key": "obj",
+                "key": "userId",
                 "defaultValue": {
                     "type": "str",
                     "value": ""
@@ -324,28 +324,28 @@
         ],
         "localVariables": [
             {
-                "key": "modlrapi",
-                "defaultValue": {
-                    "type": "str",
-                    "value": ""
-                },
-                "output": false
-            },
-            {
                 "key": "result",
                 "defaultValue": {
                     "type": "str",
                     "value": ""
                 },
                 "output": true
+            },
+            {
+                "key": "modlerUrlApi",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
             }
         ],
-        "functionName": "getparticularpartner",
-        "x": 191.20001220703125,
-        "y": 482.93750762939453,
+        "functionName": "getPartnerCompany",
+        "x": 175,
+        "y": 597.8125,
         "wires": [
             [
-                "sd_xnqZ2i8f6Ndw2fDs"
+                "sd_OJiyGHxlR90Qi3Wz"
             ]
         ],
         "generateNext": true,
@@ -353,38 +353,39 @@
         "serviceName": "channelservice"
     },
     {
-        "id": "sd_xnqZ2i8f6Ndw2fDs",
+        "id": "sd_OJiyGHxlR90Qi3Wz",
         "type": "Script",
         "z": "sd_BIsXw8uCu26k89sV",
         "name": "",
-        "script": "bh.local.modlrapi=`http://localhost:24483/api/getPerticularPartner?_id=${bh.input.obj}`;",
-        "x": 383.04998779296875,
-        "y": 482.93750762939453,
+        "script": "bh.local.modlerUrlApi='http://localhost:24483/api/getPartnerCompany';",
+        "x": 383.84374809265137,
+        "y": 594.8125076293945,
         "wires": [
             [
-                "sd_fDrdNXDkf9EZVSts"
+                "sd_XCHCRGN8KEJdXqFB"
             ]
         ],
         "generateNext": false,
         "generated": true
     },
     {
-        "id": "sd_fDrdNXDkf9EZVSts",
+        "id": "sd_XCHCRGN8KEJdXqFB",
         "type": "HttpRequest",
         "z": "sd_BIsXw8uCu26k89sV",
         "name": "",
-        "method": "get",
+        "method": "post",
         "methodMappingObj": {},
-        "urlMapping": "bh.local.modlrapi",
+        "urlMapping": "bh.local.modlerUrlApi",
         "urlMappingObj": {
             "mapVarType": "bh.local",
-            "mapVarValue": "modlrapi"
+            "mapVarValue": "modlerUrlApi"
         },
         "ret": "json",
         "retMappingObj": {},
+        "reqBody": "bh.input.userId",
         "reqBodyObj": {
             "mapVarType": "bh.input",
-            "mapVarValue": ""
+            "mapVarValue": "userId"
         },
         "resultMapping": "bh.local.result",
         "resultMappingObj": {
@@ -397,10 +398,111 @@
         "params": {},
         "paramsObj": [],
         "paramMappingObj": {},
-        "x": 578.050048828125,
-        "y": 492.93750762939453,
+        "x": 570.8437480926514,
+        "y": 595.7968826293945,
         "wires": [
             []
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_logXcjg0HdeacPh1",
+        "type": "Start",
+        "z": "sd_BIsXw8uCu26k89sV",
+        "name": "getPartnerAgreement",
+        "outputs": 1,
+        "noerr": 0,
+        "inputVariables": [
+            {
+                "key": "data",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "result",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": true
+            },
+            {
+                "key": "apiUrl",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "functionName": "getPartnerAgreement",
+        "x": 184.1875,
+        "y": 763.921875,
+        "wires": [
+            [
+                "sd_xHKMCThdxwJbxsaK"
+            ]
+        ],
+        "generateNext": true,
+        "generated": false,
+        "serviceName": "channelservice"
+    },
+    {
+        "id": "sd_NVLh3vcypRNTqz9R",
+        "type": "HttpRequest",
+        "z": "sd_BIsXw8uCu26k89sV",
+        "name": "",
+        "method": "post",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.apiUrl",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "apiUrl"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "reqBody": "bh.input.data",
+        "reqBodyObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "data"
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "x": 569.03125,
+        "y": 767.90625,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_xHKMCThdxwJbxsaK",
+        "type": "Script",
+        "z": "sd_BIsXw8uCu26k89sV",
+        "name": "",
+        "script": "bh.local.apiUrl='http://localhost:24483/api/getPartnerAgreement';",
+        "x": 393.03125,
+        "y": 768.921875,
+        "wires": [
+            [
+                "sd_NVLh3vcypRNTqz9R"
+            ]
         ],
         "generateNext": false,
         "generated": true

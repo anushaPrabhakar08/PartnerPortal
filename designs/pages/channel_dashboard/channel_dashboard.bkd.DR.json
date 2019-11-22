@@ -257,7 +257,7 @@
                             },
                             {
                                 "_key": "Mapping",
-                                "_value": "{{table.companyName}}",
+                                "_value": "{{table.name}}",
                                 "_type": "ma",
                                 "_attrDef": "p",
                                 "_useAsLabel": true
@@ -314,7 +314,7 @@
                             },
                             {
                                 "_key": "Mapping",
-                                "_value": "{{table.companyType}}",
+                                "_value": "{{table.industry}}",
                                 "_type": "ma",
                                 "_attrDef": "p",
                                 "_useAsLabel": true
@@ -472,7 +472,7 @@
                             },
                             {
                                 "_key": "Mapping",
-                                "_value": "{{table.companyWebsite}}",
+                                "_value": "{{table.website}}",
                                 "_type": "ma",
                                 "_attrDef": "p",
                                 "_useAsLabel": true

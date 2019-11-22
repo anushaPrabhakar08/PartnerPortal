@@ -1,11 +1,12 @@
 /*DEFAULT GENERATED TEMPLATE. DO NOT CHANGE SELECTOR TEMPLATE_URL AND CLASS NAME*/
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, Inject } from '@angular/core'
 import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
-import { NDataModelService } from 'neutrinos-seed-services';
+import { NDataModelService, NSnackbarService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 import { ReactiveFormsModule, FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { partnerservice } from '../../sd-services/partnerservice';
+import { VERSION, MatDialogRef, MatDialog, MatSnackBar, MAT_DIALOG_DATA } from '@angular/material';
 
 
 @Component({
@@ -18,20 +19,23 @@ export class partner_adddeveloperComponent extends NBaseComponent implements OnI
 
     developerForm: FormGroup;
 
-    constructor(private bdms: NDataModelService,  private fb: FormBuilder,
-    private partnerservice:partnerservice) {
+    constructor(private bdms: NDataModelService, private fb: FormBuilder,
+        @Inject(MAT_DIALOG_DATA) private userId: any,
+        private alertService: NSnackbarService,
+        private partnerservice: partnerservice) {
         super();
         this.mm = new ModelMethods(bdms);
+        // console.log(userId);
     }
 
     ngOnInit() {
-         this.developerForm = this.fb.group({
+        this.developerForm = this.fb.group({
             firstName: ['', [Validators.required, Validators.maxLength(20), Validators.pattern(/^[a-zA-Z]+$/)]],
             lastName: ['', [Validators.required, Validators.maxLength(20), Validators.pattern(/^[a-zA-Z]+$/)]],
-            email: ['', [Validators.required,  Validators.maxLength(20), Validators.pattern(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/)]],
+            email: ['', [Validators.required, Validators.maxLength(20), Validators.pattern(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/)]],
             position: [''],
             presentWorkingCompany: ['', [Validators.maxLength(30), Validators.pattern(/^[a-zA-Z]+$/)]],
-            experience: ['',[Validators.maxLength(2), Validators.pattern(/^[0-9]*$/)]],
+            experience: ['', [Validators.maxLength(2), Validators.pattern(/^[0-9]*$/)]],
             contactNo: ['', [Validators.required, Validators.maxLength(10), Validators.pattern(/^[0-9]*$/)]],
         });
     }
@@ -43,98 +47,23 @@ export class partner_adddeveloperComponent extends NBaseComponent implements OnI
     get contactNo() { return this.developerForm.get('contactNo') }
     get presentWorkingCompany() { return this.developerForm.get('presentWorkingCompany') }
 
-
-    get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
-        this.mm.get(dataModelName, filter, keys, sort, pagenumber, pagesize,
-            result => {
-                // On Success code here
-            },
-            error => {
-                // Handle errors here
-            });
-    }
-
-    getById(dataModelName, dataModelId) {
-        this.mm.getById(dataModelName, dataModelId,
-            result => {
-                // On Success code here
-            },
-            error => {
-                // Handle errors here
-            })
-    }
-
-    put(dataModelName, dataModelObject) {
-        this.mm.put(dataModelName, dataModelObject,
-            result => {
-                // On Success code here
-            }, error => {
-                // Handle errors here
-            })
-    }
-
-    validatePut(formObj, dataModelName, dataModelObject) {
-        this.mm.validatePut(formObj, dataModelName, dataModelObject,
-            result => {
-                // On Success code here
-            }, error => {
-                // Handle errors here
-            })
-    }
-
-    update(dataModelName, update, filter, options) {
-        const updateObject = {
-            update: update,
-            filter: filter,
-            options: options
-        };
-        this.mm.update(dataModelName, updateObject,
-            result => {
-                //  On Success code here
-            }, error => {
-                // Handle errors here
-            })
-    }
-
-    delete(dataModelName, filter) {
-        this.mm.delete(dataModelName, filter,
-            result => {
-                // On Success code here
-            }, error => {
-                // Handle errors here
-            })
-    }
-
-    deleteById(dataModelName, dataModelId) {
-        this.mm.deleteById(dataModelName, dataModelId,
-            result => {
-                // On Success code here
-            }, error => {
-                // Handle errors here
-            })
-    }
-
-    updateById(dataModelName, dataModelId, dataModelObj) {
-        this.mm.updateById(dataModelName, dataModelId, dataModelObj,
-            result => {
-                // On Success code here
-            }, error => {
-                // Handle errors here
-            })
-    }
-
     async submit(data) {
-         let partid=sessionStorage.getItem('id');
-         let obj={partner_id:partid,
-                  firstName:data.firstName,
-                  lastName:data.lastName,
-                  position:data.position,
-                  experience:data.experience,
-                  contactNo:data.contactNo,
-                  email:data.email,
-                  presentWorkingCompany:data.presentWorkingCompany};
-       await this.partnerservice.savedev(obj);
-        console.log(data);
-             this.developerForm.reset(); 
+        if (this.developerForm.valid) {
+            let obj = {
+                userId: this.userId,
+                firstname: data.firstName,
+                lastname: data.lastName,
+                position: data.position,
+                experience: data.experience,
+                phone: data.contactNo,
+                email: data.email,
+                presentWorkingCompany: data.presentWorkingCompany
+            };
+            await this.partnerservice.addDeveloper(obj);
+            this.alertService.openSnackBar('Developer Added')
+            this.developerForm.reset();
+        } else {
+            this.alertService.openSnackBar('Please Fill Mandatory Fields')
+        }
     }
 }

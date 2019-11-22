@@ -10,6 +10,7 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 import {announcepartnerlistComponent} from  '../announcepartnerlistComponent/announcepartnerlist.component'
 import { announcement } from '../../models/announcement.model';
 import { Title } from '@angular/platform-browser';
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 @Component({
     selector: 'bh-channel_announcements',
@@ -18,7 +19,7 @@ import { Title } from '@angular/platform-browser';
 
 export class channel_announcementsComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
- 
+    public classicEditor = ClassicEditor;
     constructor(private bdms: NDataModelService, private channelservice: channelservice,private dialog:MatDialog, private titleService: Title) {
         super();
         this.mm = new ModelMethods(bdms);

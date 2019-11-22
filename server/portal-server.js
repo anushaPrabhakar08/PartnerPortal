@@ -9,7 +9,7 @@ var gridfs = require('gridfs-stream');
 var fs = require('fs');
 
 // mongodb connection
-mongoose.connect("mongodb://localhost:27017/AngularUserDetails", (err, response) => { if (err) { return err; } });
+mongoose.connect("mongodb://localhost:27017/PartnerDb", (err, response) => { if (err) { return err; } });
 mongoose.Promise = global.Promise;
 var app = express();
 var db = mongoose.connection;
@@ -37,12 +37,6 @@ router.get("/", (req, res) => {
 
 
 // Schemas
-var roleSchema = new Schema({
-    type: { type: String },
-    value: { type: String },
-    date: { type: Date },
-    status: { type: String },
-}, { versionKey: false });
 
 var media = new Schema({
     userId: { type: String },
@@ -53,7 +47,7 @@ var media = new Schema({
 });
 
 // Models
-var roleModel = mongoose.model("roles", roleSchema, 'roles');
+
 var mediaModel = mongoose.model('media', media, 'media');
 // Functions
 function fetchOne(name, query, cb) {
@@ -157,45 +151,6 @@ function removeFile(filename) {
         console.log('File deleted!');
     });
 }
-
-// API Calls
-router.get('/getRole', (req, res) => {
-    fetchOne('roles', req.query, function (result) {
-        res.send({ status: 'success', message: 'Data feteched', data: result });
-    });
-});
-
-router.get('/getRoleById', (req, res) => {
-    if (req.query.id.trim() !== '') {
-        fetchById('roles', req.query.id, function (result) {
-            res.send({ status: 'success', message: 'Data feteched', data: result });
-        });
-    } else {
-        res.send({ status: 'error', message: 'param id missing' });
-    }
-});
-
-router.get('/getRoles', (req, res) => {
-    fetchAll('roles', req.query, function (result) {
-        res.send({ status: 'success', message: 'Data feteched', data: result });
-    });
-});
-
-router.post('/createRole', (req, res) => {
-    createOne('roles', req.body);
-    res.send('data stored');
-});
-
-router.post('/registerPartner', (req, res) => {
-    createOne('users', req.body);
-    res.send({ status: 'success', message: 'Partner Registered Successfully' });
-});
-
-router.post('/updateRole', (req, res) => {
-    updateOne('roles', req.body);
-    res.send('data Updated');
-})
-
 
 
 app.use("/", router);

@@ -27,15 +27,15 @@ import {
   NTokenService
 } from 'neutrinos-seed-services';
 //CORE_REFERENCE_IMPORTS
-​
+
 declare const window: any;
 declare const cordova: any;
-​
+
 @Injectable()
 export class loginservice {
   systemService = NSystemService.getInstance();
   appProperties;
-​
+
   constructor(
     private http: HttpClient,
     private matSnackBar: MatSnackBar,
@@ -55,9 +55,9 @@ export class loginservice {
     private alertService: NAlertService,
     private fileIOService: NFileIOService
   ) {}
-​
+
   //   service flows_loginservice
-​
+
   public async login(userData = undefined, ...others) {
     try {
       let bh = {
@@ -65,7 +65,7 @@ export class loginservice {
         local: { result: undefined, apiUrl: undefined }
       };
       bh = this.__constructDefault(bh);
-​
+
       bh = await this.sd_hT5MmaR2qH2HaZbC(bh);
       //appendnew_next_login
       //Start formatting output variables
@@ -80,9 +80,8 @@ export class loginservice {
     try {
       let bh = { input: { data: data }, local: {} };
       bh = this.__constructDefault(bh);
-​
+
       bh = await this.sd_QiDjC0jFUiZ08w98(bh);
-      bh = await this.sd_0yiYcXIY4AGlUzLA(bh);
       bh = await this.sd_c4lSJqeK5MdZCdRW(bh);
       //appendnew_next_authenticated
       //Start formatting output variables
@@ -93,11 +92,11 @@ export class loginservice {
       throw e;
     }
   }
-  public async isLoggedIn(...others) {
+  public async isLoggedIn(type = undefined, ...others) {
     try {
-      let bh = { input: {}, local: { state: undefined } };
+      let bh = { input: { type: type }, local: { state: undefined } };
       bh = this.__constructDefault(bh);
-​
+
       bh = await this.sd_jKoC2KxK9OQ5qhiJ(bh);
       //appendnew_next_isLoggedIn
       //Start formatting output variables
@@ -112,9 +111,8 @@ export class loginservice {
     try {
       let bh = { input: {}, local: {} };
       bh = this.__constructDefault(bh);
-​
+
       bh = await this.sd_kc5H6QVIrRDgg9Gm(bh);
-      bh = await this.sd_ZXNH3iHAal6sSipO(bh);
       bh = await this.sd_oxtkQpDuOPNqWRto(bh);
       //appendnew_next_logout
       //Start formatting output variables
@@ -125,12 +123,27 @@ export class loginservice {
       throw e;
     }
   }
+  public async getCurrentUserId(...others) {
+    try {
+      let bh = { input: {}, local: { result: undefined } };
+      bh = this.__constructDefault(bh);
+
+      bh = await this.sd_UZFEZDD8dulhfjrw(bh);
+      //appendnew_next_getCurrentUserId
+      //Start formatting output variables
+      let outputVariables = { input: {}, local: { result: bh.local.result } };
+      //End formatting output variables
+      return outputVariables;
+    } catch (e) {
+      throw e;
+    }
+  }
   //appendnew_flow_loginservice_Start
-​
+
   async sd_hT5MmaR2qH2HaZbC(bh) {
     try {
       bh.local.apiUrl = 'http://localhost:24483/api/authenticate';
-​
+
       bh = await this.sd_QEwiG1uwqRCVw0xw(bh);
       //appendnew_next_sd_hT5MmaR2qH2HaZbC
       return bh;
@@ -165,15 +178,6 @@ export class loginservice {
       throw e;
     }
   }
-  async sd_0yiYcXIY4AGlUzLA(bh) {
-    try {
-      localStorage.setItem('loggedIn', JSON.stringify('true'));
-      //appendnew_next_sd_0yiYcXIY4AGlUzLA
-      return bh;
-    } catch (e) {
-      throw e;
-    }
-  }
   async sd_c4lSJqeK5MdZCdRW(bh) {
     try {
       localStorage.setItem('token', JSON.stringify(bh.input.data.token));
@@ -185,7 +189,7 @@ export class loginservice {
   }
   async sd_jKoC2KxK9OQ5qhiJ(bh) {
     try {
-      bh.local.state = JSON.parse(localStorage.getItem('loggedIn'));
+      bh.local.state = JSON.parse(localStorage.getItem('token'));
       bh = await this.sd_039OVUWcyFXjiYA4(bh);
       //appendnew_next_sd_jKoC2KxK9OQ5qhiJ
       return bh;
@@ -196,11 +200,13 @@ export class loginservice {
   async sd_039OVUWcyFXjiYA4(bh) {
     try {
       if (bh.local.state == null) {
-        bh.local.state = false;
-      } else {
-        bh.local.state = true;
+        if (bh.input.type == 'C') {
+          this.router.navigateByUrl('/admin');
+        } else {
+          this.router.navigateByUrl('/login');
+        }
       }
-​
+
       //appendnew_next_sd_039OVUWcyFXjiYA4
       return bh;
     } catch (e) {
@@ -210,16 +216,18 @@ export class loginservice {
   async sd_kc5H6QVIrRDgg9Gm(bh) {
     try {
       localStorage.removeItem('currentUser');
+      bh = await this.sd_o3eSFatlzKTtlJ1p(bh);
       //appendnew_next_sd_kc5H6QVIrRDgg9Gm
       return bh;
     } catch (e) {
       throw e;
     }
   }
-  async sd_ZXNH3iHAal6sSipO(bh) {
+  async sd_o3eSFatlzKTtlJ1p(bh) {
     try {
-      localStorage.removeItem('loggedIn');
-      //appendnew_next_sd_ZXNH3iHAal6sSipO
+      this.router.navigateByUrl('/home');
+
+      //appendnew_next_sd_o3eSFatlzKTtlJ1p
       return bh;
     } catch (e) {
       throw e;
@@ -228,17 +236,38 @@ export class loginservice {
   async sd_oxtkQpDuOPNqWRto(bh) {
     try {
       localStorage.removeItem('token');
+      bh = await this.sd_o3eSFatlzKTtlJ1p(bh);
       //appendnew_next_sd_oxtkQpDuOPNqWRto
       return bh;
     } catch (e) {
       throw e;
     }
   }
+  async sd_UZFEZDD8dulhfjrw(bh) {
+    try {
+      bh.local.result = JSON.parse(localStorage.getItem('currentUser'));
+      bh = await this.sd_WCzhmq6erg7UkIj3(bh);
+      //appendnew_next_sd_UZFEZDD8dulhfjrw
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_WCzhmq6erg7UkIj3(bh) {
+    try {
+      bh.local.result = bh.local.result._id;
+
+      //appendnew_next_sd_WCzhmq6erg7UkIj3
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
   //appendnew_node
-​
+
   __constructDefault(bh) {
     const system: any = {};
-​
+
     try {
       system.currentUser = this.sessionStorage.getValue('userObj');
       system.environment = environment;
@@ -256,12 +285,12 @@ export class loginservice {
       system.snackbarService = this.snackbarService;
       system.alertService = this.alertService;
       system.fileIOService = this.fileIOService;
-​
+
       Object.defineProperty(bh, 'system', {
         value: system,
         writable: false
       });
-​
+
       return bh;
     } catch (e) {
       throw e;

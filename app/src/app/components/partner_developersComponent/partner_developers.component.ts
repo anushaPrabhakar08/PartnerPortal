@@ -46,7 +46,7 @@ export class partner_developersComponent extends NBaseComponent implements OnIni
             
              let id =  (await this.loginservice.getCurrentUserId().then(result => { this.userId = result.local.result}));
 
-            this.data = this.leadObjtoArr((await this.partnerservice.getdeveloper(this.userId)).local.result);
+            this.data = this.leadObjtoArr((await this.partnerservice.getDevelopers(this.userId)).local.result);
             this.dataSource = new MatTableDataSource(this.data);
             this.dataSource.paginator = this.paginator;
             this.dataSource.sort = this.sort;
