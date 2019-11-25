@@ -1,6 +1,6 @@
 //__IMPORT_MODULES_HERE__
 //__LIBRARY__@ckeditor/ckeditor5\-angular
-import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import {CKEditorModule} from '@ckeditor/ckeditor5-angular'
 //__END__LIBRARY__@ckeditor/ckeditor5\-angular
 import {NgModule } from '@angular/core';
 import { sdProviders} from './sd-providers';

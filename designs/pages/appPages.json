@@ -138,5 +138,10 @@
         "appPageName": "announcepartnerlist",
         "componentName": "announcepartnerlistComponent",
         "isEntry": false
+    },
+    "d735366a-6a44-5d0d-d42d-37ad9178e507": {
+        "appPageName": "partner_Notification",
+        "componentName": "partner_notificationComponent",
+        "isEntry": false
     }
 }

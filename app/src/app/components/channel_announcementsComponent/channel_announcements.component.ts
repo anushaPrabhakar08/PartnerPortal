@@ -4,13 +4,14 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
-
+import { FormControl, Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { channelservice } from '../../sd-services/channelservice';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {announcepartnerlistComponent} from  '../announcepartnerlistComponent/announcepartnerlist.component'
 import { announcement } from '../../models/announcement.model';
 import { Title } from '@angular/platform-browser';
 import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'bh-channel_announcements',
@@ -20,37 +21,32 @@ import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 export class channel_announcementsComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
     public classicEditor = ClassicEditor;
-    constructor(private bdms: NDataModelService, private channelservice: channelservice,private dialog:MatDialog, private titleService: Title) {
+    constructor(private bdms: NDataModelService, private channelservice: channelservice,private dialog:MatDialog, private titleService: Title,private rout:Router) {
         super();
         this.mm = new ModelMethods(bdms);
     }
-
+announcementdetail=new FormGroup({
+announcement:new FormControl('')
+})
     // partnerType = [
     //     { value: 'primePartner', viewValue: 'Prime Partner' },
     //     { value: 'normalPartner', viewValue: 'Normal Partner' },
     // ];
-
-opendilogue(){
+submit(data){
+    console.log(data);
+}
+opendilogue(data){
      const dialogRef = this.dialog.open(announcepartnerlistComponent, {
       width: '250px',
-      data: ''
+      data: data
     });
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    
+
+this.rout.navigate(['/admin/announcements']);
     });
 }
     ngOnInit() {
         this.titleService.setTitle('Announcements')
-    }
-
-    submit(data){
-       // this.data = this.leadObjtoArr((await this.channelservice.postAnnouncement()).local.result);
-    }
-
-    async getdata() {
-      // this.data = this.leadObjtoArr((await this.channelservice.postAnnouncement()).local.result);
-       // console.log(this.data);
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {

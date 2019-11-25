@@ -487,8 +487,8 @@
                         "_attrDef": "c"
                     },
                     {
-                        "_key": "#announcementForm",
-                        "_value": "ngForm",
+                        "_key": "[formGroup]",
+                        "_value": "announcementdetail",
                         "_type": "kv",
                         "_attrDef": "c"
                     }
@@ -579,13 +579,13 @@
                                 },
                                 {
                                     "_key": "fxLayoutGap",
-                                    "_value": "",
+                                    "_value": "1em",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
                                 {
                                     "_key": "wrap",
-                                    "_value": "wrap",
+                                    "_value": "",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
@@ -614,7 +614,7 @@
                                     "_attrDef": "p"
                                 }
                             ],
-                            "f85d12bd-4cf5-a53b-1bd1-b3ad0336a37e": {
+                            "94513c5d-2f46-0521-4366-452fd945cd5c": {
                                 "paletteKey": "NEUTRINOS_PACKAGE_n-ckeditor_PALETTE_KEY_ng-ckeditor",
                                 "parentEditorKey": "c95d3274-b180-1557-7fc3-96f7c4e62001",
                                 "isAdvancedComponent": true,
@@ -769,6 +769,18 @@
                                         "_type": "kv",
                                         "_attrDef": "p",
                                         "_visibility": false
+                                    },
+                                    {
+                                        "_key": "ngStyle.xs",
+                                        "_value": "width:100%;",
+                                        "_type": "kv",
+                                        "_attrDef": "c"
+                                    },
+                                    {
+                                        "_key": "formControlName",
+                                        "_value": "announcement",
+                                        "_type": "kv",
+                                        "_attrDef": "c"
                                     }
                                 ]
                             },
@@ -784,7 +796,7 @@
                                     },
                                     {
                                         "_key": "class",
-                                        "_value": "announce-btn w-100",
+                                        "_value": "announce-btn ",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -803,7 +815,7 @@
                                     },
                                     {
                                         "_key": "(click)",
-                                        "_value": "opendilogue()",
+                                        "_value": "opendilogue(announcementdetail.value)",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },

@@ -48,7 +48,7 @@
 
                 </mat-form-field>
                 <mat-form-field style="margin: 10px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-                  <input matInput placeholder="Contact Number" required formControlName="mobileNumber" readonly="readonly">
+                  <input matInput placeholder="Contact Number" required formControlName="phone" readonly="readonly">
 
                 </mat-form-field>
                 <mat-form-field style="margin: 10px;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
@@ -75,8 +75,8 @@
         </mat-card>
       </form>
     </div>
-    <div fxLayout="row wrap" style="width:90%;" class="w-100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" nsStyle.sm="width:100%;" ngStyle.xs="width:100%">
-      <div fxLayout="column wrap" style="width:100%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+    <div fxLayout="row wrap" style="width:90%;" class="w-100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" nsStyle.sm="width:100%;" ngStyle.xs="width:100%;">
+      <div fxLayout="column " style="width:100%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
         <mat-accordion>
           <mat-expansion-panel>
             <mat-expansion-panel-header>
@@ -88,39 +88,39 @@
             <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
               <n-file-upload (change)="preview($event.target.files)" #file (click)="uploadFile(file)"></n-file-upload>
             </div>
-            <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+            <div fxLayout="row wrap" style="width:100%;" class="w-100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
               <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="agreementDataSource.data.length &lt; 1 ? true : false" [fxHide]="agreementDataSource.data.length &lt; 1 ? false : true">
                 <div>
                   No Agreements Uploaded</div>
               </div>
-              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="agreementDataSource.data.length &gt; 0 ? true: false" [fxHide]="agreementDataSource.data.length &gt; 0 ? false : true">
-                <div fxLayout="column" class="table-bg-none" style="width:100%;">
+              <div fxLayout="column wrap" style="width:100%;overflow-x: auto;" fxLayoutAlign="start stretch" [fxShow]="agreementDataSource.data.length &gt; 0 ? true: false" [fxHide]="agreementDataSource.data.length &gt; 0 ? false : true">
+                <div fxLayout="column" class="header-cell">
                   <table mat-table [dataSource]="agreementDataSource" class="table-width-fix">
                     <tr mat-header-row *matHeaderRowDef="[&apos;index&apos;,&apos;name&apos;,&apos;type&apos;,&apos;date&apos;,&apos;dda5123e-2a43-1208-3215-93f6a1597e1b&apos;]"></tr>
                     <tr mat-row *matRowDef="let row; columns: [&apos;index&apos;,&apos;name&apos;,&apos;type&apos;,&apos;date&apos;,&apos;dda5123e-2a43-1208-3215-93f6a1597e1b&apos;];"></tr>
 
                     <ng-container matColumnDef="index">
-                      <th mat-header-cell *matHeaderCellDef>S.No</th>
-                      <td mat-cell *matCellDef="let table; let i = index;">{{i+1}}</td>
+                      <th mat-header-cell *matHeaderCellDef class="tab-partner-header">S.No</th>
+                      <td mat-cell *matCellDef="let table; let i = index;" class="tab-partner-data">{{i+1}}</td>
                     </ng-container>
 
                     <ng-container matColumnDef="name">
-                      <th mat-header-cell *matHeaderCellDef>File Name</th>
-                      <td mat-cell *matCellDef="let table; let i = index;">{{table.name}}</td>
+                      <th mat-header-cell *matHeaderCellDef class="tab-partner-header">File Name</th>
+                      <td mat-cell *matCellDef="let table; let i = index;" class="tab-partner-data">{{table.name}}</td>
                     </ng-container>
 
                     <ng-container matColumnDef="type">
-                      <th mat-header-cell *matHeaderCellDef>Type</th>
-                      <td mat-cell *matCellDef="let table; let i = index;">{{table.type}}</td>
+                      <th mat-header-cell *matHeaderCellDef class="tab-partner-header">Type</th>
+                      <td mat-cell *matCellDef="let table; let i = index;" class="tab-partner-data">{{table.type}}</td>
                     </ng-container>
 
                     <ng-container matColumnDef="date">
-                      <th mat-header-cell *matHeaderCellDef>Date</th>
-                      <td mat-cell *matCellDef="let table; let i = index;">{{table.date}}</td>
+                      <th mat-header-cell *matHeaderCellDef class="tab-partner-header">Date</th>
+                      <td mat-cell *matCellDef="let table; let i = index;" class="tab-partner-data">{{table.date}}</td>
                     </ng-container>
 
                     <ng-container matColumnDef="dda5123e-2a43-1208-3215-93f6a1597e1b">
-                      <th mat-header-cell *matHeaderCellDef></th>
+                      <th mat-header-cell *matHeaderCellDef>Action</th>
                       <td mat-cell *matCellDef="let table">
                         <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-button color="primary">Add Title</button>
                           <mat-icon color="warn">delete</mat-icon>

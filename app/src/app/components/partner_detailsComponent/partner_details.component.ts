@@ -53,7 +53,7 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
     personalForm = new FormGroup({
         firstName: new FormControl(''),
         lastName: new FormControl(''),
-        mobileNumber: new FormControl(''),
+        phone: new FormControl(''), 
         emailId: new FormControl(''),
         address: new FormControl(' '),
         designation: new FormControl('')
@@ -86,10 +86,10 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
         this.personalForm.patchValue({
             firstName: this.userData.firstname,
             lastName: this.userData.lastname,
-            mobileNumber: this.userData.phone,
+            phone: this.userData.phone,
             emailId: this.userData.email,
             designation: this.userData.position,
-            address: this.userData.address
+            address: this.userData.present_address
         });
         this.getDevelopers();
         this.getLeads();

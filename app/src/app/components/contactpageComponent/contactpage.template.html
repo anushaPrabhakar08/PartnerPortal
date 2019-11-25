@@ -1,139 +1,137 @@
-<div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+<div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlexFill.xs="fxFill">
   <header>
-    <mat-toolbar fxFlex.xs="100" class="bg-dark">
-      <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="100">
-        <div fxLayout="column wrap" fxFlex="20" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/logo.png" width="200px"></div>
-        <div fxLayout="column wrap" fxFlex="60" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-          <div>
-            Partner Portal</div>
+    <mat-toolbar class="bg-dark">
+      <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxLayoutAlign.xs="space-around none">
+        <div fxLayout="column wrap" fxFlex="20" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="40" fxLayoutAlign.xs="start"><img imgSrc="Web/logo.png" ngStyle.xs="width:100px;" width="200px"></div>
+        <div fxLayout="column wrap" fxFlex="60" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false" fxFlex.xs="20" fxLayoutAlign.xs="start">
+          <div ngStyle.xs="font-size:15px;">
+            Welcome to Neutrinos Partner Portal</div>
         </div>
         <div fxLayout="column wrap" fxFlex="20" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
           <div fxLayout="row " fxFlex="100" fxLayoutAlign="end center" [fxShow]="true" [fxHide]="false" fxHide.xs="true"><button mat-button routerLink="/home">Home</button><button mat-button routerLink="/contact_us">Contact Us</button><button mat-raised-button routerLink="/login" color="warn">Login</button></div>
         </div>
-        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="false" [fxHide]="true" fxFlex.xs="10" fxHide.lg="true"><button mat-mini-fab [matMenuTriggerFor]="menu">
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="false" [fxHide]="true" fxHide.lg="true" fxShow.xs="true" fxFlex.xs="10"><button mat-mini-fab style="background:rgba(241, 8, 8, 0.82);color:white;" [matMenuTriggerFor]="menu" ngStyle.xs="width:40px;">
             <mat-icon>view_headline</mat-icon>
           </button>
           <mat-menu #menu="matMenu">
-            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-button class="home_btn" routerLink="/home">Home</button><button mat-button class="home_btn" routerLink="/contact_us">Contact Us</button><button mat-button class="home_btn" routerLink="/login/partnerlogin">Login</button></div>
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-button routerLink="/home">Home</button><button mat-button routerLink="/contact_us">Contact Us</button><button mat-button routerLink="/login">Login</button></div>
           </mat-menu>
         </div>
       </div>
     </mat-toolbar>
   </header>
-  <div fxLayout="row wrap" style="padding:80px 0px;" fxLayoutAlign="space-around center" [fxShow]="true" [fxHide]="false" fxFlex.md="100">
-    <div fxLayout="column wrap" fxFlex="40" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-      <mat-card>
-        <mat-card-content fxLayout="column">
-          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-            <p style="font-variant:petite-caps;font-weight:700;font-size:35px;;">
-              send us message</p>
-          </div>
-          <form [formGroup]="requestForm" fxFlex="100" class="requestForm" (ngSubmit)="submit()">
-            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" formGroupName="user">
-              <div fxLayout="row wrap" fxLayoutAlign="space-evenly stretch" [fxShow]="true" [fxHide]="false">
-                <div fxLayout="column wrap" class="column" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-                  <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                    <input matInput placeholder="First Name" required formControlName="firstname">
-                    <mat-error align="start" *ngIf="firstname.hasError(&apos;required&apos;)">Firstname is required</mat-error>
-                    <mat-error align="start" *ngIf="firstname.hasError(&apos;maxlength&apos;)">Cannot enter more than 30 characters</mat-error>
-                    <mat-error align="start" *ngIf="firstname.hasError(&apos;pattern&apos;)">Enter only Characters</mat-error>
-                    <mat-label>First Name</mat-label>
-                  </mat-form-field>
-                </div>
-                <div fxLayout="column wrap" class="column" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-                  <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                    <input matInput placeholder="Last Name" required formControlName="lastname">
-                    <mat-error align="start" *ngIf="lastname.hasError(&apos;required&apos;)">Lastname is required</mat-error>
-                    <mat-error align="start" *ngIf="lastname.hasError(&apos;maxlength&apos;)">Cannot be more than 30 characters</mat-error>
-                    <mat-error align="start" *ngIf="lastname.hasError(&apos;pattern&apos;)">Enter only characters</mat-error>
-                    <mat-label>Last Name</mat-label>
-                  </mat-form-field>
-                </div>
+  <div fxLayout="row wrap" style="padding:80px 0px;" fxLayoutAlign="space-around center" [fxShow]="true" [fxHide]="false">
+    <mat-card fxFlex.lg="40">
+      <mat-card-content fxLayout="column">
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+          <p style="font-variant:petite-caps;font-weight:700;font-size:35px;;">
+            send us message</p>
+        </div>
+        <form [formGroup]="requestForm" class="requestForm" (ngSubmit)="submit()">
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" formGroupName="user">
+            <div fxLayout="row wrap" fxLayoutAlign="space-evenly stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="90">
+              <div fxLayout="column wrap" class="column" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+                  <input matInput placeholder="First Name" required formControlName="firstname">
+                  <mat-error align="start" *ngIf="firstname.hasError(&apos;required&apos;)">Firstname is required</mat-error>
+                  <mat-error align="start" *ngIf="firstname.hasError(&apos;maxlength&apos;)">Cannot enter more than 30 characters</mat-error>
+                  <mat-error align="start" *ngIf="firstname.hasError(&apos;pattern&apos;)">Enter only Characters</mat-error>
+                  <mat-label>First Name</mat-label>
+                </mat-form-field>
               </div>
-              <div fxLayout="row wrap" fxLayoutAlign="space-evenly stretch" [fxShow]="true" [fxHide]="false">
-                <div fxLayout="column wrap" class="column" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-                  <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                    <input matInput placeholder="Company Email" required formControlName="email">
-                    <mat-error align="start" *ngIf="email.hasError(&apos;required&apos;)">Email is required</mat-error>
-                    <mat-error align="start" *ngIf="email.hasError(&apos;pattern&apos;)">Enter valid email id</mat-error>
-                    <mat-label>Company Email</mat-label>
-                  </mat-form-field>
-                </div>
-                <div fxLayout="column wrap" class="column" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-                  <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                    <input matInput type="tel" placeholder="Mobile Number" required formControlName="mobile">
-                    <mat-error align="start" *ngIf="mobile.hasError(&apos;required&apos;)">Mobile no is required</mat-error>
-                    <mat-error align="start" *ngIf="mobile.hasError(&apos;maxlength&apos;)">Invalid Mobile no</mat-error>
-                    <mat-error align="start" *ngIf="mobile.hasError(&apos;pattern&apos;)">Enter only Numerical values</mat-error>
-                    <mat-label>Mobile Number</mat-label>
-                  </mat-form-field>
-                </div>
-              </div>
-            </div>
-            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" formGroupName="company">
-              <div fxLayout="row wrap" fxLayoutAlign="space-evenly stretch" [fxShow]="true" [fxHide]="false">
-                <div fxLayout="column wrap" class="column" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-                  <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                    <input matInput placeholder="Company Name" required formControlName="name">
-                    <mat-error align="start" *ngIf="name.hasError(&apos;required&apos;)">Company name is required</mat-error>
-                    <mat-error align="start" *ngIf="name.hasError(&apos;maxlength&apos;)">Cannot be more than 30 characters</mat-error>
-                    <mat-error align="start" *ngIf="name.hasError(&apos;pattern&apos;)">Enter only characters</mat-error>
-                    <mat-label>Company Name</mat-label>
-                  </mat-form-field>
-                </div>
-                <div fxLayout="column wrap" class="column" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-                  <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                    <mat-select formControlName="industry" placeholder="Industry" required>
-                      <ng-template ngFor let-option [ngForOf]="industry" let-i="index">
-                        <mat-option [value]="option">{{option}}</mat-option>
-                      </ng-template>
-                    </mat-select>
-
-                  </mat-form-field>
-                </div>
-              </div>
-              <div fxLayout="row wrap" fxLayoutAlign="space-evenly none" [fxShow]="true" [fxHide]="false">
-                <div fxLayout="column wrap" class="column" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-                  <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                    <mat-select formControlName="size" placeholder="Company Size" required>
-                      <ng-template ngFor let-option [ngForOf]="companysize" let-i="index">
-                        <mat-option [value]="option">{{option}}</mat-option>
-                      </ng-template>
-                    </mat-select>
-
-                  </mat-form-field>
-                </div>
-                <div fxLayout="column wrap" class="column" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-                  <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                    <mat-select formControlName="country" placeholder="Country">
-                      <ng-template ngFor let-option [ngForOf]="country" let-i="index">
-                        <mat-option [value]="option">{{option}}</mat-option>
-                      </ng-template>
-                    </mat-select>
-
-                  </mat-form-field>
-                </div>
-              </div>
-              <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-                <mat-form-field style="width:100%;" class="sample">
-                  <textarea matInput formControlName="message" placeholder="Message" required></textarea>
+              <div fxLayout="column wrap" class="column" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+                  <input matInput placeholder="Last Name" required formControlName="lastname">
+                  <mat-error align="start" *ngIf="lastname.hasError(&apos;required&apos;)">Lastname is required</mat-error>
+                  <mat-error align="start" *ngIf="lastname.hasError(&apos;maxlength&apos;)">Cannot be more than 30 characters</mat-error>
+                  <mat-error align="start" *ngIf="lastname.hasError(&apos;pattern&apos;)">Enter only characters</mat-error>
+                  <mat-label>Last Name</mat-label>
                 </mat-form-field>
               </div>
             </div>
-            <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button color="warn" type="submit">Submit</button></div>
-          </form>
-        </mat-card-content>
-      </mat-card>
-    </div>
-    <div fxLayout="column wrap" fxFlex="30" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false" fxFlex.md="30">
-      <div fxLayout="column wrap" fxFlex="80" fxLayoutAlign="start start" [fxShow]="true" [fxHide]="false"><span class="fontsize">
+            <div fxLayout="row wrap" fxLayoutAlign="space-evenly stretch" [fxShow]="true" [fxHide]="false" fxFlex.xs="90">
+              <div fxLayout="column wrap" class="column" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+                  <input matInput placeholder="Company Email" required formControlName="email">
+                  <mat-error align="start" *ngIf="email.hasError(&apos;required&apos;)">Email is required</mat-error>
+                  <mat-error align="start" *ngIf="email.hasError(&apos;pattern&apos;)">Enter valid email id</mat-error>
+                  <mat-label>Company Email</mat-label>
+                </mat-form-field>
+              </div>
+              <div fxLayout="column wrap" class="column" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+                  <input matInput type="tel" placeholder="Mobile Number" required formControlName="mobile">
+                  <mat-error align="start" *ngIf="mobile.hasError(&apos;required&apos;)">Mobile no is required</mat-error>
+                  <mat-error align="start" *ngIf="mobile.hasError(&apos;maxlength&apos;)">Invalid Mobile no</mat-error>
+                  <mat-error align="start" *ngIf="mobile.hasError(&apos;pattern&apos;)">Enter only Numerical values</mat-error>
+                  <mat-label>Mobile Number</mat-label>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" formGroupName="company">
+            <div fxLayout="row wrap" fxLayoutAlign="space-evenly stretch" [fxShow]="true" [fxHide]="false">
+              <div fxLayout="column wrap" class="column" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+                  <input matInput placeholder="Company Name" required formControlName="name">
+                  <mat-error align="start" *ngIf="name.hasError(&apos;required&apos;)">Company name is required</mat-error>
+                  <mat-error align="start" *ngIf="name.hasError(&apos;maxlength&apos;)">Cannot be more than 30 characters</mat-error>
+                  <mat-error align="start" *ngIf="name.hasError(&apos;pattern&apos;)">Enter only characters</mat-error>
+                  <mat-label>Company Name</mat-label>
+                </mat-form-field>
+              </div>
+              <div fxLayout="column wrap" class="column" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+                  <mat-select formControlName="industry" placeholder="Industry" required>
+                    <ng-template ngFor let-option [ngForOf]="industry" let-i="index">
+                      <mat-option [value]="option">{{option}}</mat-option>
+                    </ng-template>
+                  </mat-select>
+
+                </mat-form-field>
+              </div>
+            </div>
+            <div fxLayout="row wrap" fxLayoutAlign="space-evenly none" [fxShow]="true" [fxHide]="false">
+              <div fxLayout="column wrap" class="column" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+                  <mat-select formControlName="size" placeholder="Company Size" required>
+                    <ng-template ngFor let-option [ngForOf]="companysize" let-i="index">
+                      <mat-option [value]="option">{{option}}</mat-option>
+                    </ng-template>
+                  </mat-select>
+
+                </mat-form-field>
+              </div>
+              <div fxLayout="column wrap" class="column" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+                  <mat-select formControlName="country" placeholder="Country">
+                    <ng-template ngFor let-option [ngForOf]="country" let-i="index">
+                      <mat-option [value]="option">{{option}}</mat-option>
+                    </ng-template>
+                  </mat-select>
+
+                </mat-form-field>
+              </div>
+            </div>
+            <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <mat-form-field style="width:100%;" class="sample">
+                <textarea matInput formControlName="message" placeholder="Message" required></textarea>
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button color="warn" type="submit">Submit</button></div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+    <div fxLayout="column wrap" fxFlex="30" fxLayoutAlign="start start" [fxShow]="true" [fxHide]="false" fxFlex.md="30" ngStyle.xs="margin-top:20px;">
+      <div fxLayout="column wrap" fxFlex="40" fxLayoutAlign="start start" [fxShow]="true" [fxHide]="false" fxFlex.xs="90"><span class="fontsize">
                 Our offices</span>
         <div fxLayout="column wrap" style="fontsize" fxLayoutAlign="start start" [fxShow]="true" [fxHide]="false">
           <p style="color:#ff6347;" class="fontsize">
             India</p><span>
-                No.156, 3rd Cross End, Ashoka Pillar Rd,
-1st Block, Jaya Nagar East,
-Bengaluru &#x2013; 560011, Karnataka
+                No.156, 3rd Cross End,<br> Ashoka Pillar Rd,
+1st Block,<br> Jaya Nagar East,<br>
+Bengaluru &#x2013; 560011,Karnataka<br>
 Phone: +91 80 4171 8111</span>
           <p class="fontsize">
             Write to Us</p><span style="color:#ff6347;">

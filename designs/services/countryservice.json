@@ -1,0 +1,104 @@
+[
+    {
+        "id": "sd_ywalcrYCYTZnJ2o2",
+        "type": "tab",
+        "createdDate": "2019-11-23T17:47:36.066Z",
+        "label": "countryservice",
+        "disabled": false,
+        "info": "",
+        "generateNext": true,
+        "generated": false,
+        "serviceName": "countryservice"
+    },
+    {
+        "id": "sd_YGsdzwYkKz4vIWaR",
+        "type": "Start",
+        "z": "sd_ywalcrYCYTZnJ2o2",
+        "name": "getcountry",
+        "outputs": 1,
+        "noerr": 0,
+        "inputVariables": [],
+        "localVariables": [
+            {
+                "key": "countryresult",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": true
+            },
+            {
+                "key": "apiurl",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "functionName": "getcountry",
+        "x": 251.20001220703125,
+        "y": 162.93750762939453,
+        "wires": [
+            [
+                "sd_rvyC3qHv0b7sov0x"
+            ]
+        ],
+        "generateNext": true,
+        "generated": false,
+        "serviceName": "countryservice"
+    },
+    {
+        "id": "sd_rvyC3qHv0b7sov0x",
+        "type": "Script",
+        "z": "sd_ywalcrYCYTZnJ2o2",
+        "name": "",
+        "script": "bh.local.apiurl=`https://restcountries.eu/rest/v2`;",
+        "x": 426.0500297546387,
+        "y": 163.9375171661377,
+        "wires": [
+            [
+                "sd_DVQeSobvyGmuxSVD"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_DVQeSobvyGmuxSVD",
+        "type": "HttpRequest",
+        "z": "sd_ywalcrYCYTZnJ2o2",
+        "name": "",
+        "method": "get",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.apiurl",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "apiurl"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "reqBodyObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": ""
+        },
+        "resultMapping": "bh.local.countryresult",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "countryresult"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "x": 601.0500564575195,
+        "y": 163.93749237060547,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
+    }
+]

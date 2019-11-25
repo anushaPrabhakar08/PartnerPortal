@@ -32,14 +32,17 @@ partnerlist=[];
     }
 res;
 announcedata=new FormGroup({
-   
+   option:new FormControl('')
 })
+getselectedpartner(dt){
+console.log(dt);
+}
    async ngOnInit() {
        console.log(this.data);
-        this.res=(await this.partnerlists.getpartnerlist()).local.result;
+        this.res =((await this.partnerlists.getpartnerlist()).local.result);
         for(let key in this.res)
         {
-            this.partnerlist[key]=this.res[key].companyName;
+            this.partnerlist[key]=this.res[key].name;
         }
     }
 

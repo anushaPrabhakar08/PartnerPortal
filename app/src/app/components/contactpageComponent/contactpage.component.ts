@@ -9,6 +9,7 @@ import { contactmodel } from '../../models/contactmodel.model';
 import { contactus } from '../../sd-services/contactus';
 import { Router } from '@angular/router';
 import { partnerservice } from '../../sd-services/partnerservice';
+import { countryservice } from '../../sd-services/countryservice';
 /**
  * Service import Example :
  * import { HeroService } from '../../services/hero/hero.service';
@@ -29,43 +30,53 @@ export class contactpageComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
     industry = ['Banking & Finance', 'Retail', 'Public Sector', 'Insurance', 'Education'];
     companysize = ['1-49', '50-99', '100-249', '250-499'];
-    country = ['Afghanistan', 'Ailand Island', 'Albania', 'Algeria', 'Australia', 'India'];
+    country = [];
 
     requestForm: FormGroup;
     contactmodel: contactmodel;
 
     constructor(private bdms: NDataModelService, private alertService: NSnackbarService, private cont: contactus, private rout: Router,
-        private partnerservice: partnerservice) {
+        private partnerservice: partnerservice, private count: countryservice) {
         super();
         this.mm = new ModelMethods(bdms);
         this.contactmodel = new contactmodel();
     }
 
-    ngOnInit() {
+    async ngOnInit() {
+
+
         this.requestForm = new FormGroup({
             user: new FormGroup({
                 firstname: new FormControl('', [Validators.required, Validators.maxLength(30), Validators.pattern(/^[a-zA-Z]+$/)]),
-                lastname: new FormControl('',[Validators.required, Validators.maxLength(30), Validators.pattern(/^[a-zA-Z]+$/)]),
-                email: new FormControl('',[Validators.required,  Validators.maxLength(20), Validators.pattern(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/)]),
+                lastname: new FormControl('', [Validators.required, Validators.maxLength(30), Validators.pattern(/^[a-zA-Z]+$/)]),
+                email: new FormControl('', [Validators.required, Validators.maxLength(20), Validators.pattern(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/)]),
                 mobile: new FormControl('', [Validators.required, Validators.maxLength(10), Validators.pattern(/^[0-9]*$/)]),
             }),
             company: new FormGroup({
                 name: new FormControl('', [Validators.required, Validators.maxLength(30), Validators.pattern(/^[a-zA-Z]+$/)]),
-                industry: new FormControl('',Validators.required),
-                size: new FormControl('',Validators.required),
+                industry: new FormControl('', Validators.required),
+                size: new FormControl('', Validators.required),
                 message: new FormControl(''),
                 country: new FormControl('', Validators.required),
             }),
 
         });
+        this.getcountries();
     }
-     
-      get firstname() { return this.requestForm.controls.user.get('firstname'); }
-      get lastname() { return this.requestForm.controls.user.get('lastname') }
-      get email() { return this.requestForm.controls.user.get('email') }
-      get mobile() { return this.requestForm.controls.user.get('mobile') }
 
-      get name() { return this.requestForm.controls.company.get('name') }
+    async  getcountries() {
+        let countryres = (await this.count.getcountry()).local.countryresult;
+        for (let key in countryres) {
+            this.country[key] = countryres[key].name;
+        }
+    }
+
+    get firstname() { return this.requestForm.controls.user.get('firstname'); }
+    get lastname() { return this.requestForm.controls.user.get('lastname') }
+    get email() { return this.requestForm.controls.user.get('email') }
+    get mobile() { return this.requestForm.controls.user.get('mobile') }
+
+    get name() { return this.requestForm.controls.company.get('name') }
     //   get industry() { return this.requestForm.controls.company.get('industry') }
     //   get size() { return this.requestForm.controls.company.get('size') }
     //   get message() { return this.requestForm.controls.company.get('message') }

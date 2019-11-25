@@ -362,6 +362,12 @@
                                 "_value": "",
                                 "_type": "kv",
                                 "_attrDef": "p"
+                            },
+                            {
+                                "_key": "formControlName",
+                                "_value": "option",
+                                "_type": "kv",
+                                "_attrDef": "c"
                             }
                         ]
                     }
@@ -1259,7 +1265,7 @@
                         },
                         {
                             "_key": "(click)",
-                            "_value": "",
+                            "_value": "getselectedpartner(announcedata.value)",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -1286,6 +1292,12 @@
                             "_value": "",
                             "_type": "kv",
                             "_attrDef": "p"
+                        },
+                        {
+                            "_key": "mat-dialog-close",
+                            "_value": "mat-dialog-close",
+                            "_type": "a",
+                            "_attrDef": "c"
                         }
                     ]
                 }
