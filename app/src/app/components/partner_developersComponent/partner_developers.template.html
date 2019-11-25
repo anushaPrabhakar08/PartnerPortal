@@ -1,13 +1,13 @@
 <div fxLayout="row wrap" class="background" fxFlex="100" fxLayoutAlign="start none" [fxShow]="true" [fxHide]="false">
   <div fxLayout="column wrap" class="margin-tb" fxFlex="100" fxLayoutAlign="  none" [fxShow]="true" [fxHide]="false">
     <div fxLayout="row wrap" style="width:100%;" class="search-class " fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
-      <mat-card style="width:100%;margin-top:5%;">
+      <mat-card style="width:100%;">
         <mat-card-content>
           <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
             <div fxLayout="column" style="width:100%;">
 
               <div fxLayout="row" fxLayoutAlign="end">
-                <div fxLayout="column" fxFlex="24">
+                <div fxLayout="column" fxFlex="30">
                   <mat-form-field fxFlex="100">
                     <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search">
                   </mat-form-field>
@@ -18,7 +18,7 @@
                 <tr mat-row *matRowDef="let row; columns: [&apos;index&apos;,&apos;firstname&apos;,&apos;lastname&apos;,&apos;position&apos;,&apos;experience&apos;,&apos;phone&apos;,&apos;email&apos;,&apos;skillset&apos;];"></tr>
 
                 <ng-container matColumnDef="index">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header class="tab-developerheader">No</th>
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header class="tab-developerheader">S.No</th>
                   <td mat-cell *matCellDef="let table; let i = index;" class="tab-developerdata">{{i + 1}}</td>
                 </ng-container>
 
@@ -38,7 +38,7 @@
                 </ng-container>
 
                 <ng-container matColumnDef="experience">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header class="tab-developerheader">Status</th>
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header class="tab-developerheader">Experience</th>
                   <td mat-cell *matCellDef="let table; let i = index;" class="tab-developerdata">{{table.experience}}</td>
                 </ng-container>
 

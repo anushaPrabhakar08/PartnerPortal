@@ -4,17 +4,8 @@ import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService } from 'neutrinos-seed-services';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
+import { Title } from '@angular/platform-browser';
 
-/**
- * Service import Example :
- * import { HeroService } from '../../services/hero/hero.service';
- */
-
-/**
- *
- * Service Designer import Example - Service Name - HeroService
- * import { HeroService } from 'app/sd-services/HeroService';
- */
 
 @Component({
     selector: 'bh-partner_notification',
@@ -24,13 +15,13 @@ import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 export class partner_notificationComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
     notifications=["A",'B',"c","D"];
-    constructor(private bdms: NDataModelService) {
+    constructor(private bdms: NDataModelService,  private titleService: Title) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
     ngOnInit() {
-
+        this.titleService.setTitle('Notifications');
     }
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {

@@ -11,7 +11,7 @@
             },
             {
                 "_key": "style",
-                "_value": "responsive:true;margin-top: 50px;",
+                "_value": "",
                 "_type": "kv",
                 "_attrDef": "p"
             },
@@ -78,7 +78,7 @@
                 },
                 {
                     "_key": "style",
-                    "_value": "width:80%;",
+                    "_value": "width:100%;",
                     "_type": "kv",
                     "_attrDef": "p"
                 },
@@ -139,7 +139,7 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "width:100%; responsive:true;",
+                            "_value": "width:100%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -188,7 +188,7 @@
                             },
                             {
                                 "_key": "Header Label",
-                                "_value": "No",
+                                "_value": "S.No",
                                 "_type": "a",
                                 "_attrDef": "p"
                             },

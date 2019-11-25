@@ -260,8 +260,8 @@ bh-login{
 }
 
 .header-cell .mat-header-cell{
-    color: #000 !important;
-    background: rgba(0, 0, 0, 0.4);  
+    color: #fff !important;
+    background: rgba(0,0,0,.54);  
     text-align: left !important;
     justify-content: center;
     width: 100px;
@@ -348,33 +348,33 @@ bh-login{
     font-weight: bold;
 }
 
-.tab-header, .tab-leadheader, .tab-developerheader {
-    font-size: 14px;
-    font-weight: bold;
-    color: #fff !important;
-    background: rgba(0, 0, 0, .6);
-}
+// .tab-header, .tab-leadheader, .tab-developerheader {
+//     font-size: 14px;
+//     font-weight: bold;
+//     color: #fff !important;
+//     background: rgba(0,0,0,.54);
+// }
 
-.tab-data, .tab-leaddata, .tab-developerdata {
-    cursor: pointer;
-    color: #000 !important;
-    background-color: #fafafa;
-}
+// .tab-data, .tab-leaddata, .tab-developerdata {
+//     cursor: pointer;
+//     color: #000 !important;
+//     background-color: #fafafa;
+// }
 
 .tab-data:hover {
     background-color:rgba(0,0,0,.12);
 }
 
-.tab-partner-data {
+.tab-data, .tab-leaddata, .tab-developerdata, .tab-partner-data {
     color: #000 !important;
     background-color: #eee;
     overflow-wrap: break-word;
     width: 100px;
 }
 
-.tab-partner-header {
-    color: #000 !important;
-    background: rgba(0, 0, 0, 0.4);
+.tab-header, .tab-leadheader, .tab-developerheader, .tab-partner-header {
+    color: #fff !important;
+    background: rgba(0,0,0,.54);
     overflow-wrap: break-word;
     width: 100px;
 }
@@ -396,7 +396,8 @@ bh-partner_leads,
 bh-partner_developers, 
 bh-partner_marketing,
 bh-partner_agreement,
-bh-partner_notification {
+bh-partner_notification,
+bh-partnerregistration {
     width: 100%
 }
 
@@ -661,13 +662,17 @@ pdf-viewer{
 .requestForm .column:last-child{
     padding-left:10px;
 }
-.sample textarea.mat-input-element{
+.messagebox textarea.mat-input-element{
     border: 1px solid gray !important;
     padding:20px;
     border-radius: 6px;
 }
 .align-center{
     place-content: center !important;
+}
+
+.contact-messagebox .mat-form-field-underline{
+    display: none;
 }
 
 

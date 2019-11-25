@@ -31,13 +31,13 @@
         </div>
         <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxHide]="userType ? false: true">
           <p class="text-warn text-center">
-            Change password</p>
+            Forgot Password?</p>
         </div>
       </div>
       <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-raised-button class="w-100" color="warn" type="submit">Sign In</button></div>
     </form>
   </div>
-  <div fxLayout="row wrap" fxLayoutAlign="space-around center" [fxShow]="!userType" [fxHide]="userType">
+  <div fxLayout="row wrap" fxLayoutGap="0.5em" fxLayoutAlign="space-around center" [fxShow]="!userType" [fxHide]="userType">
     <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
       <p class="text-center">
         Don&apos;t have an account?</p>

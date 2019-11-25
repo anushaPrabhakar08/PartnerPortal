@@ -263,7 +263,7 @@
                         "designerReference": [
                             {
                                 "_key": "style",
-                                "_value": "",
+                                "_value": "margin-top:0px;",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -482,7 +482,7 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "width:90%;",
+                            "_value": "width:100%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -554,7 +554,7 @@
                             },
                             {
                                 "_key": "placeholder",
-                                "_value": "Organisation Name",
+                                "_value": "Company Name",
                                 "_type": "kv",
                                 "_attrDef": "p",
                                 "_useAsLabel": true
@@ -635,16 +635,8 @@
                                 "_key": "matError",
                                 "_value": [
                                     {
-                                        "input1": "organisationName.hasError('required')",
-                                        "input2": "Mandatory Field",
-                                        "toggle": {
-                                            "toggleData": [],
-                                            "selected": "start"
-                                        }
-                                    },
-                                    {
-                                        "input1": "organisationName.hasError('pattern')",
-                                        "input2": "Enter Only Characters",
+                                        "input1": "organisationName.hasError('required') || organisationName.hasError('pattern')",
+                                        "input2": "Enter valid company Name",
                                         "toggle": {
                                             "toggleData": [],
                                             "selected": "start"
@@ -652,7 +644,7 @@
                                     },
                                     {
                                         "input1": "organisationName.hasError('maxlength')",
-                                        "input2": "can't be more than 40 characters",
+                                        "input2": "can't be more than 50 characters",
                                         "toggle": {
                                             "toggleData": [],
                                             "selected": "start"
@@ -672,7 +664,7 @@
                             },
                             {
                                 "_key": "Label",
-                                "_value": "Organization Name",
+                                "_value": "Company Name",
                                 "_type": "a",
                                 "_attrDef": "p",
                                 "_visibility": true
@@ -741,7 +733,7 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "width:90%;",
+                            "_value": "width:100%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -813,7 +805,7 @@
                             },
                             {
                                 "_key": "placeholder",
-                                "_value": "Organisation Website",
+                                "_value": "Company Website",
                                 "_type": "kv",
                                 "_attrDef": "p",
                                 "_useAsLabel": true
@@ -894,8 +886,8 @@
                                 "_key": "matError",
                                 "_value": [
                                     {
-                                        "input1": "orgWebsite.hasError('required')",
-                                        "input2": "Mandatory Field",
+                                        "input1": "orgWebsite.hasError('required') || orgWebsite.hasError('pattern')",
+                                        "input2": "Enter valid website",
                                         "toggle": {
                                             "toggleData": [],
                                             "selected": "start"
@@ -904,14 +896,6 @@
                                     {
                                         "input1": "orgWebsite.hasError('maxlength')",
                                         "input2": "can't be more than 30 characters",
-                                        "toggle": {
-                                            "toggleData": [],
-                                            "selected": "start"
-                                        }
-                                    },
-                                    {
-                                        "input1": "orgWebsite.hasError('pattern')",
-                                        "input2": "Invalid  Field",
                                         "toggle": {
                                             "toggleData": [],
                                             "selected": "start"
@@ -1000,7 +984,7 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "width:90%;",
+                            "_value": "width:100%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -1154,7 +1138,7 @@
                                 "_value": [
                                     {
                                         "input1": "location.hasError('pattern')",
-                                        "input2": "Only Characters",
+                                        "input2": "Enter valid Location",
                                         "toggle": {
                                             "toggleData": [],
                                             "selected": "start"
@@ -1243,7 +1227,7 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "width:90%;",
+                            "_value": "width:100%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -1453,7 +1437,7 @@
                                     },
                                     {
                                         "input1": "both",
-                                        "input2": "both",
+                                        "input2": "Both",
                                         "toggle": {
                                             "toggleData": [],
                                             "selected": "false"
@@ -1517,7 +1501,7 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "width:90%;",
+                            "_value": "width:100%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -1822,7 +1806,7 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "width:90%;",
+                            "_value": "width:100%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -1894,7 +1878,7 @@
                             },
                             {
                                 "_key": "placeholder",
-                                "_value": "Contact Details",
+                                "_value": "Contact Number",
                                 "_type": "kv",
                                 "_attrDef": "p",
                                 "_useAsLabel": true
@@ -1975,16 +1959,8 @@
                                 "_key": "matError",
                                 "_value": [
                                     {
-                                        "input1": "contactDetails.hasError('pattern')",
-                                        "input2": "Enter only numerical values",
-                                        "toggle": {
-                                            "toggleData": [],
-                                            "selected": "start"
-                                        }
-                                    },
-                                    {
-                                        "input1": "contactDetails.hasError('maxlength')",
-                                        "input2": "enter maximum 10 characters",
+                                        "input1": "contactDetails.hasError('pattern') || contactDetails.hasError('maxlength') || contactDetails.hasError('required') || contactDetails.hasError('minlength')",
+                                        "input2": "Enter valid contact number",
                                         "toggle": {
                                             "toggleData": [],
                                             "selected": "start"
@@ -2004,7 +1980,7 @@
                             },
                             {
                                 "_key": "Label",
-                                "_value": "Contact Details",
+                                "_value": "Contact Number",
                                 "_type": "a",
                                 "_attrDef": "p",
                                 "_visibility": true
@@ -2073,7 +2049,7 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "width:90%;",
+                            "_value": "width:100%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -2316,7 +2292,7 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "width:90%;",
+                            "_value": "width:100%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -2334,7 +2310,7 @@
                         },
                         {
                             "_key": "fxLayoutGap",
-                            "_value": "",
+                            "_value": "1em",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -2427,11 +2403,72 @@
                                 "_value": "",
                                 "_type": "kv",
                                 "_attrDef": "p"
+                            }
+                        ]
+                    },
+                    "8f3c9bd4-66e1-64d8-339c-475112014ac9": {
+                        "paletteKey": "NG-RaisedButton",
+                        "parentEditorKey": "f5c32900-3b6e-24b5-a894-e91a9a641c1d",
+                        "designerReference": [
+                            {
+                                "_key": "style",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "class",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "buttonname",
+                                "_value": "Cancel",
+                                "_type": "a",
+                                "_attrDef": "p",
+                                "_useAsLabel": true
+                            },
+                            {
+                                "_key": "color",
+                                "_value": "warn",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "(click)",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[disabled]",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[disableRipple]",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "type",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "routerLink",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
                             },
                             {
                                 "_key": "[mat-dialog-close]",
                                 "_value": "[mat-dialog-close]",
-                                "_type": "kv",
+                                "_type": "a",
                                 "_attrDef": "c"
                             }
                         ]

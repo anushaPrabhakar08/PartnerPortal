@@ -1,7 +1,7 @@
-<div fxLayout="column wrap" style="responsive:true;margin-top: 50px;" class="margin-tb search-class " fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-  <mat-card style="width:80%;">
+<div fxLayout="column wrap" class="margin-tb search-class " fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+  <mat-card style="width:100%;">
     <mat-card-content responsive="true">
-      <div fxLayout="column" class="table-width-fix header-cell" style="width:100%; responsive:true;">
+      <div fxLayout="column" class="table-width-fix header-cell" style="width:100%;">
 
         <div fxLayout="row" fxLayoutAlign="end">
           <div fxLayout="column" fxFlex="30">
@@ -15,7 +15,7 @@
           <tr mat-row (click)="showPartnerDetails(row)" *matRowDef="let row; columns: [&apos;index&apos;,&apos;name&apos;,&apos;industry&apos;,&apos;country&apos;,&apos;website&apos;];"></tr>
 
           <ng-container matColumnDef="index">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header class="tab-header">No</th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="tab-header">S.No</th>
             <td mat-cell *matCellDef="let table; let i = index;" class="tab-data">{{i+1}}</td>
           </ng-container>
 

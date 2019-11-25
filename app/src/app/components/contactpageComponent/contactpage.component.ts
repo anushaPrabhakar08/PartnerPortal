@@ -28,8 +28,8 @@ import { countryservice } from '../../sd-services/countryservice';
 
 export class contactpageComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
-    industry = ['Banking & Finance', 'Retail', 'Public Sector', 'Insurance', 'Education'];
-    companysize = ['1-49', '50-99', '100-249', '250-499'];
+    industry = ['Banking & Finance','Insurance', 'Retail', 'Public Sector',  'Education', 'Other'];
+    companysize = ['1-49', '50-99', '100-249', '250-499', '>500'];
     country = [];
 
     requestForm: FormGroup;
@@ -49,14 +49,14 @@ export class contactpageComponent extends NBaseComponent implements OnInit {
             user: new FormGroup({
                 firstname: new FormControl('', [Validators.required, Validators.maxLength(30), Validators.pattern(/^[a-zA-Z]+$/)]),
                 lastname: new FormControl('', [Validators.required, Validators.maxLength(30), Validators.pattern(/^[a-zA-Z]+$/)]),
-                email: new FormControl('', [Validators.required, Validators.maxLength(20), Validators.pattern(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/)]),
-                mobile: new FormControl('', [Validators.required, Validators.maxLength(10), Validators.pattern(/^[0-9]*$/)]),
+                email: new FormControl('', [Validators.required, Validators.maxLength(50), Validators.pattern(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/)]),
+                mobile: new FormControl('', [Validators.required, Validators.maxLength(10),Validators.minLength(10), Validators.pattern(/^[0-9]*$/)]),
             }),
             company: new FormGroup({
                 name: new FormControl('', [Validators.required, Validators.maxLength(30), Validators.pattern(/^[a-zA-Z]+$/)]),
                 industry: new FormControl('', Validators.required),
                 size: new FormControl('', Validators.required),
-                message: new FormControl(''),
+                message: new FormControl('', Validators.required),
                 country: new FormControl('', Validators.required),
             }),
 
@@ -85,7 +85,7 @@ export class contactpageComponent extends NBaseComponent implements OnInit {
     submit() {
         console.log(this.requestForm.value)
         if (this.requestForm.valid) {
-            let result = this.partnerservice.requestAccess(this.requestForm.value);
+            let result = this.cont.contactusp(this.requestForm.value);
             this.alertService.openSnackBar('Please wait');
             result.then(data => {
                 this.alertService.openSnackBar(data.local.result.message);

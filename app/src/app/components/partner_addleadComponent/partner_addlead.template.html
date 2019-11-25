@@ -2,43 +2,41 @@
   <div fxLayout="column wrap" style="width:100%;overflow:auto;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
     <form [formGroup]="leadForm">
       <div fxLayout="row wrap" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
-        <h2>
+        <h2 style="margin-top:0px;">
           Add New Lead</h2>
       </div>
-      <div fxLayout="row wrap" style="width:90%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+      <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
         <mat-form-field [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;">
-          <input matInput name="organisationName" placeholder="Organisation Name" required formControlName="organisationName">
-          <mat-error align="start" *ngIf="organisationName.hasError(&apos;required&apos;)">Mandatory Field</mat-error>
-          <mat-error align="start" *ngIf="organisationName.hasError(&apos;pattern&apos;)">Enter Only Characters</mat-error>
-          <mat-error align="start" *ngIf="organisationName.hasError(&apos;maxlength&apos;)">can&apos;t be more than 40 characters</mat-error>
-          <mat-label>Organization Name</mat-label>
+          <input matInput name="organisationName" placeholder="Company Name" required formControlName="organisationName">
+          <mat-error align="start" *ngIf="organisationName.hasError(&apos;required&apos;) || organisationName.hasError(&apos;pattern&apos;)">Enter valid company Name</mat-error>
+          <mat-error align="start" *ngIf="organisationName.hasError(&apos;maxlength&apos;)">can&apos;t be more than 50 characters</mat-error>
+          <mat-label>Company Name</mat-label>
         </mat-form-field>
       </div>
-      <div fxLayout="row wrap" style="width:90%;" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
+      <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
         <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-          <input matInput placeholder="Organisation Website" required formControlName="orgWebsite">
-          <mat-error align="start" *ngIf="orgWebsite.hasError(&apos;required&apos;)">Mandatory Field</mat-error>
+          <input matInput placeholder="Company Website" required formControlName="orgWebsite">
+          <mat-error align="start" *ngIf="orgWebsite.hasError(&apos;required&apos;) || orgWebsite.hasError(&apos;pattern&apos;)">Enter valid website</mat-error>
           <mat-error align="start" *ngIf="orgWebsite.hasError(&apos;maxlength&apos;)">can&apos;t be more than 30 characters</mat-error>
-          <mat-error align="start" *ngIf="orgWebsite.hasError(&apos;pattern&apos;)">Invalid Field</mat-error>
         </mat-form-field>
       </div>
-      <div fxLayout="row wrap" style="width:90%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+      <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
         <mat-form-field [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;">
           <input matInput name="location" placeholder="Location" formControlName="location">
-          <mat-error align="start" *ngIf="location.hasError(&apos;pattern&apos;)">Only Characters</mat-error>
+          <mat-error align="start" *ngIf="location.hasError(&apos;pattern&apos;)">Enter valid Location</mat-error>
         </mat-form-field>
       </div>
-      <div fxLayout="row wrap" style="width:90%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+      <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
         <mat-form-field [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;">
           <mat-select formControlName="opportunityType" placeholder="Opportunity Type" required>
             <mat-option [value]="&apos;solution cell&apos;" disabled="false">Solution Cell</mat-option>
             <mat-option [value]="&apos;Platform Subscription&apos;" disabled="false">Platform Subscription</mat-option>
-            <mat-option [value]="&apos;both&apos;" disabled="false">both</mat-option>
+            <mat-option [value]="&apos;Both&apos;" disabled="false">both</mat-option>
           </mat-select>
 
         </mat-form-field>
       </div>
-      <div fxLayout="row wrap" style="width:90%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+      <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
         <mat-form-field [appearance]="&apos;standard&apos;">
           <input matInput placeholder="Lead Generated Date" [matDatepicker]="picker" formControlName="leadGeneratedDate" name="leadGeneratedDate" required [disabled]="false">
           <mat-datepicker-toggle matSuffix [for]="picker" disabled="false"></mat-datepicker-toggle>
@@ -46,22 +44,21 @@
 
         </mat-form-field>
       </div>
-      <div fxLayout="row wrap" style="width:90%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+      <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
         <mat-form-field [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;">
-          <input matInput name="contactDetails" placeholder="Contact Details" required formControlName="contactDetails">
-          <mat-error align="start" *ngIf="contactDetails.hasError(&apos;pattern&apos;)">Enter only numerical values</mat-error>
-          <mat-error align="start" *ngIf="contactDetails.hasError(&apos;maxlength&apos;)">enter maximum 10 characters</mat-error>
-          <mat-label>Contact Details</mat-label>
+          <input matInput name="contactDetails" placeholder="Contact Number" required formControlName="contactDetails">
+          <mat-error align="start" *ngIf="contactDetails.hasError(&apos;pattern&apos;) || contactDetails.hasError(&apos;maxlength&apos;) || contactDetails.hasError(&apos;required&apos;) || contactDetails.hasError(&apos;minlength&apos;)">Enter valid contact number</mat-error>
+          <mat-label>Contact Number</mat-label>
         </mat-form-field>
       </div>
-      <div fxLayout="row wrap" style="width:90%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+      <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
         <mat-form-field [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;">
           <input matInput name="comment" placeholder="Comment" formControlName="comment">
           <mat-error align="start" *ngIf="comment.hasError(&apos;maxlength&apos;)">Up to 100 characters are allowed</mat-error>
           <mat-label>Comment</mat-label>
         </mat-form-field>
       </div>
-      <div fxLayout="row wrap" style="width:90%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button [mat-dialog-close]="[mat-dialog-close]" color="primary" (click)="savelead()">Add Lead</button></div>
+      <div fxLayout="row wrap" style="width:100%;" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button color="primary" (click)="savelead()">Add Lead</button><button mat-raised-button [mat-dialog-close] color="warn">Cancel</button></div>
     </form>
   </div>
 </div>

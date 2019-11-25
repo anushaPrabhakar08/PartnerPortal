@@ -210,7 +210,7 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "width:100%;margin-top:5%;",
+                            "_value": "width:100%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -380,7 +380,7 @@
                                         },
                                         {
                                             "_key": "Header Label",
-                                            "_value": "No",
+                                            "_value": "S.No",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         },
@@ -570,7 +570,7 @@
                                         },
                                         {
                                             "_key": "fxFlex",
-                                            "_value": "24",
+                                            "_value": "30",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         }
@@ -640,7 +640,7 @@
                                     "designerReference": [
                                         {
                                             "_key": "style",
-                                            "_value": "",
+                                            "_value": "text-align: center;",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
@@ -652,7 +652,7 @@
                                         },
                                         {
                                             "_key": "Header Label",
-                                            "_value": "Status",
+                                            "_value": "Experience",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         },

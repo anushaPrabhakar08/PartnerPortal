@@ -1858,7 +1858,7 @@
                                     },
                                     {
                                         "_key": "html",
-                                        "_value": "Change password",
+                                        "_value": "Forgot Password?",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     }
@@ -2028,7 +2028,7 @@
                 },
                 {
                     "_key": "fxLayoutGap",
-                    "_value": "",
+                    "_value": "0.5em",
                     "_type": "kv",
                     "_attrDef": "p"
                 },

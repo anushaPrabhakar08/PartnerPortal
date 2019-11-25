@@ -287,7 +287,7 @@
                         "designerReference": [
                             {
                                 "_key": "style",
-                                "_value": "",
+                                "_value": "margin:0px;",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -592,8 +592,8 @@
                                 "_key": "matError",
                                 "_value": [
                                     {
-                                        "input1": "firstName.hasError('required')",
-                                        "input2": "First name is required",
+                                        "input1": "firstName.hasError('required') || firstName.hasError('pattern')",
+                                        "input2": "Enter valid First name",
                                         "toggle": {
                                             "toggleData": [],
                                             "selected": "start"
@@ -601,15 +601,7 @@
                                     },
                                     {
                                         "input1": "firstName.hasError('maxlength')",
-                                        "input2": "Cannot enter more than 20 characters",
-                                        "toggle": {
-                                            "toggleData": [],
-                                            "selected": "start"
-                                        }
-                                    },
-                                    {
-                                        "input1": "firstName.hasError('pattern')",
-                                        "input2": "Enter only characters",
+                                        "input2": "Cannot enter more than 50 characters",
                                         "toggle": {
                                             "toggleData": [],
                                             "selected": "start"
@@ -784,8 +776,8 @@
                                 "_key": "matError",
                                 "_value": [
                                     {
-                                        "input1": "lastName.hasError('required')",
-                                        "input2": "Last name is required",
+                                        "input1": "lastName.hasError('required') || lastName.hasError('pattern')",
+                                        "input2": "Enter valid Last name",
                                         "toggle": {
                                             "toggleData": [],
                                             "selected": "start"
@@ -794,14 +786,6 @@
                                     {
                                         "input1": "lastName.hasError('maxlength')",
                                         "input2": "Cannot enter more than 20 characters",
-                                        "toggle": {
-                                            "toggleData": [],
-                                            "selected": "start"
-                                        }
-                                    },
-                                    {
-                                        "input1": "lastName.hasError('pattern')",
-                                        "input2": "Enter only Characters",
                                         "toggle": {
                                             "toggleData": [],
                                             "selected": "start"
@@ -976,15 +960,7 @@
                                 "_key": "matError",
                                 "_value": [
                                     {
-                                        "input1": "email.hasError('required')",
-                                        "input2": "Email id is required",
-                                        "toggle": {
-                                            "toggleData": [],
-                                            "selected": "start"
-                                        }
-                                    },
-                                    {
-                                        "input1": "email.hasError('pattern')",
+                                        "input1": "email.hasError('required') || email.hasError('pattern')",
                                         "input2": "Enter valid email id",
                                         "toggle": {
                                             "toggleData": [],
@@ -1160,8 +1136,8 @@
                                 "_key": "matError",
                                 "_value": [
                                     {
-                                        "input1": "contactNo.hasError('required')",
-                                        "input2": "Contact no is required",
+                                        "input1": "contactNo.hasError('required') || contactNo.hasError('maxlength') || contactNo.hasError('minlength')",
+                                        "input2": "Enter valid contact number",
                                         "toggle": {
                                             "toggleData": [],
                                             "selected": "start"
@@ -1353,7 +1329,7 @@
                                 "_value": [
                                     {
                                         "input1": "presentWorkingCompany.hasError('maxlength')",
-                                        "input2": "Cannot be more than 30 characters",
+                                        "input2": "Cannot be more than 50 characters",
                                         "toggle": {
                                             "toggleData": [],
                                             "selected": "start"
@@ -1361,7 +1337,7 @@
                                     },
                                     {
                                         "input1": "presentWorkingCompany.hasError('pattern')",
-                                        "input2": "Enter only characters",
+                                        "input2": "Enter valid company name",
                                         "toggle": {
                                             "toggleData": [],
                                             "selected": "start"
@@ -1576,40 +1552,24 @@
                                 "_key": "selectCustomOption",
                                 "_value": [
                                     {
-                                        "input1": "Developer",
-                                        "input2": "Developer",
+                                        "input1": "Fresher",
+                                        "input2": "Fresher",
                                         "toggle": {
                                             "toggleData": [],
                                             "selected": "false"
                                         }
                                     },
                                     {
-                                        "input1": "Tester",
-                                        "input2": "Tester",
+                                        "input1": "Junior Developer",
+                                        "input2": "Junior Developer",
                                         "toggle": {
                                             "toggleData": [],
                                             "selected": "false"
                                         }
                                     },
                                     {
-                                        "input1": "Softwer Engineer",
-                                        "input2": "Softwer Engineer",
-                                        "toggle": {
-                                            "toggleData": [],
-                                            "selected": "false"
-                                        }
-                                    },
-                                    {
-                                        "input1": "php Developer",
-                                        "input2": "php Developer",
-                                        "toggle": {
-                                            "toggleData": [],
-                                            "selected": "false"
-                                        }
-                                    },
-                                    {
-                                        "input1": "Software Analyst",
-                                        "input2": "Software Analyst",
+                                        "input1": "Senior Developer",
+                                        "input2": "Senior Developer",
                                         "toggle": {
                                             "toggleData": [],
                                             "selected": "false"
@@ -1921,6 +1881,285 @@
                                 "_visibility": true
                             }
                         ]
+                    },
+                    "a4c64011-cea5-4ca3-e512-faabb61924c6": {
+                        "paletteKey": "FlexLayoutRow",
+                        "parentEditorKey": "f41de2ba-0c8f-210b-84a5-1d954ee8ab01",
+                        "designerReference": [
+                            {
+                                "_key": "componentLabel",
+                                "_value": "Row",
+                                "_type": "kv",
+                                "_attrDef": "p",
+                                "_useAsLabel": true
+                            },
+                            {
+                                "_key": "style",
+                                "_value": "width: 100%;",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "class",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "fxFlex",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "fxLayoutGap",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "wrap",
+                                "_value": "wrap",
+                                "_type": "a",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "layoutAlign",
+                                "_value": "start",
+                                "_type": "a",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "pLayoutAlign",
+                                "_value": "stretch",
+                                "_type": "a",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[fxShow]",
+                                "_value": "true",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[fxHide]",
+                                "_value": "false",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            }
+                        ],
+                        "4b6597e5-946c-2ed3-6dfd-d2d3b1dac59f": {
+                            "paletteKey": "Html5",
+                            "parentEditorKey": "a4c64011-cea5-4ca3-e512-faabb61924c6",
+                            "isAdvancedComponent": true,
+                            "designerReference": [
+                                {
+                                    "_key": "style",
+                                    "_value": "width: 98%;",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "class",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "htmlElement",
+                                    "_value": "div",
+                                    "_type": "dav",
+                                    "_attrDef": "p",
+                                    "_useAsLabel": true
+                                },
+                                {
+                                    "_key": "tagType",
+                                    "_value": "",
+                                    "_type": "a",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "name",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "sandbox",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "src",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "srcdoc",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "width",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "[autoplay]",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "[loop]",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "data",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "audioSource",
+                                    "_value": [],
+                                    "_type": "a",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "videoSource",
+                                    "_value": [],
+                                    "_type": "a",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "audioDatasource",
+                                    "_value": "",
+                                    "_type": "a",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "audioSrc",
+                                    "_value": "",
+                                    "_type": "a",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "audioType",
+                                    "_value": "",
+                                    "_type": "a",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "videoDatasource",
+                                    "_value": "",
+                                    "_type": "a",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "videoSrc",
+                                    "_value": "",
+                                    "_type": "a",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "videoType",
+                                    "_value": "",
+                                    "_type": "a",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "(audioplay)",
+                                    "_value": "",
+                                    "_type": "a",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "(videoplay)",
+                                    "_value": "",
+                                    "_type": "a",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "(audiopause)",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "(videopause)",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "(audioended)",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                },
+                                {
+                                    "_key": "(videoended)",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p",
+                                    "_visibility": false
+                                }
+                            ],
+                            "7b1133b9-98d8-9641-5dbe-ca560bcb3fce": {
+                                "paletteKey": "html-editor",
+                                "parentEditorKey": "4b6597e5-946c-2ed3-6dfd-d2d3b1dac59f",
+                                "isAdvancedChildComponent": true,
+                                "designerReference": [
+                                    {
+                                        "_key": "style",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "class",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "html",
+                                        "_value": "<mat-form-field class=\"example-chip-list\" >\r\n  <mat-chip-list #chipList aria-label=\"skills selection\">\r\n    <mat-chip *ngFor=\"let skill of skills\" [selectable]=\"selectable\"\r\n             [removable]=\"removable\" (removed)=\"remove(skill)\">\r\n      {{skill.name}}\r\n      <mat-icon matChipRemove *ngIf=\"removable\">cancel</mat-icon>\r\n    </mat-chip>\r\n    <input placeholder=\"Add skills\"\r\n           [matChipInputFor]=\"chipList\"\r\n           [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\"\r\n           [matChipInputAddOnBlur]=\"addOnBlur\"\r\n           (matChipInputTokenEnd)=\"add($event)\">\r\n  </mat-chip-list>\r\n</mat-form-field>",
+                                        "_type": "a",
+                                        "_attrDef": "p"
+                                    }
+                                ]
+                            }
+                        }
                     },
                     "706c98f5-99de-5414-8819-339063e34920": {
                         "paletteKey": "FlexLayoutRow",

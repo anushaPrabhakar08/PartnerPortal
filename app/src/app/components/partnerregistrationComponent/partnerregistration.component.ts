@@ -8,6 +8,7 @@ import { FormControl, Validators, FormBuilder, FormGroup } from '@angular/forms'
 import { partnerservice } from '../../sd-services/partnerservice';
 import { partnerregistration } from '../../models/partnerregistration.model';
 import { Router } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 
 @Component({
@@ -23,7 +24,7 @@ export class partnerregistrationComponent extends NBaseComponent implements OnIn
     companyTypeSource = ['service', 'product'];
     countrySource = ['India', 'US', 'London', 'Dubai', 'Egypt'];
     designationSource = ['Senior Engineer', 'Senior Developer', 'Senior Tester', 'Team Manager'];
-    constructor(private bdms: NDataModelService,
+    constructor(private bdms: NDataModelService, private titleService: Title,
         private fb: FormBuilder,
         private partnerservice: partnerservice,
         private alertService: NSnackbarService,
@@ -34,6 +35,7 @@ export class partnerregistrationComponent extends NBaseComponent implements OnIn
     }
 
     ngOnInit() {
+        this.titleService.setTitle('Profile Details');
         this.companyGroup = this.fb.group({
             companyName: ['', [Validators.required, Validators.maxLength(20), Validators.pattern(/^[a-zA-Z]+$/)]],
             companyWebsite: ['', [Validators.required, Validators.maxLength(20), Validators.pattern(/^[a-zA-Z]+$/)]],

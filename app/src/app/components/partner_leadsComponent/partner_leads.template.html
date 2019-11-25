@@ -1,10 +1,10 @@
 <div fxLayout="row wrap" class="background" fxFlex="100" fxLayoutAlign="start none" [fxShow]="true" [fxHide]="false">
   <div fxLayout="column wrap" class="margin-tb" fxFlex="100" fxLayoutAlign="  none" [fxShow]="true" [fxHide]="false">
     <div fxLayout="row wrap" style="width:100%;" class="search-class " fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
-      <mat-card style="width:100%;margin-top:5%;">
+      <mat-card style="width:100%;">
         <mat-card-content>
           <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-            <div fxLayout="column" class="table-lead" style="width:100%;">
+            <div fxLayout="column" class="table-lead header-cell" style="width:100%;">
 
               <div fxLayout="row" fxLayoutAlign="end">
                 <div fxLayout="column" fxFlex="30">
@@ -14,27 +14,27 @@
                 </div>
               </div>
               <table mat-table [dataSource]="dataSource" matSort class="table-width-fix">
-                <tr mat-header-row *matHeaderRowDef="[&apos;index&apos;,&apos;organisationName&apos;,&apos;location&apos;,&apos;opportunityType&apos;,&apos;orgWebsite&apos;,&apos;leadGeneratedDate&apos;,&apos;action&apos;]"></tr>
-                <tr mat-row *matRowDef="let row; columns: [&apos;index&apos;,&apos;organisationName&apos;,&apos;location&apos;,&apos;opportunityType&apos;,&apos;orgWebsite&apos;,&apos;leadGeneratedDate&apos;,&apos;action&apos;];"></tr>
+                <tr mat-header-row *matHeaderRowDef="[&apos;index&apos;,&apos;organisationName&apos;,&apos;opportunityType&apos;,&apos;location&apos;,&apos;orgWebsite&apos;,&apos;leadGeneratedDate&apos;,&apos;b9f4578e-292b-8a93-a1cf-926c1191b632&apos;]"></tr>
+                <tr mat-row *matRowDef="let row; columns: [&apos;index&apos;,&apos;organisationName&apos;,&apos;opportunityType&apos;,&apos;location&apos;,&apos;orgWebsite&apos;,&apos;leadGeneratedDate&apos;,&apos;b9f4578e-292b-8a93-a1cf-926c1191b632&apos;];"></tr>
 
                 <ng-container matColumnDef="index">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header class="tab-leadheader">No</th>
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header class="tab-leadheader">S.No</th>
                   <td mat-cell *matCellDef="let table; let i = index;" class="tab-leaddata">{{i + 1}}</td>
                 </ng-container>
 
                 <ng-container matColumnDef="organisationName">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header class="tab-leadheader">Organization Name</th>
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header class="tab-leadheader">Company Name</th>
                   <td mat-cell *matCellDef="let table; let i = index;" class="tab-leaddata">{{table.organisationName}}</td>
                 </ng-container>
 
-                <ng-container matColumnDef="location">
+                <ng-container matColumnDef="opportunityType">
                   <th mat-header-cell *matHeaderCellDef mat-sort-header class="tab-leadheader">Opportunity Type</th>
-                  <td mat-cell *matCellDef="let table; let i = index;" class="tab-leaddata">{{table.location}}</td>
+                  <td mat-cell *matCellDef="let table; let i = index;" class="tab-leaddata">{{table.opportunityType}}</td>
                 </ng-container>
 
-                <ng-container matColumnDef="opportunityType">
+                <ng-container matColumnDef="location">
                   <th mat-header-cell *matHeaderCellDef mat-sort-header class="tab-leadheader">Location</th>
-                  <td mat-cell *matCellDef="let table; let i = index;" class="tab-leaddata">{{table.opportunityType}}</td>
+                  <td mat-cell *matCellDef="let table; let i = index;" class="tab-leaddata">{{table.location}}</td>
                 </ng-container>
 
                 <ng-container matColumnDef="orgWebsite">
@@ -47,9 +47,9 @@
                   <td mat-cell *matCellDef="let table; let i = index;" class="tab-leaddata">{{table.leadGeneratedDate}}</td>
                 </ng-container>
 
-                <ng-container matColumnDef="action" button>
-                  <th mat-header-cell *matHeaderCellDef class="tab-leadheader">Action</th>
-                  <td mat-cell *matCellDef="let table; let i = index;" class="tab-leaddata">{{table.action}}<button mat-button color="primary" (click)="addLead()">Edit</button><button mat-button color="warn" (click)="openDeleteDialog(table)">Delete</button></td>
+                <ng-container matColumnDef="b9f4578e-292b-8a93-a1cf-926c1191b632">
+                  <th mat-header-cell *matHeaderCellDef>Action</th>
+                  <td mat-cell *matCellDef="let table" headerclass="tab-leadheader" columnclass="tab-leaddata"><button mat-button color="primary" (click)="addLead()">Edit</button><button mat-button color="warn" (click)="openDeleteDialog(table)">Delete</button></td>
                 </ng-container>
               </table>
               <mat-paginator [length]="10" [pageSize]="3" [pageSizeOptions]="[3, 8, 20, 100]">

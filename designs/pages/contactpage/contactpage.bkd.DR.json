@@ -1886,7 +1886,7 @@
                                     },
                                     {
                                         "_key": "html",
-                                        "_value": "send us message",
+                                        "_value": "Contact Us",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     }
@@ -2264,8 +2264,8 @@
                                                 "_key": "matError",
                                                 "_value": [
                                                     {
-                                                        "input1": "firstname.hasError('required')",
-                                                        "input2": "Firstname is required",
+                                                        "input1": "firstname.hasError('required') || firstname.hasError('pattern')",
+                                                        "input2": "Enter valid Firstname",
                                                         "toggle": {
                                                             "toggleData": [],
                                                             "selected": "start"
@@ -2274,14 +2274,6 @@
                                                     {
                                                         "input1": "firstname.hasError('maxlength')",
                                                         "input2": "Cannot enter more than 30 characters",
-                                                        "toggle": {
-                                                            "toggleData": [],
-                                                            "selected": "start"
-                                                        }
-                                                    },
-                                                    {
-                                                        "input1": "firstname.hasError('pattern')",
-                                                        "input2": "Enter only Characters",
                                                         "toggle": {
                                                             "toggleData": [],
                                                             "selected": "start"
@@ -2524,7 +2516,7 @@
                                                 "_value": [
                                                     {
                                                         "input1": "lastname.hasError('required')",
-                                                        "input2": "Lastname is required",
+                                                        "input2": "Enter valid Lastname",
                                                         "toggle": {
                                                             "toggleData": [],
                                                             "selected": "start"
@@ -2540,7 +2532,7 @@
                                                     },
                                                     {
                                                         "input1": "lastname.hasError('pattern')",
-                                                        "input2": "Enter only characters",
+                                                        "input2": "Enter valid Lastname",
                                                         "toggle": {
                                                             "toggleData": [],
                                                             "selected": "start"
@@ -2856,7 +2848,7 @@
                                                 "_value": [
                                                     {
                                                         "input1": "email.hasError('required')",
-                                                        "input2": "Email is required",
+                                                        "input2": "Enter valid Emailid",
                                                         "toggle": {
                                                             "toggleData": [],
                                                             "selected": "start"
@@ -2864,7 +2856,7 @@
                                                     },
                                                     {
                                                         "input1": "email.hasError('pattern')",
-                                                        "input2": "Enter valid email id",
+                                                        "input2": "Enter valid Emailid",
                                                         "toggle": {
                                                             "toggleData": [],
                                                             "selected": "start"
@@ -3025,7 +3017,7 @@
                                             },
                                             {
                                                 "_key": "placeholder",
-                                                "_value": "Mobile Number",
+                                                "_value": "Contact Number",
                                                 "_type": "kv",
                                                 "_attrDef": "p",
                                                 "_useAsLabel": true
@@ -3107,23 +3099,15 @@
                                                 "_value": [
                                                     {
                                                         "input1": "mobile.hasError('required')",
-                                                        "input2": "Mobile no is required",
+                                                        "input2": "Enter valid contact number",
                                                         "toggle": {
                                                             "toggleData": [],
                                                             "selected": "start"
                                                         }
                                                     },
                                                     {
-                                                        "input1": "mobile.hasError('maxlength')",
-                                                        "input2": "Invalid Mobile no",
-                                                        "toggle": {
-                                                            "toggleData": [],
-                                                            "selected": "start"
-                                                        }
-                                                    },
-                                                    {
-                                                        "input1": "mobile.hasError('pattern')",
-                                                        "input2": "Enter only Numerical values",
+                                                        "input1": "mobile.hasError('maxlength') || mobile.hasError('minlength') || mobile.hasError('pattern')",
+                                                        "input2": "Enter valid contact number",
                                                         "toggle": {
                                                             "toggleData": [],
                                                             "selected": "start"
@@ -3143,7 +3127,7 @@
                                             },
                                             {
                                                 "_key": "Label",
-                                                "_value": "Mobile Number",
+                                                "_value": "Contact Number",
                                                 "_type": "a",
                                                 "_attrDef": "p",
                                                 "_visibility": true
@@ -3506,7 +3490,7 @@
                                                 "_value": [
                                                     {
                                                         "input1": "name.hasError('required')",
-                                                        "input2": "Company name is required",
+                                                        "input2": "Enter valid company name",
                                                         "toggle": {
                                                             "toggleData": [],
                                                             "selected": "start"
@@ -3522,7 +3506,7 @@
                                                     },
                                                     {
                                                         "input1": "name.hasError('pattern')",
-                                                        "input2": "Enter only characters",
+                                                        "input2": "Enter valid company name",
                                                         "toggle": {
                                                             "toggleData": [],
                                                             "selected": "start"
@@ -4432,7 +4416,7 @@
                                     },
                                     {
                                         "_key": "class",
-                                        "_value": "",
+                                        "_value": "contact-messagebox",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -4491,7 +4475,7 @@
                                         },
                                         {
                                             "_key": "class",
-                                            "_value": "sample",
+                                            "_value": "messagebox",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },

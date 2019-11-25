@@ -210,7 +210,7 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "width:100%;margin-top:5%;",
+                            "_value": "width:100%;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -337,7 +337,7 @@
                                     },
                                     {
                                         "_key": "class",
-                                        "_value": "table-lead",
+                                        "_value": "table-lead header-cell",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -380,7 +380,7 @@
                                         },
                                         {
                                             "_key": "Header Label",
-                                            "_value": "No",
+                                            "_value": "S.No",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         },
@@ -437,7 +437,7 @@
                                         },
                                         {
                                             "_key": "Header Label",
-                                            "_value": "Organization Name",
+                                            "_value": "Company Name",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         },
@@ -550,7 +550,7 @@
                                         },
                                         {
                                             "_key": "Mapping",
-                                            "_value": "{{table.location}}",
+                                            "_value": "{{table.opportunityType}}",
                                             "_type": "ma",
                                             "_attrDef": "p",
                                             "_useAsLabel": true
@@ -607,7 +607,7 @@
                                         },
                                         {
                                             "_key": "Mapping",
-                                            "_value": "{{table.opportunityType}}",
+                                            "_value": "{{table.location}}",
                                             "_type": "ma",
                                             "_attrDef": "p",
                                             "_useAsLabel": true
@@ -791,8 +791,8 @@
                                         }
                                     ]
                                 },
-                                "43fa5403-9808-a5e2-8d7a-4a86bc2165f7": {
-                                    "paletteKey": "ng-table-column",
+                                "61c5048d-a20a-a65c-ee6e-9c1a1dc4b805": {
+                                    "paletteKey": "ng-droppable-table-column",
                                     "parentEditorKey": "2d7dbad3-cd30-9e1a-c774-c68a95e6c6d1",
                                     "isAdvancedChildComponent": true,
                                     "designerReference": [
@@ -809,9 +809,9 @@
                                             "_attrDef": "p"
                                         },
                                         {
-                                            "_key": "Header Label",
-                                            "_value": "Action",
-                                            "_type": "a",
+                                            "_key": "Sort Key",
+                                            "_value": "",
+                                            "_type": "dav",
                                             "_attrDef": "p"
                                         },
                                         {
@@ -821,38 +821,152 @@
                                             "_attrDef": "p"
                                         },
                                         {
-                                            "_key": "Mapping",
-                                            "_value": "{{table.action}}<button mat-button color=\"primary\" (click)=\"addLead()\">Edit</button><button mat-button color=\"warn\" (click)=\"openDeleteDialog(table)\">Delete</button>",
-                                            "_type": "ma",
-                                            "_attrDef": "p",
-                                            "_useAsLabel": true
+                                            "_key": "columnId",
+                                            "_value": "b9f4578e-292b-8a93-a1cf-926c1191b632",
+                                            "_type": "dav",
+                                            "_attrDef": "p"
                                         },
                                         {
-                                            "_key": "columnName",
-                                            "_value": "",
-                                            "_type": "dav",
-                                            "_attrDef": "p",
-                                            "_visibility": false
+                                            "_key": "Header Label",
+                                            "_value": "Action",
+                                            "_type": "a",
+                                            "_attrDef": "p"
                                         },
                                         {
                                             "_key": "headerclass",
                                             "_value": "tab-leadheader",
-                                            "_type": "dav",
-                                            "_attrDef": "p"
+                                            "_type": "kv",
+                                            "_attrDef": "c"
                                         },
                                         {
                                             "_key": "columnclass",
                                             "_value": "tab-leaddata",
-                                            "_type": "dav",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "button",
-                                            "_value": "button",
-                                            "_type": "a",
+                                            "_type": "kv",
                                             "_attrDef": "c"
                                         }
-                                    ]
+                                    ],
+                                    "806079f6-21ef-bb15-d4e9-001b8abd7343": {
+                                        "paletteKey": "NG-button",
+                                        "parentEditorKey": "61c5048d-a20a-a65c-ee6e-9c1a1dc4b805",
+                                        "designerReference": [
+                                            {
+                                                "_key": "style",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "class",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "buttonname",
+                                                "_value": "Edit",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_useAsLabel": true
+                                            },
+                                            {
+                                                "_key": "color",
+                                                "_value": "primary",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "(click)",
+                                                "_value": "addLead()",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[disabled]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[disableRipple]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "type",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "routerLink",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            }
+                                        ]
+                                    },
+                                    "f7589911-6dd6-83a6-781f-84305b1978f6": {
+                                        "paletteKey": "NG-button",
+                                        "parentEditorKey": "61c5048d-a20a-a65c-ee6e-9c1a1dc4b805",
+                                        "designerReference": [
+                                            {
+                                                "_key": "style",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "class",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "buttonname",
+                                                "_value": "Delete",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_useAsLabel": true
+                                            },
+                                            {
+                                                "_key": "color",
+                                                "_value": "warn",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "(click)",
+                                                "_value": "openDeleteDialog(table)",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[disabled]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[disableRipple]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "type",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "routerLink",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            }
+                                        ]
+                                    }
                                 }
                             }
                         }

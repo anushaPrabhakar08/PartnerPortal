@@ -133,24 +133,25 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
     }
 
     addDeveloper() {
-        const dialogRef = this.dialog.open(partner_adddeveloperComponent, {
+        const dialogRef = this.dialog.open(partner_adddeveloperComponent,{ disableClose: true },{
             width: '450px',
+            height:'500px',
             data: this.id
         });
         dialogRef.afterClosed().subscribe(result => {
-            this.ngOnInit();
+             this.getDevelopers();
         });
     }
 
-    previewCertificate() {
-        const dialogRef = this.dialog.open(partner_adddeveloperComponent, {
-            width: '450px',
-            data: this.id
-        });
-        dialogRef.afterClosed().subscribe(result => {
-            this.ngOnInit();
-        });
-    }
+    // previewCertificate() {
+    //     const dialogRef = this.dialog.open(partner_adddeveloperComponent, {
+    //         //width: '70%',
+    //         data: this.id
+    //     });
+    //     dialogRef.afterClosed().subscribe(result => {
+    //         this.ngOnInit();
+    //     });
+    // }
 
 
     applyFilter(filterValue: string) {
@@ -166,7 +167,7 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
 
     addCertificateDialog(upload) {
         const dialogRef = this.dialog.open(uploadcertificateComponent, {
-            width: '450px',
+            width: '75%',
             //disableClose: true,
             data: { id: this.id, uploadView: upload }
         });

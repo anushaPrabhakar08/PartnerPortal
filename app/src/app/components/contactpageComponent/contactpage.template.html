@@ -25,7 +25,7 @@
       <mat-card-content fxLayout="column">
         <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
           <p style="font-variant:petite-caps;font-weight:700;font-size:35px;;">
-            send us message</p>
+            Contact Us</p>
         </div>
         <form [formGroup]="requestForm" class="requestForm" (ngSubmit)="submit()">
           <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" formGroupName="user">
@@ -33,18 +33,17 @@
               <div fxLayout="column wrap" class="column" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                 <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
                   <input matInput placeholder="First Name" required formControlName="firstname">
-                  <mat-error align="start" *ngIf="firstname.hasError(&apos;required&apos;)">Firstname is required</mat-error>
+                  <mat-error align="start" *ngIf="firstname.hasError(&apos;required&apos;) || firstname.hasError(&apos;pattern&apos;)">Enter valid Firstname</mat-error>
                   <mat-error align="start" *ngIf="firstname.hasError(&apos;maxlength&apos;)">Cannot enter more than 30 characters</mat-error>
-                  <mat-error align="start" *ngIf="firstname.hasError(&apos;pattern&apos;)">Enter only Characters</mat-error>
                   <mat-label>First Name</mat-label>
                 </mat-form-field>
               </div>
               <div fxLayout="column wrap" class="column" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                 <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
                   <input matInput placeholder="Last Name" required formControlName="lastname">
-                  <mat-error align="start" *ngIf="lastname.hasError(&apos;required&apos;)">Lastname is required</mat-error>
+                  <mat-error align="start" *ngIf="lastname.hasError(&apos;required&apos;)">Enter valid Lastname</mat-error>
                   <mat-error align="start" *ngIf="lastname.hasError(&apos;maxlength&apos;)">Cannot be more than 30 characters</mat-error>
-                  <mat-error align="start" *ngIf="lastname.hasError(&apos;pattern&apos;)">Enter only characters</mat-error>
+                  <mat-error align="start" *ngIf="lastname.hasError(&apos;pattern&apos;)">Enter valid Lastname</mat-error>
                   <mat-label>Last Name</mat-label>
                 </mat-form-field>
               </div>
@@ -53,18 +52,17 @@
               <div fxLayout="column wrap" class="column" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                 <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
                   <input matInput placeholder="Company Email" required formControlName="email">
-                  <mat-error align="start" *ngIf="email.hasError(&apos;required&apos;)">Email is required</mat-error>
-                  <mat-error align="start" *ngIf="email.hasError(&apos;pattern&apos;)">Enter valid email id</mat-error>
+                  <mat-error align="start" *ngIf="email.hasError(&apos;required&apos;)">Enter valid Emailid</mat-error>
+                  <mat-error align="start" *ngIf="email.hasError(&apos;pattern&apos;)">Enter valid Emailid</mat-error>
                   <mat-label>Company Email</mat-label>
                 </mat-form-field>
               </div>
               <div fxLayout="column wrap" class="column" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                 <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
-                  <input matInput type="tel" placeholder="Mobile Number" required formControlName="mobile">
-                  <mat-error align="start" *ngIf="mobile.hasError(&apos;required&apos;)">Mobile no is required</mat-error>
-                  <mat-error align="start" *ngIf="mobile.hasError(&apos;maxlength&apos;)">Invalid Mobile no</mat-error>
-                  <mat-error align="start" *ngIf="mobile.hasError(&apos;pattern&apos;)">Enter only Numerical values</mat-error>
-                  <mat-label>Mobile Number</mat-label>
+                  <input matInput type="tel" placeholder="Contact Number" required formControlName="mobile">
+                  <mat-error align="start" *ngIf="mobile.hasError(&apos;required&apos;)">Enter valid contact number</mat-error>
+                  <mat-error align="start" *ngIf="mobile.hasError(&apos;maxlength&apos;) || mobile.hasError(&apos;minlength&apos;) || mobile.hasError(&apos;pattern&apos;)">Enter valid contact number</mat-error>
+                  <mat-label>Contact Number</mat-label>
                 </mat-form-field>
               </div>
             </div>
@@ -74,9 +72,9 @@
               <div fxLayout="column wrap" class="column" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
                 <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
                   <input matInput placeholder="Company Name" required formControlName="name">
-                  <mat-error align="start" *ngIf="name.hasError(&apos;required&apos;)">Company name is required</mat-error>
+                  <mat-error align="start" *ngIf="name.hasError(&apos;required&apos;)">Enter valid company name</mat-error>
                   <mat-error align="start" *ngIf="name.hasError(&apos;maxlength&apos;)">Cannot be more than 30 characters</mat-error>
-                  <mat-error align="start" *ngIf="name.hasError(&apos;pattern&apos;)">Enter only characters</mat-error>
+                  <mat-error align="start" *ngIf="name.hasError(&apos;pattern&apos;)">Enter valid company name</mat-error>
                   <mat-label>Company Name</mat-label>
                 </mat-form-field>
               </div>
@@ -113,8 +111,8 @@
                 </mat-form-field>
               </div>
             </div>
-            <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-              <mat-form-field style="width:100%;" class="sample">
+            <div fxLayout="row wrap" class="contact-messagebox" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <mat-form-field style="width:100%;" class="messagebox">
                 <textarea matInput formControlName="message" placeholder="Message" required></textarea>
               </mat-form-field>
             </div>

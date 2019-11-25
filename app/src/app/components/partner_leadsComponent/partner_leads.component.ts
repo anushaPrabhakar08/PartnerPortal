@@ -66,7 +66,7 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
    
 
     openDeleteDialog(table) {
-        const dialogRef = this.dialog.open(deletepopupComponent, {
+        const dialogRef = this.dialog.open(deletepopupComponent, { disableClose: true },{
             width: '450px',
             data: table
         });
@@ -77,9 +77,9 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
 
 
     addLead() {
-        const dialogRef = this.dialog.open(partner_addleadComponent, {
-            width: '450px',
-            height: '500px',
+        const dialogRef = this.dialog.open(partner_addleadComponent,{ disableClose: true }, {
+            width: '40%',
+            height: '60%',
             data: this.userId
         });
         dialogRef.afterClosed().subscribe(result => {

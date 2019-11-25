@@ -34,11 +34,11 @@ export class partner_addleadComponent extends NBaseComponent implements OnInit {
     ngOnInit() {
         // console.log(this.userId);
         this.leadForm = this.fb.group({
-            organisationName: ['', [Validators.required, Validators.maxLength(30), Validators.pattern(/^[a-zA-Z]+$/)]],
-            location: ['', [Validators.maxLength(30), Validators.pattern(/^[a-zA-Z]+$/)]],
-            orgWebsite: ['', [Validators.required, Validators.maxLength(20), Validators.pattern(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/)]],
+            organisationName: ['', [Validators.required, Validators.maxLength(50), Validators.pattern(/^[a-zA-Z]+$/)]],
+            location: ['', [Validators.maxLength(50), Validators.pattern(/^[a-zA-Z]+$/)]],
+            orgWebsite: ['', [Validators.required, Validators.maxLength(50), Validators.pattern(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/)]],
             comment: ['', [Validators.maxLength(100), Validators.pattern(/^[\w\s]+$/)]],
-            contactDetails: ['', [Validators.required, Validators.maxLength(10), Validators.pattern(/^[0-9]*$/)]],
+            contactDetails: ['', [Validators.required, Validators.maxLength(10),Validators.minLength(10), Validators.pattern(/^[0-9]*$/)]],
             leadGeneratedDate: [''],
             opportunityType: ['']
         });
