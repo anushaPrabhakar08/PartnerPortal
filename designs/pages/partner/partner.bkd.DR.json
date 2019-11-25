@@ -227,7 +227,7 @@
                         },
                         {
                             "_key": "pLayoutAlign",
-                            "_value": "stretch",
+                            "_value": "center",
                             "_type": "a",
                             "_attrDef": "p"
                         },
@@ -269,13 +269,13 @@
                             },
                             {
                                 "_key": "fxFlex",
-                                "_value": "10",
+                                "_value": "",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
                             {
                                 "_key": "fxLayoutGap",
-                                "_value": "14em",
+                                "_value": "",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -323,7 +323,7 @@
                                 },
                                 {
                                     "_key": "style",
-                                    "_value": "",
+                                    "_value": "margin:0 16px 0 10px;",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -444,13 +444,13 @@
                                 ]
                             }
                         },
-                        "d5b88776-92af-b7d3-2763-de078d3d1a9f": {
-                            "paletteKey": "FlexLayoutRow",
+                        "975ec094-dbcd-929b-56d1-0538d6e338f9": {
+                            "paletteKey": "NG-image",
                             "parentEditorKey": "078d568e-1c61-9993-3397-aa9dba299779",
                             "designerReference": [
                                 {
                                     "_key": "componentLabel",
-                                    "_value": "Row",
+                                    "_value": "Image",
                                     "_type": "kv",
                                     "_attrDef": "p",
                                     "_useAsLabel": true
@@ -468,133 +468,72 @@
                                     "_attrDef": "p"
                                 },
                                 {
-                                    "_key": "fxFlex",
+                                    "_key": "imgSrc",
+                                    "_value": "Web/logo.png",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "alt",
                                     "_value": "",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
                                 {
-                                    "_key": "fxLayoutGap",
+                                    "_key": "[src]",
                                     "_value": "",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
                                 {
-                                    "_key": "wrap",
+                                    "_key": "imgSecure",
                                     "_value": "",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
                                 {
-                                    "_key": "layoutAlign",
-                                    "_value": "space-between",
-                                    "_type": "a",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "pLayoutAlign",
-                                    "_value": "stretch",
-                                    "_type": "a",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "[fxShow]",
-                                    "_value": "true",
+                                    "_key": "[collectionName]",
+                                    "_value": "",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
                                 {
-                                    "_key": "[fxHide]",
-                                    "_value": "false",
+                                    "_key": "[imageFilter]",
+                                    "_value": "",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
                                 {
-                                    "_key": "fxShow.lt-sm",
-                                    "_value": "true",
+                                    "_key": "width",
+                                    "_value": "205px",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "srcset",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "sizes",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "fxFlex.sm",
+                                    "_value": "200px",
+                                    "_type": "kv",
+                                    "_attrDef": "c"
+                                },
+                                {
+                                    "_key": "fxFlex.lt-md",
+                                    "_value": "150px",
                                     "_type": "kv",
                                     "_attrDef": "c"
                                 }
-                            ],
-                            "975ec094-dbcd-929b-56d1-0538d6e338f9": {
-                                "paletteKey": "NG-image",
-                                "parentEditorKey": "d5b88776-92af-b7d3-2763-de078d3d1a9f",
-                                "designerReference": [
-                                    {
-                                        "_key": "componentLabel",
-                                        "_value": "Image",
-                                        "_type": "kv",
-                                        "_attrDef": "p",
-                                        "_useAsLabel": true
-                                    },
-                                    {
-                                        "_key": "style",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "class",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "imgSrc",
-                                        "_value": "Web/logo.png",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "alt",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "[src]",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "imgSecure",
-                                        "_value": "",
-                                        "_type": "a",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "[collectionName]",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "[imageFilter]",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "width",
-                                        "_value": "200px",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "srcset",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "sizes",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    }
-                                ]
-                            }
+                            ]
                         }
                     },
                     "2e669893-bc54-fa82-820c-4943f2938709": {
@@ -622,7 +561,7 @@
                             },
                             {
                                 "_key": "fxFlex",
-                                "_value": "5em",
+                                "_value": "",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -661,6 +600,24 @@
                                 "_value": "false",
                                 "_type": "kv",
                                 "_attrDef": "p"
+                            },
+                            {
+                                "_key": "fxShow.xs",
+                                "_value": "false",
+                                "_type": "kv",
+                                "_attrDef": "c"
+                            },
+                            {
+                                "_key": "fxShow.md",
+                                "_value": "false",
+                                "_type": "kv",
+                                "_attrDef": "c"
+                            },
+                            {
+                                "_key": "fxShow.sm",
+                                "_value": "false",
+                                "_type": "kv",
+                                "_attrDef": "c"
                             }
                         ],
                         "d6058729-7f3e-2954-52e7-a57422f120a7": {
@@ -907,7 +864,7 @@
                             },
                             {
                                 "_key": "fxLayoutGap",
-                                "_value": "1em",
+                                "_value": "0.5em",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -1691,6 +1648,12 @@
                                             "_value": "",
                                             "_type": "kv",
                                             "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "routerLink",
+                                            "_value": "PartnerRegistration",
+                                            "_type": "kv",
+                                            "_attrDef": "c"
                                         }
                                     ]
                                 }
@@ -1760,6 +1723,12 @@
                                     "_value": "false",
                                     "_type": "kv",
                                     "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "fxShow.lt-md",
+                                    "_value": "false",
+                                    "_type": "kv",
+                                    "_attrDef": "c"
                                 }
                             ],
                             "ca10b1ba-ed19-4f72-82b2-bab094a6e36c": {
@@ -2058,7 +2027,7 @@
                                 },
                                 {
                                     "_key": "style",
-                                    "_value": "margin-top:20px;",
+                                    "_value": "",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -2169,6 +2138,12 @@
                                         "_value": "/partner/marketing_collaterals",
                                         "_type": "kv",
                                         "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "routerLinkActive",
+                                        "_value": "link-active",
+                                        "_type": "kv",
+                                        "_attrDef": "c"
                                     }
                                 ]
                             },
@@ -2230,6 +2205,12 @@
                                         "_value": "/partner/leads",
                                         "_type": "kv",
                                         "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "routerLinkActive",
+                                        "_value": "link-active",
+                                        "_type": "kv",
+                                        "_attrDef": "c"
                                     }
                                 ]
                             },
@@ -2291,6 +2272,12 @@
                                         "_value": "/partner/developer_details",
                                         "_type": "kv",
                                         "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "routerLinkActive",
+                                        "_value": "link-active",
+                                        "_type": "kv",
+                                        "_attrDef": "c"
                                     }
                                 ]
                             },
@@ -2352,6 +2339,91 @@
                                         "_value": "/partner/agreement",
                                         "_type": "kv",
                                         "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "routerLinkActive",
+                                        "_value": "link-active",
+                                        "_type": "kv",
+                                        "_attrDef": "c"
+                                    }
+                                ]
+                            },
+                            "4659f3a5-ee98-2ecd-29ee-f38edfc7eb11": {
+                                "paletteKey": "NG-button",
+                                "parentEditorKey": "f79587fb-227e-68e4-00f2-e484f24aa409",
+                                "designerReference": [
+                                    {
+                                        "_key": "style",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "class",
+                                        "_value": "nav-button",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "buttonname",
+                                        "_value": "Logout",
+                                        "_type": "a",
+                                        "_attrDef": "p",
+                                        "_useAsLabel": true
+                                    },
+                                    {
+                                        "_key": "color",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "(click)",
+                                        "_value": "loginservice.logout()",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "[disabled]",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "[disableRipple]",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "type",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "routerLink",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "fxshow",
+                                        "_value": "false",
+                                        "_type": "kv",
+                                        "_attrDef": "c"
+                                    },
+                                    {
+                                        "_key": "fxHide",
+                                        "_value": "true",
+                                        "_type": "kv",
+                                        "_attrDef": "c"
+                                    },
+                                    {
+                                        "_key": "fxHide.lt-md",
+                                        "_value": "false",
+                                        "_type": "kv",
+                                        "_attrDef": "c"
                                     }
                                 ]
                             }

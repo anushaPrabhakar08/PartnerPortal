@@ -514,7 +514,7 @@
                                 },
                                 {
                                     "_key": "width",
-                                    "_value": "250px",
+                                    "_value": "205px",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -625,7 +625,7 @@
                             },
                             {
                                 "_key": "fxShow.md",
-                                "_value": "falsee",
+                                "_value": "false",
                                 "_type": "kv",
                                 "_attrDef": "c"
                             }
@@ -842,140 +842,140 @@
                                 ]
                             }
                         }
-                    }
-                },
-                "015dba3d-e1e5-6a30-5ef7-df4ff7fbaa7a": {
-                    "paletteKey": "FlexLayoutRow",
-                    "parentEditorKey": "0b64899a-42fd-c211-a9ee-8351855c982d",
-                    "designerReference": [
-                        {
-                            "_key": "componentLabel",
-                            "_value": "Row",
-                            "_type": "kv",
-                            "_attrDef": "p",
-                            "_useAsLabel": true
-                        },
-                        {
-                            "_key": "style",
-                            "_value": "width: 60%;",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "class",
-                            "_value": "logout-btn",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "fxFlex",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "fxLayoutGap",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "wrap",
-                            "_value": "wrap",
-                            "_type": "a",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "layoutAlign",
-                            "_value": "end",
-                            "_type": "a",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "pLayoutAlign",
-                            "_value": "stretch",
-                            "_type": "a",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "[fxShow]",
-                            "_value": "true",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "[fxHide]",
-                            "_value": "false",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "fxShow.lt-md",
-                            "_value": "false",
-                            "_type": "kv",
-                            "_attrDef": "c"
-                        }
-                    ],
-                    "6e676d6f-d3f3-aba5-bf43-f41b3f39e13f": {
-                        "paletteKey": "NG-button",
-                        "parentEditorKey": "015dba3d-e1e5-6a30-5ef7-df4ff7fbaa7a",
+                    },
+                    "015dba3d-e1e5-6a30-5ef7-df4ff7fbaa7a": {
+                        "paletteKey": "FlexLayoutRow",
+                        "parentEditorKey": "1be9fbe1-cf26-c3e1-0231-079823477293",
                         "designerReference": [
                             {
+                                "_key": "componentLabel",
+                                "_value": "Row",
+                                "_type": "kv",
+                                "_attrDef": "p",
+                                "_useAsLabel": true
+                            },
+                            {
                                 "_key": "style",
-                                "_value": "font-size:20px;",
+                                "_value": "",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
                             {
                                 "_key": "class",
+                                "_value": "logout-btn",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "fxFlex",
                                 "_value": "",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
                             {
-                                "_key": "buttonname",
-                                "_value": "Logout",
+                                "_key": "fxLayoutGap",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "wrap",
+                                "_value": "wrap",
                                 "_type": "a",
-                                "_attrDef": "p",
-                                "_useAsLabel": true
+                                "_attrDef": "p"
                             },
                             {
-                                "_key": "color",
-                                "_value": "",
+                                "_key": "layoutAlign",
+                                "_value": "end",
+                                "_type": "a",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "pLayoutAlign",
+                                "_value": "center",
+                                "_type": "a",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[fxShow]",
+                                "_value": "true",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
                             {
-                                "_key": "(click)",
-                                "_value": "loginservice.logout()",
+                                "_key": "[fxHide]",
+                                "_value": "false",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
                             {
-                                "_key": "[disabled]",
-                                "_value": "",
+                                "_key": "fxShow.lt-md",
+                                "_value": "false",
                                 "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "[disableRipple]",
-                                "_value": "",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "type",
-                                "_value": "",
-                                "_type": "kv",
-                                "_attrDef": "p"
-                            },
-                            {
-                                "_key": "routerLink",
-                                "_value": "",
-                                "_type": "kv",
-                                "_attrDef": "p"
+                                "_attrDef": "c"
                             }
-                        ]
+                        ],
+                        "9d383ac2-90a6-8b93-c95d-9fd1054d0bcb": {
+                            "paletteKey": "NG-MiniFabButton",
+                            "parentEditorKey": "015dba3d-e1e5-6a30-5ef7-df4ff7fbaa7a",
+                            "designerReference": [
+                                {
+                                    "_key": "style",
+                                    "_value": "color:#fff;background-color:#000;",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "class",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "fabicon",
+                                    "_value": "logout",
+                                    "_type": "a",
+                                    "_attrDef": "p",
+                                    "_useAsLabel": true
+                                },
+                                {
+                                    "_key": "color",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "(click)",
+                                    "_value": "loginservice.logout()",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "[disabled]",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "[disableRipple]",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "type",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "routerLink",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                }
+                            ]
+                        }
                     }
                 }
             },
@@ -1058,7 +1058,7 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "height:100%;margin-top: 55px;",
+                            "_value": "height:100%;margin-top: 63px;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -1210,7 +1210,7 @@
                                 },
                                 {
                                     "_key": "style",
-                                    "_value": "margin-top:20px;",
+                                    "_value": "",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },

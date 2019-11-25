@@ -362,25 +362,6 @@
     }
    }
   },
-  "json-db-node-red": {
-   "name": "json-db-node-red",
-   "version": "0.5.3",
-   "local": true,
-   "nodes": {
-    "json-db": {
-     "name": "json-db",
-     "types": [
-      "DataIn",
-      "DataOut",
-      "json-db-collection"
-     ],
-     "enabled": true,
-     "local": true,
-     "module": "json-db-node-red",
-     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\json-db-node-red\\json-db.js"
-    }
-   }
-  },
   "node-red-contrib-auth": {
    "name": "node-red-contrib-auth",
    "version": "0.1.7",
@@ -683,5 +664,6 @@
     }
    }
   }
- }
+ },
+ "_credentialSecret": "55f74f37da175588c105c9d63a90f0acd4f48bcfbaaf69a5c36e5b3331a15f6e"
 }

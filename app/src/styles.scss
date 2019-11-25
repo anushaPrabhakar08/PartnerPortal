@@ -262,7 +262,7 @@ bh-login{
 .header-cell .mat-header-cell{
     color: #000 !important;
     background: rgba(0, 0, 0, 0.4);  
-    text-align: center !important;
+    text-align: left !important;
     justify-content: center;
     width: 100px;
 }
@@ -273,7 +273,7 @@ bh-login{
 }
 .header-cell th.mat-header-cell,
 .header-cell td.mat-cell{
-    text-align: center !important;
+    text-align: left !important;
 }
 
 .notification .mat-menu-content{
@@ -629,6 +629,9 @@ video {
     left: 0;
     right: 0;
     z-index: 2;
+}
+.mat-toolbar-single-row{
+    padding: 0px !important;
 }
 
 .tollbar-fab-hover:hover{
