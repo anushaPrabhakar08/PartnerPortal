@@ -25,11 +25,11 @@
         <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
           <mat-checkbox required>Remember me?</mat-checkbox>
         </div>
-        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxHide]="userType ? false: true">
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxHide]="userType ? true: false">
           <p class="text-warn text-center">
             Forgot Password?</p>
         </div>
-        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxHide]="userType ? true: false">
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxHide]="userType ? false: true">
           <p class="text-warn text-center">
             Change password</p>
         </div>

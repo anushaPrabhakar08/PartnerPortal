@@ -907,7 +907,7 @@
                             },
                             {
                                 "_key": "fxLayoutGap",
-                                "_value": "",
+                                "_value": "1em",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -1249,13 +1249,13 @@
                                     "designerReference": [
                                         {
                                             "_key": "style",
-                                            "_value": "background:rgba(241, 8, 8, 0.82); color: #fff;",
+                                            "_value": "background:#000; color: #fff;",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
                                         {
                                             "_key": "class",
-                                            "_value": "",
+                                            "_value": "tollbar-fab-hover",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
@@ -1329,7 +1329,7 @@
                                         },
                                         {
                                             "_key": "class",
-                                            "_value": "",
+                                            "_value": "notification",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
@@ -1440,6 +1440,262 @@
                                 }
                             }
                         },
+                        "300203d9-6e56-c80d-7fb2-4b1bb8b166ee": {
+                            "paletteKey": "FlexLayoutCol",
+                            "parentEditorKey": "44ee8926-87a0-75ea-225e-fb5af4d1040c",
+                            "designerReference": [
+                                {
+                                    "_key": "componentLabel",
+                                    "_value": "Column",
+                                    "_type": "kv",
+                                    "_attrDef": "p",
+                                    "_useAsLabel": true
+                                },
+                                {
+                                    "_key": "style",
+                                    "_value": "margin-top:10px;",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "class",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "fxFlex",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "fxLayoutGap",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "wrap",
+                                    "_value": "wrap",
+                                    "_type": "a",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "layoutAlign",
+                                    "_value": "start",
+                                    "_type": "a",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "pLayoutAlign",
+                                    "_value": "stretch",
+                                    "_type": "a",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "[fxShow]",
+                                    "_value": "true",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "[fxHide]",
+                                    "_value": "false",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                }
+                            ],
+                            "dd26ba4f-d36b-1168-3aca-6b529a3bff52": {
+                                "paletteKey": "NG-MiniFabButton",
+                                "parentEditorKey": "300203d9-6e56-c80d-7fb2-4b1bb8b166ee",
+                                "designerReference": [
+                                    {
+                                        "_key": "style",
+                                        "_value": "background:#000; color: #fff;",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "class",
+                                        "_value": "tollbar-fab-hover",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "fabicon",
+                                        "_value": "account_circle",
+                                        "_type": "a",
+                                        "_attrDef": "p",
+                                        "_useAsLabel": true
+                                    },
+                                    {
+                                        "_key": "color",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "(click)",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "[disabled]",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "[disableRipple]",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "type",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "routerLink",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "[matMenuTriggerFor]",
+                                        "_value": "menu_1",
+                                        "_type": "kv",
+                                        "_attrDef": "c"
+                                    }
+                                ]
+                            },
+                            "5ce442ab-d932-c590-11b7-2aaa52c773ca": {
+                                "paletteKey": "NG-Menu",
+                                "parentEditorKey": "300203d9-6e56-c80d-7fb2-4b1bb8b166ee",
+                                "designerReference": [
+                                    {
+                                        "_key": "componentLabel",
+                                        "_value": "Menu",
+                                        "_type": "kv",
+                                        "_attrDef": "p",
+                                        "_useAsLabel": true
+                                    },
+                                    {
+                                        "_key": "style",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "class",
+                                        "_value": "notification",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "xPosition",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "yPosition",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "templateRef",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "items",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "matMenu",
+                                        "_value": "menu_1",
+                                        "_type": "vk",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "hasBackdrop",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "overlapTrigger",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "(closed)",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "direction",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "parentMenu",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    }
+                                ],
+                                "4a37ef4f-d4e8-b938-1be1-ba47774d0628": {
+                                    "paletteKey": "NG-MenuItem",
+                                    "parentEditorKey": "5ce442ab-d932-c590-11b7-2aaa52c773ca",
+                                    "designerReference": [
+                                        {
+                                            "_key": "componentLabel",
+                                            "_value": "Menu Item",
+                                            "_type": "kv",
+                                            "_attrDef": "p",
+                                            "_useAsLabel": true
+                                        },
+                                        {
+                                            "_key": "style",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "class",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "MenuItemName",
+                                            "_value": "Update Profile",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "[disabled]",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
                         "78b1a945-46d3-78ad-8f4a-d5d1ad4d0f8c": {
                             "paletteKey": "FlexLayoutCol",
                             "parentEditorKey": "44ee8926-87a0-75ea-225e-fb5af4d1040c",
@@ -1506,25 +1762,25 @@
                                     "_attrDef": "p"
                                 }
                             ],
-                            "a111a4ff-35bc-fac9-1134-96c10611b8e6": {
-                                "paletteKey": "NG-button",
+                            "ca10b1ba-ed19-4f72-82b2-bab094a6e36c": {
+                                "paletteKey": "NG-MiniFabButton",
                                 "parentEditorKey": "78b1a945-46d3-78ad-8f4a-d5d1ad4d0f8c",
                                 "designerReference": [
                                     {
                                         "_key": "style",
-                                        "_value": "",
+                                        "_value": "background:#000; color: #fff;",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
                                     {
                                         "_key": "class",
-                                        "_value": "",
+                                        "_value": "tollbar-fab-hover",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
                                     {
-                                        "_key": "buttonname",
-                                        "_value": "Logout",
+                                        "_key": "fabicon",
+                                        "_value": "logout",
                                         "_type": "a",
                                         "_attrDef": "p",
                                         "_useAsLabel": true

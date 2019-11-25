@@ -276,6 +276,9 @@ bh-login{
     text-align: center !important;
 }
 
+.notification .mat-menu-content{
+    background-color: #f5f6fa;
+}
 //side nav-bar styles
 .nav-menu-item {
     text-decoration: none;
@@ -628,7 +631,9 @@ video {
     z-index: 2;
 }
 
-
+.tollbar-fab-hover:hover{
+    background-color: #dcdde1 !important;
+}
 pdf-viewer{
     width:100%;
 }

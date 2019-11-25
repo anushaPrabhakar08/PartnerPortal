@@ -87,6 +87,10 @@
                 {
                     "component": "partner_notificationComponent",
                     "path": "PartnerNotification"
+                },
+                {
+                    "path": "PartnerRegistration",
+                    "component": "partnerregistrationComponent"
                 }
             ]
         },

@@ -734,63 +734,6 @@
                                         }
                                     ]
                                 },
-                                "90574502-13a3-72fd-ac80-ee00f56bb7bb": {
-                                    "paletteKey": "ng-table-column",
-                                    "parentEditorKey": "c3c9dcf9-a922-9d50-6de2-8c840ab3b7a5",
-                                    "isAdvancedChildComponent": true,
-                                    "designerReference": [
-                                        {
-                                            "_key": "style",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "class",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "Header Label",
-                                            "_value": "Present Working Company",
-                                            "_type": "a",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "matSortHeaderColumn",
-                                            "_value": "mat-sort-header",
-                                            "_type": "a",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "Mapping",
-                                            "_value": "{{table.presentWorkingCompany}}",
-                                            "_type": "ma",
-                                            "_attrDef": "p",
-                                            "_useAsLabel": true
-                                        },
-                                        {
-                                            "_key": "columnName",
-                                            "_value": "",
-                                            "_type": "dav",
-                                            "_attrDef": "p",
-                                            "_visibility": false
-                                        },
-                                        {
-                                            "_key": "headerclass",
-                                            "_value": "tab-developerheader",
-                                            "_type": "dav",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "columnclass",
-                                            "_value": "tab-developerdata",
-                                            "_type": "dav",
-                                            "_attrDef": "p"
-                                        }
-                                    ]
-                                },
                                 "0f048a5b-1d6a-37ee-6fe1-0bced8a2617e": {
                                     "paletteKey": "ng-table-column",
                                     "parentEditorKey": "c3c9dcf9-a922-9d50-6de2-8c840ab3b7a5",
@@ -823,6 +766,120 @@
                                         {
                                             "_key": "Mapping",
                                             "_value": "{{table.phone}}",
+                                            "_type": "ma",
+                                            "_attrDef": "p",
+                                            "_useAsLabel": true
+                                        },
+                                        {
+                                            "_key": "columnName",
+                                            "_value": "",
+                                            "_type": "dav",
+                                            "_attrDef": "p",
+                                            "_visibility": false
+                                        },
+                                        {
+                                            "_key": "headerclass",
+                                            "_value": "tab-developerheader",
+                                            "_type": "dav",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "columnclass",
+                                            "_value": "tab-developerdata",
+                                            "_type": "dav",
+                                            "_attrDef": "p"
+                                        }
+                                    ]
+                                },
+                                "ae72b3e7-669d-539f-c221-0c66fd0a82be": {
+                                    "paletteKey": "ng-table-column",
+                                    "parentEditorKey": "c3c9dcf9-a922-9d50-6de2-8c840ab3b7a5",
+                                    "isAdvancedChildComponent": true,
+                                    "designerReference": [
+                                        {
+                                            "_key": "style",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "class",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "Header Label",
+                                            "_value": "Email",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "matSortHeaderColumn",
+                                            "_value": "",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "Mapping",
+                                            "_value": "{{table.email}}",
+                                            "_type": "ma",
+                                            "_attrDef": "p",
+                                            "_useAsLabel": true
+                                        },
+                                        {
+                                            "_key": "columnName",
+                                            "_value": "",
+                                            "_type": "dav",
+                                            "_attrDef": "p",
+                                            "_visibility": false
+                                        },
+                                        {
+                                            "_key": "headerclass",
+                                            "_value": "tab-developerheader",
+                                            "_type": "dav",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "columnclass",
+                                            "_value": "tab-developerdata",
+                                            "_type": "dav",
+                                            "_attrDef": "p"
+                                        }
+                                    ]
+                                },
+                                "98d2d750-037c-9eab-176a-2c498d567a3c": {
+                                    "paletteKey": "ng-table-column",
+                                    "parentEditorKey": "c3c9dcf9-a922-9d50-6de2-8c840ab3b7a5",
+                                    "isAdvancedChildComponent": true,
+                                    "designerReference": [
+                                        {
+                                            "_key": "style",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "class",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "Header Label",
+                                            "_value": "Skill Set",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "matSortHeaderColumn",
+                                            "_value": "",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "Mapping",
+                                            "_value": "{{table.skillset}}",
                                             "_type": "ma",
                                             "_attrDef": "p",
                                             "_useAsLabel": true

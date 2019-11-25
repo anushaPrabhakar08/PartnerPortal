@@ -4,6 +4,7 @@
     "version": "0.0.1",
     "private": true,
     "dependencies": {
+        "json-db-node-red": "~0.5.3",
         "node-red-contrib-auth": "~0.1.7",
         "node-red-contrib-json-schema": "0.0.1",
         "node-red-contrib-jwt": "0.0.11",

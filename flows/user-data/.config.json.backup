@@ -362,6 +362,222 @@
     }
    }
   },
+  "json-db-node-red": {
+   "name": "json-db-node-red",
+   "version": "0.5.3",
+   "local": true,
+   "nodes": {
+    "json-db": {
+     "name": "json-db",
+     "types": [
+      "DataIn",
+      "DataOut",
+      "json-db-collection"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "json-db-node-red",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\json-db-node-red\\json-db.js"
+    }
+   }
+  },
+  "node-red-contrib-auth": {
+   "name": "node-red-contrib-auth",
+   "version": "0.1.7",
+   "local": true,
+   "nodes": {
+    "JsonWebToken": {
+     "name": "JsonWebToken",
+     "types": [
+      "JsonWebToken",
+      "JsonWebToken_config"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-auth",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-auth\\jsonWebToken.js"
+    }
+   }
+  },
+  "node-red-contrib-json-schema": {
+   "name": "node-red-contrib-json-schema",
+   "version": "0.0.1",
+   "local": true,
+   "nodes": {
+    "json-schema": {
+     "name": "json-schema",
+     "types": [
+      "json-schema"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-json-schema",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-json-schema\\schema.js"
+    }
+   }
+  },
+  "node-red-contrib-jwt": {
+   "name": "node-red-contrib-jwt",
+   "version": "0.0.11",
+   "local": true,
+   "nodes": {
+    "jwt": {
+     "name": "jwt",
+     "types": [
+      "jwt sign",
+      "jwt verify"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-jwt",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-jwt\\jwt.js"
+    }
+   }
+  },
+  "node-red-contrib-mongo-client": {
+   "name": "node-red-contrib-mongo-client",
+   "version": "0.2.2",
+   "local": true,
+   "nodes": {
+    "mongo-client": {
+     "name": "mongo-client",
+     "types": [
+      "mongo-client",
+      "mongo-client in"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-mongo-client",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-mongo-client\\mongo-client.js"
+    }
+   }
+  },
+  "node-red-contrib-mongodb": {
+   "name": "node-red-contrib-mongodb",
+   "version": "0.3.4",
+   "local": true,
+   "nodes": {
+    "mongo": {
+     "name": "mongo",
+     "types": [
+      "mongodb-config",
+      "mongodb-node"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-mongodb",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-mongodb\\mongodb.js"
+    }
+   }
+  },
+  "node-red-contrib-mongodb2": {
+   "name": "node-red-contrib-mongodb2",
+   "version": "0.5.6",
+   "local": true,
+   "nodes": {
+    "mongodb2": {
+     "name": "mongodb2",
+     "types": [
+      "mongodb2",
+      "mongodb2 in"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-mongodb2",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-mongodb2\\mongodb2\\mongodb2.js"
+    }
+   }
+  },
+  "node-red-contrib-mongodb3": {
+   "name": "node-red-contrib-mongodb3",
+   "version": "2.0.1",
+   "local": true,
+   "nodes": {
+    "mongodb": {
+     "name": "mongodb",
+     "types": [
+      "mongodb3",
+      "mongodb3 in"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-mongodb3",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-mongodb3\\mongodb\\mongodb.js"
+    }
+   }
+  },
+  "node-red-contrib-objectid": {
+   "name": "node-red-contrib-objectid",
+   "version": "0.7.2",
+   "local": true,
+   "nodes": {
+    "objectid": {
+     "name": "objectid",
+     "types": [
+      "objectid"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-objectid",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-objectid\\objectid.js"
+    }
+   }
+  },
+  "node-red-contrib-splitter": {
+   "name": "node-red-contrib-splitter",
+   "version": "0.0.16",
+   "local": true,
+   "nodes": {
+    "splitter": {
+     "name": "splitter",
+     "types": [
+      "splitter"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-splitter",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-splitter\\splitter.js"
+    }
+   }
+  },
+  "node-red-mongodb": {
+   "name": "node-red-mongodb",
+   "version": "0.0.18",
+   "local": true,
+   "nodes": {
+    "mongo": {
+     "name": "mongo",
+     "types": [
+      "mongodb",
+      "mongodb out",
+      "mongodb in"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-mongodb",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-mongodb\\66-mongodb.js"
+    }
+   }
+  },
+  "node-red-node-mongodb": {
+   "name": "node-red-node-mongodb",
+   "version": "0.0.14",
+   "local": true,
+   "nodes": {
+    "mongo": {
+     "name": "mongo",
+     "types": [
+      "mongodb",
+      "mongodb out",
+      "mongodb in"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-node-mongodb",
+     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-node-mongodb\\66-mongodb.js"
+    }
+   }
+  },
   "node-red-node-email": {
    "name": "node-red-node-email",
    "version": "1.7.0",
@@ -466,129 +682,6 @@
      "file": "C:\\Program Files\\Neutrinos Studio\\resources\\app.asar.unpacked\\node_modules\\@jatahworx\\bhive-core\\node_modules\\node-red-node-twitter\\27-twitter.js"
     }
    }
-  },
-  "node-red-contrib-mongodb3": {
-   "name": "node-red-contrib-mongodb3",
-   "version": "2.0.1",
-   "local": false,
-   "nodes": {
-    "mongodb": {
-     "name": "mongodb",
-     "types": [
-      "mongodb3",
-      "mongodb3 in"
-     ],
-     "enabled": true,
-     "local": true,
-     "module": "node-red-contrib-mongodb3",
-     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-mongodb3\\mongodb\\mongodb.js"
-    }
-   }
-  },
-  "node-red-contrib-auth": {
-   "name": "node-red-contrib-auth",
-   "version": "0.1.7",
-   "local": false,
-   "nodes": {
-    "JsonWebToken": {
-     "name": "JsonWebToken",
-     "types": [
-      "JsonWebToken",
-      "JsonWebToken_config"
-     ],
-     "enabled": true,
-     "local": true,
-     "module": "node-red-contrib-auth",
-     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-auth\\jsonWebToken.js"
-    }
-   }
-  },
-  "node-red-contrib-json-schema": {
-   "name": "node-red-contrib-json-schema",
-   "version": "0.0.1",
-   "local": false,
-   "nodes": {
-    "json-schema": {
-     "name": "json-schema",
-     "types": [
-      "json-schema"
-     ],
-     "enabled": true,
-     "local": true,
-     "module": "node-red-contrib-json-schema",
-     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-json-schema\\schema.js"
-    }
-   }
-  },
-  "node-red-contrib-objectid": {
-   "name": "node-red-contrib-objectid",
-   "version": "0.7.2",
-   "local": false,
-   "nodes": {
-    "objectid": {
-     "name": "objectid",
-     "types": [
-      "objectid"
-     ],
-     "enabled": true,
-     "local": true,
-     "module": "node-red-contrib-objectid",
-     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-objectid\\objectid.js"
-    }
-   }
-  },
-  "node-red-contrib-mongodb2": {
-   "name": "node-red-contrib-mongodb2",
-   "version": "0.5.6",
-   "local": false,
-   "nodes": {
-    "mongodb2": {
-     "name": "mongodb2",
-     "types": [
-      "mongodb2",
-      "mongodb2 in"
-     ],
-     "enabled": true,
-     "local": true,
-     "module": "node-red-contrib-mongodb2",
-     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-mongodb2\\mongodb2\\mongodb2.js"
-    }
-   }
-  },
-  "node-red-contrib-jwt": {
-   "name": "node-red-contrib-jwt",
-   "version": "0.0.11",
-   "local": false,
-   "nodes": {
-    "jwt": {
-     "name": "jwt",
-     "types": [
-      "jwt sign",
-      "jwt verify"
-     ],
-     "enabled": true,
-     "local": true,
-     "module": "node-red-contrib-jwt",
-     "file": "C:\\Users\\hi\\neutrinos-studio\\PartnerPortal\\flows\\user-data\\node_modules\\node-red-contrib-jwt\\jwt.js"
-    }
-   }
-  }
- },
- "_credentialSecret": "5e07d2760d012306db61116bcf19bf1e2205ec48c637b150946376fa0f7a3a6f",
- "users": {
-  "_": {
-   "editor": {
-    "view": {
-     "view-grid-size": "20",
-     "view-node-status": true,
-     "view-node-show-label": true,
-     "view-show-tips": true,
-     "view-snap-grid": false,
-     "view-show-grid": false
-    }
-   },
-   "menu-menu-item-palette": true,
-   "menu-menu-item-sidebar": true
   }
  }
 }

@@ -12,10 +12,17 @@
           <div>
             {{title.getTitle()}}</div>
         </div>
-        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxShow.It-sm="true">
+        <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxShow.It-sm="true">
           <div fxLayout="column wrap" style="margin-top:10px;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><span [matBadge]="badgeCount" matBadgeColor="warn" [matBadgeHidden]="badgeCount===0">
-                <button mat-mini-fab style="background:rgba(241, 8, 8, 0.82); color: #fff;" [matMenuTriggerFor]="menu" (click)="clearCount()"><mat-icon>notification_important </mat-icon></button><mat-menu #menu="matMenu"><button mat-menu-item routerLink="/partner/PartnerNotification"> Neutrinos {{data}} </button></mat-menu></span></div>
-          <div fxLayout="column " style="margin-top:10px;" class="logout-btn" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-button (click)="loginservice.logout()">Logout</button></div>
+                <button mat-mini-fab style="background:#000; color: #fff;" class="tollbar-fab-hover" [matMenuTriggerFor]="menu" (click)="clearCount()"><mat-icon>notification_important </mat-icon></button><mat-menu class="notification" #menu="matMenu"><button mat-menu-item routerLink="/partner/PartnerNotification"> Neutrinos {{data}} </button></mat-menu></span></div>
+          <div fxLayout="column wrap" style="margin-top:10px;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-mini-fab style="background:#000; color: #fff;" class="tollbar-fab-hover" [matMenuTriggerFor]="menu_1">
+              <mat-icon>account_circle</mat-icon>
+            </button>
+            <mat-menu class="notification" #menu_1="matMenu"><button mat-menu-item> Update Profile </button></mat-menu>
+          </div>
+          <div fxLayout="column " style="margin-top:10px;" class="logout-btn" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-mini-fab style="background:#000; color: #fff;" class="tollbar-fab-hover" (click)="loginservice.logout()">
+              <mat-icon>logout</mat-icon>
+            </button></div>
         </div>
       </div>
     </mat-toolbar>

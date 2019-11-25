@@ -1366,7 +1366,7 @@
                             },
                             {
                                 "_key": "[fxHide]",
-                                "_value": "userType ? false: true",
+                                "_value": "userType ? true: false",
                                 "_type": "kv",
                                 "_attrDef": "p",
                                 "_customAttributeFlag": true
@@ -1647,7 +1647,7 @@
                             },
                             {
                                 "_key": "[fxHide]",
-                                "_value": "userType ? true: false",
+                                "_value": "userType ? false: true",
                                 "_type": "kv",
                                 "_attrDef": "p",
                                 "_customAttributeFlag": true
