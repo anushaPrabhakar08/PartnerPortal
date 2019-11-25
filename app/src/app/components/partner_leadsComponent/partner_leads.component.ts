@@ -12,6 +12,9 @@ import { partnerservice } from '../../sd-services/partnerservice';
 import { Observable } from 'rxjs';
 import { Title } from '@angular/platform-browser';
 import { loginservice } from '../../sd-services/loginservice';
+// import { Pipe, PipeTransform } from '@angular/core';
+// import { DatePipe } from '@angular/common';
+
 @Component({
     selector: 'bh-partner_leads',
     templateUrl: './partner_leads.template.html'
@@ -22,6 +25,7 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
     data = [];
     rapdata;
     userId;
+    date;
 
     @ViewChild(MatSort, { static: true }) sort: MatSort;
     @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
@@ -32,7 +36,8 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
     constructor(private bdms: NDataModelService, private dialog: MatDialog,
         private partnerservice: partnerservice,
         private title: Title,
-        private loginservice: loginservice
+        private loginservice: loginservice,
+       // private datePipe: DatePipe
     ) {
         super();
         this.mm = new ModelMethods(bdms);
@@ -61,13 +66,15 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
     ngOnInit() {
         this.getdata();
         this.title.setTitle('Leads');
+        //this.date = this.datePipe.transform(new Date(), 'dd-MM-yy');
     }
 
    
 
     openDeleteDialog(table) {
-        const dialogRef = this.dialog.open(deletepopupComponent, { disableClose: true },{
+        const dialogRef = this.dialog.open(deletepopupComponent,{
             width: '450px',
+            disableClose: true,
             data: table
         });
         dialogRef.afterClosed().subscribe(result => {

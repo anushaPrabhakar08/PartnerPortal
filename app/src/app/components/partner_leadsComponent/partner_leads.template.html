@@ -14,8 +14,8 @@
                 </div>
               </div>
               <table mat-table [dataSource]="dataSource" matSort class="table-width-fix">
-                <tr mat-header-row *matHeaderRowDef="[&apos;index&apos;,&apos;organisationName&apos;,&apos;opportunityType&apos;,&apos;location&apos;,&apos;orgWebsite&apos;,&apos;leadGeneratedDate&apos;,&apos;b9f4578e-292b-8a93-a1cf-926c1191b632&apos;]"></tr>
-                <tr mat-row *matRowDef="let row; columns: [&apos;index&apos;,&apos;organisationName&apos;,&apos;opportunityType&apos;,&apos;location&apos;,&apos;orgWebsite&apos;,&apos;leadGeneratedDate&apos;,&apos;b9f4578e-292b-8a93-a1cf-926c1191b632&apos;];"></tr>
+                <tr mat-header-row *matHeaderRowDef="[&apos;index&apos;,&apos;organisationName&apos;,&apos;opportunityType&apos;,&apos;location&apos;,&apos;orgWebsite&apos;,&apos;leadGeneratedDate | date&apos;,&apos;b9f4578e-292b-8a93-a1cf-926c1191b632&apos;]"></tr>
+                <tr mat-row *matRowDef="let row; columns: [&apos;index&apos;,&apos;organisationName&apos;,&apos;opportunityType&apos;,&apos;location&apos;,&apos;orgWebsite&apos;,&apos;leadGeneratedDate | date&apos;,&apos;b9f4578e-292b-8a93-a1cf-926c1191b632&apos;];"></tr>
 
                 <ng-container matColumnDef="index">
                   <th mat-header-cell *matHeaderCellDef mat-sort-header class="tab-leadheader">S.No</th>
@@ -42,9 +42,9 @@
                   <td mat-cell *matCellDef="let table; let i = index;" class="tab-leaddata">{{table.orgWebsite}}</td>
                 </ng-container>
 
-                <ng-container matColumnDef="leadGeneratedDate">
+                <ng-container matColumnDef="leadGeneratedDate | date">
                   <th mat-header-cell *matHeaderCellDef class="tab-leadheader">Lead Generation Date</th>
-                  <td mat-cell *matCellDef="let table; let i = index;" class="tab-leaddata">{{table.leadGeneratedDate}}</td>
+                  <td mat-cell *matCellDef="let table; let i = index;" class="tab-leaddata">{{table.leadGeneratedDate | date }}</td>
                 </ng-container>
 
                 <ng-container matColumnDef="b9f4578e-292b-8a93-a1cf-926c1191b632">

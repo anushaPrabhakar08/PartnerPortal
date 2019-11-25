@@ -3926,7 +3926,7 @@
                                                 },
                                                 {
                                                     "_key": "Mapping",
-                                                    "_value": "{{table.date}}",
+                                                    "_value": "{{table.date | date}}",
                                                     "_type": "ma",
                                                     "_attrDef": "p",
                                                     "_useAsLabel": true
@@ -6138,7 +6138,7 @@
                                             },
                                             {
                                                 "_key": "Mapping",
-                                                "_value": "{{table.leadGeneratedDate}}",
+                                                "_value": "{{table.leadGeneratedDate | date}}",
                                                 "_type": "ma",
                                                 "_attrDef": "p",
                                                 "_useAsLabel": true
