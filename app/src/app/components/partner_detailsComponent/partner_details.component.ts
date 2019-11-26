@@ -1,5 +1,5 @@
 /*DEFAULT GENERATED TEMPLATE. DO NOT CHANGE SELECTOR TEMPLATE_URL AND CLASS NAME*/
-import { Component, ViewChild, OnInit, AfterViewInit } from '@angular/core'
+import { Component, ViewChild, OnInit, AfterViewInit, Input, Pipe, PipeTransform } from '@angular/core'
 import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService, NSnackbarService } from 'neutrinos-seed-services';
@@ -15,12 +15,16 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FormGroup, FormControl } from '@angular/forms';
 import { fileService } from '../../sd-services/fileService';
 import { Title } from '@angular/platform-browser';
+import {CommonModule} from "@angular/common";
+
 
 
 @Component({
     selector: 'bh-partner_details',
     templateUrl: './partner_details.template.html'
 })
+
+@Pipe({ name: 'extension' })
 
 export class partner_detailsComponent extends NBaseComponent implements OnInit {
 
@@ -53,11 +57,16 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
     personalForm = new FormGroup({
         firstName: new FormControl(''),
         lastName: new FormControl(''),
-        phone: new FormControl(''), 
+        phone: new FormControl(''),
         emailId: new FormControl(''),
         address: new FormControl(' '),
         designation: new FormControl('')
     });
+
+    // @Input()
+    // max: D | null
+    tomorrow = new Date();
+
     constructor(private bdms: NDataModelService, private dialog: MatDialog,
         private fileService: fileService,
         private partnerservice: partnerservice,
@@ -69,8 +78,9 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
     ) {
         super();
         this.mm = new ModelMethods(bdms);
+        this.tomorrow.setDate(this.tomorrow.getDate() + 1);
     }
-
+ 
     async ngOnInit() {
         this.titleService.setTitle('Partner Details');
         this.id = this.route.snapshot.paramMap.get('_id');
@@ -94,6 +104,11 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
         this.getDevelopers();
         this.getLeads();
         this.getAgreements();
+    }
+
+    transform(name) {
+        console.log(name)
+        return name.substring(0, name.indexOf('.'))
     }
 
     preview(event) {
@@ -133,26 +148,16 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
     }
 
     addDeveloper() {
-        const dialogRef = this.dialog.open(partner_adddeveloperComponent,{ disableClose: true },{
+        const dialogRef = this.dialog.open(partner_adddeveloperComponent, {
             width: '450px',
-            height:'500px',
+            height: '500px',
+            disableClose: true,
             data: this.id
         });
         dialogRef.afterClosed().subscribe(result => {
-             this.getDevelopers();
+            this.getDevelopers();
         });
     }
-
-    // previewCertificate() {
-    //     const dialogRef = this.dialog.open(partner_adddeveloperComponent, {
-    //         //width: '70%',
-    //         data: this.id
-    //     });
-    //     dialogRef.afterClosed().subscribe(result => {
-    //         this.ngOnInit();
-    //     });
-    // }
-
 
     applyFilter(filterValue: string) {
         filterValue = filterValue.trim();
@@ -201,6 +206,7 @@ export class partner_detailsComponent extends NBaseComponent implements OnInit {
     async getAgreements() {
         this.agreementData = this.objtoArr((await this.channelservice.getPartnerAgreement({ userId: this.id, type: 'aggreement' })).local.result);
         this.agreementDataSource.data = this.agreementData;
+        console.log(this.agreementDataSource.data)
     }
 
 }

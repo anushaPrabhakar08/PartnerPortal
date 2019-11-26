@@ -1,22 +1,22 @@
 <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
   <form [formGroup]="announcedata">
     <div fxLayout="row wrap" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
-      <h4>
+      <h4 style="margin:0px;">
         Choose Partners</h4>
     </div>
-    <div fxLayout="row wrap" style="margin:20px 0px;height:auto;width:80%;" fxLayoutAlign="space-between center" [fxShow]="true" [fxHide]="false" *ngFor="let option of partnerlist">
-      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-        <mat-checkbox value="{{option}}" required formControlName="option"></mat-checkbox>
-      </div>
-      <div fxLayout="column wrap" style="width:40%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><label>
-          {{option}}</label></div>
-    </div>
-    <div fxLayout="row wrap" style="margin:20px 0px;height:auto;width:80%;" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false">
+    <div fxLayout="row wrap" style="margin:20px 0px;height:auto;width:40%;" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false">
       <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
         <mat-checkbox required></mat-checkbox>
       </div>
       <div fxLayout="column wrap" style="width:40%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><label>
           All</label></div>
+    </div>
+    <div fxLayout="row wrap" style="margin:20px 0px;height:auto;width:40%;" fxLayoutAlign="space-between center" [fxShow]="true" [fxHide]="false" *ngFor="let option of partnerlist">
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+        <mat-checkbox value="{{option}}" required formControlName="option"></mat-checkbox>
+      </div>
+      <div fxLayout="column wrap" style="width:40%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><label>
+          {{option}}</label></div>
     </div>
     <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button mat-dialog-close color="warn" (click)="getselectedpartner(announcedata.value)">Submit</button></div>
   </form>

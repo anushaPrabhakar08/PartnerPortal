@@ -4,11 +4,11 @@
       Make an Announcement</h2>
   </div>
   <div fxLayout="row wrap" class="w-100" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-    <form fxFlex="50" fxFlex.sm="50" fxFlex.xs="90" [formGroup]="announcementdetail">
+    <form fxFlex="100" fxFlex.sm="90" fxFlex.xs="90" [formGroup]="announcementdetail" fxFlex.md="90" fxFlex.lt-md="90" fxFlex.gt-md="90">
       <mat-card>
         <mat-card-content style="width:100%;">
           <div fxLayout="column " class="announcement" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-            <ckeditor ngStyle.xs="width:100%;" formControlName="announcement" [config]="{placeholder: &apos;CKEditor&apos;}" [editor]="classicEditor"></ckeditor><button mat-raised-button class="announce-btn " (click)="opendilogue(announcementdetail.value)">Announce</button>
+            <ckeditor ngStyle.xs="width:100%;" formControlName="announcement" [config]="{placeholder: &apos;CKEditor&apos;}" [editor]="classicEditor"></ckeditor><button mat-raised-button class="announce-btn " (click)="opendilogue(announcementdetail.value)">Send</button>
           </div>
         </mat-card-content>
       </mat-card>

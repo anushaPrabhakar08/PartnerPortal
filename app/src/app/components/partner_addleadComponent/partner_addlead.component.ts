@@ -1,5 +1,5 @@
 /*DEFAULT GENERATED TEMPLATE. DO NOT CHANGE SELECTOR TEMPLATE_URL AND CLASS NAME*/
-import { Component, OnInit, Inject } from '@angular/core'
+import { Component, OnInit, Inject, Input } from '@angular/core'
 import { ModelMethods } from '../../lib/model.methods';
 // import { BDataModelService } from '../service/bDataModel.service';
 import { NDataModelService, NSnackbarService } from 'neutrinos-seed-services';
@@ -19,6 +19,10 @@ export class partner_addleadComponent extends NBaseComponent implements OnInit {
     leadForm: FormGroup;
     data;
     rapdata;
+
+    // @Input()
+    // max: D | null
+    tomorrow = new Date();
     constructor(private bdms: NDataModelService,
         private fb: FormBuilder,
         private partnerservice: partnerservice,
@@ -27,7 +31,7 @@ export class partner_addleadComponent extends NBaseComponent implements OnInit {
     ) {
         super();
         this.mm = new ModelMethods(bdms);
-
+        this.tomorrow.setDate(this.tomorrow.getDate());
     }
 
 

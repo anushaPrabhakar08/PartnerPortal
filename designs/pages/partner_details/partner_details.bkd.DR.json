@@ -3869,7 +3869,7 @@
                                                 },
                                                 {
                                                     "_key": "Mapping",
-                                                    "_value": "{{table.name}}",
+                                                    "_value": "{{table.name | extension}}",
                                                     "_type": "ma",
                                                     "_attrDef": "p",
                                                     "_useAsLabel": true

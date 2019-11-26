@@ -38,7 +38,7 @@
       </div>
       <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
         <mat-form-field [appearance]="&apos;standard&apos;">
-          <input matInput placeholder="Lead Generated Date" [matDatepicker]="picker" formControlName="leadGeneratedDate" name="leadGeneratedDate" required [disabled]="false">
+          <input matInput placeholder="Lead Generated Date" [matDatepicker]="picker" formControlName="leadGeneratedDate" name="leadGeneratedDate" [max]="tomorrow" required [disabled]="false">
           <mat-datepicker-toggle matSuffix [for]="picker" disabled="false"></mat-datepicker-toggle>
           <mat-datepicker #picker [disabled]="false"></mat-datepicker>
 

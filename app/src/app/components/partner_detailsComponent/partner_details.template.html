@@ -96,17 +96,17 @@
               <div fxLayout="column wrap" style="width:100%;overflow-x: auto;" fxLayoutAlign="start stretch" [fxShow]="agreementDataSource.data.length &gt; 0 ? true: false" [fxHide]="agreementDataSource.data.length &gt; 0 ? false : true">
                 <div fxLayout="column" class="header-cell">
                   <table mat-table [dataSource]="agreementDataSource" class="table-width-fix">
-                    <tr mat-header-row *matHeaderRowDef="[&apos;index&apos;,&apos;name&apos;,&apos;date | date&apos;,&apos;dda5123e-2a43-1208-3215-93f6a1597e1b&apos;]"></tr>
-                    <tr mat-row *matRowDef="let row; columns: [&apos;index&apos;,&apos;name&apos;,&apos;date | date&apos;,&apos;dda5123e-2a43-1208-3215-93f6a1597e1b&apos;];"></tr>
+                    <tr mat-header-row *matHeaderRowDef="[&apos;index&apos;,&apos;name | extension&apos;,&apos;date | date&apos;,&apos;dda5123e-2a43-1208-3215-93f6a1597e1b&apos;]"></tr>
+                    <tr mat-row *matRowDef="let row; columns: [&apos;index&apos;,&apos;name | extension&apos;,&apos;date | date&apos;,&apos;dda5123e-2a43-1208-3215-93f6a1597e1b&apos;];"></tr>
 
                     <ng-container matColumnDef="index">
                       <th mat-header-cell *matHeaderCellDef class="tab-partner-header">S.No</th>
                       <td mat-cell *matCellDef="let table; let i = index;" class="tab-partner-data">{{i+1}}</td>
                     </ng-container>
 
-                    <ng-container matColumnDef="name">
+                    <ng-container matColumnDef="name | extension">
                       <th mat-header-cell *matHeaderCellDef class="tab-partner-header">File Description</th>
-                      <td mat-cell *matCellDef="let table; let i = index;" class="tab-partner-data">{{table.name}}</td>
+                      <td mat-cell *matCellDef="let table; let i = index;" class="tab-partner-data">{{table.name | extension}}</td>
                     </ng-container>
 
                     <ng-container matColumnDef="date | date">

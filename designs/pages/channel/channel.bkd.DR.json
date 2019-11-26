@@ -325,7 +325,7 @@
                                 },
                                 {
                                     "_key": "style",
-                                    "_value": "margin:0 16px 0 10px;",
+                                    "_value": "margin:0 0px 0 10px;",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -532,12 +532,18 @@
                                 },
                                 {
                                     "_key": "fxFlex.sm",
-                                    "_value": "200px",
+                                    "_value": "150px",
                                     "_type": "kv",
                                     "_attrDef": "c"
                                 },
                                 {
                                     "_key": "fxFlex.lt-md",
+                                    "_value": "150px",
+                                    "_type": "kv",
+                                    "_attrDef": "c"
+                                },
+                                {
+                                    "_key": "fxFlex.md",
                                     "_value": "150px",
                                     "_type": "kv",
                                     "_attrDef": "c"

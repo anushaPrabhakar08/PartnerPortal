@@ -70,7 +70,7 @@ import { homeComponent } from '../components/homeComponent/home.component';
 import { loginComponent } from '../components/loginComponent/login.component';
 import { viewagreementComponent } from 'app/components/viewagreementComponent/viewagreement.component';
 import { partner_notificationComponent } from 'app/components/partner_notificationComponent/partner_notification.component';
-
+import {RemoveExtension} from '../customPipe';
 
 /**
  * Reads datasource object and injects the datasource object into window object
@@ -115,6 +115,7 @@ export const appDeclarations = [
   LayoutComponent,
   PageNotFoundComponent,
   NMapComponent,
+  RemoveExtension,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
   partner_notificationComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-announcepartnerlistComponent

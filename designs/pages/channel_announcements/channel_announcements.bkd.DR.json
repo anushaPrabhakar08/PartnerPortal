@@ -470,13 +470,13 @@
                     },
                     {
                         "_key": "fxFlex",
-                        "_value": "50",
+                        "_value": "100",
                         "_type": "kv",
                         "_attrDef": "c"
                     },
                     {
                         "_key": "fxFlex.sm",
-                        "_value": "50",
+                        "_value": "90",
                         "_type": "kv",
                         "_attrDef": "c"
                     },
@@ -489,6 +489,24 @@
                     {
                         "_key": "[formGroup]",
                         "_value": "announcementdetail",
+                        "_type": "kv",
+                        "_attrDef": "c"
+                    },
+                    {
+                        "_key": "fxFlex.md",
+                        "_value": "90",
+                        "_type": "kv",
+                        "_attrDef": "c"
+                    },
+                    {
+                        "_key": "fxFlex.lt-md",
+                        "_value": "90",
+                        "_type": "kv",
+                        "_attrDef": "c"
+                    },
+                    {
+                        "_key": "fxFlex.gt-md",
+                        "_value": "90",
                         "_type": "kv",
                         "_attrDef": "c"
                     }
@@ -802,7 +820,7 @@
                                     },
                                     {
                                         "_key": "buttonname",
-                                        "_value": "Announce",
+                                        "_value": "Send",
                                         "_type": "a",
                                         "_attrDef": "p",
                                         "_useAsLabel": true

@@ -84,10 +84,11 @@ export class partner_leadsComponent extends NBaseComponent implements OnInit {
 
 
     addLead() {
-        const dialogRef = this.dialog.open(partner_addleadComponent,{ disableClose: true }, {
-            width: '40%',
-            height: '60%',
-            data: this.userId
+        const dialogRef = this.dialog.open(partner_addleadComponent, {
+            width: '450px',
+            height: '500px',
+            data: this.userId,
+            disableClose: true,
         });
         dialogRef.afterClosed().subscribe(result => {
             this.getdata();

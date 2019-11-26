@@ -249,9 +249,20 @@ bh-login{
 .line-height .mat-form-field{
     line-height: 1.5 !important;
 }
-// mat-sidenav .mat-drawer{
-//     top:80px !important;
-// }
+
+ th.mat-header-cell:first-of-type,
+ td.mat-cell:first-of-type {
+    padding-left: 0px !important; 
+    //width: 30px;
+    text-align: center !important;
+ }
+
+.mat-table th:first-child{
+    width:7%;
+}
+.mat-table th:first-child .mat-sort-header-container {
+    justify-content: center;
+}
 .mat-sort-header-arrow {
     color: #000 !important;
 }
@@ -277,7 +288,7 @@ bh-login{
 }
 .header-cell th.mat-header-cell,
 .header-cell td.mat-cell{
-    text-align: left !important;
+    text-align: left;
 }
 
 .notification .mat-menu-content{
@@ -443,7 +454,7 @@ bh-partnerregistration {
 
 .announce-btn {
     background-color: #ee1c22;
-    // width: 350px;
+    width: 30%;
     height: 40px;
     font-size: 20px;
     color: #fafafa;
@@ -500,11 +511,9 @@ bh-partnerregistration {
     color: red;
     font-size: 35px;
     font-weight: 700;
-    //font-variant: petite-caps;
 }
 
 .main-description {
-   // font-family: fantasy;
     letter-spacing: 5px;
     color: #e10d2b;
 }
@@ -523,7 +532,6 @@ bh-partnerregistration {
     color: #554949;
     font-size: 24px;
     font-weight: 700;
-    //font-variant: petite-caps;
 }
 
 .text-center {
@@ -554,29 +562,19 @@ video {
 
 
 //partner-lead
-
 .search-class .mat-form-field-label {
-    color: #000; // background-color: red;
+    color: #000;
 }
-
-// .search-class .mat-form-field {
-//     color: #eee;
-//     margin-bottom: 10px;
-//     background-color: rgba(0, 0, 0, .42);
-//     padding: 10px 10px 0 10px;
-//     border-radius: 6px;
-// }
 
 .search-class .mat-form-field {
     color: #000;
     margin-bottom: 10px; 
-    //background-color: rgba(0,0,0,.42);
     padding: 10px 10px 0 10px;
     border-radius: 6px;
 }
 
 .search-class .mat-paginator, .search-class .mat-paginator-page-size .mat-select-trigger .mat-select-value {
-    color: #fafafa; // background-color: red;
+    color: #fafafa;
 } 
 
 .search-class .mat-paginator {
@@ -626,7 +624,6 @@ video {
     margin:20px 0px;
 }
 .mat-toolbar {
-    //background-color:  #5f737d !important;
     background-color: #000 !important;
     color: #fff;
     position: fixed;
@@ -637,6 +634,7 @@ video {
 }
 .mat-toolbar-single-row{
     padding: 0px !important;
+    height: 64px !important;
 }
 
 .tollbar-fab-hover:hover{
@@ -653,7 +651,6 @@ pdf-viewer{
 }
 .link:hover{
     color:blue;
-    //text-decoration: underline;
 }
 
 .selectbox mat-form-field{
