@@ -5456,7 +5456,7 @@
                     },
                     {
                         "_key": "style",
-                        "_value": "width:90%;     margin-bottom: 10px;",
+                        "_value": "width:90%; margin-bottom: 10px;",
                         "_type": "kv",
                         "_attrDef": "p"
                     },
@@ -5528,7 +5528,7 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "width:100%;",
+                            "_value": "width:100%;margin-bottom: 10px;",
                             "_type": "kv",
                             "_attrDef": "p"
                         },

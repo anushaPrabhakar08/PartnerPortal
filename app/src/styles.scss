@@ -259,9 +259,13 @@ bh-login{
     overflow-x: auto;
 }
 
+.headercell .mat-paginator{
+    background-color:rgba(0,0,0,.7) !important;
+}
+
 .header-cell .mat-header-cell{
     color: #fff !important;
-    background: rgba(0,0,0,.54);  
+    background: rgba(0,0,0,.7);  
     text-align: left !important;
     justify-content: center;
     width: 100px;
@@ -374,7 +378,7 @@ bh-login{
 
 .tab-header, .tab-leadheader, .tab-developerheader, .tab-partner-header {
     color: #fff !important;
-    background: rgba(0,0,0,.54);
+    background: rgba(0,0,0,.7);
     overflow-wrap: break-word;
     width: 100px;
 }
@@ -576,7 +580,7 @@ video {
 } 
 
 .search-class .mat-paginator {
-    background-color: rgba(0, 0, 0, .6) !important;
+    background-color: rgba(0,0,0,.7) !important;
 }
 
 .search-class .mat-paginator-page-size-select {
