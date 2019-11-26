@@ -17,8 +17,7 @@ import { Router } from '@angular/router';
 
 export class channelComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
-    loggedIn = true;
-    userType = 'C';
+
     constructor(private bdms: NDataModelService,
         public media: MediaObserver,
         public titleService: Title,
@@ -26,14 +25,11 @@ export class channelComponent extends NBaseComponent implements OnInit {
         public loginservice: loginservice) {
         super();
         this.mm = new ModelMethods(bdms);
+        this.loginservice.isLoggedIn('C')
     }
 
     ngOnInit() {
-        this.loginservice.isLoggedIn('C').then(data => {
-            if (data.local.state == null) {
-                this.loggedIn = false;
-            }
-        });
+        
     }
 
 

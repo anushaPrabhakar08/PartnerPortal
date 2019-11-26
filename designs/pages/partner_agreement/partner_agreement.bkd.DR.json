@@ -618,6 +618,12 @@
                                     "_value": "",
                                     "_type": "kv",
                                     "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "(click)",
+                                    "_value": "openAgreement(agreement.fileId)",
+                                    "_type": "kv",
+                                    "_attrDef": "c"
                                 }
                             ]
                         },

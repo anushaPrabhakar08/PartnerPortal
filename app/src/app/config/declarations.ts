@@ -12,6 +12,10 @@ window['neutrinos'] = {
 }
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-partnerregistrationComponent
+import { partnerregistrationComponent } from '../components/partnerregistrationComponent/partnerregistration.component';
+//CORE_REFERENCE_IMPORT-adminnavComponent
+import { adminnavComponent } from '../components/adminnavComponent/adminnav.component';
 //CORE_REFERENCE_IMPORT-announcepartnerlistComponent
 import { announcepartnerlistComponent } from '../components/announcepartnerlistComponent/announcepartnerlist.component';
 //CORE_REFERENCE_IMPORT-testpageComponent
@@ -30,8 +34,6 @@ import { channel_addmarketingComponent } from '../components/channel_addmarketin
 import { partner_addleadComponent } from '../components/partner_addleadComponent/partner_addlead.component';
 //CORE_REFERENCE_IMPORT-partner_adddeveloperComponent
 import { partner_adddeveloperComponent } from '../components/partner_adddeveloperComponent/partner_adddeveloper.component';
-//CORE_REFERENCE_IMPORT-partnerregistrationComponent
-import { partnerregistrationComponent } from '../components/partnerregistrationComponent/partnerregistration.component';
 //CORE_REFERENCE_IMPORT-memberregisterationComponent
 import { memberregisterationComponent } from '../components/memberregisterationComponent/memberregisteration.component';
 //CORE_REFERENCE_IMPORT-spinnerComponent
@@ -117,6 +119,10 @@ export const appDeclarations = [
   NMapComponent,
   RemoveExtension,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-partnerregistrationComponent
+partnerregistrationComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-adminnavComponent
+adminnavComponent,
   partner_notificationComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-announcepartnerlistComponent
 announcepartnerlistComponent,
@@ -136,8 +142,6 @@ channel_addmarketingComponent,
   partner_addleadComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-partner_adddeveloperComponent
   partner_adddeveloperComponent,
-  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-partnerregistrationComponent
-  partnerregistrationComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-memberregisterationComponent
   memberregisterationComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-spinnerComponent
@@ -206,9 +210,9 @@ export const appProviders = [
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
 export const appRoutes = [{path: 'home', component: homeComponent,
 children: []},{path: 'login', component: loginComponent,
-children: []},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'contact_us', component: contactpageComponent},{path: 'admin', component: channelComponent,
+children: []},{path: 'unauthorized', redirectTo: '/login', pathMatch: 'full'},{path: 'contact_us', component: contactpageComponent},{path: 'channel', component: channelComponent,
 children: [{path: 'partners_list', component: channel_dashboardComponent},{path: 'partner/:_id', component: partner_detailsComponent},{path: 'marketing_collaterals', component: channel_marketingComponent},{path: 'announcements', component: channel_announcementsComponent,
-children: []},{path: '', pathMatch: 'full', component: channel_dashboardComponent}]},{path: 'partner', component: partnerComponent,
-children: [{path: 'marketing_collaterals', component: partner_marketingComponent},{path: 'leads', component: partner_leadsComponent},{path: 'developer_details', component: partner_developersComponent},{path: 'agreement', component: partner_agreementComponent},{path: '', component: partner_marketingComponent},{path: 'PartnerNotification', component: partner_notificationComponent},{path: 'PartnerRegistration', component: partnerregistrationComponent}]},{path: 'memberregisteration', component: memberregisterationComponent},{path: 'partnerregistration', component: partnerregistrationComponent},{path: 'partner_addDeveloper', component: partner_adddeveloperComponent},{path: 'partner_addLead', component: partner_addleadComponent,
-children: []},{path: 'sample', component: sampleComponent},{path: 'testPage', component: testpageComponent},{path: '', redirectTo: '/home', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
+children: []},{path: '', component: channel_dashboardComponent}]},{path: 'partner', component: partnerComponent,
+children: [{path: 'marketing_collaterals', component: partner_marketingComponent},{path: 'leads', component: partner_leadsComponent},{path: 'developer_details', component: partner_developersComponent},{path: 'agreement', component: partner_agreementComponent},{path: '', component: partner_marketingComponent},{path: 'PartnerNotification', component: partner_notificationComponent},{path: 'PartnerRegistration', component: partnerregistrationComponent}]},{path: 'memberregisteration', component: memberregisterationComponent},{path: 'partner_addDeveloper', component: partner_adddeveloperComponent},{path: 'partner_addLead', component: partner_addleadComponent,
+children: []},{path: 'sample', component: sampleComponent},{path: 'admin', component: loginComponent, data: {userType: 'C'}},{path: '', redirectTo: '/home', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END

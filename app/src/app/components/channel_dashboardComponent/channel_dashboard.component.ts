@@ -46,7 +46,6 @@ export class channel_dashboardComponent extends NBaseComponent implements OnInit
         this.dataSource = new MatTableDataSource(this.data);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
-        console.log(this.data);
     }
 
     leadObjtoArr(obj) {
@@ -60,7 +59,7 @@ export class channel_dashboardComponent extends NBaseComponent implements OnInit
     }
 
     showPartnerDetails(table) {
-        this.router.navigate(['admin/partner', table.userId]);    
+        this.router.navigate(['channel/partner', table.userId]);    
     }
 
 

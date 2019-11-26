@@ -84,11 +84,6 @@
         "componentName": "memberregisterationComponent",
         "isEntry": false
     },
-    "9d27116a-c449-5d15-9d3b-2513145f5419": {
-        "appPageName": "PartnerRegistration",
-        "componentName": "partnerregistrationComponent",
-        "isEntry": false
-    },
     "ca365398-d187-b32a-6f4e-133ea81f1178": {
         "appPageName": "partner_addDeveloper",
         "componentName": "partner_adddeveloperComponent",
@@ -142,6 +137,16 @@
     "d735366a-6a44-5d0d-d42d-37ad9178e507": {
         "appPageName": "partner_Notification",
         "componentName": "partner_notificationComponent",
+        "isEntry": false
+    },
+    "3b9d0fc6-ae27-8431-5e49-384de6027d1e": {
+        "appPageName": "adminNav",
+        "componentName": "adminnavComponent",
+        "isEntry": false
+    },
+    "80a6968b-dfd4-b9d5-6c8a-df606396d8be": {
+        "appPageName": "partnerregistration",
+        "componentName": "partnerregistrationComponent",
         "isEntry": false
     }
 }

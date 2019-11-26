@@ -138,6 +138,21 @@ export class loginservice {
       throw e;
     }
   }
+  public async getCurrentUsertype(...others) {
+    try {
+      let bh = { input: {}, local: { result: undefined } };
+      bh = this.__constructDefault(bh);
+
+      bh = await this.sd_2dMWvH5omHT1xlEq(bh);
+      //appendnew_next_getCurrentUsertype
+      //Start formatting output variables
+      let outputVariables = { input: {}, local: { result: bh.local.result } };
+      //End formatting output variables
+      return outputVariables;
+    } catch (e) {
+      throw e;
+    }
+  }
   //appendnew_flow_loginservice_Start
 
   async sd_hT5MmaR2qH2HaZbC(bh) {
@@ -258,6 +273,26 @@ export class loginservice {
       bh.local.result = bh.local.result._id;
 
       //appendnew_next_sd_WCzhmq6erg7UkIj3
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_2dMWvH5omHT1xlEq(bh) {
+    try {
+      bh.local.result = JSON.parse(localStorage.getItem('currentUser'));
+      bh = await this.sd_auHbEyaGIx3x3SFw(bh);
+      //appendnew_next_sd_2dMWvH5omHT1xlEq
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_auHbEyaGIx3x3SFw(bh) {
+    try {
+      bh.local.result = bh.local.result == null ? '' : bh.local.result.type;
+
+      //appendnew_next_sd_auHbEyaGIx3x3SFw
       return bh;
     } catch (e) {
       throw e;

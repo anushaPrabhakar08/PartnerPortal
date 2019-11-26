@@ -9,6 +9,7 @@ import { fileService } from '../../sd-services/fileService';
 @Component({
     selector: 'bh-sample',
     template: `
+    
         <pdf-viewer [src]="pdfSrc"
                     [render-text]="true"
                     [show-all]="true"
@@ -26,31 +27,48 @@ export class sampleComponent extends NBaseComponent implements OnInit {
 
     pdfSrc = "";
 
-
+    @Input() fileId: string;
+    @Input() src: string;
+    imgDdata;
     constructor(private bdms: NDataModelService, private alertService: NSnackbarService,
         private fileService: fileService, ) {
         super();
         this.mm = new ModelMethods(bdms);
     }
 
-    @Input() userId: string;
-    @Input() src: string;
 
     ngOnInit() {
-        if (this.userId !== '') {
-            this.fetchPdf();
-        } else {
-            this.pdfSrc = this.src;
-        }
+        this.fetchPdf();
     }
     async fetchPdf() {
-        let file = {
-            userId: this.userId,
-            type: 'aggreement',
-        }
-        let result = (await this.fileService.getFile(file)).local.response;
-        this.pdfSrc = result.path;
-        // this.alertService.openSnackBar('Getting File');
+
+        console.log(this.fileId);
+        let result = {response:""}
+        //  result['response'] = (await this.fileService.readFile({ fileId: this.fileId }));
+        // .then(result => {
+            // var file = new Blob([result], {type: 'application/pdf'});
+            //  var fileURL = window.URL.createObjectURL(file);
+            //  console.log(showPdf(result));
+            // this.imgdata = "data:image/jpeg;base64," + result;
+            // console.log(result.response);
+            // console.log(btoa(result))
+            //   window.open(fileURL);
+            // this.pdfSrc = result
+        // });
+    }
+
+    showPdf(data) {
+        const linkSource = 'data:application/pdf;base64,' + data;
+        const downloadLink = document.createElement("a");
+        const fileName = "sample.pdf";
+        data = {
+            'source': linkSource,
+            'download': downloadLink,
+        };
+        return data;
+        // downloadLink.href = linkSource;
+        // downloadLink.download = fileName;
+        // downloadLink.click();
     }
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.mm.get(dataModelName, filter, keys, sort, pagenumber, pagesize,

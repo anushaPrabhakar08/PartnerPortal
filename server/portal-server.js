@@ -88,7 +88,7 @@ db.once('open', function () {
         var gfs = gridfs(db.db);
         var writestream = gfs.createWriteStream({ filename: db_filename });
         fs.createReadStream(localFile).pipe(writestream);
-        
+
         writestream.on('close', function (file) {
             addMedia(req.body.id, req.body.type, file);
             removeFile(localFile);
@@ -110,11 +110,11 @@ db.once('open', function () {
                 readstream.on('data', function (chunk) {
                     bufferArray.push(chunk);
                 });
-                if(!fs.existsSync((tempPath + data[0].name))){
+                if (!fs.existsSync((tempPath + data[0].name))) {
                     readstream.on('end', function () {
                         var buffer = Buffer.concat(bufferArray);
                         fs.writeFileSync(tempPath + data[0].name, buffer, 'utf-8')
-                        fs.close(1, function() {
+                        fs.close(1, function () {
                             console.log('wrote the file successfully');
                         });
                     })
@@ -123,6 +123,29 @@ db.once('open', function () {
             }
         });
 
+    });
+
+    router.post('/readFile', (req, res) => {
+        console.log(req.body);
+        var gfs = gridfs(db.db);
+        var rstream = gfs.createReadStream({ _id: req.body.fileId });
+        var bufs = [];
+        rstream.on('data', function (chunk) {
+            bufs.push(chunk);
+        }).on('error', function () {
+            res.send();
+        }).on('end', function () {
+            var fbuf = Buffer.concat(bufs);
+            // res.writeHead(200, {
+            //     'Content-Type': 'application/jpg',
+            //     'Content-Disposition': 'attachment; filename=some_file.jpg',
+            //     'Content-Length': fbuf.length
+            // });
+            var buf = new Buffer(fbuf).toString('base64');
+            // var buf = 'asd';
+            console.log(fbuf);
+            res.end(fbuf);
+        });
     });
 });
 

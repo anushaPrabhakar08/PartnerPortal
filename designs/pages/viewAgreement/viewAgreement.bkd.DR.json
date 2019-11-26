@@ -88,23 +88,23 @@
                     "_attrDef": "p"
                 },
                 {
-                    "_key": "[userId]",
-                    "_value": "userId",
-                    "_type": "kv",
-                    "_attrDef": "p",
-                    "_complexity": "advanced",
-                    "displayAs": "userId",
-                    "attrType": "INPUT",
-                    "inValid": false,
-                    "message": ""
-                },
-                {
                     "_key": "[src]",
                     "_value": "",
                     "_type": "kv",
                     "_attrDef": "p",
                     "_complexity": "advanced",
                     "displayAs": "src",
+                    "attrType": "INPUT",
+                    "inValid": false,
+                    "message": ""
+                },
+                {
+                    "_key": "[fileId]",
+                    "_value": "data.file",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_complexity": "advanced",
+                    "displayAs": "fileId",
                     "attrType": "INPUT"
                 }
             ]

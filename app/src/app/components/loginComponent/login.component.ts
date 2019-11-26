@@ -1,6 +1,6 @@
 /*DEFAULT GENERATED TEMPLATE. DO NOT CHANGE SELECTOR TEMPLATE_URL AND CLASS NAME*/
 import { Component, OnInit, OnDestroy, Input } from '@angular/core'
-import { Router } from '@angular/router';
+import { Router,ActivatedRoute } from '@angular/router';
 import { ModelMethods } from '../../lib/model.methods';
 import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 import { NDataModelService, NSnackbarService } from 'neutrinos-seed-services';
@@ -15,21 +15,28 @@ import { loginservice } from '../../sd-services/loginservice';
 export class loginComponent extends NBaseComponent implements OnInit {
     mm: ModelMethods;
     isTextFieldType = false;
+    userType: boolean;
     localStorage = localStorage;
     constructor(private bdms: NDataModelService,
         private rout: Router,
         private alertService: NSnackbarService,
         private router: Router,
+        private route: ActivatedRoute,
         private loginservice: loginservice
     ) {
         super();
         this.mm = new ModelMethods(bdms);
+        this.userType = (route.snapshot.data.userType == 'C') ? true : false;
     }
 
-    @Input() userType: boolean;
-
     ngOnInit() {
-
+        this.loginservice.getCurrentUsertype().then(data=>{
+                if(data.local.result == 'C' && this.userType){
+                this.router.navigateByUrl('/channel');
+            }else if(data.local.result == "P" && !this.userType){
+                this.router.navigateByUrl('/partner');
+            }
+        });
     }
 
     authenticate() {
@@ -43,7 +50,7 @@ export class loginComponent extends NBaseComponent implements OnInit {
                 if (data.local.result.status === 'success') {
                     this.loginservice.authenticated(data.local.result)
                     if (userdata.type == 'C') {
-                        this.router.navigateByUrl('/admin/partners_list');
+                        this.router.navigateByUrl('/channel');
                     } else {
                         this.router.navigateByUrl('/partner');
                     }

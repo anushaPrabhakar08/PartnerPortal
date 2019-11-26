@@ -30,7 +30,7 @@
             "component": "contactpageComponent"
         },
         {
-            "path": "admin",
+            "path": "channel",
             "component": "channelComponent",
             "children": [
                 {
@@ -51,13 +51,13 @@
                     "children": []
                 },
                 {
-                    "path": "''",
                     "component": "channel_dashboardComponent",
-                    "pathMatch": "full"
+                    "path": "''"
                 }
             ],
             "pathMatch": "",
-            "redirectTo": ""
+            "redirectTo": "",
+            "data": ""
         },
         {
             "path": "partner",
@@ -99,10 +99,6 @@
             "component": "memberregisterationComponent"
         },
         {
-            "path": "partnerregistration",
-            "component": "partnerregistrationComponent"
-        },
-        {
             "path": "partner_addDeveloper",
             "component": "partner_adddeveloperComponent"
         },
@@ -116,8 +112,9 @@
             "component": "sampleComponent"
         },
         {
-            "path": "testPage",
-            "component": "testpageComponent"
+            "path": "admin",
+            "component": "loginComponent",
+            "data": "{userType: 'C'}"
         },
         {
             "path": "''",

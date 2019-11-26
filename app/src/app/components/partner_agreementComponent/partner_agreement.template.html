@@ -6,7 +6,7 @@
     </div>
     <div fxLayout="row wrap" style="width:100%;" fxLayoutAlign="start none" [fxShow]="true" [fxHide]="false">
       <mat-card *ngFor="let agreement of agreementData" class="pdf-card-content">
-        <mat-card-content style="width:100px;"><img imgSrc="Web/pdfimg.png" class="w-100">
+        <mat-card-content style="width:100px;"><img imgSrc="Web/pdfimg.png" (click)="openAgreement(agreement.fileId)" class="w-100">
           <div class="thumbnail-title link">
             {{ agreement.name }}</div>
         </mat-card-content>

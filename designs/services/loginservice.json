@@ -170,7 +170,8 @@
             []
         ],
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "loginservice"
     },
     {
         "id": "sd_c4lSJqeK5MdZCdRW",
@@ -384,8 +385,8 @@
             }
         ],
         "functionName": "getCurrentUserId",
-        "x": 184.1875,
-        "y": 527.921875,
+        "x": 162.1875,
+        "y": 487.921875,
         "wires": [
             [
                 "sd_UZFEZDD8dulhfjrw"
@@ -415,8 +416,8 @@
             "type": "bh.local",
             "value": "result"
         },
-        "x": 301.1875,
-        "y": 518.875,
+        "x": 302.1875,
+        "y": 475.875,
         "wires": [
             [
                 "sd_WCzhmq6erg7UkIj3"
@@ -431,8 +432,8 @@
         "z": "sd_AqHtpOYqfvjc0UWp",
         "name": "",
         "script": "bh.local.result = bh.local.result._id",
-        "x": 420.03125,
-        "y": 538.921875,
+        "x": 421.03125,
+        "y": 495.921875,
         "wires": [
             []
         ],
@@ -447,6 +448,80 @@
         "script": "this.router.navigateByUrl('/home');\n",
         "x": 534.03125,
         "y": 887.921875,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_kSsdMypJRvFnrAbg",
+        "type": "Start",
+        "z": "sd_AqHtpOYqfvjc0UWp",
+        "name": "getCurrentUsertype",
+        "outputs": 1,
+        "noerr": 0,
+        "inputVariables": [],
+        "localVariables": [
+            {
+                "key": "result",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "functionName": "getCurrentUsertype",
+        "x": 171,
+        "y": 603.8125,
+        "wires": [
+            [
+                "sd_2dMWvH5omHT1xlEq"
+            ]
+        ],
+        "generateNext": true,
+        "generated": false,
+        "serviceName": "loginservice"
+    },
+    {
+        "id": "sd_2dMWvH5omHT1xlEq",
+        "type": "Storage",
+        "z": "sd_AqHtpOYqfvjc0UWp",
+        "name": "Current User",
+        "operationType": "getItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "currentUser"
+        },
+        "value": {
+            "type": "",
+            "value": ""
+        },
+        "resultMapping": {
+            "type": "bh.local",
+            "value": "result"
+        },
+        "x": 311,
+        "y": 591.765625,
+        "wires": [
+            [
+                "sd_auHbEyaGIx3x3SFw"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_auHbEyaGIx3x3SFw",
+        "type": "Script",
+        "z": "sd_AqHtpOYqfvjc0UWp",
+        "name": "",
+        "script": "bh.local.result = (bh.local.result == null) ? '': bh.local.result.type;",
+        "x": 429.84375,
+        "y": 611.8125,
         "wires": [
             []
         ],

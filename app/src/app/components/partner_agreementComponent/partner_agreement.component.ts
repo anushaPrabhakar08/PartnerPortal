@@ -35,10 +35,10 @@ export class partner_agreementComponent extends NBaseComponent implements OnInit
         this.getAgreements();
     }
 
-    openAgreement() {
+    openAgreement(data) {
         console.log("pdf Open");
         const dialogRef = this.dialog.open(viewagreementComponent, {
-            data: this.userId
+            data: {file: data, user: this.userId}
         });
     }
     objtoArr(obj) {

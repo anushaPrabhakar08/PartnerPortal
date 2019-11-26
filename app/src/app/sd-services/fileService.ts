@@ -100,6 +100,27 @@ export class fileService {
       throw e;
     }
   }
+  public async readFile(fileId = undefined, ...others) {
+    try {
+      let bh = {
+        input: { fileId: fileId },
+        local: { response: undefined, apiUrl: undefined }
+      };
+      bh = this.__constructDefault(bh);
+
+      bh = await this.sd_62ycaTFknuDCBCwv(bh);
+      //appendnew_next_readFile
+      //Start formatting output variables
+      let outputVariables = {
+        input: {},
+        local: { response: bh.local.response }
+      };
+      //End formatting output variables
+      return outputVariables;
+    } catch (e) {
+      throw e;
+    }
+  }
   //appendnew_flow_fileService_Start
 
   async sd_FAwuzurJk6dmiBqC(bh) {
@@ -155,6 +176,35 @@ export class fileService {
       };
       bh.local.response = await this.sdService.nHttpRequest(requestOptions);
       //appendnew_next_sd_zJhxuBebP2iYFdhK
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_62ycaTFknuDCBCwv(bh) {
+    try {
+      bh.local.apiUrl = 'http://localhost:3000/readFile';
+
+      bh = await this.sd_pI2ogzaQVT5wIla5(bh);
+      //appendnew_next_sd_62ycaTFknuDCBCwv
+      return bh;
+    } catch (e) {
+      throw e;
+    }
+  }
+  async sd_pI2ogzaQVT5wIla5(bh) {
+    try {
+      let requestOptions = {
+        url: bh.local.apiUrl,
+        method: 'post',
+        responseType: 'json',
+        reportProgress: undefined,
+        headers: { 'Content-Type': 'no-content' },
+        params: {},
+        body: bh.input.fileId
+      };
+      bh.local.response = await this.sdService.nHttpRequest(requestOptions);
+      //appendnew_next_sd_pI2ogzaQVT5wIla5
       return bh;
     } catch (e) {
       throw e;

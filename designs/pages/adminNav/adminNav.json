@@ -1,0 +1,13 @@
+{
+    "appPageId": "3b9d0fc6-ae27-8431-5e49-384de6027d1e",
+    "appPageName": "adminNav",
+    "componentName": "adminnavComponent",
+    "selectorName": "bh-adminnav",
+    "htmlFileName": "adminnav.template.html",
+    "tsFileName": "adminnav.component.ts",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

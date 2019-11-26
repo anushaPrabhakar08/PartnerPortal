@@ -93,7 +93,8 @@
             []
         ],
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "fileService"
     },
     {
         "id": "sd_FAwuzurJk6dmiBqC",
@@ -207,6 +208,114 @@
         "wires": [
             [
                 "sd_zJhxuBebP2iYFdhK"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_JucBaccVpKkjBVgZ",
+        "type": "Start",
+        "z": "sd_PqEB2aq9qyRLeMTj",
+        "name": "readFile",
+        "outputs": 1,
+        "noerr": 0,
+        "inputVariables": [
+            {
+                "key": "fileId",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "response",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": true
+            },
+            {
+                "key": "apiUrl",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "functionName": "readFile",
+        "x": 252,
+        "y": 431.8125,
+        "wires": [
+            [
+                "sd_62ycaTFknuDCBCwv"
+            ]
+        ],
+        "generateNext": true,
+        "generated": false,
+        "serviceName": "fileService"
+    },
+    {
+        "id": "sd_pI2ogzaQVT5wIla5",
+        "type": "HttpRequest",
+        "z": "sd_PqEB2aq9qyRLeMTj",
+        "name": "",
+        "method": "post",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.apiUrl",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "apiUrl"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "reqBody": "bh.input.fileId",
+        "reqBodyObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "fileId"
+        },
+        "resultMapping": "bh.local.response",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "response"
+        },
+        "headers": {
+            "Content-Type": "no-content"
+        },
+        "headersObj": [
+            {
+                "key": "Content-Type",
+                "defaultValue": "no-content"
+            }
+        ],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "x": 527.84375,
+        "y": 433.796875,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_62ycaTFknuDCBCwv",
+        "type": "Script",
+        "z": "sd_PqEB2aq9qyRLeMTj",
+        "name": "",
+        "script": "bh.local.apiUrl='http://localhost:3000/readFile';",
+        "x": 375.84375,
+        "y": 428.8125,
+        "wires": [
+            [
+                "sd_pI2ogzaQVT5wIla5"
             ]
         ],
         "generateNext": false,

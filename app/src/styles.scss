@@ -412,7 +412,8 @@ bh-partner_developers,
 bh-partner_marketing,
 bh-partner_agreement,
 bh-partner_notification,
-bh-partnerregistration {
+bh-partnerregistration,
+bh-adminnav {
     width: 100%
 }
 
@@ -676,4 +677,10 @@ pdf-viewer{
     display: none;
 }
 
+.mat-table th:first-child{
+    width:7%;
+}
 
+.mat-table th:first-child .mat-sort-header-container {
+    justify-content: center;
+}
